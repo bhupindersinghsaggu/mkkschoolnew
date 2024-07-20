@@ -851,3 +851,21 @@ a::before .header-top-left .info-box p {
   top: -3px;
   color: #fff;
 }
+
+
+.breadcrumb-style7-area {
+  position: relative;
+  display: block;
+  background: #17345a;
+  z-index: 11;
+}
+
+
+.breadcrumb-style7-area .title h2 {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.1em;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-top: 49px;
+}

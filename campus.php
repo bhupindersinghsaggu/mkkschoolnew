@@ -1,10 +1,10 @@
 <?php
-include('_web/header.php')
+include('_web/header.php');
+include('_web/css.php');
 ?>
 
 <section class="breadcrumb-style7-area">
-    <div class="breadcrumb-style7-area-bg" style="background-image: url(assets/images/header/campusisgood.jpg);">
-    </div>
+    
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -23,34 +23,12 @@ include('_web/header.php')
         <div class="sec-title-style8">
             <h2> <span> Campus</span></h2>
         </div>
-        <div class="row">
-            <div class="col-xl-6">
-                <div class="cooking-course-choose-img-box">
-                    <div class="inner">
-                        <img src="assets/images/about/12.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6">
-                <div class="cooking-course-choose-text-box">
-                    <ul>
-                        <li>
-                            <div class="inner-text">
-                                <h3>Area</h3>
-                                <p>Surrounded by the Majestic Dhauladhars, Crescent is situated in the town Banuri, a
-                                    peaceful location away from unnecessary noise hustle and bustle to enable students
-                                    to concentrate on learning.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        
         <div class="row pd-top align-items-center">
             <div class="col-xl-6">
                 <div class="cooking-course-choose-img-box">
                     <div class="inner">
-                        <img src="assets/images/about/13.jpg" alt="">
+                        <img src="assets/images/faclities/chem.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -60,7 +38,7 @@ include('_web/header.php')
                         <li>
                             <div class="inner-text">
                                 <h3>Labs</h3>
-                                <p>Crescent diligently follows its objective of inter - relating theory and practical
+                                <p>MKK follows its objective of inter - relating theory and practical
                                     for impeccable learning. Hence we have fully equipped laboratories where students
                                     conduct experiments that help to apply science in everyday life. Their concepts are
                                     made clear and their inquisitive nature is nurtured.</p>
@@ -125,7 +103,7 @@ include('_web/header.php')
             <div class="col-xl-6">
                 <div class="cooking-course-choose-img-box">
                     <div class="inner">
-                        <img src="assets/images/about/16.jpg" alt="">
+                        <img src="assets/images/infra/playground.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -141,7 +119,7 @@ include('_web/header.php')
                                     taking, decision making under pressure, resilience and team working. Two Vast
                                     playgrounds,the pride of our campus,support these objectives. These spacious and
                                     well maintained playgrounds with all required material always serve this purpose.
-                                    sports such as Cricket,Football, Basketball,Throw ball, Athletics etc. are all the
+                                    sports such as Cricket, Basketball,Throw ball, Athletics etc. are all the
                                     options offered to the students. In our endeavour to polish students in their choice
                                     of sport,we offer expert trainers to help children master key skills.</p>
                             </div>
@@ -150,48 +128,11 @@ include('_web/header.php')
                 </div>
             </div>
         </div>
-        <div class="row pd-top align-items-center">
-            <div class="col-xl-6">
-                <div class="cooking-course-choose-img-box">
-                    <div class="inner">
-                        <img src="assets/images/about/17.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6">
-                <div class="cooking-course-choose-text-box">
-                    <ul>
-                        <li>
-                            <div class="inner-text">
-                                <h3>Hostel </h3>
-                                <p>It has been a commitment of Crescent Public School to provide top class quality
-                                    education, world class infrastructure and multiple opportunities for Crescentians to
-                                    grow in a congenial environment most suitable for their all round development. To
-                                    take this commitment to a wider section we provide hostel facility exclusively for
-                                    boys and girls from classes VI to XII. The hostel is located within the campus of
-                                    the school. The surroundings are well maintained with lush green gardens and is
-                                    surrounded by concrete walls. Round-the-clock security ensures a safe heaven for the
-                                    students. The hostel is equipped with all essential facilities, to make the stay for
-                                    students comfortable and homely. A well maintained, hygienic and well-furnished mess
-                                    with expert cooks serving children healthy sumptuous food is another attraction of
-                                    the hostel. The students follow a prescribed schedule, which is strictly adhered to
-                                    in order to bring about discipline in their routine and create a healthy routine for
-                                    a lifetime. It starts with the Jogging in the morning and ends with evening sports
-                                    and special subject coaching. Their weekends are scheduled with unlimited fun &
-                                    frolic. Hostel Warden resides within the hostel round-the-clock ensuring utmost
-                                    personal attention towards the student's all round development. This results in a
-                                    homely atmosphere across the hostel and a secure and reassuring environment for
-                                    children.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+       
     </div>
 </section>
 
-
 <?php
-include('_web/footer.php')
-?>
+        include('_web/footer.php');
+        include('_web/script.php');
+        ?>

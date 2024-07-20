@@ -4,8 +4,7 @@ include('_web/css.php');
 ?>
 
 <section class="breadcrumb-style7-area">
-    <div class="breadcrumb-style7-area-bg" style="background-image: url(assets/images/header/about-us.jpg);">
-    </div>
+   
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
