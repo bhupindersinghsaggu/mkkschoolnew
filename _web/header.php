@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dr. M.K.K. ARYA MODEL SCHOOL</title>
+    <title>Dr. M.K.K. ARYA MODEL SCHOOL-Best C.B.S.E School</title>
 
 </head>
 
