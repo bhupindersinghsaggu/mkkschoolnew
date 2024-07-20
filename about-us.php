@@ -30,16 +30,13 @@ include('_web/css.php');
                     </div>
                     <div class="text-box">
                         <div class="sec-title">
-                            <h2>About Crescent</h2>
+                            <h2>About MKK</h2>
                         </div>
                         <div class="text">
-                            <p>Crescent Public School, a residential school is situated in the lush green hills of
-                                Dhauladhar at Palampur since 2003. It is well connected with the different parts of the
-                                country by road as well as by air. The school is one of the top CBSE Schools with
-                                separate hostel Facility for boys and girls in Himachal Pradesh in India. The medium of
-                                instruction is English for all classes up to XII. Besides, the pursuit of excellence is
-                                the corollary of that veneration. Standards are set steep and morale as well as
-                                determination are systematically moulded into the students to enable their achievement.
+                            <p>Welcome to Dr. M.K.K. Arya Model , a premier educational institution affiliated with the
+                                Central
+                                Board of Secondary Education (CBSE), dedicated to nurturing young minds and fostering
+                                academic excellence.
                             </p>
                         </div>
                     </div>
@@ -51,19 +48,27 @@ include('_web/css.php');
                         <div class="top">
                             <div class="righ">
                                 <div class="text txt-white">
-                                    <p>We have shown extremely good results in both our class X and XII in Board
-                                        examinations,
-                                        where our students were placed among the top ten positions in the state. The aim
-                                        of the
-                                        school is not just imparting knowledge but to create character, discipline and
-                                        ethics in
-                                        students so that they not only excel academically but also have a heightened
-                                        sense of
-                                        morality. Students are made to feel connected to everything that goes on in the
-                                        world-
-                                        through projects, curriculum related activities like excursions, workshops,
-                                        lectures,
-                                        seminars etc.</p>
+
+                                    <ul>
+                                        <h3>Our Mission</h3>
+                                        <li>Our mission is to provide a holistic education that balances academic rigor
+                                            with the development of essential life skills. We aim to inspire a love for
+                                            learning, instill moral values, and cultivate a sense of social
+                                            responsibility in our students.</li>
+
+                                        <h3>Academic Excellence</h3>
+                                        <li>We pride ourselves on our strong academic programs, designed to challenge
+                                            and engage students at every level. Our curriculum is comprehensive,
+                                            integrating the latest educational practices and technology to ensure
+                                            students achieve their full potential. Our dedicated and experienced faculty
+                                            are committed to delivering high-quality education and personalized support.
+                                        </li>
+                                        <h3>Community and Values</h3>
+                                        <li>We are more than just a school; we are a community that values respect,
+                                            integrity, and compassion. Our students are encouraged to be active
+                                            participants in their communities, promoting positive change and
+                                            understanding diverse perspectives.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
