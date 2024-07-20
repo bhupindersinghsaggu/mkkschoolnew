@@ -823,3 +823,8 @@ a::before .header-top-left .info-box p {
   background: var(--thm-base);
   padding: 110px 0 50px;
 }
+
+.short-heading{
+  color:#f1eb19;
+  padding-bottom: 5px;
+}

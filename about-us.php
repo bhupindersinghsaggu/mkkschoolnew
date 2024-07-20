@@ -54,7 +54,7 @@ include('_web/css.php');
                                 <div class="text txt-white">
 
                                     <ul>
-                                        <h3>Our Mission</h3>
+                                        <h3 class="txt-white">Our Mission</h3>
                                         <li>Our mission is to provide a holistic education that balances academic rigor
                                             with the development of essential life skills. We aim to inspire a love for
                                             learning, instill moral values, and cultivate a sense of social
