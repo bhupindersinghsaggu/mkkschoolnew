@@ -38,6 +38,10 @@ include('_web/css.php');
                                 Board of Secondary Education (CBSE), dedicated to nurturing young minds and fostering
                                 academic excellence.
                             </p>
+                            <p>Our school boasts state-of-the-art facilities that provide a conducive learning
+                                environment. From well-equipped classrooms and science laboratories to modern libraries
+                                and sports complexes, we ensure that our students have access to the best resources to
+                                support their academic and personal growth.</p>
                         </div>
                     </div>
                     <div class="academics-overview-style1-img-box"
