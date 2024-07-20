@@ -1,6 +1,8 @@
 <?php
-include('_web/header.php')
+include('_web/header.php');
+include('_web/css.php');
 ?>
+
 <section class="breadcrumb-style7-area">
     <div class="breadcrumb-style7-area-bg" style="background-image: url(assets/images/header/about-us.jpg);">
     </div>
@@ -48,15 +50,21 @@ include('_web/header.php')
                     <div class="academics-overview-search-box">
                         <div class="top">
                             <div class="righ">
-                            <div class="text txt-white">
-                                <p>We have shown extremely good results in both our class X and XII in Board examinations,
-                                where our students were placed among the top ten positions in the state. The aim of the
-                                school is not just imparting knowledge but to create character, discipline and ethics in
-                                students so that they not only excel academically but also have a heightened sense of
-                                morality. Students are made to feel connected to everything that goes on in the world-
-                                through projects, curriculum related activities like excursions, workshops, lectures,
-                                seminars etc.</p>
-                            </div>
+                                <div class="text txt-white">
+                                    <p>We have shown extremely good results in both our class X and XII in Board
+                                        examinations,
+                                        where our students were placed among the top ten positions in the state. The aim
+                                        of the
+                                        school is not just imparting knowledge but to create character, discipline and
+                                        ethics in
+                                        students so that they not only excel academically but also have a heightened
+                                        sense of
+                                        morality. Students are made to feel connected to everything that goes on in the
+                                        world-
+                                        through projects, curriculum related activities like excursions, workshops,
+                                        lectures,
+                                        seminars etc.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -66,5 +74,6 @@ include('_web/header.php')
     </div>
 </section>
 <?php
-include('_web/footer.php')
-?>
+        include('_web/footer.php');
+        include('_web/script.php');
+        ?>
