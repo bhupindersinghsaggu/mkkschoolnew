@@ -764,7 +764,7 @@ a::before .header-top-left .info-box p {
   padding: 10px 8px 8px 10px;
   border-radius: 100px;
   line-height: 32px;
-  background-color: var(--thm-base);
+  background-color: #17345a;
   color: #fff;
   z-index: 100;
   cursor: pointer;
