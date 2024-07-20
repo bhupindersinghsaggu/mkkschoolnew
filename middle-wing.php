@@ -12,7 +12,7 @@ include('_web/css.php');
                 <div class="inner-content">
                     <div class="title aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear"
                         data-aos-duration="1500">
-                        <h2>Junior Wing  <i class="baseline-event_busy"></i></h2>
+                        <h2>Middle Wing  <i class="baseline-event_busy"></i></h2>
                     </div>
                 </div>
             </div>
