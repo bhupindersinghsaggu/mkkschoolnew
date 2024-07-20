@@ -31,7 +31,7 @@ include('_web/css.php');
                         <div class="price-box">
                             <div class="btns-box">
                                 <a class="btn-one" href="jr_wing.php">
-                                    <span class="txt">Pre-Primary to UKG</span>
+                                    <span class="txt">Pre-Primary to UKG (Jr-Wing)</span>
                                 </a>
                             </div>
                         </div>
@@ -46,8 +46,8 @@ include('_web/css.php');
                         </div>
                         <div class="price-box">
                             <div class="btns-box">
-                                <a class="btn-one" href="sr_wing.php">
-                                    <span class="txt">I to V</span>
+                                <a class="btn-one" href="middle-wing.php">
+                                    <span class="txt">I to V (Middle Wing)</span>
                                 </a>
                             </div>
                         </div>
@@ -63,7 +63,7 @@ include('_web/css.php');
                         <div class="price-box">
                             <div class="btns-box">
                                 <a class="btn-one" href="sr_wing.php">
-                                    <span class="txt">VI to XII</span>
+                                    <span class="txt">VI to XII (Senior Wing)</span>
                                 </a>
                             </div>
                         </div>
