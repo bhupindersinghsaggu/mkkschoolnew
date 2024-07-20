@@ -829,3 +829,25 @@ a::before .header-top-left .info-box p {
   padding-bottom: 10px;
   padding-top: 10px;
 }
+
+.about-style1__inner {
+  position: relative;
+  display: block;
+  border: 1px solid #ede8e6;
+  padding: 20px;
+}
+
+.about-style1-content {
+  position: relative;
+  display: block;
+  padding-right: 5px;
+}
+
+
+.about-style1-content .top .text {
+  position: relative;
+  display: block;
+  padding-left: 0px;
+  top: -3px;
+  color: #fff;
+}
