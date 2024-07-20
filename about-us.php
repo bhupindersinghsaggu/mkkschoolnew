@@ -51,23 +51,23 @@ include('_web/css.php');
                     <div class="academics-overview-search-box">
                         <div class="top">
                             <div class="righ">
-                                <div class="text txt-white">
+                                <div class="text">
 
                                     <ul>
-                                        <h3 class="txt-white">Our Mission</h3>
+                                        <h3 class="short-heading">Our Mission</h3>
                                         <li>Our mission is to provide a holistic education that balances academic rigor
                                             with the development of essential life skills. We aim to inspire a love for
                                             learning, instill moral values, and cultivate a sense of social
                                             responsibility in our students.</li>
 
-                                        <h3>Academic Excellence</h3>
+                                        <h3 class="short-heading">Academic Excellence</h3>
                                         <li>We pride ourselves on our strong academic programs, designed to challenge
                                             and engage students at every level. Our curriculum is comprehensive,
                                             integrating the latest educational practices and technology to ensure
                                             students achieve their full potential. Our dedicated and experienced faculty
                                             are committed to delivering high-quality education and personalized support.
                                         </li>
-                                        <h3>Community and Values</h3>
+                                        <h3 class="short-heading">Community and Values</h3>
                                         <li>We are more than just a school; we are a community that values respect,
                                             integrity, and compassion. Our students are encouraged to be active
                                             participants in their communities, promoting positive change and
