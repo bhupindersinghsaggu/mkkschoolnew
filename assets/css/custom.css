@@ -826,5 +826,6 @@ a::before .header-top-left .info-box p {
 
 .short-heading{
   color:#f1eb19;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
