@@ -1,5 +1,6 @@
 <?php
-include('_web/header.php')
+include('_web/header.php');
+include('_web/css.php');
 ?>
 
 <section class="breadcrumb-style7-area">
@@ -26,18 +27,6 @@ include('_web/header.php')
             <div class="col-xl-12">
                 <div class="cooking-course-choose-text-box">
                     <table class="table table-striped">
-
-                        <tr>
-                            <td colspan=13 height="35" align="center" valign=middle>
-                                <font face="Bahnschrift Light SemiCondensed" size=4>CENTRAL BOARD OF SECONDARY EDUCATION
-                                </font>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan=13 height="35" align="center" valign=middle>
-                                <font face="Bahnschrift Light SemiCondensed" size=4>Mandatory Public Disclosure</font>
-                            </td>
-                        </tr>
                         <tr>
                             <td style="border-bottom: 1px solid #000000" colspan=13 height="40" align="left" valign=middle><b>
                                     <font face="Bahnschrift Light SemiCondensed">(A) GENERAL INFORMATION</font>
@@ -813,5 +802,6 @@ color: #000;
     </div>
 </section>
 <?php
-include('_web/footer.php')
-?>
+        include('_web/footer.php');
+        include('_web/script.php');
+        ?>

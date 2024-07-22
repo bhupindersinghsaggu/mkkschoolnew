@@ -160,7 +160,7 @@
 
                                                     <li><a href="eminent.php">Eminent Guests at school</a></li>
                                                     <li><a href="alumni.php">Alumni</a></li>
-                                                    <li><a href="Mandatory_Disclosure.php">Mandatory Disclosure</a></li>
+                                                    <li><a href="mandatory_disclosure.php">Mandatory Disclosure</a></li>
                                                     <li><a href="schoolmap.php">distance From School</a></li>
                                                 </ul>
                                             </li>
