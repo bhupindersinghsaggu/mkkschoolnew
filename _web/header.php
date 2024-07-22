@@ -157,11 +157,11 @@
                                                     <li><a href="principal-message.php">Principal's Message</a></li>
                                                     <li><a href="our-objective.php">Our Objectives</a></li>
                                                     <li><a href="our_achievements.php"> Our Achievements</a></li>
-
+<!-- 
                                                     <li><a href="eminent.php">Eminent Guests at school</a></li>
-                                                    <li><a href="alumni.php">Alumni</a></li>
+                                                    <li><a href="alumni.php">Alumni</a></li> -->
                                                     <li><a href="mandatory_disclosure.php">Mandatory Disclosure</a></li>
-                                                    <li><a href="schoolmap.php">distance From School</a></li>
+                                                    <!-- <li><a href="schoolmap.php">distance From School</a></li> -->
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Academic</a>
@@ -172,7 +172,7 @@
                                                     <li><a href="co_curricular_activities.php">Co-Curricular
                                                             Activities</a></li>
                                                     <li><a href="activities.php">Activities</a></li>
-                                                    <li><a href="pastoralcare.php">Pastoral Care</a></li>
+                                                    <!-- <li><a href="pastoralcare.php">Pastoral Care</a></li> -->
                                                     <li><a href="faculty.php">Faculty</a></li>
 
                                                     <li><a href="activity_calender.php">Activity Calender</a></li>
@@ -186,13 +186,13 @@
                                                     <li><a href="atal.php">Atal Tinkering Lab</a></li>
                                                     <li><a href="robotics.php">Robotics</a></li>
                                                     <li><a href="sports_games.php">Sports & Games</a></li>
-                                                    <li><a href="hostel_facilities.php">Hostel Facilities</a></li>
+                                                    <!-- <li><a href="hostel_facilities.php">Hostel Facilities</a></li> -->
                                                     <li><a href="transport.php">Transport</a></li>
                                                     <li><a href="tclp.php">coaching classes</a></li>
-                                                    <li><a href="exam_coaching.php">The Crescent Learning Programme</a>
-                                                    </li>
+                                                    <!-- <li><a href="exam_coaching.php">The Crescent Learning Programme</a>
+                                                    </li> -->
                                                     <li><a href="careercounselling.php">Career Counselling</a></li>
-                                                    <li><a href="coding.php"> Coding</a></li>
+                                                    <!-- <li><a href="coding.php"> Coding</a></li> -->
                                                     <li><a href="skating-rink.php"> Skating Rink</a></li>
                                                     <li><a href="table-tennis.php"> Table Tennis</a></li>
                                                 </ul>
@@ -202,7 +202,7 @@
                                                     <li><a href="value-inculcation.php">Value Inculcation</a></li>
                                                     <li><a href="codeofconduct.php">Code of Conduct</a></li>
                                                     <li><a href="dresscode.php">Dress Code</a></li>
-                                                    <li><a href="attendance.php">Attendance</a></li>
+                                                    <!-- <li><a href="attendance.php">Attendance</a></li> -->
                                                     <li><a href="rulesofdiscipline.php">Rules of Discipline</a></li>
                                                 </ul>
                                             </li>
