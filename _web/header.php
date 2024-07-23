@@ -38,11 +38,11 @@
                             </div> -->
                             <div class="info-box">
                                 <span class="icon-info"></span>
-                                <p>School Code: 43205</p>
+                                <p>School Code: 470047</p>
                             </div>
                             <div class="info-box">
                                 <span class="icon-info"></span>
-                                <p>Affiliation No: 630215</p>
+                                <p>Affiliation No: 530027</p>
                             </div>
                             <!-- <div class="info-box">
                                 <span class="icon-info"></span>
