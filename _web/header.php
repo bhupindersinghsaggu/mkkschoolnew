@@ -38,7 +38,7 @@
                             </div> -->
                             <div class="info-box">
                                 <span class="icon-info"></span>
-                                <p>School Code: 470047</p>
+                                <p>School Code: 40047</p>
                             </div>
                             <div class="info-box">
                                 <span class="icon-info"></span>
@@ -157,7 +157,7 @@
                                                     <li><a href="principal-message.php">Principal's Message</a></li>
                                                     <li><a href="our-objective.php">Our Objectives</a></li>
                                                     <li><a href="our_achievements.php"> Our Achievements</a></li>
-<!-- 
+                                                    <!-- 
                                                     <li><a href="eminent.php">Eminent Guests at school</a></li>
                                                     <li><a href="alumni.php">Alumni</a></li> -->
                                                     <li><a href="mandatory_disclosure.php">Mandatory Disclosure</a></li>
