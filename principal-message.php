@@ -29,7 +29,7 @@ include('_web/css.php');
             <div class="col-lg-7">
                 <div class="team-profile-description-wrap">
                     <div class="team-profile-description">
-                        <h2 class="title mb-30">Message from Principal</h2>
+                        <!-- <h2 class="title mb-30">Message from Principal</h2> -->
                         <p class="justify">
                             Every child is like a seed that has the potential to grow if it is nourished with
                             love

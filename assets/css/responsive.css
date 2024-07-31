@@ -5,11 +5,11 @@
 }
 
 /* Large Layout: 1200px. */
-@media only screen and (min-width: 1200px) {
-}
+@media only screen and (min-width: 1200px) {}
 
 /* Medium screen  */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
   /*** Header Style One Css ***/
   .header-top {
     display: none;
@@ -437,7 +437,7 @@
     flex-direction: column;
   }
 
-  .single-popular-quizzes-box .title-holder .meta-info ul li + li {
+  .single-popular-quizzes-box .title-holder .meta-info ul li+li {
     margin-left: 0px;
   }
 
@@ -503,10 +503,7 @@
     padding: 60px;
   }
 
-  .explore-direction-area--style2
-    .single-explore-direction-box__item
-    .img-box
-    .img-box__item {
+  .explore-direction-area--style2 .single-explore-direction-box__item .img-box .img-box__item {
     margin-bottom: 30px;
   }
 
@@ -687,7 +684,7 @@
     border-right: 0px solid #4d4846;
   }
 
-  .cta-style6__content ul li + li {
+  .cta-style6__content ul li+li {
     padding-left: 0px !important;
     margin-top: 25px;
   }
@@ -1396,6 +1393,7 @@
 
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /*** Header Style One Css ***/
   .header-top {
     display: none;
@@ -1891,7 +1889,7 @@
     max-width: 100%;
   }
 
-  .academy-working-process__content li + li {
+  .academy-working-process__content li+li {
     padding-top: 50px;
   }
 
@@ -2172,10 +2170,7 @@
     padding: 60px;
   }
 
-  .explore-direction-area--style2
-    .single-explore-direction-box__item
-    .img-box
-    .img-box__item {
+  .explore-direction-area--style2 .single-explore-direction-box__item .img-box .img-box__item {
     margin-bottom: 30px;
   }
 
@@ -2434,7 +2429,7 @@
     border-right: 0px solid #4d4846;
   }
 
-  .cta-style6__content ul li + li {
+  .cta-style6__content ul li+li {
     padding-left: 0px !important;
     margin-top: 25px;
   }
@@ -2885,11 +2880,11 @@
     border-bottom: none;
   }
 
-  .contact-details-style2-box ul + ul {
+  .contact-details-style2-box ul+ul {
     border-top: 1px solid #264b4f;
   }
 
-  .contact-details-style2-box ul li + li {
+  .contact-details-style2-box ul li+li {
     border-left: 0px solid #264b4f;
   }
 
@@ -3039,7 +3034,7 @@
     margin-right: 0px;
   }
 
-  .video-gallery-style2-box ul li + li {
+  .video-gallery-style2-box ul li+li {
     margin-top: 40px;
   }
 
@@ -3365,7 +3360,7 @@
     justify-content: center;
   }
 
-  .photography-gallery-details-text-box .project-info-box ul li + li {
+  .photography-gallery-details-text-box .project-info-box ul li+li {
     margin-top: 9px;
     margin-left: 0;
     padding-left: 30px;
@@ -3434,8 +3429,7 @@
 
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
-  .sec-title h2 {
-  }
+  .sec-title h2 {}
 
   .sec-title h2 br {
     display: none;
@@ -3462,9 +3456,9 @@
     margin-top: -7px;
   }
 
-  .sec-title-style8 h2 {
+  /* .sec-title-style8 h2 {
     font-size: 32px;
-  }
+  } */
 
   .sec-title-style8 h2 br {
     display: none;
@@ -3885,7 +3879,7 @@
     flex-direction: column;
   }
 
-  .accreditations-logo ul li + li {
+  .accreditations-logo ul li+li {
     margin-left: 0px;
     margin-top: 20px;
   }
@@ -4268,7 +4262,7 @@
     max-width: 100%;
   }
 
-  .academy-working-process__content li + li {
+  .academy-working-process__content li+li {
     padding-top: 50px;
   }
 
@@ -4383,7 +4377,7 @@
     margin: 12px 0 13px;
   }
 
-  .footer-widget-links-style3 ul + ul {
+  .footer-widget-links-style3 ul+ul {
     margin-left: 40px;
   }
 
@@ -4495,7 +4489,7 @@
     flex-direction: column;
   }
 
-  .single-courses-box-style4__inner .text-box .meta-info ul li + li {
+  .single-courses-box-style4__inner .text-box .meta-info ul li+li {
     margin-left: 15px;
     margin-top: 10px;
   }
@@ -4681,7 +4675,7 @@
     flex-direction: column;
   }
 
-  .single-popular-quizzes-box .title-holder .meta-info ul li + li {
+  .single-popular-quizzes-box .title-holder .meta-info ul li+li {
     margin-left: 0px;
   }
 
@@ -4694,8 +4688,7 @@
     padding: 0 20px;
   }
 
-  .quiz-learning-slogan-content-one--style2
-    .quiz-learning-slogan-content-one__inner {
+  .quiz-learning-slogan-content-one--style2 .quiz-learning-slogan-content-one__inner {
     float: none;
     padding-left: 20px;
     padding-right: 20px;
@@ -4852,10 +4845,7 @@
     padding: 10px;
   }
 
-  .explore-direction-area--style2
-    .single-explore-direction-box__item
-    .img-box
-    .img-box__item {
+  .explore-direction-area--style2 .single-explore-direction-box__item .img-box .img-box__item {
     margin-bottom: 30px;
   }
 
@@ -5023,7 +5013,7 @@
     padding-top: 27px;
   }
 
-  .about-style8-accreditations-box ul li + li {
+  .about-style8-accreditations-box ul li+li {
     margin-left: 0px;
     margin-top: 20px;
   }
@@ -5282,7 +5272,7 @@
     border-right: 0px solid #4d4846;
   }
 
-  .cta-style6__content ul li + li {
+  .cta-style6__content ul li+li {
     padding-left: 0px !important;
     margin-top: 25px;
   }
@@ -5943,11 +5933,11 @@
     border-bottom: none;
   }
 
-  .contact-details-style2-box ul + ul {
+  .contact-details-style2-box ul+ul {
     border-top: 1px solid #264b4f;
   }
 
-  .contact-details-style2-box ul li + li {
+  .contact-details-style2-box ul li+li {
     border-left: 0px solid #264b4f;
   }
 
@@ -6142,7 +6132,7 @@
     margin-right: 0px;
   }
 
-  .video-gallery-style2-box ul li + li {
+  .video-gallery-style2-box ul li+li {
     margin-top: 40px;
   }
 
@@ -6465,7 +6455,7 @@
     margin-top: 70px;
   }
 
-  .course-details-review-box > ul > li {
+  .course-details-review-box>ul>li {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -6625,7 +6615,7 @@
     justify-content: center;
   }
 
-  .photography-gallery-details-text-box .project-info-box ul li + li {
+  .photography-gallery-details-text-box .project-info-box ul li+li {
     margin-top: 9px;
     margin-left: 0;
     padding-left: 30px;
@@ -6753,10 +6743,7 @@
     opacity: 0.7;
   }
 
-  .marketplace-slogan-area
-    .academy-slogan-content-one__inner
-    .btns-box
-    a:hover {
+  .marketplace-slogan-area .academy-slogan-content-one__inner .btns-box a:hover {
     background-color: var(--thm-black);
   }
 
@@ -6782,7 +6769,7 @@
     flex-direction: column;
   }
 
-  .single-blog-style6 .text-holder .meta-info ul li + li {
+  .single-blog-style6 .text-holder .meta-info ul li+li {
     padding-left: 0px;
     margin-left: 0px;
   }
@@ -6835,9 +6822,10 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .main-menu .navigation > li > ul,
-  .main-menu .navigation > li > ul > li > ul,
-  .main-menu .navigation > li .megamenu {
+
+  .main-menu .navigation>li>ul,
+  .main-menu .navigation>li>ul>li>ul,
+  .main-menu .navigation>li .megamenu {
     display: block !important;
     visibility: hidden;
     opacity: 0;
@@ -6919,6 +6907,7 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1680px) {
+
   /*** Header Style One Css ***/
   .header-top .auto-container {
     padding: 0 30px;
@@ -7020,7 +7009,7 @@
     padding-right: 20px;
   }
 
-  .header-top-style3-right__btn a + a {
+  .header-top-style3-right__btn a+a {
     margin-left: 10px;
   }
 
@@ -7068,7 +7057,7 @@
     margin-left: 0px !important;
   }
 
-  .cta-style6__content ul li + li {
+  .cta-style6__content ul li+li {
     padding-left: 20px !important;
   }
 }
@@ -7081,11 +7070,11 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1350px) {
-  .main-menu--style4 .navigation > li {
+  .main-menu--style4 .navigation>li {
     margin-right: 20px;
   }
 
-  .main-menu--style4 .navigation > li:last-child {
+  .main-menu--style4 .navigation>li:last-child {
     margin-right: 0px;
   }
 
@@ -7127,6 +7116,7 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
   /*** Main Slider Css ***/
   .main-slider .auto-container {
     padding: 0px 120px;
@@ -7210,6 +7200,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /*** Main Slider Css ***/
   .main-slider .auto-container {
     padding: 0px 120px;
@@ -7388,7 +7379,7 @@
     justify-content: center;
   }
 
-  .main-slider .content .btns-box a + a {
+  .main-slider .content .btns-box a+a {
     margin-top: 10px;
     margin-left: 0px;
   }
@@ -7607,6 +7598,7 @@
 }
 
 @media only screen and (max-width: 499px) {
+
   /*** Main Slider Css ***/
   .main-slider .owl-theme .owl-nav {
     display: none;
@@ -7652,7 +7644,7 @@
     justify-content: center;
   }
 
-  .main-slider .content .btns-box a + a {
+  .main-slider .content .btns-box a+a {
     margin-top: 10px;
     margin-left: 0px;
   }
@@ -7816,7 +7808,7 @@
     display: block;
   }
 
-  .main-slider--style6 .content .meta-box ul li + li {
+  .main-slider--style6 .content .meta-box ul li+li {
     margin-left: 0px;
   }
 
