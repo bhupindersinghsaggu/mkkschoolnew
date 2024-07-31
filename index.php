@@ -245,10 +245,10 @@ include('_web/css.php');
                     </div>
                 </div>
             </div>
-           <?php
-           include('_web/scroll_news.php');
-           
-           ?>
+            <?php
+            include('_web/scroll_news.php');
+
+            ?>
 
         </div>
         <div class="row">
@@ -764,7 +764,7 @@ include('_web/latest_news_home.php')
                                 different sports, yoga, cultural activities, etc. </p><br>
                         </div>
                         <div class="profile-content">
-                            <h4 class="name inner-title">Mr. Madhup Parsar</h4>
+                            <h4 class="name inner-title">Mr. Madhup Parasar</h4>
                             <p class="designation"><b>Principal </b></p>
                         </div>
                     </div>
