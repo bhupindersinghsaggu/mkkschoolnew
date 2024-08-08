@@ -335,7 +335,7 @@ include('_web/latest_news_home.php')
                 </div>
                 <div class="outer-box">
                     <div class="title">
-                        <a href="e-new-letter.php">
+                        <a href="e-news-letter.php">
                             <h3 class="txt-white">E-News letter</h3>
                         </a>
                     </div>
