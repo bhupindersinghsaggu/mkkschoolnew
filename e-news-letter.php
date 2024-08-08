@@ -44,7 +44,7 @@ include('_web/css.php');
                                     <div class="text">
                                         <h3 class=" pd-10"><a href="news-letter/2024/july.pdf"><i
                                                     class="fa-solid fa-circle-down fa-beat pdr-5"></i>
-                                                July</a></h3>
+                                               Download July Month</a></h3>
                                         <!-- <h3 class=" pd-10"><a href="#"><i
                                                     class="fa-solid fa-circle-down fa-beat pdr-5"></i>
                                                 June</a></h3>
