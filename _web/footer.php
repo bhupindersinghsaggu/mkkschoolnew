@@ -78,8 +78,8 @@
                                                <span class="icon-right-arrow-1"></span>Book List
                                            </a>
                                        </li>
-                                       <li>
-                                           <a href="certificates-2024-25/Fee-structure-24-25.pdf">
+                                       <li> 
+                                           <a href="/assets/images/fee-structure/fee-structure-2024-25.pdf">
                                                <span class="icon-right-arrow-1"></span>Fee Structure
                                            </a>
                                        </li>

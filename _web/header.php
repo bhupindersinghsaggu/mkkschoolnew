@@ -96,6 +96,10 @@
                                                     <li><a href="faculty.php">Faculty</a></li>
                                                     <li><a href="activity_calender.php">Activity Calender</a></li>
                                                     <li><a href="/booklist.php">Book List</a></li>
+
+                                                    <li><a href="/assets/images/fee-structure/fee-structure-2024-25.pdf"> Fee Structure</a></li>
+
+                                                   
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Facilities</a>
