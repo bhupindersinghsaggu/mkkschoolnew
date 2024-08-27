@@ -95,6 +95,7 @@
                                                     <li><a href="activities.php">Activities</a></li>
                                                     <li><a href="faculty.php">Faculty</a></li>
                                                     <li><a href="activity_calender.php">Activity Calender</a></li>
+                                                    <li><a href="/booklist.php">Book List</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Facilities</a>
