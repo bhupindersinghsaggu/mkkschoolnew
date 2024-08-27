@@ -12,7 +12,7 @@ include('_web/css.php');
                 <div class="inner-content">
                     <div class="title aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear"
                         data-aos-duration="1500">
-                        <h2>CBSE MANDATORY DISCLOSURE <i class="baseline-event_busy"></i></h2>
+                        <h2>About <i class="baseline-event_busy"></i></h2>
                     </div>
                 </div>
             </div>
@@ -21,9 +21,6 @@ include('_web/css.php');
 </section>
 <section class="fees-area">
     <div class="container">
-    <div class="sec-title-style8">
-            <h2>CBSE <span> Mandate Disclosure</span></h2>
-        </div>
         <div class="row">
             <div class="col-xl-12 col-lg-12">
                 <table class="table table-striped">
@@ -190,7 +187,11 @@ include('_web/css.php');
                                 APPLICABILITY</td>
                             <td><a href="assets/images/pdf/cbseresults.pdf" target="_blank"><i class="fa fa-download"
                                         aria-hidden="true"></i> DOWNLOAD </td></a>
+
                         </tr>
+
+
+
                     </tbody>
                 </table>
 
@@ -198,6 +199,7 @@ include('_web/css.php');
                 <table class="table table-striped">
                     <thead>
                         <tr>
+
                             <th scope="col">S.NO.</th>
                             <th scope="col">YEAR</th>
                             <th scope="col">NO. OF REGISTERED STUDENTS</th>
@@ -207,6 +209,7 @@ include('_web/css.php');
                         </tr>
                     </thead>
                     <tbody>
+
                         <tr>
                             <td>
 
@@ -275,16 +278,24 @@ include('_web/css.php');
 
                             </td>
                             <td>
+
                                 2022-23
+
                             </td>
                             <td>
+
                                 241
+
                             </td>
                             <td>
+
                                 238
+
                             </td>
                             <td>
+
                                 237
+
                             </td>
                             <td>-
                             </td>

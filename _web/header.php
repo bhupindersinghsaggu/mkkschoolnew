@@ -83,7 +83,7 @@
                                                     <li><a href="principal-message.php">Principal's Message</a></li>
                                                     <li><a href="our-objective.php">Our Objectives</a></li>
                                                     <li><a href="our_achievements.php"> Our Achievements</a></li>
-                                                    <li><a href="mandatory_disclosure.php">Mandatory Disclosure</a></li>
+                                                    <li><a href="cbsemandate.php">Mandatory Disclosure</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Academic</a>
