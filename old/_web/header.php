@@ -1,84 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dr. M.K.K. || Arya Model School || Best CBSE School Panipat</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest">
 
-
-
-<head>
-
- <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-    <title>Crescent Public School</title>
-
-
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-
-
-    <link rel="stylesheet" href="assets/css/slick.css">
-
-    <link rel="stylesheet" href="assets/css/animate.css">
-
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-
-
-    <link rel="stylesheet" href="assets/css/jquery.nice-number.min.css">
-
-
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-
-
+    <!-- plugin scripts -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,800%7CSatisfy&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
 
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome-free-5.11.2-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/plugins/kipso-icons/style.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/vegas.min.css">
+   
 
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-
-    <link rel="stylesheet" href="assets/css/default.css">
-
-
+    <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-
-  <link rel="stylesheet" href="assets/css/custom.css">
-
-    <link rel="stylesheet" href="dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
-    <header id="header-part">
-        <div class="header-top d-none d-lg-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="header-contact">
-                            <ul>
-                                <li style="color:#ffc600"><i class="fa fa-sign-in-alt"></i>School Code: 43205</li>
-                                <li style="color:#ffc600"><i class="fa fa-sign-in-alt"></i><span> Affiliation No:
-                                        630215</span></li>
 
-                            </ul>
-                        </div> <!-- header contact -->
-                    </div>
-                    <div class="col-md-6">
-                        <div class="header-right d-flex justify-content-end">
-                            <div class="social d-flex">
-                                <a class="btn btn-xs btn-primary" style="color: #07294d;font-size: 12px; margin-top:-2px; background: #ffc600;border-color: #07294d;" href="https://curtina.in/_ERP/forms/frmJobApplicationCR_AE_JQ.aspx?appid=CRESCENT">Apply for Job</a>
-                                ||
-                                <a class="btn btn-xs btn-primary" style="color: #07294d;font-size: 12px; margin-top:-2px; background: #ffc600;border-color: #07294d;" href="https://curtina.in/_EazySchool/FormsWeb/frmHostel.aspx?AppId=crescent">Apply
-                                    for Hostel</a>
-                            </div> <!-- social -->
-                            <div class="login-register">
-                                <ul>
-                                    <li><a href="http://Curtina.in/_mobile/login.aspx?AppId=CRESCENT"><i class="fa fa-sign-in" aria-hidden="true"></i> ERP Login</a></li>
-                                    <li><a href="http://Curtina.in/crescent?url=http://Curtina.in/_Web/frmFindTC.aspx"> <i class="fa fa-search" aria-hidden="true"></i> Search TC</a></li>
-                                </ul>
-                            </div>
-                        </div> <!-- header right -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header top -->
+    <!-- Quick Links Start -->
+
+ 
+    <div class="page-wrapper">
+        <div class="topbar-one">
+            <div class="container">
+                <div class="topbar-one__left">
+                    <a href="#">CBSE Affiliation No:  530027</a>
+                    <a href="#">School Code: 40047</a>
+                    <a href="#">UDISE Code: 06070106847</a>
+                    
+                    
+                    
+                    
+                 
+                     <a href="/booklist.php">Book List</a>
+                     <a href="cbsemandate.php" target="_blank">Mandatory Disclosure</a>
+                      <a href="https://docs.google.com/spreadsheets/d/18YnwoI75CcYv52exNTwF0zUsRqivENSwju_qzOPbbyY/edit#gid=1904331020">Transport Route</a>
+                        <a href="https://mail.hostinger.com/">Webmail</a>
+                </div><!-- /.topbar-one__left -->
+                <div class="topbar-one__right">
+                   
+                  
+                    
+                </div><!-- /.topbar-one__right -->
+            </div><!-- /.container -->
+        </div><!-- /.topbar-one -->
+
+        

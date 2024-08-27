@@ -1,415 +1,148 @@
-
-
-.admission-info {
-    background-color: #07294d;
-    padding: 50px 40px;
-}
-
-.svg1{
-    text-align: center;
-    padding-bottom: 25px;
-}
-.admission-info p {
-    color: #fff;
-    padding-bottom: 20px;
-    text-align: center;
-    font-weight: 600;
-}
-.my-button
-{
-
-text-align: center;
-
-}
-
-.section-title h5 {
-    color: #07294d;
-    position: relative;
-    padding-bottom: 12px;
-    font-size: 40px;
-
-}
-
-.single-course .cont {
-    padding-top: 6px;
-   padding-bottom: 0px;
-    padding-left: 30px;
-    padding-right: 30px;
+.header-2 .header-top {
+    font-weight: 300;
+    font-size: 1.4rem;
+    background-color: #fff;
 }
 
 
-.purchase {
-    width: 100%;
-    float: left;
-    background-color: #ffc600;
-    padding: 0px 0px;
-    /* margin-bottom: 55px; */
-    border-top: solid 0px #F3CF01;
-}
-
-.Highlights {
-    margin-bottom: 0px;
-    margin-top: 0px;
-    color: #07294d;
-    font-size: 18px;
-    text-align: right;
-}
-
-:host {
-    display: inline-block;
-    overflow: hidden;
-    text-align: initial;
-    white-space: nowrap;
-}
-@media (min-width: 1200px){
-.desktop-view {
-    display: block;
-}
-}
-.video i {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    font-size: 24px;
-    background-color: #ffc600;
-    color: #07294d;
-    border-radius: 50%;
-}
-
-.content-area > .container {
-    background: white;
-    border-left: solid .1px #ccc;
-    border-right: solid .1px #ccc;
-    border-bottom: solid .1px #ccc;
-}
-
-.ml-auto, .mx-auto {
-    margin-left: auto!important;
-}
-
-.gallery-title{
-    
-        text-align: center;
-        color: antiquewhite;
-		background-color: #249e5f78;
-}
-
-figure {
-    margin: 0 0 1rem;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-
-.header-top {
-    background-color: #07294d;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
-
-.svg    {
-    box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 22%);
-    padding:25px;
-    text-align: center;
-	background-color:#e7123a91;
-}
-
-
-
-.section-title h2 {
-    font-size: 37px;
-    color: #07294d;
-    padding-top: 10px;
-	
-}
-
-
-
-
-@media (max-width: 575.98px) { 
-
-
-    .feature-bg{
-
-        position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(7, 41, 77, 0.9);
-    }
-
-}
-
-
-.list{
-    line-height: 40px;
-    font-weight: 800;
-    margin-bottom:30px;
-}
-
-.page-heading{
-    background: #ffc600;
-    padding: 5px;
-    margin-bottom: 30px;
-    font-size: 22px;
-    margin-top:30px;
-   font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-}
-.span{
-   color: blue;
-}
-.campus-list{
-    line-height: 32px;
-    text-align: justify;
-}
-
-.about-img{
-    margin-top: 29px;
- padding: 10px;
- background-color: #fff;
-    display: block;
-    position: relative;
-    margin-bottom: 30px;
-    -webkit-box-shadow: 0 0 30px 0 rgba(0,0,0,.1);
-    -moz-box-shadow: 0 0 30px 0 rgba(0,0,0,.1);
-    box-shadow: 0 0 30px 0 rgba(0,0,0,.1);
-}
-
-}
-
-    .myimage {
-                            padding-top: 20px;
-                            padding-bottom: 20px;
-                        }
-
-                        .mytext {
-                            padding-top: 20px;
-                            padding-bottom: 20px;
-                            font-family: Montserrat;
-                        }
-
-                        .heading {
-                            font-family: 'Roboto', sans-serif;
-                            font-size: 25px;
-                            padding-bottom: 20px;
-                            font-weight: 500;}
-
-                            .content-area > .container {
-    background: white;
-    border-left: solid .1px #fff;
-    border-right: solid .1px #fff;
-    border-bottom: solid .1px #fff;
-}
-
-.text{
-    font-family: 'Roboto', sans-serif;
-    line-height: 30px;
-  
-}
-.academic-list{
-margin-left: 20px;
-}
-
-.heading1{
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    /* padding-bottom: 20px; */
-    font-weight: 500;
-    background-color: #ffc600;
-    margin-bottom: 20px;
-    padding: 5px;
-    margin-top: 10px;
-}
-
-
-.col-sm-5{text-align: justify;
-    margin-top: 29px;
-    background-color: #f1f0ef;
-    height: 319px;
-                        }
-
-
-                        .back1{
-                            background: #f2f5f5;
-                            margin-top:22px;
-                            margin-bottom: 22px;
-                        }
-
-
-
-                        [data-overlay]::before {
-    background: #07294ddb none repeat scroll 0 0;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-
-.hostel{
-    text-align: center;
-    font-size: 28px;
-    padding-bottom: 20px;
+.cityline{
+font-size: 4.6rem;
     font-weight: 700;
-}
-
-#btnGoToTop {
-    position: fixed;
-    bottom: 15px;
-    right: 20px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-@media (max-width: 480px){
-    
-    .logo{
-        
-        width: 180px;
-        
-    }
-    
-}
-
-
-@media (max-width: 320px){
-.ml-auto navbar-nav{
-    
-    line-height:1px;
-}
-    
-}
-
-.navigation .navbar .navbar-nav li .sub-menu li a {
-    padding: 4px 7px;
-    display: block;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    color: #fff;
-}
-
-
-.navigation .navbar .navbar-nav li a {
-    font-size: 15px;
-    font-weight: 500;
-    color: #07294d;
+    letter-spacing: -.025em;
+    color: #222;
+    margin-bottom: 1rem;
     text-transform: uppercase;
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s linear;
-    padding: 9px 15px 32px 15px;
-    display: block;
+    line-height: 1.4em;
 }
 
+.productheading{
 
-.gray-bg {
-    background: #b4d6eb;
-}
-
-
-.school-name{
-    text-align: center;
-    font-size: 19px;
-    font-weight: 700;
-    color: #f0bd05;
-    background-color: #07294d;
-   
-}
-
-.online{
-    padding-top:10px;
-     font-size:  19px;
-	color:  white;
+    color: #333;
     font-weight: 600;
-    font-size: 23px;
-        text-align: center;
+    font-size: 2.4rem;
+    letter-spacing: -.025em;
+    margin-bottom: 1.4rem;
+    background: antiquewhite;
+    padding: 3px;
 }
 
 
-    button.close {
 
-        background-color: transparent;
-        border: 0;
-        -webkit-appearance: none;
-        padding-right: 10px;
-        padding-top: 10px;
-    }
 
-    .admission-banner a {
-        padding: 4px;
-        font-size: 19px;
-        background: #07294d;
-        color: #ffc600;
-        text-align: center;
-    }
+.banner img {
+    display: block;
+    max-width: none;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+}
 
-    .admission-banner {
-        padding: 4px;
-        font-size: 19px;
-        background: #07294d;
-        color: #ffc600;
-        margin-top: 20px;
-        text-align: center;
-    }
 
-    .modal-title {
-        text-align: center;
-        padding-top: 20px;
-        color: #ffffff;
-        font-size: 31px;
-    }
-
+.myimage {
+    display: block;
+    position: relative;
+    margin-bottom: 2rem;
+    padding-top: 20px;
    
+}
 
-    .enquiry {
-        position: fixed;
-        background: #f16101;
-        padding: 5px;
-        margin-left: -39px;
-        top: 409px;
-        z-index: 9999999999;
-        transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        -moz-transform: rotate(270deg);
-    }
 
-    .icon-bar-left {
-        position: fixed;
-        top: 50%;
-        z-index: 99 !important;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
 
-    .icon-bar-left a {
-        display: block;
-        text-align: center;
-        padding: 11px;
-        transition: all 0.3s ease;
-        color: white;
-        font-size: 20px;
-    }
 
-    .facebook {
-        background: #3B5998;
-        color: white;
-    }
+@media (min-width: 480px) {
 
-    .youtube {
-        background: #bb0000;
-        color: white;
-    }
 
-    .instagram {
-        background: #C150C8;
-        color: white;
-    }
+.loginbr{
+    
+    width: 42px;
+}
+
+}
+
+.blog-one__image {
+   
+    position: relative;
+    overflow: hidden;
+}
+
+
+.modal-title {
+    text-align: center;
+    padding-top: 20px;
+    color: #f16101;
+    font-size: 31px;
+}
+
+
+.sidebar__category-list-item{
+    
+    line-height:27px;
+    
+}
+
+.cbse-img{
+    
+   border-style: solid;
+    border-width: 2px;
+    border-color: #ea050573;
+    border-top: 0;
+    background-color: #fff;
+    
+    
+}
+
+
+.team-one__name1{
+    
+    
+   
+    background: #d85a05;
+    padding: 3px;
+    margin-bottom: 5px;
+    color: #fff;
+
+
+    
+}
+
+
+
+
+@media (min-width: 576px) {.close{
+
+
+    margin-right: 63px;
+    margin-top: 23px;
+} }
+
+
+
+.video{
+    
+    padding-top:30px;
+    text-align:center;
+}
+
+
+
+
+
+.block-title__title1 {
+    margin: 0;
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: -15px;
+    margin-top: -15px;
+    background-color: #19a83b7a;
+}
+
+
+
+.cta-three__image {
+    float: right;
+    max-width: 1000px;
+}
+
+
+

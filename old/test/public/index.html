@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,400&display=swap">
+</head>
+
+<body>
+    <header>
+        <nav class="container flex items-center py-4 mt-4 sm:mt-12">
+            <div class="py-1"><img src="assets/img/logo.webp" class="w-40 sm:w-60"></div>
+            <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 uppercase text-sm color-bookmark-red">
+                <li class="cursor-pointer">Features</li>
+                <li class="cursor-pointer">Princing</li>
+                <li class="cursor-pointer">Contact</li>
+                <button class="bg-bookmark-red text-white px-7 py-3 rounded-md uppercase">Login</button>
+            </ul>
+            <div class="flex sm:hidden flex-1 justify-end">
+                <i class=" text-2xl fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--Hero Section-->
+    <section class="relative">
+        <div class="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
+            <!--Content-->
+            <div class="flex flex-1 flex-col items-center lg:items-start">
+                <h2 class="text-bookmark-blue text-2xl md:text-4 lg:text-5xl text-center lg:text-left mb-6">
+                    A Simple Bookmark Manager</h2>
+                <p class="text-bookmark-grey text-lg text-center lg:text-left mb-6">
+                    A clean and simple interface to oranize your favourite websites. Open a new browser tab and select
+                    book
+                    mark
+                </p>
+                <div class="flex justify-center gap-3 flex-wrap">
+                    <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">Get it on
+                        Chrome</button>
+                    <button type="button" class="btn btn-white hover:bg-bookmark-purple hover:text-white">Get it on
+                        Firefox</button>
+                </div>
+            </div>
+            <!--Hero-img-->
+            <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
+                <img class="sm:w-3/4 md:w-full md:h-full" src="assets/img/hero-img.jpg">
+            </div>
+        </div>
+        <!--Rounded Rectangle-->
+        <div
+            class="bg-bookmark-purple rounded-l-full h-80 w-2/4 absolute hidden overflow-hidden md:block right-0 top-32 -bottom-28 lg:-right-26">
+        </div>
+    </section>
+    <!--Features Section-->
+    <section class="bg-bookmark-white py-20 mt-20 lg:mt-60">
+        <!--Heading-->
+        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <h1 class="text-2xl text-center">Features</h1>
+            <p class="text-bookmark-grey mt-4 text-center">A bookmark is a web browser feature used to save a web site's
+                URL address for future reference. Bookmarks save user and
+                browser time, which is especially useful for Web pages.</p>
+        </div>
+        <!--Features-->
+        <div class="relative mt-20 lg:mt-24">
+            <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <div class="flex flex-1 justify-center z-10 mb-10 mt-10 l:mb-0">
+                    <img class="sm:w-3/4" src="assets/img/features-img.jpg">
+                </div>
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-2xl text-bookmark-purple">Bookmark in one Click</h1>
+                    <p class="text-bookmark-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">Bookmarking is a
+                        powerful feature with an extensive API that allows you to perform various custom
+                        actions. This section
+                        discusses the following key concepts and features of bookmarks and related Bookmark objects:</p>
+                    <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">More
+                        info</button>
+                </div>
+            </div>
+            <!--Rounded Rectangle-->
+            <div
+                class="bg-bookmark-purple rounded-r-full h-80 w-2/4 absolute hidden overflow-hidden md:block left-0 top-32 -bottom-28 lg:-right-26">
+            </div>
+        </div>
+        <div class="relative mt-20 lg:mt-52">
+            <div class="container flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
+                <div class="flex flex-1 justify-center z-10 mb-10 mt-10 l:mb-0">
+                    <img class="sm:w-3/4" src="assets/img/features-img2.jpg">
+                </div>
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-2xl text-bookmark-purple">Bookmark in one Click</h1>
+                    <p class="text-bookmark-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">Bookmarking is a
+                        powerful
+                        feature with an extensive API that allows you to perform various custom
+                        actions. This section
+                        discusses the following key concepts and features of bookmarks and related Bookmark objects:</p>
+                    <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">More
+                        info</button>
+                </div>
+            </div>
+            <!--Rounded Rectangle-->
+            <div
+                class="bg-bookmark-purple rounded-l-full h-80 w-2/4 absolute hidden overflow-hidden md:block right-0 top-32 -bottom-28 lg:-right-26">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20  md:py-10 mt-10 ">
+        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <h1 class="text-2xl text-center">Download the Extention</h1>
+            <p class="text-bookmark-grey mt-4 text-center">Chrome Web Store. Customize and Personalize Chrome on your
+                desktop computer with Extensions, Themes and Apps. Power up
+                your Chrome.</p>
+        </div>
+        <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg pt-16">
+            <div class="flex flex-col rounded-md shadow-md lg:mb-16">
+                <div class="p-6 flex flex-col items-center">
+                    <img src="assets/img/chrome.png">
+                    <h2 class="mt-5 mb-2 text-bookmark-purple text-lg font-semibold">Add to chrome</h2>
+                    <p class="text-bookmark-grey mb-2 font-light">Minimun Version 6.0</p>
+                </div>
+                <hr class="border-b border-bookmark-white" />
+                <div class="p-6 flex flex-col">
+                    <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black text-sm lg:text-base md:text-base">Add & install
+                        Extension</button>
+                </div>
+            </div>
+            <div class="flex flex-col rounded-md shadow-md lg:my-8 ">
+                <div class="p-6 flex flex-col items-center">
+                    <img src="assets/img/firefox.png">
+                    <h2 class="mt-5 mb-2 text-bookmark-purple text-lg font-semibold ">Add to Firefox</h2>
+                    <p class="text-bookmark-grey mb-2 font-light">Minimun Version 6.0</p>
+                </div>
+                <hr class="border-b border-bookmark-white" />
+                <div class="p-6 flex flex-col"><button type="button"
+                        class="btn btn-purple hover:bg-bookmark-white hover:text-black text-sm lg:text-base md:text-base">Add & install Extension</button>
+                </div>
+            </div>
+            <div class="flex flex-col rounded-md shadow-md lg:mt-16">
+                <div class="p-6 flex flex-col items-center">
+                    <img src="assets/img/opera.jpg">
+                    <h2 class="mt-5 mb-2 text-bookmark-purple text-lg font-semibold">Add to Opera</h2>
+                    <p class="text-bookmark-grey mb-2 font-light">Minimun Version 6.0</p>
+                </div>
+                <hr class="border-b border-bookmark-white" />
+                <div class="p-6 flex flex-col"><button type="button"
+                        class="btn btn-purple hover:bg-bookmark-white hover:text-black text-sm lg:text-base md:text-base">Add & install Extension</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="container">
+            <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+                <h1 class="text-2xl text-center">Frequently Asked Question</h1>
+                <p class="text-bookmark-grey mt-4 text-center">Here are some of our FAQs. If you have any other
+                    questions
+                    you’d like answered please feel free to email us.</p>
+            </div>
+            <div class="flex flex-col sm:w-3/4 lg:w-5/12 mx-auto mt-12">
+                <div class="flex items-center border-b py-4">
+                    <span class="flex-1">What is a Bookmark?</span>
+                    <i class="text-bookmark-purple fas fa-chevron-down"></i>
+                </div>
+                <div class="flex items-center border-b py-4">
+                    <span class="flex-1">How can I request a new browser?</span>
+                    <i class="text-bookmark-purple fas fa-chevron-down"></i>
+                </div>
+                <div class="flex items-center border-b py-4">
+                    <span class="flex-1">Is there a mobile app?</span>
+                    <i class="text-bookmark-purple fas fa-chevron-down"></i>
+                </div>
+                <div class="flex items-center border-b py-4">
+                    <span class="flex-1">What about other Chromium browsers?</span>
+                    <i class="text-bookmark-purple fas fa-chevron-down"></i>
+                </div>
+                <button type="button"
+                    class=" mt-4 flex self-center btn btn-purple hover:bg-bookmark-white hover:text-black">More
+                    info</button>
+            </div>
+        </div>
+    </section>
+    <section class="bg-bookmark-purple py-16">
+        <div class="container">
+            <div class=" sm:w-3/4 lg:w-2/4 mx-auto">
+                <p class="text-bookmark-white text-center">35000+Already Joined</p>
+                <h1 class="text-3xl text-bookmark-white mt-4 text-center ">Stay up to date what we're doing</h1>
+                <div class="flex flex-col sm:flex-row gap-6 mt-8">
+                    <input type="text" placeholder="Enter your email address"
+                        class="focus:outline-none flex-1 px-2 py-3 rounded-md text-black" />
+                    <button type="button"
+                        class="flex self-center btn btn-red text-white hover:bg-bookmark-white hover:text-black">More
+                        info</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer-->
+    <section class="py-4 bg-bookmark-dark-blue">
+        <div class="container flex flex-col md:flex-row items-center">
+            <div class="flex  flex-1 items-start justify-start gap-24">
+                <ul class="flex gap-7 text-white">
+                    <li class="cursor-pointer">Features</li>
+                    <li class="cursor-pointer">Princing</li>
+                    <li class="cursor-pointer">Contact</li>
+                </ul>
+            </div>
+            <div class="flex items-center justify-center gap-10 text-white mt-4 md:m-0 ">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+    </section>
+</body>
+
+</html>
