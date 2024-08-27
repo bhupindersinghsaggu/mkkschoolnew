@@ -40,7 +40,7 @@
                             <div class="quick-link-box">
                                 <div class="link-box">
                                     <ul>
-                                        <li><a href="book-list.php" target="_blank">Book List</a></li>
+                                        <li><a href="/booklist.php" target="_blank">Book List</a></li>
                                         <li><a href="https://curtina.in/_ERP/forms/frmJobApplicationCR_AE_JQ.aspx?appid=CRESCENT"
                                                 target="_blank">Apply For Job</a></li>
                                         <li><a href="http://www.curtina.in/MKK?url=http://www.curtina.in/_Web/FrmfindTC.aspx"
