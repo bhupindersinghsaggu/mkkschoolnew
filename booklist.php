@@ -22,7 +22,7 @@ include('_web/css.php');
 <section class="cooking-course-choose-area">
     <div class="container">
         <div class="sec-title-style8">
-            <h2>Academic <span> Features</span></h2>
+            <h2>Book  <span> List: 2024-25</span></h2>
         </div>
         <div class="row">
             <div class="col-md-12">
