@@ -4,7 +4,7 @@ include('_web/css.php');
 ?>
 
 <section class="breadcrumb-style7-area">
-    
+
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -23,7 +23,7 @@ include('_web/css.php');
         <div class="sec-title-style8">
             <h2> <span> Campus</span></h2>
         </div>
-        
+
         <div class="row pd-top align-items-center">
             <div class="col-xl-6">
                 <div class="cooking-course-choose-img-box">
@@ -48,7 +48,7 @@ include('_web/css.php');
                 </div>
             </div>
         </div>
-        <div class="row pd-top align-items-center">
+        <!-- <div class="row pd-top align-items-center">
             <div class="col-xl-6">
                 <div class="cooking-course-choose-img-box">
                     <div class="inner">
@@ -72,12 +72,12 @@ include('_web/css.php');
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row pd-top align-items-center">
             <div class="col-xl-6">
                 <div class="cooking-course-choose-img-box">
                     <div class="inner">
-                        <img src="assets/images/about/15.jpg" alt="">
+                        <img src="assets/images/infra/jr-wing.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@ include('_web/css.php');
             <div class="col-xl-6">
                 <div class="cooking-course-choose-img-box">
                     <div class="inner">
-                        <img src="assets/images/infra/playground.jpg" alt="">
+                        <img src="assets/images/infra/dispensary.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -142,26 +142,22 @@ include('_web/css.php');
                         <li>
                             <div class="inner-text">
                                 <h3>Dipensary for Students </h3>
-                                <p>School playground provides a safe outdoor environment within the School that
-                                    stimulates students to use their creative energy in healthy interactions with one
-                                    another. Our sporting activities enable students to develop the skills of risk
-                                    taking, decision making under pressure, resilience and team working. Two Vast
-                                    playgrounds,the pride of our campus,support these objectives. These spacious and
-                                    well maintained playgrounds with all required material always serve this purpose.
-                                    sports such as Cricket, Basketball,Throw ball, Athletics etc. are all the
-                                    options offered to the students. In our endeavour to polish students in their choice
-                                    of sport,we offer expert trainers to help children master key skills.</p>
+                                <p>Our goal is to foster an environment where our children thrive in all aspects of
+                                     their development, aiming to make them healthy, wealthy, and wise. To achieve this vision,
+                                      we have established a robust annual health checkup program for our students. 
+                                      This program is designed to provide each student with a thorough health assessment 
+                                      conducted by skilled healthcare professionals.</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-       
+
     </div>
 </section>
 
 <?php
-        include('_web/footer.php');
-        include('_web/script.php');
-        ?>
+include('_web/footer.php');
+include('_web/script.php');
+?>
