@@ -6,12 +6,16 @@
             <ul style=" margin-bottom:0px; margin-top:50px">
 
                 <li class="thoughttext"> <i class="fa-solid fa-paper-plane fa-beat pdr-5 new-color"></i>
-                    The future of science shone brightly at Dr. M.K.K. Arya Model School on July 18, 2024 during the
-                    *Science Declamation* for grades IV to VIII. Our talented students delivered captivating
-                    presentations, showcasing their passion for science
+                    We're excited to announce that our students have excelled at the Karate District Level tournament:
+
+                    Chetan Aneja (XII A) - Gold Medal
+                    Lakshay Saroha (IX A2) - Gold Medal
+                    Mannat (XI B) - Gold Medal
+                    Kartik Kapoor (VIII B) - Silver Medal
+                    They have all been selected for the State Level tournament, representing our school with pride.
                     <div class="read-more">
                         <div class="date">
-                            <span class="icon-calendar icon-color"></span> July 19,
+                            <span class="icon-calendar icon-color"></span> Aug 29,
                             2024
                         </div>
                         <div class="popular-tag-box">
