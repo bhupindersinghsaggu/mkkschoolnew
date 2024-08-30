@@ -1,5 +1,6 @@
 <?php
-include('_web/header.php')
+include('_web/header.php');
+include('_web/css.php');
 ?>
 
 <section class="breadcrumb-style7-area">
@@ -31,7 +32,7 @@ include('_web/header.php')
                             <div class="inner-text">
                                 <div class="">
                                     <div class="inner-text">
-                                        <p>The chief objective of Crescent Public School is to educate children by
+                                        <p>The chief objective of MKK School is to educate children by
                                             providing them with an ambience,which takes care of their aptitudes and
                                             interests.It gives them opportunity to develop and demonstrate their natural
                                             abilities. Our motto is "One Team One Goal" and we are an extremely close
@@ -73,5 +74,6 @@ include('_web/header.php')
     </div>
 </section>
 <?php
-include('_web/footer.php')
+include('_web/footer.php');
+include('_web/script.php');
 ?>
