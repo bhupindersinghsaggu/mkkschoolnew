@@ -312,6 +312,12 @@ include('_web/css.php');
 <?php
 include('_web/latest_news_home.php')
 ?>
+
+<?php
+include('_web/achievement.php')?>
+
+
+
 <!--End Video Gallery Style1 Area-->
 <section class="fact-counter-area mt-top100">
     <div class="container">
