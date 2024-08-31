@@ -1,5 +1,6 @@
 <?php
-include('_web/header.php')
+include('_web/header.php');
+include('_web/css.php');
 ?>
 
 <section class="breadcrumb-style7-area">
@@ -27,7 +28,7 @@ include('_web/header.php')
             <div class="col-xl-6">
                 <div class="cooking-course-choose-img-box">
                     <div class="inner">
-                        <img src="assets/images/eminent/16.jpg" alt="">
+                        <img src="assets/images/activities/1.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -51,36 +52,7 @@ include('_web/header.php')
                 </div>
             </div>
         </div>
-        <div class="row pd-top100 align-items-center">
-            <div class="col-xl-6">
-                <div class="cooking-course-choose-img-box">
-                    <div class="inner">
-                        <img src="assets/images/eminent/17.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6">
-                <div class="cooking-course-choose-text-box">
-                    <ul>
-                        <li>
-                            <div class="inner-text">
-                                <h3>Contribution by our students
-                                </h3>
-                                <ul class="list-class">
-                                    <div class="text"> <i class="fa-regular fa-paper-plane theme-color"></i>
-                                        Selfless giving is a part of character building. Our students are taught to
-                                        contribute to the nation for different causes for no motive of their own. They
-                                        are a part of 'No Tobacco' rallies, 'Swach Bharat Abhiyan' etc. to develop not
-                                        only self but the country too. They are made to realize their obligation to the
-                                        ecology.
-                                    </div>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+       
         <div class="row pd-top100 align-items-center">
             <div class="col-xl-6">
                 <div class="cooking-course-choose-img-box">
@@ -225,5 +197,6 @@ include('_web/header.php')
     </div>
 </section>
 <?php
-include('_web/footer.php')
+include('_web/footer.php');
+include('_web/script.php');
 ?>

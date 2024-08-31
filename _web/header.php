@@ -92,7 +92,7 @@
                                                     <li><a href="unique_methodology.php">Unique Methodology</a></li>
                                                     <li><a href="co_curricular_activities.php">Co-Curricular
                                                             Activities</a></li>
-                                                    <li><a href="activities.php">Activities</a></li>
+                                                    <!-- <li><a href="activities.php">Activities</a></li> -->
                                                     <li><a href="faculty.php">Faculty</a></li>
                                                     <li><a href="activity_calender.php">Activity Calender</a></li>
                                                     <li><a href="/booklist.php">Book List</a></li>
