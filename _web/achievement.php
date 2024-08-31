@@ -94,11 +94,11 @@
                     <div class="text-holder">
                         <!-- <h3><a href="#">Ian Hudson</a></h3> -->
                         <div class="text">
-                            <p>  🏅Congratulations to Our Karate Champions! 🏅
+                            <p>  Congratulations to Our Karate Champions! 
 Three students from Dr. M.K.K. Arya Model School excelled at the District Panipat Karate Championship held at M.A.S.D. Public School, Panipat on August 3-4, 2024.
-🥇 Mannat (XI B) - Gold Medal
-🥇 Kartik Kapoor (VIII B) - Gold Medal
-🥈 Lakshay (IX A2) - Silver Medal
+ Mannat (XI B) - Gold Medal
+ Kartik Kapoor (VIII B) - Gold Medal
+ Lakshay (IX A2) - Silver Medal
 Their hard work, dedication and exceptional skills have brought glory to our school.</p>
                         </div>
                         <div class="read-more">
