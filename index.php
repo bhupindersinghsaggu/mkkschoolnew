@@ -48,7 +48,7 @@ include('_web/css.php');
                             </div>
                         </div>
                     </div>
-                    <div class="owl-item cloned" style="width: 1902px;">
+                    <!-- <div class="owl-item cloned" style="width: 1902px;">
                         <div class="slide">
                             <div class="image-layer" style="background-image:url(assets/images/slider/1-2.jpg)">
                             </div>
@@ -63,7 +63,7 @@ include('_web/css.php');
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span
