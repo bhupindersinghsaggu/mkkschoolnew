@@ -5,6 +5,22 @@
             onmouseover="this.stop();" onmouseout="this.start();">
             <ul style=" margin-bottom:0px; margin-top:50px">
 
+            <li class="thoughttext"> <i class="fa-solid fa-paper-plane fa-beat pdr-5 new-color"></i>
+            We are excited to announce that our Under-17 Badminton team has secured 3rd place in the SGFI 🏸District Badminton Tournament🏸, organized by Gautam Academy, Manana (Samalkha).
+            🏸Huge congratulations to our talented team for their incredible performance and hard work! Three cheers to our champions!
+                    <div class="read-more">
+                        <div class="date">
+                            <span class="icon-calendar icon-color"></span> Spet 7,
+                            2024
+                        </div>
+                        <div class="popular-tag-box">
+                            <ul class="popular-tag">
+                                <li><a href="https://www.facebook.com/photo/?fbid=970333518439459&set=pcb.970334688439342"
+                                        target="_blank">Read More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
                 <li class="thoughttext"> <i class="fa-solid fa-paper-plane fa-beat pdr-5 new-color"></i>
                     We're excited to announce that our students have excelled at the Karate District Level tournament:
 
