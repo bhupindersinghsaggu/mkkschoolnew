@@ -31,7 +31,7 @@
                             </div>
                             <div class="info-box">
                                 <span class="icon-user"></span>
-                                <p class="clearfix"> <a href="mail.hostinger.com" target="_blank"
+                                <p class="clearfix"> <a href="https://mail.hostinger.com/" target="_blank"
                                         style="color:#fff;">Webmail
                                     </a></p>
                             </div>
