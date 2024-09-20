@@ -141,7 +141,7 @@ include('_web/css.php');
                     <ul>
                         <li>
                             <div class="inner-text">
-                                <h3>Dipensary for Students </h3>
+                                <h3>Dispensary for Students </h3>
                                 <p>Our goal is to foster an environment where our children thrive in all aspects of
                                      their development, aiming to make them healthy, wealthy, and wise. To achieve this vision,
                                       we have established a robust annual health checkup program for our students. 
