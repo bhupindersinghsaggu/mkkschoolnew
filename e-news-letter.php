@@ -42,12 +42,13 @@ include('_web/css.php');
                                 </div>
                                 <div class="acc-content current" style="display: none;">
                                     <div class="text">
+                                    <h3 class=" pd-10"><a href="news-letter/2024/aug.pdf"><i
+                                                    class="fa-solid fa-circle-down fa-beat pdr-5"></i>
+                                                Download Aug Month</a></h3>
                                         <h3 class=" pd-10"><a href="news-letter/2024/july.pdf"><i
                                                     class="fa-solid fa-circle-down fa-beat pdr-5"></i>
                                                Download July Month</a></h3>
-                                        <!-- <h3 class=" pd-10"><a href="#"><i
-                                                    class="fa-solid fa-circle-down fa-beat pdr-5"></i>
-                                                June</a></h3>
+                                       
                                         <h3 class=" pd-10"><a href="assets/images/newsletter/2024/may.pdf"><i
                                                     class="fa-solid fa-circle-down fa-beat pdr-5"></i>
                                                 May</a></h3>
