@@ -891,7 +891,7 @@ a::before .header-top-left .info-box p {
 
   height: 48px;
   padding: 0 20px;
-  border: 1px solid #7b20e8;
+  /* border: 1px solid #7b20e8; */
   border-radius: 67px;
   background: #7b20e8;
   flex-direction: row;
@@ -907,4 +907,22 @@ a::before .header-top-left .info-box p {
 
 .fixed-icon-section .icon:hover {
   color: #f8f8f8;
+}
+
+
+.mrg{
+  margin-right: 5px;
+}
+
+
+@media(min-width:979px) {
+  .fixed-icon-section {
+      display: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .footer-icon {
+      display: none;
+  }
 }

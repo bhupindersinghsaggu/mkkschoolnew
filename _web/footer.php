@@ -78,7 +78,7 @@
                                                <span class="icon-right-arrow-1"></span>Book List
                                            </a>
                                        </li>
-                                       <li> 
+                                       <li>
                                            <a href="/assets/images/fee-structure/fee-structure-2024-25.pdf">
                                                <span class="icon-right-arrow-1"></span>Fee Structure
                                            </a>
@@ -186,28 +186,25 @@
    </footer>
    <!--End footer Style9 area-->
    <!--End Essentials Area-->
-   <a class=".d-sm-none .d-md-block" href="https://curtina.in/mkk" target="_blank">
-       <div class="erp-login">
-           ERP Login
+
+   <div class="footer-icon">
+       <a class="" href="https://curtina.in/mkk" target="_blank">
+           <div class="erp-login">
+               ERP Login
+           </div>
+       </a>
+       <div class="pay-online">
+           <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" target="_blank"><img onclick="topFunction()"
+                   id="btnGoToTop" src="assets/images/ss.png" alt=""></a>
        </div>
-   </a>
-   <!-- <div class="erp-login">
-       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" target="_blank"><img onclick="topFunction()"
-               id="btnGoToTop" src="assets/images/ss.png" alt=""></a>
-   </div> -->
-
-
-   <div class="pay-online">
-       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" target="_blank"><img onclick="topFunction()"
-               id="btnGoToTop" src="assets/images/ss.png" alt=""></a>
    </div>
 
    <div class="fixed-icon-section">
-    <!-- <a href="#home" class="icon"><i class="fas fa-home"></i></a> -->
-    <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon"><i class="fa-solid fa-phone mgr"></i> Payonline </a>
-    <a href="https://wa.me/7988968776?text=I%20want%20to%20know%20more%20about%20mkk%20school" class="icon" style="background: #779b58;
-    border: 1px solid #779b58;"> <i class="fa-brands fa-whatsapp mgr "></i> Contact Us</a>
-   <!-- <a class="" href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" target=_blank>
+       <!-- <a href="#home" class="icon"><i class="fas fa-home"></i></a> -->
+       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg" style="background-color: var(--thm-base);"><i class="fa-solid fa-phone mrg"></i> Pay Online </a>
+       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg" style="background-color: #1a3250;"><i class="fa-solid fa-phone mrg"></i> ERP Login </a>
+       <a href="https://wa.me/7988968776?text=I%20want%20to%20know%20more%20about%20mkk%20school" class="icon" style="background-color: var(--thm-base);"> <i class="fa-brands fa-whatsapp mrg"></i> Contact Us</a>
+       <!-- <a class="" href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" target=_blank>
        <div class="login style=" top:157px; id="">
            Pay Online
        </div>
@@ -219,14 +216,14 @@
        </div>
    </a> -->
 
-   <!-- <a class=".d-sm-none .d-md-block"
+       <!-- <a class=".d-sm-none .d-md-block"
        href="https://api.whatsapp.com/send?phone=+917988968776&amp;text=Hi, I have a query." target="_blank">
        <div class="login2">
            <i class="fa fa-whatsapp" aria-hidden="true"></i>
        </div>
    </a> -->
 
-   <!-- search-popup -->
+       <!-- search-popup -->
    </div>
    </body>
 
