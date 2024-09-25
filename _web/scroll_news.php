@@ -4,18 +4,33 @@
         <marquee scrollamount="3" height="300px" loop="" direction="up" crollamount="5" scrolldelay="40"
             onmouseover="this.stop();" onmouseout="this.start();">
             <ul style=" margin-bottom:0px; margin-top:50px">
+                
 
                 <li class="thoughttext"> <i class="fa-solid fa-paper-plane fa-beat pdr-5 new-color"></i>
-                    We are excited to announce that our Under-17 Badminton team has secured 3rd place in the SGFI 🏸District Badminton Tournament🏸, organized by Gautam Academy, Manana (Samalkha).
-                    🏸Huge congratulations to our talented team for their incredible performance and hard work! Three cheers to our champions!
+                    Puneet (XI B3) our Skating Champ, has won the Gold Medal in the CBSE North Zone II Roller Skating Tournament 2024-25, held from 19th to 23rd September, 2024 at OPS Vidya Mandir, Sector 9, Ambala City
                     <div class="read-more">
                         <div class="date">
-                            <span class="icon-calendar icon-color"></span> Spet 7,
+                            <span class="icon-calendar icon-color"></span> Spet 25,
                             2024
                         </div>
                         <div class="popular-tag-box">
                             <ul class="popular-tag">
-                                <li><a href="https://www.facebook.com/photo/?fbid=970333518439459&set=pcb.970334688439342"
+                                <li><a href="https://www.facebook.com/photo/?fbid=982321483907329&set=pcb.982321863907291"
+                                        target="_blank">Read More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="thoughttext"> <i class="fa-solid fa-paper-plane fa-beat pdr-5 new-color"></i>
+                    Puneet, a student of Class XI B3, showcased an exceptional performance at the SGFI State Skating Tournament held in Rohtak from September 1 to 3, 2024. He earned a Silver medal in the 1000m race and a Bronze medal in the 3000m race.
+                    <div class="read-more">
+                        <div class="date">
+                            <span class="icon-calendar icon-color"></span> Spet 3,
+                            2024
+                        </div>
+                        <div class="popular-tag-box">
+                            <ul class="popular-tag">
+                                <li><a href="https://www.facebook.com/photo?fbid=982324920573652&set=a.481364874002995"
                                         target="_blank">Read More</a></li>
                             </ul>
                         </div>

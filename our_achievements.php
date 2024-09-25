@@ -29,6 +29,49 @@ include('_web/css.php');
             <div class="col-xl-6">
                 <div class="cooking-course-choose-img-box">
                     <div class="inner">
+                        <img src="assets/images/ach/6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="cooking-course-choose-text-box">
+                    <ul>
+                        <li>
+                            <div class="inner-text">
+                                <!-- <h3>Project Expo organised by the Piet College Panipat</h3> -->
+                                <p>Puneet, a student of Class XI B3, showcased an exceptional performance at the SGFI State Skating Tournament held in Rohtak from September 1 to 3, 2024. He earned a Silver medal in the 1000m race and a Bronze medal in the 3000m race. Puneet's outstanding performance is a testament to his perseverance and skill, bringing great pride to the school.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row pd-top100 align-items-center">
+            <div class="col-xl-6">
+                <div class="cooking-course-choose-img-box">
+                    <div class="inner">
+                        <img src="assets/images/ach/5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="cooking-course-choose-text-box">
+                    <ul>
+                        <li>
+                            <div class="inner-text">
+                                <!-- <h3>Project Expo organised by the Piet College Panipat</h3> -->
+                                <p>It gives us immense pride to announce that Puneet (XI B3) our Skating Champ, has won the Gold Medal in the CBSE North Zone II Roller Skating Tournament 2024-25, held from 19th to 23rd September, 2024 at OPS Vidya Mandir, Sector 9, Ambala City. Our heartfelt appreciation goes to the dedicated Sports Department, particularly Mr. Banesh and Mr. Vishal for their outstanding training and support.
+                                🎊🎉We are also excited to share that Puneet has been selected for the SGFI National Skating Tournament 2024-25. Congratulations to Puneet and our sports team for this remarkable achievement!🎉🎊</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row pd-top100 align-items-center">
+            <div class="col-xl-6">
+                <div class="cooking-course-choose-img-box">
+                    <div class="inner">
                         <img src="assets/images/ach/4.jpg" alt="">
                     </div>
                 </div>
