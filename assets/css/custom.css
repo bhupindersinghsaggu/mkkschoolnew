@@ -869,3 +869,42 @@ a::before .header-top-left .info-box p {
   text-transform: capitalize;
   padding-top: 49px;
 }
+
+/* Fixed Icon Section */
+.fixed-icon-section {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 11111;
+
+  font-family: var(--title-fonts);
+}
+
+.fixed-icon-section .icon {
+  color: white;
+  text-decoration: none;
+
+  height: 48px;
+  padding: 0 20px;
+  border: 1px solid #7b20e8;
+  border-radius: 67px;
+  background: #7b20e8;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s linear;
+  font-family: "Satoshi Bold", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  display: -webkit-flex;
+  white-space: nowrap;
+}
+
+.fixed-icon-section .icon:hover {
+  color: #f8f8f8;
+}

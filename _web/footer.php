@@ -201,6 +201,12 @@
        <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" target="_blank"><img onclick="topFunction()"
                id="btnGoToTop" src="assets/images/ss.png" alt=""></a>
    </div>
+
+   <div class="fixed-icon-section">
+    <!-- <a href="#home" class="icon"><i class="fas fa-home"></i></a> -->
+    <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon"><i class="fa-solid fa-phone mgr"></i> Payonline </a>
+    <a href="https://wa.me/7988968776?text=I%20want%20to%20know%20more%20about%20mkk%20school" class="icon" style="background: #779b58;
+    border: 1px solid #779b58;"> <i class="fa-brands fa-whatsapp mgr "></i> Contact Us</a>
    <!-- <a class="" href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" target=_blank>
        <div class="login style=" top:157px; id="">
            Pay Online
