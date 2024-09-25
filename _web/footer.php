@@ -201,9 +201,9 @@
 
    <div class="fixed-icon-section">
        <!-- <a href="#home" class="icon"><i class="fas fa-home"></i></a> -->
-       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg" style="background-color: var(--thm-base);"><i class="fa-solid fa-phone mrg"></i> Pay Online </a>
-       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg" style="background-color: #1a3250;"><i class="fa-solid fa-phone mrg"></i> ERP Login </a>
-       <a href="https://wa.me/7988968776?text=I%20want%20to%20know%20more%20about%20mkk%20school" class="icon" style="background-color: var(--thm-base);"> <i class="fa-brands fa-whatsapp mrg"></i> Contact</a>
+       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg" style="background-color: var(--thm-base);"><i class="fa-regular fa-credit-card mrg"></i> Pay Online </a>
+       <a href="https://wa.me/7988968776?text=I%20want%20to%20know%20more%20about%20mkk%20school" class="icon whatapp-icon"> <i class="fa-brands fa-whatsapp"></i></a>
+       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg" style="background-color: #1a3250;"><i class="fa-solid fa-user mrg"></i> ERP Login </a>
        <!-- <a class="" href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" target=_blank>
        <div class="login style=" top:157px; id="">
            Pay Online

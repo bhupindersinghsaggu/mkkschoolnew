@@ -877,7 +877,7 @@ a::before .header-top-left .info-box p {
   width: 100%;
   background-color: #FFF;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 20px 10px 20px;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
   z-index: 11111;
@@ -925,4 +925,12 @@ a::before .header-top-left .info-box p {
   .footer-icon {
       display: none;
   }
+}
+
+
+.whatapp-icon{
+  background: #ffffff !important;
+  font-size: 32px !important;
+  border-radius:0% !important;
+  color: #197e5e !important;
 }
