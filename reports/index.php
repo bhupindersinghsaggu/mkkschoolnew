@@ -16,22 +16,12 @@ include('web/header.php')
                                         <img src="assets/img/icons/unicons/chart-success.png" alt="chart success"
                                             class="rounded">
                                     </div>
-                                    <div class="dropdown">
-                                        <button class="btn p-0" type="button" id="cardOpt3" data-bs-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            <i class="bx bx-dots-vertical-rounded text-muted"></i>
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
-                                            <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-                                        </div>
-                                    </div>
                                 </div>
                                 <p class="mb-1">Teacher Strength</p>
                                 <h4 class="card-title mb-3">150</h4>
                                 <div class="button-group">
-                                    <a href="javascript:;" class="btn btn-sm btn-primary mb-1">Forms</a>
-                                    <a href="javascript:;" class="btn btn-sm btn-danger mb-1">Reports</a>
+                                    <a href="teacher-forms.php" class="btn btn-sm btn-primary mb-1">Forms</a>
+                                    <a href="teacher-reports.php;" class="btn btn-sm btn-danger mb-1">Reports</a>
                                 </div>
                             </div>
                         </div>
@@ -44,22 +34,12 @@ include('web/header.php')
                                         <img src="assets/img/icons/unicons/wallet-info.png" alt="wallet info"
                                             class="rounded">
                                     </div>
-                                    <div class="dropdown">
-                                        <button class="btn p-0" type="button" id="cardOpt6" data-bs-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            <i class="bx bx-dots-vertical-rounded text-muted"></i>
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
-                                            <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-                                        </div>
-                                    </div>
                                 </div>
                                 <p class="mb-1">Student Strength</p>
                                 <h4 class="card-title mb-3">2850</h4>
                                 <div class="button-group">
-                                    <a href="javascript:;" class="btn btn-sm btn-primary mb-1">Forms</a>
-                                    <a href="javascript:;" class="btn btn-sm btn-danger mb-1">Reports</a>
+                                    <a href="student-forms.php" class="btn btn-sm btn-primary mb-1">Forms</a>
+                                    <a href="student-reports.php;" class="btn btn-sm btn-danger mb-1">Reports</a>
                                 </div>
                             </div>
                         </div>
