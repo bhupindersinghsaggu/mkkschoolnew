@@ -6,7 +6,7 @@ include('web/header.php')
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="row">
-            <div class="col-lg-4 col-md-4 order-1">
+            <div class="col-lg-6 col-md-4 order-1">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-6 mb-6">
                         <div class="card h-100">
@@ -27,11 +27,11 @@ include('web/header.php')
                                         </div>
                                     </div>
                                 </div>
-                                <p class="mb-1">Teachers Strength</p>
+                                <p class="mb-1">Teacher Strength</p>
                                 <h4 class="card-title mb-3">150</h4>
                                 <div class="button-group">
                                     <a href="javascript:;" class="btn btn-sm btn-primary mb-1">Forms</a>
-                                    <a href="javascript:;" class="btn btn-sm btn-primary mb-1">Reports</a>
+                                    <a href="javascript:;" class="btn btn-sm btn-danger mb-1">Reports</a>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,7 @@ include('web/header.php')
                                 <h4 class="card-title mb-3">2850</h4>
                                 <div class="button-group">
                                     <a href="javascript:;" class="btn btn-sm btn-primary mb-1">Forms</a>
-                                    <a href="javascript:;" class="btn btn-sm btn-primary mb-1">Reports</a>
+                                    <a href="javascript:;" class="btn btn-sm btn-danger mb-1">Reports</a>
                                 </div>
                             </div>
                         </div>

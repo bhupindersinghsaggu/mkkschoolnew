@@ -6,10 +6,10 @@
                 ©
                 <script>
                 document.write(new Date().getFullYear())
-                </script>, made with ❤️ by <a href="https://themeselection.com/" target="_blank"
-                    class="footer-link">ThemeSelection</a>
+                </script>, Site Created by <a href="https://mkkschool.com/" target="_blank" class="footer-link">IT
+                    Department</a>
             </div>
-            <div class="d-none d-lg-inline-block">
+            <!-- <div class="d-none d-lg-inline-block">
 
                 <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
                 <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
@@ -19,43 +19,28 @@
 
                 <a href="https://github.com/themeselection/sneat-html-admin-template-free/issues" target="_blank"
                     class="footer-link">Support</a>
-
-
-            </div>
+            </div> -->
         </div>
     </div>
 </footer>
 <!-- / Footer -->
-
-
 <div class="content-backdrop fade"></div>
 </div>
 <!-- Content wrapper -->
 </div>
 <!-- / Layout page -->
 </div>
-
-
-
 <!-- Overlay -->
 <div class="layout-overlay layout-menu-toggle"></div>
-
-
 </div>
 <!-- / Layout wrapper -->
 
-
-
-
-<div class="buy-now">
+<!-- <div class="buy-now">
     <a href="https://themeselection.com/item/sneat-dashboard-pro-bootstrap/" target="_blank"
-        class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
-</div>
-
-
+        class="btn btn-danger btn-buy-now">Contact</a>
+</div> -->
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->
-
 <script src="assets/vendor/libs/jquery/jquery.js"></script>
 <script src="assets/vendor/libs/popper/popper.js"></script>
 <script src="assets/vendor/js/bootstrap.js"></script>

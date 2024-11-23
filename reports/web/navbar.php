@@ -17,7 +17,7 @@
         </a>
         <ul class="menu-sub">
             <li class="menu-item">
-                <a href="pages-account-settings-account.html" class="menu-link">
+                <a href="teacher-observation.php" class="menu-link">
                     <div class="text-truncate" data-i18n="Account">Observation </div>
                 </a>
             </li>
