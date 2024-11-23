@@ -21,7 +21,7 @@ include('web/header.php')
                                 <h4 class="card-title mb-3">150</h4>
                                 <div class="button-group">
                                     <a href="teacher-forms.php" class="btn btn-sm btn-primary mb-1">Forms</a>
-                                    <a href="teacher-reports.php;" class="btn btn-sm btn-danger mb-1">Reports</a>
+                                    <a href="teacher-reports.php" class="btn btn-sm btn-danger mb-1">Reports</a>
                                 </div>
                             </div>
                         </div>
