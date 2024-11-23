@@ -60,20 +60,14 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="assets/vendor/libs/apex-charts/apex-charts.css" />
-
     <!-- Page CSS -->
-
-
     <!-- Helpers -->
     <script src="assets/vendor/js/helpers.js"></script>
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="assets/js/config.js"></script>
 
 </head>
 
 <body>
-
 
     <!-- ?PROD Only: Google Tag Manager (noscript) (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DDHKGP" height="0" width="0"
@@ -86,7 +80,7 @@
             <!-- Menu -->
             <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
                 <div class="app-brand demo ">
-                    <a href="index.html" class="app-brand-link">
+                    <a href="index.php" class="app-brand-link">
                         <span class="app-brand-logo demo">
                             <svg width="25" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -133,8 +127,7 @@
                         </span>
                         <span class="app-brand-text demo menu-text fw-bold ms-2">sneat</span>
                     </a>
-                    <a href="javascript:void(0);"
-                        class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+                    <a href="index.php;" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
                         <i class="bx bx-chevron-left bx-sm d-flex align-items-center justify-content-center"></i>
                     </a>
                 </div>
@@ -172,7 +165,7 @@
                                 <a class="github-button"
                                     href="https://github.com/themeselection/sneat-html-admin-template-free"
                                     data-icon="octicon-star" data-size="large" data-show-count="true"
-                                    aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Star</a>
+                                    aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Login</a>
                             </li>
                             <!-- User -->
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
