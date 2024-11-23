@@ -16,8 +16,7 @@ include('web/header.php')
                                         class="bx bx-cube bx-lg"></i></span>
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                                <a
-                                    href="https://docs.google.com/spreadsheets/d/13emZw_vwE0yOzEuiFI_ix5kpUXNdsLIwG0gUDwCxD_M/edit?usp=sharing">
+                                <a href="teacher-observation-reports.php">
                                     <div class="me-2">
                                         <h6 class="mb-1 fw-normal">Teacher Observation Report</h6>
                                     </div>
@@ -32,8 +31,9 @@ include('web/header.php')
                                         class="bx bxs-truck bx-lg"></i></span>
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                                <a
-                                    href="https://docs.google.com/spreadsheets/d/14kyM2_ywSdleaWqBXj7b3dlzV_oc0FKWsw2eBJtjDcw/edit?usp=sharing">
+                                <a href="teacher-criteria-reports.php">
+
+
                                     <div class="me-2">
                                         <h6 class="mb-1 fw-normal">Teacher Criteria Report</h6>
                                     </div>

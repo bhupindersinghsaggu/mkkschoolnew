@@ -35,14 +35,12 @@
         </a>
         <ul class="menu-sub">
             <li class="menu-item">
-                <a href="https://docs.google.com/spreadsheets/d/13emZw_vwE0yOzEuiFI_ix5kpUXNdsLIwG0gUDwCxD_M/edit?usp=sharing"
-                    class="menu-link" target="_blank">
+                <a href="teacher-observation-reports.php" class="menu-link" target="_blank">
                     <div class="text-truncate" data-i18n="Basic">Observation</div>
                 </a>
             </li>
             <li class="menu-item">
-                <a href="https://docs.google.com/spreadsheets/d/14kyM2_ywSdleaWqBXj7b3dlzV_oc0FKWsw2eBJtjDcw/edit?usp=sharing"
-                    class="menu-link" target="_blank">
+                <a href="teacher-criteria-reports.php" class="menu-link" target="_blank">
                     <div class="text-truncate" data-i18n="Basic">Criteria</div>
                 </a>
             </li>
