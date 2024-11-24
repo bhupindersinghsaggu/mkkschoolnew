@@ -45,11 +45,19 @@ include('web/header.php')
                             </div>
                         </div>
                     </div>
+
+                    <!-- <div class="col-lg-6 col-md-12  mb-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <iframe
+                                    src="https://curtina.in/_EazySchool/forms/frmRP_Sp_Admission_ClassWise_JQ.aspx"></iframe>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
-    </div>
-    <!-- / Content -->
-    <?php
-  include('web/footer.php')
-  ?>
+        <!-- / Content -->
+        <?php
+    include('web/footer.php')
+    ?>
