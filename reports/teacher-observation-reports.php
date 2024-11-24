@@ -1,5 +1,6 @@
 <?php
-include('web/header.php')
+include('web/header.php');
+include('web/functions.php');
 ?>
 <!-- Content wrapper -->
 <div class="content-wrapper">
@@ -9,13 +10,14 @@ include('web/header.php')
             <div class="col-lg-6 col-md-4 order-1">
                 <div class="card-body">
                     <div class="button-group">
-                        <h5 class="card-title m-0 me-2 mb-6 ">Teacher Criteria Report</h5>
-                        <a href="https://docs.google.com/spreadsheets/d/14kyM2_ywSdleaWqBXj7b3dlzV_oc0FKWsw2eBJtjDcw/edit?usp=sharing"
-                            class="btn btn-sm btn-primary mb-1">Download</a>
+                        <h5 class="card-title m-0 me-2 mb-6 ">Teacher Observation Report</h5>
+                        <a href="<?php echo "$teacher_observation_reports" ?>"
+                            class="btn btn-sm btn-primary mb-1 mb-6">Download</a>
                     </div>
-                    <iframe
-                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTqha26jx55LY5XrfYQUl3SzlyRgSp5IBns4c9apCYpDs4jmLaY540firEmev65hYqg0PV3jV0r4Xb0/pubhtml?widget=true&amp;headers=false"
-                        width="1400" height="300"></iframe>
+                    <div class="iframe mb-6">
+                        <iframe src="<?php echo "$teacher_observation_reports_view" ?>" width="1400"
+                            height="300"></iframe>
+                    </div>
                 </div>
                 <a href="index.php" class="btn btn-danger btn-buy-now">Back</a>
             </div>
