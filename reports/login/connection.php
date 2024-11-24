@@ -7,4 +7,3 @@ if (!$con) {
 
     die('Please check your connection');
 }
-echo "fdf";
