@@ -117,22 +117,3 @@
 
 
 <!-- INSERT INTO `table1` (`sr`, `fullname`, `username`, `password`) VALUES ('1', 'admin', 'admin@mkkschool.com', 'sa5msa5m@'); -->
-
-<?php
-
-include('connect.php');
-
-if (isset($_POST['register'])) {
-
-    $name = $_POST['name'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $query = "INSERT INTO `table1` (`fullname`, `username`, `password`) VALUES ('$fullname', '$username', '$password');";
-
-    if (mysqli_query($conn, $query)) {
-
-        header("location:login.php");
-    } else {
-        echo "Not register";
-    }
-}
