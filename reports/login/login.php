@@ -27,16 +27,6 @@
             </div> -->
         </form>
     </div>
-    <?php
-    include('config.php');
-    if (isset($_POST['login_btn'])) {
-        $email = $_POST['email'];
-        $pass = $_POST['password'];
-        $query = mysqli_query($config, $select);
-        $row = mysqli_num_rows($query);
-        echo $row;
-    }
-    ?>
 </body>
 
 </html>
