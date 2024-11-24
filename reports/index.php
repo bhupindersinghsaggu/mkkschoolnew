@@ -1,6 +1,5 @@
 <?php
-include('web/header.php')
-
+include('web/header.php');
 ?>
 <!-- Content wrapper -->
 <div class="content-wrapper">
@@ -59,5 +58,5 @@ include('web/header.php')
         </div>
         <!-- / Content -->
         <?php
-    include('web/footer.php')
-    ?>
+        include('web/footer.php')
+        ?>
