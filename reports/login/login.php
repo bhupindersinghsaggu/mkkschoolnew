@@ -1,93 +1,117 @@
-<?php
-$login = false;
-$showError = false;
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'partials/_dbconnect.php';
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-
-
-    $sql = "Select * from users where username='$username' AND password='$password'";
-    $result = mysqli_query($conn, $sql);
-    $num = mysqli_num_rows($result);
-    if ($num == 1) {
-        $login = true;
-        session_start();
-        $_SESSION['loggedin'] = true;
-        $_SESSION['username'] = $username;
-        header("location: welcome.php");
-    } else {
-        $showError = "Invalid Credentials";
-    }
-}
-
-?>
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-container {
+        background: #ffffff;
+        padding: 20px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        color: #333333;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .input-group label {
+        font-size: 14px;
+        color: #555555;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+    }
+
+    .input-group input:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    .login-button {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .login-button:hover {
+        background-color: #0056b3;
+    }
+
+    .options {
+        margin-top: 15px;
+    }
+
+    .options a {
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    .options a:hover {
+        text-decoration: underline;
+    }
+    </style>
 </head>
 
 <body>
-    <?php require 'partials/_nav.php' ?>
-    <?php
-    if ($login) {
-        echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> You are logged in
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-    </div> ';
-    }
-    if ($showError) {
-        echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error!</strong> ' . $showError . '
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-    </div> ';
-    }
-    ?>
-
-    <div class="container my-4">
-        <h1 class="text-center">Login to our website</h1>
-        <form action="/loginsystem/login.php" method="post">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
-
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="process.php" method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
-            <div class="form-group">
+            <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
-
-
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="login-button">Login</button>
+            <div class="options">
+                <a href="/forgot-password">Forgot Password?</a>
+                <a href="/register">Create an account</a>
+            </div>
         </form>
     </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
 </body>
 
 </html>
