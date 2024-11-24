@@ -1,6 +1,6 @@
 <?php
 
-$con = mysqli_connect('127.0.0.1', 'u315669183_webapp', 'Sa5sa5m@', 'u315669183_webapp');
+$con = mysqli_connect('127.0.0.1', 'u315669183_webapp', 'Sa5msa5m@', 'u315669183_webapp');
 
 
 if (!$con) {
