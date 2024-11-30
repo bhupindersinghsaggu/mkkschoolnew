@@ -26,6 +26,11 @@
                     <div class="text-truncate" data-i18n="Notifications">Criteria </div>
                 </a>
             </li>
+            <li class="menu-item">
+                <a href="class-assembly.php" class="menu-link">
+                    <div class="text-truncate" data-i18n="Notifications">Class Assembly </div>
+                </a>
+            </li>
         </ul>
     </li>
     <li class="menu-item">
