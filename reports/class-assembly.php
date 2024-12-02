@@ -9,7 +9,7 @@ include('web/header.php')
             <div class="col-lg-6 col-md-4 order-1">
 
             <div class="container" id="ff-compose"></div>
-            <script async defer src="https://formfacade.com/include/102811184558856598345/form/1FAIpQLSfkW9hCbhpub21aH1y0LI2bv1Tf42h5C_1lAKjRv8L9cW6QIQ/bootstrap.js?div=ff-compose"></script>
+            <script async defer src="https://formfacade.com/include/102811184558856598345/form/1FAIpQLSfkW9hCbhpub21aH1y0LI2bv1Tf42h5C_1lAKjRv8L9cW6QIQ/bootstrap.js?"></script>
                 <a href="index.php" class="btn btn-danger btn-buy-now">Back</a>
             </div>
         </div>
