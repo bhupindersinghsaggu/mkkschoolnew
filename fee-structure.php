@@ -3,7 +3,6 @@ include('_web/header.php');
 include('_web/css.php');
 ?>
 
-
 <section class="breadcrumb-style7-area">
     <div class="breadcrumb-style7-area-bg" style="background-image: url(assets/images/header/academic.jpg);">
     </div>
