@@ -10,12 +10,13 @@ include('web/functions.php');
             <div class="col-lg-6 col-md-4 order-1">
                 <div class="card-body">
                     <div class="button-group">
-                        <h5 class="card-title m-0 me-2 mb-6 ">Teacher Criteria Report</h5>
-                        <a href="<?php echo "$class_assembly_form ?>"
+                        <h5 class="card-title m-0 me-2 mb-6 ">Teacher Observation Report</h5>
+                        <a href="<?php echo "$teacher_observation_reports" ?>"
                             class="btn btn-sm btn-primary mb-1 mb-6">Download</a>
                     </div>
                     <div class="iframe mb-6">
-                        <iframe src="<?php echo "$class_assembly_form" ?>" width="1400" height="300"></iframe>
+                        <iframe src="<?php echo "$teacher_observation_reports_view" ?>" width="1400"
+                            height="300"></iframe>
                     </div>
                 </div>
                 <a href="index.php" class="btn btn-danger btn-buy-now">Back</a>

@@ -49,6 +49,11 @@
                     <div class="text-truncate" data-i18n="Basic">Criteria</div>
                 </a>
             </li>
+            <li class="menu-item">
+                <a href="teacher-criteria-reports.php" class="menu-link" target="_blank">
+                    <div class="text-truncate" data-i18n="Basic">Class Assembly</div>
+                </a>
+            </li>
         </ul>
     </li>
     <!-- Apps & Pages -->
