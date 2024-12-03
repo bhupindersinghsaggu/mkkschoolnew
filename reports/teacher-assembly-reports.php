@@ -11,11 +11,11 @@ include('web/functions.php');
                 <div class="card-body">
                     <div class="button-group">
                         <h5 class="card-title m-0 me-2 mb-6 ">Teacher Observation Report</h5>
-                        <a href="<?php echo "$teacher_observation_reports" ?>"
+                        <a href="<?php echo "$class_assembly_form ?>"
                             class="btn btn-sm btn-primary mb-1 mb-6">Download</a>
                     </div>
                     <div class="iframe mb-6">
-                        <iframe src="<?php echo "$teacher_observation_reports_view" ?>" width="1400"
+                        <iframe src="<?php echo "$class_assembly_form_view" ?>" width="1400"
                             height="300"></iframe>
                     </div>
                 </div>
