@@ -45,7 +45,7 @@ include('_web/css.php');
 		font-weight: bold;
 	}
 </style>
-<table class="table table-bordered">
+<table class="table table-bordered table-responsive">
 <thead><tr class="tableizer-firstrow"><th>Sr.No</th><th>Teacher Name</th><th>Gender</th><th>Date of Birth</th><th>Designation</th><th>Qualification</th><th>CLASS TAUGHT</th><th>Date of Joining</th></tr></thead><tbody>
  <tr><td>1</td><td>Aarti Chaddha</td><td>Female</td><td>23/12/1993</td><td>PRT</td><td>M.Com </td><td>1,</td><td>05-Apr-2022</td></tr>
  <tr><td>2</td><td>Aarti Nagpal</td><td>Female</td><td>11/03/1989</td><td>PRT</td><td>M.A. ENGLISH</td><td>1,2,</td><td>19-Apr-2022</td></tr>
