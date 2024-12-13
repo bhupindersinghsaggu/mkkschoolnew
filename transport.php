@@ -4,15 +4,15 @@ include('_web/css.php');
 ?>
 
 <section class="breadcrumb-style7-area">
-    <div class="breadcrumb-style7-area-bg" style="background-image: url(assets/images/header/our_objective.jpg);">
-    </div>
+    <!-- <div class="breadcrumb-style7-area-bg" style="background-image: url(assets/images/header/our_objective.jpg);">
+    </div> -->
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="inner-content">
                     <div class="title aos-init aos-animate pd-100" data-aos="fade-up" data-aos-easing="linear"
                         data-aos-duration="1500">
-                        <h2>About Us</h2>
+                        <h2>Facilities</h2>
                     </div>
                 </div>
             </div>
