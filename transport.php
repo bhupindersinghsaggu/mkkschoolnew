@@ -30,7 +30,7 @@ include('_web/css.php');
                 <ul class="mt-50">
                                 <li>
                                     <div class="text">
-                                        <p> 1. Coming to school on Motorcycle/Scooters is totally banned. Parking of Motorcycle/Scooters inside the school premises is not allowed. Due to the complaint of HUDA Residents’ Welfare Association, Panipat, Traffic Police has restricted the parking of vehicles around the school premises. If any vehicle is parked there, it will be confiscated. So the students are advised not to come to school on any Motor Cycle/Activa/Car etc. Parents are requested to send students either in school transport or personally drop them.
+                                        <p> 1. Coming to school on Motorcycle/Scooters is totally banned. Parking of Motorcycle/Scooters inside the school premises is not allowed. Traffic Police has restricted the parking of vehicles around the school premises. If any vehicle is parked there, it will be confiscated. So the students are advised not to come to school on any Motor Cycle/Activa/Car etc. Parents are requested to send students either in school transport or personally drop them.
                                         </p>
                                     </div>
                                 </li>
