@@ -36,64 +36,59 @@ include('_web/css.php');
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p>2.  At the beginning of the session, parents will have to give an undertaking that their wards will not bring any automobile to the school. If they bring any, they must have proper licence, helmet and other papers required.</p>
+                                        <p>2.  The bus facilities are extended as a privilege and can't be claimed as a right. </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p>3.  The bus facilities are extended as a privilege and can't be claimed as a right. </p>
+                                        <p> 3.  The bus facility may be withdrawn at any time due to unavoidable circumstances. </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p> 4.  The bus facility may be withdrawn at any time due to unavoidable circumstances. </p>
+                                        <p> 4. Transport facility is available for the whole session. No withdrawals are allowed in between.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p> 5. Transport facility is available for the whole session. No withdrawals are allowed in between.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="text">
-                                        <p> 6.
+                                        <p> 5.
  Transport facility is withdrawn in case any student is found damaging/indulging in indiscipline in the bus.
 </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p> 7.  Students can apply for the transport facility only at the beginning of the session. Application for availing or withdrawing transport facility will not be entertained after that.</p>
+                                        <p> 6.  Students can apply for the transport facility only at the beginning of the session. Application for availing or withdrawing transport facility will not be entertained after that.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p> 8.  Any request to change the bus-stop/route must be submitted to the Principal at least one week prior to the change that is to be made. </p>
+                                        <p> 7.  Any request to change the bus-stop/route must be submitted to the Principal at least one week prior to the change that is to be made. </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p> 9. The buses will not wait for the late comers.</p>
+                                        <p> 8. The buses will not wait for the late comers.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p> 10. No student should come near the entry door of the bus until it stop.</p>
+                                        <p> 9. No student should come near the entry door of the bus until it stop.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p> 11.  The student should stay away from the main road until the bus arrives. </p>
+                                        <p> 10.  The student should stay away from the main road until the bus arrives. </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p> 12.  The drivers are authorised to stop buses at the designated stop only. The list of stop is subject to change from time to time. </p>
+                                        <p> 11.  The drivers are authorised to stop buses at the designated stop only. The list of stop is subject to change from time to time. </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <p> 13.  The following acts are considered serious violation :</p>
+                                        <p> 12.  The following acts are considered serious violation :</p>
                                     </div>
                                     <ul class="mt-10">
                                         <li class="list-item-sub">(a) Attempt to distract driver's attention. </li>
