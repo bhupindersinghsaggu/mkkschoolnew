@@ -1,6 +1,7 @@
 <?php
-include('_web/header.php');
 include('_web/css.php');
+include('_web/header.php');
+
 ?>
 
 <!-- Start Main Slider -->
