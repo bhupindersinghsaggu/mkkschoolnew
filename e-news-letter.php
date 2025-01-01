@@ -60,10 +60,10 @@ include('_web/css.php');
 
                                         <h3 class=" pd-10"><a href="assets/images/newsletter/2024/may.pdf"><i
                                                     class="fa-solid fa-circle-down fa-beat pdr-5"></i>
-                                                May</a></h3>
+                                                    Download May Month</a></h3>
                                         <h3 class=" pd-10"><a href="#"><i
                                                     class="fa-solid fa-circle-down fa-beat pdr-5"></i>
-                                                April</a></h3>
+                                                    Download April Month</a></h3>
                                     </div>
                                 </div>
                             </li>
