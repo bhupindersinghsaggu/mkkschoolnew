@@ -237,9 +237,9 @@ include('_web/enquiry.php');
                             professional training to our students through immaculately designed curriculum.</p>
 
                         <div class="btns-box pd-top">
-                            <a class="btn-one style2" href="applyonline.php">
+                            <a class="btn-one style2" href="about-us.php">
                                 <span class="txt">
-                                    Admission Open
+                                    About us
                                 </span>
                             </a>
                         </div>

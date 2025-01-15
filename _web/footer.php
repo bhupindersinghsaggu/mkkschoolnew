@@ -6,14 +6,14 @@
                        <div class="footer-top-style9__inner">
                            <div class="left">
                                <div class="inner-title">
-                                   <h3><span>Admission Open !..</span> for Academic Year 2024.</h3>
+                                   <h3><span>Admission Open !..</span> for Academic Year 2025-26.</h3>
 
                                </div>
 
                            </div>
                            <div class="right">
                                <div class="button-box">
-                                   <a class="btn-one" href="/applyonline.php">
+                                   <a class="btn-one" href="mySidenav">
                                        <span class="txt">Apply Online </span>
                                    </a>
                                </div>
@@ -64,7 +64,7 @@
                                            </a>
                                        </li>
                                        <li>
-                                           <a href="download_app.php>
+                                           <a href="download_app.php">
                                                <span class=" icon-right-arrow-1"></span>Download APP
                                            </a>
                                        </li>
@@ -201,9 +201,12 @@
 
    <div class="fixed-icon-section">
        <!-- <a href="#home" class="icon"><i class="fas fa-home"></i></a> -->
-       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg" style="background-color: var(--thm-base);"><i class="fa-regular fa-credit-card mrg"></i> Pay Online </a>
-       <a href="https://wa.me/7988968776?text=I%20want%20to%20know%20more%20about%20mkk%20school" class="icon whatapp-icon"> <i class="fa-brands fa-whatsapp"></i></a>
-       <a href="https://curtina.in/MKK" class="icon mrg" style="background-color: #1a3250;"><i class="fa-solid fa-user mrg"></i> ERP Login </a>
+       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg"
+           style="background-color: var(--thm-base);"><i class="fa-regular fa-credit-card mrg"></i> Pay Online </a>
+       <a href="https://wa.me/7988968776?text=I%20want%20to%20know%20more%20about%20mkk%20school"
+           class="icon whatapp-icon"> <i class="fa-brands fa-whatsapp"></i></a>
+       <a href="https://curtina.in/MKK" class="icon mrg" style="background-color: #1a3250;"><i
+               class="fa-solid fa-user mrg"></i> ERP Login </a>
        <!-- <a class="" href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" target=_blank>
        <div class="login style=" top:157px; id="">
            Pay Online

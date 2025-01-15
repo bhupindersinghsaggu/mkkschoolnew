@@ -224,7 +224,7 @@ function closeNav() {
 $(document).ready(function() {    $("#myModal").modal('show');}); 
 </script> -->
 <!--Modal pop start-->
-<div id="myModal" class="modal fade show" aria-modal="true" style="padding-right: 17px; display: block;">
+<!-- <div id="myModal" class="modal fade show" aria-modal="true" style="padding-right: 17px; display: block;">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="button__close">
@@ -234,4 +234,4 @@ $(document).ready(function() {    $("#myModal").modal('show');});
             <img src="images/download123.png?ver=2.3" style="height:500px;width:500px">
         </div>
     </div>
-</div>
+</div> -->
