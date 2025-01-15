@@ -74,7 +74,7 @@
                                            </a>
                                        </li>
                                        <li>
-                                           <a href="book-list.php">
+                                           <a href="booklist.php">
                                                <span class="icon-right-arrow-1"></span>Book List
                                            </a>
                                        </li>
