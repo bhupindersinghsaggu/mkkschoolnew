@@ -1,7 +1,7 @@
 <?php
 include('_web/css.php');
 include('_web/header.php');
-
+include('_web/enquiry.php');
 ?>
 
 <!-- Start Main Slider -->
@@ -315,7 +315,7 @@ include('_web/latest_news_home.php')
 ?>
 
 <?php
-include('_web/achievement.php')?>
+include('_web/achievement.php') ?>
 
 
 
