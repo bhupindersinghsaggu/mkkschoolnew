@@ -102,7 +102,7 @@ function closeNav() {
         <div class="col-md-12" style="padding:0px 40px">
             <h4>Online Enquiry</h4>
             <iframe style="height:460px;" width="100%"
-                src="https://curtina.in/_EazySchool/FormsWeb/frmEnquiry_Mkk.aspx?AppId=abbps">
+                src="https://curtina.in/_EazySchool/FormsWeb/frmEnquiry_Mkk.aspx?AppId=MKK">
 
             </iframe>
         </div>
