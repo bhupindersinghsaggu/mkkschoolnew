@@ -29,9 +29,9 @@ include('_web/css.php');
                 <div class="privacy-desc">
                     <div class="list">
                         <ul class="list-class">
-                         <a href="/assets/booklist/JR_WING_BOOK_LIST 24-25.pdf">   <i class="fa-regular fa-paper-plane theme-color"></i> Download Jr Wing Book List</a>
+                         <a href="/assets/book-list/JR-BOOK-LIST.pdf">   <i class="fa-regular fa-paper-plane theme-color"></i> Download Jr Wing Book List</a>
                            <br>
-                           <a href="/assets/booklist/SR_WING_BOOK_LIST 24-25.pdf"><i class="fa-regular fa-paper-plane theme-color"></i> Download Sr Wing Book List</a><br>
+                           <a href="/assets/book-list/SR-BOOK-LIST.pdf"><i class="fa-regular fa-paper-plane theme-color"></i> Download Sr Wing Book List</a><br>
                             <br>
                         </ul>
                     </div>
