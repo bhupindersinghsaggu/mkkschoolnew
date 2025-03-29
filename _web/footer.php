@@ -209,7 +209,7 @@
        <a href="https://curtina.in/MKK" class="icon mrg" style="background-color: #1a3250;"><i
                class="fa-solid fa-user mrg"></i> ERP Login </a>
       
-               <a href="/book-list.php" class="icon mrg"
+               <a href="/booklist.php" class="icon mrg"
                style="background-color: var(--thm-base);"><i class="fa-solid fa-book mrg"></i> Book List </a>
        <!-- <a class="" href="https://curtina.in/mkk" target=_blank>
            <div class="erp">
