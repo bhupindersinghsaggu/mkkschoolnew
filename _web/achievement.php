@@ -38,7 +38,7 @@
                         </div>
                         <div class="read-more">
                             <div class="date">
-                                <span class="icon-calendar icon-color"></span> Spet 25,
+                                <span class="icon-calendar icon-color"></span> Sept 25,
                                 2024
                             </div>
                             <div class="popular-tag-box">
