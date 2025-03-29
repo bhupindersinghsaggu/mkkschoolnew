@@ -210,7 +210,7 @@
                class="fa-solid fa-user mrg"></i> ERP Login </a>
       
                <a href="/book-list.php" class="icon mrg"
-               style="background-color: var(--thm-base);"><i class="fa-regular fa-credit-card mrg"></i> Book List </a>
+               style="background-color: var(--thm-base);"><i class="fa-solid fa-book"></i> Book List </a>
        <!-- <a class="" href="https://curtina.in/mkk" target=_blank>
            <div class="erp">
                ERP Login
