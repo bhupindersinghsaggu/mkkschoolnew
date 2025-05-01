@@ -25,7 +25,7 @@ include('web/functions.php');
                                                 <h5 class="card-title">Class X-A</h5>
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
-                                                        <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=1618319675#gid=1618319675" class="btn btn-dark">CBSE Result</a>
+                                                        <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=1302916062#gid=1302916062" class="btn btn-dark">CBSE Result</a>
                                                     </div>
                                                 </div>
                                                 <div class="demo-inline-spacing mt-4">
