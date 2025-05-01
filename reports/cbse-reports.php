@@ -14,7 +14,7 @@ include('web/functions.php');
                 <div class="accordion mt-4" id="accordionExample">
                     <div class="accordion-item ">
                         <h2 class="accordion-header" id="headingOne">
-                            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="false" aria-controls="accordionOne">Class X Results Session 2024-25</button>
+                            <button type="button" class="accordion-button btn-info" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="false" aria-controls="accordionOne">Class X Results Session 2024-25</button>
                         </h2>
                         <div id="accordionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
