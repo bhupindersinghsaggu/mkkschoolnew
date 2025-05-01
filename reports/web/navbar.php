@@ -78,4 +78,22 @@
             </li>
         </ul>
     </li>
+    <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+            <div class="text-truncate" data-i18n="Authentications"> Academic Block</div>
+        </a>
+        <ul class="menu-sub">
+            <li class="menu-item">
+                <a href="auth-login-basic.html" class="menu-link" target="_blank">
+                    <div class="text-truncate" data-i18n="Basic">CBSE Result</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="auth-register-basic.html" class="menu-link" target="_blank">
+                    <div class="text-truncate" data-i18n="Basic">Reports</div>
+                </a>
+            </li>
+        </ul>
+    </li>
 </ul>
