@@ -7,7 +7,7 @@ include('web/functions.php');
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="row mb-12 g-6">
-        <h5 class="pb-1 mb-6">Class XII Results</h5>
+        <h5 class="pb-1 mb-6">Class X Results</h5>
             <div class="col-md-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
@@ -22,7 +22,7 @@ include('web/functions.php');
                     <div class="card-body">
                         <h5 class="card-title">Class X-A1</h5>
                         <p class="card-text">Enter the Data in the Sheet</p>
-                        <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=1618319675#gid=1618319675 class="btn btn-dark">Click Here</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=1618319675#gid=1618319675" class="btn btn-dark">Click Here</a>
                     </div>
                 </div>
             </div>
