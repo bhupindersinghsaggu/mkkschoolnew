@@ -110,23 +110,15 @@
                         </a>
                     </div>
                     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-                        <!-- Search -->
                         <div class="navbar-nav align-items-center">
-                            <!-- <div class="nav-item d-flex align-items-center">
-                                <i class="bx bx-search bx-md"></i>
-                                <input type="text" class="form-control border-0 shadow-none ps-1 ps-sm-2"
-                                    placeholder="Search..." aria-label="Search...">
-                            </div> -->
+                           
                         </div>
-                        <!-- /Search -->
-                        <ul class="navbar-nav flex-row align-items-center ms-auto">
-                            <!-- Place this tag where you want the button to render. -->
+                        <!-- <ul class="navbar-nav flex-row align-items-center ms-auto">
                             <li class="nav-item lh-1 me-4">
                                 <a class="github-button" href="#" data-icon="octicon-star" data-size="large"
                                     data-show-count="true"
                                     aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Login</a>
                             </li>
-                            <!-- User -->
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
@@ -183,8 +175,6 @@
                                     </li>
                                 </ul>
                             </li>
-                            <!--/ User -->
-                        </ul>
+                        </ul> -->
                     </div>
                 </nav>
-                <!-- / Navbar -->
