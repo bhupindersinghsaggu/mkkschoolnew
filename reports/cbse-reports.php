@@ -19,7 +19,7 @@ include('web/functions.php');
                         <div id="accordionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="row mb-12 g-6">
-                                    <div class="col-md-4 col-lg-4">
+                                    <div class="col-md-6 col-lg-4">
                                         <div class="card">
                                             <div class="card-body">
                                                 <h5 class="card-title">Class X-A</h5>
