@@ -113,7 +113,7 @@
                         <div class="navbar-nav align-items-center">
                            
                         </div>
-                        <!-- <ul class="navbar-nav flex-row align-items-center ms-auto">
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
                             <li class="nav-item lh-1 me-4">
                                 <a class="github-button" href="#" data-icon="octicon-star" data-size="large"
                                     data-show-count="true"
@@ -126,7 +126,7 @@
                                         <img src="assets/img/logo.png" alt class="w-px-40 h-auto rounded-circle">
                                     </div>
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-end">
+                                <!-- <ul class="dropdown-menu dropdown-menu-end">
                                     <li>
                                         <a class="dropdown-item" href="#">
                                             <div class="d-flex">
@@ -173,8 +173,8 @@
                                             <i class="bx bx-power-off bx-md me-3"></i><span>Log Out</span>
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </li>
-                        </ul> -->
+                        </ul>
                     </div>
                 </nav>
