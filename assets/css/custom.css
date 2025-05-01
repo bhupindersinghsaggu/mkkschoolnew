@@ -934,3 +934,25 @@ a::before .header-top-left .info-box p {
   border-radius:0% !important;
   color: #197e5e !important;
 }
+
+
+.mr-b10{
+  margin-bottom: 10px !important;
+}
+
+.mgrb5{
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.list-items{
+  list-style: none;
+
+}
+
+
+
+
+.mb-3{
+    margin-bottom: 1rem !important;
+}
