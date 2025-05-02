@@ -115,7 +115,7 @@ include('web/functions.php');
                                                 <h5 class="card-title">Class X-C</h5>
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
-                                                        <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=1797080620#gid=1797080620" class="btn btn-dark">CBSE Result</a>
+                                                        <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=359625460#gid=359625460" class="btn btn-dark">CBSE Result</a>
                                                     </div>
                                                 </div>
                                                 <div class="demo-inline-spacing mt-4">
