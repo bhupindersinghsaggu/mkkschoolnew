@@ -21,7 +21,7 @@ include('web/header.php');
                                 <p class="mb-1"> Session: 2024-25</p>
                                 <h4 class="card-title mb-3">CBSE Result Class X</h4>
                                 <div class="button-group">
-                                    <a href="cbse-reports.php" class="btn btn-sm btn-primary mb-1">Class X</a>
+                                    <a href="cbse-reports.php" class="btn btn-sm btn-danger mb-1">View/Submit Result</a>
                                 </div>
                             </div>
                         </div>
@@ -35,11 +35,10 @@ include('web/header.php');
                                             class="rounded">
                                     </div>
                                 </div>
-                                <p class="mb-1">Student Strength</p>
-                                <h4 class="card-title mb-3">2850</h4>
+                                <p class="mb-1"> Session: 2024-25</p>
+                                <h4 class="card-title mb-3">CBSE Result Class XII</h4>
                                 <div class="button-group">
-                                    <a href="student-forms.php" class="btn btn-sm btn-primary mb-1">Forms</a>
-                                    <a href="student-reports.php;" class="btn btn-sm btn-danger mb-1">Reports</a>
+                                    <a href="cbse-reports.php" class="btn btn-sm btn-primary mb-1">View/Submit Result</a>
                                 </div>
                             </div>
                         </div>

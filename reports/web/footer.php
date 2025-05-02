@@ -7,7 +7,7 @@
                 <script>
                 document.write(new Date().getFullYear())
                 </script>, Site Created by <a href="https://mkkschool.com/" target="_blank" class="footer-link">IT
-                    Department</a>
+                    Department of M.K.K. School (Bhupinder Singh)</a>
             </div>
             <!-- <div class="d-none d-lg-inline-block">
 
