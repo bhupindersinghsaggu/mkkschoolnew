@@ -26,7 +26,7 @@ include('web/header.php');
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12  mb-6">
+                    <!-- <div class="col-lg-6 col-md-12  mb-6">
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="card-title d-flex align-items-start justify-content-between mb-4">
@@ -42,7 +42,7 @@ include('web/header.php');
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="col-lg-6 col-md-12  mb-6">
                         <div class="card h-100">
