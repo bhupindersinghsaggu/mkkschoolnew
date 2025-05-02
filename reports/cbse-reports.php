@@ -5,7 +5,7 @@ include('web/functions.php');
 <!-- Content wrapper -->
 <div class="content-wrapper">
     <!-- Content -->
-    <!-- <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="container-xxl flex-grow-1 container-p-y">
 
       
         <h5>CBSE Result Class X & XII</h5>
@@ -178,7 +178,7 @@ include('web/functions.php');
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item active">
+                        <!-- <div class="accordion-item active">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button type="button" class="accordion-button collapsed btn-warning" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="true" aria-controls="accordionTwo">Class XII Results Session 2024-25</button>
                             </h2>
@@ -275,13 +275,13 @@ include('web/functions.php');
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
       
-    </div> -->
+    </div>
     <!-- / Content -->
     <?php
     include('web/footer.php')
