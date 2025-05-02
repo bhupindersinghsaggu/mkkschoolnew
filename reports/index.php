@@ -18,11 +18,10 @@ include('web/header.php');
                                             class="rounded">
                                     </div>
                                 </div>
-                                <p class="mb-1">Teacher Strength</p>
-                                <h4 class="card-title mb-3">150</h4>
+                                <p class="mb-1"> Session: 2024-25</p>
+                                <h4 class="card-title mb-3">CBSE Result Class X</h4>
                                 <div class="button-group">
-                                    <a href="teacher-forms.php" class="btn btn-sm btn-primary mb-1">Forms</a>
-                                    <a href="teacher-reports.php" class="btn btn-sm btn-danger mb-1">Reports</a>
+                                    <a href="cbse-reports.php" class="btn btn-sm btn-primary mb-1">Class X</a>
                                 </div>
                             </div>
                         </div>
