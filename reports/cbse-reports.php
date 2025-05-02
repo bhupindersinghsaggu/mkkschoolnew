@@ -35,7 +35,7 @@ include('web/functions.php');
                                                 </div>
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
-                                                        <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=546628603#gid=546628603" class="btn btn-info">Roll No List CBSE LOC</a>
+                                                        <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -55,6 +55,11 @@ include('web/functions.php');
                                                         <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=309479861#gid=309479861" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                     </div>
                                                 </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
+                                                        <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -70,6 +75,11 @@ include('web/functions.php');
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
                                                         <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=1304939505#gid=1304939505" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
+                                                        <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -90,6 +100,11 @@ include('web/functions.php');
                                                         <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=359625460#gid=3596254605" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                     </div>
                                                 </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
+                                                        <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                         </div>
@@ -106,6 +121,11 @@ include('web/functions.php');
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
                                                         <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=1234451832#gid=1234451832" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
+                                                        <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -125,6 +145,11 @@ include('web/functions.php');
                                                         <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=1150455053#gid=1150455053" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                     </div>
                                                 </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
+                                                        <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -140,6 +165,11 @@ include('web/functions.php');
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
                                                         <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=2109521462#gid=2109521462" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
+                                                        <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
                                                     </div>
                                                 </div>
                                             </div>
