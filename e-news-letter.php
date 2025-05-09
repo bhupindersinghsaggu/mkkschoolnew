@@ -34,7 +34,7 @@ include('_web/css.php');
                             <li class="accordion block">
                                 <div class="acc-btn active">
                                     <h3>
-                                        E-News Letters for Session 2024
+                                        E-News Letters for Session 2025
                                     </h3>
                                     <div class="icon-outer">
                                         <i class="icon-play"></i>
@@ -42,6 +42,34 @@ include('_web/css.php');
                                 </div>
                                 <div class="acc-content current" style="display: none;">
                                     <div class="text">
+                                        
+                                        <h3 class=" pd-10"><a href="news-letter/2024/november.pdf"><i
+                                                    class="fa-solid fa-circle-down fa-beat pdr-5"></i>
+                                                Download April Month</a></h3>
+                                        <!-- <h3 class=" pd-10"><a href="news-letter/2024/october.pdf"><i
+                                                    class="fa-solid fa-circle-down fa-beat pdr-5"></i>
+                                                Download Oct Month</a></h3>
+                                        <h3 class=" pd-10"><a href="news-letter/2024/september.pdf"><i
+                                                    class="fa-solid fa-circle-down fa-beat pdr-5"></i>
+                                                Download Sept Month</a></h3>
+                                        <h3 class=" pd-10"><a href="news-letter/2024/aug.pdf"><i
+                                                    class="fa-solid fa-circle-down fa-beat pdr-5"></i>
+                                                Download Aug Month</a></h3>
+                                        <h3 class=" pd-10"><a href="news-letter/2024/july.pdf"><i
+                                                    class="fa-solid fa-circle-down fa-beat pdr-5"></i>
+                                                Download July Month</a></h3>
+
+                                        <h3 class=" pd-10"><a href="assets/images/newsletter/2024/may.pdf"><i
+                                                    class="fa-solid fa-circle-down fa-beat pdr-5"></i>
+                                                    Download May Month</a></h3>
+                                        <h3 class=" pd-10"><a href="#"><i
+                                                    class="fa-solid fa-circle-down fa-beat pdr-5"></i>
+                                                    Download April Month</a></h3> -->
+                                    </div>
+                                </div>
+                                <div class="acc-content current" style="display: none;">
+                                    <div class="text">
+                                        
                                         <h3 class=" pd-10"><a href="news-letter/2024/november.pdf"><i
                                                     class="fa-solid fa-circle-down fa-beat pdr-5"></i>
                                                 Download Nov Month</a></h3>
