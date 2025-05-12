@@ -178,7 +178,7 @@ include('web/functions.php');
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="accordion-item active">
+                        <div class="accordion-item active">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button type="button" class="accordion-button collapsed btn-warning" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="true" aria-controls="accordionTwo">Class XII Results Session 2024-25</button>
                             </h2>
@@ -191,12 +191,12 @@ include('web/functions.php');
                                                     <h5 class="card-title">Class XII-A</h5>
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
-                                                            <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=1618319675#gid=1618319675" class="btn btn-dark">CBSE Result</a>
+                                                            <a href="https://docs.google.com/spreadsheets/d/1jZxcE2vZ56kf7EcS0vTseLaOb-YAatDS/edit?gid=2080106874#gid=2080106874" class="btn btn-dark">CBSE Result</a>
                                                         </div>
                                                     </div>
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
-                                                            <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=546628603#gid=546628603" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                            <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=839575222#gid=839575222" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -208,12 +208,12 @@ include('web/functions.php');
                                                     <h5 class="card-title">Class XII-A1</h5>
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
-                                                            <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=1618319675#gid=1618319675" class="btn btn-dark">CBSE Result</a>
+                                                            <a href="https://docs.google.com/spreadsheets/d/1jZxcE2vZ56kf7EcS0vTseLaOb-YAatDS/edit?gid=19366499#gid=19366499" class="btn btn-dark">CBSE Result</a>
                                                         </div>
                                                     </div>
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
-                                                            <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=309479861#gid=309479861" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                            <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=799561350#gid=799561350" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -225,12 +225,30 @@ include('web/functions.php');
                                                     <h5 class="card-title">Class XII-B</h5>
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
-                                                            <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=912990724#gid=912990724" class="btn btn-dark">CBSE Result</a>
+                                                            <a href="https://docs.google.com/spreadsheets/d/1jZxcE2vZ56kf7EcS0vTseLaOb-YAatDS/edit?gid=903908925#gid=903908925" class="btn btn-dark">CBSE Result</a>
                                                         </div>
                                                     </div>
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
-                                                            <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=1304939505#gid=1304939505" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                            <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=863532263#gid=863532263" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Class XII-B1</h5>
+                                                    <div class="demo-inline-spacing mt-4">
+                                                        <div class="list-group">
+                                                            <a href="https://docs.google.com/spreadsheets/d/1jZxcE2vZ56kf7EcS0vTseLaOb-YAatDS/edit?gid=1367663327#gid=1367663327" class="btn btn-dark">CBSE Result</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="demo-inline-spacing mt-4">
+                                                        <div class="list-group">
+                                                            <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=160708061#gid=160708061" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -243,16 +261,15 @@ include('web/functions.php');
                                                     <h5 class="card-title">Class XII-B2</h5>
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
-                                                            <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=507589418#gid=507589418" class="btn btn-dark">CBSE Result</a>
+                                                            <a href="https://docs.google.com/spreadsheets/d/1jZxcE2vZ56kf7EcS0vTseLaOb-YAatDS/edit?gid=1177317995#gid=1177317995" class="btn btn-dark">CBSE Result</a>
                                                         </div>
                                                     </div>
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
-                                                            <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=359625460#gid=3596254605" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                            <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=280011465#gid=280011465" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-4">
@@ -261,12 +278,12 @@ include('web/functions.php');
                                                     <h5 class="card-title">Class XII-B3</h5>
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
-                                                            <a href="https://docs.google.com/spreadsheets/d/1Dl3o_6tlJwb8ELofUcJocPSbF1X8MfiM/edit?gid=1797080620#gid=1797080620" class="btn btn-dark">CBSE Result</a>
+                                                            <a href="https://docs.google.com/spreadsheets/d/1jZxcE2vZ56kf7EcS0vTseLaOb-YAatDS/edit?gid=865858817#gid=865858817" class="btn btn-dark">CBSE Result</a>
                                                         </div>
                                                     </div>
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
-                                                            <a href="https://docs.google.com/spreadsheets/d/14vY3hjTKt1o8Aa3zP92e3sea2sPIJZwQ/edit?gid=1234451832#gid=1234451832" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                            <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=1466990578#gid=1466990578" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -275,7 +292,7 @@ include('web/functions.php');
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
