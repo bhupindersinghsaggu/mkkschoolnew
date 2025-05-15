@@ -48,8 +48,8 @@ include('web/header.php');
                                     <a href="cbse-reports.php" class="btn btn-sm btn-primary mb-1">View/Submit Result</a>
                                 </div>
                                  <div class="mt-3">
-                                    <p class="mb-1"> Student Enrolled: <strong> 261 </strong> </p>
-                                    <p class="mb-1"> Student Appeared: <strong> 268 </strong> </p>
+                                    <p class="mb-1"> Student Enrolled: <strong> 262 </strong> </p>
+                                    <p class="mb-1"> Student Appeared: <strong> 261 </strong> </p>
                                     <p class="mb-1"> Hightest Percentage: <strong> 98.2% </strong> </p>
                                     <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
                                     <p class="mb-1"> No of First Division: <strong> 256 </strong> </p>
