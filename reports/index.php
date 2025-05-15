@@ -23,13 +23,15 @@ include('web/header.php');
                                 <div class="button-group">
                                     <a href="cbse-reports.php" class="btn btn-sm btn-danger mb-1">View/Submit Result</a>
                                 </div>
-                                <p class="mb-1"> Student Enrolled: <strong> 269 </strong> </p>
-                                <p class="mb-1"> Student Appeared: <strong> 268 </strong> </p>
-                                <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
+                                <div class="mt-3">
+                                    <p class="mb-1"> Student Enrolled: <strong> 269 </strong> </p>
+                                    <p class="mb-1"> Student Appeared: <strong> 268 </strong> </p>
+                                    <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                   <div class="col-lg-6 col-md-12  mb-6">
+                    <div class="col-lg-6 col-md-12  mb-6">
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="card-title d-flex align-items-start justify-content-between mb-4">
