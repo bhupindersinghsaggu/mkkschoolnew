@@ -21,7 +21,7 @@ include('web/header.php');
                                 <p class="mb-1"> Session: 2024-25</p>
                                 <h4 class="card-title mb-3">CBSE Result Class X</h4>
                                 <div class="button-group">
-                                    <a href="cbse-reports.php" class="btn btn-sm btn-danger mb-1">View/Submit Result</a>
+                                    <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-danger mb-1">View/Submit Result</a>
                                 </div>
                                 <div class="mt-3">
                                     <p class="mb-1"> Student Enrolled: <strong> 269 </strong> </p>
@@ -53,6 +53,9 @@ include('web/header.php');
                                     <p class="mb-1"> Hightest Percentage: <strong> 98.2% </strong> </p>
                                     <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
                                     <p class="mb-1"> No of First Division: <strong> 256 </strong> </p>
+                                </div>
+                                <div class="button-group">
+                                    <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-primary mb-1">All Compiled Result</a>
                                 </div>
                             </div>
                         </div>
