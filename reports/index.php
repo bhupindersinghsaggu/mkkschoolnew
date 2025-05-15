@@ -24,7 +24,7 @@ include('web/header.php');
                                     <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-danger mb-1">View/Submit Result</a>
                                 </div>
                                 <div class="button-group mt-3">
-                                    <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-dark mb-1">All Compiled Reports</a>
+                                    <a href="https://drive.google.com/drive/u/0/folders/14J0woemDYABkRfk-AeAL0vLbVq6ktwvD" class="btn btn-sm btn-dark mb-1">All Compiled Reports</a>
                                 </div>
                                 <div class="mt-3">
                                     <ul class="list-group">
@@ -54,7 +54,7 @@ include('web/header.php');
                                     <a href="cbse-reports.php" class="btn btn-sm btn-primary mb-1">View/Submit Result</a>
                                 </div>
                                 <div class="button-group mt-3">
-                                    <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-dark mb-1">All Compiled Reports</a>
+                                    <a href="https://drive.google.com/drive/u/0/folders/1IwZv2kuKRAlG-qDuKq-oYM40rQ8Bhp4d" class="btn btn-sm btn-dark mb-1">All Compiled Reports</a>
                                 </div>
                                 <div class="mt-3">
                                     <ul class="list-group">
