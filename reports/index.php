@@ -30,6 +30,10 @@ include('web/header.php');
                                     <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
                                     <p class="mb-1"> No of First Division: <strong> 239 </strong> </p>
                                 </div>
+                                 <h4 class="card-title mb-3">All Reports</h4>
+                                <div class="button-group">
+                                    <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-primary mb-1">All Compiled Result</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -54,6 +58,7 @@ include('web/header.php');
                                     <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
                                     <p class="mb-1"> No of First Division: <strong> 256 </strong> </p>
                                 </div>
+                                 <h4 class="card-title mb-3">All Reports</h4>
                                 <div class="button-group">
                                     <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-primary mb-1">All Compiled Result</a>
                                 </div>
