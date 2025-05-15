@@ -18,22 +18,24 @@ include('web/header.php');
                                             class="rounded">
                                     </div>
                                 </div>
-                                <p class="mb-1"> Session: 2024-25</p>
-                                <h4 class="card-title mb-3">CBSE Result Class X</h4>
+                                <h3 class="mb-1"> Session: 2024-25</h3>
+                                <h5 class="card-title mb-3">CBSE Result Class X</h5>
                                 <div class="button-group">
                                     <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-danger mb-1">View/Submit Result</a>
                                 </div>
+                                <div class="button-group mt-3">
+                                    <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-dark mb-1">All Compiled Reports</a>
+                                </div>
                                 <div class="mt-3">
-                                    <p class="mb-1"> Student Enrolled: <strong> 269 </strong> </p>
-                                    <p class="mb-1"> Student Appeared: <strong> 268 </strong> </p>
-                                   <p class="mb-1"> Hightest Percentage: <strong> 99% </strong> </p> 
-                                    <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
-                                    <p class="mb-1"> No of First Division: <strong> 239 </strong> </p>
+                                    <ul class="list-group">
+                                        <li class="mb-1 list-group-item"><i class="fas fa-paper-plane icon-color"></i> Student Enrolled: <strong> 269 </strong> </li>
+                                        <li class="mb-1 list-group-item"> <i class="fas fa-paper-plane icon-color"></i> Student Appeared: <strong> 268 </strong> </li>
+                                        <li class="mb-1 list-group-item"> <i class="fas fa-paper-plane icon-color"></i> Hightest Percentage: <strong> 99% </strong> </li>
+                                        <li class="mb-1 list-group-item"> <i class="fas fa-paper-plane icon-color"></i> Pass Percentage: <strong> 100% </strong> </li>
+                                        <li class="mb-1 list-group-item"> <i class="fas fa-paper-plane icon-color"></i> No of First Division: <strong> 239 </strong> </li>
+                                    </ul>
                                 </div>
-                                 <h4 class="card-title mb-3">All Reports</h4>
-                                <div class="button-group">
-                                    <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-primary mb-1">All Compiled Result</a>
-                                </div>
+                                <!-- <h5 class="card-title mb-3 mt-3">All Reports</h5> -->
                             </div>
                         </div>
                     </div>
@@ -46,22 +48,25 @@ include('web/header.php');
                                             class="rounded">
                                     </div>
                                 </div>
-                                <p class="mb-1"> Session: 2024-25</p>
-                                <h4 class="card-title mb-3">CBSE Result Class XII</h4>
-                                <div class="button-group">
+                                <h3 class="mb-1"> Session: 2024-25</h3>
+                                <h5 class="card-title mb-3">CBSE Result Class XII</h5>
+                                <div class="button-group mt-3">
                                     <a href="cbse-reports.php" class="btn btn-sm btn-primary mb-1">View/Submit Result</a>
                                 </div>
-                                 <div class="mt-3">
-                                    <p class="mb-1"> Student Enrolled: <strong> 262 </strong> </p>
-                                    <p class="mb-1"> Student Appeared: <strong> 261 </strong> </p>
-                                    <p class="mb-1"> Hightest Percentage: <strong> 98.2% </strong> </p>
-                                    <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
-                                    <p class="mb-1"> No of First Division: <strong> 256 </strong> </p>
+                                <div class="button-group mt-3">
+                                    <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-dark mb-1">All Compiled Reports</a>
                                 </div>
-                                 <h4 class="card-title mb-3">All Reports</h4>
-                                <div class="button-group">
-                                    <a href="https://drive.google.com/drive/u/0/folders/13CaZB_Hv497xF9rIGiAssT7T55eh8IkN" class="btn btn-sm btn-primary mb-1">All Compiled Result</a>
+                                <div class="mt-3">
+                                    <ul class="list-group">
+                                        <li class="mb-1 list-group-item"><i class="fas fa-paper-plane icon-color"></i> Student Enrolled: <strong> 262 </strong> </li>
+                                        <li class="mb-1 list-group-item"> <i class="fas fa-paper-plane icon-color"></i> Student Appeared: <strong> 261 </strong> </li>
+                                        <li class="mb-1 list-group-item"> <i class="fas fa-paper-plane icon-color"></i> Hightest Percentage: <strong> 98.2% </strong> </li>
+                                        <li class="mb-1 list-group-item"> <i class="fas fa-paper-plane icon-color"></i> Pass Percentage: <strong> 100% </strong> </li>
+                                        <li class="mb-1 list-group-item"> <i class="fas fa-paper-plane icon-color"></i> No of First Division: <strong> 256 </strong> </li>
+                                    </ul>
                                 </div>
+                                <!-- <h5 class="card-title mb-3 mt-3">All Reports</h5> -->
+
                             </div>
                         </div>
                     </div>
