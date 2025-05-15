@@ -23,6 +23,9 @@ include('web/header.php');
                                 <div class="button-group">
                                     <a href="cbse-reports.php" class="btn btn-sm btn-danger mb-1">View/Submit Result</a>
                                 </div>
+                                <p class="mb-1"> Student Enrolled: <strong> 269 </strong> </p>
+                                <p class="mb-1"> Student Appeared: <strong> 268 </strong> </p>
+                                <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
                             </div>
                         </div>
                     </div>
