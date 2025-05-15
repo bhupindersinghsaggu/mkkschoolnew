@@ -26,7 +26,9 @@ include('web/header.php');
                                 <div class="mt-3">
                                     <p class="mb-1"> Student Enrolled: <strong> 269 </strong> </p>
                                     <p class="mb-1"> Student Appeared: <strong> 268 </strong> </p>
+                                   <p class="mb-1"> Hightest Percentage: <strong> 99% </strong> </p> 
                                     <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
+                                    <p class="mb-1"> No of First Division: <strong> 239 </strong> </p>
                                 </div>
                             </div>
                         </div>
@@ -44,6 +46,13 @@ include('web/header.php');
                                 <h4 class="card-title mb-3">CBSE Result Class XII</h4>
                                 <div class="button-group">
                                     <a href="cbse-reports.php" class="btn btn-sm btn-primary mb-1">View/Submit Result</a>
+                                </div>
+                                 <div class="mt-3">
+                                    <p class="mb-1"> Student Enrolled: <strong> 261 </strong> </p>
+                                    <p class="mb-1"> Student Appeared: <strong> 268 </strong> </p>
+                                    <p class="mb-1"> Hightest Percentage: <strong> 98.2% </strong> </p>
+                                    <p class="mb-1"> Pass Percentage: <strong> 100% </strong> </p>
+                                    <p class="mb-1"> No of First Division: <strong> 256 </strong> </p>
                                 </div>
                             </div>
                         </div>
