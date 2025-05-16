@@ -35,6 +35,11 @@ include('web/functions.php');
                                                 </div>
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
+                                                        <a href="https://docs.google.com/spreadsheets/d/1xWxDhsHp63w7dsKTzlDcXHmTATf4ZXrv/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
                                                         <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
                                                     </div>
                                                 </div>
@@ -57,6 +62,11 @@ include('web/functions.php');
                                                 </div>
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
+                                                        <a href="https://docs.google.com/spreadsheets/d/1xWxDhsHp63w7dsKTzlDcXHmTATf4ZXrv/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
                                                         <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
                                                     </div>
                                                 </div>
@@ -75,6 +85,11 @@ include('web/functions.php');
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
                                                         <a href="https://docs.google.com/spreadsheets/d/19IIzRw_7shuz6XOr0qFoMvMw_MfuVpyg/edit?gid=1957686475#gid=1957686475" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
+                                                        <a href="https://docs.google.com/spreadsheets/d/1xWxDhsHp63w7dsKTzlDcXHmTATf4ZXrv/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
                                                     </div>
                                                 </div>
                                                 <div class="demo-inline-spacing mt-4">
@@ -102,6 +117,11 @@ include('web/functions.php');
                                                 </div>
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
+                                                        <a href="https://docs.google.com/spreadsheets/d/1xWxDhsHp63w7dsKTzlDcXHmTATf4ZXrv/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
                                                         <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
                                                     </div>
                                                 </div>
@@ -121,6 +141,11 @@ include('web/functions.php');
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
                                                         <a href="https://docs.google.com/spreadsheets/d/19IIzRw_7shuz6XOr0qFoMvMw_MfuVpyg/edit?gid=860828732#gid=860828732" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
+                                                        <a href="https://docs.google.com/spreadsheets/d/1xWxDhsHp63w7dsKTzlDcXHmTATf4ZXrv/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
                                                     </div>
                                                 </div>
                                                 <div class="demo-inline-spacing mt-4">
@@ -147,6 +172,11 @@ include('web/functions.php');
                                                 </div>
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
+                                                        <a href="https://docs.google.com/spreadsheets/d/1xWxDhsHp63w7dsKTzlDcXHmTATf4ZXrv/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
                                                         <a href="assets/img/cbse/2024-25/locx.pdf" class="btn btn-danger">Roll No List CBSE LOC-2024-25</a>
                                                     </div>
                                                 </div>
@@ -165,6 +195,11 @@ include('web/functions.php');
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
                                                         <a href="https://docs.google.com/spreadsheets/d/19IIzRw_7shuz6XOr0qFoMvMw_MfuVpyg/edit?gid=1029671018#gid=1029671018" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-inline-spacing mt-4">
+                                                    <div class="list-group">
+                                                        <a href="https://docs.google.com/spreadsheets/d/1xWxDhsHp63w7dsKTzlDcXHmTATf4ZXrv/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
                                                     </div>
                                                 </div>
                                                 <div class="demo-inline-spacing mt-4">
