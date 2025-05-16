@@ -7,7 +7,7 @@ include('web/functions.php');
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
 
-      
+
         <h5>CBSE Result Class X & XII</h5>
         <div class="row g-6">
             <div class="col-md-12">
@@ -234,6 +234,11 @@ include('web/functions.php');
                                                             <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=839575222#gid=839575222" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                         </div>
                                                     </div>
+                                                    <div class="demo-inline-spacing mt-4">
+                                                        <div class="list-group">
+                                                            <a href="https://docs.google.com/spreadsheets/d/10iXARfvvU6ZtT_Pl9RqZc6eTthYPmug3/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -251,6 +256,11 @@ include('web/functions.php');
                                                             <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=799561350#gid=799561350" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                         </div>
                                                     </div>
+                                                    <div class="demo-inline-spacing mt-4">
+                                                        <div class="list-group">
+                                                            <a href="https://docs.google.com/spreadsheets/d/10iXARfvvU6ZtT_Pl9RqZc6eTthYPmug3/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -266,6 +276,11 @@ include('web/functions.php');
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
                                                             <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=863532263#gid=863532263" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="demo-inline-spacing mt-4">
+                                                        <div class="list-group">
+                                                            <a href="https://docs.google.com/spreadsheets/d/10iXARfvvU6ZtT_Pl9RqZc6eTthYPmug3/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -286,6 +301,11 @@ include('web/functions.php');
                                                             <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=160708061#gid=160708061" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                         </div>
                                                     </div>
+                                                    <div class="demo-inline-spacing mt-4">
+                                                        <div class="list-group">
+                                                            <a href="https://docs.google.com/spreadsheets/d/10iXARfvvU6ZtT_Pl9RqZc6eTthYPmug3/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -302,6 +322,11 @@ include('web/functions.php');
                                                     <div class="demo-inline-spacing mt-4">
                                                         <div class="list-group">
                                                             <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=280011465#gid=280011465" class="btn btn-info">Hightest Marks Subject Wise</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="demo-inline-spacing mt-4">
+                                                        <div class="list-group">
+                                                            <a href="https://docs.google.com/spreadsheets/d/10iXARfvvU6ZtT_Pl9RqZc6eTthYPmug3/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -321,6 +346,11 @@ include('web/functions.php');
                                                             <a href="https://docs.google.com/spreadsheets/d/1DV5xyJ0NPuZcEbaqeyQAOS4MwdsDo59f/edit?gid=1466990578#gid=1466990578" class="btn btn-info">Hightest Marks Subject Wise</a>
                                                         </div>
                                                     </div>
+                                                    <div class="demo-inline-spacing mt-4">
+                                                        <div class="list-group">
+                                                            <a href="https://docs.google.com/spreadsheets/d/10iXARfvvU6ZtT_Pl9RqZc6eTthYPmug3/edit?usp=sharing&ouid=102811184558856598345&rtpof=true&sd=true" class="btn btn-info">Subject Teacher Class Wise Result</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -332,7 +362,7 @@ include('web/functions.php');
                 </div>
             </div>
         </div>
-      
+
     </div>
     <!-- / Content -->
     <?php
