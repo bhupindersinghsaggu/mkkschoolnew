@@ -223,7 +223,7 @@ include('_web/enquiry.php');
             <div class="col-xl-6">
                 <div class="quiz-learning-intro-title-box">
                     <div class="sec-title-style8">
-                        <h2>Welcome to <br> <span>Dr. M.K.K. Arya Model School</span> </h2>
+                        <h2>Welcome to <br> <span>Miss Ritu</span> </h2>
                         <p>Dr. M.K.K. Arya Model School has emerged as one of the premier Educational Institutions in
                             Panipat. The school is a
                             Mascot for developing and inculcating the minds of the young students towards their
