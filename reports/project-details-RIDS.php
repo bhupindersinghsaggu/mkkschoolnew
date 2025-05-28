@@ -13,7 +13,7 @@ include('web/functions.php');
             </div>
             <div class="col-md-6">
               <div class="button-group mt-3">
-                                    <a href="https://docs.google.com/spreadsheets/d/1tmenTFJZGO3YV3V-ql8fu35M976hgj9_ErdrX7UtSso/edit?resourcekey=&gid=1515377441#gid=1515377441" class="btn btn-sm btn-dark mb-1">View Response</a>
+                                    <a href="https://docs.google.com/spreadsheets/d/1tmenTFJZGO3YV3V-ql8fu35M976hgj9_ErdrX7UtSso/edit?resourcekey=&gid=1515377441#gid=1515377441" class="btn btn-xl btn-primary mb-1">View Response</a>
                                 </div>
             </div>
         </div>
