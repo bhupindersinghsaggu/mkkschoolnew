@@ -82,7 +82,7 @@
                 </a>
             </li>
             <li class="menu-item">
-                <a href="auth-register-basic.html" class="menu-link" target="_blank">
+                <a href="buss-pass.php" class="menu-link" target="_blank">
                     <div class="text-truncate" data-i18n="Basic">Bus Pass for Tranpsort</div>
                 </a>
             </li>
