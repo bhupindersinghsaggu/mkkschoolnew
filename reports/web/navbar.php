@@ -81,11 +81,11 @@
                     <div class="text-truncate" data-i18n="Basic">Online Fee Issue</div>
                 </a>
             </li>
-            <!-- <li class="menu-item">
+            <li class="menu-item">
                 <a href="auth-register-basic.html" class="menu-link" target="_blank">
-                    <div class="text-truncate" data-i18n="Basic">Reports</div>
+                    <div class="text-truncate" data-i18n="Basic">Bus Pass for Tranpsort</div>
                 </a>
-            </li> -->
+            </li>
         </ul>
     </li>
     <li class="menu-item">
