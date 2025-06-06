@@ -112,6 +112,11 @@
                     <div class="text-truncate" data-i18n="Basic">Project Details RIDS</div>
                 </a>
             </li>
+             <li class="menu-item">
+                <a href="udise-reports.php" class="menu-link" target="_blank">
+                    <div class="text-truncate" data-i18n="Basic">UDISE Reports</div>
+                </a>
+            </li>
         </ul>
     </li>
 </ul>
