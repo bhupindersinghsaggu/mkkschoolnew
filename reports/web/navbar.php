@@ -107,12 +107,19 @@
             <div class="text-truncate" data-i18n="Authentications">Teachers Forms</div>
         </a>
         <ul class="menu-sub">
+
+            <li class="menu-item">
+                <a href="Adhaar-card-Nominee-Details.php" class="menu-link" target="_blank">
+                    <div class="text-truncate" data-i18n="Basic">
+                        Adhaar card-Nominee-Details</div>
+                </a>
+            </li>
             <li class="menu-item">
                 <a href="project-details-RIDS.php" class="menu-link" target="_blank">
                     <div class="text-truncate" data-i18n="Basic">Project Details RIDS</div>
                 </a>
             </li>
-             <li class="menu-item">
+            <li class="menu-item">
                 <a href="udise-reports.php" class="menu-link" target="_blank">
                     <div class="text-truncate" data-i18n="Basic">UDISE Reports</div>
                 </a>
