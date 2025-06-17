@@ -13,8 +13,6 @@ include('web/functions.php');
                 <div class="button-group mt-3">
                     <a href="https://forms.gle/5Kcyt6oCKdfBVPko6" class="btn btn-xl btn-primary mb-1">Click Here to Fill the Form </a>
                 </div>
-            </div>
-            <div class="col-md-6">
                 <div class="button-group mt-3">
                     <a href="https://docs.google.com/spreadsheets/d/1IaCA4ObtzGFNAiYjX1Gy05KBqzPBgXlUOodeMOFmJGM/edit?resourcekey=&gid=376740212#gid=376740212" class="btn btn-xl btn-danger mb-1">View Response</a>
                 </div>
