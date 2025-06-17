@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<!-- Mirrored from html.theme-village.com/eduxo/demo/instructor-create-course.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 17:22:40 GMT -->
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description"
+      content="An ideal tempalte for online education, e-Learning, Course School, Online School, Kindergarten, Classic LMS, University, Language Academy, Coaching, Online Course, Single Course, and Course marketplace.">
+   <meta name="keywords"
+      content="bootstrap 5, online course, education, creative, gulp, business, minimal, modern, course, one page, responsive, saas, e-Learning, seo, startup, html5, site template">
+   <meta name="author" content="theme-village">
+   <title>Eduxo - Online Courses and Education HTML5 Template</title>
+   <link rel="apple-touch-icon" href="images/favicon.png">
+   <link rel="shortcut icon" href="images/favicon.ico">
+   <link rel="stylesheet" href="css/feather.css">
+   <link rel="stylesheet" href="css/nice-select2.css">
+   <link href="css/glightbox.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+   <!-- Style css -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+   <!-- Preloader -->
+   <div id="preloader">
+      <div class="preloader">
+         <span></span>
+         <span></span>
+      </div>
+   </div>
+   <!-- Header Start -->
+   <header class="header header-default">
+      <div class="sticky-height"></div>
+
+      <!-- Navigation Menu Start -->
+      <div class="header-nav-wrapper header-sticky">
+
+         <nav class="navbar navbar-expand-xl border-bottom">
+            <div class="container-fluid px-lg-5 px-3">
+               <!-- Logo here -->
+               <a class="navbar-brand py-4" href="index.html"><img src="images/logo.png" alt="Logo"></a>
+
+               <div class="course-header-cta d-flex justify-content-between align-items-center">
+                  <a class="draft btn btn-outline-primary" href="single-course-2.html">Save as Draft</a>
+                  <a class="preview btn btn-secondary text-white" href="single-course.html">Preview</a>
+                  <a class="pulish btn btn-primary" href="single-course.html">Publish</a>
+                  <a href="instructor-dashboard.html" class="icon-xs border-0 bg-danger rounded-5 text-white"><i
+                        class="feather-icon icon-x ms-5"></i></a>
+               </div>
+
+            </div>
+         </nav>
+      </div>
+   </header>
+   <!-- Header End -->
+
+   <!-- FAQ Section Start -->
+   <section class="faq-sec bg-shade sec-padding position-relative">
+      <img src="images/icons/telescope-lg.png" alt="" class="anim-img">
+      <img src="images/icons/certificate.png" alt="" class="anim-img anim-right bottom-0">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8">
+               <div class="course-accordion accordion-2 card" id="accordion-course">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" aria-expanded="true">
+                           Course Info
+                        </button>
+                     </h2>
+                     <div id="collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                           <div class="form-group">
+                              <label for="c-title">Course Title</label>
+                              <input type="text" class="form-control" id="c-title" placeholder="WordPress Development">
+                           </div>
+                           <div class="form-group">
+                              <label for="c-slug">Course Slug</label>
+                              <input type="text" class="form-control" id="c-slug" placeholder="wordpress-development" />
+                              <p>Permalink: <a href="#">https://theme-village.com/eduxo/new-course</a></p>
+                           </div>
+                           <div class="form-group">
+                              <label for="c-details">About Course</label>
+                              <textarea name="course-details" id="c-details" placeholder="about course"></textarea>
+                           </div>
+                           <div class="form-group bg-shade rounded-3 p-4">
+                              <label for="c-title" class="h3 mb-4">Course Settings</label>
+                              <div class="c-settings-tab d-flex align-items-start">
+                                 <ul class="nav flex-column nav-pills me-5" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                       <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill"
+                                          data-bs-target="#pills-general" type="button" role="tab"
+                                          aria-controls="pills-general" aria-selected="true">General</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                       <button class="nav-link" id="pills-content-tab" data-bs-toggle="pill"
+                                          data-bs-target="#pills-content" type="button" role="tab"
+                                          aria-controls="pills-content" aria-selected="false">Content Drip</button>
+                                    </li>
+                                 </ul>
+                                 <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-general" role="tabpanel"
+                                       aria-labelledby="pills-general-tab">
+                                       <div class="form-group">
+                                          <label for="c-students">Maximum Students</label>
+                                          <input class="form-control" type="number" placeholder="100">
+                                          <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                                      stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round"></path>
+                                                   <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                   <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg></span>Number of students that can enrol in this course. Set 0 for
+                                             no limits.</p>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="c-level">Difficulty Level</label>
+                                          <select class="select nice-select2" name="d-level" id="select">
+                                             <option value="1">All Levels</option>
+                                             <option value="2">Biginner</option>
+                                             <option value="3">Intermediate</option>
+                                             <option value="1">Advance</option>
+                                          </select>
+                                          <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                                      stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round"></path>
+                                                   <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                   <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg></span>Course difficulty level</p>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="c-public">Public Course</label>
+                                          <div class="form-check form-switch">
+                                             <input class="form-check-input" type="checkbox" role="switch" checked>
+                                          </div>
+                                          <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                                      stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round"></path>
+                                                   <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                   <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg></span> Make This Course Public. No enrollment required.</p>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="c-qa">Q&A</label>
+                                          <div class="form-check form-switch">
+                                             <input class="form-check-input" type="checkbox" role="switch" checked>
+                                          </div>
+                                          <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                                      stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round"></path>
+                                                   <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                   <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg></span> Enable Q&A section for your course</p>
+                                       </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-content" role="tabpanel"
+                                       aria-labelledby="pills-content-tab">
+                                       <div class="form-group">
+                                          <label for="c-contant">Enable Content Drip</label>
+                                          <div class="form-check form-switch">
+                                             <input class="form-check-input" type="checkbox" role="switch" checked>
+                                          </div>
+                                          <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                                      stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round"></path>
+                                                   <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                   <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg></span> Enable / Disable content drip</p>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="mb-3">
+                                             <label for="#">Content Drip Type</label>
+                                             <p>You can schedule your course content using the above content drip
+                                                options.</p>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio1" value="option1">
+                                             <label class="form-check-label" for="inlineRadio1">Schedule course contents
+                                                by date</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio2" value="option2">
+                                             <label class="form-check-label" for="inlineRadio2">Content available after
+                                                X days from enrollment</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio3" value="option3">
+                                             <label class="form-check-label" for="inlineRadio3">Course content available
+                                                sequentially</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio4" value="option4">
+                                             <label class="form-check-label" for="inlineRadio4">Course content unlocked
+                                                after finishing prerequisites</label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div> <!-- Tab Content End -->
+                              </div>
+                           </div>
+                           <div class="form-group bg-shade rounded-3 p-4">
+                              <label for="c-title" class="h3 mb-4">Course Price</label>
+                              <div class="c-settings-tab d-flex align-items-start">
+                                 <ul class="nav flex-column nav-pills me-5" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                       <button class="nav-link active" id="pills-paid-tab" data-bs-toggle="pill"
+                                          data-bs-target="#pills-paid" type="button" role="tab"
+                                          aria-controls="pills-paid" aria-selected="true">Paid</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                       <button class="nav-link" id="pills-free-tab" data-bs-toggle="pill"
+                                          data-bs-target="#pills-free" type="button" role="tab"
+                                          aria-controls="pills-free" aria-selected="false">Free</button>
+                                    </li>
+                                 </ul>
+                                 <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-paid" role="tabpanel"
+                                       aria-labelledby="pills-paid-tab">
+                                       <div class="form-group">
+                                          <label for="c-students">Regular Price ($)</label>
+                                          <input class="form-control" type="number" placeholder="100">
+                                          <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                                      stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round"></path>
+                                                   <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                   <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg></span>The Course Price Includes Your Author Fee.</p>
+                                       </div>
+
+                                       <div class="form-group">
+                                          <label for="c-students">Discounted Price ($)</label>
+                                          <input class="form-control" type="number" placeholder="80">
+                                          <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                                      stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round"></path>
+                                                   <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                   <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg></span>The Course Price Includes Your Author Fee.</p>
+                                       </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-free" role="tabpanel"
+                                       aria-labelledby="pills-free-tab">
+                                       <p class="h6">This Course is free for everyone.</p>
+                                    </div>
+                                 </div> <!-- Tab Content End -->
+                              </div>
+                           </div>
+
+                           <div class="form-group">
+                              <label for="c-title">Select a Category</label>
+                              <select class="nice-select select nice-select2 mb-3" name="course" id="select-course">
+                                 <option value="1">Web Development</option>
+                                 <option value="2">Graphic Design</option>
+                                 <option value="3">Ui/Ux Design</option>
+                                 <option value="4">App Development</option>
+                                 <option value="5">Enlish Learning</option>
+                              </select>
+                           </div>
+                           <div class="form-group">
+                              <label for="c-thumb">Course Thumbnail</label>
+                              <div class="new-course-file-content text-center"
+                                 style="background-image: url('images/upload-bg.png');">
+                                 <div class="upload-icon">
+                                    <img src="images/icons/file-upload.png" alt="File Upload">
+                                 </div>
+                                 <span class="upload-btn">
+                                    <input id="new-course-file-input" type="file" accept="image/png, image/jpeg">
+                                    <label for="new-course-file-input">Choose Image to Upload</label>
+                                 </span>
+                                 <p>Size: 700x430 pixels</p>
+                              </div>
+                           </div>
+                        </div> <!-- Accordion Body End -->
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           Coruse Intro Video
+                        </button>
+                     </h2>
+                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordion-course">
+                        <div class="accordion-body">
+                           <div class="form-group">
+                              <select class="w-100 mb-3" name="video-source" id="course-video">
+                                 <option value="1">Youtube</option>
+                                 <option value="2">Vimeo</option>
+                                 <option value="3">Local</option>
+                              </select>
+                           </div>
+                           <div class="form-group">
+                              <label for="v-url">Add your Video URL</label>
+                              <input class="form-control" type="url" id="v-url">
+                              <p>Permalink: <a href="#">https://youtube.com/watch?v=6547b8</a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           Course Builder
+                        </button>
+                     </h2>
+                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordion-course">
+                        <div class="accordion-body">
+                           <div class="accordion-item lw-acccordion">
+                              <h2 class="accordion-header position-relative" id="lwheadingOne">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#lw-level" aria-expanded="true" aria-controls="lw-level">
+                                    Course One
+                                 </button>
+                                 <div class="action-cta">
+                                    <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                          class="feather-icon icon-edit"></i></span>
+                                    <span><i class="feather-icon icon-trash-2"></i></span>
+                                 </div>
+                              </h2>
+                              <div id="lw-level" class="accordion-collapse collapse" aria-labelledby="lwheadingOne"
+                                 data-bs-parent="#lwExample">
+                                 <div class="accordion-body">
+                                    <div
+                                       class="lw-lesson d-flex align-items-center justify-content-between justify-content-between">
+                                       <h6>The Complete React Course from Zero to Advance</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                    <div class="lw-lesson d-flex align-items-center justify-content-between">
+                                       <h6>Introduction to JavaScript</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                    <div class="lw-lesson d-flex align-items-center justify-content-between">
+                                       <h6>Advanced CSS Techniques</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                    <div class="lw-lesson d-flex align-items-center justify-content-between">
+                                       <h6>Mastering Python for Data Science</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div> <!-- Lw Item End -->
+                           <div class="accordion-item lw-acccordion">
+                              <h2 class="accordion-header position-relative" id="lwheading2">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#lw-level2" aria-expanded="true" aria-controls="lw-level2">
+                                    Course Two
+                                 </button>
+                                 <div class="action-cta">
+                                    <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                          class="feather-icon icon-edit"></i></span>
+                                    <span><i class="feather-icon icon-trash-2"></i></span>
+                                 </div>
+                              </h2>
+                              <div id="lw-level2" class="accordion-collapse collapse" aria-labelledby="lwheading2"
+                                 data-bs-parent="#lwExample">
+                                 <div class="accordion-body">
+                                    <div
+                                       class="lw-lesson d-flex align-items-center justify-content-between justify-content-between">
+                                       <h6>The Complete React Course from Zero to Advance</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                    <div class="lw-lesson d-flex align-items-center justify-content-between">
+                                       <h6>Introduction to JavaScript</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                    <div class="lw-lesson d-flex align-items-center justify-content-between">
+                                       <h6>Advanced CSS Techniques</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                    <div class="lw-lesson d-flex align-items-center justify-content-between">
+                                       <h6>Mastering Python for Data Science</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div> <!-- Lw Item End -->
+                           <div class="accordion-item lw-acccordion">
+                              <h2 class="accordion-header position-relative" id="lwheading3">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#lw-level-3" aria-expanded="true" aria-controls="lw-level-3">
+                                    Course Three
+                                 </button>
+                                 <div class="action-cta">
+                                    <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                          class="feather-icon icon-edit"></i></span>
+                                    <span><i class="feather-icon icon-trash-2"></i></span>
+                                 </div>
+                              </h2>
+                              <div id="lw-level-3" class="accordion-collapse collapse" aria-labelledby="lwheading2"
+                                 data-bs-parent="#lwExample">
+                                 <div class="accordion-body">
+                                    <div
+                                       class="lw-lesson d-flex align-items-center justify-content-between justify-content-between">
+                                       <h6>The Complete React Course from Zero to Advance</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                    <div class="lw-lesson d-flex align-items-center justify-content-between">
+                                       <h6>Introduction to JavaScript</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                    <div class="lw-lesson d-flex align-items-center justify-content-between">
+                                       <h6>Advanced CSS Techniques</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                    <div class="lw-lesson d-flex align-items-center justify-content-between">
+                                       <h6>Mastering Python for Data Science</h6>
+                                       <div class="lw-lesson-actions d-flex">
+                                          <span data-bs-toggle="modal" data-bs-target="#topicModal"><i
+                                                class="feather-icon icon-edit"></i></span>
+                                          <span><i class="feather-icon icon-trash-2"></i></span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div> <!-- Lw Item End -->
+
+                           <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#topicModal"><i class="feather-icon icon-plus-circle me-1"></i>Add New
+                              Topic</button>
+                           <div class="sm-modal modal fade" id="topicModal" aria-hidden="true">
+                              <div class="modal-dialog">
+                                 <div class="modal-content">
+                                    <div
+                                       class="modal-header border-0 d-flex align-items-center justify-content-between">
+                                       <h4 class="modal-title mb-0 h5" id="topicModallLabel">Edit Topic</h4>
+                                       <button type="button" class="border-0 text-white bg-transparent"
+                                          data-bs-dismiss="modal" aria-label="Close">
+                                          <span class="icon icon-xs bg-primary rounded-5">
+                                             <i class="feather-icon icon-x"></i>
+                                          </span>
+                                       </button>
+                                    </div>
+                                    <div class="modal-body bg-light p-4 m-4 rounded-3">
+                                       <form>
+                                          <div class="form-group">
+                                             <label>Topic Title</label>
+                                             <input class="form-control" type="text" placeholder="Test Announcement">
+                                          </div>
+                                          <div class="form-group">
+                                             <label>Topic SubTitle</label>
+                                             <input class="form-control" type="text" placeholder="Test Subtitle">
+                                          </div>
+                                          <div class="tpd-input-white">
+                                             <label for="message-text" class="col-form-label">Summary</label>
+                                             <textarea class="form-control" id="message-text"
+                                                placeholder="Lorem Ipsum Dolor...."></textarea>
+                                          </div>
+                                       </form>
+                                    </div>
+                                    <div
+                                       class="modal-footer pt-0 border-0 d-flex justify-content-between align-items-center">
+                                       <button type="button" class="btn btn-sm btn-danger text-info"
+                                          data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                       <button type="button" class="btn btn-primary btn-sm">Publish</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div> <!-- Item End -->
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="heading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                           Instructors
+                        </button>
+                     </h2>
+                     <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                        data-bs-parent="#accordion-course">
+                        <div class="accordion-body">
+                           <div class="acc-instructors d-flex g-2 mb-2">
+                              <a href="instructor-profile.html"
+                                 class="acc-instruct col-4 d-flex align-items-center border p-2">
+                                 <img width="60" src="images/ava-sm1.jpg" class="img-fluid rounded-circle me-2"
+                                    alt="Avatar">
+                                 <span>Maria Joshua</span>
+                              </a>
+                           </div>
+                           <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#topicInstructor"><i class="feather-icon icon-users me-1"></i>Add New
+                              Instructor</button>
+                           <div class="sm-modal modal fade" id="topicInstructor" aria-hidden="true">
+                              <div class="modal-dialog">
+                                 <div class="modal-content">
+                                    <div
+                                       class="modal-header border-0 d-flex align-items-center justify-content-between">
+                                       <h4 class="modal-title mb-0 h5" id="topicInstructorLabel">Edit Instructor</h4>
+                                       <button type="button" class="border-0 text-white bg-transparent"
+                                          data-bs-dismiss="modal" aria-label="Close">
+                                          <span class="icon icon-xs bg-primary rounded-5">
+                                             <i class="feather-icon icon-x"></i>
+                                          </span>
+                                       </button>
+                                    </div>
+                                    <div class="modal-body bg-light p-4 m-4 rounded-3">
+                                       <form>
+                                          <div class="form-group">
+                                             <label>Instructor Name</label>
+                                             <input class="form-control" type="text" placeholder="Test Announcement">
+                                          </div>
+                                          <div class="form-group">
+                                             <label>Instructor SubTitle</label>
+                                             <input class="form-control" type="text" placeholder="Test Subtitle">
+                                          </div>
+                                          <div class="tpd-input-white">
+                                             <label for="message-text" class="col-form-label">Bio</label>
+                                             <textarea class="form-control" id="message-text"
+                                                placeholder="Lorem Ipsum Dolor...."></textarea>
+                                          </div>
+                                       </form>
+                                    </div>
+                                    <div
+                                       class="modal-footer pt-0 border-0 d-flex justify-content-between align-items-center">
+                                       <button type="button" class="btn btn-sm btn-danger text-info"
+                                          data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                       <button type="button" class="btn btn-primary btn-sm">Publish</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div> <!-- Item End -->
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                           Course Attachments
+                        </button>
+                     </h2>
+                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordion-course">
+                        <div class="accordion-body">
+                           <div class="form-group">
+                              <div class="new-course-file-content text-center bg-cover"
+                                 style="background-image: url('images/upload-bg.png');">
+                                 <span class="upload-btn">
+                                    <input class="form-control" id="new-course-file-input" type="file"
+                                       accept="image/png, image/jpeg">
+                                    <label for="new-course-file-input"><i
+                                          class="feather-icon icon-upload me-1"></i>Choose File to Upload</label>
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div> <!-- Item End -->
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                           Additional Data
+                        </button>
+                     </h2>
+                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordion-course">
+                        <div class="accordion-body row">
+                           <div class="col-lg-6 form-group">
+                              <label for="start-date">Start Date</label>
+                              <input type="date" class="form-control">
+                           </div>
+                           <div class="col-lg-6 form-group">
+                              <label for="language">Language</label>
+                              <select class="select nice-select2" name="language" id="select-lang">
+                                 <option value="1">English</option>
+                                 <option value="2">Spanish</option>
+                                 <option value="3">French</option>
+                                 <option value="4">Bangla</option>
+                              </select>
+                           </div>
+                           <div class="col-lg-12 form-group">
+                              <label for="c-details-info">Course Details</label>
+                              <textarea name="c-details" id="c-details-info" placeholder="Course Details"
+                                 class="form-control"></textarea>
+                           </div>
+                           <div class="col-lg-6 form-group">
+                              <label for="duration">Course Duration</label>
+                              <input class="form-control" type="number" placeholder="10">
+                              <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                          stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                       <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                       <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></span>Hours</p>
+                           </div>
+                           <div class="col-lg-6 form-group">
+                              <label for="minite">&nbsp;</label>
+                              <input class="form-control" type="number" placeholder="10">
+                              <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                          stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                       <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                       <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></span>Minites</p>
+                           </div>
+                           <div class="col-lg-12 form-group">
+                              <label for="tags">Course Tags</label>
+                              <textarea name="tags" id="tags" class="form-control"
+                                 placeholder="web development, design"></textarea>
+                              <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                          stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                       <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                       <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></span>Maximum of 15 keywords. Seperate by comma.</p>
+                           </div>
+                           <div class="col-lg-12 form-group">
+                              <label for="tags">Tagget Audience</label>
+                              <textarea name="tags" id="tags" class="form-control"
+                                 placeholder="web development, design"></textarea>
+                              <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                          stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                       <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                       <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></span>Specify the target audience that will benefit the most from the
+                                 course.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div> <!-- Item End -->
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                           Course Prerequisites
+                        </button>
+                     </h2>
+                     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                        data-bs-parent="#accordion-course">
+                        <div class="accordion-body">
+                           <div class="form-group">
+                              <label for="c-prerequisites">Prerequisites</label>
+                              <textarea name="c-prerequisites" id="c-prerequisites" class="form-control"
+                                 placeholder="web development, design"></textarea>
+                              <p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                                          stroke="#8F9195" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                       <path d="M8 5.19995V7.99995" stroke="#8F9195" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                       <path d="M8 10.8H8.007" stroke="#8F9195" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></span>Specify the essential courses learners must complete before enrolling
+                                 in this one.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div> <!-- Item End -->
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                          Certificate
+                        </button>
+                     </h2>
+                     <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                        data-bs-parent="#accordion-course">
+                        <div class="accordion-body row g-2">
+                           <div class="col-lg-4 col-sm-6">
+                              <img class="img-fluid" src="images/cert1.png" alt="">
+                           </div>
+                           <div class="col-lg-4 col-sm-6">
+                              <img class="img-fluid" src="images/cert2.png" alt="">
+                           </div>
+                           <div class="col-lg-4 col-sm-6">
+                              <img class="img-fluid" src="images/cert3.png" alt="">
+                           </div>
+                           <div class="col-lg-4 col-sm-6">
+                              <img class="img-fluid" src="images/cert4.png" alt="">
+                           </div>
+                           <div class="col-lg-4 col-sm-6">
+                              <img class="img-fluid" src="images/cert5.png" alt="">
+                           </div>
+                           <div class="col-lg-4 col-sm-6">
+                              <img class="img-fluid" src="images/cert-6.png" alt="">
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </div> <!-- Item End -->
+               </div>
+            </div> <!-- col end -->
+            <div class="col-lg-4">
+               <aside class="sidebar ps-lg-4 ">
+                  <div class="widget course-upload card p-5 shadow-sm">
+                     <h3 class="mb-4 h4">Course Upload Tips:</h3>
+                     <ol>
+                        <li>Set a price for the course or offer it for free.</li>
+                        <li>The recommended thumbnail size is 700x430 pixels.</li>
+                        <li>Use the Video section to upload the course overview video.</li>
+                        <li>Build and organize your course using the Course Builder.</li>
+                        <li>In the Course Builder, add Topics to include lessons, quizzes, and assignments.</li>
+                        <li>Prerequisites specify the essential courses learners must complete before enrolling in
+                           this
+                           one.</li>
+                     </ol>
+                  </div>
+               </aside>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- FAQ Section End -->
+
+ 
+  <!-- Footer Section Start -->
+  <footer class="footer-2 bg-info sec-padding pb-0">
+   <div class="container pb-lg-5">
+     <div class="row">
+       <div class="col-lg-4 col-sm-6">
+         <div class="footer-widget about-footer">
+           <div class="f-logo mb-5">
+             <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+           </div>
+           <p>
+             Education is the most potent weapon change the world give man education and he will build a new world
+           </p>
+           <div class="footer-social mt-4">
+             <h3 class="display-5">Follow Us</h3>
+             <div class="mt-3">
+               <a href="#"><i class="feather-icon icon-twitter"></i></a>
+               <a href="#"><i class="feather-icon icon-facebook"></i></a>
+               <a href="#"><i class="feather-icon icon-instagram"></i></a>
+               <a href="#"><i class="feather-icon icon-linkedin"></i></a>
+             </div>
+           </div>
+         </div>
+       </div>
+       <!--  Widget End -->
+       <div class="col-lg-2 col-sm-6">
+         <div class="footer-widget">
+           <h3 class="widget-title">Quick Links</h3>
+           <ul>
+             <li><a href="about.html">About Us</a></li>
+             <li><a href="#">Instructors</a></li>
+             <li><a href="#">Careers</a></li>
+             <li><a href="#">Services</a></li>
+             <li><a href="contact.html">Contact us</a></li>
+           </ul>
+         </div>
+       </div>
+       <!--  Widget End -->
+       <div class="col-lg-2 col-sm-6">
+         <div class="footer-widget">
+           <h3 class="widget-title">Categories</h3>
+           <ul>
+             <li><a href="#">Ui/Ux Design</a></li>
+             <li><a href="#">Web Development</a></li>
+             <li><a href="#">Data Sciences</a></li>
+             <li><a href="#">Art & Design</a></li>
+             <li><a href="contact.html">Digital Marketing</a></li>
+           </ul>
+         </div>
+       </div>
+       <!--  Widget End -->
+       <div class="col-lg-4 ps-xxl-5 col-sm-6">
+         <div class="footer-widget post-widget">
+           <h3 class="widget-title">Get Latest Update</h3>
+           <div class="subscribe-cta">
+             <p>Sign up our newsletter & get every single updates weekly</p>
+             <form action="#" class="subs-form mt-4">
+               <div class="position-relative form-group">
+                 <img src="images/icons/message-dark.png" alt="Message" />
+                 <input class="form-control rounded-3 bg-shade" type="email" placeholder="Enter address" />
+               </div>
+               <button class="btn btn-primary w-100 rounded-3 mt-3">
+                 Subscribe Now <i class="feather-icon icon-arrow-right"></i>
+               </button>
+             </form>
+           </div>
+         </div>
+       </div>
+       <!--  Widget End -->
+     </div>
+   </div>
+   <div class="footer-bottom bg-blue py-3 mt-5">
+     <div class="copy-right text-center">
+       <p class="m-0">
+         © 2025 Design by <a class="text-secondary" href="https://www.theme-village.com/">Themevillage</a>. All
+         Rights Reserved.
+       </p>
+     </div>
+   </div>
+ </footer>
+ <!-- Footer Section End -->
+
+ <!-- Scroll Top -->
+ <div class="scroll-top">
+   <svg class="progress-circle svg-content" height="100%" viewBox="-1 -1 102 102" width="100%">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+            fill="none" stroke="black" stroke-width="2">
+      </path>
+    </svg>    
+ </div>
+
+   <!--Javascript
+========================================================-->
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/swiper-bundle.min.js"></script>
+   <script src="js/nice-select2.js"></script>
+   <script src="js/glightbox.min.js"></script>
+   <script src="js/isotope.pkgd.min.js"></script>
+   <script src="js/purecounter_vanilla.js"></script>
+   <script src="js/plyr.min.js"></script>
+   <script src="js/lenis.min.js"></script>
+   <script src="js/custom.js"></script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"94a0debaecb9708c","version":"2025.5.0","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"389fa74406c44f21b129709ce8a3ec16","b":1}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from html.theme-village.com/eduxo/demo/instructor-create-course.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 17:22:42 GMT -->
+</html>
