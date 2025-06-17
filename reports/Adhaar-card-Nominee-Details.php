@@ -7,7 +7,7 @@ include('web/functions.php');
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4>Fill the Form </h4>
-        <h5>Enter your Adhaar card & Nominee along with contact Number</h5>
+        <h5>Enter Your Adhaar Card & Nominee Along With Contact Number</h5>
         <div class="row g-6">
             <div class="col-md-6">
                 <div class="button-group mt-3">
