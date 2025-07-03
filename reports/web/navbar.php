@@ -26,7 +26,7 @@
                     <div class="text-truncate" data-i18n="Account">Time Table IX & X </div>
                 </a>
             </li>
-            <!-- <li class="menu-item">
+            <li class="menu-item">
                 <a href="teacher-observation.php" class="menu-link">
                     <div class="text-truncate" data-i18n="Account">Observation </div>
                 </a>
@@ -40,7 +40,7 @@
                 <a href="class-assembly.php" class="menu-link">
                     <div class="text-truncate" data-i18n="Notifications">Class Assembly </div>
                 </a>
-            </li> -->
+            </li>
         </ul>
     </li>
     <li class="menu-item">
