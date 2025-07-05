@@ -548,7 +548,7 @@ include('_web/css.php');
                                 <th scope="row">7</th>
                                 <td>LINK OF YOUTUBE VIDEO OF THE INSPECTION OF SCHOOL COVERING
                                     THE INFRASTRUCTURE OF THE SCHOOL</td>
-                                <td><a href="https://www.facebook.com/share/r/16tW7NAjXA/" target="_blank"><B>Video
+                                <td><a href="https://www.youtube.com/watch?v=nMxiJLbwmFw" target="_blank"><B>Video
                                             Link</B></a> </td>
                             </tr>
                         </tbody>
