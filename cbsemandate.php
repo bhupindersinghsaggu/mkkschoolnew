@@ -162,7 +162,7 @@ include('_web/css.php');
                         <tr>
                             <th scope="row">1</th>
                             <td>FEE STRUCTURE OF THE SCHOOL</td>
-                            <td><a href="assets/images/pdf/certificates-2024-25/Fee-structure-24-25.pdf" target="_blank"><i
+                            <td><a href="assets/images/pdf/certificates-2025-26/Fee-structure-25-26.pdf" target="_blank"><i
                                         class="fa fa-download" aria-hidden="true"></i> DOWNLOAD </td></a>
 
                         </tr>
@@ -171,27 +171,20 @@ include('_web/css.php');
                             <td> ANNUAL ACADEMIC CALANDER</td>
                             <td><a href="assets/images/pdf/certificates-2024-25/calender.pdf" target="_blank"><i class="fa fa-download"
                                         aria-hidden="true"></i> DOWNLOAD </td></a>
-
-
                         </tr>
                         <tr>
                             <th scope="row">3</th>
                             <td> LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)</td>
                             <td><a href="assets/images/pdf/schoolcommittee.pdf" target="_blank"><i class="fa fa-download"
                                         aria-hidden="true"></i> DOWNLOAD </td></a>
-
                         </tr>
                         <tr>
                             <th scope="row">4</th>
                             <td> LAST THREE-YEAR RESULT OF THE BOARD EXAMINATION AS PER
                                 APPLICABILITY</td>
-                            <td><a href="assets/images/pdf/cbseresults.pdf" target="_blank"><i class="fa fa-download"
+                            <td><a href="assets/images/pdf/certificates-2025-26/cbse-result.pdf" target="_blank"><i class="fa fa-download"
                                         aria-hidden="true"></i> DOWNLOAD </td></a>
-
                         </tr>
-
-
-
                     </tbody>
                 </table>
 
@@ -212,92 +205,60 @@ include('_web/css.php');
 
                         <tr>
                             <td>
-
                                 1
-
                             </td>
                             <td>
-
-                                2020-21
-
-                            </td>
-                            <td>
-
-                                207
-
-                            </td>
-                            <td>
-
-                                207
-
-                            </td>
-                            <td>
-
-                                207
-
-                            </td>
-                            <td>
-
-                                -
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-
-                                2
-
-                            </td>
-                            <td>
-
-                                2021-22
-
-                            </td>
-                            <td>
-
-                                220
-
-                            </td>
-                            <td>
-
-                                220
-
-                            </td>
-                            <td>
-
-                                220
-
-                            </td>
-                            <td>-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-
-                                3
-
-                            </td>
-                            <td>
-
                                 2022-23
-
                             </td>
                             <td>
-
-                                241
-
+                                220
                             </td>
                             <td>
-
-                                238
-
+                                220
                             </td>
                             <td>
-
-                                237
-
+                                217
                             </td>
                             <td>-
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                2023-24
+                            </td>
+                            <td>
+                                238
+                            </td>
+                            <td>
+                                238
+                            </td>
+                            <td>
+                                235
+                            </td>
+                            <td>-
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                2024-25
+                            </td>
+                            <td>
+                                255
+                            </td>
+                            <td>
+                                255
+                            </td>
+                            <td>
+                                253
+                            </td>
+                            <td>
+                                -
                             </td>
                         </tr>
                     </tbody>
@@ -319,61 +280,39 @@ include('_web/css.php');
 
                         <tr>
                             <td>
-
                                 1
-
                             </td>
                             <td>
-
-                                2017-18
-
+                                2022-23
                             </td>
                             <td>
-
-                                167
-
+                                296
                             </td>
                             <td>
-
-                                162
-
+                                296
                             </td>
                             <td>
-
                                 97%
-
                             </td>
                             <td>
-
                                 -
-
                             </td>
                         </tr>
                         <tr>
                             <td>
-
                                 2
-
                             </td>
                             <td>
-
                                 2018-19
-
                             </td>-
                             <td>
-
                                 168
-
                             </td>
                             <td>
-
                                 168
-
                             </td>
                             <td>
-
                                 100%
-
                             </td>-
                             <td>-
                             </td>
@@ -610,7 +549,7 @@ include('_web/css.php');
                                 <th scope="row">7</th>
                                 <td>LINK OF YOUTUBE VIDEO OF THE INSPECTION OF SCHOOL COVERING
                                     THE INFRASTRUCTURE OF THE SCHOOL</td>
-                                <td><a href="https://www.youtube.com/watch?v=1w7R9YsjUDY&t=8s" target="_blank"><B>Video
+                                <td><a href="https://www.facebook.com/share/r/16tW7NAjXA/" target="_blank"><B>Video
                                             Link</B></a> </td>
 
                             </tr>
@@ -637,6 +576,6 @@ include('_web/css.php');
 
 
 <?php
-        include('_web/footer.php');
-        include('_web/script.php');
-        ?>
+include('_web/footer.php');
+include('_web/script.php');
+?>
