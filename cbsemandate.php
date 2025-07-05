@@ -127,7 +127,7 @@ include('_web/css.php');
                             <td>COPY OF THE DEO CERTIFICATE SUBMITTED BY THE SCHOOL FOR
                                 AFFILIATION/UPGRADATION/EXTENSION OF AFFILIATION OR SELF
                                 CERTIFICATION BY SCHOOL</td>
-                            <td><a href="assets/images/pdf/certificates-2024-25/DEOCertificate.pdf" target="_blank"><i class="fa fa-download"
+                            <td><a href="assets/images/pdf/certificates-2025-26/DEOCertificate.pdf" target="_blank"><i class="fa fa-download"
                                         aria-hidden="true"></i> DOWNLOAD </a></td>
 
                         </tr>
@@ -551,11 +551,8 @@ include('_web/css.php');
                                     THE INFRASTRUCTURE OF THE SCHOOL</td>
                                 <td><a href="https://www.facebook.com/share/r/16tW7NAjXA/" target="_blank"><B>Video
                                             Link</B></a> </td>
-
                             </tr>
-
                         </tbody>
-
                     </table>
                     <table class="table table-striped">
                         <thead>
@@ -566,8 +563,6 @@ include('_web/css.php');
 
                             </tr>
                         </thead>
-
-
                     </table>
             </div>
         </div>
