@@ -189,20 +189,18 @@ include('_web/css.php');
                 </table>
 
                 <h6><b>RESULT CLASS: XII</b></h6>
-                <table class="table table-striped">
+                 <table class="table table-striped">
                     <thead>
                         <tr>
-
                             <th scope="col">S.NO.</th>
                             <th scope="col">YEAR</th>
                             <th scope="col">NO. OF REGISTERED STUDENTS</th>
-                            <th scope="col">NO. OF STUDENTS APPEARED</th>
                             <th scope="col">NO. OF STUDENTS PASSED</th>
+                            <th scope="col">PASS PERCENTAGE</th>
                             <th scope="col">REMARKS</th>
                         </tr>
                     </thead>
                     <tbody>
-
                         <tr>
                             <td>
                                 1
@@ -214,12 +212,13 @@ include('_web/css.php');
                                 220
                             </td>
                             <td>
-                                220
-                            </td>
-                            <td>
                                 217
                             </td>
-                            <td>-
+                            <td>
+                                98.64%
+                            </td>
+                            <td>
+                                -
                             </td>
                         </tr>
                         <tr>
@@ -228,16 +227,16 @@ include('_web/css.php');
                             </td>
                             <td>
                                 2023-24
-                            </td>
-                            <td>
-                                238
-                            </td>
+                            </td>-
                             <td>
                                 238
                             </td>
                             <td>
                                 235
                             </td>
+                            <td>
+                                98.74%
+                            </td>-
                             <td>-
                             </td>
                         </tr>
@@ -246,19 +245,18 @@ include('_web/css.php');
                                 3
                             </td>
                             <td>
-                                2024-25
-                            </td>
-                            <td>
-                                255
+                               2024-25
                             </td>
                             <td>
                                 255
                             </td>
                             <td>
                                 253
-                            </td>
+                            </td>-
                             <td>
-                                -
+                                99.22%
+                            </td>
+                            <td>-
                             </td>
                         </tr>
                     </tbody>
@@ -267,7 +265,6 @@ include('_web/css.php');
                 <table class="table table-striped">
                     <thead>
                         <tr>
-
                             <th scope="col">S.NO.</th>
                             <th scope="col">YEAR</th>
                             <th scope="col">NO. OF REGISTERED STUDENTS</th>
@@ -291,7 +288,7 @@ include('_web/css.php');
                                 296
                             </td>
                             <td>
-                                97%
+                               100%
                             </td>
                             <td>
                                 -
@@ -302,13 +299,13 @@ include('_web/css.php');
                                 2
                             </td>
                             <td>
-                                2018-19
+                                2024-24
                             </td>-
                             <td>
-                                168
+                                288
                             </td>
                             <td>
-                                168
+                                288
                             </td>
                             <td>
                                 100%
@@ -318,29 +315,19 @@ include('_web/css.php');
                         </tr>
                         <tr>
                             <td>
-
                                 3
-
                             </td>
                             <td>
-
-                                2019-20
-
+                               2024-25
                             </td>
                             <td>
-
-                                198
-
+                                272
                             </td>
                             <td>
-
-                                198
-
+                                271
                             </td>-
                             <td>
-
-                                100%
-
+                                99.63%
                             </td>
                             <td>-
                             </td>
