@@ -277,7 +277,6 @@ include('_web/css.php');
                         </tr>
                     </thead>
                     <tbody>
-
                         <tr>
                             <td>
                                 1
@@ -559,7 +558,7 @@ include('_web/css.php');
                             <tr>
                                 <h3 class="sidebar__title" style="background: #002247;padding: 3px;color: #fff;">F. Form
                                     VI</h3>
-                                <th scope="col"><a href="index.php">Download</a></th>
+                                <th scope="col"><a href="/assets/images/pdf/certificates-2025-26/formvi.pdf">Download</a></th>
 
                             </tr>
                         </thead>
