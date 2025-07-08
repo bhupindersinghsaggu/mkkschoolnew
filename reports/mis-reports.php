@@ -6,7 +6,6 @@ include('web/functions.php');
 <div class="content-wrapper">
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4>Fill the Form </h4>
         <div class="row g-6">
             <div class="col-md-8">
                 <h3>Enter MIS Error Here</b> </h3>
