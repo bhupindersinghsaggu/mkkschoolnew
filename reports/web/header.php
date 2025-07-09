@@ -11,9 +11,7 @@
     <title>Dr. M.K.K. ARYA MODEL SCHOOL-Reports</title>
 
 
-    <meta name="description"
-        content="Most Powerful &amp; Comprehensive Bootstrap 5 Admin Dashboard built for developers!" />
-    <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
+
     <!-- Canonical SEO -->
     <link rel="canonical" href="https://themeselection.com/item/sneat-dashboard-pro-bootstrap/">
 
