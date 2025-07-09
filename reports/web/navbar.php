@@ -130,7 +130,7 @@
                 </a>
             </li>
             <li class="menu-item">
-                <a href="https://forms.gle/AmRUxRkY1vHdXjkM7" class="menu-link" target="_blank">
+                <a href="student-id-card-ivtoxii.php" class="menu-link" target="_blank">
                     <div class="text-truncate" data-i18n="Basic">Pending ID Card IV to XII</div>
                 </a>
             </li>
