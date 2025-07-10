@@ -17,16 +17,6 @@
         </a>
         <ul class="menu-sub">
             <li class="menu-item">
-                <a href="https://docs.google.com/spreadsheets/d/1Zie4g0Jb4fdaJpvevN36V698RYv670wB/edit?usp=drive_web&ouid=102811184558856598345&rtpof=true" class="menu-link">
-                    <div class="text-truncate" data-i18n="Account">Time Table XI & XII </div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="https://docs.google.com/spreadsheets/d/1JaFKGGXcVdLDW4hylkzUYzqEMiyNZuYM/edit?gid=1956957922#gid=1956957922" class="menu-link">
-                    <div class="text-truncate" data-i18n="Account">Time Table IX & X </div>
-                </a>
-            </li>
-            <li class="menu-item">
                 <a href="teacher-observation.php" class="menu-link">
                     <div class="text-truncate" data-i18n="Account">Observation </div>
                 </a>
