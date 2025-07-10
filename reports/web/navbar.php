@@ -22,6 +22,12 @@
                 </a>
             </li>
             <li class="menu-item">
+                <a href="teacher-observation.php" class="menu-link">
+                    <div class="text-truncate" data-i18n="Account">Teacher's Notebook Correction Evaluation </div>
+                </a>
+            </li>
+            
+            <li class="menu-item">
                 <a href="teacher-criteria.php" class="menu-link">
                     <div class="text-truncate" data-i18n="Notifications">Criteria </div>
                 </a>
