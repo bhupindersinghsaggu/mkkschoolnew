@@ -39,29 +39,6 @@
             </li>
         </ul>
     </li>
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-            <div class="text-truncate" data-i18n="Authentications">Teachers Reports</div>
-        </a>
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="teacher-observation-reports.php" class="menu-link" target="_blank">
-                    <div class="text-truncate" data-i18n="Basic">Observation</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="teacher-criteria-reports.php" class="menu-link" target="_blank">
-                    <div class="text-truncate" data-i18n="Basic">Criteria</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="teacher-criteria-reports.php" class="menu-link" target="_blank">
-                    <div class="text-truncate" data-i18n="Basic">Class Assembly</div>
-                </a>
-            </li>
-        </ul>
-    </li>
     <!-- Apps & Pages -->
     <li class="menu-header small text-uppercase">
         <span class="menu-header-text">Administration</span>
