@@ -8,7 +8,7 @@ include('web/header.php')
         <div class="row">
             <div class="col-lg-6 col-md-4 order-1">
                 <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSdcIkHoZA9gDi9KQUzXRLx62FrMlO1EoE-N54AzwzrFKcGNNg/viewform?embedded=true"
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdtkFRjibah7kHwxVzKGBlFaG2ApR4yzn6PQX2GCQWE-2-llA/viewform"
                     width="100%" height="3470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 <a href="index.php" class="btn btn-danger btn-buy-now">Back</a>
             </div>
