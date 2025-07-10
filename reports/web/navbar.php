@@ -23,7 +23,7 @@
             </li>
             <li class="menu-item">
                 <a href="notebook-correction.php" class="menu-link">
-                    <div class="text-truncate" data-i18n="Account">Teacher's Notebook Correction Evaluation </div>
+                    <div class="text-truncate" data-i18n="Account">Teacher'sggg Notebook Correction Evaluation </div>
                 </a>
             </li>
             
