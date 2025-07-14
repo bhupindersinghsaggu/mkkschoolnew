@@ -13,7 +13,7 @@ include('web/functions.php');
                     <a href="https://forms.gle/AmRUxRkY1vHdXjkM7" class="btn btn-xl btn-primary mb-1">Fill The Form</a>
                 </div>
                   <div class="button-group mt-3">
-                    <a href="https://forms.gle/AmRUxRkY1vHdXjkM7" class="btn btn-xl btn-danger mb-1">View Submited Data</a>
+                    <a href="https://docs.google.com/spreadsheets/d/1NhIvLggrISK3kEO0s37xq67oA2Y4ioQNsjGMDdGD04Q/edit?gid=661539744#gid=661539744" class="btn btn-xl btn-danger mb-1">View Submited Data</a>
                 </div>
             </div>
         </div>
