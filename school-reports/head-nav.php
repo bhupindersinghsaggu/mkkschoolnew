@@ -2,15 +2,15 @@
     <div class="main-header">
         <!-- Logo -->
         <div class="header-left active">
-            <a href="./index.php" class="logo logo-normal">
+            <a href="https://mkkschool.com/school-reports/index.php" class="logo logo-normal">
                 <h3>M.K.K. School</h3>
                 <!-- <img src="../assets/img/logo.svg" alt="Img"> -->
             </a>
-            <a href="/school-reports/index.php" class="logo logo-white">
+            <a href="https://mkkschool.com/school-reports/index.php" class="logo logo-white">
                 <h3>M.K.K. School</h3>
                 <!-- <img src="../assets/img/logo-white.svg" alt="Img"> -->
             </a>
-            <a href="/school-reports/index.php" class="logo-small">
+            <a href="https://mkkschool.com/school-reports/index.php" class="logo-small">
                 <h3>M.K.K. School</h3>
                 <!-- <img src="../assets/img/logo-small.png" alt="Img"> -->
             </a>
