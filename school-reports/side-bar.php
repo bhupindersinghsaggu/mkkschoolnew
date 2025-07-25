@@ -77,13 +77,13 @@
                  <li class="submenu-open">
                      <h6 class="submenu-hdr">Teachers Forms</h6>
                      <ul>
-                         <li><a href="../school-reports/notebook/add.php"><i data-feather="box"></i><span>NoteBook Corrections</span></a></li>
+                         <li><a href="../notebook/add.php"><i data-feather="box"></i><span>NoteBook Corrections</span></a></li>
                      </ul>
                  </li>
                  <li class="submenu-open">
                      <h6 class="submenu-hdr">Add Teacher</h6>
                      <ul>
-                         <li><a href="../school-reports/teacher/add.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>Add Teacher</span></a></li>
+                         <li><a href="../teacher/add.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>Add Teacher</span></a></li>
                      </ul>
                  </li>
              </ul>
