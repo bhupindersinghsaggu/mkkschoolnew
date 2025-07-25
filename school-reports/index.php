@@ -14,7 +14,7 @@
 				<span class="input-icon-addon fs-16 text-gray-9">
 					<i class="ti ti-calendar"></i>
 				</span>
-				<input type="text" class="form-control date-range bookingrange" placeholder="Search Product">
+				<!-- <input type="text" class="form-control date-range bookingrange" placeholder="Search Product"> -->
 			</div>
 		</div>
 		<div class="row">
