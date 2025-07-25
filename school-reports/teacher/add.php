@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 } else {
-    $message = "Photo is required.";
+    // $message = "Photo is required.";
 }
 
 ?>
