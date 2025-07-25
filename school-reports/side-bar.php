@@ -1,13 +1,13 @@
  <div class="sidebar" id="sidebar">
      <!-- Logo -->
      <div class="sidebar-logo active">
-         <a href="../school-reports" class="logo logo-normal">
+         <a href="../index.php" class="logo logo-normal">
               <h3>M.K.K. School</h3>
          </a>
-         <a href="index.php" class="logo logo-white">
+         <a href="../index.php" class="logo logo-white">
               <h3>M.K.K. School</h3>
          </a>
-         <a href="index.php" class="logo-small">
+         <a href="../index.php" class="logo-small">
               <h3>M.K.K. School</h3>
          </a>
          <a id="toggle_btn" href="javascript:void(0);">
