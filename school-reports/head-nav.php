@@ -2,7 +2,7 @@
     <div class="main-header">
         <!-- Logo -->
         <div class="header-left active">
-            <a href="/school-reports/index.php" class="logo logo-normal">
+            <a href="./index.php" class="logo logo-normal">
                 <h3>M.K.K. School</h3>
                 <!-- <img src="../assets/img/logo.svg" alt="Img"> -->
             </a>
