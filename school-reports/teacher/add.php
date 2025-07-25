@@ -55,18 +55,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <title>Add Notebook Review</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.png">
-    <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="./assets/css/animate.css">
-    <link rel="stylesheet" href="./assets/plugins/select2/css/select2.min.css">
-    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="./assets/plugins/tabler-icons/tabler-icons.min.css">
-    <link rel="stylesheet" href="./assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./assets/plugins/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./assets/plugins/%40simonwep/pickr/themes/nano.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../assets/plugins/tabler-icons/tabler-icons.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
