@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="content ">
             <div class="header-button d-flex justify-content-between">
                 <h3 class="mb-3">Add Teacher</h3>
-                <a href="list.php" class="btn btn-secondary me-2">View Teacher</a></h3>
+                <a href="list.php" class="btn btn-secondary">View Teacher</a></h3>
             </div>
             <?php if ($message): ?>
                 <div class="alert alert-info"><?= $message ?></div>
