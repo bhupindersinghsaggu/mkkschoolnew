@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="page-wrapper mb-3">
         <div class="content">
-            <h4 class="title">✏️ Edit Notebook Review Record</h4>
+            <h4 class="title mb-3">Edit Notebook Review Record</h4>
             <form method="POST">
                 <div class="mb-3"><label>Session</label>
                     <input type="text" name="session" value="<?= htmlspecialchars($record['session']) ?>" class="form-control" required>
