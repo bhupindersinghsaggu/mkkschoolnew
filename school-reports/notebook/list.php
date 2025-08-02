@@ -63,6 +63,28 @@ $result = mysqli_query($conn, $query);
             object-fit: cover;
             border-radius: 4px;
         }
+
+        .action-buttons {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            background-color: #ffffff;
+            border: 1px solid #E6EAED;
+            border-radius: 5px;
+            color: #333;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+        .action-buttons:hover {
+            background-color: #f5f5f5;
+            color: #000;
+        }
+
+        td .action-buttons+.action-buttons {
+            margin-left: 8px;
+        }
     </style>
 </head>
 
@@ -84,9 +106,9 @@ $result = mysqli_query($conn, $query);
                 </div>
                 <div class="col-md-4 justify-content-between align-items-center">
                     <button class="btn btn-primary">Filter</button>
-                    
+
                 </div>
-                
+
             </form>
             <input class="form-control mb-3" id="searchInput" type="text" placeholder="Search by Name, Class, Subject">
             <div class="table-responsive">
@@ -130,10 +152,16 @@ $result = mysqli_query($conn, $query);
                                 <td><?= $row['notebooks_checked'] ?></td>
                                 <!-- <td><?= $row['students_reviewed'] ?></td> -->
                                 <td><?= $row['overall_rating'] ?></td>
-                                <td>
-                                    <a href="edit.php?id=<?= $row['id'] ?>"><i class="fas fa-edit"></i></a>
-                                    <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this?')"><i class="fa-solid fa-trash-can"></i></a>
-                                    <a href="print_single.php?id=<?= $row['id'] ?>" target="_blank"><i class="fa-solid fa-print"></i></a>
+                                <td class="d-flex gap-2">
+                                    <a href="edit.php?id=<?= $row['id'] ?>" class="action-buttons" title="Edit">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this record?')" class="action-buttons" title="Delete">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </a>
+                                    <a href="print_single.php?id=<?= $row['id'] ?>" target="_blank" class="action-buttons" title="Print">
+                                        <i class="fa-solid fa-print"></i>
+                                    </a>
                                 </td>
                             </tr>
                         <?php endwhile; ?>
