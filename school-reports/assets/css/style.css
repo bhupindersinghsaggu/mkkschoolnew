@@ -1543,7 +1543,7 @@ button:focus {
 .btn {
   border-radius: 5px;
   padding: 0.625rem 1.25rem;
-  padding: 0.4rem 0.4rem;
+  /* padding: 0.4rem 0.85rem; */
   font-size: 0.85rem;
   transition: all 0.5s;
   font-weight: 600;
