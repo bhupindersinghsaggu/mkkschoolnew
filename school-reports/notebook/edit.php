@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <div class="page-wrapper">
+    <div class="page-wrapper mb-3">
         <div class="content">
             <h4 class="title">✏️ Edit Notebook Review Record</h4>
             <form method="POST">
