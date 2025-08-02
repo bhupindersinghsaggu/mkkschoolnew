@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="content mb-3">
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3 class="">Notebook Corrections</h3>
-                <a href="list.php" class="btn btn-secondary">View Record</a></h3>
+                <a href="add.php" class="btn btn-success">Back</a></h3>
             </div>
 
             <?php if ($message): ?>
@@ -215,7 +215,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <textarea name="remarks" class="form-control"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
-                                <a href="add.php" class="btn btn-secondary">Add</a>
+                                <a href="list.php" class="btn btn-secondary">Back</a>
                             </div>
                         </div>
                     </div>
