@@ -113,80 +113,85 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h3 class="">Edit Record</h3>
             </div>
             <form method="POST">
-                <div class="mb-3"><label>Session</label>
-                    <input type="text" name="session" value="<?= htmlspecialchars($record['session']) ?>" class="form-control" required>
-                </div>
-                <div class="mb-3"><label>Evaluation Date</label>
-                    <input type="date" name="eval_date" value="<?= htmlspecialchars($record['eval_date']) ?>" class="form-control" required>
-                </div>
-                <div class="mb-3"><label>Teacher ID</label>
-                    <select name="teacher_id" class="form-control" required>
-                        <option value="">-- Select Teacher ID --</option>
-                        <?php while ($t = mysqli_fetch_assoc($teachers_result)) : ?>
-                            <option value="<?= $t['teacher_id'] ?>" <?= $t['teacher_id'] == $record['teacher_id'] ? 'selected' : '' ?>>
-                                <?= $t['teacher_id'] ?> - <?= $t['teacher_name'] ?>
-                            </option>
-                        <?php endwhile; ?>
-                    </select>
-                </div>
-                <div class="mb-3"><label>Subject</label>
-                    <input type="text" name="subject" value="<?= htmlspecialchars($record['subject']) ?>" class="form-control" required>
-                </div>
-                <div class="mb-3"><label>Class/Section</label>
-                    <input type="text" name="class_section" value="<?= htmlspecialchars($record['class_section']) ?>" class="form-control" required>
-                </div>
-                <div class="mb-3"><label>No. of Notebooks Checked</label>
-                    <input type="number" name="notebooks_checked" value="<?= htmlspecialchars($record['notebooks_checked']) ?>" class="form-control" required>
-                </div>
-                <div class="mb-3"><label>Students Reviewed</label>
-                    <textarea name="students_reviewed" class="form-control" required><?= htmlspecialchars($record['students_reviewed']) ?></textarea>
-                </div>
-                <div class="mb-3"><label>Regularity in Checking</label>
-                    <select name="regularity_checking" class="form-control">
-                        <?php foreach (['Excellent', 'Good', 'Satisfactory', 'Needs Improvement'] as $option): ?>
-                            <option <?= $record['regularity_checking'] == $option ? 'selected' : '' ?>><?= $option ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div class="mb-3"><label>Accuracy</label>
-                    <select name="accuracy" class="form-control">
-                        <?php foreach (['Excellent', 'Good', 'Satisfactory', 'Needs Improvement'] as $option): ?>
-                            <option <?= $record['accuracy'] == $option ? 'selected' : '' ?>><?= $option ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div class="mb-3"><label>Neatness</label>
-                    <select name="neatness" class="form-control">
-                        <?php foreach (['Excellent', 'Good', 'Satisfactory', 'Needs Improvement'] as $option): ?>
-                            <option <?= $record['neatness'] == $option ? 'selected' : '' ?>><?= $option ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div class="mb-3"><label>Follow Up</label>
-                    <select name="follow_up" class="form-control">
-                        <option <?= $record['follow_up'] == 'Done' ? 'selected' : '' ?>>Done</option>
-                        <option <?= $record['follow_up'] == 'Not Done' ? 'selected' : '' ?>>Not Done</option>
-                    </select>
-                </div>
-                <div class="mb-3"><label>Overall Rating</label>
-                    <select name="overall_rating" class="form-control">
-                        <?php foreach (['Excellent', 'Good', 'Satisfactory', 'Needs Improvement'] as $option): ?>
-                            <option <?= $record['overall_rating'] == $option ? 'selected' : '' ?>><?= $option ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div class="mb-3"><label>Evaluator Name</label>
-                    <input type="text" name="evaluator_name" value="<?= htmlspecialchars($record['evaluator_name']) ?>" class="form-control" required>
-                </div>
-                <div class="mb-3"><label>Remarks</label>
-                    <textarea name="remarks" class="form-control"><?= htmlspecialchars($record['remarks']) ?></textarea>
-                </div>
-                <!-- <div class="mb-3 form-check">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="mb-3"><label>Session</label>
+                            <input type="text" name="session" value="<?= htmlspecialchars($record['session']) ?>" class="form-control" required>
+                        </div>
+                        <div class="mb-3"><label>Evaluation Date</label>
+                            <input type="date" name="eval_date" value="<?= htmlspecialchars($record['eval_date']) ?>" class="form-control" required>
+                        </div>
+                        <div class="mb-3"><label>Teacher ID</label>
+                            <select name="teacher_id" class="form-control" required>
+                                <option value="">-- Select Teacher ID --</option>
+                                <?php while ($t = mysqli_fetch_assoc($teachers_result)) : ?>
+                                    <option value="<?= $t['teacher_id'] ?>" <?= $t['teacher_id'] == $record['teacher_id'] ? 'selected' : '' ?>>
+                                        <?= $t['teacher_id'] ?> - <?= $t['teacher_name'] ?>
+                                    </option>
+                                <?php endwhile; ?>
+                            </select>
+                        </div>
+                        <div class="mb-3"><label>Subject</label>
+                            <input type="text" name="subject" value="<?= htmlspecialchars($record['subject']) ?>" class="form-control" required>
+                        </div>
+                        <div class="mb-3"><label>Class/Section</label>
+                            <input type="text" name="class_section" value="<?= htmlspecialchars($record['class_section']) ?>" class="form-control" required>
+                        </div>
+                        <div class="mb-3"><label>No. of Notebooks Checked</label>
+                            <input type="number" name="notebooks_checked" value="<?= htmlspecialchars($record['notebooks_checked']) ?>" class="form-control" required>
+                        </div>
+                        <div class="mb-3"><label>Students Reviewed</label>
+                            <textarea name="students_reviewed" class="form-control" required><?= htmlspecialchars($record['students_reviewed']) ?></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="mb-3"><label>Regularity in Checking</label>
+                            <select name="regularity_checking" class="form-control">
+                                <?php foreach (['Excellent', 'Good', 'Satisfactory', 'Needs Improvement'] as $option): ?>
+                                    <option <?= $record['regularity_checking'] == $option ? 'selected' : '' ?>><?= $option ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="mb-3"><label>Accuracy</label>
+                            <select name="accuracy" class="form-control">
+                                <?php foreach (['Excellent', 'Good', 'Satisfactory', 'Needs Improvement'] as $option): ?>
+                                    <option <?= $record['accuracy'] == $option ? 'selected' : '' ?>><?= $option ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="mb-3"><label>Neatness</label>
+                            <select name="neatness" class="form-control">
+                                <?php foreach (['Excellent', 'Good', 'Satisfactory', 'Needs Improvement'] as $option): ?>
+                                    <option <?= $record['neatness'] == $option ? 'selected' : '' ?>><?= $option ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="mb-3"><label>Follow Up</label>
+                            <select name="follow_up" class="form-control">
+                                <option <?= $record['follow_up'] == 'Done' ? 'selected' : '' ?>>Done</option>
+                                <option <?= $record['follow_up'] == 'Not Done' ? 'selected' : '' ?>>Not Done</option>
+                            </select>
+                        </div>
+                        <div class="mb-3"><label>Overall Rating</label>
+                            <select name="overall_rating" class="form-control">
+                                <?php foreach (['Excellent', 'Good', 'Satisfactory', 'Needs Improvement'] as $option): ?>
+                                    <option <?= $record['overall_rating'] == $option ? 'selected' : '' ?>><?= $option ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="mb-3"><label>Evaluator Name</label>
+                            <input type="text" name="evaluator_name" value="<?= htmlspecialchars($record['evaluator_name']) ?>" class="form-control" required>
+                        </div>
+                        <div class="mb-3"><label>Remarks</label>
+                            <textarea name="remarks" class="form-control"><?= htmlspecialchars($record['remarks']) ?></textarea>
+                        </div>
+                        <!-- <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" name="undertaking" id="undertaking" <?= $record['undertaking'] ? 'checked' : '' ?>>
                     <label class="form-check-label" for="undertaking">I confirm this information is correct.</label>
                 </div> -->
-                <button type="submit" class="btn btn-secondary">Update Record</button>
-                <a href="list.php" class="btn btn-success">Back</a>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Update Record</button>
+                    <a href="list.php" class="btn btn-success">Back</a>
             </form>
         </div>
     </div>
