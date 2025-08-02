@@ -181,12 +181,13 @@ if (!$row) {
                     </tr>
                     <tr>
                         <th>Remarks</th>
-                        <td><?= $row['remarks'] ?></td>
+                        <td><?= nl2br(htmlspecialchars($row['remarks'])) ?></td>
                     </tr>
-                    <tr>
+
+                    <!-- <tr>
                         <th>Undertaking</th>
                         <td><?= $row['undertaking'] ? '✔ Yes' : '✖ No' ?></td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
