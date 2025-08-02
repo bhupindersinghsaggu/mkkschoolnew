@@ -37,15 +37,21 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
         }
 
         .action-buttons {
-            border: 1px solid #E6EAED;
-            background-color: #ffffff;
-            border-radius: 5px;
-            display: -ms-flexbox;
-            -ms-flex-align: center;
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
-            -webkit-justify-content: center;
-            -ms-flex-pack: center;
             padding: 8px;
+            background-color: #ffffff;
+            border: 1px solid #E6EAED;
+            border-radius: 5px;
+            color: #333;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+        .action-buttons:hover {
+            background-color: #f5f5f5;
+            color: #000;
         }
     </style>
 
@@ -86,11 +92,18 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
                             <td><?= $row['teacher_id'] ?></td>
                             <td><?= $row['subject'] ?></td>
                             <td><?= $row['teacher_type'] ?></td>
-                            <td>
-                                <a href="edit.php?id=<?= $row['id'] ?>" <i class="fa-solid fa-pen-to-square action-buttons"></i></a>
-                                <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this record?')"><i class="fa-solid fa-trash-can action-buttons"></i></a>
-                                <a href="print_single.php?id=34" target="_blank"><i class="fa-solid fa-print action-buttons"></i></a>
+                            <td class="d-flex gap-2">
+                                <a href="edit.php?id=<?= $row['id'] ?>" class="action-buttons" title="Edit">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                                <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this record?')" class="action-buttons" title="Delete">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </a>
+                                <a href="print_single.php?id=<?= $row['id'] ?>" target="_blank" class="action-buttons" title="Print">
+                                    <i class="fa-solid fa-print"></i>
+                                </a>
                             </td>
+
                         </tr>
                     <?php endwhile; ?>
                 </tbody>
