@@ -94,7 +94,7 @@ $result = mysqli_query($conn, $query);
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <a href="list.php" class="btn btn-warning">Back</a></h3>
             </div>
-            <div class="header-button d-flex justify-content-between align-items-center mb-3">
+            <div class="mb-3">
                 <h3 class="">Notebook Review Records</h3>
             </div>
 
