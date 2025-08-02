@@ -112,16 +112,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Name of the Teacher</label>
-                                    <input type="text" name="teacher_name" class="form-control" required>
+                                  <input type="text" name="teacher_name" id="teacherName" class="form-control" readonly required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Teacher</label>
-                                    <select name="teacher_id" class="form-control" required>
+                                    <select name="teacher_id" id="teacherSelect" class="form-control" required>
                                         <option value="">-- Select Teacher --</option>
                                         <?php
                                         $teacher_result = mysqli_query($conn, "SELECT teacher_id, teacher_name FROM teachers ORDER BY teacher_name ASC");
                                         while ($teacher = mysqli_fetch_assoc($teacher_result)) {
-                                            echo "<option value='{$teacher['teacher_id']}'>{$teacher['teacher_name']} ({$teacher['teacher_id']})</option>";
+                                            echo "<option value='{$teacher['teacher_id']}' data-name='{$teacher['teacher_name']}'>{$teacher['teacher_name']} ({$teacher['teacher_id']})</option>";
                                         }
                                         ?>
                                     </select>
