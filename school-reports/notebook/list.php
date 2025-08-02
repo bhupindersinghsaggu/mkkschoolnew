@@ -167,7 +167,7 @@ $result = mysqli_query($conn, $query);
                     </tbody>
                 </table>
             </div>
-            <div class="header-button">
+            <div class="header-button mt-4">
                 <a href="list.php" class="btn btn-success">Back</a></h3>
             </div>
             <!-- Pagination -->
