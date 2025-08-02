@@ -102,7 +102,7 @@ $result = mysqli_query($conn, $query);
                             <th>Subject</th>
                             <th>Class</th>
                             <th>Checked</th>
-                            <th>Reviewed</th>
+                            <!-- <th>Reviewed</th> -->
                             <th>Rating</th>
                             <th>Actions</th>
                         </tr>
@@ -128,7 +128,7 @@ $result = mysqli_query($conn, $query);
                                 <td><?= $row['subject'] ?></td>
                                 <td><?= $row['class_section'] ?></td>
                                 <td><?= $row['notebooks_checked'] ?></td>
-                                <td><?= $row['students_reviewed'] ?></td>
+                                <!-- <td><?= $row['students_reviewed'] ?></td> -->
                                 <td><?= $row['overall_rating'] ?></td>
                                 <td>
                                     <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
