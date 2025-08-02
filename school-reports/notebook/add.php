@@ -215,7 +215,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <textarea name="remarks" class="form-control"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
-                                <a href="list.php" class="btn btn-secondary">View Records</a>
+                                <a href="add.php" class="btn btn-secondary">Add</a>
                             </div>
                         </div>
                     </div>
