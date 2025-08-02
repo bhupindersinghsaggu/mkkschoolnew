@@ -109,21 +109,18 @@ function filterTeachers() {
     }
 }
 
-function fillTeacherName() {
+function fillTeacherFields() {
     const select = document.getElementById('teacherSelect');
     const selected = select.options[select.selectedIndex];
     const name = selected.getAttribute('data-name');
+    const subject = selected.getAttribute('data-subject');
+
     document.getElementById('teacherName').value = name || '';
+    document.querySelector("input[name='subject']").value = subject || '';
 }
+
+document.getElementById('teacherSelect').addEventListener('change', fillTeacherFields);
 </script>
 
-
-<script>
-document.getElementById('teacherSelect').addEventListener('change', function () {
-    const selectedOption = this.options[this.selectedIndex];
-    const teacherName = selectedOption.getAttribute('data-name');
-    document.getElementById('teacherName').value = teacherName ? teacherName : '';
-});
-</script>
 
 </html>
