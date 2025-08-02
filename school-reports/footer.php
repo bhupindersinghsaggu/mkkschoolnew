@@ -126,6 +126,7 @@
 	});
 </script>
 
+<script>
 document.getElementById('teacherSelect').addEventListener('change', function () {
 const selectedOption = this.options[this.selectedIndex];
 const teacherName = selectedOption.getAttribute('data-name');
