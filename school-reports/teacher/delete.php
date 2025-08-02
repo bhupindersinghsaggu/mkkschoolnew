@@ -13,8 +13,12 @@ if (isset($_GET['id'])) {
     // Fetch photo path first to delete the file
     $result = mysqli_query($conn, "SELECT photo FROM teachers WHERE id = $id");
     $row = mysqli_fetch_assoc($result);
-    if ($row && file_exists($row['photo'])) {
-        unlink($row['photo']);
+
+    if ($row) {
+        $photoPath = '../uploads/' . $row['photo'];
+        if (!empty($row['photo']) && file_exists($photoPath)) {
+            unlink($photoPath); // delete the photo file
+        }
     }
 
     // Delete record from DB
@@ -22,9 +26,11 @@ if (isset($_GET['id'])) {
 
     if ($delete) {
         header("Location: list_teachers.php?msg=deleted");
+        exit;
     } else {
         echo "Error deleting teacher.";
     }
 } else {
     echo "Invalid ID.";
 }
+?>
