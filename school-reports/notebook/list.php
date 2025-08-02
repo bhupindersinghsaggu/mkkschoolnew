@@ -131,9 +131,12 @@ $result = mysqli_query($conn, $query);
                                 <!-- <td><?= $row['students_reviewed'] ?></td> -->
                                 <td><?= $row['overall_rating'] ?></td>
                                 <td>
+                                    <div class="">
                                     <a href="edit.php?id=<?= $row['id'] ?>"><i class="fas fa-edit"></i></a>
                                     <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this?')"><i class="fa-solid fa-trash-can"></i></a>
                                     <a href="print_single.php?id=<?= $row['id'] ?>" target="_blank"><i class="fa-solid fa-print"></i></a>
+                                    </div>  
+
                                 </td>
                             </tr>
                         <?php endwhile; ?>
