@@ -181,7 +181,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label class="form-check-label" for="undertaking">I confirm this information is correct.</label>
                 </div> -->
                 <button type="submit" class="btn btn-primary">Update Record</button>
-                <a href="list.php" class="btn btn-secondary">Cancel</a>
+                <a href="list.php" class="btn btn-secondary">Back</a>
             </form>
         </div>
     </div>
