@@ -53,6 +53,10 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
             background-color: #f5f5f5;
             color: #000;
         }
+
+        td .action-buttons+.action-buttons {
+            margin-left: 8px;
+        }
     </style>
 
 </head>
