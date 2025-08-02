@@ -101,9 +101,9 @@
 
 <script>
 document.getElementById('teacherSelect').addEventListener('change', function () {
-const selectedOption = this.options[this.selectedIndex];
-const teacherName = selectedOption.getAttribute('data-name');
-document.getElementById('teacherName').value = teacherName ? teacherName : '';
+    const selectedOption = this.options[this.selectedIndex];
+    const teacherName = selectedOption.getAttribute('data-name');
+    document.getElementById('teacherName').value = teacherName ? teacherName : '';
 });
 </script>
 
