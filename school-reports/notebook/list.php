@@ -71,7 +71,7 @@ $result = mysqli_query($conn, $query);
         <div class="content">
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3 class="">Notebook Review Records</h3>
-                <a href="list.php" class="btn btn-sm-success">View Teacher</a></h3>
+                <a href="list.php" class="btn btn-success">View List</a></h3>
             </div>
 
             <!-- Date Filter -->
