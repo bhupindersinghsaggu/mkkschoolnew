@@ -71,9 +71,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div class="page-wrapper">
-        <div class="content">
-            <h3 class="mb-3">Add Teacher</h3>
-           <a href="list.php" class="btn btn-secondary me-2">View Teacher</a></h3>
+        <div class="content d-flex justify-content-center">
+            <div class="header-button">
+                <h3 class="mb-3">Add Teacher</h3>
+                <a href="list.php" class="btn btn-secondary me-2">View Teacher</a></h3>
+            </div>
             <?php if ($message): ?>
                 <div class="alert alert-info"><?= $message ?></div>
             <?php endif; ?>
