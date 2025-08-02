@@ -77,7 +77,7 @@ $row = mysqli_fetch_assoc($result);
             </div>
             <div class="mb-3">
                 <label>Subject</label>
-                <input type="text" name="subject" class="form-control" value="<?= $row['department'] ?>" required>
+                <input type="text" name="subject" class="form-control" value="<?= $row['subject'] ?>" required>
             </div>
             <div class="mb-3">
                 <label>Teacher Type</label>
