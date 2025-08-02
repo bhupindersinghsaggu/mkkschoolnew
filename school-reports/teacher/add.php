@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $allowed_types = ['jpg', 'jpeg', 'png'];
         if (in_array($file_type, $allowed_types)) {
             if (move_uploaded_file($_FILES['photo']['tmp_name'], $target_file)) {
-                $query = "INSERT INTO teachers (teacher_name, teacher_id, department, teacher_type, photo)
+                $query = "INSERT INTO teachers (teacher_name, teacher_id, subject, teacher_type, photo)
                       VALUES ('$teacher_name', '$teacher_id', '$teacher_subject', '$teacher_type', '$photo_name',)";
                 if (mysqli_query($conn, $query)) {
                     $message = "Teacher added successfully!";
