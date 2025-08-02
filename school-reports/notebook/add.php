@@ -121,11 +121,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <select name="teacher_id" id="teacherSelect" class="form-control" onchange="fillTeacherName()" required>
                                         <option value="">-- Select Teacher --</option>
                                         <?php
-                                        $subject = mysqli_query($conn, "SELECT teacher_id, teacher_name, subject FROM teachers ORDER BY teacher_name ASC");
-                                        while ($teacher = mysqli_fetch_assoc($subject)) {
-                                            echo "<option value='{$teacher['teacher_id']}' data-name='{$teacher['teacher_name']}' data-subject='{$teacher['subject']}'>{$teacher['teacher_name']} ({$teacher['teacher_id']})</option>";
+                                        $teacher_result = mysqli_query($conn, "SELECT teacher_id, teacher_name FROM teachers ORDER BY teacher_name ASC");
+                                        while ($teacher = mysqli_fetch_assoc($teacher_result)) {
+                                            echo "<option value='{$teacher['teacher_id']}' data-name='{$teacher['teacher_name']}'>{$teacher['teacher_name']} ({$teacher['teacher_id']})</option>";
                                         }
-
                                         ?>
                                     </select>
                                 </div>
@@ -136,10 +135,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="subject" class="form-label">Subject</label>
-                                    <input type="text" class="form-control" name="subject" id="subject" required readonly>
+                                    <label>Subject</label>
+                                    <input type="text" name="subject" class="form-control" required>
                                 </div>
-
                                 <div class="mb-3">
                                     <label>Class/Section</label>
                                     <input type="text" name="class_section" class="form-control" required>
