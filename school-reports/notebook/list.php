@@ -131,7 +131,7 @@ $result = mysqli_query($conn, $query);
                                 <!-- <td><?= $row['students_reviewed'] ?></td> -->
                                 <td><?= $row['overall_rating'] ?></td>
                                 <td>
-                                    <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-success btn-sm">Edit</a>
+                                    <a href="edit.php?id=<?= $row['id'] ?>"><i class="fas fa-edit"></i> Edit</a>
                                     <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Delete this?')">Delete</a>
                                     <a href="print_single.php?id=<?= $row['id'] ?>" class="btn btn-info btn-sm" target="_blank">Print</a>
                                 </td>
