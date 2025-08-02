@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Search Teacher</label>
-                                    <input type="text" id="teacherSearch" class="form-control mb-2" placeholder="Type to filter..." onkeyup="filterTeachers()">
+                                    <input type="text" id="teacherSearch" class="form-control mb-2" placeholder="Type to search..." onkeyup="filterTeachers()">
 
                                     <label>Select Teacher</label>
                                     <select name="teacher_id" id="teacherSelect" class="form-control" onchange="fillTeacherName()" required>
@@ -130,6 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Name of the Teacher</label>
                                     <input type="text" name="teacher_name" id="teacherName" class="form-control" readonly required>
                                 </div>
+
 
                                 <div class="mb-3">
                                     <label>Subject</label>

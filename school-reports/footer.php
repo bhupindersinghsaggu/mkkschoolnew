@@ -96,7 +96,6 @@
 	crossorigin="anonymous"></script>
 </body>
 
-
 <script>
 function filterTeachers() {
     const input = document.getElementById('teacherSearch').value.toLowerCase();
@@ -105,6 +104,7 @@ function filterTeachers() {
 
     for (let i = 0; i < options.length; i++) {
         const text = options[i].text.toLowerCase();
+        if (i === 0) continue; // keep default option always visible
         options[i].style.display = text.includes(input) ? '' : 'none';
     }
 }
@@ -116,6 +116,7 @@ function fillTeacherName() {
     document.getElementById('teacherName').value = name || '';
 }
 </script>
+
 
 
 <script>
