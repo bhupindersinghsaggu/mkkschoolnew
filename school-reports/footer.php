@@ -97,41 +97,39 @@
 </body>
 
 <script>
+	$(document).ready(function() {
+		$('#teacherSelect').select2({
+			placeholder: 'Search Teacher...',
+			ajax: {
+				url: 'search_teacher.php',
+				dataType: 'json',
+				delay: 250,
+				data: function(params) {
+					return {
+						term: params.term
+					};
+				},
+				processResults: function(data) {
+					return {
+						results: data.results
+					};
+				},
+				cache: true
+			}
+		});
 
-	<script>
-$(document).ready(function () {
-    $('#teacherSelect').select2({
-        placeholder: 'Search Teacher...',
-        ajax: {
-            url: 'search_teacher.php',
-            dataType: 'json',
-            delay: 250,
-            data: function (params) {
-                return {
-                    term: params.term
-                };
-            },
-            processResults: function (data) {
-                return {
-                    results: data.results
-                };
-            },
-            cache: true
-        }
-    });
-
-    // Auto-fill teacher_name when one is selected
-    $('#teacherSelect').on('select2:select', function (e) {
-        var data = e.params.data;
-        $('#teacherName').val(data.name);
-    });
-});
+		// Auto-fill teacher_name when one is selected
+		$('#teacherSelect').on('select2:select', function(e) {
+			var data = e.params.data;
+			$('#teacherName').val(data.name);
+		});
+	});
 </script>
 
 document.getElementById('teacherSelect').addEventListener('change', function () {
-    const selectedOption = this.options[this.selectedIndex];
-    const teacherName = selectedOption.getAttribute('data-name');
-    document.getElementById('teacherName').value = teacherName ? teacherName : '';
+const selectedOption = this.options[this.selectedIndex];
+const teacherName = selectedOption.getAttribute('data-name');
+document.getElementById('teacherName').value = teacherName ? teacherName : '';
 });
 </script>
 
