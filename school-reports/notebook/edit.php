@@ -176,10 +176,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="mb-3"><label>Remarks</label>
                     <textarea name="remarks" class="form-control"><?= htmlspecialchars($record['remarks']) ?></textarea>
                 </div>
-                <div class="mb-3 form-check">
+                <!-- <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" name="undertaking" id="undertaking" <?= $record['undertaking'] ? 'checked' : '' ?>>
                     <label class="form-check-label" for="undertaking">I confirm this information is correct.</label>
-                </div>
+                </div> -->
                 <button type="submit" class="btn btn-primary">Update Record</button>
                 <a href="list.php" class="btn btn-secondary">Cancel</a>
             </form>
