@@ -100,7 +100,6 @@ if (!$row) {
         <div class="no-print mt-4 mb-3 text-end">
             <button class="btn btn-primary btn-sm" onclick="window.print()">🖨 Print</button>
             <a href="list.php" class="btn btn-secondary btn-sm">← Back</a>
-             <a href="export_pdf.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm">⬇ Export as PDF</a>
         </div>
 
         <div class="school-header">

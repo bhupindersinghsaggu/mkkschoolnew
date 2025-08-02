@@ -155,6 +155,6 @@
         <div>Evaluator Signature</div>
     </div>
 
-   
+    <a href="export_pdf.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm">⬇ Export as PDF</a>
 </body>
 </html>
