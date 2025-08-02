@@ -69,7 +69,10 @@ $result = mysqli_query($conn, $query);
 <body>
     <div class="page-wrapper">
         <div class="content">
-            <h4 class="title">📋 Notebook Review Records</h4>
+            <div class="header-button d-flex justify-content-between align-items-center mb-3">
+                <h3 class="">Notebook Review Records</h3>
+                <a href="list.php" class="btn btn-secondary">View Teacher</a></h3>
+            </div>
 
             <!-- Date Filter -->
             <form method="GET" class="row g-2 mb-3">
