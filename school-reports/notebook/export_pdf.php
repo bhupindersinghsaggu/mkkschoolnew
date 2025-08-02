@@ -1,32 +1,16 @@
 <?php
-require_once '../vendor/dompdf/autoload.inc.php';
-use Dompdf\Dompdf;
-
+require_once '../vendor/autoload.php';
 include '../config/db.php';
 
-$id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
-if (!$id) {
-    die("Invalid Record ID");
+$mpdf = new \Mpdf\Mpdf();
+$html = '<h2>Notebook Review Records</h2><table border="1"><thead><tr>
+<th>Session</th><th>Date</th><th>Teacher</th><th>Subject</th><th>Class</th><th>Checked</th><th>Students</th><th>Regularity</th><th>Accuracy</th><th>Neatness</th><th>Follow-up</th><th>Rating</th><th>Evaluator</th><th>Remarks</th><th>Undertaking</th></tr></thead><tbody>';
+
+$result = mysqli_query($conn, "SELECT * FROM records");
+while ($row = mysqli_fetch_assoc($result)) {
+    $html .= "<tr><td>{$row['session']}</td><td>{$row['eval_date']}</td><td>{$row['teacher_name']}</td><td>{$row['subject']}</td><td>{$row['class_section']}</td><td>{$row['notebooks_checked']}</td><td>{$row['students_reviewed']}</td><td>{$row['regularity_checking']}</td><td>{$row['accuracy']}</td><td>{$row['neatness']}</td><td>{$row['follow_up']}</td><td>{$row['overall_rating']}</td><td>{$row['evaluator_name']}</td><td>{$row['remarks']}</td><td>" . ($row['undertaking'] ? 'Yes' : 'No') . "</td></tr>";
 }
+$html .= '</tbody></table>';
 
-$query = "SELECT r.*, t.photo 
-          FROM records r 
-          LEFT JOIN teachers t ON r.teacher_id = t.teacher_id 
-          WHERE r.id = $id 
-          LIMIT 1";
-$result = mysqli_query($conn, $query);
-$row = mysqli_fetch_assoc($result);
-if (!$row) {
-    die("Record not found");
-}
-
-ob_start();
-include 'pdf_template.php'; // separate HTML template file
-$html = ob_get_clean();
-
-$dompdf = new Dompdf();
-$dompdf->loadHtml($html);
-$dompdf->setPaper('A4', 'portrait');
-$dompdf->render();
-$dompdf->stream("Notebook_Record_{$row['teacher_name']}.pdf", ["Attachment" => false]);
-exit;
+$mpdf->WriteHTML($html);
+$mpdf->Output('notebook_records.pdf', 'D');
