@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $teacher_name = mysqli_real_escape_string($conn, $_POST['teacher_name']);
     $teacher_id = mysqli_real_escape_string($conn, $_POST['teacher_id']);
     $department = mysqli_real_escape_string($conn, $_POST['department']);
-    $department = mysqli_real_escape_string($conn, $_POST['subject']);
     $teacher_type = mysqli_real_escape_string($conn, $_POST['teacher_type']);
 
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
@@ -31,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (in_array($file_type, $allowed_types)) {
             if (move_uploaded_file($_FILES['photo']['tmp_name'], $target_file)) {
                 $query = "INSERT INTO teachers (teacher_name, teacher_id, department, teacher_type, photo)
-                      VALUES ('$teacher_name', '$teacher_id', '$department', '$teacher_type', '$photo_name',$'subject')";
+                      VALUES ('$teacher_name', '$teacher_id', '$department', '$teacher_type', '$photo_name',)";
                 if (mysqli_query($conn, $query)) {
                     $message = "Teacher added successfully!";
                 } else {
@@ -93,10 +92,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <div class="mb-3">
                                     <label>Department</label>
                                     <input type="text" name="department" class="form-control" required>
-                                </div>
-                                 <div class="mb-3">
-                                    <label>Subject</label>
-                                    <input type="text" name="subject" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Teacher Type</label>
