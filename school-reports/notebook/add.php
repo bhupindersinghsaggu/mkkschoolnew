@@ -119,8 +119,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Name of the Teacher</label>
                                     <input type="text" name="teacher_name" id="teacherName" class="form-control" readonly required>
                                 </div>
-
-
                                 <div class="mb-3">
                                     <label>Subject</label>
                                     <input type="text" name="subject" class="form-control" required>
