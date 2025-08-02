@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a href="list.php" class="btn btn-success">Back</a></h3>
             </div>
             <div class="mb-3">
-                <h3 class="">Edit Notebook Review Record</h3>
+                <h3 class="">Edit  Record</h3>
             </div>
             <form method="POST">
                 <div class="mb-3"><label>Session</label>
