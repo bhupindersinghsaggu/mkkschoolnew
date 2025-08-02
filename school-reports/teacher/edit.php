@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $query = "UPDATE teachers SET 
         teacher_name = '$teacher_name',
         teacher_id = '$teacher_id',
-        department = '$subject',
+        subject = '$subject',
         teacher_type = '$teacher_type',
         photo = '$photo_path'
         WHERE id = $id";
