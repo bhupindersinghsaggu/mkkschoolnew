@@ -91,9 +91,8 @@ $result = mysqli_query($conn, $query);
 <body>
     <div class="page-wrapper">
         <div class="content">
-
-            <div class="header-button d-flex justify-content-between align-items-center mb-3">        
-            <div class="">
+            
+            <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3 class="">Notebook Review Records</h3>
             </div>
              <div class="header-button d-flex justify-content-between align-items-center mb-3">
