@@ -75,9 +75,9 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
                             <td><?= $row['subject'] ?></td>
                             <td><?= $row['teacher_type'] ?></td>
                             <td>
-                                <a href="edit.php?id=<?= $row['id'] ?>" class="action-buttons"><i class="fa-solid fa-pen-to-square"></i></a>
-                                <a href="delete.php?id=<?= $row['id'] ?>" class="action-buttons" onclick="return confirm('Delete this record?')"><i class="fa-solid fa-trash-can"></i></a>
-                                <a href="print_single.php?id=34" class="action-buttons" target="_blank"><i class="fa-solid fa-print"></i></a>
+                                <a href="edit.php?id=<?= $row['id'] ?>" <i class="fa-solid fa-pen-to-square action-buttons"></i></a>
+                                <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this record?')"><i class="fa-solid fa-trash-can action-buttons"></i></a>
+                                <a href="print_single.php?id=34"  target="_blank"><i class="fa-solid fa-print action-buttons"></i></a>
                             </td>
                         </tr>
                     <?php endwhile; ?>
