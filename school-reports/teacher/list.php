@@ -49,7 +49,7 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
                         <th>Photo</th>
                         <th>Name</th>
                         <th>ID</th>
-                        <th>Department</th>
+                        <th>Subject</th>
                         <th>Type</th>
                         <th>Actions</th>
                     </tr>
@@ -69,7 +69,7 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
 
                             <td><?= $row['teacher_name'] ?></td>
                             <td><?= $row['teacher_id'] ?></td>
-                            <td><?= $row['department'] ?></td>
+                            <td><?= $row['subject'] ?></td>
                             <td><?= $row['teacher_type'] ?></td>
                             <td>
                                 <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
