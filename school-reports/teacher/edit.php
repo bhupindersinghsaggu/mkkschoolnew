@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $result = mysqli_query($conn, "SELECT * FROM teachers WHERE id = $id");
 $row = mysqli_fetch_assoc($result);
 ?>
+
 <head>
     <title>Add Notebook Review</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png">
@@ -59,10 +60,10 @@ $row = mysqli_fetch_assoc($result);
 </head>
 <div class="page-wrapper">
     <div class="content">
-       <div class="header-button d-flex justify-content-between align-items-center mb-3">
-                <h3 class="">Edit Teacher</h3>
-                <a href="list.php" class="btn btn-secondary">View Teacher</a></h3>
-            </div>
+        <div class="header-button d-flex justify-content-between align-items-center mb-3">
+            <h3 class="">Edit Teacher</h3>
+            <a href="list.php" class="btn btn-secondary">View Teacher</a></h3>
+        </div>
         <?php if ($message): ?>
             <div class="alert alert-info"><?= $message ?></div>
         <?php endif; ?>
@@ -91,12 +92,13 @@ $row = mysqli_fetch_assoc($result);
             </div>
             <div class="mb-3">
                 <label>Current Photo:</label><br>
-                 <img src="<?= $row['photo'] ?>" width="80" alt="Photo">
+                <img src="<?= $row['photo'] ?>" width="80" alt="Photo">
                 <label>Change Photo (optional):</label>
                 <input type="file" name="photo" class="form-control">
                 <input type="hidden" name="existing_photo" value="<?= $row['photo'] ?>">
             </div>
-            <button type="submit" class="btn btn-primary">Update Teacher</button>
+            <button type="submit" class="btn btn-success">Update</button>
+            <a href="add.php" class="btn btn-secondary">Back</a>
         </form>
     </div>
 </div>
