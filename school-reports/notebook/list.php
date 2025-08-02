@@ -71,7 +71,7 @@ $result = mysqli_query($conn, $query);
         <div class="content">
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3 class="">Notebook Review Records</h3>
-                <a href="list.php" class="btn btn-secondary">View Teacher</a></h3>
+               
             </div>
 
             <!-- Date Filter -->
@@ -82,9 +82,11 @@ $result = mysqli_query($conn, $query);
                 <div class="col-md-4">
                     <input type="date" name="end_date" class="form-control" value="<?= $end_date ?>">
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 justify-content-between align-items-center">
                     <button class="btn btn-primary">Filter</button>
+                     <a href="list.php" class="btn btn-secondary">View Teacher</a></h3>
                 </div>
+                
             </form>
 
             <input class="form-control mb-3" id="searchInput" type="text" placeholder="Search by Name, Class, Subject">
