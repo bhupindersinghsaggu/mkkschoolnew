@@ -111,11 +111,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <input type="date" name="eval_date" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Search Teacher</label>
-                                    <input type="text" id="teacherSearch" class="form-control mb-2" placeholder="Type to search..." onkeyup="filterTeachers()">
-
-                                    <label>Select Teacher</label>
-                                    <select name="teacher_id" id="teacherSelect" class="form-control" onchange="fillTeacherName()" required>
+                                    <label>Teacher</label>
+                                    <select name="teacher_id" id="teacherSelect" class="form-control" required>
                                         <option value="">-- Select Teacher --</option>
                                         <?php
                                         $teacher_result = mysqli_query($conn, "SELECT teacher_id, teacher_name FROM teachers ORDER BY teacher_name ASC");
@@ -125,13 +122,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         ?>
                                     </select>
                                 </div>
-
                                 <div class="mb-3">
                                     <label>Name of the Teacher</label>
                                     <input type="text" name="teacher_name" id="teacherName" class="form-control" readonly required>
+
                                 </div>
-
-
                                 <div class="mb-3">
                                     <label>Subject</label>
                                     <input type="text" name="subject" class="form-control" required>
