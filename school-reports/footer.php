@@ -96,6 +96,7 @@
 	crossorigin="anonymous"></script>
 </body>
 
+<<<<<<< HEAD
 <script>
 $(document).ready(function () {
   $('#teacherSelect').select2({
@@ -142,4 +143,6 @@ document.getElementById('teacherName').value = teacherName ? teacherName : '';
 });
 </script>
 
+=======
+>>>>>>> parent of 8900730 (s)
 </html>

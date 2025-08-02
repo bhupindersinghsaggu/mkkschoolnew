@@ -111,8 +111,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <input type="date" name="eval_date" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
+<<<<<<< HEAD
                                     <label>Teacher</label>
                                     <select name="teacher_id" id="teacherSelect" class="form-control" required></select>
+=======
+                                    <label>Name of the Teacher</label>
+                                    <input type="text" name="teacher_name" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Teacher</label>
+                                    <select name="teacher_id" class="form-control" required>
+                                        <option value="">-- Select Teacher --</option>
+                                        <?php
+                                        $teacher_result = mysqli_query($conn, "SELECT teacher_id, teacher_name FROM teachers ORDER BY teacher_name ASC");
+                                        while ($teacher = mysqli_fetch_assoc($teacher_result)) {
+                                            echo "<option value='{$teacher['teacher_id']}'>{$teacher['teacher_name']} ({$teacher['teacher_id']})</option>";
+                                        }
+                                        ?>
+                                    </select>
+>>>>>>> parent of 8900730 (s)
                                 </div>
 
                                 <div class="mb-3">
