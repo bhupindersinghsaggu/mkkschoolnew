@@ -1,23 +1,26 @@
 <?php
 include '../config/db.php';
 
-$search = $_GET['term'] ?? '';
+header('Content-Type: application/json');
 
-$sql = "SELECT teacher_id, teacher_name FROM teachers WHERE teacher_name LIKE ? ORDER BY teacher_name ASC";
-$stmt = mysqli_prepare($conn, $sql);
-$like = "%$search%";
-mysqli_stmt_bind_param($stmt, 's', $like);
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
+$term = isset($_GET['term']) ? $_GET['term'] : '';
 
 $data = [];
-while ($row = mysqli_fetch_assoc($result)) {
-    $data[] = [
-        "id" => $row['teacher_id'],
-        "text" => $row['teacher_name'],
-        "name" => $row['teacher_name']
-    ];
+
+if ($term !== '') {
+    $stmt = $conn->prepare("SELECT teacher_id, teacher_name FROM teachers WHERE teacher_name LIKE ? ORDER BY teacher_name ASC");
+    $searchTerm = "%{$term}%";
+    $stmt->bind_param("s", $searchTerm);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    while ($row = $result->fetch_assoc()) {
+        $data[] = [
+            "id" => $row['teacher_id'],
+            "text" => $row['teacher_name'],
+            "name" => $row['teacher_name']
+        ];
+    }
 }
 
-echo json_encode(["results" => $data]);
-?>
+echo json_encode(['results' => $data]);
