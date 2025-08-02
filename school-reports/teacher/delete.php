@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
     $delete = mysqli_query($conn, "DELETE FROM teachers WHERE id = $id");
 
     if ($delete) {
-        header("Location: list_teachers.php?msg=deleted");
+        header("Location: list.php?msg=deleted");
         exit;
     } else {
         echo "Error deleting teacher.";
