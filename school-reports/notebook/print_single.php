@@ -58,7 +58,7 @@ if (!$row) {
             border: 1px solid #ccc;
             border-radius: 4px;
             margin-bottom: 15px;
-            border-radius: 100%;
+            /* border-radius: 100%; */
             padding: 5px;
         }
 
