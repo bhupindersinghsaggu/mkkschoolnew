@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="page-wrapper">
         <div class="content ">
             <div class="header-button d-flex justify-content-between align-items-center">
-                <h3 class="mb-3">Add Teacher</h3>
+                <h3 class="">Add Teacher</h3>
                 <a href="list.php" class="btn btn-secondary">View Teacher</a></h3>
             </div>
             <?php if ($message): ?>
