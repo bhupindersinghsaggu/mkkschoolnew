@@ -17,7 +17,7 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
 <html>
 
 <head>
-    <title>Add Notebook Review</title>
+    <title>Teachers</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png">
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -110,7 +110,7 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
                 </tbody>
             </table>
             <div class=" d-flex justify-content-start mt-4">
-                <a href="add.php" class="btn btn-secondary me-2" name="submit">Add Teacher</a>
+                <a href="add.php" class="btn btn-success me-2" name="submit">Back</a>
             </div>
 
         </div>
