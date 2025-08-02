@@ -12,7 +12,7 @@ $message = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $teacher_name = mysqli_real_escape_string($conn, $_POST['teacher_name']);
     $teacher_id = mysqli_real_escape_string($conn, $_POST['teacher_id']);
-    $department = mysqli_real_escape_string($conn, $_POST['subject']);
+    $subject = mysqli_real_escape_string($conn, $_POST['subject']);
     $teacher_type = mysqli_real_escape_string($conn, $_POST['teacher_type']);
 
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
