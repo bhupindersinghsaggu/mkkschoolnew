@@ -116,7 +116,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <!-- <a href="add.php" class="btn btn-secondary me-2" name="submit">Add </a> -->
                                 </div>
                             </form>
-                            <a href="list.php" class="btn btn-success">Back</a>
+                             <button type="submit" class="btn btn-success">Save</button>
+                                <a href="list.php" class="btn btn-secondary">Back</a>
                         </div>
                     </div>
                 </div>
