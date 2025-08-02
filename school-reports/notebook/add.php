@@ -121,8 +121,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <select name="teacher_id" id="teacherSelect" class="form-control" onchange="fillTeacherName()" required>
                                         <option value="">-- Select Teacher --</option>
                                         <?php
-                                        $subject_result = mysqli_query($conn, "SELECT teacher_id, teacher_name, subject FROM teachers ORDER BY teacher_name ASC");
-                                        while ($teacher = mysqli_fetch_assoc($subject_result)) {
+                                        $subject = mysqli_query($conn, "SELECT teacher_id, teacher_name, subject FROM teachers ORDER BY teacher_name ASC");
+                                        while ($teacher = mysqli_fetch_assoc($subject)) {
                                             echo "<option value='{$teacher['teacher_id']}' data-name='{$teacher['teacher_name']}' data-subject='{$teacher['subject']}'>{$teacher['teacher_name']} ({$teacher['teacher_id']})</option>";
                                         }
 
