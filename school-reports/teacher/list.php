@@ -103,9 +103,6 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
                                 <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this record?')" class="action-buttons" title="Delete">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </a>
-                                <a href="print_single.php?id=<?= $row['id'] ?>" target="_blank" class="action-buttons" title="Print">
-                                    <i class="fa-solid fa-print"></i>
-                                </a>
                             </td>
 
                         </tr>
