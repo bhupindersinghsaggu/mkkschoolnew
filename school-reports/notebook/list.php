@@ -84,7 +84,7 @@ $result = mysqli_query($conn, $query);
                 </div>
                 <div class="col-md-4 justify-content-between align-items-center">
                     <button class="btn btn-primary">Filter</button>
-                     <a href="list.php" class="btn btn-secondary">View Teacher</a></h3>
+                     <a href="list.php" class="btn btn-success">View Teacher</a></h3>
                 </div>
                 
             </form>
