@@ -101,7 +101,7 @@ $result = mysqli_query($conn, $query);
                             <th>ID</th>
                             <th>Subject</th>
                             <th>Class</th>
-                            <th>Checked</th>
+                            <th>Books Checked</th>
                             <!-- <th>Reviewed</th> -->
                             <th>Rating</th>
                             <th>Actions</th>
