@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="page-wrapper">
         <div class="content mb-3">
-            <div class="header-button d-flex justify-content-between align-items-center">
+            <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3 class="">Notebook Corrections</h3>
                 <a href="list.php" class="btn btn-secondary">View Record</a></h3>
             </div>
