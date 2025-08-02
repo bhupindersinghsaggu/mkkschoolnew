@@ -10,7 +10,7 @@ $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $teacher_name = mysqli_real_escape_string($conn, $_POST['teacher_name']);
     $teacher_id = mysqli_real_escape_string($conn, $_POST['teacher_id']);
-    $department = mysqli_real_escape_string($conn, $_POST['department']);
+    $department = mysqli_real_escape_string($conn, $_POST['subject']);
     $teacher_type = mysqli_real_escape_string($conn, $_POST['teacher_type']);
     $photo_path = $_POST['existing_photo'];
 
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $query = "UPDATE teachers SET 
         teacher_name = '$teacher_name',
         teacher_id = '$teacher_id',
-        department = '$department',
+        department = '$subject',
         teacher_type = '$teacher_type',
         photo = '$photo_path'
         WHERE id = $id";
@@ -73,8 +73,8 @@ $row = mysqli_fetch_assoc($result);
                 <input type="text" name="teacher_id" class="form-control" value="<?= $row['teacher_id'] ?>" required>
             </div>
             <div class="mb-3">
-                <label>Department</label>
-                <input type="text" name="department" class="form-control" value="<?= $row['department'] ?>" required>
+                <label>Subject</label>
+                <input type="text" name="subject" class="form-control" value="<?= $row['department'] ?>" required>
             </div>
             <div class="mb-3">
                 <label>Teacher Type</label>
