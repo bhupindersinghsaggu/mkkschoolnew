@@ -59,7 +59,10 @@ $row = mysqli_fetch_assoc($result);
 </head>
 <div class="page-wrapper">
     <div class="content">
-        <h3>Edit Teacher</h3>
+       <div class="header-button d-flex justify-content-between align-items-center mb-3">
+                <h3 class="">Edit Teacher</h3>
+                <a href="list.php" class="btn btn-secondary">View Teacher</a></h3>
+            </div>
         <?php if ($message): ?>
             <div class="alert alert-info"><?= $message ?></div>
         <?php endif; ?>

@@ -42,7 +42,10 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
 <body>
     <div class="page-wrapper">
         <div class="content">
-            <h3>View Teacher</h3>
+              <div class="header-button d-flex justify-content-between align-items-center mb-3">
+                <h3 class="">Add Teacher</h3>
+                <a href="add.php" class="btn btn-secondary">Add Teacher</a></h3>
+            </div>
             <table class="table table-bordered mt-4">
                 <thead>
                     <tr class="odd">
