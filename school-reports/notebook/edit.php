@@ -106,11 +106,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="page-wrapper mb-3">
         <div class="content">
-          <div class="header-button d-flex justify-content-end align-items-center mb-3">
+            <div class="header-button d-flex justify-content-end align-items-center mb-3">
                 <a href="list.php" class="btn btn-success">Back</a></h3>
             </div>
             <div class="mb-3">
-                <h3 class="">Edit  Record</h3>
+                <h3 class="">Edit Record</h3>
             </div>
             <form method="POST">
                 <div class="mb-3"><label>Session</label>
@@ -186,14 +186,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label class="form-check-label" for="undertaking">I confirm this information is correct.</label>
                 </div> -->
                 <button type="submit" class="btn btn-primary">Update Record</button>
-                <a href="list.php" class="btn btn-secondary">Back</a>
+                <a href="list.php" class="btn btn-success">Back</a>
             </form>
-              <div class="header-button mt-4">
-                <a href="list.php" class="btn btn-success">Back</a></h3>
-            </div>
         </div>
     </div>
 
     <?php include '../footer.php'; ?>
 </body>
+
 </html>
