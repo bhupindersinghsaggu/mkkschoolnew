@@ -185,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="checkbox" class="form-check-input" name="undertaking" id="undertaking" <?= $record['undertaking'] ? 'checked' : '' ?>>
                     <label class="form-check-label" for="undertaking">I confirm this information is correct.</label>
                 </div> -->
-                <button type="submit" class="btn btn-primary">Update Record</button>
+                <button type="submit" class="btn btn-secondary">Update Record</button>
                 <a href="list.php" class="btn btn-success">Back</a>
             </form>
         </div>
