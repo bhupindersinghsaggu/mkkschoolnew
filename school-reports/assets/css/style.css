@@ -55429,3 +55429,17 @@ span.flatpickr-weekday {
   padding: 15px;
   align-items: center;
 }
+
+/*custom css*/
+
+.action-buttons{
+  border: 1px solid #E6EAED;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    padding: 8px;
+}
