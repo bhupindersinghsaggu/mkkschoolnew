@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                 <div class="d-flex justify-content-start ">
                                     <button type="submit" class="btn btn-primary me-2">Save </button>
-                                    <a href="add.php" class="btn btn-secondary me-2" name="submit">Add </a>
+                                    <!-- <a href="add.php" class="btn btn-secondary me-2" name="submit">Add </a> -->
                                 </div>
                             </form>
                         </div>
