@@ -91,14 +91,12 @@ $result = mysqli_query($conn, $query);
 <body>
     <div class="page-wrapper">
         <div class="content">
-            <div class="header-button d-flex justify-content-between align-items-center mb-3">
+            <div class="header-button d-flex justify-content-end align-items-center mb-3">
                 <a href="list.php" class="btn btn-warning">Back</a></h3>
             </div>
             <div class="mb-3">
                 <h3 class="">Notebook Review Records</h3>
             </div>
-
-
             <!-- Date Filter -->
             <form method="GET" class="row g-2 mb-3">
                 <div class="col-md-4">
@@ -109,9 +107,7 @@ $result = mysqli_query($conn, $query);
                 </div>
                 <div class="col-md-4 justify-content-between align-items-center">
                     <button class="btn btn-primary">Filter</button>
-
                 </div>
-
             </form>
             <input class="form-control mb-3" id="searchInput" type="text" placeholder="Search by Name, Class, Subject">
             <div class="table-responsive">
@@ -171,7 +167,9 @@ $result = mysqli_query($conn, $query);
                     </tbody>
                 </table>
             </div>
-
+            <div class="header-button">
+                <a href="list.php" class="btn btn-success">Back</a></h3>
+            </div>
             <!-- Pagination -->
             <nav class="mt-4">
                 <ul class="pagination justify-content-center">
