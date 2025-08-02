@@ -90,8 +90,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <input type="text" name="teacher_id" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Department</label>
-                                    <input type="text" name="department" class="form-control" required>
+                                    <label>Subject</label>
+                                    <input type="text" name="subject" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Teacher Type</label>
