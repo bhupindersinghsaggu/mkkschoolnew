@@ -2,9 +2,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-include '../header.php';
-include '../head-nav.php';
-include '../side-bar.php';
+// include '../header.php';
+// include '../head-nav.php';
+// include '../side-bar.php';
 include '../config/db.php';
 
 if (isset($_GET['id'])) {
