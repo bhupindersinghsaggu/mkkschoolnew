@@ -35,6 +35,18 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
         .teacher-thumb {
             max-width: 80px;
         }
+
+        .action-buttons {
+            border: 1px solid #E6EAED;
+            background-color: #ffffff;
+            border-radius: 5px;
+            display: -ms-flexbox;
+            -ms-flex-align: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            padding: 8px;
+        }
     </style>
 
 </head>
@@ -42,7 +54,7 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
 <body>
     <div class="page-wrapper">
         <div class="content">
-              <div class="header-button d-flex justify-content-between align-items-center mb-3">
+            <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3 class="">Add Teacher</h3>
                 <a href="add.php" class="btn btn-secondary">Add Teacher</a></h3>
             </div>
@@ -77,7 +89,7 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
                             <td>
                                 <a href="edit.php?id=<?= $row['id'] ?>" <i class="fa-solid fa-pen-to-square action-buttons"></i></a>
                                 <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this record?')"><i class="fa-solid fa-trash-can action-buttons"></i></a>
-                                <a href="print_single.php?id=34"  target="_blank"><i class="fa-solid fa-print action-buttons"></i></a>
+                                <a href="print_single.php?id=34" target="_blank"><i class="fa-solid fa-print action-buttons"></i></a>
                             </td>
                         </tr>
                     <?php endwhile; ?>
