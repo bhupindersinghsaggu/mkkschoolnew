@@ -92,7 +92,7 @@ $result = mysqli_query($conn, $query);
     <div class="page-wrapper">
         <div class="content">
             <div class="header-button d-flex justify-content-end align-items-center mb-3">
-                <a href="list.php" class="btn btn-warning">Back</a></h3>
+                <a href="add.php" class="btn btn-success">Back</a></h3>
             </div>
             <div class="mb-3">
                 <h3 class="">Notebook Review Records</h3>
@@ -168,7 +168,7 @@ $result = mysqli_query($conn, $query);
                 </table>
             </div>
             <div class="header-button mt-4">
-                <a href="list.php" class="btn btn-success">Back</a></h3>
+                <a href="add.php" class="btn btn-success">Back</a></h3>
             </div>
             <!-- Pagination -->
             <nav class="mt-4">
