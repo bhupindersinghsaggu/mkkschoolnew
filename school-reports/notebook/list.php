@@ -88,9 +88,7 @@ $result = mysqli_query($conn, $query);
                 </div>
                 
             </form>
-
             <input class="form-control mb-3" id="searchInput" type="text" placeholder="Search by Name, Class, Subject">
-
             <div class="table-responsive">
                 <table class="table table-bordered table-hover" id="recordsTable">
                     <thead class="table-dark">
@@ -144,7 +142,7 @@ $result = mysqli_query($conn, $query);
             </div>
 
             <!-- Pagination -->
-            <nav>
+            <nav class="mt-4">
                 <ul class="pagination justify-content-center">
                     <?php for ($i = 1; $i <= $total_pages; $i++): ?>
                         <li class="page-item <?= $i == $page ? 'active' : '' ?>">
