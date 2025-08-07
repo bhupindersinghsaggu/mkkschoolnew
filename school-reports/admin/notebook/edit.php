@@ -1,9 +1,8 @@
 <?php
-include '../auth.php';
-include '../header.php';
-include '../head-nav.php';
-include '../side-bar.php';
-include '../config/db.php';
+include '../../header.php';
+include '../../head-nav.php';
+include '../../side-bar.php';
+include '../../config/db.php';
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     echo "<div class='alert alert-danger'>Invalid Record ID</div>";
@@ -90,18 +89,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <title>Edit Record</title>
     <title>Notebook Records</title>
-    <link rel="shortcut icon" href="../assets/img/favicon.png">
-    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="../assets/css/animate.css">
-    <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css">
-    <link rel="stylesheet" href="../assets/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="../assets/plugins/tabler-icons/tabler-icons.min.css">
-    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../../assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../assets/css/animate.css">
+    <link rel="stylesheet" href="../../assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../assets/plugins/tabler-icons/tabler-icons.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
@@ -197,7 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
 
-    <?php include '../footer.php'; ?>
+    <?php include '../../footer.php'; ?>
 </body>
 
 </html>
