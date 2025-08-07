@@ -127,6 +127,7 @@ $result = mysqli_query($conn, $query);
                             <th>Rating</th>
                             <th>Actions</th>
                             <th>Upload</th>
+                            <th>View Report</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -173,6 +174,19 @@ $result = mysqli_query($conn, $query);
                                         </button>
                                     </form>
                                 </td>
+                                <td>
+                                    <?php if (!empty($row['document']) && file_exists('../uploads/' . $row['document'])): ?>
+                                        <a href="../uploads/<?= $row['document'] ?>" target="_blank" class="btn btn-sm btn-info">
+                                            <i class="fa fa-eye"></i> View
+                                        </a>
+                                        <a href="../uploads/<?= $row['document'] ?>" download class="btn btn-sm btn-secondary">
+                                            <i class="fa fa-download"></i> Download
+                                        </a>
+                                    <?php else: ?>
+                                        <span class="text-muted">No document</span>
+                                    <?php endif; ?>
+                                </td>
+
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
