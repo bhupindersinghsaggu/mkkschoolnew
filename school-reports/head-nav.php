@@ -26,7 +26,7 @@
         <!-- Header Menu -->
 
         <div class="logout d-flex ">
-            <button type="submit" class="btn btn-secondary me-2" name="submit">Logout</button>
+            <a href="logout.php" class="btn btn-secondary me-2" name="submit">Logout</a>
         </div>
         <!-- <ul class="nav user-menu"> -->
         <!-- Search -->
