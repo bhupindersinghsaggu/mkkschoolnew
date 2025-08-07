@@ -9,6 +9,6 @@ header("Pragma: no-cache"); // HTTP 1.0.
 header("Expires: 0"); // Proxies
 
 // Redirect to login
-header("Location: ./login.php");
+header("Location: ../login.php");
 exit;
 ?>
