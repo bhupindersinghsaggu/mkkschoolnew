@@ -49,14 +49,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="login-userset">
                             <div class="login-logo logo-normal">
                                 <img src="assets/img/logo-small.png" alt="img">
-                                <h3>Dr. M.K.K. Arya Model School</h3>
                             </div>
-                            <a href="index.html" class="login-logo logo-white">
+                              <h3>Dr. M.K.K. Arya Model School</h3>
+                            <a href="login.php" class="login-logo logo-white">
                                 <img src="assets/img/logo-white.svg" alt="Img">
                             </a>
                             <div class="login-userheading">
                                 <h3>Sign In</h3>
-                                <h4 class="fs-16">Access the Dreamspos panel using your email and passcode.</h4>
+                                <!-- <h4 class="fs-16">Access the Dreamspos panel using your email and passcode.</h4> -->
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Username <span class="text-danger"> *</span></label>
