@@ -91,6 +91,18 @@ $result = mysqli_query($conn, $query);
 <body>
     <div class="page-wrapper">
         <div class="content">
+            <?php if (isset($_GET['upload']) && $_GET['upload'] === 'success'): ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    Document uploaded successfully!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php elseif (isset($_GET['upload']) && $_GET['upload'] === 'error'): ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <?= htmlspecialchars($_GET['msg'] ?? 'Document upload failed.') ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif; ?>
+
             <div class="header-button d-flex justify-content-end align-items-center mb-3">
                 <a href="add.php" class="btn btn-success">Back</a></h3>
             </div>
@@ -165,6 +177,16 @@ $result = mysqli_query($conn, $query);
                                     </a>
                                 </td>
                                 <td class="d-flex gap-2">
+                                    <a href="edit.php?id=<?= $row['id'] ?>" class="action-buttons" title="Edit">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this record?')" class="action-buttons" title="Delete">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </a>
+                                    <a href="print_single.php?id=<?= $row['id'] ?>" target="_blank" class="action-buttons" title="Print">
+                                        <i class="fa-solid fa-print"></i>
+                                    </a>
+                                </td>
                                 <td>
                                     <form action="upload_document.php" method="POST" enctype="multipart/form-data" style="display:flex; gap:5px;">
                                         <input type="hidden" name="record_id" value="<?= $row['id'] ?>">
@@ -174,6 +196,7 @@ $result = mysqli_query($conn, $query);
                                         </button>
                                     </form>
                                 </td>
+
                                 <td>
                                     <?php if (!empty($row['document']) && file_exists('../uploads/' . $row['document'])): ?>
                                         <a href="../uploads/<?= $row['document'] ?>" target="_blank" class="btn btn-sm btn-info">
@@ -185,12 +208,9 @@ $result = mysqli_query($conn, $query);
                                     <?php else: ?>
                                         <span class="text-muted">No document</span>
                                     <?php endif; ?>
-                                    if (isset($_GET['upload']) && $_GET['upload'] === 'success'): ?>
-                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                        Document uploaded successfully!
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                                    </div>
+
                                 </td>
+
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
