@@ -1,12 +1,10 @@
-
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-include '../auth.php';
-include '../header.php';
-include '../head-nav.php';
-include '../side-bar.php';
-include '../config/db.php';
+include '../../header.php';
+include '../../head-nav.php';
+include '../../side-bar.php';
+include '../../config/db.php';
 
 // Pagination setup
 $limit = 10;
@@ -45,18 +43,18 @@ $result = mysqli_query($conn, $query);
 <head>
     <meta charset="UTF-8">
     <title>Notebook Records</title>
-    <link rel="shortcut icon" href="../assets/img/favicon.png">
-    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="../assets/css/animate.css">
-    <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css">
-    <link rel="stylesheet" href="../assets/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="../assets/plugins/tabler-icons/tabler-icons.min.css">
-    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../../assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../assets/css/animate.css">
+    <link rel="stylesheet" href="../../assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../assets/plugins/tabler-icons/tabler-icons.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <style>
         .teacher-thumb {
             width: 50px;
