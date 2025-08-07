@@ -185,8 +185,12 @@ $result = mysqli_query($conn, $query);
                                     <?php else: ?>
                                         <span class="text-muted">No document</span>
                                     <?php endif; ?>
+                                    if (isset($_GET['upload']) && $_GET['upload'] === 'success'): ?>
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        Document uploaded successfully!
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                    </div>
                                 </td>
-
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
