@@ -1,12 +1,7 @@
-<?php
-// session_start();
-// if (!isset($_SESSION['loggedin'])) {
-//     header('Location: login.php');
-//     exit;
-//}
-?>
-<?php include '../config/db.php';
 
+
+<?php include '../config/db.php';
+include '../auth.php';
 $start_date = $_GET['start_date'] ?? '';
 $end_date = $_GET['end_date'] ?? '';
 

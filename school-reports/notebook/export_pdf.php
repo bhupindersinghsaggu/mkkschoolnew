@@ -1,4 +1,5 @@
 <?php
+include '../auth.php';
 require_once '../vendor/autoload.php';
 include '../config/db.php';
 

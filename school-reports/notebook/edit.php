@@ -1,4 +1,5 @@
 <?php
+include '../auth.php';
 include '../header.php';
 include '../head-nav.php';
 include '../side-bar.php';
