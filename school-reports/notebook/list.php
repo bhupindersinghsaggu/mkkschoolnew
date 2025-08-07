@@ -7,7 +7,18 @@ include '../config/db.php';
 
 <div class="container mt-5">
     <h2 class="mb-4">Notebook Review Records</h2>
-
+    <link rel="shortcut icon" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../assets/plugins/tabler-icons/tabler-icons.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>
@@ -82,20 +93,20 @@ include '../config/db.php';
 
 <!-- ✅ Bootstrap Alert Modal -->
 <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="alertModalLabel">Notification</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" id="alertModalBody">
-        <!-- Message will go here -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
-      </div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="alertModalLabel">Notification</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="alertModalBody">
+                <!-- Message will go here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!-- ✅ Bootstrap JS + Modal trigger -->
@@ -103,24 +114,24 @@ include '../config/db.php';
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const uploadStatus = urlParams.get('upload');
-    const message = urlParams.get('msg');
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const uploadStatus = urlParams.get('upload');
+        const message = urlParams.get('msg');
 
-    if (uploadStatus) {
-        let alertText = '';
-        if (uploadStatus === 'success') {
-            alertText = '✅ Document uploaded successfully!';
-        } else if (uploadStatus === 'error') {
-            alertText = '❌ ' + (message || 'Document upload failed.');
+        if (uploadStatus) {
+            let alertText = '';
+            if (uploadStatus === 'success') {
+                alertText = '✅ Document uploaded successfully!';
+            } else if (uploadStatus === 'error') {
+                alertText = '❌ ' + (message || 'Document upload failed.');
+            }
+
+            document.getElementById('alertModalBody').innerText = alertText;
+            var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+            alertModal.show();
         }
-
-        document.getElementById('alertModalBody').innerText = alertText;
-        var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
-        alertModal.show();
-    }
-});
+    });
 </script>
 
 <?php include '../footer.php'; ?>
