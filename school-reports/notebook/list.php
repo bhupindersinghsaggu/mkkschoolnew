@@ -126,6 +126,7 @@ $result = mysqli_query($conn, $query);
                             <!-- <th>Reviewed</th> -->
                             <th>Rating</th>
                             <th>Actions</th>
+                            <th>Upload</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -161,6 +162,16 @@ $result = mysqli_query($conn, $query);
                                     <a href="print_single.php?id=<?= $row['id'] ?>" target="_blank" class="action-buttons" title="Print">
                                         <i class="fa-solid fa-print"></i>
                                     </a>
+                                </td>
+                                <td class="d-flex gap-2">
+                                <td>
+                                    <form action="upload_document.php" method="POST" enctype="multipart/form-data" style="display:flex; gap:5px;">
+                                        <input type="hidden" name="record_id" value="<?= $row['id'] ?>">
+                                        <input type="file" name="document" accept=".jpg,.jpeg,.png,.pdf" required style="width: 150px;">
+                                        <button type="submit" class="btn btn-sm btn-primary" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                         <?php endwhile; ?>
