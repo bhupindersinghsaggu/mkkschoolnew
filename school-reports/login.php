@@ -2,6 +2,17 @@
 session_start();
 include './config/db.php'; // Make sure this connects to your DB
 
+// 🔒 Prevent showing login page again after successful login
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    header("Location: index.php");
+    exit;
+}
+
+// ❌ Prevent caching of this page
+header("Cache-Control: no-cache, must-revalidate");
+header("Expires: Sat, 1 Jan 2000 00:00:00 GMT");
+header("Pragma: no-cache");
+
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
