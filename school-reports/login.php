@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($username === 'admin' && $password === 'admin123') {
         $_SESSION['loggedin'] = true;
-        header('Location: notebook/add.php');
+        header('Location: index.php');
         exit;
     } else {
         $error = "Invalid credentials";
