@@ -1,5 +1,5 @@
 
-<?php include ('./auth.php')   ?>
+<?php include ('auth.php')   ?>
 <?php include('header.php') ?>;
 <?php include('head-nav.php') ?>;
 
