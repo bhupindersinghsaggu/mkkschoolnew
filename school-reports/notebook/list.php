@@ -91,17 +91,7 @@ $result = mysqli_query($conn, $query);
 <body>
     <div class="page-wrapper">
         <div class="content">
-            <?php if (isset($_GET['upload']) && $_GET['upload'] === 'success'): ?>
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    Document uploaded successfully!
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            <?php elseif (isset($_GET['upload']) && $_GET['upload'] === 'error'): ?>
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <?= htmlspecialchars($_GET['msg'] ?? 'Document upload failed.') ?>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            <?php endif; ?>
+
 
             <div class="header-button d-flex justify-content-end align-items-center mb-3">
                 <a href="add.php" class="btn btn-success">Back</a></h3>
@@ -122,6 +112,20 @@ $result = mysqli_query($conn, $query);
                 </div>
             </form>
             <input class="form-control mb-3" id="searchInput" type="text" placeholder="Search by Name, Class, Subject">
+           <!-- File upload Alert Message start -->
+           
+            <?php if (isset($_GET['upload']) && $_GET['upload'] === 'success'): ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    Document uploaded successfully!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php elseif (isset($_GET['upload']) && $_GET['upload'] === 'error'): ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <?= htmlspecialchars($_GET['msg'] ?? 'Document upload failed.') ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif; ?>
+            <!-- File upload Alert Message end -->
             <div class="table-responsive">
                 <table class="table table-bordered table-hover" id="recordsTable">
                     <thead class="table-dark">
