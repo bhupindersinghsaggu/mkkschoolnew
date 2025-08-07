@@ -126,7 +126,7 @@ $result = mysqli_query($conn, $query);
                             <!-- <th>Reviewed</th> -->
                             <th>Rating</th>
                             <th>Actions</th>
-                            <th>Upload</th>
+                            <th>Upload Report</th>
                             <th>View Report</th>
                         </tr>
                     </thead>
