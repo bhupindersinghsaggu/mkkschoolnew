@@ -200,17 +200,6 @@ $result = mysqli_query($conn, $query);
                                         <i class="fa-solid fa-print"></i>
                                     </a>
                                 </td>
-                                <td class="d-flex gap-2">
-                                    <a href="edit.php?id=<?= $row['id'] ?>" class="action-buttons" title="Edit">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </a>
-                                    <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this record?')" class="action-buttons" title="Delete">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                    </a>
-                                    <a href="print_single.php?id=<?= $row['id'] ?>" target="_blank" class="action-buttons" title="Print">
-                                        <i class="fa-solid fa-print"></i>
-                                    </a>
-                                </td>
                                 <td>
                                     <form action="upload_document.php" method="POST" enctype="multipart/form-data" style="display:flex; gap:5px;">
                                         <input type="hidden" name="record_id" value="<?= $row['id'] ?>">
