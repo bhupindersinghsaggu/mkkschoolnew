@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <title>Login</title>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../assets/img/favicon.png">
+    <link rel="shortcut icon" href="./assets/img/favicon.png">
     <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css">
@@ -48,7 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <form method="POST">
                         <div class="login-userset">
                             <div class="login-logo logo-normal">
-                                <img src="assets/img/logo.svg" alt="img">
+                                <img src="assets/img/logo-small.png" alt="img">
+                                <h3>Dr. M.K.K. Arya Model School</h3>
                             </div>
                             <a href="index.html" class="login-logo logo-white">
                                 <img src="assets/img/logo-white.svg" alt="Img">
