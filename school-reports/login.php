@@ -1,15 +1,32 @@
 <?php
 session_start();
+include './config/db.php'; // Make sure this connects to your DB
+
+$error = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
+    $username = trim($_POST['username']);
     $password = $_POST['password'];
 
-    if ($username === 'admin' && $password === 'admin123') {
-        $_SESSION['loggedin'] = true;
-        header('Location: index.php');
-        exit;
+    // Prepare statement to prevent SQL injection
+    $stmt = $conn->prepare("SELECT * FROM admin WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    if ($result->num_rows === 1) {
+        $admin = $result->fetch_assoc();
+
+        if (password_verify($password, $admin['password'])) {
+            $_SESSION['loggedin'] = true;
+            $_SESSION['admin_username'] = $admin['username'];
+            header("Location: index.php");
+            exit;
+        } else {
+            $error = "Invalid username or password.";
+        }
     } else {
-        $error = "Invalid credentials";
+        $error = "Invalid username or password.";
     }
 }
 ?>
@@ -46,11 +63,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="login-wrapper bg-img">
                 <div class="login-content authent-content">
                     <form method="POST">
+                        <?php if (!empty($error)): ?>
+                            <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                                <?= htmlspecialchars($error) ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php endif; ?>
+
                         <div class="login-userset">
                             <div class="login-logo logo-normal">
                                 <img src="assets/img/logo-small.png" alt="img">
                             </div>
-                              <!-- <h3>Dr. M.K.K. Arya Model School</h3> -->
+                            <!-- <h3>Dr. M.K.K. Arya Model School</h3> -->
                             <a href="login.php" class="login-logo logo-white">
                                 <img src="assets/img/logo-white.svg" alt="Img">
                             </a>
