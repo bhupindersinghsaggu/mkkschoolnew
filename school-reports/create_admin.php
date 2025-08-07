@@ -1,5 +1,5 @@
 <?php
-include '..config/db.php';
+include './config/db.php';
 
 $username = 'admin';
 $plain_password = 'admin123';
