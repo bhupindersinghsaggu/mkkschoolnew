@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="login-logo logo-normal">
                                 <img src="assets/img/logo-small.png" alt="img">
                             </div>
-                              <h3>Dr. M.K.K. Arya Model School</h3>
+                              <!-- <h3>Dr. M.K.K. Arya Model School</h3> -->
                             <a href="login.php" class="login-logo logo-white">
                                 <img src="assets/img/logo-white.svg" alt="Img">
                             </a>
@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                             </div> -->
                             <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
-                                <p>Copyright © 2025 DreamsPOS</p>
+                                <p>Copyright © MKK School. Developed By Bhupinder Singh (IT Department)</p>
                             </div>
                         </div>
                     </form>
