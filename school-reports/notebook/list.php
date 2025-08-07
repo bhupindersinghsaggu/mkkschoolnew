@@ -125,7 +125,10 @@ $result = mysqli_query($conn, $query);
                         <div class="modal-body" id="alertModalBody">
                             <?php if (isset($_GET['upload']) && $_GET['upload'] === 'success'): ?>
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                    Document uploaded successfully!
+                                    <div class="d-inline-flex align-items-center">
+                                        <span class="title-icon bg-soft-info fs-16 me-2"><i class="ti ti-info-circle"></i></span>
+                                        <h5 class="card-title mb-0"> Document uploaded successfully!</h5>
+                                    </div>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             <?php elseif (isset($_GET['upload']) && $_GET['upload'] === 'error'): ?>
