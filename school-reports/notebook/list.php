@@ -112,19 +112,36 @@ $result = mysqli_query($conn, $query);
                 </div>
             </form>
             <input class="form-control mb-3" id="searchInput" type="text" placeholder="Search by Name, Class, Subject">
-           <!-- File upload Alert Message start -->
-           
-            <?php if (isset($_GET['upload']) && $_GET['upload'] === 'success'): ?>
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    Document uploaded successfully!
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <!-- File upload Alert Message start -->
+
+            <!-- Alert Modal -->
+            <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title" id="alertModalLabel">Notification</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="alertModalBody">
+                            <?php if (isset($_GET['upload']) && $_GET['upload'] === 'success'): ?>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    Document uploaded successfully!
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php elseif (isset($_GET['upload']) && $_GET['upload'] === 'error'): ?>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <?= htmlspecialchars($_GET['msg'] ?? 'Document upload failed.') ?>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
                 </div>
-            <?php elseif (isset($_GET['upload']) && $_GET['upload'] === 'error'): ?>
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <?= htmlspecialchars($_GET['msg'] ?? 'Document upload failed.') ?>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            <?php endif; ?>
+            </div>
+
             <!-- File upload Alert Message start -->
             <div class="table-responsive">
                 <table class="table table-bordered table-hover" id="recordsTable">
@@ -248,6 +265,30 @@ $result = mysqli_query($conn, $query);
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const uploadStatus = urlParams.get('upload');
+            const message = urlParams.get('msg');
+
+            if (uploadStatus) {
+                let alertText = '';
+                if (uploadStatus === 'success') {
+                    alertText = '✅ Document uploaded successfully!';
+                } else if (uploadStatus === 'error') {
+                    alertText = '❌ ' + (message || 'Document upload failed.');
+                }
+
+                // Set modal message
+                document.getElementById('alertModalBody').innerText = alertText;
+
+                // Show modal
+                var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+                alertModal.show();
+            }
+        });
+    </script>
+
 
     <?php include '../footer.php'; ?>
 </body>
