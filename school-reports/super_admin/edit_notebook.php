@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="page-wrapper mb-3">
         <div class="content">
             <div class="header-button d-flex justify-content-end align-items-center mb-3">
-                <a href="list.php" class="btn btn-success">Back</a></h3>
+                <a href="add_notebook.php" class="btn btn-success">Back</a></h3>
             </div>
             <div class="mb-3">
                 <h3 class="">Edit Record</h3>
@@ -191,12 +191,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div> -->
                     </div>
                     <button type="submit" class="btn btn-secondary">Update Record</button>
-                    <a href="list.php" class="btn btn-success">Back</a>
+                    <a href="list_notebook.php" class="btn btn-success">Back</a>
             </form>
         </div>
     </div>
 
-    <?php include '../footer.php'; ?>
+ <?php include '../includes/footer.php'; ?>
 </body>
 
 </html>

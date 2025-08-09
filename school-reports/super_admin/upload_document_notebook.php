@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $update = mysqli_query($conn, "UPDATE records SET document = '$file_path' WHERE id = $record_id");
 
             if ($update) {
-                header("Location: list.php?upload=success");
+                header("Location: list_notebook.php?upload=success");
                 exit;
             } else {
                 die('Failed to update record with file path.');
