@@ -102,4 +102,4 @@ $row = mysqli_fetch_assoc($result);
         </form>
     </div>
 </div>
-<?php include '../footer.php'; ?>
+  <?php include '../includes/footer.php'; ?>

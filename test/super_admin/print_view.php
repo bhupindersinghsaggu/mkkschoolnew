@@ -1,5 +1,3 @@
-
-
 <?php require_once '../includes/auth_check.php';
 require_once  '../config/database.php';
 require_once  '../config/functions.php';
@@ -68,8 +66,8 @@ $result = mysqli_query($conn, $query);
         }
 
         .th {
-        font-weight: 400 !important;
-    }
+            font-weight: 400 !important;
+        }
 
         .record-card {
             border: 1px solid #ccc;
@@ -141,8 +139,9 @@ $result = mysqli_query($conn, $query);
         <!-- School Header with Logo -->
         <div class="school-header mt-4">
             <div class="d-flex justify-content-center align-items-center "><img src="../assets/img/printlogo.png" alt="School Logo" class="header-logo">
-            <h2>Dr. M.K.K. Arya Model School</h2></div>
-            
+                <h2>Dr. M.K.K. Arya Model School</h2>
+            </div>
+
             <p>Model Town, Panipat</p>
             <?php if ($start_date && $end_date): ?>
             <?php endif; ?>
