@@ -287,7 +287,7 @@ $result = mysqli_query($conn, $query);
     </script>
 
 
-    <?php include '../includes/footer.php'; ?>
+     <?php include '../includes/footer.php'; ?>
 </body>
 
 </html>
