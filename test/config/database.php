@@ -11,10 +11,10 @@
 ?>
 -->
 <?php
-$host = 'localhost';
-$username = 'u315669183_school_reports';
-$password = '@Av4652B]m';
-$dbname = 'u315669183_school_reports';
+$host = 'mkkschool.com';
+$username = 'u315669183_school_erp';
+$password = 'V1N251[0$r';
+$dbname = 'u315669183_school_erp';
 $conn = new mysqli($host, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
