@@ -11,9 +11,9 @@
 ?>
 -->
 <?php
-$host = 'mkkschool.com';
+$host = 'localhost';
 $username = 'u315669183_school_reports';
-$password = 'V1N251[0$r';
+$password = 'E*QPe#Y3';
 $dbname = 'u315669183_school_reports';
 $conn = new mysqli($host, $username, $password, $dbname);
 if ($conn->connect_error) {
