@@ -11,7 +11,7 @@
 ?>
 -->
 <?php
-$host = 'mkkschool.com';
+$host = 'localhost';
 $username = 'u315669183_school_erp';
 $password = 'V1N251[0$r';
 $dbname = 'u315669183_school_erp';
