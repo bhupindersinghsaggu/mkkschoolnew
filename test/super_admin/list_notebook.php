@@ -203,7 +203,7 @@ $result = mysqli_query($conn, $query);
                                     </a>
                                 </td>
                                 <td>
-                                    <form action="upload_document.php" method="POST" enctype="multipart/form-data" style="display:flex; gap:5px;">
+                                    <form action="upload_document_notebook.php" method="POST" enctype="multipart/form-data" style="display:flex; gap:5px;">
                                         <input type="hidden" name="record_id" value="<?= $row['id'] ?>">
                                         <input type="file" name="document" accept=".jpg,.jpeg,.png,.pdf" required style="width: 150px;">
                                         <button type="submit" class="btn btn-sm btn-primary" title="Upload">
