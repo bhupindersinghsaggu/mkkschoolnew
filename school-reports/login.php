@@ -83,11 +83,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <div class="login-userset">
                             <div class="login-logo logo-normal">
-                                <img src="assets/img/logo-small.png" alt="img">
+                                <img src="./assets/img/logo-small.png" alt="img">
                             </div>
                             <!-- <h3>Dr. M.K.K. Arya Model School</h3> -->
                             <a href="login.php" class="login-logo logo-white">
-                                <img src="assets/img/logo-white.svg" alt="Img">
+                                <img src="./assets/img/logo-white.svg" alt="Img">
                             </a>
                             <div class="login-userheading">
                                 <h3>Sign In</h3>

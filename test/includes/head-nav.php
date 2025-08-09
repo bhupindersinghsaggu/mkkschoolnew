@@ -26,7 +26,9 @@
         <!-- Header Menu -->
 
         <div class="logout d-flex ">
-            <a href="logout.php" class="btn btn-secondary me-2" name="submit">Logout</a>
+            <a href="../auth/logout.php" class="btn btn-secondary me-2 logout-link" onclick="return confirmLogout()">Logout
+                (<?php echo htmlspecialchars($_SESSION['username']); ?>)
+            </a>
         </div>
         <!-- <ul class="nav user-menu"> -->
         <!-- Search -->

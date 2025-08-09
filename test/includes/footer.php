@@ -97,6 +97,14 @@
 </body>
 
 
+
+
+
+
+
+
+
+
 <script>
 function filterTeachers() {
     const input = document.getElementById('teacherSearch').value.toLowerCase();
@@ -121,6 +129,3 @@ function fillTeacherFields() {
 
 document.getElementById('teacherSelect').addEventListener('change', fillTeacherFields);
 </script>
-
-
-</html>
