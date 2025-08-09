@@ -1,10 +1,13 @@
 
 <?php
+echo "<pre>";
+print_r($_FILES);
+print_r($_POST);
+echo "</pre>";
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
-require_once  '../includes/header.php';
 require_once  '../config/database.php';
 require_once  '../config/functions.php';
 
