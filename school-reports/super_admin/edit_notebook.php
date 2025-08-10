@@ -190,9 +190,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     value="<?= htmlspecialchars($record['class_section']) ?>" required>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="col-md-6">
                         <div class="form-section">
                             <h5 class="mb-4">Evaluation Details</h5>
                             
@@ -214,10 +211,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     value="<?= htmlspecialchars($record['evaluator_name']) ?>" required>
                             </div>
                         </div>
-                        
+                    </div>
+                    
+                    <div class="col-md-6">
                         <div class="form-section">
                             <h5 class="mb-4">Evaluation Ratings</h5>
-                            
                             <div class="mb-3">
                                 <label class="form-label">Regularity in Checking</label>
                                 <select name="regularity_checking" class="form-control">
