@@ -1,13 +1,23 @@
+
 <?php
 session_start();
-require_once '../config/functions.php';
 
-redirectIfNotLoggedIn();
+function is_authenticated() {
+    return isset($_SESSION['user_id']) && isset($_SESSION['role']);
+}
 
-// Check if user has permission to access this page
-$allowed_roles = ['super_admin', 'teacher']; // Adjust as needed
-if (!in_array($_SESSION['role'], $allowed_roles)) {
-    header("Location: ../auth/login.php");
-    exit();
+function require_auth() {
+    if (!is_authenticated()) {
+        header('Location: login.php');
+        exit();
+    }
+}
+
+function require_admin() {
+    require_auth();
+    if ($_SESSION['role'] !== 'admin') {
+        header('Location: ../index.php');
+        exit();
+    }
 }
 ?>

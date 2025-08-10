@@ -1,43 +1,59 @@
-
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+require_once '../config/database.php';
 require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
-require_once  '../includes/header.php';
-require_once  '../config/database.php';
-require_once  '../config/functions.php';
-
+require_once '../config/functions.php';
 
 // Pagination setup
 $limit = 10;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $start = ($page - 1) * $limit;
 
-// Filter by date
+// Filter by date (using prepared statements)
 $where = "";
+$params = [];
+$types = "";
 $start_date = $_GET['start_date'] ?? '';
 $end_date = $_GET['end_date'] ?? '';
 
 if ($start_date && $end_date) {
-    $where = "WHERE r.eval_date BETWEEN '$start_date' AND '$end_date'";
+    $where = "WHERE r.eval_date BETWEEN ? AND ?";
+    $params = [$start_date, $end_date];
+    $types = "ss";
 }
 
-// Count total records (with filter)
-$count_query = mysqli_query($conn, "SELECT COUNT(*) AS total FROM records r $where");
-$total = mysqli_fetch_assoc($count_query)['total'];
+// Count total records
+$count_query = $conn->prepare("SELECT COUNT(*) AS total FROM records r $where");
+if ($where) {
+    $count_query->bind_param($types, ...$params);
+}
+$count_query->execute();
+$total = $count_query->get_result()->fetch_assoc()['total'];
 $total_pages = ceil($total / $limit);
 
-// Fetch records with teacher photos using JOIN
-$query = "
-    SELECT r.*, t.photo 
+// Fetch records with teacher photos and documents
+$query = $conn->prepare("
+    SELECT r.*, t.photo, r.document 
     FROM records r
     LEFT JOIN teachers t ON r.teacher_id = t.teacher_id
     $where
     ORDER BY r.id DESC 
-    LIMIT $start, $limit
-";
-$result = mysqli_query($conn, $query);
+    LIMIT ?, ?
+");
+
+if ($where) {
+    $params[] = $start;
+    $params[] = $limit;
+    $types .= "ii";
+    $query->bind_param($types, ...$params);
+} else {
+    $query->bind_param("ii", $start, $limit);
+}
+
+$query->execute();
+$result = $query->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -93,10 +109,8 @@ $result = mysqli_query($conn, $query);
 <body>
     <div class="page-wrapper">
         <div class="content">
-
-
             <div class="header-button d-flex justify-content-end align-items-center mb-3">
-                <a href="add.php" class="btn btn-success">Back</a></h3>
+                <a href="add_notebook.php" class="btn btn-success">Back</a>
             </div>
             <div class="mb-3">
                 <h3 class="">Notebook Review Records</h3>
@@ -203,9 +217,14 @@ $result = mysqli_query($conn, $query);
                                     </a>
                                 </td>
                                 <td>
-                                    <form action="upload_document_notebook.php" method="POST" enctype="multipart/form-data" style="display:flex; gap:5px;">
-                                        <input type="hidden" name="record_id" value="<?= $row['id'] ?>">
-                                        <input type="file" name="document" accept=".jpg,.jpeg,.png,.pdf" required style="width: 150px;">
+                                    <form action="upload_document_notebook.php" method="POST" enctype="multipart/form-data" class="d-flex gap-2 align-items-center">
+                                        <input type="hidden" name="record_id" value="<?= htmlspecialchars($row['id']) ?>">
+                                        <input type="hidden" name="teacher_id" value="<?= htmlspecialchars($row['teacher_id']) ?>">
+                                        <div class="position-relative" style="width: 150px;">
+                                            <input type="file" name="document" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx"
+                                                class="form-control form-control-sm" required>
+                                            <div class="invalid-feedback">Please select a valid file</div>
+                                        </div>
                                         <button type="submit" class="btn btn-sm btn-primary" title="Upload">
                                             <i class="fa fa-upload"></i>
                                         </button>
@@ -213,18 +232,44 @@ $result = mysqli_query($conn, $query);
                                 </td>
 
                                 <td>
-                                    <?php if (!empty($row['document']) && file_exists('../uploads/' . $row['document'])): ?>
-                                        <a href="../uploads/<?= $row['document'] ?>" target="_blank" class="btn btn-sm btn-info">
-                                            <i class="fa fa-eye"></i> View
-                                        </a>
-                                        <a href="../uploads/<?= $row['document'] ?>" download class="btn btn-sm btn-secondary">
-                                            <i class="fa fa-download"></i> Download
-                                        </a>
-                                    <?php else: ?>
-                                        <span class="text-muted">No document</span>
-                                    <?php endif; ?>
+                                    <?php
+                                    if (!empty($row['document'])):
+                                        // Sanitize and secure the document path
+                                        $docPath = '../uploads/teacher_documents/' . htmlspecialchars(basename($row['document']));
 
+                                        // Check if file exists and is within the allowed directory
+                                        $allowedPath = realpath('../uploads/teacher_documents/');
+                                        $currentPath = realpath($docPath);
+
+                                        if ($currentPath && strpos($currentPath, $allowedPath) === 0 && file_exists($currentPath)):
+                                            $fileExt = strtolower(pathinfo($currentPath, PATHINFO_EXTENSION));
+                                            $iconClass = [
+                                                'pdf' => 'fa-file-pdf',
+                                                'jpg' => 'fa-file-image',
+                                                'jpeg' => 'fa-file-image',
+                                                'png' => 'fa-file-image',
+                                                'doc' => 'fa-file-word',
+                                                'docx' => 'fa-file-word',
+                                            ][$fileExt] ?? 'fa-file';
+                                    ?>
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <a href="<?= htmlspecialchars($docPath) ?>" target="_blank" class="btn btn-info"
+                                                    title="View <?= htmlspecialchars($row['document']) ?>">
+                                                    <i class="fa <?= $iconClass ?>"></i> View
+                                                </a>
+                                                <a href="<?= htmlspecialchars($docPath) ?>" download
+                                                    class="btn btn-secondary" title="Download">
+                                                    <i class="fa fa-download"></i>
+                                                </a>
+                                            </div>
+                                        <?php else: ?>
+                                            <span class="badge bg-danger">File not found</span>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <span class="badge bg-secondary">No document</span>
+                                    <?php endif; ?>
                                 </td>
+
 
                             </tr>
                         <?php endwhile; ?>
@@ -284,7 +329,7 @@ $result = mysqli_query($conn, $query);
     </script>
 
 
-     <?php include '../includes/footer.php'; ?>
+    <?php include '../includes/footer.php'; ?>
 </body>
 
 </html>

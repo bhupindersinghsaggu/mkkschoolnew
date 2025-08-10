@@ -105,27 +105,4 @@
 
 
 
-<script>
-function filterTeachers() {
-    const input = document.getElementById('teacherSearch').value.toLowerCase();
-    const select = document.getElementById('teacherSelect');
-    const options = select.options;
 
-    for (let i = 0; i < options.length; i++) {
-        const text = options[i].text.toLowerCase();
-        options[i].style.display = text.includes(input) ? '' : 'none';
-    }
-}
-
-function fillTeacherFields() {
-    const select = document.getElementById('teacherSelect');
-    const selected = select.options[select.selectedIndex];
-    const name = selected.getAttribute('data-name');
-    const subject = selected.getAttribute('data-subject');
-
-    document.getElementById('teacherName').value = name || '';
-    document.querySelector("input[name='subject']").value = subject || '';
-}
-
-document.getElementById('teacherSelect').addEventListener('change', fillTeacherFields);
-</script>

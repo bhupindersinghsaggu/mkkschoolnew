@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once '../config/database.php';
+require_once '../config/database.php'; // Make sure this is first
 require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
 require_once '../config/functions.php';
@@ -69,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Add Notebook Review</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png">
@@ -100,24 +101,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    function fillTeacherDetails() {
+    function fillTeacherName() {
         const select = document.getElementById('teacherSelect');
         const selectedOption = select.options[select.selectedIndex];
         
         if (selectedOption.value !== "") {
             document.getElementById('teacherName').value = selectedOption.getAttribute('data-name');
-            document.getElementById('teacherId').value = selectedOption.value;
             document.getElementById('subject').value = selectedOption.getAttribute('data-subject');
-            document.getElementById('teacherType').value = selectedOption.getAttribute('data-type');
         } else {
             document.getElementById('teacherName').value = "";
-            document.getElementById('teacherId').value = "";
             document.getElementById('subject').value = "";
-            document.getElementById('teacherType').value = "";
         }
     }
     </script>
 </head>
+
 <body>
     <div class="page-wrapper">
         <div class="content mb-3">
@@ -129,7 +127,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php if ($message): ?>
                 <div class="alert alert-info"><?= $message ?></div>
             <?php endif; ?>
-            
             <form method="POST">
                 <div class="row">
                     <div class="col-xl-6">
@@ -151,21 +148,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <input type="text" id="teacherSearch" class="form-control mb-2" placeholder="Type to filter..." onkeyup="filterTeachers()">
 
                                     <label>Select Teacher</label>
-                                    <select name="teacher_id" id="teacherSelect" class="form-control" onchange="fillTeacherDetails()" required>
+                                    <select name="teacher_id" id="teacherSelect" class="form-control" onchange="fillTeacherName()" required>
                                         <option value="">-- Select Teacher --</option>
                                         <?php
-                                        $query = "SELECT td.teacher_id, td.teacher_name, td.subject, td.teacher_type 
-                                                  FROM teacher_details td
-                                                  JOIN users u ON td.user_id = u.id
-                                                  ORDER BY td.teacher_name ASC";
+                                        $query = "SELECT teacher_id, teacher_name, subject FROM teachers ORDER BY teacher_name ASC";
                                         $result = mysqli_query($conn, $query);
                                         
                                         if ($result && mysqli_num_rows($result) > 0) {
                                             while ($teacher = mysqli_fetch_assoc($result)) {
                                                 echo "<option value='".htmlspecialchars($teacher['teacher_id'])."' 
                                                       data-name='".htmlspecialchars($teacher['teacher_name'])."' 
-                                                      data-subject='".htmlspecialchars($teacher['subject'])."'
-                                                      data-type='".htmlspecialchars($teacher['teacher_type'])."'>
+                                                      data-subject='".htmlspecialchars($teacher['subject'])."'>
                                                       ".htmlspecialchars($teacher['teacher_name'])." (".htmlspecialchars($teacher['teacher_id']).")
                                                       </option>";
                                             }
@@ -182,20 +175,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
 
                                 <div class="mb-3">
-                                    <label>Teacher ID</label>
-                                    <input type="text" name="teacher_id" id="teacherId" class="form-control" readonly required>
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" name="subject" id="subject" required readonly>
                                 </div>
-
-                                <div class="mb-3">
-                                    <label>Subject</label>
-                                    <input type="text" name="subject" id="subject" class="form-control" readonly required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label>Teacher Type</label>
-                                    <input type="text" name="teacher_type" id="teacherType" class="form-control" readonly required>
-                                </div>
-
                                 <div class="mb-3">
                                     <label>Class/Section</label>
                                     <input type="text" name="class_section" class="form-control" required>
@@ -272,10 +254,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Remarks</label>
                                     <textarea name="remarks" class="form-control"></textarea>
                                 </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" name="undertaking" class="form-check-input" id="undertaking">
-                                    <label class="form-check-label" for="undertaking">Undertaking</label>
-                                </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="add_notebook.php" class="btn btn-secondary">Back</a>
                             </div>
@@ -287,4 +265,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <?php include '../includes/footer.php'; ?>
 </body>
+
 </html>
