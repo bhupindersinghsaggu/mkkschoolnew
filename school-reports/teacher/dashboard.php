@@ -57,6 +57,44 @@ require_once '../teacher/side-bar.php';
 
                             <h4><?php echo htmlspecialchars($teacher['teacher_name'] ?? 'Teacher Name'); ?></h4>
                             <p class="text-muted"><?php echo htmlspecialchars($teacher['teacher_type'] ?? 'Teacher Type'); ?></p>
+                            <td>
+                                    <?php
+                                    if (!empty($row['document'])):
+                                        // Sanitize and secure the document path
+                                        $docPath = '../uploads/teacher_documents/' . htmlspecialchars(basename($row['document']));
+
+                                        // Check if file exists and is within the allowed directory
+                                        $allowedPath = realpath('../uploads/teacher_documents/');
+                                        $currentPath = realpath($docPath);
+
+                                        if ($currentPath && strpos($currentPath, $allowedPath) === 0 && file_exists($currentPath)):
+                                            $fileExt = strtolower(pathinfo($currentPath, PATHINFO_EXTENSION));
+                                            $iconClass = [
+                                                'pdf' => 'fa-file-pdf',
+                                                'jpg' => 'fa-file-image',
+                                                'jpeg' => 'fa-file-image',
+                                                'png' => 'fa-file-image',
+                                                'doc' => 'fa-file-word',
+                                                'docx' => 'fa-file-word',
+                                            ][$fileExt] ?? 'fa-file';
+                                    ?>
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <a href="<?= htmlspecialchars($docPath) ?>" target="_blank" class="btn btn-info"
+                                                    title="View <?= htmlspecialchars($row['document']) ?>">
+                                                    <i class="fa <?= $iconClass ?>"></i> View
+                                                </a>
+                                                <a href="<?= htmlspecialchars($docPath) ?>" download
+                                                    class="btn btn-secondary" title="Download">
+                                                    <i class="fa fa-download"></i>
+                                                </a>
+                                            </div>
+                                        <?php else: ?>
+                                            <span class="badge bg-danger">File not found</span>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <span class="badge bg-secondary">No document</span>
+                                    <?php endif; ?>
+                                </td>
                         </div>
                     </div>
                 </div>
