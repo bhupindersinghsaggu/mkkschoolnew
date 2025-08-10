@@ -1,10 +1,14 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
+// Load configuration and functions first
 require_once '../config/database.php';
-require_once '../includes/auth_check.php';
-require_once '../includes/header.php';
 require_once '../config/functions.php';
+
+// Then load auth and header (which should handle sessions)
+require_once '../includes/auth_check.php'; // Make sure this doesn't call session_start() if already started
+require_once '../includes/header.php'; // This should contain proper session handling
 
 // Validate ID parameter
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
@@ -37,14 +41,34 @@ if (!$record) {
 $teachers_query = $conn->query("SELECT teacher_id, teacher_name FROM teacher_details ORDER BY teacher_name ASC");
 $teachers = $teachers_query->fetch_all(MYSQLI_ASSOC);
 
-// Fetch evaluators (assuming they are also from teacher_details or a separate table)
-$evaluators_query = $conn->query("SELECT DISTINCT evaluator_name FROM records WHERE evaluator_name IS NOT NULL ORDER BY evaluator_name ASC");
-$evaluators = $evaluators_query->fetch_all(MYSQLI_ASSOC);
-
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // [Previous sanitization code remains the same...]
-    
+    // Sanitize and validate inputs
+    $session = htmlspecialchars(trim($_POST['session']));
+    $eval_date = $_POST['eval_date'];
+    $teacher_id = $_POST['teacher_id'];
+    $subject = htmlspecialchars(trim($_POST['subject']));
+    $class_section = htmlspecialchars(trim($_POST['class_section']));
+    $notebooks_checked = (int)$_POST['notebooks_checked'];
+    $students_reviewed = htmlspecialchars(trim($_POST['students_reviewed']));
+    $regularity_checking = htmlspecialchars(trim($_POST['regularity_checking']));
+    $accuracy = htmlspecialchars(trim($_POST['accuracy']));
+    $neatness = htmlspecialchars(trim($_POST['neatness']));
+    $follow_up = htmlspecialchars(trim($_POST['follow_up']));
+    $overall_rating = htmlspecialchars(trim($_POST['overall_rating']));
+    $evaluator_name = htmlspecialchars(trim($_POST['evaluator_name']));
+    $remarks = htmlspecialchars(trim($_POST['remarks']));
+
+    // Get teacher name
+    $teacher_name = '';
+    $tq = $conn->prepare("SELECT teacher_name FROM teacher_details WHERE teacher_id = ?");
+    $tq->bind_param("s", $teacher_id);
+    $tq->execute();
+    $tresult = $tq->get_result();
+    if ($tresult->num_rows > 0) {
+        $teacher_name = $tresult->fetch_assoc()['teacher_name'];
+    }
+
     // Update record
     $update_query = $conn->prepare("
         UPDATE records SET 
@@ -66,6 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         WHERE id = ?
     ");
     
+    // Corrected bind_param with proper number of parameters
     $update_query->bind_param(
         "ssssssisssssssi",
         $session,
@@ -81,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $neatness,
         $follow_up,
         $overall_rating,
-        $_POST['evaluator_name'], // Changed to use select value
+        $evaluator_name,
         $remarks,
         $id
     );
@@ -190,6 +215,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     value="<?= htmlspecialchars($record['class_section']) ?>" required>
                             </div>
                         </div>
+                    </div>
+                    
+                    <div class="col-md-6">
                         <div class="form-section">
                             <h5 class="mb-4">Evaluation Details</h5>
                             
@@ -211,11 +239,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     value="<?= htmlspecialchars($record['evaluator_name']) ?>" required>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="col-md-6">
+                        
                         <div class="form-section">
                             <h5 class="mb-4">Evaluation Ratings</h5>
+                            
                             <div class="mb-3">
                                 <label class="form-label">Regularity in Checking</label>
                                 <select name="regularity_checking" class="form-control">
