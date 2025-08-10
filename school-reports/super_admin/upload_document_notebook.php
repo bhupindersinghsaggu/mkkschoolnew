@@ -1,10 +1,19 @@
 <?php
+// Start session at the very beginning if not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once '../config/database.php';
 require_once '../includes/auth_check.php';
 
+// Debugging: Check session data
+// error_log("Session data: " . print_r($_SESSION, true));
+
 // Only allow authenticated users with appropriate permissions
-if ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'teacher') {
-    header("Location: list_notebook.php?upload=error&msg=Unauthorized");
+if (!isset($_SESSION['role']) || ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'teacher')) {
+    $_SESSION['error'] = "Unauthorized access";
+    header("Location: list_notebook.php");
     exit();
 }
 
@@ -12,7 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['document'])) {
     // Validate record_id
     $record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
     if (!$record_id || $record_id <= 0) {
-        header("Location: list_notebook.php?upload=error&msg=Invalid record ID");
+        $_SESSION['error'] = "Invalid record ID";
+        header("Location: list_notebook.php");
         exit();
     }
 
@@ -86,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['document'])) {
         $update->bind_param("si", $new_file_name, $record_id);
         
         if (!$update->execute()) {
-            throw new Exception("Database update failed");
+            throw new Exception("Database update failed: " . $conn->error);
         }
 
         // Delete old file if it exists
@@ -97,7 +107,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['document'])) {
         // Commit transaction
         mysqli_commit($conn);
         
-        header("Location: list_notebook.php?upload=success");
+        $_SESSION['success'] = "Document uploaded successfully";
+        header("Location: list_notebook.php");
         exit();
         
     } catch (Exception $e) {
@@ -109,10 +120,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['document'])) {
             unlink($target_file);
         }
         
-        header("Location: list_notebook.php?upload=error&msg=" . urlencode($e->getMessage()));
+        $_SESSION['error'] = $e->getMessage();
+        header("Location: list_notebook.php");
         exit();
     }
 } else {
-    header("Location: list_notebook.php?upload=error&msg=Invalid request");
+    $_SESSION['error'] = "Invalid request method";
+    header("Location: list_notebook.php");
     exit();
 }
