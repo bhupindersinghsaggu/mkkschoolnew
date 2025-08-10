@@ -3,10 +3,10 @@ require_once '../config/database.php';
 require_once '../includes/auth_check.php';
 
 // Only allow authenticated users with appropriate permissions
-if ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'teacher') {
-    header("Location: list_notebook.php?upload=error&msg=Unauthorized");
-    exit();
-}
+// if ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'teacher') {
+//     header("Location: list_notebook.php?upload=error&msg=Unauthorized");
+//     exit();
+// }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['document'])) {
     // Validate record_id
