@@ -2,78 +2,32 @@
 ob_start(); // Start output buffering
 require_once '../config/database.php';
 require_once '../includes/header.php';
-session_start();
-
-
-// Only start session if not already started
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-// Modified authentication check
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
-}
-
-// Check if user has appropriate role (admin or teacher)
-if ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'teacher') {
-    header('Location: dashboard.php'); // Redirect to appropriate dashboard
-    exit();
-}
-
-// Get teacher ID from URL
-$teacher_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-
-// Fetch teacher data
-$teacher = [];
-if ($teacher_id > 0) {
-    $query = "SELECT td.*, u.username, u.email 
-              FROM teacher_details td
-              JOIN users u ON td.user_id = u.id
-              WHERE td.id = $teacher_id";
-    $result = mysqli_query($conn, $query);
-    $teacher = mysqli_fetch_assoc($result);
-
-    if (!$teacher) {
-        $_SESSION['error'] = "Teacher not found";
-        header('Location: list_teacher.php');
-        exit();
-    }
-} else {
-    $_SESSION['error'] = "Invalid teacher ID";
-    header('Location: list_teacher.php');
-    exit();
-}
-
 $errors = [];
 $success = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get form data
     $teacher_name = mysqli_real_escape_string($conn, $_POST['teacher_name']);
-    $teacher_id_num = mysqli_real_escape_string($conn, $_POST['teacher_id']);
+    $teacher_id = mysqli_real_escape_string($conn, $_POST['teacher_id']);
     $subject = mysqli_real_escape_string($conn, $_POST['subject']);
     $teacher_type = mysqli_real_escape_string($conn, $_POST['teacher_type']);
     $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
 
     // Validate inputs
     if (empty($teacher_name)) $errors['teacher_name'] = 'Teacher name is required';
-    if (empty($teacher_id_num)) $errors['teacher_id'] = 'Teacher ID is required';
+    if (empty($teacher_id)) $errors['teacher_id'] = 'Teacher ID is required';
     if (empty($subject)) $errors['subject'] = 'Subject is required';
     if (empty($teacher_type)) $errors['teacher_type'] = 'Teacher type is required';
     if (empty($username)) $errors['username'] = 'Username is required';
+    if (empty($password)) $errors['password'] = 'Password is required';
+    if ($password !== $confirm_password) $errors['confirm_password'] = 'Passwords do not match';
     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors['email'] = 'Valid email is required';
 
-    // Only validate passwords if they're provided
-    if (!empty($password)) {
-        if ($password !== $confirm_password) $errors['confirm_password'] = 'Passwords do not match';
-    }
-
     // Handle file upload
-    $profile_pic = $teacher['profile_pic'];
+    $profile_pic = null;
     if (isset($_FILES['profile_pic']) && $_FILES['profile_pic']['error'] === UPLOAD_ERR_OK) {
         $allowed = ['jpg', 'jpeg', 'png'];
         $ext = strtolower(pathinfo($_FILES['profile_pic']['name'], PATHINFO_EXTENSION));
@@ -82,11 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $upload_dir = '../uploads/profile_pics/';
             if (!file_exists($upload_dir)) {
                 mkdir($upload_dir, 0755, true);
-            }
-
-            // Delete old profile picture if exists
-            if ($profile_pic && file_exists($upload_dir . $profile_pic)) {
-                unlink($upload_dir . $profile_pic);
             }
 
             $profile_pic = 'teacher_' . time() . '.' . $ext;
@@ -98,54 +47,49 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $errors['profile_pic'] = 'Only JPG, JPEG, PNG files allowed';
         }
+    } else {
+        $errors['profile_pic'] = 'Profile picture is required';
     }
 
-    // Check if username/email exists (excluding current teacher)
+    // Check if username/email exists
     if (empty($errors)) {
-        $check = mysqli_query($conn, "SELECT id FROM users 
-                                     WHERE (username='$username' OR email='$email') 
-                                     AND id != {$teacher['user_id']}");
+        $check = mysqli_query($conn, "SELECT id FROM users WHERE username='$username' OR email='$email'");
         if (mysqli_num_rows($check) > 0) {
             $errors['general'] = 'Username or email already exists';
         }
     }
 
-    // Update teacher
+    // Register teacher
     if (empty($errors)) {
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
         mysqli_begin_transaction($conn);
 
         try {
-            // Update user
-            $user_sql = "UPDATE users SET 
-                        username = '$username', 
-                        email = '$email'";
-
-            // Only update password if provided
-            if (!empty($password)) {
-                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-                $user_sql .= ", password = '$hashed_password'";
-            }
-
-            $user_sql .= " WHERE id = {$teacher['user_id']}";
+            // Insert user
+            $user_sql = "INSERT INTO users (username, password, email, role) 
+                         VALUES ('$username', '$hashed_password', '$email', 'teacher')";
             mysqli_query($conn, $user_sql);
+            $user_id = mysqli_insert_id($conn);
 
-            // Update teacher details
-            $teacher_sql = "UPDATE teacher_details SET
-                           teacher_name = '$teacher_name',
-                           teacher_id = '$teacher_id_num',
-                           subject = '$subject',
-                           teacher_type = '$teacher_type',
-                           profile_pic = '$profile_pic'
-                           WHERE id = $teacher_id";
+            // Insert teacher details
+            $teacher_sql = "INSERT INTO teacher_details (user_id, teacher_name, teacher_id, subject, teacher_type, profile_pic)
+                           VALUES ($user_id, '$teacher_name', '$teacher_id', '$subject', '$teacher_type', '$profile_pic')";
             mysqli_query($conn, $teacher_sql);
 
             mysqli_commit($conn);
-            $_SESSION['success'] = "Teacher updated successfully";
-            header("Location: list_teacher.php");
+            session_start();
+            $_SESSION['user_id'] = $user_id;
+            $_SESSION['username'] = $username;
+            $_SESSION['role'] = 'teacher';
+            header("Location: register_success.php");
             exit();
         } catch (Exception $e) {
             mysqli_rollback($conn);
-            $errors['general'] = 'Update failed: ' . $e->getMessage();
+            if ($profile_pic && file_exists($destination)) {
+                unlink($destination);
+            }
+            $errors['general'] = 'Registration failed: ' . $e->getMessage();
         }
     }
 }
@@ -157,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Teacher</title>
+    <title>Teacher Registration</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png">
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -182,6 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid #ddd;
+            display: none;
         }
 
         .upload-btn {
@@ -198,12 +143,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="page-wrapper">
         <div class="content mb-3">
-            <div class="container mt-5">
-                <div class="row justify-content-center">
+            <div class="container">
+                <div class="row ">
                     <div class="col-md-8">
                         <div class="card">
                             <div class="card-header bg-primary text-white">
-                                <h3>Edit Teacher</h3>
+                                <h3>Teacher Registration</h3>
                             </div>
                             <div class="card-body">
                                 <?php if (!empty($errors['general'])): ?>
@@ -213,18 +158,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <form method="POST" enctype="multipart/form-data">
                                     <!-- Profile Picture -->
                                     <div class="profile-pic-container">
-                                        <?php if ($teacher['profile_pic']): ?>
-                                            <img id="profilePreview" class="profile-pic-preview"
-                                                src="../uploads/profile_pics/<?= htmlspecialchars($teacher['profile_pic']) ?>"
-                                                alt="Profile Preview">
-                                        <?php else: ?>
-                                            <img id="profilePreview" class="profile-pic-preview"
-                                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23dee2e6'/%3E%3Ctext x='50%' y='50%' fill='%236c757d' font-family='sans-serif' font-size='16' text-anchor='middle' dominant-baseline='middle'%3ENo Image%3C/text%3E%3C/svg%3E"
-                                                alt="Profile Preview">
-                                        <?php endif; ?>
-                                        <input type="file" id="profile_pic" name="profile_pic" accept="image/*" class="d-none">
-                                        <label for="profile_pic" class="upload-btn mt-2">
-                                            <i class="bi bi-camera"></i> Change Photo
+                                        <img id="profilePreview" class="profile-pic-preview" src="#" alt="Profile Preview">
+                                        <input type="file" id="profile_pic" name="profile_pic" accept="image/*" class="d-none" required>
+                                        <label for="profile_pic" class="upload-btn">
+                                            <i class="bi bi-camera"></i> Upload Profile Picture
                                         </label>
                                         <?php if (!empty($errors['profile_pic'])): ?>
                                             <div class="text-danger"><?= $errors['profile_pic'] ?></div>
@@ -235,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <div class="mb-3">
                                         <label class="form-label">Teacher Name</label>
                                         <input type="text" name="teacher_name" class="form-control <?= !empty($errors['teacher_name']) ? 'is-invalid' : '' ?>"
-                                            value="<?= htmlspecialchars($teacher['teacher_name'] ?? ($_POST['teacher_name'] ?? '')) ?>" required>
+                                            value="<?= htmlspecialchars($_POST['teacher_name'] ?? '') ?>" required>
                                         <?php if (!empty($errors['teacher_name'])): ?>
                                             <div class="invalid-feedback"><?= $errors['teacher_name'] ?></div>
                                         <?php endif; ?>
@@ -244,7 +181,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <div class="mb-3">
                                         <label class="form-label">Teacher ID</label>
                                         <input type="text" name="teacher_id" class="form-control <?= !empty($errors['teacher_id']) ? 'is-invalid' : '' ?>"
-                                            value="<?= htmlspecialchars($teacher['teacher_id'] ?? ($_POST['teacher_id'] ?? '')) ?>" required>
+                                            value="<?= htmlspecialchars($_POST['teacher_id'] ?? '') ?>" required>
                                         <?php if (!empty($errors['teacher_id'])): ?>
                                             <div class="invalid-feedback"><?= $errors['teacher_id'] ?></div>
                                         <?php endif; ?>
@@ -253,7 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <div class="mb-3">
                                         <label class="form-label">Subject</label>
                                         <input type="text" name="subject" class="form-control <?= !empty($errors['subject']) ? 'is-invalid' : '' ?>"
-                                            value="<?= htmlspecialchars($teacher['subject'] ?? ($_POST['subject'] ?? '')) ?>" required>
+                                            value="<?= htmlspecialchars($_POST['subject'] ?? '') ?>" required>
                                         <?php if (!empty($errors['subject'])): ?>
                                             <div class="invalid-feedback"><?= $errors['subject'] ?></div>
                                         <?php endif; ?>
@@ -263,10 +200,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <label class="form-label">Teacher Type</label>
                                         <select name="teacher_type" class="form-select <?= !empty($errors['teacher_type']) ? 'is-invalid' : '' ?>" required>
                                             <option value="">Select Type</option>
-                                            <option value="PPRT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'PPRT' ? 'selected' : '' ?>>PPRT</option>
-                                            <option value="PRT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'PRT' ? 'selected' : '' ?>>PRT</option>
-                                            <option value="PGT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'PGT' ? 'selected' : '' ?>>PGT</option>
-                                            <option value="TGT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'TGT' ? 'selected' : '' ?>>TGT</option>
+                                            <option value="PPRT" <?= ($_POST['teacher_type'] ?? '') === 'PPRT' ? 'selected' : '' ?>>PPRT</option>
+                                            <option value="PRT" <?= ($_POST['teacher_type'] ?? '') === 'PRT' ? 'selected' : '' ?>>PRT</option>
+                                            <option value="PGT" <?= ($_POST['teacher_type'] ?? '') === 'PGT' ? 'selected' : '' ?>>PGT</option>
+                                            <option value="TGT" <?= ($_POST['teacher_type'] ?? '') === 'TGT' ? 'selected' : '' ?>>TGT</option>
                                         </select>
                                         <?php if (!empty($errors['teacher_type'])): ?>
                                             <div class="invalid-feedback"><?= $errors['teacher_type'] ?></div>
@@ -277,7 +214,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <div class="mb-3">
                                         <label class="form-label">Username</label>
                                         <input type="text" name="username" class="form-control <?= !empty($errors['username']) ? 'is-invalid' : '' ?>"
-                                            value="<?= htmlspecialchars($teacher['username'] ?? ($_POST['username'] ?? '')) ?>" required>
+                                            value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" required>
                                         <?php if (!empty($errors['username'])): ?>
                                             <div class="invalid-feedback"><?= $errors['username'] ?></div>
                                         <?php endif; ?>
@@ -286,32 +223,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <div class="mb-3">
                                         <label class="form-label">Email</label>
                                         <input type="email" name="email" class="form-control <?= !empty($errors['email']) ? 'is-invalid' : '' ?>"
-                                            value="<?= htmlspecialchars($teacher['email'] ?? ($_POST['email'] ?? '')) ?>" required>
+                                            value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" required>
                                         <?php if (!empty($errors['email'])): ?>
                                             <div class="invalid-feedback"><?= $errors['email'] ?></div>
                                         <?php endif; ?>
                                     </div>
 
                                     <div class="mb-3">
-                                        <label class="form-label">New Password (leave blank to keep current)</label>
-                                        <input type="password" name="password" class="form-control <?= !empty($errors['password']) ? 'is-invalid' : '' ?>">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" name="password" class="form-control <?= !empty($errors['password']) ? 'is-invalid' : '' ?>" required>
                                         <?php if (!empty($errors['password'])): ?>
                                             <div class="invalid-feedback"><?= $errors['password'] ?></div>
                                         <?php endif; ?>
                                     </div>
 
                                     <div class="mb-3">
-                                        <label class="form-label">Confirm New Password</label>
-                                        <input type="password" name="confirm_password" class="form-control <?= !empty($errors['confirm_password']) ? 'is-invalid' : '' ?>">
+                                        <label class="form-label">Confirm Password</label>
+                                        <input type="password" name="confirm_password" class="form-control <?= !empty($errors['confirm_password']) ? 'is-invalid' : '' ?>" required>
                                         <?php if (!empty($errors['confirm_password'])): ?>
                                             <div class="invalid-feedback"><?= $errors['confirm_password'] ?></div>
                                         <?php endif; ?>
                                     </div>
 
-                                    <div class="d-grid gap-2">
-                                        <button type="submit" class="btn btn-primary">Update Teacher</button>
-                                        <a href="list_teacher.php" class="btn btn-secondary">Cancel</a>
-                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Register</button>
                                 </form>
                             </div>
                         </div>
@@ -319,7 +253,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
             <script>
                 // Profile picture preview
                 document.getElementById('profile_pic').addEventListener('change', function(e) {
@@ -330,6 +263,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         const reader = new FileReader();
                         reader.onload = function(e) {
                             preview.src = e.target.result;
+                            preview.style.display = 'block';
                         }
                         reader.readAsDataURL(file);
                     }
@@ -338,6 +272,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
 </body>
+
 </html>
 <?php
 ob_end_flush(); // Send the output

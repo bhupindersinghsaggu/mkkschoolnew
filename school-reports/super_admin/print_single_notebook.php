@@ -10,9 +10,10 @@ if (!$id) {
 }
 
 // Fetch record from records + photo from teachers table
-$query = "SELECT r.*, t.photo 
+
+$query = "SELECT r.*, td.profile_pic 
           FROM records r 
-          LEFT JOIN teachers t ON r.teacher_id = t.teacher_id 
+          LEFT JOIN teacher_details td ON r.teacher_id = td.teacher_id 
           WHERE r.id = $id 
           LIMIT 1";
 $result = mysqli_query($conn, $query);
@@ -109,18 +110,18 @@ if (!$row) {
             <h2>Dr. M.K.K. Arya Model School</h2>
             <p>Model Town, Panipat</p>
         </div>
-
-
         <table class="table table-bordered">
             <tbody>
                 <tr>
                     <td rowspan="5" style="text-align: center; vertical-align: middle; width: 130px;">
                         <?php
-                        $photo_path = "../uploads/" . $row['photo'];
-                        if (!empty($row['photo']) && file_exists($photo_path)) {
+                        $photo_path = '../uploads/profile_pics/' . ($row['profile_pic'] ?? '');
+                        if (!empty($row['profile_pic']) && file_exists($photo_path)) {
                             echo "<img src='$photo_path' class='teacher-photo' alt='Teacher Photo'>";
                         } else {
-                            echo "<p><strong>No Photo</strong></p>";
+                            echo "<div class='teacher-photo d-flex align-items-center justify-content-center bg-light'>
+                <i class='fas fa-user fa-3x text-muted'></i>
+              </div>";
                         }
                         ?>
                     </td>

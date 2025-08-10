@@ -3,7 +3,7 @@
 require_once '../config/functions.php';
 ?>
 
-<nav class="navbar">
+<!-- <nav class="navbar">
     <div class="container">
         <a href="#" class="logo">School Admin</a>
         <ul class="nav-links">
@@ -25,7 +25,7 @@ require_once '../config/functions.php';
             <?php endif; ?>
         </ul>
     </div>
-</nav>
+</nav> -->
 <!-- Logout Modal -->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
