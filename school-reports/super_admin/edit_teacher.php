@@ -5,21 +5,6 @@ require_once '../includes/header.php';
 session_start();
 
 
-// Only start session if not already started
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-// Modified authentication check
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
-}
-
-// Check if user has appropriate role (admin or teacher)
-if ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'teacher') {
-    header('Location: dashboard.php'); // Redirect to appropriate dashboard
-    exit();
-}
 
 // Get teacher ID from URL
 $teacher_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
