@@ -4,7 +4,7 @@
 $host = 'localhost';
 $dbname = 'u315669183_school_reports';
 $username = 'u315669183_school_reports';
-$password = 'l2>C@]h|k';
+$password = '*5Qav00XB|';
 $conn = new mysqli($host, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
