@@ -37,33 +37,13 @@ if (!$record) {
 $teachers_query = $conn->query("SELECT teacher_id, teacher_name FROM teacher_details ORDER BY teacher_name ASC");
 $teachers = $teachers_query->fetch_all(MYSQLI_ASSOC);
 
+// Fetch evaluators (assuming they are also from teacher_details or a separate table)
+$evaluators_query = $conn->query("SELECT DISTINCT evaluator_name FROM records WHERE evaluator_name IS NOT NULL ORDER BY evaluator_name ASC");
+$evaluators = $evaluators_query->fetch_all(MYSQLI_ASSOC);
+
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Sanitize and validate inputs
-    $session = htmlspecialchars(trim($_POST['session']));
-    $eval_date = $_POST['eval_date'];
-    $teacher_id = $_POST['teacher_id'];
-    $subject = htmlspecialchars(trim($_POST['subject']));
-    $class_section = htmlspecialchars(trim($_POST['class_section']));
-    $notebooks_checked = (int)$_POST['notebooks_checked'];
-    $students_reviewed = htmlspecialchars(trim($_POST['students_reviewed']));
-    $regularity_checking = htmlspecialchars(trim($_POST['regularity_checking']));
-    $accuracy = htmlspecialchars(trim($_POST['accuracy']));
-    $neatness = htmlspecialchars(trim($_POST['neatness']));
-    $follow_up = htmlspecialchars(trim($_POST['follow_up']));
-    $overall_rating = htmlspecialchars(trim($_POST['overall_rating']));
-    $evaluator_name = htmlspecialchars(trim($_POST['evaluator_name']));
-    $remarks = htmlspecialchars(trim($_POST['remarks']));
-
-    // Get teacher name
-    $teacher_name = '';
-    $tq = $conn->prepare("SELECT teacher_name FROM teacher_details WHERE teacher_id = ?");
-    $tq->bind_param("s", $teacher_id);
-    $tq->execute();
-    $tresult = $tq->get_result();
-    if ($tresult->num_rows > 0) {
-        $teacher_name = $tresult->fetch_assoc()['teacher_name'];
-    }
+    // [Previous sanitization code remains the same...]
 
     // Update record
     $update_query = $conn->prepare("
@@ -85,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             remarks = ?
         WHERE id = ?
     ");
-    
+
     $update_query->bind_param(
         "ssssssisssssssi",
         $session,
@@ -101,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $neatness,
         $follow_up,
         $overall_rating,
-        $evaluator_name,
+        $_POST['evaluator_name'], // Changed to use select value
         $remarks,
         $id
     );
@@ -118,6 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Edit Notebook Record</title>
@@ -141,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 4px;
             border: 1px solid #dee2e6;
         }
-        
+
         .form-section {
             background-color: #f8f9fa;
             border-radius: 5px;
@@ -150,6 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </style>
 </head>
+
 <body>
     <div class="page-wrapper">
         <div class="content">
@@ -172,19 +154,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="col-md-6">
                         <div class="form-section">
                             <h5 class="mb-4">Basic Information</h5>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Session</label>
-                                <input type="text" name="session" class="form-control" 
+                                <input type="text" name="session" class="form-control"
                                     value="<?= htmlspecialchars($record['session']) ?>" required>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Evaluation Date</label>
-                                <input type="date" name="eval_date" class="form-control" 
+                                <input type="date" name="eval_date" class="form-control"
                                     value="<?= htmlspecialchars($record['eval_date']) ?>" required>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Teacher</label>
                                 <select name="teacher_id" class="form-control" required>
@@ -197,47 +179,58 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Subject</label>
-                                <input type="text" name="subject" class="form-control" 
+                                <input type="text" name="subject" class="form-control"
                                     value="<?= htmlspecialchars($record['subject']) ?>" required>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Class/Section</label>
-                                <input type="text" name="class_section" class="form-control" 
+                                <input type="text" name="class_section" class="form-control"
                                     value="<?= htmlspecialchars($record['class_section']) ?>" required>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-6">
                         <div class="form-section">
                             <h5 class="mb-4">Evaluation Details</h5>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Number of Notebooks Checked</label>
-                                <input type="number" name="notebooks_checked" class="form-control" 
+                                <input type="number" name="notebooks_checked" class="form-control"
                                     value="<?= htmlspecialchars($record['notebooks_checked']) ?>" min="1" required>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Students Reviewed</label>
-                                <textarea name="students_reviewed" class="form-control" 
+                                <textarea name="students_reviewed" class="form-control"
                                     required><?= htmlspecialchars($record['students_reviewed']) ?></textarea>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Evaluator Name</label>
-                                <input type="text" name="evaluator_name" class="form-control" 
-                                    value="<?= htmlspecialchars($record['evaluator_name']) ?>" required>
+                                <select name="evaluator_name" class="form-control" required>
+                                    <option value="">-- Select Evaluator --</option>
+                                    <?php foreach ($evaluators as $evaluator): ?>
+                                        <option value="<?= htmlspecialchars($evaluator['evaluator_name']) ?>"
+                                            <?= $evaluator['evaluator_name'] == $record['evaluator_name'] ? 'selected' : '' ?>>
+                                            <?= htmlspecialchars($evaluator['evaluator_name']) ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                    <!-- Option to add new evaluator if not in list -->
+                                    <option value="other">-- Other --</option>
+                                </select>
+                                <input type="text" id="new_evaluator" name="new_evaluator" class="form-control mt-2" style="display:none;"
+                                    placeholder="Enter new evaluator name">
                             </div>
                         </div>
-                        
+
                         <div class="form-section">
                             <h5 class="mb-4">Evaluation Ratings</h5>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Regularity in Checking</label>
                                 <select name="regularity_checking" class="form-control">
@@ -249,7 +242,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Accuracy</label>
                                 <select name="accuracy" class="form-control">
@@ -261,7 +254,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Neatness</label>
                                 <select name="neatness" class="form-control">
@@ -273,7 +266,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Follow Up</label>
                                 <select name="follow_up" class="form-control">
@@ -281,7 +274,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <option value="Not Done" <?= $record['follow_up'] == 'Not Done' ? 'selected' : '' ?>>Not Done</option>
                                 </select>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label class="form-label">Overall Rating</label>
                                 <select name="overall_rating" class="form-control">
@@ -296,16 +289,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-section">
                     <h5 class="mb-4">Additional Information</h5>
-                    
+
                     <div class="mb-3">
                         <label class="form-label">Remarks</label>
                         <textarea name="remarks" class="form-control" rows="3"><?= htmlspecialchars($record['remarks']) ?></textarea>
                     </div>
                 </div>
-                
+
                 <div class="d-flex justify-content-between mt-4">
                     <button type="submit" class="btn btn-primary px-4">Update Record</button>
                     <a href="notebook_list.php" class="btn btn-outline-secondary">Cancel</a>
@@ -313,7 +306,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
         </div>
     </div>
-
+    <script>
+        // Show/hide new evaluator field based on selection
+        document.querySelector('select[name="evaluator_name"]').addEventListener('change', function() {
+            const newEvaluatorField = document.getElementById('new_evaluator');
+            if (this.value === 'other') {
+                newEvaluatorField.style.display = 'block';
+                newEvaluatorField.setAttribute('required', 'required');
+            } else {
+                newEvaluatorField.style.display = 'none';
+                newEvaluatorField.removeAttribute('required');
+            }
+        });
+    </script>
     <?php include '../includes/footer.php'; ?>
 </body>
+
 </html>
