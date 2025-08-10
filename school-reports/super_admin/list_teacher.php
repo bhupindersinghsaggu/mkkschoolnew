@@ -69,7 +69,7 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
         <div class="content">
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3 class="">Add Teacher</h3>
-                <a href="add.php" class="btn btn-secondary">Add Teacher</a></h3>
+                <a href="add_teacher.php" class="btn btn-secondary">Add Teacher</a></h3>
             </div>
             <table class="table table-bordered mt-4">
                 <thead>
