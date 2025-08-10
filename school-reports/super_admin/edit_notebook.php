@@ -1,14 +1,8 @@
-
 <?php
-// Start session only if not already started
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-// ... rest of your code
-
 
 require_once '../config/database.php';
 require_once '../includes/auth_check.php';
