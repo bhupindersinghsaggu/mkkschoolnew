@@ -34,10 +34,11 @@ $total = $count_query->get_result()->fetch_assoc()['total'];
 $total_pages = ceil($total / $limit);
 
 // Fetch records with teacher photos and documents
+// Change your query to:
 $query = $conn->prepare("
-    SELECT r.*, t.photo, r.document 
+    SELECT r.*, td.profile_pic, r.document 
     FROM records r
-    LEFT JOIN teachers t ON r.teacher_id = t.teacher_id
+    LEFT JOIN teacher_details td ON r.teacher_id = td.teacher_id
     $where
     ORDER BY r.id DESC 
     LIMIT ?, ?
@@ -190,10 +191,18 @@ $result = $query->get_result();
                             <tr>
                                 <td><?= $count++ ?></td>
                                 <td>
-                                    <?php if (!empty($row['photo']) && file_exists('../uploads/' . $row['photo'])): ?>
-                                        <img src="../uploads/<?= $row['photo'] ?>" alt="Photo" class="teacher-thumb">
+                                    <?php
+                                    $photoPath = '../uploads/profile_pics/' . ($row['profile_pic'] ?? '');
+
+                                    if (!empty($row['profile_pic']) && file_exists($photoPath)): ?>
+                                        <img src="<?= htmlspecialchars($photoPath) ?>"
+                                            alt="<?= htmlspecialchars($row['teacher_name']) ?>"
+                                            class="teacher-thumb"
+                                            onerror="this.onerror=null;this.src='../assets/img/default-profile.jpg'">
                                     <?php else: ?>
-                                        <span>No Photo</span>
+                                        <div class="teacher-thumb bg-light d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-user text-muted"></i>
+                                        </div>
                                     <?php endif; ?>
                                 </td>
                                 <td><?= $row['session'] ?></td>
@@ -277,7 +286,7 @@ $result = $query->get_result();
                 </table>
             </div>
             <div class="header-button mt-4">
-                <a href="add.php" class="btn btn-success">Back</a></h3>
+                <a href="add_notebook.php" class="btn btn-success">Back</a></h3>
             </div>
             <!-- Pagination -->
             <nav class="mt-4">

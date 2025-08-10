@@ -3,7 +3,7 @@
 ob_start(); // Start output buffering
 require_once '../config/database.php';
 require_once '../includes/header.php';
-session_start();
+
 
 // Modified authentication check
 if (!isset($_SESSION['user_id'])) {
@@ -72,7 +72,6 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher List</title>
-    <title>Add Notebook Review</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png">
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -112,7 +111,7 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2 class="mb-0 mt-4">Teacher Management</h2>
                     <a href="register_teacher.php" class="btn btn-primary mt-4">
-                        <i class="bi bi-plus-lg"></i> Add New Teacher
+                        <i class="bi bi-plus-lg"></i> Add 
                     </a>
                 </div>
 

@@ -277,7 +277,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label class="form-check-label" for="undertaking">Undertaking</label>
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
-                                <a href="add_notebook.php" class="btn btn-secondary">Back</a>
+                                <a href="./dashboard.php" class="btn btn-secondary">Back</a>
                             </div>
                         </div>
                     </div>
