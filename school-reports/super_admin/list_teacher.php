@@ -5,17 +5,7 @@ require_once '../config/database.php';
 require_once '../includes/header.php';
 
 
-// Modified authentication check
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
-}
 
-// Check if user has appropriate role (admin or teacher)
-if ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'teacher') {
-    header('Location: dashboard.php'); // Redirect to appropriate dashboard
-    exit();
-}
 // Handle teacher deletion
 if (isset($_GET['delete'])) {
     $teacher_id = intval($_GET['delete']);
