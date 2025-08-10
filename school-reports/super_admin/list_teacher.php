@@ -34,8 +34,10 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
 
     <style>
         .teacher-thumb {
-            max-width: 80px;
+            width: 50px;
+            height: 50px;
         }
+
 
         .action-buttons {
             display: inline-flex;
@@ -87,7 +89,7 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
                                 <?php
                                 $photo_path = '../uploads/' . $row['photo'];
                                 if (!empty($row['photo']) && file_exists($photo_path)): ?>
-                                    <img src="<?= $photo_path ?>" class="teacher-thumb" alt="Photo"
+                                    <img src="<?= $photo_path ?>" class="teacher-thumb " alt="Photo"
                                         <?php else: ?>
                                         <span>No photo</span>
                                 <?php endif; ?>
@@ -117,7 +119,7 @@ $result = mysqli_query($conn, "SELECT * FROM teachers ORDER BY id DESC");
         </div>
     </div>
 
- <?php include '../includes/footer.php'; ?>
+    <?php include '../includes/footer.php'; ?>
 </body>
 
 </html>
