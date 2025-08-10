@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['document'])) {
         $old_file = $record['document'] ?? null;
 
         // File upload handling
-        $target_dir = __DIR__ . "/../uploads/teacher_documents/";
+        $target_dir = "/../uploads/teacher_documents/";
         if (!file_exists($target_dir)) {
             if (!mkdir($target_dir, 0755, true)) {
                 throw new Exception("Failed to create upload directory");
