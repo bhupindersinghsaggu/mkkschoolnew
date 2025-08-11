@@ -5,8 +5,8 @@ ini_set('display_errors', 1);
 session_start();
 require_once '../config/database.php';
 require_once '../includes/auth_check.php';
-require_once '../teacher/header.php';
-require_once '../teacher//side-bar.php';
+require_once  '/teacher/header.php';
+require_once  '/teacher/side-bar.php';
 
 
 // Check if teacher is logged in
@@ -125,7 +125,7 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
     </style>
 </head>
 <body>
-    <?php include('teacher_header.php'); ?>
+  
     
     <div class="container py-4">
         <div class="row">
@@ -257,7 +257,7 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
         </div>
     </div>
 
-    <?php include('teacher_footer.php'); ?>
+  
     
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -274,6 +274,5 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
 </html>
 </div>
 
-
-<?php require_once 'teacher-footer-icon.php'; ?>
-<?php require_once 'footer.php'; ?>
+<?php require_once '/teacher-footer-icon.php'; ?>
+<?php require_once '/footer.php'; ?>
