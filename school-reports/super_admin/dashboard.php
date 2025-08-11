@@ -18,7 +18,7 @@ require_once '../includes/header.php';
             </div> -->
         </div>
         <div class="row">
-            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="col-xl-6 col-sm-6 col-12 d-flex">
                 <div class="card bg-primary sale-widget flex-fill">
                     <div class="card-body d-flex align-items-center">
                         <span class="sale-icon bg-white text-primary">
@@ -46,7 +46,7 @@ require_once '../includes/header.php';
                 </div>
 
             </div>
-            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="col-xl-6 col-sm-6 col-12 d-flex">
                 <div class="card bg-secondary sale-widget flex-fill">
                     <div class="card-body d-flex align-items-center">
                         <span class="sale-icon bg-white text-secondary">
