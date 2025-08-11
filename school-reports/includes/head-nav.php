@@ -37,7 +37,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : '';
 
         <div class="logout d-flex ">
             <a href="../auth/logout.php" class="btn btn-secondary me-2 logout-link" onclick="return confirmLogout()">Logout
-               echo htmlspecialchars($username); ?>
+             (<?php echo htmlspecialchars($username); ?>)
             </a>
         </div>
     </div>
