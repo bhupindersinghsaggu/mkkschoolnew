@@ -43,10 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.K.K. School - Login</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/theme-script.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
     <!-- Favicon -->
@@ -75,54 +77,70 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-
-    <body class="bg-light">
-        <div class="container">
-            <div class="row justify-content-center align-items-center min-vh-100">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card shadow p-4">
-                        <div class="text-center mb-4">
-                            <img src="../assets/img/logo-small.png" alt="logo" class="img-fluid mb-2" style="max-width: 100px;">
-                            <h4 class="fw-bold">Sign In</h4>
-                        </div>
-
-                        <?php if (isset($error)): ?>
-                            <div class="alert alert-danger"><?php echo $error; ?></div>
-                        <?php endif; ?>
-
-                        <form method="POST">
-                            <div class="mb-3">
-                                <label class="form-label">Username <span class="text-danger">*</span></label>
-                                <div class="input-group">
-                                    <input type="text" name="username" class="form-control" required>
-                                    <span class="input-group-text"><i class="ti ti-mail"></i></span>
+    <div class="login-container">
+        <div class="main-wrapper">
+            <div class="account-content">
+                <div class="login-wrapper bg-img">
+                    <div class="login-content authent-content">
+                        <div class="login-userset">
+                            <div class="login-logo logo-normal">
+                                <img src="../assets/img/logo-small.png" alt="img">
+                            </div>
+                            <!-- <h3>Dr. M.K.K. Arya Model School</h3> -->
+                            <a href="login.php" class="login-logo logo-white">
+                                <img src="../assets/img/logo-white.svg" alt="Img">
+                            </a> <?php if (isset($error)): ?>
+                                <div class="alert alert-danger"><?php echo $error; ?></div>
+                            <?php endif; ?>
+                            <form method="POST">
+                                <div class="login-userheading">
+                                    <h3>Sign In</h3>
                                 </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Password <span class="text-danger">*</span></label>
-                                <div class="input-group">
-                                    <input type="password" name="password" class="form-control" required>
-                                    <span class="input-group-text toggle-password"><i class="ti ti-eye-off"></i></span>
+                                <div class="mb-3">
+                                    <label class="form-label">Username <span class="text-danger"> *</span></label>
+                                    <div class="input-group">
+                                        <input type="text" name="username" value="" class="form-control border-end-0">
+                                        <span class="input-group-text border-start-0">
+                                            <i class="ti ti-mail"></i>
+                                        </span>
+                                    </div>
                                 </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password <span class="text-danger"> *</span></label>
+                                    <div class="pass-group">
+                                        <input type="password" name="password" class="pass-input form-control">
+                                        <span class="ti toggle-password ti-eye-off text-gray-9"></span>
+                                    </div>
+                                </div>
+                                <div class="form-login authentication-check">
+                                    <div class="row">
+                                        <div class="col-12 d-flex align-items-center justify-content-between">
+                                            <div class="custom-control custom-checkbox">
+                                                <label class="checkboxs ps-4 mb-0 pb-0 line-height-1 fs-16 text-gray-6">
+                                                    <input type="checkbox" class="form-control">
+                                                    <span class="checkmarks"></span>Remember me
+                                                </label>
+                                            </div>
+                                            <div class="text-end">
+                                                <a class="text-orange fs-16 fw-medium" href="forgot-password.html">Forgot Password?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-login">
+                                    <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                                </div>
+                            </form>
+                            <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
+                                <p>Copyright © MKK School. Developed By Bhupinder Singh (IT Department)</p>
                             </div>
-
-                            <div class="form-check mb-3">
-                                <input type="checkbox" class="form-check-input" id="rememberMe">
-                                <label class="form-check-label" for="rememberMe">Remember me</label>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary w-100">Sign In</button>
-                        </form>
-
-                        <div class="mt-4 text-center small text-muted">
-                            © MKK School. Developed by Bhupinder Singh (IT Department)
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
 
+</body>
 
 </html>
