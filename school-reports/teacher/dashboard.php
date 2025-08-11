@@ -191,5 +191,5 @@ require_once '../teacher/side-bar.php';
 </div>
 
 
-
+<?php require_once '../includes/footer-icon.php'; ?>
 <?php require_once '../includes/footer.php'; ?>
