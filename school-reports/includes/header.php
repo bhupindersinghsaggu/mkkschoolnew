@@ -36,7 +36,6 @@
     <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    
     <!-- Main fontawsome -->
 </head>
 <body>
