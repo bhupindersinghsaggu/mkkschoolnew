@@ -1,14 +1,14 @@
  <div class="sidebar" id="sidebar">
      <div class="sidebar-logo active">
-         <a href="../super_admin/dashboard.php" class="logo logo-normal">
+         <!-- <a href="../super_admin/dashboard.php" class="logo logo-normal"> -->
               <h3>M.K.K. School</h3>
-         </a>
-         <a href="../super_admin/dashboard.php" class="logo logo-white">
+         <!-- </a> -->
+         <!-- <a href="../super_admin/dashboard.php" class="logo logo-white"> -->
               <h3>M.K.K. School</h3>
-         </a>
-         <a href="../super_admin/dashboard.php" class="logo-small">
+         <!-- </a> -->
+         <!-- <a href="../super_admin/dashboard.php" class="logo-small"> -->
               <h3>M.K.K. School</h3>
-         </a>
+         <!-- </a> -->
          <a id="toggle_btn" href="javascript:void(0);">
              <i data-feather="chevrons-left" class="feather-16"></i>
          </a>
