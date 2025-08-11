@@ -43,14 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>M.K.K. School - Login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="../assets/js/theme-script.js" type="text/javascript"></script>
+    <script src="../assets/js/theme-script.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
     <!-- Apple Touch Icon -->
@@ -73,21 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Color Picker Css -->
     <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
     <!-- Main CSS -->
-   <style>@media (max-width: 767px) {
-    .login-container {
-        padding: 15px;
-    }
-    .login-userset {
-        padding: 20px;
-    }
-    .input-group, .pass-group {
-        flex-direction: column;
-    }
-    .input-group-text, .toggle-password {
-        width: 100%;
-        justify-content: center;
-    }
-}</style>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -97,12 +81,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="login-wrapper bg-img">
                     <div class="login-content authent-content">
                         <div class="login-userset">
-                            <!-- <div class="login-logo logo-normal">
+                            <div class="login-logo logo-normal">
                                 <img src="../assets/img/logo-small.png" alt="img">
-                            </div> -->
+                            </div>
                             <!-- <h3>Dr. M.K.K. Arya Model School</h3> -->
-                           
-                            <?php if (isset($error)): ?>
+                            <a href="login.php" class="login-logo logo-white">
+                                <img src="../assets/img/logo-white.svg" alt="Img">
+                            </a> <?php if (isset($error)): ?>
                                 <div class="alert alert-danger"><?php echo $error; ?></div>
                             <?php endif; ?>
                             <form method="POST">

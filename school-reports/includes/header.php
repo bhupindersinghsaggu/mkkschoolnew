@@ -1,10 +1,12 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
 <!DOCTYPE html>
 <html lang="en" data-layout-mode="light_mode">
-
 <head>
     <!-- Meta Tags -->
     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Dreams POS is a powerful Bootstrap based Inventory Management Admin Template designed for businesses, offering seamless invoicing, project tracking, and estimates.">
     <meta name="keywords"
@@ -12,7 +14,7 @@
     <meta name="author" content="Dreams Technologies">
     <meta name="robots" content="index, follow">
     <title>M.K.K. School</title>
-    <script src="../assets/js/theme-script.js" type="text/javascript"></script>
+    <script src="../assets/js/theme-script.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
     <!-- Apple Touch Icon -->
@@ -37,23 +39,7 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Main fontawsome -->
-       <style>@media (max-width: 767px) {
-    .login-container {
-        padding: 15px;
-    }
-    .login-userset {
-        padding: 20px;
-    }
-    .input-group, .pass-group {
-        flex-direction: column;
-    }
-    .input-group-text, .toggle-password {
-        width: 100%;
-        justify-content: center;
-    }
-}</style>
 </head>
-
 <body>
     <div class="main-wrapper">
         <!-- Header -->
@@ -61,3 +47,4 @@
         <!-- /Header -->
         <!-- Sidebar -->
         <?php include('side-bar.php') ?>
+      
