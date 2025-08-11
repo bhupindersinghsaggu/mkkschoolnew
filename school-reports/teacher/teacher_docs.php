@@ -210,7 +210,7 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
                         </div>
                         <!-- Documents List -->
                     </div>
-                    <div class="col-mb-6">
+                    <div class="col-md-6">
                         <h4 class="mb-3">Your Uploaded Documents</h4>
 
                         <?php if (empty($documents)): ?>
