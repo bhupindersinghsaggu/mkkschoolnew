@@ -105,8 +105,8 @@ require_once '../teacher/side-bar.php';
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header bg-info text-white">
-                            <h5>My Notebook Review Documents</h5>
+                        <div class="card-header bg-info ">
+                            <h5 class="text-white">My Notebook Review Documents</h5>
                         </div>
                         <div class="card-body">
                             <?php
