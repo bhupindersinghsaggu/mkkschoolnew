@@ -88,24 +88,5 @@ require_once '../includes/header.php';
         return confirm('Are you sure you want to logout?');
     }
 </script>
-<div class="container">
-    <h1>Super Admin Dashboard</h1>
-    <div class="dashboard-cards">
-        <div class="card">
-            <h3>Total Teachers</h3>
-            <p>
-                <?php
-                $stmt = $pdo->query("SELECT COUNT(*) FROM users WHERE role = 'teacher'");
-                echo $stmt->fetchColumn();
-                ?>
-                <li>
-                    <a href="../auth/logout.php" class="logout-link" onclick="return confirmLogout()">
-                        Logout (<?php echo htmlspecialchars($_SESSION['username']); ?>)
-                    </a>
-                </li>
-            </p>
-        </div>
-    </div>
-</div>
 
 <?php require_once '../includes/footer.php'; ?>
