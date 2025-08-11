@@ -72,7 +72,7 @@ require_once '../teacher/side-bar.php';
                                 <h5 class="mb-0">Teacher Information</h5>
                             </div>
                             <div class="card-body p-0">
-                                <table class="table table-borderless mb-0">
+                                <table class="table  mb-0">
                                     <tbody>
                                         <tr>
                                             <th width="30%">Teacher ID</th>
