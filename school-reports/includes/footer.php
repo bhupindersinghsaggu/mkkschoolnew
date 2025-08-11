@@ -61,7 +61,7 @@
 	</div>
 </div>
 <!-- /Add Stock -->
-<?php include('../includes/footer-icon.php') ?>
+
 <!-- jQuery -->
 <script src="../assets/js/jquery-3.7.1.min.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
 <!-- Feather Icon JS -->
