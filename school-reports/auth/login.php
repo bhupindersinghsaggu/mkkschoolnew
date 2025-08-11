@@ -89,7 +89,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <!-- <h3>Dr. M.K.K. Arya Model School</h3> -->
                             <a href="login.php" class="login-logo logo-white">
                                 <img src="../assets/img/logo-white.svg" alt="Img">
-                            </a> <?php if (isset($error)): ?>
+                            </a> 
+                            <?php if (isset($error)): ?>
                                 <div class="alert alert-danger"><?php echo $error; ?></div>
                             <?php endif; ?>
                             <form method="POST">
