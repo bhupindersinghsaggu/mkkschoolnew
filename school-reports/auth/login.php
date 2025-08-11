@@ -71,70 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Color Picker Css -->
     <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
     <!-- Main CSS -->
-    <style>
-        /* Mobile-first responsive styles */
-        .login-container {
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-        
-        .login-card {
-            width: 100%;
-            max-width: 450px;
-            margin: 0 auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        .login-header {
-            background: #4e73df;
-            padding: 2rem;
-            text-align: center;
-            color: white;
-        }
-        
-        .login-body {
-            padding: 2rem;
-            background: white;
-        }
-        
-        .form-control {
-            height: 50px;
-            font-size: 16px;
-            border-radius: 8px;
-        }
-        
-        .btn-login {
-            height: 50px;
-            font-size: 1.1rem;
-            border-radius: 8px;
-        }
-        
-        /* Mobile-specific adjustments */
-        @media (max-width: 576px) {
-            .login-container {
-                padding: 0;
-                background: white;
-            }
-            
-            .login-card {
-                border-radius: 0;
-                box-shadow: none;
-            }
-            
-            .login-header {
-                padding: 1.5rem;
-            }
-            
-            .login-body {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    
 </head>
 
 <body>
