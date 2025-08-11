@@ -57,7 +57,7 @@ require_once '../teacher/side-bar.php';
 
                             <h4><?php echo htmlspecialchars($teacher['teacher_name'] ?? 'Teacher Name'); ?></h4>
                             <p class="text-muted"><?php echo htmlspecialchars($teacher['teacher_type'] ?? 'Teacher Type'); ?></p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -88,12 +88,104 @@ require_once '../teacher/side-bar.php';
                             <?php if (!empty($teacher['address'])): ?>
                                 <p><strong>Address:</strong> <?php echo htmlspecialchars($teacher['address']); ?></p>
                             <?php endif; ?>
+                            <div class="card">
+                                <div class="card-header bg-info text-white">
+                                    <h5>My Notebook Review Documents</h5>
+                                </div>
+                                <div class="card-body">
+                                    <?php
+                                    // Get documents for this teacher
+                                    $teacher_id = $teacher['teacher_id'];
+                                    $documents_query = "SELECT r.id, r.eval_date, r.document, r.class_section, r.subject 
+                              FROM records r
+                              WHERE r.teacher_id = ? AND r.document IS NOT NULL
+                              ORDER BY r.eval_date DESC";
+                                    $stmt = mysqli_prepare($conn, $documents_query);
+                                    mysqli_stmt_bind_param($stmt, "s", $teacher_id);
+                                    mysqli_stmt_execute($stmt);
+                                    $documents = mysqli_stmt_get_result($stmt);
+
+                                    if (mysqli_num_rows($documents) > 0): ?>
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Class</th>
+                                                        <th>Subject</th>
+                                                        <th>Document</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php while ($doc = mysqli_fetch_assoc($documents)):
+                                                        $docPath = '../uploads/teacher_documents/' . htmlspecialchars(basename($doc['document']));
+                                                        $fileExists = file_exists($docPath) && is_file($docPath);
+                                                    ?>
+                                                        <tr>
+                                                            <td><?= date('d M Y', strtotime($doc['eval_date'])) ?></td>
+                                                            <td><?= htmlspecialchars($doc['class_section']) ?></td>
+                                                            <td><?= htmlspecialchars($doc['subject']) ?></td>
+                                                            <td>
+                                                                <?php if ($fileExists):
+                                                                    $fileExt = strtolower(pathinfo($docPath, PATHINFO_EXTENSION));
+                                                                    $iconClass = [
+                                                                        'pdf' => 'fa-file-pdf text-danger',
+                                                                        'jpg' => 'fa-file-image text-primary',
+                                                                        'jpeg' => 'fa-file-image text-primary',
+                                                                        'png' => 'fa-file-image text-primary',
+                                                                        'doc' => 'fa-file-word text-primary',
+                                                                        'docx' => 'fa-file-word text-primary',
+                                                                    ][$fileExt] ?? 'fa-file text-secondary';
+                                                                ?>
+                                                                    <i class="fas <?= $iconClass ?> me-2"></i>
+                                                                    <?= htmlspecialchars(basename($doc['document'])) ?>
+                                                                <?php else: ?>
+                                                                    <span class="text-danger">File missing</span>
+                                                                <?php endif; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php if ($fileExists): ?>
+                                                                    <a href="<?= $docPath ?>" target="_blank" class="btn btn-sm btn-info" title="View">
+                                                                        <i class="fas fa-eye"></i>
+                                                                    </a>
+                                                                    <a href="<?= $docPath ?>" download class="btn btn-sm btn-secondary" title="Download">
+                                                                        <i class="fas fa-download"></i>
+                                                                    </a>
+                                                                    <button onclick="printDocument('<?= $docPath ?>')" class="btn btn-sm btn-primary" title="Print">
+                                                                        <i class="fas fa-print"></i>
+                                                                    </button>
+                                                                <?php endif; ?>
+                                                            </td>
+                                                        </tr>
+                                                    <?php endwhile; ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    <?php else: ?>
+                                        <div class="alert alert-info">No notebook review documents found.</div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                         </div>
+
+                        <script>
+                            function printDocument(filePath) {
+                                // Open the document in a new window and print
+                                let printWindow = window.open(filePath, '_blank');
+                                printWindow.onload = function() {
+                                    printWindow.print();
+                                };
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
+
+
 
 <?php require_once '../includes/footer.php'; ?>

@@ -3,12 +3,15 @@
 require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
 ?>
-
-<div class="container mt-5">
-    <div class="alert alert-success text-center">
-        <h4>Registration Successful!</h4>
-        <p>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
-        <a href="../super_admin/dashboard.php" class="btn btn-primary">Go to Dashboard</a>
+<div class="page-wrapper">
+    <div class="content mb-3">
+        <div class="container mt-5">
+            <div class="alert alert-success text-center">
+                <h4>Registration Successful!</h4>
+                <p>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
+                <a href="../super_admin/dashboard.php" class="btn btn-primary">Go to Dashboard</a>
+            </div>
+        </div>
     </div>
 </div>
 
