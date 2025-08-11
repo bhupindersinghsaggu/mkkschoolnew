@@ -212,62 +212,79 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
                                 No documents uploaded yet.
                             </div>
                         <?php else: ?>
-                            <div class="row">
-                                <?php foreach ($documents as $doc): ?>
-                                    <div class="col-md-6 mb-3">
-                                        <div class="card document-card h-100">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-start">
-                                                    <?php
-                                                    $ext = pathinfo($doc['file_path'], PATHINFO_EXTENSION);
-                                                    $icon_class = "other-icon";
-                                                    $icon = "fa-file";
+                            <div class="table-responsive">
+                                <table class="table table-hover table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Document</th>
+                                            <th>Date</th>
+                                            <th>Session</th>
+                                            <th>Type</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($documents as $doc):
+                                            $ext = pathinfo($doc['file_path'], PATHINFO_EXTENSION);
+                                            $icon_class = "text-secondary";
+                                            $icon = "fa-file";
+                                            $type = "Other";
 
-                                                    if (in_array($ext, ['pdf'])) {
-                                                        $icon_class = "pdf-icon";
-                                                        $icon = "fa-file-pdf";
-                                                    } elseif (in_array($ext, ['doc', 'docx'])) {
-                                                        $icon_class = "doc-icon";
-                                                        $icon = "fa-file-word";
-                                                    } elseif (in_array($ext, ['jpg', 'jpeg', 'png'])) {
-                                                        $icon_class = "img-icon";
-                                                        $icon = "fa-file-image";
-                                                    }
-                                                    ?>
-                                                    <div class="me-3">
-                                                        <i class="fas <?= $icon ?> file-icon <?= $icon_class ?>"></i>
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        <h5><?= htmlspecialchars($doc['doc_name']) ?></h5>
-                                                        <p class="mb-1 text-muted">
-                                                            <small>
-                                                                <i class="far fa-calendar me-1"></i>
-                                                                <?= date('d M Y', strtotime($doc['date'])) ?>
-                                                            </small>
-                                                        </p>
-                                                        <p class="mb-1 text-muted">
-                                                            <small>
-                                                                <i class="fas fa-graduation-cap me-1"></i>
-                                                                <?= htmlspecialchars($doc['session']) ?>
-                                                            </small>
-                                                        </p>
-                                                        <div class="mt-2">
-                                                            <a href="../uploads/teacher_documents/<?= htmlspecialchars($doc['file_path']) ?>"
-                                                                class="btn btn-sm btn-success me-2" download>
-                                                                <i class="fas fa-download me-1"></i> Download
+                                            if (in_array($ext, ['pdf'])) {
+                                                $icon_class = "text-danger";
+                                                $icon = "fa-file-pdf";
+                                                $type = "PDF";
+                                            } elseif (in_array($ext, ['doc', 'docx'])) {
+                                                $icon_class = "text-primary";
+                                                $icon = "fa-file-word";
+                                                $type = "Word";
+                                            } elseif (in_array($ext, ['jpg', 'jpeg', 'png'])) {
+                                                $icon_class = "text-success";
+                                                $icon = "fa-file-image";
+                                                $type = "Image";
+                                            }
+
+                                            $file_path = '../uploads/teacher_documents/' . htmlspecialchars($doc['file_path']);
+                                            $file_exists = file_exists($file_path) && is_file($file_path);
+                                        ?>
+                                            <tr>
+                                                <td>
+                                                    <i class="fas <?= $icon ?> <?= $icon_class ?> me-2"></i>
+                                                    <?= htmlspecialchars($doc['doc_name']) ?>
+                                                </td>
+                                                <td><?= date('d M Y', strtotime($doc['date'])) ?></td>
+                                                <td><?= htmlspecialchars($doc['session']) ?></td>
+                                                <td><?= $type ?></td>
+                                                <td>
+                                                    <?php if ($file_exists): ?>
+                                                        <div class="btn-group btn-group-sm">
+                                                            <a href="<?= $file_path ?>"
+                                                                class="btn btn-outline-success"
+                                                                download
+                                                                title="Download">
+                                                                <i class="fas fa-download"></i>
                                                             </a>
-                                                            <a href="documents.php?delete=<?= $doc['id'] ?>"
-                                                                class="btn btn-sm btn-danger"
+                                                            <a href="<?= $file_path ?>"
+                                                                target="_blank"
+                                                                class="btn btn-outline-primary"
+                                                                title="View">
+                                                                <i class="fas fa-eye"></i>
+                                                            </a>
+                                                            <a href="teacher_docs.php?delete=<?= $doc['id'] ?>"
+                                                                class="btn btn-outline-danger"
+                                                                title="Delete"
                                                                 onclick="return confirm('Are you sure you want to delete this document?')">
-                                                                <i class="fas fa-trash me-1"></i> Delete
+                                                                <i class="fas fa-trash"></i>
                                                             </a>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php endforeach; ?>
+                                                    <?php else: ?>
+                                                        <span class="badge bg-warning">File missing</span>
+                                                    <?php endif; ?>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
                             </div>
                         <?php endif; ?>
                     </div>
