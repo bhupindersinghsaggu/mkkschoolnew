@@ -229,7 +229,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="alert alert-danger"><?php echo $error; ?></div>
             <?php endif; ?>
             <div class="card-body p-4">
-                <form>
+               <form method="POST">
                     <div class="floating-label-group mb-4 animate__animated animate__fadeInLeft">
                         <div class="input-group">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
