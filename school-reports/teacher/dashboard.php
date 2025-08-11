@@ -67,9 +67,6 @@ require_once '../teacher/side-bar.php';
                 <div class="col-md-9">
                     <!-- Teacher Details -->
                     <div class="card">
-                        <div class="card-header bg-primary text-white">
-                            <h5>Teacher Information</h5>
-                        </div>
                         <div class="card">
                             <div class="card-header bg-primary text-white">
                                 <h5 class="mb-0">Teacher Information</h5>
