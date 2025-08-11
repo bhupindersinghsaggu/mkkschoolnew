@@ -5,7 +5,8 @@ ini_set('display_errors', 1);
 session_start();
 require_once '../config/database.php';
 require_once '../includes/auth_check.php';
-
+require_once '../teacher/header.php';
+require_once '../teacher/side-bar.php';
 
 // Check if teacher is logged in
 if ($_SESSION['role'] !== 'teacher') {
@@ -83,8 +84,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $documents = $result->fetch_all(MYSQLI_ASSOC);
 
-require_once '../teacher/header.php';
-require_once '../teacher/side-bar.php';
+
 ?>
 
 <!DOCTYPE html>
