@@ -73,7 +73,7 @@ if (isset($_GET['delete'])) {
         $_SESSION['message'] = "Document deleted successfully!";
     }
 
-    header("Location: documents.php");
+    header("Location: teacher_docs.php");
     exit();
 }
 
