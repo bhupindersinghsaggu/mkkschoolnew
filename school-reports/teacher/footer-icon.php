@@ -21,7 +21,7 @@
         <div class="row text-center">
             <!-- Home Icon -->
             <div class="col-4">
-                <a href="../super_admin/dashboard.php" class="text-dark text-decoration-none">
+                <a href="./dashboard.php" class="text-dark text-decoration-none">
                     <i class="bi bi-house-door fs-4"></i>
                     <div class="small">Home</div>
                 </a>
@@ -29,7 +29,7 @@
 
             <!-- Dashboard Icon -->
             <div class="col-4">
-                <a href="../super_admin/dashboard.php" class="text-dark text-decoration-none">
+                <a href="./dashboard.php" class="text-dark text-decoration-none">
                     <i class="bi bi-speedometer2 fs-4"></i>
                     <div class="small">Dashboard</div>
                 </a>
