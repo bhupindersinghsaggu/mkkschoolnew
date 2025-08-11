@@ -13,7 +13,7 @@
     <meta name="author" content="Dreams Technologies">
     <meta name="robots" content="index, follow">
     <title>M.K.K. School</title>
-    <script src="../assets/js/theme-script.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+    <script src="../assets/js/theme-script.js" type="text/javascript"></script>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
     <!-- Apple Touch Icon -->
