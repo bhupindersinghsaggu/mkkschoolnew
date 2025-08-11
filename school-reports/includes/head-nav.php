@@ -1,11 +1,9 @@
 
 <?php
-// Add this at the very top of head-nav.php
-
-
-// Then check if session variables exist before using them
-$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
-$role = isset($_SESSION['role']) ? $_SESSION['role'] : '';
+// Make sure session is started at the very top
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 
 <div class="header">
