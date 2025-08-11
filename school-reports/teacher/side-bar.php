@@ -19,8 +19,8 @@
                  <li class="submenu-open">
                      <h6 class="submenu-hdr">Reports</h6>
                      <ul>
-                         <li><a href="../teacher/dashboard.php"><i data-feather="box"></i><span>NoteBook Reports</span></a></li>
-                         <li><a href="../teacher/teachers_docs.php"><i data-feather="box"></i><span>My Documents</span></a></li>
+                         <li><a href="./dashboard.php"><i data-feather="box"></i><span>NoteBook Reports</span></a></li>
+                         <li><a href="./teacher_docs.php"><i data-feather="box"></i><span>My Documents</span></a></li>
                      </ul>
                  </li>
              </ul>
