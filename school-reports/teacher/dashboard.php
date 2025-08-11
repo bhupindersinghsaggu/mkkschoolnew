@@ -39,18 +39,18 @@ require_once '../teacher/side-bar.php';
     <div class="content mb-3">
         <div class="container py-4">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <!-- Profile Card -->
                     <div class="card">
                         <div class="card-body text-center">
                             <?php if (!empty($teacher['profile_pic'])): ?>
                                 <img src="../uploads/profile_pics/<?php echo htmlspecialchars($teacher['profile_pic']); ?>"
                                     class="img-fluid  mb-3"
-                                    style="width: 200px; height: 200px; object-fit: cover;"
+                                    style="width: 100% ;height: 200px; object-fit: cover;"
                                     alt="Profile Picture">
                             <?php else: ?>
                                 <div class="bg-light  d-flex align-items-center justify-content-center mb-3"
-                                    style="width: 200px; height: 200px; margin: 0 auto;">
+                                    style="width: 100%; height: 200px; margin: 0 auto;">
                                     <i class="fas fa-user fa-5x text-secondary"></i>
                                 </div>
                             <?php endif; ?>
@@ -62,7 +62,7 @@ require_once '../teacher/side-bar.php';
                     </div>
                 </div>
 
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <!-- Teacher Details -->
                     <div class="card">
                         <div class="card-header bg-primary text-white">
