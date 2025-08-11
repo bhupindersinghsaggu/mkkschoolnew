@@ -38,6 +38,21 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Main fontawsome -->
+       <style>@media (max-width: 767px) {
+    .login-container {
+        padding: 15px;
+    }
+    .login-userset {
+        padding: 20px;
+    }
+    .input-group, .pass-group {
+        flex-direction: column;
+    }
+    .input-group-text, .toggle-password {
+        width: 100%;
+        justify-content: center;
+    }
+}</style>
 </head>
 
 <body>
