@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "INSERT INTO records (session, eval_date, teacher_name, teacher_id, subject, class_section,
     notebooks_checked, students_reviewed, regularity_checking, accuracy, neatness,
-    follow_up, overall_rating, evaluator_name, remarks, undertaking)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    follow_up, overall_rating, evaluator_name, remarks,)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = mysqli_prepare($conn, $sql);
     if ($stmt) {
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $overall_rating,
             $evaluator_name,
             $remarks,
-            $undertaking
+         
         );
         if (mysqli_stmt_execute($stmt)) {
             $submitted = true;
@@ -272,10 +272,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Remarks</label>
                                     <textarea name="remarks" class="form-control"></textarea>
                                 </div>
-                                <div class="mb-3 form-check">
+                                <!-- <div class="mb-3 form-check">
                                     <input type="checkbox" name="undertaking" class="form-check-input" id="undertaking">
                                     <label class="form-check-label" for="undertaking">Undertaking</label>
-                                </div>
+                                </div> -->
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back</a>
                             </div>
