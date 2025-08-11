@@ -45,11 +45,11 @@ require_once '../teacher/side-bar.php';
                         <div class="card-body text-center">
                             <?php if (!empty($teacher['profile_pic'])): ?>
                                 <img src="../uploads/profile_pics/<?php echo htmlspecialchars($teacher['profile_pic']); ?>"
-                                    class="img-fluid rounded-circle mb-3"
+                                    class="img-fluid  mb-3"
                                     style="width: 200px; height: 200px; object-fit: cover;"
                                     alt="Profile Picture">
                             <?php else: ?>
-                                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center mb-3"
+                                <div class="bg-light  d-flex align-items-center justify-content-center mb-3"
                                     style="width: 200px; height: 200px; margin: 0 auto;">
                                     <i class="fas fa-user fa-5x text-secondary"></i>
                                 </div>
