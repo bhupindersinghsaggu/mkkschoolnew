@@ -5,8 +5,8 @@ ini_set('display_errors', 1);
 session_start();
 require_once '../config/database.php';
 require_once '../includes/auth_check.php';
-require_once  '/teacher/header.php';
-require_once  '/teacher/side-bar.php';
+// require_once  '/teacher/header.php';
+// require_once  '/teacher/side-bar.php';
 
 
 // Check if teacher is logged in
