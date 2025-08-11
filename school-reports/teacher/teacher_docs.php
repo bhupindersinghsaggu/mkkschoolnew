@@ -151,7 +151,7 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
         <div class="content mb-3">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <!-- Messages -->
                         <?php if (isset($_SESSION['message'])): ?>
                             <div class="alert alert-success alert-dismissible fade show">
