@@ -23,7 +23,7 @@
             <div class="col-4">
                 <a href="../teacher/dashboard1.php" class="text-dark text-decoration-none">
                     <i class="bi bi-house-door fs-4"></i>
-                    <div class="small">Home</div>
+                    <div class="small">Homeg</div>
                 </a>
             </div>
 
@@ -31,7 +31,7 @@
             <div class="col-4">
                 <a href="../teacher/dashboard1.php" class="text-dark text-decoration-none">
                     <i class="bi bi-speedometer2 fs-4"></i>
-                    <div class="small">My Reports</div>
+                    <div class="small">My Reportsg</div>
                 </a>
             </div>
 
@@ -40,7 +40,7 @@
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="../auth/logout.php" class="text-dark text-decoration-none">
                         <i class="bi bi-box-arrow-right fs-4"></i>
-                        <div class="small">Logout</div>
+                        <div class="small">Logoug</div>
                     </a>
                 <?php endif; ?>
             </div>
