@@ -74,7 +74,7 @@ if (isset($_GET['delete'])) {
     }
 
     header("Location: teacher_docs.php");
-    exit();
+     exit(); // Critical - stops script execution
 }
 
 // Fetch teacher's documents
