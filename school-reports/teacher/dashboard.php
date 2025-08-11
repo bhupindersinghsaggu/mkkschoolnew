@@ -35,6 +35,50 @@ require_once '../teacher/header.php';
 require_once '../teacher/side-bar.php';
 ?>
 
+<style>
+    @media (max-width: 768px) {
+
+        .table-responsive table,
+        .table-responsive thead,
+        .table-responsive tbody,
+        .table-responsive th,
+        .table-responsive td,
+        .table-responsive tr {
+            display: block;
+        }
+
+        .table-responsive thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        .table-responsive tr {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .table-responsive td {
+            border: none;
+            position: relative;
+            padding-left: 50%;
+            white-space: normal;
+            text-align: left;
+        }
+
+        .table-responsive td:before {
+            position: absolute;
+            left: 10px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            content: attr(data-title);
+            font-weight: bold;
+            color: #495057;
+        }
+    }
+</style>
+
 <div class="page-wrapper">
     <div class="content mb-3">
         <div class="container py-4">
@@ -68,27 +112,32 @@ require_once '../teacher/side-bar.php';
                         <div class="card-header bg-primary text-white">
                             <h5>Teacher Information</h5>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p><strong>Teacher ID:</strong> <?php echo htmlspecialchars($teacher['teacher_id'] ?? 'N/A'); ?></p>
-                                    <p><strong>Subject:</strong> <?php echo htmlspecialchars($teacher['subject'] ?? 'Not specified'); ?></p>
-                                </div>
-                                <div class="col-md-6">
-                                    <p><strong>Email:</strong> <?php echo htmlspecialchars($teacher['email'] ?? 'N/A'); ?></p>
-                                    <p><strong>Username:</strong> <?php echo htmlspecialchars($teacher['username'] ?? 'N/A'); ?></p>
-                                </div>
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Teacher Information</h5>
                             </div>
-
-                            <!-- Additional fields can be added here -->
-                            <?php if (!empty($teacher['phone'])): ?>
-                                <p><strong>Phone:</strong> <?php echo htmlspecialchars($teacher['phone']); ?></p>
-                            <?php endif; ?>
-
-                            <?php if (!empty($teacher['address'])): ?>
-                                <p><strong>Address:</strong> <?php echo htmlspecialchars($teacher['address']); ?></p>
-                            <?php endif; ?>
-
+                            <div class="card-body p-0">
+                                <table class="table table-borderless mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <th width="30%">Teacher ID</th>
+                                            <td><?= htmlspecialchars($teacher['teacher_id'] ?? 'N/A') ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <td><?= htmlspecialchars($teacher['subject'] ?? 'Not specified') ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Email</th>
+                                            <td><?= htmlspecialchars($teacher['email'] ?? 'N/A') ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Username</th>
+                                            <td><?= htmlspecialchars($teacher['username'] ?? 'N/A') ?></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <script>
                             function printDocument(filePath) {
