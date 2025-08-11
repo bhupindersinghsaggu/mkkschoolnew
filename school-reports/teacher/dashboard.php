@@ -31,8 +31,8 @@ if ($stmt) {
 }
 
 // Now include header after all PHP processing is done
-require_once './teacher/header.php';
-require_once './teacher/side-bar.php';
+require_once '../teacher/header.php';
+require_once '../teacher/side-bar.php';
 ?>
 
 <div class="page-wrapper">
