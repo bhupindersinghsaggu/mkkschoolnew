@@ -21,7 +21,7 @@
         <div class="row text-center">
             <!-- Home Icon -->
             <div class="col-4">
-                <a href="index.php" class="text-dark text-decoration-none">
+                <a href="../super_admin/dashboard.php" class="text-dark text-decoration-none">
                     <i class="bi bi-house-door fs-4"></i>
                     <div class="small">Home</div>
                 </a>
@@ -29,34 +29,36 @@
 
             <!-- Dashboard Icon -->
             <div class="col-4">
-                <a href="dashboard.php" class="text-dark text-decoration-none">
+                <a href="../super_admin/dashboard.php" class="text-dark text-decoration-none">
                     <i class="bi bi-speedometer2 fs-4"></i>
                     <div class="small">Dashboard</div>
                 </a>
             </div>
 
             <!-- Logout Icon -->
-            <div class="col-4">
-                <a href="logout.php" class="text-dark text-decoration-none">
-                    <i class="bi bi-box-arrow-right fs-4"></i>
-                    <div class="small">Logout</div>
-                </a>
+            <div class="col-4">'
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="../auth/logout.php" class="text-dark text-decoration-none">
+                        <i class="bi bi-box-arrow-right fs-4"></i>
+                        <div class="small">Logout</div>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
 </div>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = window.location.pathname.split('/').pop();
-            const mobileLinks = document.querySelectorAll('.fixed-bottom a');
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop();
+        const mobileLinks = document.querySelectorAll('.fixed-bottom a');
 
-            mobileLinks.forEach(link => {
-                const linkPage = link.getAttribute('href');
-                if (currentPage === linkPage) {
-                    link.classList.add('active');
-                }
-            });
+        mobileLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (currentPage === linkPage) {
+                link.classList.add('active');
+            }
         });
+    });
 </script>
