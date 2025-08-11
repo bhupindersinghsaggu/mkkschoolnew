@@ -30,7 +30,7 @@
 
         <div class="logout d-flex ">
             <a href="../auth/logout.php" class="btn btn-secondary me-2 logout-link" onclick="return confirmLogout()">Logout
-               <!-- (<?php echo htmlspecialchars($username); ?>) -->
+               (<?php echo htmlspecialchars($username); ?>) 
             </a>
         </div>
     </div>
