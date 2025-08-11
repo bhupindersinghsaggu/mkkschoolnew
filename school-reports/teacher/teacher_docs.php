@@ -151,6 +151,16 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
         <div class="content mb-3">
             <div class="container">
                 <div class="row">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <input type="text" id="documentSearch" class="form-control" placeholder="Search documents...">
+                                <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-4">
                         <!-- Messages -->
                         <?php if (isset($_SESSION['message'])): ?>
@@ -222,7 +232,7 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
                                 <table class="table table-hover table-bordered">
                                     <thead class="table-light">
                                         <tr>
-                                            <th>Document</th>
+                                            <th>Doc Name</th>
                                             <th>Date</th>
                                             <th>Session</th>
                                             <th>Type</th>
@@ -326,12 +336,37 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
                 });
             });
         </script>
-    </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const searchInput = document.getElementById('documentSearch');
+                const searchButton = document.getElementById('searchButton');
+                const tableRows = document.querySelectorAll('table tbody tr');
+
+                function filterDocuments() {
+                    const searchTerm = searchInput.value.toLowerCase();
+
+                    tableRows.forEach(row => {
+                        const textContent = row.textContent.toLowerCase();
+                        if (textContent.includes(searchTerm)) {
+                            row.style.display = '';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    });
+                }
+
+                // Search on button click
+                searchButton.addEventListener('click', filterDocuments);
+
+                // Search as you type
+                searchInput.addEventListener('keyup', filterDocuments);
+            });
+        </script>
     </div>
 </body>
 
 </html>
-</div>
+
 
 <?php require_once './teacher-footer-icon.php'; ?>
 <?php require_once './footer.php'; ?>
