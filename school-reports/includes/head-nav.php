@@ -26,8 +26,9 @@
         <!-- Header Menu -->
         <div class="logout d-flex ">
             <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="../logout.php" class="btn btn-secondary me-2 logout-link">
-                    <i class="fas fa-sign-out-alt"></i> Logout (<?php echo htmlspecialchars($username); ?>)
+                <a href="../auth/logout.php" class="btn btn-secondary me-2 logout-link">
+                    <i class="fas fa-sign-out-alt"></i> Logout 
+                    <!-- (<?php echo htmlspecialchars($username); ?>) -->
                 </a>
             <?php endif; ?>
         </div>
