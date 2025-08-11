@@ -151,7 +151,7 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
         <div class="content mb-3">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 mx-auto">
+                    <div class="col-md-6">
                         <!-- Messages -->
                         <?php if (isset($_SESSION['message'])): ?>
                             <div class="alert alert-success alert-dismissible fade show">
@@ -208,8 +208,9 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
                                 </form>
                             </div>
                         </div>
-
                         <!-- Documents List -->
+                    </div>
+                    <div class="col-mb-6">
                         <h4 class="mb-3">Your Uploaded Documents</h4>
 
                         <?php if (empty($documents)): ?>
@@ -295,36 +296,37 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
                     </div>
                 </div>
             </div>
-            <script src="../assets/js/bootstrap.bundle.min.js"></script>
-            <script>
-                // Confirm before delete
-                document.querySelectorAll('.delete-btn').forEach(btn => {
-                    btn.addEventListener('click', function(e) {
-                        if (!confirm('Are you sure you want to delete this document?')) {
-                            e.preventDefault();
-                        }
-                    });
-                });
-            </script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const form = document.querySelector('form');
-                    let isSubmitting = false;
-
-                    form.addEventListener('submit', function(e) {
-                        if (isSubmitting) {
-                            e.preventDefault();
-                            return;
-                        }
-
-                        isSubmitting = true;
-                        const submitBtn = form.querySelector('button[type="submit"]');
-                        submitBtn.disabled = true;
-                        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Uploading...';
-                    });
-                });
-            </script>
         </div>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Confirm before delete
+            document.querySelectorAll('.delete-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    if (!confirm('Are you sure you want to delete this document?')) {
+                        e.preventDefault();
+                    }
+                });
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.querySelector('form');
+                let isSubmitting = false;
+
+                form.addEventListener('submit', function(e) {
+                    if (isSubmitting) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    isSubmitting = true;
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Uploading...';
+                });
+            });
+        </script>
+    </div>
     </div>
 </body>
 
