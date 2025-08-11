@@ -20,21 +20,21 @@
     <div class="container">
         <div class="row text-center">
             <!-- Home Icon -->
-            <div class="3">
+            <div class="col-3">
                 <a href="../teacher/dashboard.php" class="text-dark text-decoration-none">
                     <i class="bi bi-house-door fs-4"></i>
                     <div class="small">Home</div>
                 </a>
             </div>
             <!-- Dashboard Icon -->
-            <div class="3">
+            <div class="col-3">
                 <a href="../teacher/teacher_docs.php" class="text-dark text-decoration-none">
                     <i class="bi bi-speedometer2 fs-4"></i>
                     <div class="small">My Docs</div>
                 </a>
             </div>
             <!-- Dashboard Icon -->
-            <div class="3">
+            <div class="col-3">
                 <a href="../teacher/dashboard.php" class="text-dark text-decoration-none">
                     <i class="bi bi-speedometer2 fs-4"></i>
                     <div class="small">My Reports</div>
@@ -42,7 +42,7 @@
             </div>
 
             <!-- Logout Icon -->
-            <div class="3">'
+            <div class="col-3">'
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="../auth/logout.php" class="text-dark text-decoration-none">
                         <i class="bi bi-box-arrow-right fs-4"></i>
