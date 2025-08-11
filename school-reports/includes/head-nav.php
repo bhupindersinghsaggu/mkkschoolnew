@@ -18,10 +18,10 @@
                 <span></span>
             </span>
         </a>
-        <div class="logout d-flex ">
+        <div class="logout d-flex d-md-flex">
             <?php if (isset($_SESSION['user_id'])): ?>
                 <a href="../auth/logout.php" class="btn btn-secondary me-2 logout-link">
-                    <i class="fas fa-sign-out-alt"></i> Logout dd
+                    <i class="fas fa-sign-out-alt"></i> Logout
                     <!-- (<?php echo htmlspecialchars($username); ?>) -->
                 </a>
             <?php endif; ?>
