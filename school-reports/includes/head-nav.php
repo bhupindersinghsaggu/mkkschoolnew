@@ -21,7 +21,7 @@
         <div class="logout d-flex ">
             <?php if (isset($_SESSION['user_id'])): ?>
                 <a href="../auth/logout.php" class="btn btn-secondary me-2 logout-link">
-                    <i class="fas fa-sign-out-alt"></i> Logout 
+                    <i class="fas fa-sign-out-alt"></i> Logout dd
                     <!-- (<?php echo htmlspecialchars($username); ?>) -->
                 </a>
             <?php endif; ?>
