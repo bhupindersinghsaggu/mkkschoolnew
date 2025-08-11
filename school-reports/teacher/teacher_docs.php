@@ -212,7 +212,7 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
                                 No documents uploaded yet.
                             </div>
                         <?php else: ?>
-                            <div class="table-responsive">
+                            <div class="table-responsive" style="margin-bottom: 80px;">>
                                 <table class="table table-hover table-bordered">
                                     <thead class="table-light">
                                         <tr>
