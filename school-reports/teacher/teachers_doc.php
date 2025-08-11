@@ -83,8 +83,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $documents = $result->fetch_all(MYSQLI_ASSOC);
 
-require_once '../teacher/header.php';
-require_once '../teacher/side-bar.php';
+
 ?>
 
 <!DOCTYPE html>
