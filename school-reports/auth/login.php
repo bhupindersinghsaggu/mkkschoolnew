@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>M.K.K. School - Login</title>
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
     <!-- Apple Touch Icon -->
@@ -62,14 +62,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../assets/plugins/tabler-icons/tabler-icons.min.css">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
+
     <style>
         :root {
             --primary-color: #4e73df;
             --secondary-color: #f8f9fc;
             --accent-color: #2e59d9;
         }
-        
+
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
@@ -80,12 +80,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             overflow-x: hidden;
             padding: 20px;
         }
-        
+
         .login-container {
             width: 100%;
             max-width: 450px;
         }
-        
+
         .login-card {
             border: none;
             border-radius: 15px;
@@ -96,12 +96,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             transform-style: preserve-3d;
             transition: all 0.5s ease;
         }
-        
+
         .login-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
-        
+
         .card-header {
             background: var(--primary-color);
             color: white;
@@ -110,39 +110,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             position: relative;
             overflow: hidden;
         }
-        
+
         .card-header h3 {
             font-weight: 700;
             position: relative;
             z-index: 2;
         }
-        
+
         .school-logo {
             width: 80px;
             height: 80px;
             object-fit: contain;
             margin-bottom: 15px;
-            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
             animation: pulse 2s infinite alternate;
         }
-        
+
         @keyframes pulse {
-            from { transform: scale(1); }
-            to { transform: scale(1.05); }
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.05);
+            }
         }
-        
+
         .form-control {
             border-radius: 8px;
             padding: 12px 15px;
             border: 1px solid #ddd;
             transition: all 0.3s;
         }
-        
+
         .form-control:focus {
             border-color: var(--primary-color);
             box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
         }
-        
+
         .btn-login {
             background: var(--primary-color);
             border: none;
@@ -153,46 +158,58 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             transition: all 0.3s;
             width: 100%;
         }
-        
+
         .btn-login:hover {
             background: var(--accent-color);
             transform: translateY(-2px);
         }
-        
+
         .input-group-text {
             background: transparent;
             border-right: none;
         }
-        
+
         /* Responsive adjustments */
         @media (max-width: 576px) {
             .login-card {
                 border-radius: 10px;
             }
-            
+
             .card-header {
                 padding: 20px 15px;
             }
-            
+
             .school-logo {
                 width: 60px;
                 height: 60px;
             }
-            
+
             .form-control {
                 padding: 10px 12px;
             }
         }
-        
+
         /* Error message styling */
         .alert-danger {
             animation: shake 0.5s;
         }
-        
+
         @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            20%, 60% { transform: translateX(-5px); }
-            40%, 80% { transform: translateX(5px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            20%,
+            60% {
+                transform: translateX(-5px);
+            }
+
+            40%,
+            80% {
+                transform: translateX(5px);
+            }
         }
     </style>
 </head>
@@ -208,35 +225,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php if (isset($error)): ?>
                     <div class="alert alert-danger animate__animated animate__shakeX"><?php echo $error; ?></div>
                 <?php endif; ?>
-                
+
                 <form method="POST">
                     <div class="mb-4 animate__animated animate__fadeInLeft">
                         <label class="form-label">Username <span class="text-danger">*</span></label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="ti ti-user"></i></span>
+                        <div class="mb-3">
                             <input type="text" name="username" class="form-control" placeholder="Enter your username" required>
                         </div>
                     </div>
-                    
+
                     <div class="mb-4 animate__animated animate__fadeInRight">
                         <label class="form-label">Password <span class="text-danger">*</span></label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="ti ti-lock"></i></span>
-                            <input type="password" name="password" class="form-control" placeholder="Enter your password" required>
-                            <span class="input-group-text toggle-password" style="cursor: pointer;">
-                                <i class="ti ti-eye-off"></i>
-                            </span>
+                        <div class="mb-3">
+                            <input type="password" name="username" class="form-control" placeholder="Enter your username" required>
                         </div>
                     </div>
-                    
-                    <div class="d-flex justify-content-between mb-4 animate__animated animate__fadeInUp">
+
+                    <!-- <div class="d-flex justify-content-between mb-4 animate__animated animate__fadeInUp">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="rememberMe">
                             <label class="form-check-label" for="rememberMe">Remember me</label>
                         </div>
                         <a href="forgot-password.html" class="text-decoration-none">Forgot Password?</a>
-                    </div>
-                    
+                    </div> -->
+
                     <button type="submit" class="btn btn-login text-white animate__animated animate__fadeInUp animate__delay-1s">
                         <i class="ti ti-login me-2"></i> Sign In
                     </button>
@@ -256,7 +268,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             icon.addEventListener('click', function() {
                 const passwordInput = this.parentElement.querySelector('input');
                 const iconElement = this.querySelector('i');
-                
+
                 if (passwordInput.type === 'password') {
                     passwordInput.type = 'text';
                     iconElement.classList.remove('ti-eye-off');
@@ -268,18 +280,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             });
         });
-        
+
         // Add animation on focus
         document.querySelectorAll('.form-control').forEach(input => {
             input.addEventListener('focus', function() {
                 this.parentElement.parentElement.classList.add('animate__pulse');
             });
-            
+
             input.addEventListener('blur', function() {
                 this.parentElement.parentElement.classList.remove('animate__pulse');
             });
         });
-        
+
         // Form submission animation
         const form = document.querySelector('form');
         form.addEventListener('submit', function(e) {
@@ -289,4 +301,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         });
     </script>
 </body>
+
 </html>
