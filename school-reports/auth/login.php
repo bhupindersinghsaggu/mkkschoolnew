@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Color Picker Css -->
     <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
     <!-- Main CSS -->
-    
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>

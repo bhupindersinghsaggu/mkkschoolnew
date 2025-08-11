@@ -1,5 +1,7 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-layout-mode="light_mode">
 <head>
     <!-- Meta Tags -->
     <meta charset="utf-8">
