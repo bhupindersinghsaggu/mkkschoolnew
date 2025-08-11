@@ -27,7 +27,13 @@
             </span>
         </a>
         <!-- Header Menu -->
-
+<div class="logout-container" style="position: absolute; top: 10px; right: 10px;">
+    <?php if (isset($_SESSION['user_id'])): ?>
+        <a href="../logout.php" class="btn btn-danger">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+    <?php endif; ?>
+</div>
         <div class="logout d-flex ">
             <a href="../auth/logout.php" class="btn btn-secondary me-2 logout-link" onclick="return confirmLogout()">Logout
              (<?php echo htmlspecialchars($username); ?>)
