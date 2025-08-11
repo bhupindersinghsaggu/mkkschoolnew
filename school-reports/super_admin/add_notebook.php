@@ -26,12 +26,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $overall_rating = $_POST['overall_rating'];
     $evaluator_name = $_POST['evaluator_name'];
     $remarks = $_POST['remarks'];
- 
+    $undertaking = isset($_POST['undertaking']) ? 1 : 0;
 
     $sql = "INSERT INTO records (session, eval_date, teacher_name, teacher_id, subject, class_section,
     notebooks_checked, students_reviewed, regularity_checking, accuracy, neatness,
-    follow_up, overall_rating, evaluator_name, remarks,)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    follow_up, overall_rating, evaluator_name, remarks, undertaking)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = mysqli_prepare($conn, $sql);
     if ($stmt) {
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $overall_rating,
             $evaluator_name,
             $remarks,
-         
+            $undertaking
         );
         if (mysqli_stmt_execute($stmt)) {
             $submitted = true;
