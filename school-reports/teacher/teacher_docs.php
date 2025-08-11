@@ -151,16 +151,7 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
         <div class="content mb-3">
             <div class="container">
                 <div class="row">
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <input type="text" id="documentSearch" class="form-control" placeholder="Search documents...">
-                                <button class="btn btn-outline-secondary" type="button" id="searchButton">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="col-md-4">
                         <!-- Messages -->
                         <?php if (isset($_SESSION['message'])): ?>
@@ -222,7 +213,16 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
                     </div>
                     <div class="col-md-8">
                         <h4 class="mb-3">Your Uploaded Documents</h4>
-
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input type="text" id="documentSearch" class="form-control" placeholder="Search documents...">
+                                    <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                         <?php if (empty($documents)): ?>
                             <div class="alert alert-info">
                                 No documents uploaded yet.
