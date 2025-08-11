@@ -21,21 +21,21 @@
         <div class="row text-center">
             <!-- Home Icon -->
             <div class="col-3">
-                <a href="./teacher/dashboard.php" class="text-dark text-decoration-none">
+                <a href="./dashboard.php" class="text-dark text-decoration-none">
                     <i class="bi bi-house-door fs-4"></i>
                     <div class="small">Home</div>
                 </a>
             </div>
             <!-- Dashboard Icon -->
             <div class="col-3">
-                <a href="./teacher/teacher_docs.php" class="text-dark text-decoration-none">
+                <a href="./teacher_docs.php" class="text-dark text-decoration-none">
                     <i class="bi bi-speedometer2 fs-4"></i>
                     <div class="small">My Docs</div>
                 </a>
             </div>
             <!-- Dashboard Icon -->
             <div class="col-3">
-                <a href="./teacher/dashboard.php" class="text-dark text-decoration-none">
+                <a href="./dashboard.php" class="text-dark text-decoration-none">
                     <i class="bi bi-speedometer2 fs-4"></i>
                     <div class="small">My Reports</div>
                 </a>
