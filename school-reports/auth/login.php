@@ -1,4 +1,46 @@
+<?php
+session_start();
 
+require_once '../config/database.php'; // Add this line first
+require_once '../config/functions.php';
+
+// Redirect if already logged in
+redirectBasedOnRole();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Validate inputs
+    if (empty($username) || empty($password)) {
+        $error = "Please enter both username and password";
+    } else {
+        // Check credentials using mysqli
+        $stmt = mysqli_prepare($conn, "SELECT * FROM users WHERE username = ?");
+        mysqli_stmt_bind_param($stmt, "s", $username);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        $user = mysqli_fetch_assoc($result);
+
+        if ($user && password_verify($password, $user['password'])) {
+            // Login successful
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['role'] = $user['role'];
+
+            // Redirect based on role
+            if ($user['role'] === 'super_admin') {
+                header("Location: ../super_admin/dashboard.php");
+            } else {
+                header("Location: ../teacher/dashboard.php");
+            }
+            exit();
+        } else {
+            $error = "Invalid username or password";
+        }
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
