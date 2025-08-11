@@ -291,5 +291,5 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
 </html>
 </div>
 
-<?php require_once '../teacher-footer-icon.php'; ?>
-<?php require_once '../footer.php'; ?>
+<?php require_once './teacher-footer-icon.php'; ?>
+<?php require_once './footer.php'; ?>
