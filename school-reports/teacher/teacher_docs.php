@@ -1,5 +1,5 @@
 <?php
-
+ob_start(); // Add this at the very top
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
@@ -72,9 +72,10 @@ if (isset($_GET['delete'])) {
 
         $_SESSION['message'] = "Document deleted successfully!";
     }
-
-    header("Location: ./teacher_docs.php");
-     exit(); // Critical - stops script execution
+       // Ensure no output before this
+    ob_clean(); // Clear any potential output buffers
+    header("Location: teacher_docs.php");
+    exit(); // Critical - stops script execution
 }
 
 // Fetch teacher's documents
