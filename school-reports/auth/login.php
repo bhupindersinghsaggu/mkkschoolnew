@@ -76,10 +76,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
 
-    <body class="bg-light">
+    <body class="bg-light  bg-img">
         <div class="container">
-            <div class="row justify-content-center align-items-center min-vh-100">
-                <div class="login-wrapper bg-img">
+            <div class="account-content">
+                <div class="login-wrapper">
                     <div class="login-content authent-content">
                         <div class="login-userset">
                             <div class="login-logo logo-normal">
