@@ -35,49 +35,7 @@ require_once '../teacher/header.php';
 require_once '../teacher/side-bar.php';
 ?>
 
-<style>
-    @media (max-width: 768px) {
 
-        .table-responsive table,
-        .table-responsive thead,
-        .table-responsive tbody,
-        .table-responsive th,
-        .table-responsive td,
-        .table-responsive tr {
-            display: block;
-        }
-
-        .table-responsive thead tr {
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
-        }
-
-        .table-responsive tr {
-            border: 1px solid #ddd;
-            margin-bottom: 10px;
-        }
-
-        .table-responsive td {
-            border: none;
-            position: relative;
-            padding-left: 50%;
-            white-space: normal;
-            text-align: left;
-        }
-
-        .table-responsive td:before {
-            position: absolute;
-            left: 10px;
-            width: 45%;
-            padding-right: 10px;
-            white-space: nowrap;
-            content: attr(data-title);
-            font-weight: bold;
-            color: #495057;
-        }
-    }
-</style>
 
 <div class="page-wrapper">
     <div class="content mb-3">
