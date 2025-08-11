@@ -41,6 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['document'])) {
         $stmt->execute();
 
         $_SESSION['message'] = "Document uploaded successfully!";
+
+        // REDIRECT AFTER SUCCESSFUL UPLOAD
+        header("Location: teacher_docs.php");
+        exit();
     } else {
         $_SESSION['error'] = "Error uploading document.";
     }
@@ -72,7 +76,7 @@ if (isset($_GET['delete'])) {
 
         $_SESSION['message'] = "Document deleted successfully!";
     }
-       // Ensure no output before this
+    // Ensure no output before this
     ob_clean(); // Clear any potential output buffers
     header("Location: teacher_docs.php");
     exit(); // Critical - stops script execution
@@ -299,6 +303,24 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
                         if (!confirm('Are you sure you want to delete this document?')) {
                             e.preventDefault();
                         }
+                    });
+                });
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const form = document.querySelector('form');
+                    let isSubmitting = false;
+
+                    form.addEventListener('submit', function(e) {
+                        if (isSubmitting) {
+                            e.preventDefault();
+                            return;
+                        }
+
+                        isSubmitting = true;
+                        const submitBtn = form.querySelector('button[type="submit"]');
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Uploading...';
                     });
                 });
             </script>
