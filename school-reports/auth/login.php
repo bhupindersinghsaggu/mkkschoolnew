@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>M.K.K. School - Login</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="../assets/js/theme-script.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+    <script src="../assets/js/theme-script.js" type="text/javascript"></script>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
     <!-- Apple Touch Icon -->
@@ -101,9 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <img src="../assets/img/logo-small.png" alt="img">
                             </div>
                             <!-- <h3>Dr. M.K.K. Arya Model School</h3> -->
-                            <a href="login.php" class="login-logo logo-white">
-                                <img src="../assets/img/logo-white.svg" alt="Img">
-                            </a>
+                           
                             <?php if (isset($error)): ?>
                                 <div class="alert alert-danger"><?php echo $error; ?></div>
                             <?php endif; ?>
