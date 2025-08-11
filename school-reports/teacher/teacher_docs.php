@@ -215,10 +215,12 @@ $documents = $result->fetch_all(MYSQLI_ASSOC);
                         <h4 class="mb-3">Your Uploaded Documents</h4>
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <input type="text" id="documentSearch" class="form-control" placeholder="Search documents...">
-                                <button class="btn btn-outline-secondary" type="button" id="searchButton">
-                                    <i class="fas fa-search"></i>
-                                </button>
+                                <div class="input-group">
+                                    <input type="text" id="documentSearch" class="form-control" placeholder="Search documents...">
+                                    <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <?php if (empty($documents)): ?>
