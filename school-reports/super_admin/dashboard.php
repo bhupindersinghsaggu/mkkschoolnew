@@ -80,14 +80,10 @@ require_once '../includes/header.php';
     <div
         class="copyright-footer d-flex align-items-center justify-content-between border-top bg-white gap-3 flex-wrap">
         <p class="fs-13 text-gray-9 mb-0">2025 &copy; Design Pocket. All Right Reserved</p>
-        <p>Designed & Developed By <a href="javascript:void(0);" class="link-primary">Boldally</a></p>
+        <p>Designed & Developed By <a href="javascript:void(0);" class="link-primary">M.K.K. (IT Department)</a></p>
     </div>
 </div>
-<script>
-    function confirmLogout() {
-        return confirm('Are you sure you want to logout?');
-    }
-</script>
+
 
 
 <?php require_once '../includes/footer.php'; ?>
