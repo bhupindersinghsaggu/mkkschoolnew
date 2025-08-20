@@ -22,7 +22,7 @@ require_once '../includes/header.php';
 
             body {
                 background-color: #f5f7fb;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               font-family: "Lexend", sans-serif;
                 color: #333;
             }
 
