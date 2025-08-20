@@ -157,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="content mb-3">
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3 class="">Add Class Show</h3>
-                <a href="add_class_show.php" class="btn btn-success">View</a></h3>
+                <a href="list_class_show.php" class="btn btn-success">View</a></h3>
             </div>
 
             <?php if ($message): ?>
