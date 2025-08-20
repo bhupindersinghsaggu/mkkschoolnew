@@ -136,7 +136,7 @@ $result = mysqli_query($conn, $query);
 
         table th,
         table td {
-            padding: 6px 10px;
+            padding: 3px 5px;
             /* Optional: reduce padding too */
         }
     </style>
