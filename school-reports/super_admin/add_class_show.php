@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $teacher_id = $_POST['teacher_id'];
     $evaluator_name = $_POST['evaluator_name'];
     $class_section = $_POST['class_section'];
-    
+
     // Convert to integers
     $prayer = (int)$_POST['prayer']; // This is included in bind variables
     $news = (int)$_POST['news'];
@@ -33,12 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $skit = (int)$_POST['skit'];
     $ppt = (int)$_POST['ppt'];
     $anchoring = (int)$_POST['anchoring'];
-    
+
     // Calculate total sum (including prayer if needed)
-    $total = $prayer + $news + $participation + $speeches + $poem_recitation + 
-             $dance + $song + $stage_management + $innovation + 
-             $skit + $ppt + $anchoring;
-    
+    $total = $prayer + $news + $participation + $speeches + $poem_recitation +
+        $dance + $song + $stage_management + $innovation +
+        $skit + $ppt + $anchoring;
+
     $speaking_skills = (int)$_POST['speaking_skills'];
     $dancing_skills = (int)$_POST['dancing_skills'];
     $singing_skills = (int)$_POST['singing_skills'];
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = mysqli_prepare($conn, $sql);
-    
+
     if ($stmt) {
         // Count your bind variables: 25 total
         // 7 strings (session to class_section) + 18 integers + 1 string (comments)
@@ -280,6 +280,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Stage Management</label>
                                     <input type="number" name="stage_management" class="form-control" required>
                                 </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card dash-widget">
+                            <div class="card-body">
                                 <div class="mb-3">
                                     <label>Innovation</label>
                                     <input type="number" name="innovation" class="form-control" required>
@@ -296,12 +303,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Anchoring</label>
                                     <input type="number" name="anchoring" class="form-control" required>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="card dash-widget">
-                            <div class="card-body">
                                 <div class="mb-3">
                                     <label>Total (Auto-calculated)</label>
                                     <input type="number" name="total" id="totalField" class="form-control" readonly required>
