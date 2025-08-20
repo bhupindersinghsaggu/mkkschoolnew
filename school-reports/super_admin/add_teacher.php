@@ -99,13 +99,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <input type="text" name="subject" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Teacher Type</label>
+                                    <label>Teacher Block</label>
                                     <select name="teacher_type" class="form-control" required>
                                         <option value="">--Select--</option>
-                                        <option value="PPRT">PPRT</option>
-                                        <option value="PRT">PRT</option>
-                                        <option value="PGT">PGT</option>
-                                        <option value="PGT">TGT</option>
+                                        <option value="PPRT">Pre-Primary</option>
+                                        <option value="PRT">Middle</option>
+                                        <option value="PGT">Senior</option>
+                                        <!-- <option value="PGT">TGT</option> -->
                                     </select>
                                 </div>
                                 <div class="mb-3">
