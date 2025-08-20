@@ -193,7 +193,7 @@
                ERP Login
            </div>
        </a>
-       <a class="" href="https://curtina.in/mkk" target="_blank">
+       <a class="" href="https://mkkschool.com/school-reports/auth/login.php" target="_blank">
            <div class="teacher-login">
                Teacher Login
            </div>
