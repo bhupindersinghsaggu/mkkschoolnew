@@ -127,10 +127,7 @@ $result = mysqli_query($conn, $query);
             margin-left: 10px;
         }
 
-        .table th {
-            background-color: #f8f9fa;
-            padding: .2rem .2rem !important;
-        }
+       
 
         table {
             font-size: 10px;
