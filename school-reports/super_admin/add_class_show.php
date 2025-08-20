@@ -264,16 +264,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Speeches</label>
                                     <input type="number" name="speeches" class="form-control" required>
                                 </div>
-                                <div class="mb-3">
-                                    <label>Poem recitation</label>
-                                    <input type="number" name="poem_recitation" class="form-control" required>
-                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6">
                         <div class="card dash-widget">
                             <div class="card-body">
+                                <div class="mb-3">
+                                    <label>Poem recitation</label>
+                                    <input type="number" name="poem_recitation" class="form-control" required>
+                                </div>
                                 <div class="mb-3">
                                     <label>Dance</label>
                                     <input type="number" name="dance" class="form-control" required>
