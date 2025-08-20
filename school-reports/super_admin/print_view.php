@@ -193,7 +193,7 @@ $result = mysqli_query($conn, $query);
                                 <td><?= $row['class_section'] ?></td>
                             </tr>
                             <tr>
-                                <th>Teacher Block</th>
+                                <th>Teacher Blocsk</th>
                                 <td><?= $row['teacher_type'] ?></td>
                             </tr>
                             <tr>
