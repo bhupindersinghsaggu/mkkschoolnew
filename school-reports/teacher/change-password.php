@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Change Password</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  
 </head>
 <body class="container mt-5">
     <h2>Change Password</h2>
