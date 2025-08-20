@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $query);
             @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap');
 
             body {
-                font-size: 11px;
+                font-size: 9px;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
                 font-family: 'Lexend', sans-serif;
@@ -130,6 +130,7 @@ $result = mysqli_query($conn, $query);
         .table th {
             background-color: #f8f9fa;
             padding: .2rem .2rem !important;
+        }
     </style>
 </head>
 
