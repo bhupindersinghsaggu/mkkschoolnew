@@ -138,6 +138,18 @@ $result = mysqli_query($conn, $query);
             padding: 2px 5px !important;
             /* Minimal padding */
         }
+
+        table {
+            font-size: 10px;
+            /* Small font */
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            padding: 2px 5px !important;
+            /* Minimal padding */
+        }
     </style>
 </head>
 
@@ -194,7 +206,7 @@ $result = mysqli_query($conn, $query);
             </div>
             <div class="row">
                 <div class="record-card">
-                    <h5 class="report-heading"">Teacher Notebook vReview Report</h5>
+                    <h5 class="report-heading"">Teacher Notebook Review Report</h5>
                     <div class=" container">
                         <div class="row">
                             <table class="table table-sm table-bordered">
