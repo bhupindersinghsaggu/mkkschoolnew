@@ -157,7 +157,7 @@ $result = mysqli_query($conn, $query);
     <div class="container">
         <div class="no-print mb-3 text-end">
             <button class="btn btn-primary btn-sm" onclick="window.print()">🖨 Print</button>
-            <a href="list.php" class="btn btn-secondary btn-sm">← Back</a>
+            <a href="list_notebook.php" class="btn btn-secondary btn-sm">← Back</a>
         </div>
 
         <!-- School Header with Logo -->
