@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $query);
             @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap');
 
             body {
-                font-size: 9px;
+                font-size: 11px;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
                 font-family: 'Lexend', sans-serif;
@@ -127,28 +127,23 @@ $result = mysqli_query($conn, $query);
             margin-left: 10px;
         }
 
-        table {
-            font-size: 10px;
-            /* Small font */
-            border-collapse: collapse;
+        .table>:not(caption)>*>* {
+            padding: .3rem .3rem;
+            color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
+            background-color: var(--bs-table-bg);
+            border-bottom-width: var(--bs-border-width);
+            box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
         }
 
-        table th,
-        table td {
-            padding: 2px 5px !important;
-            /* Minimal padding */
-        }
-
-        table {
-            font-size: 10px;
-            /* Small font */
-            border-collapse: collapse;
-        }
-
-        table th,
-        table td {
-            padding: 2px 5px !important;
-            /* Minimal padding */
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        tr {
+            border-color: inherit;
+            border-style: solid;
+            border-width: 0;
         }
     </style>
 </head>
@@ -157,7 +152,7 @@ $result = mysqli_query($conn, $query);
     <div class="container">
         <div class="no-print mb-3 text-end">
             <button class="btn btn-primary btn-sm" onclick="window.print()">🖨 Print</button>
-            <a href="list_notebook.php" class="btn btn-secondary btn-sm">← Back</a>
+            <a href="list.php" class="btn btn-secondary btn-sm">← Back</a>
         </div>
 
         <!-- School Header with Logo -->
@@ -176,7 +171,7 @@ $result = mysqli_query($conn, $query);
         ?>
             <div class="container mb-3">
                 <div class="row">
-                    <table class="table table-sm table-bordered">
+                    <table class="table table-bordered">
                         <tbody>
                             <tr>
                                 <th>Session</th>
@@ -193,12 +188,9 @@ $result = mysqli_query($conn, $query);
                                 <td><?= $row['class_section'] ?></td>
                             </tr>
                             <tr>
-                                <th>Teacher Block</th>
-                                <td><?= $row['teacher_type'] ?></td>
                                 <th>Subject</th>
                                 <td><?= $row['subject'] ?></td>
-                            </tr>
-                            <tr>
+
                                 <th>Evaluator Name</th>
                                 <td><?= $row['evaluator_name'] ?></td>
                             </tr>
@@ -212,7 +204,7 @@ $result = mysqli_query($conn, $query);
                     <h5 class="report-heading"">Teacher Notebook Review Report</h5>
                     <div class=" container">
                         <div class="row">
-                            <table class="table table-sm table-bordered">
+                            <table class="table table-bordered">
                                 <tbody>
                                     <tr>
                                         <th>Number of Notebooks Checked</th>

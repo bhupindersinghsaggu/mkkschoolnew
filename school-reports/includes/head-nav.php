@@ -1,13 +1,13 @@
 <div class="header">
     <div class="main-header">
         <div class="header-left active">
-            <a href="../super_admin/dashboard.php" class="logo logo-normal">
+            <a href="../index.php" class="logo logo-normal">
                 <h3>M.K.K. School</h3>
             </a>
-            <a href="../super_admin/dashboard.php" class="logo logo-white">
+            <a href="../index.php" class="logo logo-white">
                 <h3>M.K.K. School</h3>
             </a>
-            <a href="../super_admin/dashboard.php" class="logo-small">
+            <a href="../index.php" class="logo-small">
                 <h3>M.K.K. School</h3>
             </a>
         </div>
