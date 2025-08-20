@@ -1,7 +1,17 @@
 <?php
 require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
+// At the top of your PHP file
+require_once '../config/database.php';
 
+$query = "SELECT COUNT(*) as total_teachers FROM teacher_details";
+$result = mysqli_query($conn, $query);
+$total_teachers = 0;
+
+if ($result) {
+    $row = mysqli_fetch_assoc($result);
+    $total_teachers = $row['total_teachers'];
+}
 
 ?>
 
@@ -196,7 +206,7 @@ require_once '../includes/header.php';
                 <div class="col-md-4">
                     <div class="card stat-card">
                         <i class="fas fa-chalkboard-teacher stat-icon"></i>
-                        <div class="stat-number">24</div>
+                        <div class="stat-number"><?php echo $total_teachers; ?></div>
                         <div class="stat-text">Total Teachers</div>
                     </div>
                 </div>
