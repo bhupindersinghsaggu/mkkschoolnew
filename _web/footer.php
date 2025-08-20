@@ -195,7 +195,7 @@
        </a>
        <a class="" href="https://mkkschool.com/school-reports/auth/login.php" target="_blank">
            <div class="teacher-login">
-               Teacher Login
+               Staff Login
            </div>
        </a>
        <div class="pay-online">
