@@ -1,5 +1,3 @@
-
-
 <?php require_once '../includes/auth_check.php';
 require_once  '../config/database.php';
 require_once  '../config/functions.php';
@@ -30,7 +28,7 @@ $result = mysqli_query($conn, $query);
             @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap');
 
             body {
-                font-size: 13px;
+                font-size: 11px;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
                 font-family: 'Lexend', sans-serif;
@@ -68,8 +66,8 @@ $result = mysqli_query($conn, $query);
         }
 
         .th {
-        font-weight: 400 !important;
-    }
+            font-weight: 400 !important;
+        }
 
         .record-card {
             border: 1px solid #ccc;
@@ -92,7 +90,7 @@ $result = mysqli_query($conn, $query);
         }
 
         .signature-box {
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .signature-box .col-md-6 {
@@ -128,6 +126,25 @@ $result = mysqli_query($conn, $query);
             padding: 10px;
             margin-left: 10px;
         }
+
+        .table>:not(caption)>*>* {
+            padding: .3rem .3rem;
+            color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
+            background-color: var(--bs-table-bg);
+            border-bottom-width: var(--bs-border-width);
+            box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
+        }
+
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        tr {
+            border-color: inherit;
+            border-style: solid;
+            border-width: 0;
+        }
     </style>
 </head>
 
@@ -141,8 +158,9 @@ $result = mysqli_query($conn, $query);
         <!-- School Header with Logo -->
         <div class="school-header mt-4">
             <div class="d-flex justify-content-center align-items-center "><img src="../assets/img/printlogo.png" alt="School Logo" class="header-logo">
-            <h2>Dr. M.K.K. Arya Model School</h2></div>
-            
+                <h2>Dr. M.K.K. Arya Model School</h2>
+            </div>
+
             <p>Model Town, Panipat</p>
             <?php if ($start_date && $end_date): ?>
             <?php endif; ?>
