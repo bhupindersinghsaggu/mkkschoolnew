@@ -2,13 +2,24 @@
 session_start();
 require_once '../config/database.php';
 
-// ✅ Only logged-in users can access
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+
+ob_start(); // Add this at the very top
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+session_start();
+require_once '../config/database.php';
+require_once '../includes/auth_check.php';
+require_once '../teacher/header.php';
+require_once '../teacher/side-bar.php';
+
+
+// Check if teacher is logged in
+if ($_SESSION['role'] !== 'teacher') {
+    header("Location: ../login.php");
     exit();
 }
 
-$user_id = $_SESSION['user_id'];
+$teacher_id = $_SESSION['user_id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $current = $_POST['current_password'];
