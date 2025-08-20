@@ -164,7 +164,7 @@ $result = mysqli_query($conn, $query);
         ?>
             <div class="container mb-3">
                 <div class="row">
-                    <table class="table table-bordered">
+                    <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <th>Session</th>
@@ -197,7 +197,7 @@ $result = mysqli_query($conn, $query);
                     <h5 class="report-heading"">Teacher Notebook Review Report</h5>
                     <div class=" container">
                         <div class="row">
-                            <table class="table table-bordered">
+                            <table class="table table-sm table-bordered">
                                 <tbody>
                                     <tr>
                                         <th>Number of Notebooks Checked</th>
