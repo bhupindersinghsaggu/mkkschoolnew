@@ -193,12 +193,12 @@ $result = mysqli_query($conn, $query);
                                 <td><?= $row['class_section'] ?></td>
                             </tr>
                             <tr>
-                                <th>Teacher Blocsk</th>
+                                <th>Teacher Block</th>
                                 <td><?= $row['teacher_type'] ?></td>
-                            </tr>
-                            <tr>
                                 <th>Subject</th>
                                 <td><?= $row['subject'] ?></td>
+                            </tr>
+                            <tr>
                                 <th>Evaluator Name</th>
                                 <td><?= $row['evaluator_name'] ?></td>
                             </tr>
