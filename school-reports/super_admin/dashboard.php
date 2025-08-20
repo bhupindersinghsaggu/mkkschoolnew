@@ -4,14 +4,7 @@ require_once '../includes/header.php';
 // At the top of your PHP file
 require_once '../config/database.php';
 
-$query = "SELECT COUNT(*) as total_teachers FROM teacher_details";
-$result = mysqli_query($conn, $query);
-$total_teachers = 0;
 
-if ($result) {
-    $row = mysqli_fetch_assoc($result);
-    $total_teachers = $row['total_teachers'];
-}
 
 ?>
 
