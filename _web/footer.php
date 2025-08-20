@@ -198,34 +198,78 @@
                    id="btnGoToTop" src="assets/images/ss.png" alt=""></a>
        </div>
    </div>
+   <!-- Mobile Bottom Navbar -->
+   <footer class="d-block d-md-none fixed-bottom mb-2">
+       <!-- Mobile Bottom Navbar -->
+       <div class="d-flex justify-content-around bg-navbar shadow-lg rounded-pill mx-3 py-2">
 
-   <div class="fixed-icon-section">
-       <!-- <a href="#home" class="icon"><i class="fas fa-home"></i></a> -->
-       <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg"
-           style="background-color: var(--thm-base);"><i class="fa-regular fa-credit-card mrg"></i> Pay Online </a>
-           
-       <!-- <a href="https://wa.me/7988968776?text=I%20want%20to%20know%20more%20about%20mkk%20school"
-           class="icon whatapp-icon"> <i class="fa-brands fa-whatsapp"></i></a> -->
-       <a href="https://curtina.in/MKK" class="icon mrg" style="background-color: #1a3250;"><i
-               class="fa-solid fa-user mrg"></i> ERP Login </a>
-      
-               <a href="/booklist.php" class="icon mrg"
-               style="background-color: var(--thm-base);"><i class="fa-solid fa-book mrg"></i> Book List </a>
-       <!-- <a class="" href="https://curtina.in/mkk" target=_blank>
-           <div class="erp">
-               ERP Login
-           </div>
-       </a> -->
+           <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="nav-icon text-center flex-fill">
+               <i class="fa-regular fa-credit-card fs-4"></i>
+               <div class="small">Payonline</div>
+           </a>
 
-       <!-- <a class=".d-sm-none .d-md-block"
-       href="https://api.whatsapp.com/send?phone=+917988968776&amp;text=Hi, I have a query." target="_blank">
-       <div class="login2">
-           <i class="fa fa-whatsapp" aria-hidden="true"></i>
+           <a href="https://curtina.in/MKK" class="nav-icon text-center flex-fill">
+               <i class="bi bi-person fs-4"></i>
+               <div class="small">ERP Login</div>
+           </a>
+
+           <a href="https://mkkschool.com/school-reports/auth/login.php" class="nav-icon text-center flex-fill">
+               <i class="bi bi-bell fs-4"></i>
+               <div class="small">Teacher Login</div>
+           </a>
+
+           <a href="booklist.php" class="nav-icon text-center flex-fill">
+               <i class="bi bi-book fs-4"></i>
+               <div class="small">Book List</div>
+           </a>
+
        </div>
-   </a> -->
+   </footer>
 
-       <!-- search-popup -->
-   </div>
+   <!-- Bootstrap + FontAwesome Icons -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+   <style>
+       /* Background color */
+       .bg-navbar {
+           background-color: #17345a;
+       }
+
+       /* Navbar Icons */
+       .nav-icon {
+           color: #fff;
+           text-decoration: none;
+           transition: all 0.3s ease-in-out;
+       }
+
+       .nav-icon i {
+           display: block;
+           transition: transform 0.3s ease, color 0.3s ease;
+       }
+
+       /* Hover / Tap Animation */
+       .nav-icon:hover i {
+           transform: scale(1.2);
+           color: #ffcc00;
+       }
+
+       .nav-icon:hover div {
+           color: #ffcc00;
+       }
+
+       /* Active State */
+       .nav-icon.active i,
+       .nav-icon.active div {
+           color: #ffcc00;
+           font-weight: bold;
+       }
+   </style>
+
+
+
+
+
    </body>
 
    </html>
