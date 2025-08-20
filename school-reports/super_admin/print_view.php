@@ -127,18 +127,11 @@ $result = mysqli_query($conn, $query);
             margin-left: 10px;
         }
 
-       
-
         table {
             font-size: 10px;
             /* Adjust size as needed */
         }
-
-        table th,
-        table td {
-            padding: 3px 5px;
-            /* Optional: reduce padding too */
-        }
+      
     </style>
 </head>
 
