@@ -27,7 +27,10 @@
                      <ul>
                          <li><a href="../super_admin/register_teacher.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>Add Teacher </span></a></li>
                           <li><a href="../super_admin/list_teacher.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>list Teacher </span></a></li>
-                     </ul>
+                               <li><a href="../super_admin/add_class_show.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>list Teacher </span></a></li>
+                     
+                     
+                        </ul>
                  </li>
              </ul>
          </div>
