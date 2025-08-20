@@ -206,7 +206,7 @@ if ($result) {
                 <div class="col-md-4">
                     <div class="card stat-card">
                         <i class="fas fa-chalkboard-teacher stat-icon"></i>
-                        <div class="stat-number"><?php echo $total_teachers; ?></div>
+                        <div class="stat-number">24</div>
                         <div class="stat-text">Total Teachers</div>
                     </div>
                 </div>
