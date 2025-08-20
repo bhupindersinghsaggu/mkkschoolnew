@@ -2,7 +2,7 @@
 require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
 // At the top of your PHP file
-require_once '../config/database.php';
+
 
 
 
