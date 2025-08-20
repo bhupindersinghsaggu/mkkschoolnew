@@ -4,6 +4,8 @@ require_once '../includes/header.php';
 
 
 ?>
+
+
 <div class="page-wrapper">
     <div class="content">
         <style>
@@ -41,7 +43,8 @@ require_once '../includes/header.php';
 
             .welcome-text {
                 font-size: 1.8rem;
-                font-weight: 500;
+                font-weight: 600;
+                color: #fff;
             }
 
             .card {
@@ -208,7 +211,7 @@ require_once '../includes/header.php';
                     <div class="card stat-card">
                         <i class="fas fa-tasks stat-icon"></i>
                         <div class="stat-number">42</div>
-                        <div class="stat-text">Pending Corrections</div>
+                        <div class="stat-text">Class Assembly</div>
                     </div>
                 </div>
             </div>
