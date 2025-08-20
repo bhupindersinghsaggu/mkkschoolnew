@@ -261,9 +261,9 @@ require_once '../includes/header.php';
                         </div>
                         <div class="card-body">
                             <p>Add new notebook correction records and evaluations.</p>
-                            <button class="btn btn-add btn-action text-white">
+                            <a href="./add_notebook.php" class="btn btn-add btn-action text-white">
                                 <i class="fas fa-plus me-2"></i>Add Correction
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -275,9 +275,9 @@ require_once '../includes/header.php';
                         </div>
                         <div class="card-body">
                             <p>View, manage, and update existing notebook correction records.</p>
-                            <button class="btn btn-view btn-action text-white">
+                            <a href="./list_notebook.php" class="btn btn-view btn-action text-white">
                                 <i class="fas fa-eye me-2"></i>View Corrections
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
