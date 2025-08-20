@@ -9,7 +9,7 @@ require_once '../includes/header.php';
             <div class="alert alert-success text-center">
                 <h4>Registration Successful!</h4>
                 <p>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
-                <a href="../super_admin/dashboard.php" class="btn btn-primary">Go to Dashboard</a>
+                <a href="../super_admin/list_teacher.php" class="btn btn-primary">Add More Teachers</a>
             </div>
         </div>
     </div>
