@@ -1,7 +1,8 @@
 <?php
 // TEMPORARY ADMIN CREATION SCRIPT
 // RUN ONCE THEN DELETE IMMEDIATELY
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 // 1. Include your database connection
 require_once('../config/database.php');
 
