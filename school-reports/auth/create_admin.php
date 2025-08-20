@@ -3,7 +3,7 @@
 // RUN ONCE THEN DELETE IMMEDIATELY
 
 // 1. Include your database connection
-require_once('../web/db.php');
+require_once('../config/database.php');
 
 // 2. SET YOUR CUSTOM CREDENTIALS HERE
 $username = "admin";          // Change if needed
@@ -13,7 +13,7 @@ $password = "Mkk@2019"; // CHANGE THIS TO YOUR STRONG PASSWORD
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // 4. Insert into database
-$stmt = $db->prepare("INSERT INTO admin_users (username, password) VALUES (?, ?)");
+$stmt = $db->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
 $stmt->bind_param("ss", $username, $hashed_password);
 
 if ($stmt->execute()) {
