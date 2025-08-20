@@ -226,9 +226,9 @@ require_once '../includes/header.php';
                         </div>
                         <div class="card-body">
                             <p>Add new teachers to the system with their details and subjects.</p>
-                            <button href="./add_teacher.php" class="btn btn-add btn-action text-white">
+                            <a href="./add_teacher.php" class="btn btn-add btn-action text-white">
                                 <i class="fas fa-plus me-2"></i>Add Teacher
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -240,9 +240,9 @@ require_once '../includes/header.php';
                         </div>
                         <div class="card-body">
                             <p>View, edit, or manage existing teacher records and information.</p>
-                            <button href="./list_teacher.php" class="btn btn-view btn-action text-white">
+                            <a href="./list_teacher.php" class="btn btn-view btn-action text-white">
                                 <i class="fas fa-eye me-2"></i>View Teachers
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -261,7 +261,7 @@ require_once '../includes/header.php';
                         </div>
                         <div class="card-body">
                             <p>Add new notebook correction records and evaluations.</p>
-                            <button  class="btn btn-add btn-action text-white">
+                            <button class="btn btn-add btn-action text-white">
                                 <i class="fas fa-plus me-2"></i>Add Correction
                             </button>
                         </div>
