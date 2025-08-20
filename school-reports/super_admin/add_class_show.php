@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 
 <head>
-    <title>Add Notebook Review</title>
+    <title>Add Class Show</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png">
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -156,8 +156,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="page-wrapper">
         <div class="content mb-3">
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
-                <h3 class="">Notebook Corrections</h3>
-                <a href="list_notebook.php" class="btn btn-success">View</a></h3>
+                <h3 class="">Add Class Show</h3>
+                <a href="add_class_show.php" class="btn btn-success">View</a></h3>
             </div>
 
             <?php if ($message): ?>
