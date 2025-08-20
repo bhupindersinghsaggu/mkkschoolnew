@@ -193,6 +193,11 @@
                ERP Login
            </div>
        </a>
+       <a class="" href="https://curtina.in/mkk" target="_blank">
+           <div class="teacher-login">
+               Teacher Login
+           </div>
+       </a>
        <div class="pay-online">
            <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" target="_blank"><img onclick="topFunction()"
                    id="btnGoToTop" src="assets/images/ss.png" alt=""></a>
