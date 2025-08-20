@@ -127,24 +127,9 @@ $result = mysqli_query($conn, $query);
             margin-left: 10px;
         }
 
-        .table>:not(caption)>*>* {
-            padding: .3rem .3rem;
-            color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
-            background-color: var(--bs-table-bg);
-            border-bottom-width: var(--bs-border-width);
-            box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
-        }
-
-        tbody,
-        td,
-        tfoot,
-        th,
-        thead,
-        tr {
-            border-color: inherit;
-            border-style: solid;
-            border-width: 0;
-        }
+        .table th {
+            background-color: #f8f9fa;
+            padding: .2rem .2rem !important;
     </style>
 </head>
 
