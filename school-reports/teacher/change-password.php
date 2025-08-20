@@ -43,6 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
+
+require_once '../teacher/header.php';
+require_once '../teacher/side-bar.php';
 ?>
 <!DOCTYPE html>
 <html>
