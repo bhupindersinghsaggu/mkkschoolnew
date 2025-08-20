@@ -129,9 +129,15 @@ $result = mysqli_query($conn, $query);
 
         table {
             font-size: 10px;
-            /* Adjust size as needed */
+            /* Small font */
+            border-collapse: collapse;
         }
-      
+
+        table th,
+        table td {
+            padding: 2px 5px !important;
+            /* Minimal padding */
+        }
     </style>
 </head>
 
