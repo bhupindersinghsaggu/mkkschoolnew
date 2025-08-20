@@ -179,7 +179,7 @@ $result = mysqli_query($conn, $query);
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
-                                <th>Shession</th>
+                                <th>Session</th>
                                 <td><?= $row['session'] ?></td>
 
                                 <th>Date of Evaluation</th>
