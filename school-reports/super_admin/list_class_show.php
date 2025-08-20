@@ -1,0 +1,120 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require_once '../config/database.php';
+require_once '../includes/auth_check.php';
+require_once '../includes/header.php';
+require_once '../config/functions.php';
+
+// Fetch all records from class_show table
+$query = "SELECT * FROM class_show ORDER BY created_at DESC";
+$result = mysqli_query($conn, $query);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Class Show Records</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .table-responsive {
+            overflow-x: auto;
+        }
+        .table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        .action-buttons {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="content">
+            <div class="header-button d-flex justify-content-between align-items-center mb-3">
+                <h3>Class Show Records</h3>
+                <div>
+                    <a href="add_class_show.php" class="btn btn-primary">Add New Record</a>
+                    <a href="./dashboard.php" class="btn btn-secondary">Back to Dashboard</a>
+                </div>
+            </div>
+
+            <?php if (isset($_GET['message'])): ?>
+                <div class="alert alert-info"><?= htmlspecialchars($_GET['message']) ?></div>
+            <?php endif; ?>
+
+            <div class="card">
+                <div class="card-body">
+                    <?php if (mysqli_num_rows($result) > 0): ?>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Session</th>
+                                        <th>Date</th>
+                                        <th>Teacher</th>
+                                        <th>Class</th>
+                                        <th>Topic</th>
+                                        <th>Evaluator</th>
+                                        <th>Total Score</th>
+                                        <th>Comments</th>
+                                        <th>Created</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                                        <tr>
+                                            <td><?= $row['id'] ?></td>
+                                            <td><?= htmlspecialchars($row['session']) ?></td>
+                                            <td><?= date('d M Y', strtotime($row['eval_date'])) ?></td>
+                                            <td><?= htmlspecialchars($row['teacher_name']) ?><br>
+                                                <small class="text-muted">ID: <?= htmlspecialchars($row['teacher_id']) ?></small>
+                                            </td>
+                                            <td><?= htmlspecialchars($row['class_section']) ?></td>
+                                            <td><?= htmlspecialchars($row['topic']) ?></td>
+                                            <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
+                                            <td><strong><?= $row['total'] ?></strong>/<?= $row['total'] > 0 ? $row['total'] : '100' ?></td>
+                                            <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td>
+                                            <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td>
+                                            <td class="action-buttons">
+                                                <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-info btn-sm" title="View Details">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="edit_class_show.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm" title="Edit">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                <a href="delete_class_show.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm" title="Delete" onclick="return confirm('Are you sure you want to delete this record?')">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php endwhile; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    <?php else: ?>
+                        <div class="alert alert-info text-center">
+                            <i class="fas fa-info-circle"></i> No class show records found.
+                            <a href="add_class_show.php" class="alert-link">Add your first record</a>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include '../includes/footer.php'; ?>
+</body>
+</html>
+
+<?php
+// Free result set
+mysqli_free_result($result);
+?>
