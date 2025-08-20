@@ -197,20 +197,7 @@ require_once '../includes/header.php';
                 <div class="col-md-4">
                     <div class="card stat-card">
                         <i class="fas fa-chalkboard-teacher stat-icon"></i>
-                        <div class="stat-number"><?php
-                        // Database connection and query to get total teachers
-                        require_once '../config/database.php';
-                        
-                        $query = "SELECT COUNT(*) as total_teachers FROM teacher_details";
-                        $result = mysqli_query($conn, $query);
-                        
-                        if ($result) {
-                            $row = mysqli_fetch_assoc($result);
-                            echo $row['total_teachers'];
-                        } else {
-                            echo "0";
-                        }
-                        ?></div>
+                        <div class="stat-number">ffg</div>
                         <div class="stat-text">Total Teachers</div>
                     </div>
                 </div>
