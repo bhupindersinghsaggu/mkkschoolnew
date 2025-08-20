@@ -131,6 +131,17 @@ $result = mysqli_query($conn, $query);
             background-color: #f8f9fa;
             padding: .2rem .2rem !important;
         }
+
+        table {
+            font-size: 10px;
+            /* Adjust size as needed */
+        }
+
+        table th,
+        table td {
+            padding: 6px 10px;
+            /* Optional: reduce padding too */
+        }
     </style>
 </head>
 
