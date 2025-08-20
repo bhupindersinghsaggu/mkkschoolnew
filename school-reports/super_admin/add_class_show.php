@@ -268,6 +268,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Poem recitation</label>
                                     <input type="number" name="poem_recitation" class="form-control" required>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card dash-widget">
+                            <div class="card-body">
                                 <div class="mb-3">
                                     <label>Dance</label>
                                     <input type="number" name="dance" class="form-control" required>
@@ -280,13 +286,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Stage Management</label>
                                     <input type="number" name="stage_management" class="form-control" required>
                                 </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="card dash-widget">
-                            <div class="card-body">
                                 <div class="mb-3">
                                     <label>Innovation</label>
                                     <input type="number" name="innovation" class="form-control" required>
