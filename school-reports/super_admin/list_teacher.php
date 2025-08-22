@@ -138,8 +138,8 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                         <th>Subject</th>
                                         <th>Type</th>
                                         <th>Email</th>
-                                        <th>Username</th>
-                                        <th>Registered</th>
+                                        <!-- <th>Username</th>
+                                        <th>Registered</th> -->
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -162,8 +162,8 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                                 <td><?= htmlspecialchars($teacher['subject']) ?></td>
                                                 <td><?= htmlspecialchars($teacher['teacher_type']) ?></td>
                                                 <td><?= htmlspecialchars($teacher['email']) ?></td>
-                                                <td><?= htmlspecialchars($teacher['username']) ?></td>
-                                                <td><?= date('M j, Y', strtotime($teacher['created_at'])) ?></td>
+                                                <!-- <td><?= htmlspecialchars($teacher['username']) ?></td>
+                                                <td><?= date('M j, Y', strtotime($teacher['created_at'])) ?></td> -->
                                                 <td class="action-btns">
                                                     <a href="edit_teacher.php?id=<?= $teacher['id'] ?>"
                                                         class="btn btn-warning btn-sm" title="Edit">
