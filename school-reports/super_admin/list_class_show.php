@@ -100,9 +100,8 @@ $result = mysqli_query($conn, $query);
                                             </td>
                                             <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
                                             <td><strong> <input type="number" class="form-control fw-bold text-success"
-                                                        value="<?= number_format($average_marks, 2) ?>"<span>/40</span>
-                                                        readonly>
-                                                        
+                                                        value="<?= number_format($average_marks, 2) ?>"
+                                                        readonly> <span class="input-group-text">/ 40</span>
                                                 </strong></td>
                                             <td class="action-buttons">
                                                 <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-secondary btn-sm" title="View Details">
