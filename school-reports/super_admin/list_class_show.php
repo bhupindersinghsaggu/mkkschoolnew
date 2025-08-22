@@ -80,7 +80,7 @@ $result = mysqli_query($conn, $query);
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
                                             <td><?= htmlspecialchars($row['topic']) ?></td>
                                             <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
-                                            <td><strong><?= $row['total'] ?></strong>/<?= $row['total'] > 0 ? $row['total'] : '100' ?></td>
+                                            <td><strong><?= $row['total'] ?></strong>/<?= $row['40'] > 0 ? $row['40'] : '100' ?></td>
                                             <!-- <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td> -->
                                             <!-- <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td> -->
                                             <td class="action-buttons">
