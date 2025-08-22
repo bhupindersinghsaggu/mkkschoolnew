@@ -37,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $session = $_POST['session'];
     $eval_date = $_POST['eval_date'];
     $topic = $_POST['topic'];
+    $video_link = $_POST['video_link'];
     $teacher_name = $_POST['teacher_name'];
     $teacher_id = $_POST['teacher_id'];
     $evaluator_name = $_POST['evaluator_name'];
@@ -69,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Update query
     $sql = "UPDATE class_show SET 
-        session = ?, eval_date = ?, topic = ?, teacher_name = ?, teacher_id = ?, 
+        session = ?, eval_date = ?, topic = ?, video_link = ?,  teacher_name = ?, teacher_id = ?, 
         evaluator_name = ?, class_section = ?, prayer = ?, news = ?, participation = ?, 
         speeches = ?, poem_recitation = ?, dance = ?, song = ?, stage_management = ?, 
         innovation = ?, skit = ?, ppt = ?, anchoring = ?, total = ?, 
@@ -82,8 +83,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt) {
         mysqli_stmt_bind_param(
             $stmt,
-            "sssssssssssssssssssssssssi",
-            $session, $eval_date, $topic, $teacher_name, $teacher_id, 
+            "ssssssssssssssssssssssssssi",
+            $session, $eval_date, $topic, $video_link, $teacher_name, $teacher_id, 
             $evaluator_name, $class_section, $prayer, $news, $participation,
             $speeches, $poem_recitation, $dance, $song, $stage_management,
             $innovation, $skit, $ppt, $anchoring, $total,
@@ -96,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $message = "✅ Record updated successfully. Total: " . $total;
             // Refresh the record data
             $record = array_merge($record, [
-                'session' => $session, 'eval_date' => $eval_date, 'topic' => $topic,
+                'session' => $session, 'eval_date' => $eval_date, 'topic' => $topic, 'video_link' => $video_link,
                 'teacher_name' => $teacher_name, 'teacher_id' => $teacher_id,
                 'evaluator_name' => $evaluator_name, 'class_section' => $class_section,
                 'prayer' => $prayer, 'news' => $news, 'participation' => $participation,
@@ -307,6 +308,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="mb-3">
                                     <label>Topic</label>
                                     <input type="text" name="topic" class="form-control" value="<?= htmlspecialchars($record['topic']) ?>" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Video Link</label>
+                                    <input type="text" name="video_link" class="form-control" value="<?= htmlspecialchars($record['video_link']) ?>" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Prayer</label>
