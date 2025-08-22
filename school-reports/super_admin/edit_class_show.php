@@ -450,11 +450,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge1</label>
-                                    <input type="number" name="marks_judge1" class="form-control" value="<?= $record['marks_judge1'] ?>" min="0" max="10">
+                                    <input type="number" name="marks_judge1" class="form-control" value="<?= $record['marks_judge1'] ?>" min="0" max="40">
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge2</label>
-                                    <input type="number" name="marks_judge2" class="form-control" value="<?= $record['marks_judge2'] ?>" min="0" max="10">
+                                    <input type="number" name="marks_judge2" class="form-control" value="<?= $record['marks_judge2'] ?>" min="0" max="40">
                                 </div>
                                 <div class="d-flex gap-2">
                                     <button type="submit" class="btn btn-success">Update </button>
