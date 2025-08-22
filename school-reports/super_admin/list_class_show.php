@@ -44,7 +44,7 @@ $result = mysqli_query($conn, $query);
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3>Class Show Records</h3>
                 <div class="d-flex">
-                    <a href="add_class_show.php" class="btn btn-primary">Add </a>
+                    <a href="add_class_show.php" class="btn btn-success">Add </a>
                     <a href="./dashboard.php" class="btn btn-secondary">Dashboard</a>
                 </div>
             </div>
