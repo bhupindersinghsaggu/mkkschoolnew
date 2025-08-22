@@ -93,10 +93,10 @@ $result = mysqli_query($conn, $query);
                                             <!-- <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td> -->
                                             <!-- <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td> -->
                                             <td class="action-buttons">
-                                                <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-info btn-sm" title="View Details">
+                                                <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-secondary btn-sm" title="View Details">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
-                                                <a href="edit_class_show.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm" title="Edit">
+                                                <a href="edit_class_show.php?id=<?= $row['id'] ?>" class="btn btn-success btn-sm" title="Edit">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
                                                 <a href="delete_class_show.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm" title="Delete" onclick="return confirm('Are you sure you want to delete this record?')">
