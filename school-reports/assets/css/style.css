@@ -55443,3 +55443,8 @@ span.flatpickr-weekday {
     -ms-flex-pack: center;
     padding: 8px;
 }
+.label {
+    display: inline-block;
+    font-weight: 500;
+    color: #0d6efd;
+}
