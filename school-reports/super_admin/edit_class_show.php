@@ -261,7 +261,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h3>Edit Class Show Record</h3>
                 <div class="d-flex gap-2">
                     <a href="list_class_show.php" class="btn btn-secondary">Back</a>
-                    <a href="view_class_show.php?id=<?= $id ?>" class="btn btn-info">View</a>
+                    <a href="view_class_show.php?id=<?= $id ?>" class="btn btn-success">View</a>
                 </div>
             </div>
 
