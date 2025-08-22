@@ -184,143 +184,145 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="page-wrapper">
         <div class="content mb-3">
-            <div class="container mt-5">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-header bg-success text-white">
-                                <h3>Edit Teacher</h3>
-                            </div>
-                            <div class="card-body">
-                                <?php if (!empty($errors['general'])): ?>
-                                    <div class="alert alert-danger"><?= $errors['general'] ?></div>
-                                <?php endif; ?>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header bg-success text-white">
+                                    <h3>Edit Teacher</h3>
+                                </div>
+                                <div class="card-body">
+                                    <?php if (!empty($errors['general'])): ?>
+                                        <div class="alert alert-danger"><?= $errors['general'] ?></div>
+                                    <?php endif; ?>
 
-                                <form method="POST" enctype="multipart/form-data">
-                                    <!-- Profile Picture -->
-                                    <div class="profile-pic-container">
-                                        <?php if ($teacher['profile_pic']): ?>
-                                            <img id="profilePreview" class="profile-pic-preview"
-                                                src="../uploads/profile_pics/<?= htmlspecialchars($teacher['profile_pic']) ?>"
-                                                alt="Profile Preview">
-                                        <?php else: ?>
-                                            <img id="profilePreview" class="profile-pic-preview"
-                                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23dee2e6'/%3E%3Ctext x='50%' y='50%' fill='%236c757d' font-family='sans-serif' font-size='16' text-anchor='middle' dominant-baseline='middle'%3ENo Image%3C/text%3E%3C/svg%3E"
-                                                alt="Profile Preview">
-                                        <?php endif; ?>
-                                        <input type="file" id="profile_pic" name="profile_pic" accept="image/*" class="d-none">
-                                        <label for="profile_pic" class="upload-btn mt-2">
-                                            <i class="bi bi-camera"></i> Change Photo
-                                        </label>
-                                        <?php if (!empty($errors['profile_pic'])): ?>
-                                            <div class="text-danger"><?= $errors['profile_pic'] ?></div>
-                                        <?php endif; ?>
-                                    </div>
+                                    <form method="POST" enctype="multipart/form-data">
+                                        <!-- Profile Picture -->
+                                        <div class="profile-pic-container">
+                                            <?php if ($teacher['profile_pic']): ?>
+                                                <img id="profilePreview" class="profile-pic-preview"
+                                                    src="../uploads/profile_pics/<?= htmlspecialchars($teacher['profile_pic']) ?>"
+                                                    alt="Profile Preview">
+                                            <?php else: ?>
+                                                <img id="profilePreview" class="profile-pic-preview"
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23dee2e6'/%3E%3Ctext x='50%' y='50%' fill='%236c757d' font-family='sans-serif' font-size='16' text-anchor='middle' dominant-baseline='middle'%3ENo Image%3C/text%3E%3C/svg%3E"
+                                                    alt="Profile Preview">
+                                            <?php endif; ?>
+                                            <input type="file" id="profile_pic" name="profile_pic" accept="image/*" class="d-none">
+                                            <label for="profile_pic" class="upload-btn mt-2">
+                                                <i class="bi bi-camera"></i> Change Photo
+                                            </label>
+                                            <?php if (!empty($errors['profile_pic'])): ?>
+                                                <div class="text-danger"><?= $errors['profile_pic'] ?></div>
+                                            <?php endif; ?>
+                                        </div>
 
-                                    <!-- Teacher Information -->
-                                    <div class="mb-3">
-                                        <label class="form-label">Teacher Name</label>
-                                        <input type="text" name="teacher_name" class="form-control <?= !empty($errors['teacher_name']) ? 'is-invalid' : '' ?>"
-                                            value="<?= htmlspecialchars($teacher['teacher_name'] ?? ($_POST['teacher_name'] ?? '')) ?>" required>
-                                        <?php if (!empty($errors['teacher_name'])): ?>
-                                            <div class="invalid-feedback"><?= $errors['teacher_name'] ?></div>
-                                        <?php endif; ?>
-                                    </div>
+                                        <!-- Teacher Information -->
+                                        <div class="mb-3">
+                                            <label class="form-label">Teacher Name</label>
+                                            <input type="text" name="teacher_name" class="form-control <?= !empty($errors['teacher_name']) ? 'is-invalid' : '' ?>"
+                                                value="<?= htmlspecialchars($teacher['teacher_name'] ?? ($_POST['teacher_name'] ?? '')) ?>" required>
+                                            <?php if (!empty($errors['teacher_name'])): ?>
+                                                <div class="invalid-feedback"><?= $errors['teacher_name'] ?></div>
+                                            <?php endif; ?>
+                                        </div>
 
-                                    <div class="mb-3">
-                                        <label class="form-label">Teacher ID</label>
-                                        <input type="text" name="teacher_id" class="form-control <?= !empty($errors['teacher_id']) ? 'is-invalid' : '' ?>"
-                                            value="<?= htmlspecialchars($teacher['teacher_id'] ?? ($_POST['teacher_id'] ?? '')) ?>" required>
-                                        <?php if (!empty($errors['teacher_id'])): ?>
-                                            <div class="invalid-feedback"><?= $errors['teacher_id'] ?></div>
-                                        <?php endif; ?>
-                                    </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Teacher ID</label>
+                                            <input type="text" name="teacher_id" class="form-control <?= !empty($errors['teacher_id']) ? 'is-invalid' : '' ?>"
+                                                value="<?= htmlspecialchars($teacher['teacher_id'] ?? ($_POST['teacher_id'] ?? '')) ?>" required>
+                                            <?php if (!empty($errors['teacher_id'])): ?>
+                                                <div class="invalid-feedback"><?= $errors['teacher_id'] ?></div>
+                                            <?php endif; ?>
+                                        </div>
 
-                                    <div class="mb-3">
-                                        <label class="form-label">Subject</label>
-                                        <input type="text" name="subject" class="form-control <?= !empty($errors['subject']) ? 'is-invalid' : '' ?>"
-                                            value="<?= htmlspecialchars($teacher['subject'] ?? ($_POST['subject'] ?? '')) ?>" required>
-                                        <?php if (!empty($errors['subject'])): ?>
-                                            <div class="invalid-feedback"><?= $errors['subject'] ?></div>
-                                        <?php endif; ?>
-                                    </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Subject</label>
+                                            <input type="text" name="subject" class="form-control <?= !empty($errors['subject']) ? 'is-invalid' : '' ?>"
+                                                value="<?= htmlspecialchars($teacher['subject'] ?? ($_POST['subject'] ?? '')) ?>" required>
+                                            <?php if (!empty($errors['subject'])): ?>
+                                                <div class="invalid-feedback"><?= $errors['subject'] ?></div>
+                                            <?php endif; ?>
+                                        </div>
 
-                                    <div class="mb-3">
-                                        <label class="form-label">Teacher Type</label>
-                                        <select name="teacher_type" class="form-select <?= !empty($errors['teacher_type']) ? 'is-invalid' : '' ?>" required>
-                                            <option value="">Select Type</option>
-                                            <option value="PPRT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'PPRT' ? 'selected' : '' ?>>PPRT</option>
-                                            <option value="PRT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'PRT' ? 'selected' : '' ?>>PRT</option>
-                                            <option value="PGT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'PGT' ? 'selected' : '' ?>>PGT</option>
-                                            <option value="TGT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'TGT' ? 'selected' : '' ?>>TGT</option>
-                                        </select>
-                                        <?php if (!empty($errors['teacher_type'])): ?>
-                                            <div class="invalid-feedback"><?= $errors['teacher_type'] ?></div>
-                                        <?php endif; ?>
-                                    </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Teacher Type</label>
+                                            <select name="teacher_type" class="form-select <?= !empty($errors['teacher_type']) ? 'is-invalid' : '' ?>" required>
+                                                <option value="">Select Type</option>
+                                                <option value="PPRT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'PPRT' ? 'selected' : '' ?>>PPRT</option>
+                                                <option value="PRT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'PRT' ? 'selected' : '' ?>>PRT</option>
+                                                <option value="PGT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'PGT' ? 'selected' : '' ?>>PGT</option>
+                                                <option value="TGT" <?= ($teacher['teacher_type'] ?? ($_POST['teacher_type'] ?? '')) === 'TGT' ? 'selected' : '' ?>>TGT</option>
+                                            </select>
+                                            <?php if (!empty($errors['teacher_type'])): ?>
+                                                <div class="invalid-feedback"><?= $errors['teacher_type'] ?></div>
+                                            <?php endif; ?>
+                                        </div>
 
-                                    <!-- Account Information -->
-                                    <div class="mb-3">
-                                        <label class="form-label">Username</label>
-                                        <input type="text" name="username" class="form-control <?= !empty($errors['username']) ? 'is-invalid' : '' ?>"
-                                            value="<?= htmlspecialchars($teacher['username'] ?? ($_POST['username'] ?? '')) ?>" required>
-                                        <?php if (!empty($errors['username'])): ?>
-                                            <div class="invalid-feedback"><?= $errors['username'] ?></div>
-                                        <?php endif; ?>
-                                    </div>
+                                        <!-- Account Information -->
+                                        <div class="mb-3">
+                                            <label class="form-label">Username</label>
+                                            <input type="text" name="username" class="form-control <?= !empty($errors['username']) ? 'is-invalid' : '' ?>"
+                                                value="<?= htmlspecialchars($teacher['username'] ?? ($_POST['username'] ?? '')) ?>" required>
+                                            <?php if (!empty($errors['username'])): ?>
+                                                <div class="invalid-feedback"><?= $errors['username'] ?></div>
+                                            <?php endif; ?>
+                                        </div>
 
-                                    <div class="mb-3">
-                                        <label class="form-label">Email</label>
-                                        <input type="email" name="email" class="form-control <?= !empty($errors['email']) ? 'is-invalid' : '' ?>"
-                                            value="<?= htmlspecialchars($teacher['email'] ?? ($_POST['email'] ?? '')) ?>" required>
-                                        <?php if (!empty($errors['email'])): ?>
-                                            <div class="invalid-feedback"><?= $errors['email'] ?></div>
-                                        <?php endif; ?>
-                                    </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" name="email" class="form-control <?= !empty($errors['email']) ? 'is-invalid' : '' ?>"
+                                                value="<?= htmlspecialchars($teacher['email'] ?? ($_POST['email'] ?? '')) ?>" required>
+                                            <?php if (!empty($errors['email'])): ?>
+                                                <div class="invalid-feedback"><?= $errors['email'] ?></div>
+                                            <?php endif; ?>
+                                        </div>
 
-                                    <div class="mb-3">
-                                        <label class="form-label">New Password (leave blank to keep current)</label>
-                                        <input type="password" name="password" class="form-control <?= !empty($errors['password']) ? 'is-invalid' : '' ?>">
-                                        <?php if (!empty($errors['password'])): ?>
-                                            <div class="invalid-feedback"><?= $errors['password'] ?></div>
-                                        <?php endif; ?>
-                                    </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">New Password (leave blank to keep current)</label>
+                                            <input type="password" name="password" class="form-control <?= !empty($errors['password']) ? 'is-invalid' : '' ?>">
+                                            <?php if (!empty($errors['password'])): ?>
+                                                <div class="invalid-feedback"><?= $errors['password'] ?></div>
+                                            <?php endif; ?>
+                                        </div>
 
-                                    <div class="mb-3">
-                                        <label class="form-label">Confirm New Password</label>
-                                        <input type="password" name="confirm_password" class="form-control <?= !empty($errors['confirm_password']) ? 'is-invalid' : '' ?>">
-                                        <?php if (!empty($errors['confirm_password'])): ?>
-                                            <div class="invalid-feedback"><?= $errors['confirm_password'] ?></div>
-                                        <?php endif; ?>
-                                    </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Confirm New Password</label>
+                                            <input type="password" name="confirm_password" class="form-control <?= !empty($errors['confirm_password']) ? 'is-invalid' : '' ?>">
+                                            <?php if (!empty($errors['confirm_password'])): ?>
+                                                <div class="invalid-feedback"><?= $errors['confirm_password'] ?></div>
+                                            <?php endif; ?>
+                                        </div>
 
-                                    <div class="d-grid gap-2">
-                                        <button type="submit" class="btn btn-success">Update Teacher</button>
-                                        <a href="list_teacher.php" class="btn btn-secondary">Cancel</a>
-                                    </div>
-                                </form>
+                                        <div class="d-grid gap-2">
+                                            <button type="submit" class="btn btn-success">Update Teacher</button>
+                                            <a href="list_teacher.php" class="btn btn-secondary">Cancel</a>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-            <script>
-                // Profile picture preview
-                document.getElementById('profile_pic').addEventListener('change', function(e) {
-                    const preview = document.getElementById('profilePreview');
-                    const file = e.target.files[0];
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                <script>
+                    // Profile picture preview
+                    document.getElementById('profile_pic').addEventListener('change', function(e) {
+                        const preview = document.getElementById('profilePreview');
+                        const file = e.target.files[0];
 
-                    if (file) {
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            preview.src = e.target.result;
+                        if (file) {
+                            const reader = new FileReader();
+                            reader.onload = function(e) {
+                                preview.src = e.target.result;
+                            }
+                            reader.readAsDataURL(file);
                         }
-                        reader.readAsDataURL(file);
-                    }
-                });
-            </script>
+                    });
+                </script>
+            </div>
         </div>
     </div>
 </body>
