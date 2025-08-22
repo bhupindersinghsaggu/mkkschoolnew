@@ -10,18 +10,7 @@ require_once '../config/functions.php';
 // Fetch all records from class_show table
 $query = "SELECT * FROM class_show ORDER BY created_at DESC";
 $result = mysqli_query($conn, $query);
-// Calculate average marks
-// Calculate average marks
-$marks1 = (int)$row['marks_judge1'];
-$marks2 = (int)$row['marks_judge2'];
-$average_marks = ($marks1 + $marks2) / 2;
-
-// Debug: Check what values you're getting
-error_log("Judge 1 marks: " . $row['marks_judge1']);
-error_log("Judge 2 marks: " . $row['marks_judge2']);
-error_log("Calculated average: " . $average_marks);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,7 +73,17 @@ error_log("Calculated average: " . $average_marks);
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                                    <?php while ($row = mysqli_fetch_assoc($result)): 
+                                        // Calculate average marks for each row
+                                        $marks1 = (int)$row['marks_judge1'];
+                                        $marks2 = (int)$row['marks_judge2'];
+                                        $average_marks = ($marks1 + $marks2) / 2;
+                                        
+                                        // Debug: Check what values you're getting
+                                        error_log("Judge 1 marks: " . $row['marks_judge1']);
+                                        error_log("Judge 2 marks: " . $row['marks_judge2']);
+                                        error_log("Calculated average: " . $average_marks);
+                                    ?>
                                         <tr>
                                             <td><?= $row['id'] ?></td>
                                             <td><?= htmlspecialchars($row['session']) ?></td>
@@ -104,8 +103,6 @@ error_log("Calculated average: " . $average_marks);
                                                         value="<?= number_format($average_marks, 2) ?>"
                                                         readonly>
                                                 </strong></td>
-                                            <!-- <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td> -->
-                                            <!-- <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td> -->
                                             <td class="action-buttons">
                                                 <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-secondary btn-sm" title="View Details">
                                                     <i class="fas fa-eye"></i>
