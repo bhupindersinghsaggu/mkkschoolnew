@@ -236,7 +236,7 @@ $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $r
                                 <tr>
                                     <th>Video Link</th>
                                     <td><a href="<?= htmlspecialchars($row['video_link']) ?>" target="_blank" title="Watch Video">
-                                            <i class="fas fa-external-link-alt"></i> View <!-- External link icon -->
+                                            <i class="fas fa-external-link-alt"></i> View Video <!-- External link icon -->
                                         </a></td>
                                 </tr>
                                 <tr>
