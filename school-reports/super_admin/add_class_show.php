@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $comments = $_POST['comments'];
 
     $sql = "INSERT INTO class_show (
-        session, eval_date, topic, video_link teacher_name, teacher_id, evaluator_name, class_section,
+        session, eval_date, topic, video_link, teacher_name, teacher_id, evaluator_name, class_section,
         prayer, news, participation, speeches, poem_recitation,
         dance, song, stage_management, innovation, skit, ppt, anchoring, total,
         speaking_skills, dancing_skills, singing_skills, dramatic_skills, comments
