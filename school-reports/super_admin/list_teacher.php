@@ -169,7 +169,7 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                                         class="btn btn-warning btn-sm" title="Edit">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <button class="btn btn-sm btn-danger delete-btn"
+                                                    <button class="btn btn-danger btn-sm"
                                                         data-id="<?= $teacher['id'] ?>"
                                                         title="Delete">
                                                         <i class="bi bi-trash"></i>
