@@ -322,7 +322,7 @@ $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $r
                                     <td><?= $row['anchoring'] ?></td>
                                 </tr>
                                 <tr class="table-success">
-                                    <th><strong>Total Score:</strong></th>
+                                    <th><strong>Total Score (Out of 40):</strong></th>
                                     <td><strong><?= $row['total'] ?></strong></td>
                                 </tr>
                             </table>
@@ -351,7 +351,7 @@ $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $r
                 </div>
             </div>
             <!-- Print Footer -->
-            <div class="no-print mt-4">
+            <div class="no-print mt-4 mb-3">
                 <div class="text-center">
                     <button onclick="printReport()" class="btn btn-primary btn-lg">
                         <i class="fas fa-print"></i> Print This Report

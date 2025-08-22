@@ -62,7 +62,7 @@ $result = mysqli_query($conn, $query);
                                         <th>Class</th>
                                         <th>Topic</th>
                                         <th>Judge</th>
-                                        <th>Total Score</th>
+                                        <th>Total Score (Out of 40)</th>
                                         <!-- <th>Comments</th>
                                         <th>Created</th> -->
                                         <th>Actions</th>
