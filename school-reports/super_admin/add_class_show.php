@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $teacher_id,        // s (5)
             $evaluator_name,    // s (6)
             $class_section,     // s (7)
-            $prayer,            // i (8) - This was missing from your count!
+            $prayer,            // i (8) - 
             $news,              // i (9)
             $participation,     // i (10)
             $speeches,          // i (11)

@@ -61,10 +61,10 @@ $result = mysqli_query($conn, $query);
                                         <th>Teacher</th>
                                         <th>Class</th>
                                         <th>Topic</th>
-                                        <th>Evaluator</th>
+                                        <th>Judge</th>
                                         <th>Total Score</th>
-                                        <th>Comments</th>
-                                        <th>Created</th>
+                                        <!-- <th>Comments</th>
+                                        <th>Created</th> -->
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -81,8 +81,8 @@ $result = mysqli_query($conn, $query);
                                             <td><?= htmlspecialchars($row['topic']) ?></td>
                                             <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
                                             <td><strong><?= $row['total'] ?></strong>/<?= $row['total'] > 0 ? $row['total'] : '100' ?></td>
-                                            <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td>
-                                            <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td>
+                                            <!-- <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td> -->
+                                            <!-- <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td> -->
                                             <td class="action-buttons">
                                                 <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-info btn-sm" title="View Details">
                                                     <i class="fas fa-eye"></i>
