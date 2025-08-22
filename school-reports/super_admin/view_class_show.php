@@ -218,23 +218,23 @@ $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $r
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th width="40%">Session:</th>
+                                    <th width="40%">Session</th>
                                     <td><?= htmlspecialchars($row['session']) ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Class Show Date:</th>
+                                    <th>Class Show Date</th>
                                     <td><?= date('d M Y', strtotime($row['eval_date'])) ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Class/Section:</th>
+                                    <th>Class/Section</th>
                                     <td><?= htmlspecialchars($row['class_section']) ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Topic:</th>
+                                    <th>Topic</th>
                                     <td><?= htmlspecialchars($row['topic']) ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Judge:</th>
+                                    <th>Judge</th>
                                     <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
                                 </tr>
                             </table>
@@ -251,15 +251,15 @@ $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $r
                                     <td><?= $row['speaking_skills'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Dancing Skills (Students):</th>
+                                    <th>Dancing Skills (Students)</th>
                                     <td><?= $row['dancing_skills'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Singing Skills (Students):</th>
+                                    <th>Singing Skills (Students)</th>
                                     <td><?= $row['singing_skills'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Dramatic Skills (Students):</th>
+                                    <th>Dramatic Skills (Students)</th>
                                     <td><?= $row['dramatic_skills'] ?></td>
                                 </tr>
                             </table>
@@ -274,51 +274,51 @@ $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $r
                         <div class="card-body">
                             <table class="table table-bordered">
                                 <tr>
-                                    <th width="60%">Prayer (03):</th>
+                                    <th width="60%">Prayer (03)</th>
                                     <td><?= $row['prayer'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>News [English Only] (02):</th>
+                                    <th>News [English Only] (02)</th>
                                     <td><?= $row['news'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Participation (03):</th>
+                                    <th>Participation (03)</th>
                                     <td><?= $row['participation'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Speeches [English (50), Hindi (01)]:</th>
+                                    <th>Speeches [English (50), Hindi (01)]</th>
                                     <td><?= $row['speeches'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Poem Recitation [English (02), Hindi (01)]:</th>
+                                    <th>Poem Recitation [English (02), Hindi (01)]</th>
                                     <td><?= $row['poem_recitation'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Group Dance (04):</th>
+                                    <th>Group Dance (04)</th>
                                     <td><?= $row['dance'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Group Song (04):</th>
+                                    <th>Group Song (04)</th>
                                     <td><?= $row['song'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Stage Management (03):</th>
+                                    <th>Stage Management (03)</th>
                                     <td><?= $row['stage_management'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Innovation (02):</th>
+                                    <th>Innovation (02)</th>
                                     <td><?= $row['innovation'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Theme Based Skit Presentation (04):</th>
+                                    <th>Theme Based Skit Presentation (04)</th>
                                     <td><?= $row['skit'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Theme Based Power Point Presentation (04):</th>
+                                    <th>Theme Based Power Point Presentation (04)</th>
                                     <td><?= $row['ppt'] ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Anchoring (03):</th>
+                                    <th>Anchoring (03)</th>
                                     <td><?= $row['anchoring'] ?></td>
                                 </tr>
                                 <tr class="table-success">
