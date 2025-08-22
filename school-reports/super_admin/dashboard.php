@@ -21,7 +21,7 @@ require_once '../includes/header.php';
             <div class="col-xl-3 col-sm-6 col-12 d-flex">
                 <div class="card bg-success sale-widget flex-fill">
                     <div class="card-body d-flex align-items-center">
-                        <span class="sale-icon bg-white text-primary">
+                        <span class="sale-icon bg-white text-secondary">
                             <i class="ti ti-file-text fs-24"></i>
                         </span>
                         <div class="ms-2">
