@@ -160,6 +160,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .profile-pic-container {
             text-align: center;
             margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
         }
 
         .profile-pic-preview {
