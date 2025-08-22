@@ -11,10 +11,17 @@ require_once '../config/functions.php';
 $query = "SELECT * FROM class_show ORDER BY created_at DESC";
 $result = mysqli_query($conn, $query);
 // Calculate average marks
+// Calculate average marks
 $marks1 = (int)$row['marks_judge1'];
 $marks2 = (int)$row['marks_judge2'];
 $average_marks = ($marks1 + $marks2) / 2;
+
+// Debug: Check what values you're getting
+error_log("Judge 1 marks: " . $row['marks_judge1']);
+error_log("Judge 2 marks: " . $row['marks_judge2']);
+error_log("Calculated average: " . $average_marks);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -93,7 +100,10 @@ $average_marks = ($marks1 + $marks2) / 2;
                                                 </a>
                                             </td>
                                             <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
-                                            <td><strong><?= $row['average_marks'] ?></strong></td>
+                                            <td><strong>  <input type="number" class="form-control fw-bold text-success"
+                                        value="<?= number_format($average_marks, 2) ?>"
+                                        readonly>
+                                    <span class="input-group-text">/ 40</span></strong></td>
                                             <!-- <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td> -->
                                             <!-- <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td> -->
                                             <td class="action-buttons">

@@ -45,7 +45,7 @@ error_log("Judge 1 marks: " . $row['marks_judge1']);
 error_log("Judge 2 marks: " . $row['marks_judge2']);
 error_log("Calculated average: " . $average_marks);
 ?>
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
