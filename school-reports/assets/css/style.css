@@ -55446,5 +55446,11 @@ span.flatpickr-weekday {
 .label {
     display: inline-block;
     font-weight: 500;
+    
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 500;
     color: #0d6efd;
 }
