@@ -188,7 +188,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Class Show Video Link </label>
-                                    <input type="text" name="video_link" class="form-control" required>
+                                    <input type="text" name="video_link" class="form-control">
                                 </div>
                                 <div class="mb-3">
                                     <label>Search Teacher</label>
