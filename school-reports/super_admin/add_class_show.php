@@ -39,10 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $dance + $song + $stage_management + $innovation +
         $skit + $ppt + $anchoring;
 
-    $speaking_skills = (int)$_POST['speaking_skills'];
-    $dancing_skills = (int)$_POST['dancing_skills'];
-    $singing_skills = (int)$_POST['singing_skills'];
-    $dramatic_skills = (int)$_POST['dramatic_skills'];
+    $speaking_skills = $_POST['speaking_skills'];
+    $dancing_skills = $_POST['dancing_skills'];
+    $singing_skills = $_POST['singing_skills'];
+    $dramatic_skills = $_POST['dramatic_skills'];
     $comments = $_POST['comments'];
 
     $sql = "INSERT INTO class_show (
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 7 strings (session to class_section) + 18 integers + 1 string (comments)
         mysqli_stmt_bind_param(
             $stmt,
-            "sssssssiiiiiiiiiiiiiiiiis", // 25 characters: 8s + 18i
+            "sssssssiiiiiiiiiiiiisssss", // 25 characters: 8s + 18i
             $session,           // s (1)
             $eval_date,         // s (2)
             $topic,             // s (3)
@@ -166,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <form method="POST">
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-xl-4">
                         <div class="card dash-widget">
                             <div class="card-body">
                                 <div class="mb-3">
@@ -179,6 +179,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="mb-3">
                                     <label>Date of class show</label>
                                     <input type="date" name="eval_date" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Topic</label>
+                                    <input type="text" name="topic" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Search Teacher</label>
@@ -215,12 +219,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <input type="text" name="teacher_name" id="teacherName" class="form-control" readonly required>
                                 </div>
 
-                                <div class="mb-3">
+                                <!-- <div class="mb-3">
                                     <label>Teacher ID</label>
                                     <input type="text" name="teacher_id" id="teacherId" class="form-control" readonly required>
-                                </div>
+                                </div> -->
 
-                                <div class="mb-3">
+                                <!-- <div class="mb-3">
                                     <label>Subject</label>
                                     <input type="text" name="subject" id="subject" class="form-control" readonly required>
                                 </div>
@@ -228,14 +232,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="mb-3">
                                     <label>Teacher Type</label>
                                     <input type="text" name="teacher_type" id="teacherType" class="form-control" readonly required>
-                                </div>
+                                </div> -->
 
                                 <div class="mb-3">
                                     <label>Class/Section</label>
                                     <input type="text" name="class_section" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Evaluator's Name & Designation</label>
+                                    <label>Judge Name </label>
                                     <select name="evaluator_name" class="form-control" required>
                                         <option value="">--Select--</option>
                                         <option value="Meera Marwaha">Meera Marwaha</option>
@@ -244,63 +248,65 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <option value="Other">Other</option>
                                     </select>
                                 </div>
+                                
                                 <div class="mb-3">
-                                    <label>Topic</label>
-                                    <input type="text" name="topic" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label>Prayer</label>
+                                    <label>Prayer (03)</label>
                                     <input type="number" name="prayer" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>News</label>
+                                    <label>News (English Only) (02)</label>
                                     <input type="number" name="news" class="form-control" required>
                                 </div>
-                                <div class="mb-3">
-                                    <label>Participation</label>
-                                    <input type="number" name="participation" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label>Speeches</label>
-                                    <input type="number" name="speeches" class="form-control" required>
-                                </div>
-
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6">
+                    <div class="col-xl-4">
                         <div class="card dash-widget">
                             <div class="card-body">
                                 <div class="mb-3">
-                                    <label>Poem recitation</label>
+                                    <label>Participation (03)</label>
+                                    <input type="number" name="participation" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Speeches [English (50), Hindi (01)]</label>
+                                    <input type="number" name="speeches" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Poem Recitation [English (02), Hindi (01)]</label>
                                     <input type="number" name="poem_recitation" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Dance</label>
+                                    <label>Group Dance (04)</label>
                                     <input type="number" name="dance" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Song</label>
+                                    <label>Group Song (04)</label>
                                     <input type="number" name="song" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Stage Management</label>
+                                    <label>Stage Management (03)</label>
                                     <input type="number" name="stage_management" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Innovation</label>
+                                    <label>Innovation (02)</label>
                                     <input type="number" name="innovation" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Skit</label>
+                                    <label>Theme Based Skit Presentation (04)</label>
                                     <input type="number" name="skit" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>PPT</label>
+                                    <label>Theme Based Power Point Presentation (04)</label>
                                     <input type="number" name="ppt" class="form-control" required>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card dash-widget">
+                            <div class="card-body">
                                 <div class="mb-3">
-                                    <label>Anchoring</label>
+                                    <label>Anchoring (03)</label>
                                     <input type="number" name="anchoring" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
@@ -309,24 +315,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <small class="text-muted">This field is automatically calculated</small>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Speaking Skills</label>
+                                    <label>Speaking Skills (Students)</label>
                                     <input type="text" name="speaking_skills" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Dancing Skills</label>
+                                    <label>Dancing Skills (Students)</label>
                                     <input type="text" name="dancing_skills" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Singing Skills</label>
+                                    <label>Singing Skills (Students)</label>
                                     <input type="text" name="singing_skills" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Dramatic Skills</label>
+                                    <label>Dramatic Skills (Students)</label>
                                     <input type="text" name="dramatic_skills" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Comments</label>
-                                    <input type="text" name="comments" class="form-control" required>
+                                    <textarea name="comments" class="form-control" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back</a>

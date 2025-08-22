@@ -15,8 +15,11 @@ if ($id <= 0) {
     exit();
 }
 
-// Fetch specific record
-$query = "SELECT * FROM class_show WHERE id = ?";
+// Fetch specific record with teacher photo
+$query = "SELECT cs.*, td.profile_pic as teacher_photo 
+          FROM class_show cs 
+          LEFT JOIN teacher_details td ON cs.teacher_id = td.teacher_id 
+          WHERE cs.id = ?";
 $stmt = mysqli_prepare($conn, $query);
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
@@ -27,29 +30,171 @@ if (!$row) {
     header("Location: list_class_show.php?message=Record not found");
     exit();
 }
+
+// Get teacher photo path or use default
+$teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $row['teacher_photo'] : '../assets/img/default-teacher.png';
+// Make sure the path is correct - adjust if your photos are in a different directory
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>View Class Show Record</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+
+            .page-wrapper {
+                padding: 0;
+                margin: 0;
+            }
+
+            .card {
+                border: 1px solid #000;
+                margin-bottom: 15px;
+                break-inside: avoid;
+            }
+
+            .card-header {
+                background-color: #f8f9fa !important;
+                border-bottom: 2px solid #000;
+            }
+
+            .table th {
+                background-color: #f8f9fa !important;
+            }
+
+            body {
+                font-size: 12px;
+                padding: 20px;
+            }
+
+            h3,
+            h5 {
+                color: #000 !important;
+            }
+
+            .btn {
+                display: none;
+            }
+
+            .header-button {
+                margin-bottom: 20px;
+                border-bottom: 2px solid #000;
+                padding-bottom: 10px;
+            }
+
+            .teacher-photo {
+                max-width: 120px;
+                height: auto;
+                border: 2px solid #000;
+                margin: 10px 0;
+            }
+
+            /* Ensure images print correctly */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+        }
+
+        .print-header {
+            display: none;
+        }
+
+        @media print {
+            .print-header {
+                display: block;
+                text-align: center;
+                margin-bottom: 20px;
+                border-bottom: 2px solid #000;
+                padding-bottom: 10px;
+            }
+
+            .print-header h2 {
+                margin: 0;
+                font-size: 18px;
+            }
+
+            .print-header p {
+                margin: 5px 0;
+                font-size: 12px;
+            }
+        }
+
+        .teacher-photo-container {
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .teacher-photo {
+            max-width: 70px;
+            height: auto;
+            border-radius: 5px;
+            border: 3px solid #dee2e6;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        @media print {
+            .teacher-photo-container {
+                background-color: transparent !important;
+                border: 1px solid #000;
+            }
+
+            .teacher-photo {
+                max-width: 100px;
+                border: 2px solid #000;
+                box-shadow: none;
+            }
+        }
+
+        .photo-label {
+            font-weight: bold;
+            margin-top: 8px;
+            color: #495057;
+        }
+
+        @media print {
+            .photo-label {
+                color: #000 !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="page-wrapper">
         <div class="content">
-            <div class="header-button d-flex justify-content-between align-items-center mb-3">
+            <div class="header-button d-flex justify-content-between align-items-center mb-3 no-print">
                 <h3>Class Show Record Details</h3>
                 <div>
+                    <button onclick="printReport()" class="btn btn-primary">
+                        <i class="fas fa-print"></i> Print
+                    </button>
                     <a href="list_class_show.php" class="btn btn-secondary">Back to List</a>
                     <a href="edit_class_show.php?id=<?= $row['id'] ?>" class="btn btn-warning">Edit</a>
                 </div>
             </div>
 
+            <!-- Print Header (only shows when printing) -->
+            <div class="print-header">
+                <h2>Class Show Evaluation Report</h2>
+                <!-- <p>Generated on: <?= date('d M Y h:i A') ?></p>
+                <p>Report ID: CS<?= str_pad($row['id'], 4, '0', STR_PAD_LEFT) ?></p> -->
+            </div>
+
             <div class="row">
+                <h2 style="text-align: center; margin-bottom:10px">Class Show Report</h2>
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-header">
@@ -58,20 +203,27 @@ if (!$row) {
                         <div class="card-body">
                             <table class="table table-bordered">
                                 <tr>
+                                    <th width="40%"><img src="<?= $teacher_photo ?>"
+                                            alt="<?= htmlspecialchars($row['teacher_name']) ?>"
+                                            class="teacher-photo"
+                                            onerror="this.onerror=null; this.src='../assets/img/default-teacher.png'">
+                                    </th>
+                                    <td>
+                                        <div class="photo-label">
+                                            <?= htmlspecialchars($row['teacher_name']) ?>
+                                        </div>
+                                        <div class="text-muted small">
+                                            ID: <?= htmlspecialchars($row['teacher_id']) ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <th width="40%">Session:</th>
                                     <td><?= htmlspecialchars($row['session']) ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Evaluation Date:</th>
+                                    <th>Class Show Date:</th>
                                     <td><?= date('d M Y', strtotime($row['eval_date'])) ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Teacher Name:</th>
-                                    <td><?= htmlspecialchars($row['teacher_name']) ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Teacher ID:</th>
-                                    <td><?= htmlspecialchars($row['teacher_id']) ?></td>
                                 </tr>
                                 <tr>
                                     <th>Class/Section:</th>
@@ -82,14 +234,38 @@ if (!$row) {
                                     <td><?= htmlspecialchars($row['topic']) ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Evaluator:</th>
+                                    <th>Judge:</th>
                                     <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Skills Assessment (Students)</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th width="60%">Speaking Skills:</th>
+                                    <td><?= $row['speaking_skills'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Dancing Skills:</th>
+                                    <td><?= $row['dancing_skills'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Singing Skills:</th>
+                                    <td><?= $row['singing_skills'] ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Dramatic Skills:</th>
+                                    <td><?= $row['dramatic_skills'] ?></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-header">
@@ -154,42 +330,16 @@ if (!$row) {
                     </div>
                 </div>
 
-                <div class="col-md-6">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title">Skills Assessment</h5>
-                        </div>
-                        <div class="card-body">
-                            <table class="table table-bordered">
-                                <tr>
-                                    <th width="60%">Speaking Skills:</th>
-                                    <td><?= $row['speaking_skills'] ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Dancing Skills:</th>
-                                    <td><?= $row['dancing_skills'] ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Singing Skills:</th>
-                                    <td><?= $row['singing_skills'] ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Dramatic Skills:</th>
-                                    <td><?= $row['dramatic_skills'] ?></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title">Comments & Metadata</h5>
+                            <h5 class="card-title">Comments </h5>
                         </div>
                         <div class="card-body">
                             <div class="mb-3">
-                                <label class="form-label"><strong>Comments:</strong></label>
+                                <label class="form-label"><strong>Enter Comments or Remarts Here:</strong></label>
                                 <p class="form-control-plaintext"><?= nl2br(htmlspecialchars($row['comments'])) ?></p>
                             </div>
                             <div class="mb-3">
@@ -200,11 +350,73 @@ if (!$row) {
                     </div>
                 </div>
             </div>
+            <!-- Print Footer -->
+            <div class="no-print mt-4">
+                <div class="text-center">
+                    <button onclick="printReport()" class="btn btn-primary btn-lg">
+                        <i class="fas fa-print"></i> Print This Report
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
     <?php include '../includes/footer.php'; ?>
+
+    <script>
+        function printReport() {
+            // Store original title
+            const originalTitle = document.title;
+
+            // Set print-specific title
+            document.title = "Class Show Evaluation - <?= $row['teacher_name'] ?> - <?= date('d M Y', strtotime($row['eval_date'])) ?>";
+
+            // Ensure images are loaded before printing
+            const images = document.querySelectorAll('img');
+            let imagesLoaded = 0;
+
+            if (images.length === 0) {
+                window.print();
+            } else {
+                images.forEach(img => {
+                    if (img.complete) {
+                        imagesLoaded++;
+                    } else {
+                        img.onload = function() {
+                            imagesLoaded++;
+                            if (imagesLoaded === images.length) {
+                                window.print();
+                            }
+                        };
+                        img.onerror = function() {
+                            imagesLoaded++;
+                            if (imagesLoaded === images.length) {
+                                window.print();
+                            }
+                        };
+                    }
+                });
+
+                // If all images are already loaded
+                if (imagesLoaded === images.length) {
+                    window.print();
+                }
+            }
+
+            // Restore original title after a delay
+            setTimeout(() => {
+                document.title = originalTitle;
+            }, 1000);
+        }
+
+        // Preload default teacher image for fallback
+        document.addEventListener('DOMContentLoaded', function() {
+            const defaultImg = new Image();
+            defaultImg.src = '../assets/img/default-teacher.png';
+        });
+    </script>
 </body>
+
 </html>
 
 <?php

@@ -61,10 +61,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
              $dance + $song + $stage_management + $innovation + 
              $skit + $ppt + $anchoring;
     
-    $speaking_skills = (int)$_POST['speaking_skills'];
-    $dancing_skills = (int)$_POST['dancing_skills'];
-    $singing_skills = (int)$_POST['singing_skills'];
-    $dramatic_skills = (int)$_POST['dramatic_skills'];
+    $speaking_skills = $_POST['speaking_skills'];
+    $dancing_skills = $_POST['dancing_skills'];
+    $singing_skills = $_POST['singing_skills'];
+    $dramatic_skills = $_POST['dramatic_skills'];
     $comments = $_POST['comments'];
 
     // Update query
@@ -369,19 +369,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Speaking Skills</label>
-                                    <input type="number" name="speaking_skills" class="form-control" value="<?= $record['speaking_skills'] ?>" min="0" max="10" required>
+                                    <input type="text" name="speaking_skills" class="form-control" value="<?= $record['speaking_skills'] ?>"  required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Dancing Skills</label>
-                                    <input type="number" name="dancing_skills" class="form-control" value="<?= $record['dancing_skills'] ?>" min="0" max="10" required>
+                                    <input type="text" name="dancing_skills" class="form-control" value="<?= $record['dancing_skills'] ?>"  required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Singing Skills</label>
-                                    <input type="number" name="singing_skills" class="form-control" value="<?= $record['singing_skills'] ?>" min="0" max="10" required>
+                                    <input type="text" name="singing_skills" class="form-control" value="<?= $record['singing_skills'] ?>"  required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Dramatic Skills</label>
-                                    <input type="number" name="dramatic_skills" class="form-control" value="<?= $record['dramatic_skills'] ?>" min="0" max="10" required>
+                                    <input type="text" name="dramatic_skills" class="form-control" value="<?= $record['dramatic_skills'] ?>"  required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Comments</label>
