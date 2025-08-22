@@ -330,10 +330,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Remarks</label>
                                     <textarea name="remarks" class="form-control"><?= htmlspecialchars($record['remarks']) ?></textarea>
                                 </div>
-                                <div class="mb-3 form-check">
+                                <!-- <div class="mb-3 form-check">
                                     <input type="checkbox" name="undertaking" class="form-check-input" id="undertaking" <?= $record['undertaking'] ? 'checked' : '' ?>>
                                     <label class="form-check-label" for="undertaking">Undertaking</label>
-                                </div>
+                                </div> -->
                                 <button type="submit" class="btn btn-success">Update</button>
                                 <a href="./list_notebook.php" class="btn btn-secondary">Back</a>
                             </div>
