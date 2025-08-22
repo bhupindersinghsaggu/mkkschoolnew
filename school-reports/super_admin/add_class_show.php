@@ -350,12 +350,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="mb-3">
                                     <label>Comments by Judges</label>
                                     <div class="mb-2">
-                                        <label class="form-label small text-muted">1. Remarks/Comments by Judge 1</label>
+                                        <label class="form-label small text-muted"></label>
                                         <textarea name="comments1" class="form-control" placeholder="Enter comments by Judge 1..." ></textarea>
                                     </div>
 
                                     <div class="mb-2">
-                                        <label class="form-label small text-muted">2. Remarks/Comments by Judge 2</label>
+                                        <label class="form-label small text-muted"></label>
                                         <textarea name="comments2" class="form-control" placeholder="Enter comments by Judge 2..." ></textarea>
                                     </div>
                                 </div>
