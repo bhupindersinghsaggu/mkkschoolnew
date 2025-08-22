@@ -34,6 +34,17 @@ if (!$row) {
 // Get teacher photo path or use default
 $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $row['teacher_photo'] : '../assets/img/default-teacher.png';
 // Make sure the path is correct - adjust if your photos are in a different directory
+
+// Calculate average marks
+$marks1 = (int)$row['marks_judge1'];
+$marks2 = (int)$row['marks_judge2'];
+$average_marks = ($marks1 + $marks2) / 2;
+
+// Debug: Check what values you're getting
+error_log("Judge 1 marks: " . $row['marks_judge1']);
+error_log("Judge 2 marks: " . $row['marks_judge2']);
+error_log("Calculated average: " . $average_marks);
+?>
 ?>
 
 <!DOCTYPE html>
@@ -327,18 +338,36 @@ $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $r
                                     <th>Anchoring (03)</th>
                                     <td><?= $row['anchoring'] ?></td>
                                 </tr>
-                                <tr class="table-success">
+                                <!-- <tr class="table-success">
                                     <th><strong>Total Score (Out of 40):</strong></th>
                                     <td><strong><?= $row['total'] ?></strong></td>
-                                </tr>
+                                </tr> -->
+
                             </table>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Final Marks</h5>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>Marks By Judge 1</th>
+                                        <td><?= $row['marks_judge1'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Marks By Judge 2</th>
+                                        <td><?= $row['marks_judge2'] ?></td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="card">
                         <div class="card-header">
                             <h5 class="card-title">Comments </h5>
@@ -346,7 +375,11 @@ $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $r
                         <div class="card-body">
                             <div class="mb-3">
                                 <label class="form-label"><strong>Enter Comments or Remarts Here:</strong></label>
-                                <p class="form-control-plaintext"><?= nl2br(htmlspecialchars($row['comments'])) ?></p>
+                                <p class="form-control-plaintext"><?= nl2br(htmlspecialchars($row['comments1'])) ?></p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label"><strong>Enter Comments or Remarts Here:</strong></label>
+                                <p class="form-control-plaintext"><?= nl2br(htmlspecialchars($row['comments2'])) ?></p>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label"><strong>Record Created:</strong></label>
@@ -355,16 +388,37 @@ $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $r
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Print Footer -->
-            <div class="no-print mt-4 mb-3">
-                <div class="text-center">
-                    <button onclick="printReport()" class="btn btn-primary btn-lg">
-                        <i class="fas fa-print"></i> Print This Report
-                    </button>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h5 class="card-title">Average Marks</h5>
+                        </div>
+                        <table class="table table-bordered">
+                            <tr>
+                                <div class="input-group">
+                                    <input type="number" class="form-control fw-bold text-success"
+                                        value="<?= number_format($average_marks, 2) ?>"
+                                        readonly>
+                                    <span class="input-group-text">/ 40</span>
+                                </div>
+                                <small class="text-muted">
+                                    Calculated from: (Judge 1: <?= $row['marks_judge1'] ?> + Judge 2: <?= $row['marks_judge2'] ?>) ÷ 2
+                                </small>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- Print Footer -->
+        <div class="no-print mt-4 mb-3">
+            <div class="text-center">
+                <button onclick="printReport()" class="btn btn-primary btn-lg">
+                    <i class="fas fa-print"></i> Print This Report
+                </button>
+            </div>
+        </div>
+    </div>
     </div>
 
     <?php include '../includes/footer.php'; ?>

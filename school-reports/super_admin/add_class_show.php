@@ -44,7 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dancing_skills = $_POST['dancing_skills'];
     $singing_skills = $_POST['singing_skills'];
     $dramatic_skills = $_POST['dramatic_skills'];
-    $comments = $_POST['comments'];
+    $comments1 = $_POST['comments1'];
+    $comments2 = $_POST['comments2'];
     $marks_judge1 = (int)$_POST['marks_judge1'];
     $marks_judge2 = (int)$_POST['marks_judge2'];
 
@@ -52,8 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         session, eval_date, topic, video_link, teacher_name, teacher_id, evaluator_name, class_section,
         prayer, news, participation, speeches, poem_recitation,
         dance, song, stage_management, innovation, skit, ppt, anchoring, total,
-        speaking_skills, dancing_skills, singing_skills, dramatic_skills, comments, marks_judge1, marks_judge2
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        speaking_skills, dancing_skills, singing_skills, dramatic_skills, comments1, comments2, marks_judge1, marks_judge2
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
 
     $stmt = mysqli_prepare($conn, $sql);
 
@@ -62,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 7 strings (session to class_section) + 18 integers + 1 string (comments)
         mysqli_stmt_bind_param(
             $stmt,
-            "ssssssssiiiiiiiiiiiiisssssss", // 25 characters: 8s + 18i
+            "ssssssssiiiiiiiiiiiiissssssii", // 25 characters: 8s + 18i
             $session,           // s (1)
             $eval_date,         // s (2)
             $topic,             // s (3)
@@ -88,7 +89,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $dancing_skills,    // i (22)
             $singing_skills,    // i (23)
             $dramatic_skills,   // i (24)
-            $comments  ,         // s (25)
+            $comments1,
+            $comments2,         // s (25)
             $marks_judge1,
             $marks_judge2,
         );
@@ -248,7 +250,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Class/Section</label>
                                     <input type="text" name="class_section" class="form-control" required>
                                 </div>
-                               
+
                                 <div class="mb-3">
                                     <label>Name of The Judge</label>
                                     <input type="text" name=" evaluator_name" class="form-control" required>
@@ -263,7 +265,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <option value="Other">Other</option>
                                     </select>
                                 </div> -->
-                                
+
                                 <div class="mb-3">
                                     <label>Prayer (03)</label>
                                     <input type="number" name="prayer" class="form-control" required>
@@ -346,16 +348,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <input type="text" name="dramatic_skills" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Comments</label>
-                                    <textarea name="comments" class="form-control" required></textarea>
+                                    <label>Comments by Judges</label>
+                                    <div class="mb-2">
+                                        <label class="form-label small text-muted">1. Remarks/Comments by Judge 1</label>
+                                        <textarea name="comments1" class="form-control" placeholder="Enter comments by Judge 1..." ></textarea>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label small text-muted">2. Remarks/Comments by Judge 2</label>
+                                        <textarea name="comments2" class="form-control" placeholder="Enter comments by Judge 2..." ></textarea>
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 1</label>
-                                     <input type="number" name="marks-judge1" class="form-control" required>
+                                    <input type="number" name="marks-judge1" class="form-control" >
                                 </div>
-                                 <div class="mb-3">
+                                <div class="mb-3">
                                     <label>Total Marks By Judge 2</label>
-                                     <input name="marks-judge2" class="form-control" required>
+                                    <input type="number" name="marks-judge2" class="form-control" >
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back</a>

@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $teacher_id = $_POST['teacher_id'];
     $evaluator_name = $_POST['evaluator_name'];
     $class_section = $_POST['class_section'];
-    
+
     // Convert to integers
     $prayer = (int)$_POST['prayer'];
     $news = (int)$_POST['news'];
@@ -56,17 +56,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $skit = (int)$_POST['skit'];
     $ppt = (int)$_POST['ppt'];
     $anchoring = (int)$_POST['anchoring'];
-    
+
     // Calculate total sum
-    $total = $prayer + $news + $participation + $speeches + $poem_recitation + 
-             $dance + $song + $stage_management + $innovation + 
-             $skit + $ppt + $anchoring;
-    
+    $total = $prayer + $news + $participation + $speeches + $poem_recitation +
+        $dance + $song + $stage_management + $innovation +
+        $skit + $ppt + $anchoring;
+
     $speaking_skills = $_POST['speaking_skills'];
     $dancing_skills = $_POST['dancing_skills'];
     $singing_skills = $_POST['singing_skills'];
     $dramatic_skills = $_POST['dramatic_skills'];
-    $comments = $_POST['comments'];
+    $comments1 = $_POST['comments1'];
+    $comments2 = $_POST['comments2'];
+    $marks_judge1 = (int)$_POST['marks_judge1'];
+    $marks_judge2 = (int)$_POST['marks_judge2'];
 
     // Update query
     $sql = "UPDATE class_show SET 
@@ -75,21 +78,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         speeches = ?, poem_recitation = ?, dance = ?, song = ?, stage_management = ?, 
         innovation = ?, skit = ?, ppt = ?, anchoring = ?, total = ?, 
         speaking_skills = ?, dancing_skills = ?, singing_skills = ?, dramatic_skills = ?, 
-        comments = ? 
+        comments1 = ?, comments2 = ?, marks_judge1 =?, marks_judge2 = ?
         WHERE id = ?";
 
     $stmt = mysqli_prepare($conn, $sql);
-    
+
     if ($stmt) {
         mysqli_stmt_bind_param(
             $stmt,
-            "ssssssssssssssssssssssssssi",
-            $session, $eval_date, $topic, $video_link, $teacher_name, $teacher_id, 
-            $evaluator_name, $class_section, $prayer, $news, $participation,
-            $speeches, $poem_recitation, $dance, $song, $stage_management,
-            $innovation, $skit, $ppt, $anchoring, $total,
-            $speaking_skills, $dancing_skills, $singing_skills, $dramatic_skills, 
-            $comments, $id
+            "sssssssssssssssssssssssssssiii",
+            $session,
+            $eval_date,
+            $topic,
+            $video_link,
+            $teacher_name,
+            $teacher_id,
+            $evaluator_name,
+            $class_section,
+            $prayer,
+            $news,
+            $participation,
+            $speeches,
+            $poem_recitation,
+            $dance,
+            $song,
+            $stage_management,
+            $innovation,
+            $skit,
+            $ppt,
+            $anchoring,
+            $total,
+            $speaking_skills,
+            $dancing_skills,
+            $singing_skills,
+            $dramatic_skills,
+            $comments1,
+            $comments2,
+            $marks_judge1,
+            $marks_judge2,
+            $id
         );
 
         if (mysqli_stmt_execute($stmt)) {
@@ -97,17 +124,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $message = "✅ Record updated successfully. Total: " . $total;
             // Refresh the record data
             $record = array_merge($record, [
-                'session' => $session, 'eval_date' => $eval_date, 'topic' => $topic, 'video_link' => $video_link,
-                'teacher_name' => $teacher_name, 'teacher_id' => $teacher_id,
-                'evaluator_name' => $evaluator_name, 'class_section' => $class_section,
-                'prayer' => $prayer, 'news' => $news, 'participation' => $participation,
-                'speeches' => $speeches, 'poem_recitation' => $poem_recitation,
-                'dance' => $dance, 'song' => $song, 'stage_management' => $stage_management,
-                'innovation' => $innovation, 'skit' => $skit, 'ppt' => $ppt,
-                'anchoring' => $anchoring, 'total' => $total,
-                'speaking_skills' => $speaking_skills, 'dancing_skills' => $dancing_skills,
-                'singing_skills' => $singing_skills, 'dramatic_skills' => $dramatic_skills,
-                'comments' => $comments
+                'session' => $session,
+                'eval_date' => $eval_date,
+                'topic' => $topic,
+                'video_link' => $video_link,
+                'teacher_name' => $teacher_name,
+                'teacher_id' => $teacher_id,
+                'evaluator_name' => $evaluator_name,
+                'class_section' => $class_section,
+                'prayer' => $prayer,
+                'news' => $news,
+                'participation' => $participation,
+                'speeches' => $speeches,
+                'poem_recitation' => $poem_recitation,
+                'dance' => $dance,
+                'song' => $song,
+                'stage_management' => $stage_management,
+                'innovation' => $innovation,
+                'skit' => $skit,
+                'ppt' => $ppt,
+                'anchoring' => $anchoring,
+                'total' => $total,
+                'speaking_skills' => $speaking_skills,
+                'dancing_skills' => $dancing_skills,
+                'singing_skills' => $singing_skills,
+                'dramatic_skills' => $dramatic_skills,
+                'comments1' => $comments1,
+                'comments2' => $comments2,
+                '$marks_judge1'=>$marks_judge1,
+                '$marks_judge2'=>$marks_judge2,
             ]);
         } else {
             $message = "❌ Execution error: " . mysqli_stmt_error($stmt);
@@ -121,6 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Edit Class Show Record</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png">
@@ -175,14 +221,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'dance', 'song', 'stage_management', 'innovation',
                 'skit', 'ppt', 'anchoring'
             ];
-            
+
             let total = 0;
-            
+
             fields.forEach(field => {
                 const value = parseInt(document.querySelector(`[name="${field}"]`).value) || 0;
                 total += value;
             });
-            
+
             document.getElementById('totalField').value = total;
         }
 
@@ -193,19 +239,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'dance', 'song', 'stage_management', 'innovation',
                 'skit', 'ppt', 'anchoring'
             ];
-            
+
             numericFields.forEach(field => {
                 const input = document.querySelector(`[name="${field}"]`);
                 if (input) {
                     input.addEventListener('input', calculateTotal);
                 }
             });
-            
+
             // Calculate initial total
             calculateTotal();
         });
     </script>
 </head>
+
 <body>
     <div class="page-wrapper">
         <div class="content mb-3">
@@ -223,7 +270,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <form method="POST">
                 <input type="hidden" name="id" value="<?= $id ?>">
-                
+
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="card dash-widget">
@@ -378,23 +425,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Speaking Skills</label>
-                                    <input type="text" name="speaking_skills" class="form-control" value="<?= $record['speaking_skills'] ?>"  required>
+                                    <input type="text" name="speaking_skills" class="form-control" value="<?= $record['speaking_skills'] ?>" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Dancing Skills</label>
-                                    <input type="text" name="dancing_skills" class="form-control" value="<?= $record['dancing_skills'] ?>"  required>
+                                    <input type="text" name="dancing_skills" class="form-control" value="<?= $record['dancing_skills'] ?>" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Singing Skills</label>
-                                    <input type="text" name="singing_skills" class="form-control" value="<?= $record['singing_skills'] ?>"  required>
+                                    <input type="text" name="singing_skills" class="form-control" value="<?= $record['singing_skills'] ?>" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Dramatic Skills</label>
-                                    <input type="text" name="dramatic_skills" class="form-control" value="<?= $record['dramatic_skills'] ?>"  required>
+                                    <input type="text" name="dramatic_skills" class="form-control" value="<?= $record['dramatic_skills'] ?>" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Comments</label>
-                                    <textarea name="comments" class="form-control" rows="4" required><?= htmlspecialchars($record['comments']) ?></textarea>
+                                    <label>Comments/Remarks By Judge1</label>
+                                    <textarea name="comments1" class="form-control" rows="4" required><?= htmlspecialchars($record['comments1']) ?></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Comments/Remarks By Judge2</label>
+                                    <textarea name="comments2" class="form-control" rows="4" required><?= htmlspecialchars($record['comments2']) ?></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Marks By Judge1</label>
+                                    <input type="number" name="marks_judge1" class="form-control" value="<?= $record['marks_judge1'] ?>" min="0" max="10" >
+                                </div>
+                                <div class="mb-3">
+                                    <label>Marks By Judge2</label>
+                                    <input type="number" name="marks_judge2" class="form-control" value="<?= $record['marks_judge2'] ?>" min="0" max="10" >
                                 </div>
                                 <button type="submit" class="btn btn-success">Update Record</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back to Dashboard</a>
@@ -406,7 +465,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
     <?php include '../includes/footer.php'; ?>
-    
+
     <script>
         // Initialize teacher details on page load
         document.addEventListener('DOMContentLoaded', function() {
@@ -414,6 +473,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         });
     </script>
 </body>
+
 </html>
 
 <?php
