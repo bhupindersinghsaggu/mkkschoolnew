@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../assets/css/custom.css">
     <style>
         .profile-pic-container {
-            text-align: center;
+            text-align: left;
             margin-bottom: 20px;
         }
 
@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="page-wrapper">
         <div class="content mb-3">
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-header bg-success text-white">
                         <h3>Teacher Registration</h3>
