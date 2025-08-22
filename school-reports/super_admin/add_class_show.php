@@ -45,13 +45,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $singing_skills = $_POST['singing_skills'];
     $dramatic_skills = $_POST['dramatic_skills'];
     $comments = $_POST['comments'];
+    $marks_judge1 = (int)$_POST['marks_judge1'];
+    $marks_judge2 = (int)$_POST['marks_judge2'];
 
     $sql = "INSERT INTO class_show (
         session, eval_date, topic, video_link, teacher_name, teacher_id, evaluator_name, class_section,
         prayer, news, participation, speeches, poem_recitation,
         dance, song, stage_management, innovation, skit, ppt, anchoring, total,
-        speaking_skills, dancing_skills, singing_skills, dramatic_skills, comments
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        speaking_skills, dancing_skills, singing_skills, dramatic_skills, comments, marks_judge1, marks_judge2
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = mysqli_prepare($conn, $sql);
 
@@ -60,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 7 strings (session to class_section) + 18 integers + 1 string (comments)
         mysqli_stmt_bind_param(
             $stmt,
-            "ssssssssiiiiiiiiiiiiisssss", // 25 characters: 8s + 18i
+            "ssssssssiiiiiiiiiiiiisssssss", // 25 characters: 8s + 18i
             $session,           // s (1)
             $eval_date,         // s (2)
             $topic,             // s (3)
@@ -86,7 +88,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $dancing_skills,    // i (22)
             $singing_skills,    // i (23)
             $dramatic_skills,   // i (24)
-            $comments           // s (25)
+            $comments  ,         // s (25)
+            $marks_judge1,
+            $marks_judge2,
         );
 
         if (mysqli_stmt_execute($stmt)) {
@@ -339,6 +343,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="mb-3">
                                     <label>Comments</label>
                                     <textarea name="comments" class="form-control" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Total Marks By Judge 1</label>
+                                     <input type="number" name="marks-judge1" class="form-control" required>
+                                </div>
+                                 <div class="mb-3">
+                                    <label>Total Marks By Judge 2</label>
+                                     <input name="marks-judge2" class="form-control" required>
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back</a>
