@@ -63,6 +63,7 @@ $result = mysqli_query($conn, $query);
                                         <th>Topic</th>
                                         <th>Judge</th>
                                         <th>Total Score (Out of 40)</th>
+                                        <th>Video Link</th>
                                         <!-- <th>Comments</th>
                                         <th>Created</th> -->
                                         <th>Actions</th>
@@ -79,6 +80,7 @@ $result = mysqli_query($conn, $query);
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
                                             <td><?= htmlspecialchars($row['topic']) ?></td>
+                                            <td><?= htmlspecialchars($row['video_link']) ?></td>
                                             <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
                                             <td><strong><?= $row['total'] ?></strong></td>
                                             <!-- <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td> -->
