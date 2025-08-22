@@ -148,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="row ">
                     <div class="col-md-8">
                         <div class="card">
-                            <div class="card-header bg-primary text-white">
+                            <div class="card-header bg-success text-white">
                                 <h3>Teacher Registration</h3>
                             </div>
                             <div class="card-body">

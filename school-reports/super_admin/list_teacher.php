@@ -101,7 +101,7 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <div class="container py-4">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2 class="mb-0 mt-4">Teacher Management</h2>
-                    <a href="register_teacher.php" class="btn btn-primary mt-4">
+                    <a href="register_teacher.php" class="btn btn-success mt-4">
                         <i class="bi bi-plus-lg"></i> Add
                     </a>
                 </div>
