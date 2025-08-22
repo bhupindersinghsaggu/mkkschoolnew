@@ -478,7 +478,8 @@ tr {
 }
 
 label {
-    display: inline-block
+    display: inline-block;
+    color: #0d6efd;
 }
 
 button {
