@@ -21,6 +21,7 @@ $result = mysqli_query($conn, $query);
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
     <style>
         .table-responsive {
             overflow-x: auto;

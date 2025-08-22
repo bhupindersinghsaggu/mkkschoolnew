@@ -74,6 +74,7 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
     <style>
         .profile-img {
             width: 60px;
@@ -101,7 +102,7 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2 class="mb-0 mt-4">Teacher Management</h2>
                     <a href="register_teacher.php" class="btn btn-primary mt-4">
-                        <i class="bi bi-plus-lg"></i> Add 
+                        <i class="bi bi-plus-lg"></i> Add
                     </a>
                 </div>
 

@@ -151,8 +151,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'dramatic_skills' => $dramatic_skills,
                 'comments1' => $comments1,
                 'comments2' => $comments2,
-                '$marks_judge1'=>$marks_judge1,
-                '$marks_judge2'=>$marks_judge2,
+                '$marks_judge1' => $marks_judge1,
+                '$marks_judge2' => $marks_judge2,
             ]);
         } else {
             $message = "❌ Execution error: " . mysqli_stmt_error($stmt);
@@ -181,6 +181,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
     <script>
         function filterTeachers() {
             const input = document.getElementById('teacherSearch');
@@ -449,11 +450,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge1</label>
-                                    <input type="number" name="marks_judge1" class="form-control" value="<?= $record['marks_judge1'] ?>" min="0" max="10" >
+                                    <input type="number" name="marks_judge1" class="form-control" value="<?= $record['marks_judge1'] ?>" min="0" max="10">
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge2</label>
-                                    <input type="number" name="marks_judge2" class="form-control" value="<?= $record['marks_judge2'] ?>" min="0" max="10" >
+                                    <input type="number" name="marks_judge2" class="form-control" value="<?= $record['marks_judge2'] ?>" min="0" max="10">
                                 </div>
                                 <button type="submit" class="btn btn-success">Update Record</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back to Dashboard</a>

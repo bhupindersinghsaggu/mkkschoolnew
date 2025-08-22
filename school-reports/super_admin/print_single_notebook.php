@@ -25,6 +25,7 @@ if (!$row) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Print View - Notebook Record</title>
@@ -32,12 +33,13 @@ if (!$row) {
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <!-- Load Font Awesome for icons -->
     <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
             font-size: 14px;
         }
-        
+
         @media print {
             body {
                 -webkit-print-color-adjust: exact !important;
@@ -56,25 +58,25 @@ if (!$row) {
             .record-card {
                 page-break-inside: avoid;
             }
-            
+
             .table {
                 width: 100%;
                 margin-bottom: 1rem;
                 color: #212529;
                 border-collapse: collapse;
             }
-            
+
             .table-bordered {
                 border: 1px solid #dee2e6;
             }
-            
+
             .table-bordered th,
             .table-bordered td {
                 border: 1px solid #dee2e6;
                 padding: 0.75rem;
                 vertical-align: top;
             }
-            
+
             .table-bordered thead th,
             .table-bordered thead td {
                 border-bottom-width: 2px;
@@ -100,7 +102,7 @@ if (!$row) {
             font-weight: 500;
             margin-bottom: 5px;
         }
-        
+
         .school-header p {
             margin-bottom: 0;
         }
@@ -127,16 +129,16 @@ if (!$row) {
             text-align: center;
             margin-top: 40px;
         }
-        
+
         .container {
             max-width: 100%;
             padding: 15px;
         }
-        
+
         .table {
             margin-bottom: 20px;
         }
-        
+
         .table th {
             background-color: #f8f9fa;
         }
@@ -155,7 +157,7 @@ if (!$row) {
             <h2>Dr. M.K.K. Arya Model School</h2>
             <p>Model Town, Panipat</p>
         </div>
-        
+
         <table class="table table-bordered">
             <tbody>
                 <tr>
@@ -240,8 +242,9 @@ if (!$row) {
             <div class="col-md-6">Evaluator Signature</div>
         </div>
     </div>
-    
+
     <!-- Load Bootstrap JS (optional, only needed if using interactive elements) -->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
