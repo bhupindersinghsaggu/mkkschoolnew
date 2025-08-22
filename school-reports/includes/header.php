@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
     <!-- Main fontawsome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
