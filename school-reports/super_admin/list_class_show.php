@@ -84,7 +84,6 @@ $result = mysqli_query($conn, $query);
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
                                             <td><?= htmlspecialchars($row['topic']) ?></td>
-                                            <td><?= htmlspecialchars($row['video_link']) ?></td>
                                             <td>
                                                 <a href="<?= htmlspecialchars($row['video_link']) ?>" target="_blank" title="Watch Video">
                                                     <i class="fas fa-external-link-alt"></i> View <!-- External link icon -->
