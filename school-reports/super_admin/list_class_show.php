@@ -100,10 +100,10 @@ error_log("Calculated average: " . $average_marks);
                                                 </a>
                                             </td>
                                             <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
-                                            <td><strong>  <input type="number" class="form-control fw-bold text-success"
-                                        value="<?= number_format($average_marks, 2) ?>"
-                                        readonly>
-                                    <span class="input-group-text">/ 40</span></strong></td>
+                                            <td><strong> <input type="number" class="form-control fw-bold text-success"
+                                                        value="<?= number_format($average_marks, 2) ?>"
+                                                        readonly>
+                                                    <span class="input-group-text">/ 40</span></strong></td>
                                             <!-- <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td> -->
                                             <!-- <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td> -->
                                             <td class="action-buttons">
