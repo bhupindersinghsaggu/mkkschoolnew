@@ -296,7 +296,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                                     <div class="d-grid gap-2">
                                         <button type="submit" class="btn btn-success">Update Teacher</button>
-                                        <a href="list_teacher.php" class="btn btn-warning">Cancel</a>
+                                        <a href="list_teacher.php" class="btn btn-secondary">Cancel</a>
                                     </div>
                                 </form>
                             </div>
