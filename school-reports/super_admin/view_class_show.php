@@ -193,7 +193,7 @@ error_log("Calculated average: " . $average_marks);
                     <button onclick="printReport()" class="btn btn-primary">
                         <i class="fas fa-print"></i> Print
                     </button>
-                    <a href="list_class_show.php" class="btn btn-secondary">Back to List</a>
+                    <a href="list_class_show.php" class="btn btn-secondary">Back</a>
                     <a href="edit_class_show.php?id=<?= $row['id'] ?>" class="btn btn-warning">Edit</a>
                 </div>
             </div>

@@ -260,7 +260,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3>Edit Class Show Record</h3>
                 <div>
-                    <a href="list_class_show.php" class="btn btn-secondary">Back to List</a>
+                    <a href="list_class_show.php" class="btn btn-secondary">Back</a>
                     <a href="view_class_show.php?id=<?= $id ?>" class="btn btn-info">View</a>
                 </div>
             </div>
