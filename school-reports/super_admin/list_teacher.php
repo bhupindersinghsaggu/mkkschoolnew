@@ -166,7 +166,7 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                                 <td><?= date('M j, Y', strtotime($teacher['created_at'])) ?></td> -->
                                                 <td class="action-btns">
                                                     <a href="edit_teacher.php?id=<?= $teacher['id'] ?>"
-                                                        class="btn btn-warning btn-sm" title="Edit">
+                                                        class="btn btn-success btn-sm" title="Edit">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
                                                     <button class="btn btn-danger btn-sm"
