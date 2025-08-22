@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             display: flex;
             flex-direction: column;
             justify-items: center;
-            align-items: start;
+            align-items: center;
         }
 
         .profile-pic-preview {
