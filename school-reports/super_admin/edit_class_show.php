@@ -259,7 +259,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="content mb-3">
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3>Edit Class Show Record</h3>
-                <div>
+                <div class="d-flex gap-2">
                     <a href="list_class_show.php" class="btn btn-secondary">Back</a>
                     <a href="view_class_show.php?id=<?= $id ?>" class="btn btn-info">View</a>
                 </div>
