@@ -458,7 +458,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="d-flex gap-2">
                                     <button type="submit" class="btn btn-success">Update </button>
-                                    <a href="./dashboard.php" class="btn btn-secondary">Back</a>
+                                    <a href="./dashboard.php" class="btn btn-secondary">Back to Dashboard</a>
                                 </div>
                             </div>
                         </div>
