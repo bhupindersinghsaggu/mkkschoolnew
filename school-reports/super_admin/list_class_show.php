@@ -10,6 +10,10 @@ require_once '../config/functions.php';
 // Fetch all records from class_show table
 $query = "SELECT * FROM class_show ORDER BY created_at DESC";
 $result = mysqli_query($conn, $query);
+// Calculate average marks
+$marks1 = (int)$row['marks_judge1'];
+$marks2 = (int)$row['marks_judge2'];
+$average_marks = ($marks1 + $marks2) / 2;
 ?>
 
 <!DOCTYPE html>
