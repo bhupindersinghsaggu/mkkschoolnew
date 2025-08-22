@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $session = $_POST['session'];
     $eval_date = $_POST['eval_date'];
     $topic = $_POST['topic'];
+    $video_link = $_POST['video_link'];
     $teacher_name = $_POST['teacher_name'];
     $teacher_id = $_POST['teacher_id'];
     $evaluator_name = $_POST['evaluator_name'];
@@ -50,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         prayer, news, participation, speeches, poem_recitation,
         dance, song, stage_management, innovation, skit, ppt, anchoring, total,
         speaking_skills, dancing_skills, singing_skills, dramatic_skills, comments
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = mysqli_prepare($conn, $sql);
 
@@ -63,6 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $session,           // s (1)
             $eval_date,         // s (2)
             $topic,             // s (3)
+            $video_link,             // s (3)
             $teacher_name,      // s (4)
             $teacher_id,        // s (5)
             $evaluator_name,    // s (6)
@@ -183,6 +185,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="mb-3">
                                     <label>Topic</label>
                                     <input type="text" name="topic" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Class Show Video Link </label>
+                                    <input type="text" name="video_link" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Search Teacher</label>
