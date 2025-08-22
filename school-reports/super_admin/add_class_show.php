@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $comments1,
             $comments2,         // s (25)
             $marks_judge1,
-            $marks_judge2,
+            $marks_judge2
         );
 
         if (mysqli_stmt_execute($stmt)) {
@@ -361,11 +361,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 1</label>
-                                    <input type="number" name="marks-judge1" class="form-control" >
+                                    <input type="number" name="marks-judge1" class="form-control"  min="0" max="40">
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 2</label>
-                                    <input type="number" name="marks-judge2" class="form-control" >
+                                    <input type="number" name="marks-judge2" class="form-control"  min="0" max="40">
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back</a>
