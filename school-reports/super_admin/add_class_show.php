@@ -60,11 +60,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 7 strings (session to class_section) + 18 integers + 1 string (comments)
         mysqli_stmt_bind_param(
             $stmt,
-            "sssssssiiiiiiiiiiiiisssss", // 25 characters: 8s + 18i
+            "ssssssssiiiiiiiiiiiiisssss", // 25 characters: 8s + 18i
             $session,           // s (1)
             $eval_date,         // s (2)
             $topic,             // s (3)
-            $video_link,             // s (3)
+            $video_link,        // s (3)
             $teacher_name,      // s (4)
             $teacher_id,        // s (5)
             $evaluator_name,    // s (6)
