@@ -270,16 +270,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Prayer (03)</label>
                                     <input type="number" name="prayer" class="form-control" required>
                                 </div>
-                                <div class="mb-3">
-                                    <label>News (English Only) (02)</label>
-                                    <input type="number" name="news" class="form-control" required>
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4">
                         <div class="card dash-widget">
                             <div class="card-body">
+                                <div class="mb-3">
+                                    <label>News (English Only) (02)</label>
+                                    <input type="number" name="news" class="form-control" required>
+                                </div>
                                 <div class="mb-3">
                                     <label>Participation (03)</label>
                                     <input type="number" name="participation" class="form-control" required>
