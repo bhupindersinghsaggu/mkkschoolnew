@@ -296,6 +296,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <input type="text" name="class_section" class="form-control" value="<?= htmlspecialchars($record['class_section']) ?>" required>
                                 </div>
                                 <div class="mb-3">
+                                    <label>Name of the Judge</label>
+                                    <input type="text" name="evaluator_name" class="form-control" value="<?= htmlspecialchars($record['evaluator_name']) ?>" required>
+                                </div>
+                                <!-- <div class="mb-3">
                                     <label>Evaluator's Name & Designation</label>
                                     <select name="evaluator_name" class="form-control" required>
                                         <option value="">--Select--</option>
@@ -304,7 +308,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <option value="Madhup Prashar" <?= $record['evaluator_name'] == 'Madhup Prashar' ? 'selected' : '' ?>>Madhup Prashar</option>
                                         <option value="Other" <?= $record['evaluator_name'] == 'Other' ? 'selected' : '' ?>>Other</option>
                                     </select>
-                                </div>
+                                </div> -->
                                 <div class="mb-3">
                                     <label>Topic</label>
                                     <input type="text" name="topic" class="form-control" value="<?= htmlspecialchars($record['topic']) ?>" required>

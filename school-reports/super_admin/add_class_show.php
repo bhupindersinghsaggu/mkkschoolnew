@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $dancing_skills,    // i (22)
             $singing_skills,    // i (23)
             $dramatic_skills,   // i (24)
-            $comments,         // s (25)
+            $comments  ,         // s (25)
             $marks_judge1,
             $marks_judge2,
         );
@@ -248,26 +248,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Class/Section</label>
                                     <input type="text" name="class_section" class="form-control" required>
                                 </div>
+                               
                                 <div class="mb-3">
-                                    <label class="form-label">Judge Name</label> <br>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="evaluator_name" id="judge1" value="Meera Marwaha" required>
-                                        <label class="form-check-label" for="judge1">Meera Marwaha</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="evaluator_name" id="judge2" value="Manju Setia">
-                                        <label class="form-check-label" for="judge2">Manju Setia</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="evaluator_name" id="judge3" value="Madhup Prashar">
-                                        <label class="form-check-label" for="judge3">Madhup Prashar</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="evaluator_name" id="judge4" value="Other">
-                                        <label class="form-check-label" for="judge4">Other</label>
-                                    </div>
+                                    <label>Name of The Judge</label>
+                                    <input type="text" name=" evaluator_name" class="form-control" required>
                                 </div>
-
+                                <!-- <div class="mb-3">
+                                    <label>Judge Name </label>
+                                    <select name="evaluator_name" class="form-control" required>
+                                        <option value="">--Select--</option>
+                                        <option value="Meera Marwaha">Meera Marwaha</option>
+                                        <option value="Manju Setia">Manju Setia</option>
+                                        <option value="Madhup Prashar">Madhup Prashar</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div> -->
+                                
                                 <div class="mb-3">
                                     <label>Prayer (03)</label>
                                     <input type="number" name="prayer" class="form-control" required>
@@ -355,11 +351,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 1</label>
-                                    <input type="number" name="marks-judge1" class="form-control" required>
+                                     <input type="number" name="marks-judge1" class="form-control" required>
                                 </div>
-                                <div class="mb-3">
+                                 <div class="mb-3">
                                     <label>Total Marks By Judge 2</label>
-                                    <input name="marks-judge2" class="form-control" required>
+                                     <input name="marks-judge2" class="form-control" required>
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back</a>
