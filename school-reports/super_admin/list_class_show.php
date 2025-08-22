@@ -89,7 +89,7 @@ $result = mysqli_query($conn, $query);
                                                 </a>
                                             </td>
                                             <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
-                                            <td><strong><?= $row['total'] ?></strong></td>
+                                            <td><strong><?= $row['average_marks'] ?></strong></td>
                                             <!-- <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td> -->
                                             <!-- <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td> -->
                                             <td class="action-buttons">
