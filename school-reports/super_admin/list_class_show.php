@@ -14,6 +14,7 @@ $result = mysqli_query($conn, $query);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Class Show Records</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png">
@@ -24,15 +25,18 @@ $result = mysqli_query($conn, $query);
         .table-responsive {
             overflow-x: auto;
         }
+
         .table th {
             background-color: #f8f9fa;
             font-weight: 600;
         }
+
         .action-buttons {
             white-space: nowrap;
         }
     </style>
 </head>
+
 <body>
     <div class="page-wrapper">
         <div class="content">
@@ -61,11 +65,9 @@ $result = mysqli_query($conn, $query);
                                         <th>Teacher</th>
                                         <th>Class</th>
                                         <th>Topic</th>
+                                        <th>Video Link</th>
                                         <th>Judge</th>
                                         <th>Total Score (Out of 40)</th>
-                                        <!-- <th>Video Link</th> -->
-                                        <!-- <th>Comments</th>
-                                        <th>Created</th> -->
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -80,6 +82,7 @@ $result = mysqli_query($conn, $query);
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
                                             <td><?= htmlspecialchars($row['topic']) ?></td>
+                                            <td><?= htmlspecialchars($row['video_link']) ?></td>
                                             <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
                                             <td><strong><?= $row['total'] ?></strong></td>
                                             <!-- <td><?= htmlspecialchars(substr($row['comments'], 0, 50)) ?><?= strlen($row['comments']) > 50 ? '...' : '' ?></td> -->
@@ -113,6 +116,7 @@ $result = mysqli_query($conn, $query);
 
     <?php include '../includes/footer.php'; ?>
 </body>
+
 </html>
 
 <?php
