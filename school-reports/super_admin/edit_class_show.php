@@ -456,8 +456,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Marks By Judge2</label>
                                     <input type="number" name="marks_judge2" class="form-control" value="<?= $record['marks_judge2'] ?>" min="0" max="10">
                                 </div>
-                                <button type="submit" class="btn btn-success">Update Record</button>
-                                <a href="./dashboard.php" class="btn btn-secondary">Back to Dashboard</a>
+                                <div class="d-flex gap-2">
+                                    <button type="submit" class="btn btn-success">Update </button>
+                                    <a href="./dashboard.php" class="btn btn-secondary">Back</a>
+                                </div>
                             </div>
                         </div>
                     </div>
