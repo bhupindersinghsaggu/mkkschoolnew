@@ -1,388 +1,558 @@
-<?php
-require_once '../includes/auth_check.php';
-require_once '../includes/header.php';
-// At the top of your PHP file
-
-
-?>
-
-
-<div class="page-wrapper">
-    <div class="content">
-        <style>
-            :root {
-                --primary: #3b5998;
-                --secondary: #6c757d;
-                --success: #28a745;
-                --info: #17a2b8;
-                --warning: #ffc107;
-                --danger: #dc3545;
-                --light: #f8f9fa;
-                --dark: #343a40;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --success: #4cc9f0;
+            --info: #4895ef;
+            --warning: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --bg-gradient: linear-gradient(120deg, #4361ee, #3a0ca3);
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fb;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .dashboard-header {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sidebar {
+            background: var(--dark);
+            color: white;
+            height: calc(100vh - 80px);
+            position: sticky;
+            top: 80px;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            border-left: 3px solid transparent;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid var(--success);
+        }
+        
+        .sidebar .nav-link i {
+            margin-right: 10px;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .main-content {
+            padding: 2rem 0;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card {
+            color: white;
+            padding: 1.5rem;
+        }
+        
+        .stat-card i {
+            font-size: 2.5rem;
+            opacity: 0.8;
+        }
+        
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        .stat-card .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .card-1 { background: linear-gradient(45deg, #4361ee, #4cc9f0); }
+        .card-2 { background: linear-gradient(45deg, #f72585, #7209b7); }
+        .card-3 { background: linear-gradient(45deg, #3a0ca3, #4361ee); }
+        .card-4 { background: linear-gradient(45deg, #4895ef, #4cc9f0); }
+        
+        .recent-activity {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .recent-activity li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+        }
+        
+        .recent-activity li:last-child {
+            border-bottom: none;
+        }
+        
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .activity-details {
+            flex-grow: 1;
+        }
+        
+        .activity-title {
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+        }
+        
+        .activity-time {
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+        
+        .badge-success {
+            background: rgba(76, 201, 240, 0.2);
+            color: #4cc9f0;
+        }
+        
+        .badge-warning {
+            background: rgba(247, 37, 133, 0.2);
+            color: #f72585;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 250px;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .sidebar {
+                height: auto;
+                position: relative;
+                top: 0;
             }
-
-            body {
-                background-color: #f5f7fb;
-               font-family: "Lexend", sans-serif;
-                color: #333;
+            
+            .stat-card .number {
+                font-size: 1.5rem;
             }
-
-            .dashboard-container {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 20px;
-            }
-
-            .dashboard-header {
-                background: linear-gradient(135deg, var(--primary), #2d4373);
-                color: white;
-                border-radius: 10px;
-                padding: 20px;
-                margin-bottom: 25px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            }
-
-            .welcome-text {
-                font-size: 1.8rem;
-                font-weight: 600;
-                color: #fff;
-            }
-
-            .card {
-                border: none;
-                border-radius: 10px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                margin-bottom: 20px;
-                height: 100%;
-            }
-
-            .card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            }
-
-            .card-header {
-                background-color: white;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                font-weight: 600;
-                padding: 15px 20px;
-                border-radius: 10px 10px 0 0 !important;
-            }
-
-            .card-body {
-                padding: 20px;
-            }
-
-            .stat-card {
-                text-align: center;
-                padding: 20px;
-            }
-
-            .stat-icon {
-                font-size: 2.5rem;
-                margin-bottom: 15px;
-                color: var(--primary);
-            }
-
-            .stat-number {
-                font-size: 2rem;
-                font-weight: 700;
-                color: var(--primary);
-                margin-bottom: 5px;
-            }
-
-            .stat-text {
-                color: var(--secondary);
-                font-size: 0.9rem;
-            }
-
-            .btn-action {
-                padding: 10px 20px;
-                border-radius: 8px;
-                font-weight: 500;
-                transition: all 0.3s ease;
-            }
-
-            .btn-add {
-                background-color: var(--success);
-                border: none;
-            }
-
-            .btn-view {
-                background-color: var(--info);
-                border: none;
-            }
-
-            .btn-add:hover,
-            .btn-view:hover {
-                opacity: 0.9;
-                transform: translateY(-2px);
-            }
-
-            .section-title {
-                font-size: 1.4rem;
-                color: var(--primary);
-                margin-bottom: 20px;
-                padding-bottom: 10px;
-                border-bottom: 2px solid var(--primary);
-            }
-
-            .quick-actions {
-                margin-top: 30px;
-            }
-
-            .recent-activities {
-                background-color: white;
-                border-radius: 10px;
-                padding: 20px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            }
-
-            .activity-item {
-                padding: 10px 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            }
-
-            .activity-item:last-child {
-                border-bottom: none;
-            }
-
-            .notification-badge {
-                position: absolute;
-                top: -5px;
-                right: -5px;
-                background-color: var(--danger);
-                color: white;
-                border-radius: 50%;
-                width: 20px;
-                height: 20px;
-                font-size: 0.7rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            @media (max-width: 768px) {
-                .welcome-text {
-                    font-size: 1.5rem;
-                }
-
-                .stat-number {
-                    font-size: 1.5rem;
-                }
-            }
-        </style>
-
-
-        <div class="dashboard-container">
-            <!-- Header Section -->
-            <div class="dashboard-header">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h1 class="welcome-text">Welcome, Admin</h1>
-                        <p class="mb-0">Manage teachers and notebook corrections</p>
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="h3 mb-0">School Management Dashboard</h1>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                    <div class="me-4">
+                        <span class="badge bg-light text-dark"><i class="fas fa-calendar-alt me-2"></i>24 June 2023</span>
                     </div>
-                    <div class="position-relative">
-                        <button class="btn btn-light">
-                            <i class="fas fa-bell"></i>
-                            <span class="notification-badge">3</span>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle me-1"></i> Admin User
                         </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stats Section -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card stat-card">
-                        <i class="fas fa-chalkboard-teacher stat-icon"></i>
-                        <div class="stat-number">ffg</div>
-                        <div class="stat-text">Total Teachers</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card stat-card">
-                        <i class="fas fa-book-open stat-icon"></i>
-                        <div class="stat-number">156</div>
-                        <div class="stat-text">Notebooks Corrected</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card stat-card">
-                        <i class="fas fa-tasks stat-icon"></i>
-                        <div class="stat-number">42</div>
-                        <div class="stat-text">Class Assembly</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Teachers Record Section -->
-            <div class="row mt-4">
-                <div class="col-12">
-                    <h3 class="section-title">Teachers Record</h3>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <span>Add Teacher</span>
-                            <i class="fas fa-user-plus text-success"></i>
-                        </div>
-                        <div class="card-body">
-                            <p>Add new teachers to the system with their details and subjects.</p>
-                            <a href="./add_teacher.php" class="btn btn-add btn-action text-white">
-                                <i class="fas fa-plus me-2"></i>Add Teacher
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <span>View Teachers</span>
-                            <i class="fas fa-list text-info"></i>
-                        </div>
-                        <div class="card-body">
-                            <p>View, edit, or manage existing teacher records and information.</p>
-                            <a href="./list_teacher.php" class="btn btn-view btn-action text-white">
-                                <i class="fas fa-eye me-2"></i>View Teachers
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Notebook Correction Section -->
-            <div class="row mt-4">
-                <div class="col-12">
-                    <h3 class="section-title">Notebook Correction</h3>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <span>Add Correction</span>
-                            <i class="fas fa-edit text-success"></i>
-                        </div>
-                        <div class="card-body">
-                            <p>Add new notebook correction records and evaluations.</p>
-                            <a href="./add_notebook.php" class="btn btn-add btn-action text-white">
-                                <i class="fas fa-plus me-2"></i>Add Correction
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <span>View Corrections</span>
-                            <i class="fas fa-check-circle text-info"></i>
-                        </div>
-                        <div class="card-body">
-                            <p>View, manage, and update existing notebook correction records.</p>
-                            <a href="./list_notebook.php" class="btn btn-view btn-action text-white">
-                                <i class="fas fa-eye me-2"></i>View Corrections
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quick Actions and Recent Activities -->
-            <div class="row mt-5">
-                <div class="col-md-8">
-                    <div class="recent-activities">
-                        <h4 class="mb-4">Recent Activities</h4>
-
-                        <div class="activity-item">
-                            <div class="d-flex align-items-center">
-                                <div class="bg-info rounded-circle p-2 me-3">
-                                    <i class="fas fa-user-plus text-white"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">New teacher added</h6>
-                                    <small class="text-muted">Dr. Sharma joined the Mathematics department</small>
-                                </div>
-                                <small class="text-muted ms-auto">2 hours ago</small>
-                            </div>
-                        </div>
-
-                        <div class="activity-item">
-                            <div class="d-flex align-items-center">
-                                <div class="bg-success rounded-circle p-2 me-3">
-                                    <i class="fas fa-check-circle text-white"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Notebooks evaluated</h6>
-                                    <small class="text-muted">25 Science notebooks from Grade 10</small>
-                                </div>
-                                <small class="text-muted ms-auto">5 hours ago</small>
-                            </div>
-                        </div>
-
-                        <div class="activity-item">
-                            <div class="d-flex align-items-center">
-                                <div class="bg-warning rounded-circle p-2 me-3">
-                                    <i class="fas fa-exclamation-triangle text-white"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Pending corrections</h6>
-                                    <small class="text-muted">15 English notebooks awaiting evaluation</small>
-                                </div>
-                                <small class="text-muted ms-auto">Yesterday</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="quick-actions">
-                        <h4 class="mb-4">Quick Actions</h4>
-
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-outline-primary text-start p-3">
-                                <i class="fas fa-key me-2"></i> Change Password
-                            </button>
-
-                            <button class="btn btn-outline-info text-start p-3">
-                                <i class="fas fa-file-export me-2"></i> Generate Reports
-                            </button>
-
-                            <button class="btn btn-outline-success text-start p-3">
-                                <i class="fas fa-chart-line me-2"></i> View Analytics
-                            </button>
-
-                            <button class="btn btn-outline-secondary text-start p-3">
-                                <i class="fas fa-cog me-2"></i> Settings
-                            </button>
-                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar d-md-block">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-book"></i> Notebook Corrections
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-chalkboard-teacher"></i> Add Teacher
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-list"></i> List Teachers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-theater-masks"></i> Add Class Show
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-chart-bar"></i> Reports
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-cog"></i> Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="col-md-9 col-lg-10 main-content">
+                <div class="container-fluid">
+                    <!-- Stats Cards -->
+                    <div class="row mb-4">
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card stat-card card-1 animate-fadeIn">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <div class="number">42</div>
+                                            <div class="label">Total Teachers</div>
+                                        </div>
+                                        <i class="fas fa-chalkboard-teacher"></i>
+                                    </div>
+                                    <div class="mt-3">
+                                        <small><i class="fas fa-arrow-up me-1"></i> 5% increase this month</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card stat-card card-2 animate-fadeIn delay-1">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <div class="number">18</div>
+                                            <div class="label">Class Shows</div>
+                                        </div>
+                                        <i class="fas fa-theater-masks"></i>
+                                    </div>
+                                    <div class="mt-3">
+                                        <small><i class="fas fa-arrow-up me-1"></i> 2 new this week</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card stat-card card-3 animate-fadeIn delay-2">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <div class="number">127</div>
+                                            <div class="label">Notebooks Checked</div>
+                                        </div>
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="mt-3">
+                                        <small><i class="fas fa-arrow-up me-1"></i> 12% increase</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card stat-card card-4 animate-fadeIn delay-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <div class="number">92%</div>
+                                            <div class="label">Average Score</div>
+                                        </div>
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="mt-3">
+                                        <small><i class="fas fa-arrow-up me-1"></i> 3% improvement</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Recent Notebook Corrections -->
+                        <div class="col-lg-6 mb-4">
+                            <div class="card animate-fadeIn">
+                                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">Recent Notebook Corrections</h5>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="recent-activity">
+                                        <li>
+                                            <div class="activity-icon bg-primary text-white">
+                                                <i class="fas fa-book"></i>
+                                            </div>
+                                            <div class="activity-details">
+                                                <div class="activity-title">Mathematics Notebook Evaluation</div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="activity-time">Mrs. Sharma - Class 9A</span>
+                                                    <span class="badge badge-success">Score: 85%</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="activity-icon bg-success text-white">
+                                                <i class="fas fa-pen-fancy"></i>
+                                            </div>
+                                            <div class="activity-details">
+                                                <div class="activity-title">English Literature Notebooks</div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="activity-time">Mr. Johnson - Class 10B</span>
+                                                    <span class="badge badge-success">Score: 92%</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="activity-icon bg-warning text-white">
+                                                <i class="fas fa-science"></i>
+                                            </div>
+                                            <div class="activity-details">
+                                                <div class="activity-title">Science Practical Copies</div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="activity-time">Dr. Patel - Class 11C</span>
+                                                    <span class="badge badge-warning">Score: 78%</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="activity-icon bg-info text-white">
+                                                <i class="fas fa-history"></i>
+                                            </div>
+                                            <div class="activity-details">
+                                                <div class="activity-title">History Project Submissions</div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="activity-time">Ms. Gupta - Class 8B</span>
+                                                    <span class="badge badge-success">Score: 88%</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Class Shows -->
+                        <div class="col-lg-6 mb-4">
+                            <div class="card animate-fadeIn delay-1">
+                                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">Recent Class Shows</h5>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="recent-activity">
+                                        <li>
+                                            <div class="activity-icon bg-danger text-white">
+                                                <i class="fas fa-theater-masks"></i>
+                                            </div>
+                                            <div class="activity-details">
+                                                <div class="activity-title">Science Exhibition</div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="activity-time">Mrs. Kumar - 22 Jun 2023</span>
+                                                    <span class="badge badge-success">Score: 90%</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="activity-icon bg-purple text-white">
+                                                <i class="fas fa-music"></i>
+                                            </div>
+                                            <div class="activity-details">
+                                                <div class="activity-title">Annual Day Performance</div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="activity-time">Mr. Singh - 18 Jun 2023</span>
+                                                    <span class="badge badge-success">Score: 95%</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="activity-icon bg-info text-white">
+                                                <i class="fas fa-microphone"></i>
+                                            </div>
+                                            <div class="activity-details">
+                                                <div class="activity-title">Debate Competition</div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="activity-time">Ms. Reddy - 15 Jun 2023</span>
+                                                    <span class="badge badge-warning">Score: 82%</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="activity-icon bg-success text-white">
+                                                <i class="fas fa-paint-brush"></i>
+                                            </div>
+                                            <div class="activity-details">
+                                                <div class="activity-title">Art & Craft Exhibition</div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="activity-time">Mr. Ahmed - 12 Jun 2023</span>
+                                                    <span class="badge badge-success">Score: 89%</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Teacher Performance -->
+                        <div class="col-lg-12 mb-4">
+                            <div class="card animate-fadeIn delay-2">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Teacher Performance Overview</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Teacher</th>
+                                                    <th>Subject</th>
+                                                    <th>Notebook Score</th>
+                                                    <th>Class Show Score</th>
+                                                    <th>Overall</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Mrs. Sharma</td>
+                                                    <td>Mathematics</td>
+                                                    <td>85%</td>
+                                                    <td>90%</td>
+                                                    <td>87.5%</td>
+                                                    <td><span class="badge bg-success">Excellent</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mr. Johnson</td>
+                                                    <td>English</td>
+                                                    <td>92%</td>
+                                                    <td>95%</td>
+                                                    <td>93.5%</td>
+                                                    <td><span class="badge bg-success">Excellent</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dr. Patel</td>
+                                                    <td>Science</td>
+                                                    <td>78%</td>
+                                                    <td>82%</td>
+                                                    <td>80%</td>
+                                                    <td><span class="badge bg-warning">Good</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ms. Gupta</td>
+                                                    <td>History</td>
+                                                    <td>88%</td>
+                                                    <td>89%</td>
+                                                    <td>88.5%</td>
+                                                    <td><span class="badge bg-success">Excellent</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mr. Singh</td>
+                                                    <td>Music</td>
+                                                    <td>92%</td>
+                                                    <td>95%</td>
+                                                    <td>93.5%</td>
+                                                    <td><span class="badge bg-success">Excellent</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
-    <div
-        class="copyright-footer d-flex align-items-center justify-content-between border-top bg-white gap-3 flex-wrap">
-        <p class="fs-13 text-gray-9 mb-0">2025 &copy; Design Pocket. All Right Reserved</p>
-        <p>Designed & Developed By <a href="javascript:void(0);" class="link-primary">M.K.K. (IT Department)</a></p>
-    </div>
-</div>
 
-
-
-
-
-<script>
-    // Simple animation for cards when they come into view
-    document.addEventListener('DOMContentLoaded', function() {
-        const cards = document.querySelectorAll('.card');
-
-        cards.forEach((card, index) => {
-            // Add slight delay for staggered animation
-            card.style.animationDelay = `${index * 0.1}s`;
-            card.classList.add('animate__animated', 'animate__fadeInUp');
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-fadeIn');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.visibility = 'visible';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(el => {
+                el.style.visibility = 'hidden';
+                observer.observe(el);
+            });
         });
-    });
-</script>
-
-
-<?php require_once '../includes/footer.php'; ?>
+    </script>
+</body>
+</html>
