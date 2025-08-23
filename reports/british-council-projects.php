@@ -23,7 +23,7 @@ include('web/functions.php');
                                         <div class="card">
                                             <div class="card-body">
                                                 <h5 class="card-title">green thumb farming </h5>
-                                                <img src="../reports/assets/img/green.jpg">
+                                                <img src="../reports/assets/img/green.jpg" width="300px">
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
                                                         <a href="https://www.canva.com/design/DAGwuaESUoc/7HjpROPAsJ_-rieNOWt9nQ/edit?utm_content=DAGwuaESUoc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-dark">Video Link</a>
