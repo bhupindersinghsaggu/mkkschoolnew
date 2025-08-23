@@ -222,12 +222,6 @@ require_once '../includes/header.php';
             <div class="mb-3">
                 <h1 class="mb-1">Welcome, Admin</h1>
             </div>
-            <!-- <div class="input-icon-start position-relative mb-3">
-                <span class="input-icon-addon fs-16 text-gray-9">
-                    <i class="ti ti-calendar"></i>
-                </span>
-                <input type="text" class="form-control date-range bookingrange" placeholder="Search Product">
-            </div> -->
         </div>
         <div class="row">
             <!-- Main Content -->
