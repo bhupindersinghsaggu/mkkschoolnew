@@ -194,7 +194,7 @@ require_once '../includes/header.php';
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2">
             <div class="mb-3">
                 <div class="welcome-date">
-                    <div>
+                    <div class="d-flex">
                         <h1 class="mb-1">Welcome, Admin</h1> 
                     </div>
                     <div>
