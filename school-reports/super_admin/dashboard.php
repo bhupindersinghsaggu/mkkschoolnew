@@ -500,7 +500,7 @@ require_once '../includes/header.php';
     </div>
 </div>
 
-<script>
+<!-- <script>
     // Simple animation on scroll
     document.addEventListener('DOMContentLoaded', function() {
         const animatedElements = document.querySelectorAll('.animate-fadeIn');
@@ -521,6 +521,6 @@ require_once '../includes/header.php';
             observer.observe(el);
         });
     });
-</script>
+</script> -->
 
 <?php require_once '../includes/footer.php'; ?>
