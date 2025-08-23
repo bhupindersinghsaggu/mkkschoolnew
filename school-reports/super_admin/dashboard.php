@@ -23,9 +23,6 @@ require_once '../includes/header.php';
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-
-
-
     .main-content {
         padding: 2rem 0;
     }
@@ -191,7 +188,7 @@ require_once '../includes/header.php';
         </div>
         <div class="row">
             <!-- Main Content -->
-            <main class="col-md-9 col-lg-10 main-content">
+            <main class="col-md-9 col-lg-10">
                 <div class="container-fluid">
                     <!-- Stats Cards -->
                     <div class="row mb-4">
