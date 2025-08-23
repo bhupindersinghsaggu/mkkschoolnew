@@ -29,8 +29,9 @@
         .dashboard-header {
             background: var(--bg-gradient);
             color: white;
-            padding: 1.5rem 0;
+            padding: 1rem 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         
         .sidebar {
@@ -41,6 +42,7 @@
             top: 80px;
             box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            z-index: 1000;
         }
         
         .sidebar .nav-link {
@@ -176,16 +178,93 @@
         .delay-3 { animation-delay: 0.6s; }
         .delay-4 { animation-delay: 0.8s; }
         
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+        
+        /* Mobile Sidebar */
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 280px;
+            height: 100vh;
+            background: var(--dark);
+            z-index: 9999;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+            padding-top: 70px;
+        }
+        
+        .mobile-sidebar.active {
+            left: 0;
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        .close-sidebar {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: white;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
         /* Responsive adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
+            .hamburger-menu {
+                display: block;
+            }
+            
             .sidebar {
-                height: auto;
-                position: relative;
-                top: 0;
+                display: none;
+            }
+            
+            .main-content {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
             }
             
             .stat-card .number {
                 font-size: 1.5rem;
+            }
+            
+            .dashboard-header .dropdown {
+                margin-left: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-header .row {
+                flex-wrap: nowrap;
+            }
+            
+            .dashboard-header .badge {
+                display: none;
             }
         }
     </style>
@@ -195,12 +274,15 @@
     <header class="dashboard-header">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex align-items-center">
+                    <button class="hamburger-menu" id="hamburgerMenu">
+                        <i class="fas fa-bars"></i>
+                    </button>
                     <h1 class="h3 mb-0">School Management Dashboard</h1>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end align-items-center">
-                    <div class="me-4">
-                        <span class="badge bg-light text-dark"><i class="fas fa-calendar-alt me-2"></i>24 June 2023</span>
+                    <div class="me-4 d-none d-md-block">
+                        <span class="badge bg-light text-dark"><i class="fas fa-calendar-alt me-2"></i><span id="currentDate"></span></span>
                     </div>
                     <div class="dropdown">
                         <button class="btn btn-light dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -218,10 +300,58 @@
         </div>
     </header>
 
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <button class="close-sidebar" id="closeSidebar">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-book"></i> Notebook Corrections
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-chalkboard-teacher"></i> Add Teacher
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-list"></i> List Teachers
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-theater-masks"></i> Add Class Show
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-chart-bar"></i> Reports
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
-            <div class="col-md-3 col-lg-2 sidebar d-md-block">
+            <!-- Sidebar (Desktop) -->
+            <div class="col-md-3 col-lg-2 sidebar d-none d-md-block">
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -551,6 +681,40 @@
             animatedElements.forEach(el => {
                 el.style.visibility = 'hidden';
                 observer.observe(el);
+            });
+            
+            // Set current date
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
+            
+            // Mobile menu functionality
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const mobileSidebar = document.getElementById('mobileSidebar');
+            const closeSidebar = document.getElementById('closeSidebar');
+            const overlay = document.getElementById('overlay');
+            
+            hamburgerMenu.addEventListener('click', function() {
+                mobileSidebar.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeSidebar.addEventListener('click', function() {
+                mobileSidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            overlay.addEventListener('click', function() {
+                mobileSidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
             });
         });
     </script>
