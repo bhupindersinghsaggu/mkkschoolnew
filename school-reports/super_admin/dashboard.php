@@ -18,7 +18,7 @@ require_once '../includes/header.php';
     }
 
     body {
-       
+
         /* background-color: #f5f7fb;
         color: #333;
         overflow-x: hidden; */
@@ -31,7 +31,7 @@ require_once '../includes/header.php';
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-   
+
 
 
     .main-content {
@@ -193,7 +193,8 @@ require_once '../includes/header.php';
     <div class="content">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2">
             <div class="mb-3">
-                <h1 class="mb-1">Welcome, Admin</h1>
+                <h1 class="mb-1">Welcome, Admin</h1>  <i class="fas fa-calendar-alt me-2"></i>
+        <span id="currentDate"></span>
             </div>
         </div>
         <div class="row">
@@ -473,7 +474,7 @@ require_once '../includes/header.php';
     </div>
 </div>
 
-<!-- <script>
+<script>
     // Simple animation on scroll
     document.addEventListener('DOMContentLoaded', function() {
         const animatedElements = document.querySelectorAll('.animate-fadeIn');
@@ -494,6 +495,19 @@ require_once '../includes/header.php';
             observer.observe(el);
         });
     });
-</script> -->
+
+    // date on dashboard
+    // Add this script to display the current date
+    document.addEventListener('DOMContentLoaded', function() {
+        const now = new Date();
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
+    });
+</script>
 
 <?php require_once '../includes/footer.php'; ?>
