@@ -1,13 +1,13 @@
  <div class="sidebar" id="sidebar">
      <div class="sidebar-logo active">
          <a href="../index.php" class="logo logo-normal">
-              <h3>M.K.K. School</h3>
+             <h3>M.K.K. School</h3>
          </a>
          <a href="../index.php" class="logo logo-white">
-              <h3>M.K.K. School</h3>
+             <h3>M.K.K. School</h3>
          </a>
          <a href="../index.php" class="logo-small">
-              <h3>M.K.K. School</h3>
+             <h3>M.K.K. School</h3>
          </a>
          <a id="toggle_btn" href="javascript:void(0);">
              <i data-feather="chevrons-left" class="feather-16"></i>
@@ -26,14 +26,11 @@
                      <h6 class="submenu-hdr">Teacher</h6>
                      <ul>
                          <li><a href="../super_admin/register_teacher.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>Add Teacher </span></a></li>
-                          <li><a href="../super_admin/list_teacher.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>list Teacher </span></a></li>
-                               <li><a href="../super_admin/add_class_show.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>Add Class Show </span></a></li>
-                     
-                     
-                        </ul>
+                         <li><a href="../super_admin/list_teacher.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>list Teacher </span></a></li>
+                         <li><a href="../super_admin/add_class_show.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>Add Class Show </span></a></li>
+                     </ul>
                  </li>
              </ul>
          </div>
      </div>
  </div>
- 

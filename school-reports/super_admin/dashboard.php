@@ -14,10 +14,7 @@ require_once '../includes/header.php';
         --warning: #f72585;
         --light: #f8f9fa;
         --bg-gradient: linear-gradient(120deg, #4361ee, #3a0ca3);
-    } */* {
-    outline: 1px solid red !important;
-}
-
+    } */
 
     .dashboard-header {
         /* background: var(--bg-gradient); */
