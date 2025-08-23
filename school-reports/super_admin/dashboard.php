@@ -14,65 +14,10 @@ require_once '../includes/header.php';
         --warning: #f72585;
         --light: #f8f9fa;
         --bg-gradient: linear-gradient(120deg, #4361ee, #3a0ca3);
-    } */
-    /* Fix for mobile blank space */
-    html,
-    body {
-        overflow-x: hidden;
-        width: 100%;
-        max-width: 100%;
-    }
+    } */* {
+    outline: 1px solid red !important;
+}
 
-    .main-wrapper,
-    .page-wrapper,
-    .content {
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* Mobile-specific fixes */
-    @media (max-width: 768px) {
-
-        .header,
-        .main-header {
-            position: relative;
-            width: 100%;
-        }
-
-        .sidebar {
-            position: fixed;
-            z-index: 1000;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-        }
-
-        .sidebar.active {
-            transform: translateX(0);
-        }
-
-        .page-wrapper {
-            margin-left: 0 !important;
-            width: 100%;
-        }
-
-        .row {
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        .col-lg-6,
-        .col-xl-3,
-        .col-md-6 {
-            padding-left: 8px;
-            padding-right: 8px;
-        }
-
-        /* Fix for dashboard header */
-        .d-flex.align-items-center.justify-content-between.flex-wrap.gap-3.mb-2 {
-            flex-direction: column;
-            align-items: flex-start !important;
-        }
-    }
 
     .dashboard-header {
         /* background: var(--bg-gradient); */
