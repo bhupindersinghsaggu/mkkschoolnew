@@ -15,6 +15,43 @@ require_once '../includes/header.php';
         --light: #f8f9fa;
         --bg-gradient: linear-gradient(120deg, #4361ee, #3a0ca3);
     } */
+    /* Prevent horizontal scrolling and blank space */
+    html,
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    /* Ensure containers don't cause overflow */
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 768px) {
+
+        /* Fix for navbar causing blank space */
+        .navbar-collapse {
+            max-height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+
+        /* Prevent fixed width elements from causing overflow */
+        .container-fluid {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        /* Ensure images don't cause horizontal scroll */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
 
     .dashboard-header {
         /* background: var(--bg-gradient); */
