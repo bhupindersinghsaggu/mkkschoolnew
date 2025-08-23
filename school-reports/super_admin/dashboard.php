@@ -193,8 +193,18 @@ require_once '../includes/header.php';
     <div class="content">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2">
             <div class="mb-3">
-                <h1 class="mb-1">Welcome, Admin</h1>  <i class="fas fa-calendar-alt me-2"></i>
-        <span id="currentDate"></span>
+                <div class="welcome-date">
+                    <div>
+                        <h1 class="mb-1">Welcome, Admin</h1> <i class="fas fa-calendar-alt me-2"></i>
+                    </div>
+                    <div>
+                        <span class="badge bg-light text-dark">
+                            <i class="fas fa-calendar-alt me-2"></i>
+                            <span id="currentDate"></span>
+                        </span>
+                    </div>
+                </div>
+                <span id="currentDate"></span>
             </div>
         </div>
         <div class="row">
