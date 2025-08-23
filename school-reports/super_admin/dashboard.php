@@ -19,9 +19,9 @@ require_once '../includes/header.php';
 
     body {
        
-        background-color: #f5f7fb;
+        /* background-color: #f5f7fb;
         color: #333;
-        overflow-x: hidden;
+        overflow-x: hidden; */
     }
 
     .dashboard-header {
