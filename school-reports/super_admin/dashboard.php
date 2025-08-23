@@ -13,7 +13,7 @@ require_once '../includes/header.php';
         --info: #4895ef;
         --warning: #f72585;
         --light: #f8f9fa;
-        --dark: #212529;
+        /* --dark: #212529; */
         --bg-gradient: linear-gradient(120deg, #4361ee, #3a0ca3);
     }
 
