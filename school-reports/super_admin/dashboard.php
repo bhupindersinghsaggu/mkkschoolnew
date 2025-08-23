@@ -6,23 +6,15 @@ require_once '../includes/header.php';
 ?>
 
 <style>
-    :root {
+    /* :root {
         --primary: #4361ee;
         --secondary: #3f37c9;
         --success: #4cc9f0;
         --info: #4895ef;
         --warning: #f72585;
         --light: #f8f9fa;
-        /* --dark: #212529; */
         --bg-gradient: linear-gradient(120deg, #4361ee, #3a0ca3);
-    }
-
-    body {
-
-        /* background-color: #f5f7fb;
-        color: #333;
-        overflow-x: hidden; */
-    }
+    } */
 
     .dashboard-header {
         /* background: var(--bg-gradient); */
