@@ -31,35 +31,8 @@ require_once '../includes/header.php';
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .sidebar {
-        background: var(--dark);
-        color: white;
-        height: calc(100vh - 80px);
-        /* position: sticky; */
-        top: 80px;
-        box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
+   
 
-    .sidebar .nav-link {
-        color: rgba(255, 255, 255, 0.8);
-        border-left: 3px solid transparent;
-        padding: 0.8rem 1.5rem;
-        transition: all 0.3s;
-    }
-
-    .sidebar .nav-link:hover,
-    .sidebar .nav-link.active {
-        color: white;
-        background: rgba(255, 255, 255, 0.1);
-        border-left: 3px solid var(--success);
-    }
-
-    .sidebar .nav-link i {
-        margin-right: 10px;
-        width: 24px;
-        text-align: center;
-    }
 
     .main-content {
         padding: 2rem 0;
