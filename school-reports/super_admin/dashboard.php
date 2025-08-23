@@ -18,7 +18,7 @@ require_once '../includes/header.php';
     }
 
     body {
-        font-family: 'Poppins', sans-serif;
+       
         background-color: #f5f7fb;
         color: #333;
         overflow-x: hidden;
