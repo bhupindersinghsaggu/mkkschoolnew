@@ -195,7 +195,7 @@ require_once '../includes/header.php';
             <div class="mb-3">
                 <div class="welcome-date">
                     <div>
-                        <h1 class="mb-1">Welcome, Admin</h1> <i class="fas fa-calendar-alt me-2"></i>
+                        <h1 class="mb-1">Welcome, Admin</h1> 
                     </div>
                     <div>
                         <span class="badge bg-light text-dark">
