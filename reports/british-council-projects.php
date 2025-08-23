@@ -14,7 +14,7 @@ include('web/functions.php');
                 <div class="accordion mt-4" id="accordionExample">
                     <div class="accordion-item ">
                         <h2 class="accordion-header" id="headingOne">
-                            <button type="button" class="accordion-button btn-info" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="false" aria-controls="accordionOne">Class X Results Session 2024-25</button>
+                            <button type="button" class="accordion-button btn-info" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="false" aria-controls="accordionOne">Project One</button>
                         </h2>
                         <div id="accordionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
@@ -23,7 +23,7 @@ include('web/functions.php');
                                         <div class="card">
                                             <div class="card-body">
                                                 <h5 class="card-title">green thumb farming </h5>
-                                                <img src="../school-reports/assets/img/green.jpg">
+                                                <img src="../reports/assets/img/green.jpg">
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
                                                         <a href="https://www.canva.com/design/DAGwuaESUoc/7HjpROPAsJ_-rieNOWt9nQ/edit?utm_content=DAGwuaESUoc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-dark">Video Link</a>
