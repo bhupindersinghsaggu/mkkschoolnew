@@ -22,7 +22,7 @@ include('web/functions.php');
                                     <div class="col-md-6 col-lg-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h5 class="card-title">green thumb farming </h5>
+                                                <!-- <h5 class="card-title">green thumb farming </h5> -->
                                                 <img src="../reports/assets/img/green.jpg" width="300px">
                                                 <div class="demo-inline-spacing mt-4">
                                                     <div class="list-group">
