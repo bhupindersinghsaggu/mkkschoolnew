@@ -25,7 +25,7 @@ require_once '../includes/header.php';
     }
 
     .dashboard-header {
-        background: var(--bg-gradient);
+        /* background: var(--bg-gradient); */
         color: white;
         padding: 1.5rem 0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -35,7 +35,7 @@ require_once '../includes/header.php';
         background: var(--dark);
         color: white;
         height: calc(100vh - 80px);
-        position: sticky;
+        /* position: sticky; */
         top: 80px;
         box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
