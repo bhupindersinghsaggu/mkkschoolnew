@@ -37,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get form data
     $teacher_name = mysqli_real_escape_string($conn, $_POST['teacher_name']);
     $teacher_id_num = mysqli_real_escape_string($conn, $_POST['teacher_id']);
+    $phone_no_num = mysqli_real_escape_string($conn, $_POST['phone_no']);
     $subject = mysqli_real_escape_string($conn, $_POST['subject']);
     $teacher_type = mysqli_real_escape_string($conn, $_POST['teacher_type']);
     $username = mysqli_real_escape_string($conn, $_POST['username']);
@@ -47,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validate inputs
     if (empty($teacher_name)) $errors['teacher_name'] = 'Teacher name is required';
     if (empty($teacher_id_num)) $errors['teacher_id'] = 'Teacher ID is required';
+    if (empty($phone_no_num)) $errors['phone_no'] = 'Phone Number is required';
     if (empty($subject)) $errors['subject'] = 'Subject is required';
     if (empty($teacher_type)) $errors['teacher_type'] = 'Teacher type is required';
     if (empty($username)) $errors['username'] = 'Username is required';
@@ -118,6 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $teacher_sql = "UPDATE teacher_details SET
                            teacher_name = '$teacher_name',
                            teacher_id = '$teacher_id_num',
+                           phone_no = '$phone_no_num',
                            subject = '$subject',
                            teacher_type = '$teacher_type',
                            profile_pic = '$profile_pic'
@@ -238,7 +241,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <div class="invalid-feedback"><?= $errors['teacher_id'] ?></div>
                                     <?php endif; ?>
                                 </div>
-
+                                <div class="mb-3">
+                                    <label class="form-label">Phone No.</label>
+                                    <input type="text" name="phone_no" class="form-control <?= !empty($errors['phone_no']) ? 'is-invalid' : '' ?>"
+                                        value="<?= htmlspecialchars($teacher['phone_no'] ?? ($_POST['phone_no'] ?? '')) ?>" required>
+                                    <?php if (!empty($errors['phone_no'])): ?>
+                                        <div class="invalid-feedback"><?= $errors['phone_no'] ?></div>
+                                    <?php endif; ?>
+                                </div>
                                 <div class="mb-3">
                                     <label class="form-label">Subject</label>
                                     <input type="text" name="subject" class="form-control <?= !empty($errors['subject']) ? 'is-invalid' : '' ?>"
