@@ -51,14 +51,17 @@ function getCurrentDateSQL() {
 }
 ?>
 
-
 <?php
+// Set Indian time zone at the top of the file
+date_default_timezone_set('Asia/Kolkata');
+
 /**
  * Returns time-based greeting (Good Morning, Good Afternoon, Good Evening)
+ * Uses Indian Standard Time (IST)
  * @return string Appropriate greeting based on current time
  */
 function getTimeBasedGreeting() {
-    $current_hour = date('H'); // 24-hour format (0-23)
+    $current_hour = date('H'); // 24-hour format (0-23) in IST
     
     if ($current_hour >= 5 && $current_hour < 12) {
         return "Good Morning";
@@ -97,5 +100,18 @@ function getGreetingWithEmoji() {
     } else {
         return "Good Night 🌙";
     }
+}
+
+/**
+ * Get current Indian time with format
+ * @param string $format Date format (default: 'h:i A')
+ * @return string Formatted Indian time
+ */
+function getIndianTime($format = 'h:i A') {
+    $original_timezone = date_default_timezone_get();
+    date_default_timezone_set('Asia/Kolkata');
+    $time = date($format);
+    date_default_timezone_set($original_timezone);
+    return $time;
 }
 ?>
