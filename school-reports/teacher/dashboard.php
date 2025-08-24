@@ -214,8 +214,7 @@ require_once '../teacher/side-bar.php';
                                                 <th>Session</th>
                                                 <th>Class/Section</th>
                                                 <th>Topic</th>
-                                                <th>Judge 1</th>
-                                                <th>Judge 2</th>
+                                                <th>Judges</th>
                                                 <th>Score</th>
                                                 <th>Comments</th>
                                                 <th>Video</th>
