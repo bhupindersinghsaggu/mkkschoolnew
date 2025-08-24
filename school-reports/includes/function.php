@@ -50,3 +50,52 @@ function getCurrentDateSQL() {
     return date('Y-m-d');
 }
 ?>
+
+
+<?php
+/**
+ * Returns time-based greeting (Good Morning, Good Afternoon, Good Evening)
+ * @return string Appropriate greeting based on current time
+ */
+function getTimeBasedGreeting() {
+    $current_hour = date('H'); // 24-hour format (0-23)
+    
+    if ($current_hour >= 5 && $current_hour < 12) {
+        return "Good Morning";
+    } elseif ($current_hour >= 12 && $current_hour < 17) {
+        return "Good Afternoon";
+    } elseif ($current_hour >= 17 && $current_hour < 21) {
+        return "Good Evening";
+    } else {
+        return "Good Night";
+    }
+}
+
+/**
+ * Returns greeting with name
+ * @param string $name Name to include in greeting
+ * @return string Personalized greeting
+ */
+function getPersonalizedGreeting($name = '') {
+    $greeting = getTimeBasedGreeting();
+    return $name ? "$greeting, $name!" : "$greeting!";
+}
+
+/**
+ * Returns greeting with emoji
+ * @return string Greeting with appropriate emoji
+ */
+function getGreetingWithEmoji() {
+    $current_hour = date('H');
+    
+    if ($current_hour >= 5 && $current_hour < 12) {
+        return "Good Morning ☀️";
+    } elseif ($current_hour >= 12 && $current_hour < 17) {
+        return "Good Afternoon 🌤️";
+    } elseif ($current_hour >= 17 && $current_hour < 21) {
+        return "Good Evening 🌙";
+    } else {
+        return "Good Night 🌙";
+    }
+}
+?>
