@@ -39,10 +39,8 @@ require_once '../includes/function.php';
             <div class="col-xl-3 col-sm-6 col-12 d-flex">
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
-
-                                <p>Total Teacher</p>
-
+                        <div class="d-flex align-items-center justify-content-between  border-bottom">
+                            <p>Total Teacher</p>
                             <span class="revenue-icon bg-cyan-transparent text-cyan">
                                 <?php echo $total_teachers; ?>
                             </span>
