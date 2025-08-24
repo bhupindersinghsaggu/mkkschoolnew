@@ -193,7 +193,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="content mb-3">
             <div class="header-button d-flex justify-content-between align-items-center mb-3">
                 <h3 class="">Edit Teacher</h3>
-                <a href="add_teacher.php" class="btn btn-secondary">View</a></h3>
+                <a href="add_teacher.php" class="btn btn-secondary">Add New</a></h3>
             </div>
             <div class="row">
                 <div class="col-md-4">
