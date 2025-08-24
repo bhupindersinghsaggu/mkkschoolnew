@@ -234,16 +234,16 @@ require_once '../teacher/side-bar.php';
                                                     <td><?= htmlspecialchars($class['class_section']) ?></td>
                                                     <td><?= htmlspecialchars($class['topic']) ?></td>
                                                     <td><?= htmlspecialchars($class['evaluator_name']) ?></td>
-                                                    <td>
+                                                    <!-- <td>
                                                         <?php
                                                         // Assuming you have a second judge field
                                                         $judges = explode(',', $class['evaluator_name']);
                                                         echo isset($judges[1]) ? trim($judges[1]) : 'N/A';
                                                         ?>
-                                                    </td>
+                                                    </td> -->
                                                     <td>
                                                         <span class="badge bg-success badge-score">
-                                                            <?= number_format($average_marks, 1) ?>%
+                                                            <?= number_format($average_marks, 1) ?>/40
                                                         </span>
                                                     </td>
                                                     <td>
