@@ -17,7 +17,7 @@ require_once '../includes/function.php';
                             <h4 class="card-title mb-0">Welcome Admin</h4>
                         </div>
                         <h4 class="card-title px-3 theme-color"><?php echo getGreetingWithEmoji(); ?>!</h3>
-                        <!-- <p class="fw-medium">You have <span class="text-primary fw-bold">200+</span> Orders, Today</p> -->
+                            <!-- <p class="fw-medium">You have <span class="text-primary fw-bold">200+</span> Orders, Today</p> -->
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@ require_once '../includes/function.php';
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
                             <div>
-                                <h4 class="mb-1">$classhow_count</h4>
+                                <h4 class="mb-1"><?php echo $class_show_count; ?></h4>
                                 <p>Total Class Show</p>
                             </div>
                             <span class="revenue-icon bg-orange-transparent text-orange">
@@ -94,7 +94,8 @@ require_once '../includes/function.php';
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <a href="./add_class_show.php" class="btn btn-primary btn-sm">Add New</a>
-                            <a href="./list_class_show.php" class="text-decoration-underline fs-13 fw-medium">View All</a>
+                            <a href="./list_class_show.php" class="text-decoration-underline fs-13 fw-medium">View
+                                All</a>
                         </div>
                     </div>
                 </div>

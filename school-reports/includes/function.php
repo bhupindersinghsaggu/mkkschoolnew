@@ -14,9 +14,14 @@ $count_query = "SELECT COUNT(*) as notebook_count FROM records";
 $count_result = mysqli_query($conn, $count_query);
 $count_data = mysqli_fetch_assoc($count_result);
 $notebook_count = $count_data['notebook_count'];
-?>
 
-<?php
+
+// class show count from database 
+$count_query = "SELECT COUNT(*) as class_show_count FROM class_show";
+$count_result = mysqli_query($conn, $count_query);
+$count_data = mysqli_fetch_assoc($count_result);
+$class_show_count = $count_data['class_show_count'];
+
 
 /**Get current date in various formats*/
 
