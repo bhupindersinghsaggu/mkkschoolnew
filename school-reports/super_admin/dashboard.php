@@ -64,6 +64,7 @@ require_once '../includes/function.php';
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <a href="./add_notebook.php" class="btn btn-primary btn-sm">Add New</a>
+                            <a href="./add_notebook.php" class="btn btn-primary btn-sm">View All</a>
                             <a href="./list_notebook.php" class="text-decoration-underline fs-13 fw-medium">View All</a>
                         </div>
                     </div>
