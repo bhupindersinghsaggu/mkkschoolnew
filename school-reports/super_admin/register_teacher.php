@@ -153,7 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header bg-success text-white">
-                        <h3>Teacher Registration</h3>
+                        <h3>Fill the Details</h3>
                     </div>
                     <div class="card-body">
                         <?php if (!empty($errors['general'])): ?>
