@@ -1,6 +1,7 @@
 <?php
 require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
+require_once '../includes/function.php';
 ?>
 
 <div class="page-wrapper">
@@ -30,7 +31,7 @@ require_once '../includes/header.php';
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
                             <div>
-                                <h4 class="mb-1">$8,458,798</h4>
+                                <h4 class="mb-1"><?php echo $total_teachers; ?></h4>
                                 <p>Total Teacher</p>
                             </div>
                             <span class="revenue-icon bg-cyan-transparent text-cyan">
@@ -121,7 +122,8 @@ require_once '../includes/header.php';
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div class="d-inline-flex align-items-center">
-                            <span class="title-icon bg-soft-primary fs-16 me-2"><i class="ti ti-shopping-cart"></i></span>
+                            <span class="title-icon bg-soft-primary fs-16 me-2"><i
+                                    class="ti ti-shopping-cart"></i></span>
                             <h5 class="card-title mb-0">Sales & Purchase</h5>
                         </div>
                         <ul class="nav btn-group custom-btn-group">
@@ -137,11 +139,14 @@ require_once '../includes/header.php';
                         <div>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="border p-2 br-8">
-                                    <p class="d-inline-flex align-items-center mb-1"><i class="ti ti-circle-filled fs-8 text-primary-300 me-1"></i>Total Purchase</p>
+                                    <p class="d-inline-flex align-items-center mb-1"><i
+                                            class="ti ti-circle-filled fs-8 text-primary-300 me-1"></i>Total Purchase
+                                    </p>
                                     <h4>3K</h4>
                                 </div>
                                 <div class="border p-2 br-8">
-                                    <p class="d-inline-flex align-items-center mb-1"><i class="ti ti-circle-filled fs-8 text-primary me-1"></i>Total Sales</p>
+                                    <p class="d-inline-flex align-items-center mb-1"><i
+                                            class="ti ti-circle-filled fs-8 text-primary me-1"></i>Total Sales</p>
                                     <h4>1K</h4>
                                 </div>
                             </div>
@@ -196,7 +201,8 @@ require_once '../includes/header.php';
                         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
                             <h5>Customers Overview</h5>
                             <div class="dropdown dropdown-wraper">
-                                <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="ti ti-calendar me-1"></i>Today
                                 </a>
                                 <ul class="dropdown-menu p-3">
@@ -222,14 +228,18 @@ require_once '../includes/header.php';
                                         <div class="text-center border-end">
                                             <h2 class="mb-1">5.5K</h2>
                                             <p class="text-orange mb-2">First Time</p>
-                                            <span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-arrow-up-left me-1"></i>25%</span>
+                                            <span
+                                                class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                    class="ti ti-arrow-up-left me-1"></i>25%</span>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="text-center">
                                             <h2 class="mb-1">3.5K</h2>
                                             <p class="text-teal mb-2">Return</p>
-                                            <span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-arrow-up-left me-1"></i>21%</span>
+                                            <span
+                                                class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                    class="ti ti-arrow-up-left me-1"></i>21%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -251,7 +261,8 @@ require_once '../includes/header.php';
                             <h5 class="card-title mb-0">Top Selling Products</h5>
                         </div>
                         <div class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="ti ti-calendar me-1"></i>Today
                             </a>
                             <ul class="dropdown-menu p-3">
@@ -274,14 +285,16 @@ require_once '../includes/header.php';
                                     <img src="assets/img/products/product-01.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Charger Cable - Lighting</a></h6>
+                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Charger Cable - Lighting</a>
+                                    </h6>
                                     <div class="d-flex align-items-center item-list">
                                         <p>$187</p>
                                         <p>247+ Sales</p>
                                     </div>
                                 </div>
                             </div>
-                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i class="ti ti-arrow-up-left me-1"></i>25%</span>
+                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i
+                                    class="ti ti-arrow-up-left me-1"></i>25%</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between border-bottom">
                             <div class="d-flex align-items-center">
@@ -289,14 +302,16 @@ require_once '../includes/header.php';
                                     <img src="assets/img/products/product-16.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Yves Saint Eau De Parfum</a></h6>
+                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Yves Saint Eau De Parfum</a>
+                                    </h6>
                                     <div class="d-flex align-items-center item-list">
                                         <p>$145</p>
                                         <p>289+ Sales</p>
                                     </div>
                                 </div>
                             </div>
-                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i class="ti ti-arrow-up-left me-1"></i>25%</span>
+                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i
+                                    class="ti ti-arrow-up-left me-1"></i>25%</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between border-bottom">
                             <div class="d-flex align-items-center">
@@ -311,7 +326,8 @@ require_once '../includes/header.php';
                                     </div>
                                 </div>
                             </div>
-                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i class="ti ti-arrow-up-left me-1"></i>25%</span>
+                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i
+                                    class="ti ti-arrow-up-left me-1"></i>25%</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between border-bottom">
                             <div class="d-flex align-items-center">
@@ -326,7 +342,8 @@ require_once '../includes/header.php';
                                     </div>
                                 </div>
                             </div>
-                            <span class="badge bg-outline-danger badge-xs d-inline-flex align-items-center"><i class="ti ti-arrow-down-left me-1"></i>21%</span>
+                            <span class="badge bg-outline-danger badge-xs d-inline-flex align-items-center"><i
+                                    class="ti ti-arrow-down-left me-1"></i>21%</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center">
@@ -334,14 +351,16 @@ require_once '../includes/header.php';
                                     <img src="assets/img/products/product-05.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Samsung Galaxy S21 Fe 5g</a></h6>
+                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Samsung Galaxy S21 Fe 5g</a>
+                                    </h6>
                                     <div class="d-flex align-items-center item-list">
                                         <p>$898</p>
                                         <p>365+ Sales</p>
                                     </div>
                                 </div>
                             </div>
-                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i class="ti ti-arrow-up-left me-1"></i>25%</span>
+                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i
+                                    class="ti ti-arrow-up-left me-1"></i>25%</span>
                         </div>
                     </div>
                 </div>
@@ -353,7 +372,8 @@ require_once '../includes/header.php';
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-inline-flex align-items-center">
-                            <span class="title-icon bg-soft-danger fs-16 me-2"><i class="ti ti-alert-triangle"></i></span>
+                            <span class="title-icon bg-soft-danger fs-16 me-2"><i
+                                    class="ti ti-alert-triangle"></i></span>
                             <h5 class="card-title mb-0">Low Stock Products</h5>
                         </div>
                         <a href="low-stocks.html" class="fs-13 fw-medium text-decoration-underline">View All</a>
@@ -395,7 +415,8 @@ require_once '../includes/header.php';
                                     <img src="assets/img/products/product-08.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">KitchenAid Stand Mixer</a></h6>
+                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">KitchenAid Stand Mixer</a>
+                                    </h6>
                                     <p class="fs-13">ID : #325569</p>
                                 </div>
                             </div>
@@ -410,7 +431,8 @@ require_once '../includes/header.php';
                                     <img src="assets/img/products/product-09.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Levi's Trucker Jacket</a></h6>
+                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Levi's Trucker Jacket</a>
+                                    </h6>
                                     <p class="fs-13">ID : #124588</p>
                                 </div>
                             </div>
@@ -448,7 +470,8 @@ require_once '../includes/header.php';
                             <h5 class="card-title mb-0">Recent Sales</h5>
                         </div>
                         <div class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="ti ti-calendar me-1"></i>Weekly
                             </a>
                             <ul class="dropdown-menu p-3">
@@ -480,7 +503,8 @@ require_once '../includes/header.php';
                             </div>
                             <div class="text-end">
                                 <p class="fs-13 mb-1">Today</p>
-                                <span class="badge bg-purple badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Processing</span>
+                                <span class="badge bg-purple badge-xs d-inline-flex align-items-center"><i
+                                        class="ti ti-circle-filled fs-5 me-1"></i>Processing</span>
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
@@ -498,7 +522,8 @@ require_once '../includes/header.php';
                             </div>
                             <div class="text-end">
                                 <p class="fs-13 mb-1">Today</p>
-                                <span class="badge badge-danger badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Cancelled</span>
+                                <span class="badge badge-danger badge-xs d-inline-flex align-items-center"><i
+                                        class="ti ti-circle-filled fs-5 me-1"></i>Cancelled</span>
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
@@ -516,7 +541,8 @@ require_once '../includes/header.php';
                             </div>
                             <div class="text-end">
                                 <p class="fs-13 mb-1">15 Jan 2025</p>
-                                <span class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Onhold</span>
+                                <span class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i
+                                        class="ti ti-circle-filled fs-5 me-1"></i>Onhold</span>
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
@@ -534,7 +560,8 @@ require_once '../includes/header.php';
                             </div>
                             <div class="text-end">
                                 <p class="fs-13 mb-1">12 Jan 2025</p>
-                                <span class="badge bg-purple badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Processing</span>
+                                <span class="badge bg-purple badge-xs d-inline-flex align-items-center"><i
+                                        class="ti ti-circle-filled fs-5 me-1"></i>Processing</span>
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-0">
@@ -543,7 +570,8 @@ require_once '../includes/header.php';
                                     <img src="assets/img/products/product-15.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Osmo Genius Starter Kit</a></h6>
+                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Osmo Genius Starter Kit</a>
+                                    </h6>
                                     <div class="d-flex align-items-center item-list">
                                         <p>Lifestyles</p>
                                         <p class="text-gray-9">$87.56</p>
@@ -552,7 +580,8 @@ require_once '../includes/header.php';
                             </div>
                             <div class="text-end">
                                 <p class="fs-13 mb-1">11 Jan 2025</p>
-                                <span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                <span class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                        class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
                             </div>
                         </div>
                     </div>
@@ -569,11 +598,13 @@ require_once '../includes/header.php';
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div class="d-inline-flex align-items-center">
-                            <span class="title-icon bg-soft-danger fs-16 me-2"><i class="ti ti-alert-triangle"></i></span>
+                            <span class="title-icon bg-soft-danger fs-16 me-2"><i
+                                    class="ti ti-alert-triangle"></i></span>
                             <h5 class="card-title mb-0">Sales Statics</h5>
                         </div>
                         <div class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="ti ti-calendar me-1"></i>2025
                             </a>
                             <ul class="dropdown-menu p-3">
@@ -592,11 +623,15 @@ require_once '../includes/header.php';
                     <div class="card-body pb-0">
                         <div class="d-flex align-items-center flex-wrap gap-2">
                             <div class="border p-2 br-8">
-                                <h5 class="d-inline-flex align-items-center text-teal">$12,189<span class="badge badge-success badge-xs d-inline-flex align-items-center ms-2"><i class="ti ti-arrow-up-left me-1"></i>25%</span></h5>
+                                <h5 class="d-inline-flex align-items-center text-teal">$12,189<span
+                                        class="badge badge-success badge-xs d-inline-flex align-items-center ms-2"><i
+                                            class="ti ti-arrow-up-left me-1"></i>25%</span></h5>
                                 <p>Revenue</p>
                             </div>
                             <div class="border p-2 br-8">
-                                <h5 class="d-inline-flex align-items-center text-orange">$48,988,078<span class="badge badge-danger badge-xs d-inline-flex align-items-center ms-2"><i class="ti ti-arrow-down-right me-1"></i>25%</span></h5>
+                                <h5 class="d-inline-flex align-items-center text-orange">$48,988,078<span
+                                        class="badge badge-danger badge-xs d-inline-flex align-items-center ms-2"><i
+                                            class="ti ti-arrow-down-right me-1"></i>25%</span></h5>
                                 <p>Expense</p>
                             </div>
                         </div>
@@ -618,11 +653,16 @@ require_once '../includes/header.php';
                     </div>
                     <div class="card-body p-0">
                         <ul class="nav nav-tabs nav-justified transaction-tab">
-                            <li class="nav-item"><a class="nav-link active" href="#sale" data-bs-toggle="tab">Sale</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#purchase-transaction" data-bs-toggle="tab">Purchase</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#quotation" data-bs-toggle="tab">Quotation</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#expenses" data-bs-toggle="tab">Expenses</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#invoices" data-bs-toggle="tab">Invoices</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#sale" data-bs-toggle="tab">Sale</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#purchase-transaction"
+                                    data-bs-toggle="tab">Purchase</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#quotation"
+                                    data-bs-toggle="tab">Quotation</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#expenses" data-bs-toggle="tab">Expenses</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#invoices" data-bs-toggle="tab">Invoices</a>
+                            </li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane show active" id="sale">
@@ -642,15 +682,20 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer16.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer16.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6><a href="javascript:void(0);" class="fw-bold">Andrea Willer</a></h6>
+                                                            <h6><a href="javascript:void(0);" class="fw-bold">Andrea
+                                                                    Willer</a></h6>
                                                             <span class="fs-13 text-orange">#114589</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                                </td>
                                                 <td class="fs-16 fw-bold text-gray-9">$4,560</td>
                                             </tr>
                                             <tr>
@@ -658,15 +703,20 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer17.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer17.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6><a href="javascript:void(0);" class="fw-bold">Timothy Sandsr</a></h6>
+                                                            <h6><a href="javascript:void(0);" class="fw-bold">Timothy
+                                                                    Sandsr</a></h6>
                                                             <span class="fs-13 text-orange">#114589</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                                </td>
                                                 <td class="fs-16 fw-bold text-gray-9">$3,569</td>
                                             </tr>
                                             <tr>
@@ -674,15 +724,19 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer18.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer18.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6><a href="javascript:void(0);" class="fw-bold">Bonnie Rodrigues</a></h6>
+                                                            <h6><a href="javascript:void(0);" class="fw-bold">Bonnie
+                                                                    Rodrigues</a></h6>
                                                             <span class="fs-13 text-orange">#114589</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge badge-pink badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Draft</span></td>
+                                                <td><span
+                                                        class="badge badge-pink badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Draft</span></td>
                                                 <td class="fs-16 fw-bold text-gray-9">$4,560</td>
                                             </tr>
                                             <tr>
@@ -690,15 +744,20 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer15.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer15.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6><a href="javascript:void(0);" class="fw-bold">Randy McCree</a></h6>
+                                                            <h6><a href="javascript:void(0);" class="fw-bold">Randy
+                                                                    McCree</a></h6>
                                                             <span class="fs-13 text-orange">#114589</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                                </td>
                                                 <td class="fs-16 fw-bold text-gray-9">$2,155</td>
                                             </tr>
                                             <tr>
@@ -706,15 +765,20 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer13.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer13.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6><a href="javascript:void(0);" class="fw-bold">Dennis Anderson</a></h6>
+                                                            <h6><a href="javascript:void(0);" class="fw-bold">Dennis
+                                                                    Anderson</a></h6>
                                                             <span class="fs-13 text-orange">#114589</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                                </td>
                                                 <td class="fs-16 fw-bold text-gray-9">$5,123</td>
                                             </tr>
                                         </tbody>
@@ -738,15 +802,22 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <a href="javascript:void(0);" class="fw-semibold">Electro Mart</a>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                                </td>
                                                 <td class="text-gray-9">$1000</td>
                                             </tr>
                                             <tr>
                                                 <td>23 May 2025</td>
                                                 <td>
-                                                    <a href="javascript:void(0);" class="fw-semibold">Quantum Gadgets</a>
+                                                    <a href="javascript:void(0);" class="fw-semibold">Quantum
+                                                        Gadgets</a>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                                </td>
                                                 <td class="text-gray-9">$1500</td>
                                             </tr>
                                             <tr>
@@ -754,7 +825,10 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <a href="javascript:void(0);" class="fw-semibold">Prime Bazaar</a>
                                                 </td>
-                                                <td><span class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Pending</span></td>
+                                                <td><span
+                                                        class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Pending</span>
+                                                </td>
                                                 <td class="text-gray-9">$2000</td>
                                             </tr>
                                             <tr>
@@ -762,7 +836,10 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <a href="javascript:void(0);" class="fw-semibold">Alpha Mobiles</a>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                                </td>
                                                 <td class="text-gray-9">$1200</td>
                                             </tr>
                                             <tr>
@@ -770,7 +847,10 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <a href="javascript:void(0);" class="fw-semibold">Aesthetic Bags</a>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                                </td>
                                                 <td class="text-gray-9">$1300</td>
                                             </tr>
                                             <tr>
@@ -778,7 +858,10 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <a href="javascript:void(0);" class="fw-semibold">Sigma Chairs</a>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                                </td>
                                                 <td class="text-gray-9">$1600</td>
                                             </tr>
                                             <tr>
@@ -786,7 +869,10 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <a href="javascript:void(0);" class="fw-semibold">A-Z Store s</a>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Completed</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                                </td>
                                                 <td class="text-gray-9">$1100</td>
                                             </tr>
                                         </tbody>
@@ -810,15 +896,19 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer16.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer16.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Andrea Willer</a></h6>
+                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Andrea
+                                                                    Willer</a></h6>
                                                             <span class="fs-13 text-orange">#114589</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Sent</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Sent</span></td>
                                                 <td class="text-gray-9">$4,560</td>
                                             </tr>
                                             <tr>
@@ -826,15 +916,20 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer17.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer17.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Timothy Sandsr</a></h6>
+                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Timothy
+                                                                    Sandsr</a></h6>
                                                             <span class="fs-13 text-orange">#114589</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge badge-warning badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Ordered</span></td>
+                                                <td><span
+                                                        class="badge badge-warning badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Ordered</span>
+                                                </td>
                                                 <td class="text-gray-9">$3,569</td>
                                             </tr>
                                             <tr>
@@ -842,15 +937,20 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer18.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer18.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Bonnie Rodrigues</a></h6>
+                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Bonnie
+                                                                    Rodrigues</a></h6>
                                                             <span class="fs-13 text-orange">#114589</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Pending</span></td>
+                                                <td><span
+                                                        class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Pending</span>
+                                                </td>
                                                 <td class="text-gray-9">$4,560</td>
                                             </tr>
                                             <tr>
@@ -858,15 +958,20 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer15.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer15.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Randy McCree</a></h6>
+                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Randy
+                                                                    McCree</a></h6>
                                                             <span class="fs-13 text-orange">#114589</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge badge-warning badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Ordered</span></td>
+                                                <td><span
+                                                        class="badge badge-warning badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Ordered</span>
+                                                </td>
                                                 <td class="text-gray-9">$2,155</td>
                                             </tr>
                                             <tr>
@@ -874,15 +979,19 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer13.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer13.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Dennis Anderson</a></h6>
+                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Dennis
+                                                                    Anderson</a></h6>
                                                             <span class="fs-13 text-orange">#114589</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Sent</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Sent</span></td>
                                                 <td class="text-gray-9">$5,123</td>
                                             </tr>
                                         </tbody>
@@ -904,46 +1013,66 @@ require_once '../includes/header.php';
                                             <tr>
                                                 <td>24 May 2025</td>
                                                 <td>
-                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Electricity Payment</a></h6>
+                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Electricity
+                                                            Payment</a></h6>
                                                     <span class="fs-13 text-orange">#EX849</span>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Approved</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Approved</span>
+                                                </td>
                                                 <td class="text-gray-9">$200</td>
                                             </tr>
                                             <tr>
                                                 <td>23 May 2025</td>
                                                 <td>
-                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Electricity Payment</a></h6>
+                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Electricity
+                                                            Payment</a></h6>
                                                     <span class="fs-13 text-orange">#EX849</span>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Approved</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Approved</span>
+                                                </td>
                                                 <td class="text-gray-9">$200</td>
                                             </tr>
                                             <tr>
                                                 <td>22 May 2025</td>
                                                 <td>
-                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Stationery Purchase</a></h6>
+                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Stationery
+                                                            Purchase</a></h6>
                                                     <span class="fs-13 text-orange">#EX848</span>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Approved</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Approved</span>
+                                                </td>
                                                 <td class="text-gray-9">$50</td>
                                             </tr>
                                             <tr>
                                                 <td>21 May 2025</td>
                                                 <td>
-                                                    <h6 class="fw-medium"><a href="javascript:void(0);">AC Repair Service</a></h6>
+                                                    <h6 class="fw-medium"><a href="javascript:void(0);">AC Repair
+                                                            Service</a></h6>
                                                     <span class="fs-13 text-orange">#EX847</span>
                                                 </td>
-                                                <td><span class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Pending</span></td>
+                                                <td><span
+                                                        class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Pending</span>
+                                                </td>
                                                 <td class="text-gray-9">$800</td>
                                             </tr>
                                             <tr>
                                                 <td>21 May 2025</td>
                                                 <td>
-                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Client Meeting</a></h6>
+                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Client
+                                                            Meeting</a></h6>
                                                     <span class="fs-13 text-orange">#EX846</span>
                                                 </td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Approved</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Approved</span>
+                                                </td>
                                                 <td class="text-gray-9">$100</td>
                                             </tr>
                                         </tbody>
@@ -966,80 +1095,101 @@ require_once '../includes/header.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer16.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer16.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Andrea Willer</a></h6>
+                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Andrea
+                                                                    Willer</a></h6>
                                                             <span class="fs-13 text-orange">#INV005</span>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>24 May 2025</td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Paid</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Paid</span></td>
                                                 <td class="text-gray-9">$1300</td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer17.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer17.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Timothy Sandsr</a></h6>
+                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Timothy
+                                                                    Sandsr</a></h6>
                                                             <span class="fs-13 text-orange">#INV004</span>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>23 May 2025</td>
-                                                <td><span class="badge badge-warning badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Overdue</span></td>
+                                                <td><span
+                                                        class="badge badge-warning badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Overdue</span>
+                                                </td>
                                                 <td class="text-gray-9">$1250</td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer18.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer18.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Bonnie Rodrigues</a></h6>
+                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Bonnie
+                                                                    Rodrigues</a></h6>
                                                             <span class="fs-13 text-orange">#INV003</span>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>22 May 2025</td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Paid</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Paid</span></td>
                                                 <td class="text-gray-9">$1700</td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer15.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer15.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Randy McCree</a></h6>
+                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Randy
+                                                                    McCree</a></h6>
                                                             <span class="fs-13 text-orange">#INV002</span>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>21 May 2025</td>
-                                                <td><span class="badge badge-danger badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Unpaid</span></td>
+                                                <td><span
+                                                        class="badge badge-danger badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Unpaid</span></td>
                                                 <td class="text-gray-9">$1500</td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer13.jpg" class="img-fluid" alt="img">
+                                                            <img src="assets/img/customer/customer13.jpg"
+                                                                class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
-                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Dennis Anderson</a></h6>
+                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Dennis
+                                                                    Anderson</a></h6>
                                                             <span class="fs-13 text-orange">#INV001</span>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>21 May 2025</td>
-                                                <td><span class="badge badge-success badge-xs d-inline-flex align-items-center"><i class="ti ti-circle-filled fs-5 me-1"></i>Paid</span></td>
+                                                <td><span
+                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
+                                                            class="ti ti-circle-filled fs-5 me-1"></i>Paid</span></td>
                                                 <td class="text-gray-9">$1000</td>
                                             </tr>
                                         </tbody>
@@ -1067,7 +1217,8 @@ require_once '../includes/header.php';
                         <a href="customers.html" class="fs-13 fw-medium text-decoration-underline">View All</a>
                     </div>
                     <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2">
+                        <div
+                            class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg flex-shrink-0">
                                     <img src="assets/img/customer/customer11.jpg" alt="img">
@@ -1075,7 +1226,8 @@ require_once '../includes/header.php';
                                 <div class="ms-2">
                                     <h6 class="fs-14 fw-bold mb-1"><a href="javascript:void(0);">Carlos Curran</a></h6>
                                     <div class="d-flex align-items-center item-list">
-                                        <p class="d-inline-flex align-items-center"><i class="ti ti-map-pin me-1"></i>USA</p>
+                                        <p class="d-inline-flex align-items-center"><i
+                                                class="ti ti-map-pin me-1"></i>USA</p>
                                         <p>24 Orders</p>
                                     </div>
                                 </div>
@@ -1084,7 +1236,8 @@ require_once '../includes/header.php';
                                 <h5>$8,9645</h5>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2">
+                        <div
+                            class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg flex-shrink-0">
                                     <img src="assets/img/customer/customer12.jpg" alt="img">
@@ -1092,7 +1245,8 @@ require_once '../includes/header.php';
                                 <div class="ms-2">
                                     <h6 class="fs-14 fw-bold mb-1"><a href="javascript:void(0);">Stan Gaunter</a></h6>
                                     <div class="d-flex align-items-center item-list">
-                                        <p class="d-inline-flex align-items-center"><i class="ti ti-map-pin me-1"></i>UAE</p>
+                                        <p class="d-inline-flex align-items-center"><i
+                                                class="ti ti-map-pin me-1"></i>UAE</p>
                                         <p>22 Orders</p>
                                     </div>
                                 </div>
@@ -1101,7 +1255,8 @@ require_once '../includes/header.php';
                                 <h5>$16,985</h5>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2">
+                        <div
+                            class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg flex-shrink-0">
                                     <img src="assets/img/customer/customer13.jpg" alt="img">
@@ -1109,7 +1264,8 @@ require_once '../includes/header.php';
                                 <div class="ms-2">
                                     <h6 class="fs-14 fw-bold mb-1"><a href="javascript:void(0);">Richard Wilson</a></h6>
                                     <div class="d-flex align-items-center item-list">
-                                        <p class="d-inline-flex align-items-center"><i class="ti ti-map-pin me-1"></i>Germany</p>
+                                        <p class="d-inline-flex align-items-center"><i
+                                                class="ti ti-map-pin me-1"></i>Germany</p>
                                         <p>14 Orders</p>
                                     </div>
                                 </div>
@@ -1118,7 +1274,8 @@ require_once '../includes/header.php';
                                 <h5>$5,366</h5>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2">
+                        <div
+                            class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg flex-shrink-0">
                                     <img src="assets/img/customer/customer14.jpg" alt="img">
@@ -1126,7 +1283,8 @@ require_once '../includes/header.php';
                                 <div class="ms-2">
                                     <h6 class="fs-14 fw-bold mb-1"><a href="javascript:void(0);">Mary Bronson</a></h6>
                                     <div class="d-flex align-items-center item-list">
-                                        <p class="d-inline-flex align-items-center"><i class="ti ti-map-pin me-1"></i>Belgium</p>
+                                        <p class="d-inline-flex align-items-center"><i
+                                                class="ti ti-map-pin me-1"></i>Belgium</p>
                                         <p>08 Orders</p>
                                     </div>
                                 </div>
@@ -1143,7 +1301,8 @@ require_once '../includes/header.php';
                                 <div class="ms-2">
                                     <h6 class="fs-14 fw-bold mb-1"><a href="javascript:void(0);">Annie Tremblay</a></h6>
                                     <div class="d-flex align-items-center item-list">
-                                        <p class="d-inline-flex align-items-center"><i class="ti ti-map-pin me-1"></i>Greenland</p>
+                                        <p class="d-inline-flex align-items-center"><i
+                                                class="ti ti-map-pin me-1"></i>Greenland</p>
                                         <p>14 Orders</p>
                                     </div>
                                 </div>
@@ -1166,7 +1325,9 @@ require_once '../includes/header.php';
                             <h5 class="card-title mb-0">Top Categories</h5>
                         </div>
                         <div class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="javascript:void(0);"
+                                class="dropdown-toggle btn btn-sm btn-white d-flex align-items-center"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="ti ti-calendar me-1"></i>Weekly
                             </a>
                             <ul class="dropdown-menu p-3">
@@ -1190,26 +1351,33 @@ require_once '../includes/header.php';
                             <div>
                                 <div class="category-item category-primary">
                                     <p class="fs-13 mb-1">Electronics</p>
-                                    <h2 class="d-flex align-items-center">698<span class="fs-13 fw-normal text-default ms-1">Sales</span></h2>
+                                    <h2 class="d-flex align-items-center">698<span
+                                            class="fs-13 fw-normal text-default ms-1">Sales</span></h2>
                                 </div>
                                 <div class="category-item category-orange">
                                     <p class="fs-13 mb-1">Sports</p>
-                                    <h2 class="d-flex align-items-center">545<span class="fs-13 fw-normal text-default ms-1">Sales</span></h2>
+                                    <h2 class="d-flex align-items-center">545<span
+                                            class="fs-13 fw-normal text-default ms-1">Sales</span></h2>
                                 </div>
                                 <div class="category-item category-secondary">
                                     <p class="fs-13 mb-1">Lifestyles</p>
-                                    <h2 class="d-flex align-items-center">456<span class="fs-13 fw-normal text-default ms-1">Sales</span></h2>
+                                    <h2 class="d-flex align-items-center">456<span
+                                            class="fs-13 fw-normal text-default ms-1">Sales</span></h2>
                                 </div>
                             </div>
                         </div>
                         <h6 class="mb-2">Category Statistics</h6>
                         <div class="border br-8">
                             <div class="d-flex align-items-center justify-content-between border-bottom p-2">
-                                <p class="d-inline-flex align-items-center mb-0"><i class="ti ti-square-rounded-filled text-indigo fs-8 me-2"></i>Total Number Of Categories</p>
+                                <p class="d-inline-flex align-items-center mb-0"><i
+                                        class="ti ti-square-rounded-filled text-indigo fs-8 me-2"></i>Total Number Of
+                                    Categories</p>
                                 <h5>698</h5>
                             </div>
                             <div class="d-flex align-items-center justify-content-between p-2">
-                                <p class="d-inline-flex align-items-center mb-0"><i class="ti ti-square-rounded-filled text-orange fs-8 me-2"></i>Total Number Of Products</p>
+                                <p class="d-inline-flex align-items-center mb-0"><i
+                                        class="ti ti-square-rounded-filled text-orange fs-8 me-2"></i>Total Number Of
+                                    Products</p>
                                 <h5>7899</h5>
                             </div>
                         </div>
@@ -1227,7 +1395,8 @@ require_once '../includes/header.php';
                             <h5 class="card-title mb-0">Order Statistics</h5>
                         </div>
                         <div class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="ti ti-calendar me-1"></i>Weekly
                             </a>
                             <ul class="dropdown-menu p-3">
@@ -1263,39 +1432,39 @@ require_once '../includes/header.php';
 <!-- /Main Wrapper -->
 
 <script>
-    // Simple animation on scroll
-    document.addEventListener('DOMContentLoaded', function() {
-        const animatedElements = document.querySelectorAll('.animate-fadeIn');
+// Simple animation on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const animatedElements = document.querySelectorAll('.animate-fadeIn');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.visibility = 'visible';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.visibility = 'visible';
+                observer.unobserve(entry.target);
+            }
         });
-
-        animatedElements.forEach(el => {
-            el.style.visibility = 'hidden';
-            observer.observe(el);
-        });
+    }, {
+        threshold: 0.1
     });
 
-    // date on dashboard
-    // Add this script to display the current date
-    document.addEventListener('DOMContentLoaded', function() {
-        const now = new Date();
-        const options = {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        };
-        document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
+    animatedElements.forEach(el => {
+        el.style.visibility = 'hidden';
+        observer.observe(el);
     });
+});
+
+// date on dashboard
+// Add this script to display the current date
+document.addEventListener('DOMContentLoaded', function() {
+    const now = new Date();
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+    document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
+});
 </script>
 
 <?php require_once '../includes/footer.php'; ?>
