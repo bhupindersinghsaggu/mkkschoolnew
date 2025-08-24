@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validate inputs
     if (empty($teacher_name)) $errors['teacher_name'] = 'Teacher name is required';
     if (empty($teacher_id)) $errors['teacher_id'] = 'Teacher ID is required';
-    if (empty($phone_no)) $errors['phone_no'] = 'Teacher ID is required';
+    if (empty($phone_no)) $errors['phone_no'] = 'Phone Number is required';
     if (empty($subject)) $errors['subject'] = 'Subject is required';
     if (empty($teacher_type)) $errors['teacher_type'] = 'Teacher type is required';
     if (empty($username)) $errors['username'] = 'Username is required';
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Insert teacher details
             $teacher_sql = "INSERT INTO teacher_details (user_id, teacher_name, teacher_id, phone_no, subject, teacher_type, profile_pic)
-                           VALUES ($user_id, '$teacher_name', '$teacher_id', '$subject', '$teacher_type', '$profile_pic')";
+                           VALUES ($user_id, '$teacher_name', '$teacher_id', phone_no,'$subject', '$teacher_type', '$profile_pic')";
             mysqli_query($conn, $teacher_sql);
 
             mysqli_commit($conn);
