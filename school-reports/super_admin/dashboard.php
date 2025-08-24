@@ -6,6 +6,18 @@ require_once '../includes/function.php';
 
 ?>
 
+<?php
+$query = "SELECT * FROM class_show ORDER BY created_at DESC LIMIT 2";
+$result = mysqli_query($conn, $query);
+// Check if query was successful and has data
+ if ($result && mysqli_num_rows($result) > 0):
+$latest_class = mysqli_fetch_assoc($result);
+                                            
+// Calculate average marks
+$marks1 = (int)$latest_class['marks_judge1'];
+$marks2 = (int)$latest_class['marks_judge2'];
+$average_marks = ($marks1 + $marks2) / 2;
+?>
 <div class="page-wrapper">
     <div class="content">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2">
@@ -74,7 +86,7 @@ require_once '../includes/function.php';
             <!-- /Invoice -->
 
             <!-- Expenses -->
-             <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
@@ -85,7 +97,8 @@ require_once '../includes/function.php';
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <a href="./add_class_show.php" class="btn btn-primary btn-sm">Add New</a>
-                            <a href="./list_class_show.php" class="text-decoration-underline fs-13 fw-medium">View All</a>
+                            <a href="./list_class_show.php" class="text-decoration-underline fs-13 fw-medium">View
+                                All</a>
                         </div>
                     </div>
                 </div>
@@ -98,7 +111,7 @@ require_once '../includes/function.php';
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
                             <div>
-                                <h4 class="mb-1">$78,458,798</h4>
+                                <h4 class="mb-2">$78,458,798</h4>
                                 <p>Total Payment Returns</p>
                             </div>
                             <span class="revenue-icon bg-indigo-transparent text-indigo">
@@ -113,198 +126,55 @@ require_once '../includes/function.php';
                 </div>
             </div> -->
         </div>
-
         <div class="row">
-            <!-- Top Selling Products -->
-            <div class="col-xxl-4 col-md-6 d-flex">
-                <div class="card flex-fill">
-                    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
-                        <div class="d-inline-flex align-items-center">
-                            <span class="title-icon bg-soft-pink fs-16 me-2"><i class="ti ti-box"></i></span>
-                            <h5 class="card-title mb-0">Latest Noteboom Checked</h5>
-                        </div>
-                    </div>
-                    <div class="card-body sell-product">
-                        <div class="d-flex align-items-center justify-content-between border-bottom">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets/img/products/product-01.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Charger Cable - Lighting</a>
-                                    </h6>
-                                    <div class="d-flex align-items-center item-list">
-                                        <p>$187</p>
-                                        <p>247+ Sales</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i
-                                    class="ti ti-arrow-up-left me-1"></i>25%</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between border-bottom">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-16.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Yves Saint Eau De Parfum</a>
-                                    </h6>
-                                    <div class="d-flex align-items-center item-list">
-                                        <p>$145</p>
-                                        <p>289+ Sales</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i
-                                    class="ti ti-arrow-up-left me-1"></i>25%</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between border-bottom">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-03.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Apple Airpods 2</a></h6>
-                                    <div class="d-flex align-items-center item-list">
-                                        <p>$458</p>
-                                        <p>300+ Sales</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i
-                                    class="ti ti-arrow-up-left me-1"></i>25%</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between border-bottom">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-04.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Vacuum Cleaner</a></h6>
-                                    <div class="d-flex align-items-center item-list">
-                                        <p>$139</p>
-                                        <p>225+ Sales</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="badge bg-outline-danger badge-xs d-inline-flex align-items-center"><i
-                                    class="ti ti-arrow-down-left me-1"></i>21%</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-05.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Samsung Galaxy S21 Fe 5g</a>
-                                    </h6>
-                                    <div class="d-flex align-items-center item-list">
-                                        <p>$898</p>
-                                        <p>365+ Sales</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="badge bg-outline-success badge-xs d-inline-flex align-items-center"><i
-                                    class="ti ti-arrow-up-left me-1"></i>25%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Top Selling Products -->
-
-            <!-- Low Stock Products -->
             <div class="col-xxl-4 col-md-6 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-inline-flex align-items-center">
                             <span class="title-icon bg-soft-danger fs-16 me-2"><i
-                                    class="ti ti-alert-triangle"></i></span>
-                            <h5 class="card-title mb-0">Low Stock Products</h5>
+                                    class="fa-solid fa-circle-user"></i></span>
+                            <h5 class="card-title mb-0">Latest Teacher Added</h5>
                         </div>
-                        <a href="low-stocks.html" class="fs-13 fw-medium text-decoration-underline">View All</a>
+                        <a href="./list_teacher.php" class="fs-13 fw-medium text-decoration-underline">View All</a>
                     </div>
                     <div class="card-body">
+                        <?php if ($latest_teacher): ?>
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-06.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Dell XPS 13</a></h6>
-                                    <p class="fs-13">ID : #665814</p>
+                                <?php if ($latest_teacher['profile_pic']): ?>
+                                <img src="../uploads/profile_pics/<?php echo htmlspecialchars($latest_teacher['profile_pic']); ?>"
+                                    class="rounded-circle mb-2" style="width: 60px; height: 60px; object-fit: cover;"
+                                    alt="<?php echo htmlspecialchars($latest_teacher['teacher_name']); ?>">
+                                <?php else: ?>
+                                <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center me-3"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fas fa-user text-white"></i>
                                 </div>
-                            </div>
-                            <div class="text-end">
-                                <p class="fs-13 mb-1">Instock</p>
-                                <h6 class="text-orange fw-medium">08</h6>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-07.jpg" alt="img">
-                                </a>
+                                <?php endif; ?>
+
                                 <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Vacuum Cleaner Robot</a></h6>
-                                    <p class="fs-13">ID : #940004</p>
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <p class="fs-13 mb-1">Instock</p>
-                                <h6 class="text-orange fw-medium">14</h6>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-08.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">KitchenAid Stand Mixer</a>
+                                    <h6 class="fw-bold mb-2">
+                                        <?php echo htmlspecialchars($latest_teacher['teacher_name']); ?>
                                     </h6>
-                                    <p class="fs-13">ID : #325569</p>
+                                    <p class="fs-13">ID: <?php echo htmlspecialchars($latest_teacher['teacher_id']); ?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="text-end">
-                                <p class="fs-13 mb-1">Instock</p>
-                                <h6 class="text-orange fw-medium">21</h6>
+                                <p class="fs-13 mb-1"><?php echo htmlspecialchars($latest_teacher['teacher_type']); ?>
+                                </p>
+                                <span class="badge bg-purple badge-xs d-inline-flex align-items-center">
+                                    <h6 class="text-white fw-medium">
+                                        <?php echo htmlspecialchars($latest_teacher['subject']); ?>
+                                        </h6v>
+                                </span>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-09.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Levi's Trucker Jacket</a>
-                                    </h6>
-                                    <p class="fs-13">ID : #124588</p>
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <p class="fs-13 mb-1">Instock</p>
-                                <h6 class="text-orange fw-medium">12</h6>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-0">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-10.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Lay's Classic</a></h6>
-                                    <p class="fs-13">ID : #365586</p>
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <p class="fs-13 mb-1">Instock</p>
-                                <h6 class="text-orange fw-medium">10</h6>
-                            </div>
-                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
+
             <!-- /Low Stock Products -->
 
             <!-- Recent Sales -->
@@ -315,745 +185,55 @@ require_once '../includes/function.php';
                             <span class="title-icon bg-soft-pink fs-16 me-2"><i class="ti ti-box"></i></span>
                             <h5 class="card-title mb-0">Recent Sales</h5>
                         </div>
-                        <div class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="ti ti-calendar me-1"></i>Weekly
-                            </a>
-                            <ul class="dropdown-menu p-3">
-                                <li>
-                                    <a href="javascript:void(0);" class="dropdown-item">Today</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="dropdown-item">Weekly</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="dropdown-item">Monthly</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <a href="./list_class_show.php" class="fs-13 fw-medium text-decoration-underline">View All</a>
                     </div>
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-11.jpg" alt="img">
-                                </a>
                                 <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Apple Watch Series 9</a></h6>
-                                    <div class="d-flex align-items-center item-list">
-                                        <p>Electronics</p>
-                                        <p class="text-gray-9">$640</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <p class="fs-13 mb-1">Today</p>
-                                <span class="badge bg-purple badge-xs d-inline-flex align-items-center"><i
-                                        class="ti ti-circle-filled fs-5 me-1"></i>Processing</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-12.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Gold Bracelet</a></h6>
-                                    <div class="d-flex align-items-center item-list">
-                                        <p>Fashion</p>
-                                        <p class="text-gray-9">$126</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <p class="fs-13 mb-1">Today</p>
-                                <span class="badge badge-danger badge-xs d-inline-flex align-items-center"><i
-                                        class="ti ti-circle-filled fs-5 me-1"></i>Cancelled</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-13.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Parachute Down Duvet</a></h6>
-                                    <div class="d-flex align-items-center item-list">
-                                        <p>Health</p>
-                                        <p class="text-gray-9">$69</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <p class="fs-13 mb-1">15 Jan 2025</p>
-                                <span class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i
-                                        class="ti ti-circle-filled fs-5 me-1"></i>Onhold</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-14.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">YETI Rambler Tumbler</a></h6>
-                                    <div class="d-flex align-items-center item-list">
-                                        <p>Sports</p>
-                                        <p class="text-gray-9">$65</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <p class="fs-13 mb-1">12 Jan 2025</p>
-                                <span class="badge bg-purple badge-xs d-inline-flex align-items-center"><i
-                                        class="ti ti-circle-filled fs-5 me-1"></i>Processing</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-0">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="../assets//img/products/product-15.jpg" alt="img">
-                                </a>
-                                <div class="ms-2">
-                                    <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Osmo Genius Starter Kit</a>
+                                    <h6 class="fw-bold mb-2">
+                                        <?php echo htmlspecialchars($latest_class['teacher_name']); ?>
                                     </h6>
-                                    <div class="d-flex align-items-center item-list">
-                                        <p>Lifestyles</p>
-                                        <p class="text-gray-9">$87.56</p>
+                                    <div class="fs-13 mb-2">Class/Section:
+                                        <?php echo htmlspecialchars($latest_class['class_section']); ?>
+                                    </div>
+                                    <div class="fs-13 mb-2">Average No:
+                                        <span
+                                            class="revenue-icon bg-cyan-transparent text-cyan value"><?php echo number_format($average_marks, 2); ?></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-end">
-                                <p class="fs-13 mb-1">11 Jan 2025</p>
-                                <span class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                        class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
+                                <p class="fs-13 mb-2">
+                                    <?php echo htmlspecialchars($latest_class['eval_date']); ?>
+                                </p>
+                                <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
+                                    <h6 class="text-white fw-medium">
+                                        <?php echo htmlspecialchars($latest_class['topic']); ?>
+                                    </h6>
+                                </span>
+                                <br>
+                                <span class="info-value mb-2">
+                                    <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>"
+                                        target="_blank" class="class-link">
+                                        <i class="fas fa-external-link-alt"></i> Watch Show
+                                    </a>
+                                </span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Recent Sales -->
-
-        </div>
-
-        <div class="row">
-
-            <!-- Sales Statics -->
-            <div class="col-xl-6 col-sm-12 col-12 d-flex">
-                <div class="card flex-fill">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <div class="d-inline-flex align-items-center">
-                            <span class="title-icon bg-soft-danger fs-16 me-2"><i
-                                    class="ti ti-alert-triangle"></i></span>
-                            <h5 class="card-title mb-0">Sales Statics</h5>
-                        </div>
-                        <div class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="ti ti-calendar me-1"></i>2025
-                            </a>
-                            <ul class="dropdown-menu p-3">
-                                <li>
-                                    <a href="javascript:void(0);" class="dropdown-item">2025</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="dropdown-item">2022</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="dropdown-item">2021</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card-body pb-0">
-                        <div class="d-flex align-items-center flex-wrap gap-2">
-                            <div class="border p-2 br-8">
-                                <h5 class="d-inline-flex align-items-center text-teal">$12,189<span
-                                        class="badge badge-success badge-xs d-inline-flex align-items-center ms-2"><i
-                                            class="ti ti-arrow-up-left me-1"></i>25%</span></h5>
-                                <p>Revenue</p>
-                            </div>
-                            <div class="border p-2 br-8">
-                                <h5 class="d-inline-flex align-items-center text-orange">$48,988,078<span
-                                        class="badge badge-danger badge-xs d-inline-flex align-items-center ms-2"><i
-                                            class="ti ti-arrow-down-right me-1"></i>25%</span></h5>
-                                <p>Expense</p>
-                            </div>
-                        </div>
-                        <div id="sales-statistics"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Sales Statics -->
-
-            <!-- Recent Transactions -->
-            <div class="col-xl-6 col-sm-12 col-12 d-flex">
-                <div class="card flex-fill">
-                    <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-3">
-                        <div class="d-inline-flex align-items-center">
-                            <span class="title-icon bg-soft-orange fs-16 me-2"><i class="ti ti-flag"></i></span>
-                            <h5 class="card-title mb-0">Recent Transactions</h5>
-                        </div>
-                        <a href="online-orders.html" class="fs-13 fw-medium text-decoration-underline">View All</a>
-                    </div>
-                    <div class="card-body p-0">
-                        <ul class="nav nav-tabs nav-justified transaction-tab">
-                            <li class="nav-item"><a class="nav-link active" href="#sale" data-bs-toggle="tab">Sale</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#purchase-transaction"
-                                    data-bs-toggle="tab">Purchase</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#quotation"
-                                    data-bs-toggle="tab">Quotation</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#expenses" data-bs-toggle="tab">Expenses</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#invoices" data-bs-toggle="tab">Invoices</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane show active" id="sale">
-                                <div class="table-responsive">
-                                    <table class="table table-borderless custom-table">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Customer</th>
-                                                <th>Status</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>24 May 2025</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer16.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6><a href="javascript:void(0);" class="fw-bold">Andrea
-                                                                    Willer</a></h6>
-                                                            <span class="fs-13 text-orange">#114589</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
-                                                </td>
-                                                <td class="fs-16 fw-bold text-gray-9">$4,560</td>
-                                            </tr>
-                                            <tr>
-                                                <td>23 May 2025</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer17.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6><a href="javascript:void(0);" class="fw-bold">Timothy
-                                                                    Sandsr</a></h6>
-                                                            <span class="fs-13 text-orange">#114589</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
-                                                </td>
-                                                <td class="fs-16 fw-bold text-gray-9">$3,569</td>
-                                            </tr>
-                                            <tr>
-                                                <td>22 May 2025</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer18.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6><a href="javascript:void(0);" class="fw-bold">Bonnie
-                                                                    Rodrigues</a></h6>
-                                                            <span class="fs-13 text-orange">#114589</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-pink badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Draft</span></td>
-                                                <td class="fs-16 fw-bold text-gray-9">$4,560</td>
-                                            </tr>
-                                            <tr>
-                                                <td>21 May 2025</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer15.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6><a href="javascript:void(0);" class="fw-bold">Randy
-                                                                    McCree</a></h6>
-                                                            <span class="fs-13 text-orange">#114589</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
-                                                </td>
-                                                <td class="fs-16 fw-bold text-gray-9">$2,155</td>
-                                            </tr>
-                                            <tr>
-                                                <td>21 May 2025</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer13.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6><a href="javascript:void(0);" class="fw-bold">Dennis
-                                                                    Anderson</a></h6>
-                                                            <span class="fs-13 text-orange">#114589</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
-                                                </td>
-                                                <td class="fs-16 fw-bold text-gray-9">$5,123</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="purchase-transaction">
-                                <div class="table-responsive">
-                                    <table class="table table-borderless custom-table">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Supplier</th>
-                                                <th>Status</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>24 May 2025</td>
-                                                <td>
-                                                    <a href="javascript:void(0);" class="fw-semibold">Electro Mart</a>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
-                                                </td>
-                                                <td class="text-gray-9">$1000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>23 May 2025</td>
-                                                <td>
-                                                    <a href="javascript:void(0);" class="fw-semibold">Quantum
-                                                        Gadgets</a>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
-                                                </td>
-                                                <td class="text-gray-9">$1500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>22 May 2025</td>
-                                                <td>
-                                                    <a href="javascript:void(0);" class="fw-semibold">Prime Bazaar</a>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Pending</span>
-                                                </td>
-                                                <td class="text-gray-9">$2000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>21 May 2025</td>
-                                                <td>
-                                                    <a href="javascript:void(0);" class="fw-semibold">Alpha Mobiles</a>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
-                                                </td>
-                                                <td class="text-gray-9">$1200</td>
-                                            </tr>
-                                            <tr>
-                                                <td>21 May 2025</td>
-                                                <td>
-                                                    <a href="javascript:void(0);" class="fw-semibold">Aesthetic Bags</a>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
-                                                </td>
-                                                <td class="text-gray-9">$1300</td>
-                                            </tr>
-                                            <tr>
-                                                <td>28 May 2025</td>
-                                                <td>
-                                                    <a href="javascript:void(0);" class="fw-semibold">Sigma Chairs</a>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
-                                                </td>
-                                                <td class="text-gray-9">$1600</td>
-                                            </tr>
-                                            <tr>
-                                                <td>26 May 2025</td>
-                                                <td>
-                                                    <a href="javascript:void(0);" class="fw-semibold">A-Z Store s</a>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Completed</span>
-                                                </td>
-                                                <td class="text-gray-9">$1100</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="quotation">
-                                <div class="table-responsive">
-                                    <table class="table table-borderless custom-table">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Customer</th>
-                                                <th>Status</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>24 May 2025</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer16.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Andrea
-                                                                    Willer</a></h6>
-                                                            <span class="fs-13 text-orange">#114589</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Sent</span></td>
-                                                <td class="text-gray-9">$4,560</td>
-                                            </tr>
-                                            <tr>
-                                                <td>23 May 2025</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer17.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Timothy
-                                                                    Sandsr</a></h6>
-                                                            <span class="fs-13 text-orange">#114589</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-warning badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Ordered</span>
-                                                </td>
-                                                <td class="text-gray-9">$3,569</td>
-                                            </tr>
-                                            <tr>
-                                                <td>22 May 2025</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer18.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Bonnie
-                                                                    Rodrigues</a></h6>
-                                                            <span class="fs-13 text-orange">#114589</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Pending</span>
-                                                </td>
-                                                <td class="text-gray-9">$4,560</td>
-                                            </tr>
-                                            <tr>
-                                                <td>21 May 2025</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer15.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Randy
-                                                                    McCree</a></h6>
-                                                            <span class="fs-13 text-orange">#114589</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-warning badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Ordered</span>
-                                                </td>
-                                                <td class="text-gray-9">$2,155</td>
-                                            </tr>
-                                            <tr>
-                                                <td>21 May 2025</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer13.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6 class="fw-medium"><a href="javascript:void(0);">Dennis
-                                                                    Anderson</a></h6>
-                                                            <span class="fs-13 text-orange">#114589</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Sent</span></td>
-                                                <td class="text-gray-9">$5,123</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="expenses">
-                                <div class="table-responsive">
-                                    <table class="table table-borderless custom-table">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Expenses</th>
-                                                <th>Status</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>24 May 2025</td>
-                                                <td>
-                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Electricity
-                                                            Payment</a></h6>
-                                                    <span class="fs-13 text-orange">#EX849</span>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Approved</span>
-                                                </td>
-                                                <td class="text-gray-9">$200</td>
-                                            </tr>
-                                            <tr>
-                                                <td>23 May 2025</td>
-                                                <td>
-                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Electricity
-                                                            Payment</a></h6>
-                                                    <span class="fs-13 text-orange">#EX849</span>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Approved</span>
-                                                </td>
-                                                <td class="text-gray-9">$200</td>
-                                            </tr>
-                                            <tr>
-                                                <td>22 May 2025</td>
-                                                <td>
-                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Stationery
-                                                            Purchase</a></h6>
-                                                    <span class="fs-13 text-orange">#EX848</span>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Approved</span>
-                                                </td>
-                                                <td class="text-gray-9">$50</td>
-                                            </tr>
-                                            <tr>
-                                                <td>21 May 2025</td>
-                                                <td>
-                                                    <h6 class="fw-medium"><a href="javascript:void(0);">AC Repair
-                                                            Service</a></h6>
-                                                    <span class="fs-13 text-orange">#EX847</span>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-cyan badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Pending</span>
-                                                </td>
-                                                <td class="text-gray-9">$800</td>
-                                            </tr>
-                                            <tr>
-                                                <td>21 May 2025</td>
-                                                <td>
-                                                    <h6 class="fw-medium"><a href="javascript:void(0);">Client
-                                                            Meeting</a></h6>
-                                                    <span class="fs-13 text-orange">#EX846</span>
-                                                </td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Approved</span>
-                                                </td>
-                                                <td class="text-gray-9">$100</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="invoices">
-                                <div class="table-responsive">
-                                    <table class="table table-borderless custom-table">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th>Customer</th>
-                                                <th>Due Date</th>
-                                                <th>Status</th>
-                                                <th>Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer16.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Andrea
-                                                                    Willer</a></h6>
-                                                            <span class="fs-13 text-orange">#INV005</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>24 May 2025</td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Paid</span></td>
-                                                <td class="text-gray-9">$1300</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer17.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Timothy
-                                                                    Sandsr</a></h6>
-                                                            <span class="fs-13 text-orange">#INV004</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>23 May 2025</td>
-                                                <td><span
-                                                        class="badge badge-warning badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Overdue</span>
-                                                </td>
-                                                <td class="text-gray-9">$1250</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer18.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Bonnie
-                                                                    Rodrigues</a></h6>
-                                                            <span class="fs-13 text-orange">#INV003</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>22 May 2025</td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Paid</span></td>
-                                                <td class="text-gray-9">$1700</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer15.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Randy
-                                                                    McCree</a></h6>
-                                                            <span class="fs-13 text-orange">#INV002</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>21 May 2025</td>
-                                                <td><span
-                                                        class="badge badge-danger badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Unpaid</span></td>
-                                                <td class="text-gray-9">$1500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center file-name-icon">
-                                                        <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="../assets//img/customer/customer13.jpg"
-                                                                class="img-fluid" alt="img">
-                                                        </a>
-                                                        <div class="ms-2">
-                                                            <h6 class="fw-bold"><a href="javascript:void(0);">Dennis
-                                                                    Anderson</a></h6>
-                                                            <span class="fs-13 text-orange">#INV001</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>21 May 2025</td>
-                                                <td><span
-                                                        class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                            class="ti ti-circle-filled fs-5 me-1"></i>Paid</span></td>
-                                                <td class="text-gray-9">$1000</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="copyright-footer d-flex align-items-center justify-content-between border-top bg-white gap-3 flex-wrap">
-        <p class="fs-13 text-gray-9 mb-0">2025&copy; DR. M.K.K. School.  All Right Reserved</p>
-        <p>Designed & Developed By <a href="javascript:void(0);" class="link-primary">Bhupinder Singh (IT Department)</a></p>
     </div>
 </div>
 
+
+<div class="copyright-footer d-flex align-items-center justify-content-between border-top bg-white gap-3 flex-wrap">
+    <p class="fs-13 text-gray-9 mb-0">2025&copy; DR. M.K.K. School. All Right Reserved</p>
+    <p>Designed & Developed By <a href="javascript:void(0);" class="link-primary">Bhupinder Singh (IT
+            Department)</a></p>
 </div>
 <!-- /Main Wrapper -->
 
@@ -1092,5 +272,20 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
 });
 </script>
+
+<script>
+        // You can add any dynamic functionality here if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Class dashboard component loaded');
+            
+            // Add click event to all class links to track engagement
+            const classLinks = document.querySelectorAll('.class-link');
+            classLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Class video link clicked: ' + this.href);
+                });
+            });
+        });
+    </script>
 
 <?php require_once '../includes/footer.php'; ?>

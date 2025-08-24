@@ -120,3 +120,39 @@ function getIndianTime($format = 'h:i A') {
     return $time;
 }
 ?>
+
+<?php
+/**
+ * Get the latest teacher added to the system
+ * @return array|null Teacher data or null if no teachers found
+ */
+function getLatestTeacher() {
+    global $conn;
+    
+    $query = "SELECT td.teacher_name, td.teacher_id, td.teacher_type, td.profile_pic, 
+                     td.subject, u.created_at
+              FROM teacher_details td
+              JOIN users u ON td.user_id = u.id
+              WHERE u.role = 'teacher'
+              ORDER BY u.created_at DESC 
+              LIMIT 1";
+    
+    $result = mysqli_query($conn, $query);
+    
+    if ($result && mysqli_num_rows($result) > 0) {
+        return mysqli_fetch_assoc($result);
+    }
+    
+    return null;
+}
+
+// Get teacher count
+$count_query = "SELECT COUNT(*) as total_teachers FROM teacher_details";
+$count_result = mysqli_query($conn, $count_query);
+$count_data = mysqli_fetch_assoc($count_result);
+$total_teachers = $count_data['total_teachers'];
+
+// Get latest teacher
+$latest_teacher = getLatestTeacher();
+
+

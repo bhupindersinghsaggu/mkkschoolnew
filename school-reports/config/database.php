@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
  <?php   
 // $host = 'localhost';
-// $dbname = 'school-reports1';
+// $dbname = 'school_reports';
 // $username = 'root';
 // $password = '';
 // $conn = new mysqli($host, $username, $password, $dbname);
