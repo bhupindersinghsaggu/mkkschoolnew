@@ -45,7 +45,7 @@ require_once '../includes/function.php';
                                 <p>Total Teacher</p>
                             </div>
                             <span class="revenue-icon bg-cyan-transparent text-cyan">
-                                <i class="fa-solid fa-layer-group fs-16"></i>
+                                <?php echo $total_teachers; ?>
                             </span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
