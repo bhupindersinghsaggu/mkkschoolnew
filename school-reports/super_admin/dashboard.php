@@ -1,8 +1,8 @@
 <?php
 require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
-require_once '../includes/function.php';
 require_once '../config/database.php';
+require_once '../includes/function.php';
 
 ?>
 
