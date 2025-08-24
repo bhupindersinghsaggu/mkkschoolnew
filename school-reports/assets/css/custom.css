@@ -1,1 +1,12 @@
 
+.revenue-widget .revenue-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 30px;
+}
