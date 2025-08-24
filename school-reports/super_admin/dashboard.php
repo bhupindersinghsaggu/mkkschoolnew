@@ -64,7 +64,7 @@ require_once '../includes/function.php';
                                 <p>Total Notebook Check </p>
                             </div>
                             <span class="revenue-icon bg-teal-transparent text-teal">
-                                <i class="ti ti-chart-pie fs-16"></i>
+                               <?php echo $notebook_count; ?>
                             </span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
