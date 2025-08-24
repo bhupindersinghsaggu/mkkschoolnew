@@ -183,7 +183,7 @@ $average_marks = ($marks1 + $marks2) / 2;
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-inline-flex align-items-center">
                             <span class="title-icon bg-soft-pink fs-16 me-2"><i class="ti ti-box"></i></span>
-                            <h5 class="card-title mb-0">Recent Sales</h5>
+                            <h5 class="card-title mb-0">Recent Class Show</h5>
                         </div>
                         <a href="./list_class_show.php" class="fs-13 fw-medium text-decoration-underline">View All</a>
                     </div>
