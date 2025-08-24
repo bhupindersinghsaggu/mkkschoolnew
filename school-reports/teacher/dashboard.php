@@ -224,12 +224,17 @@ require_once '../teacher/side-bar.php';
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr>
+                                    <td><?= htmlspecialchars($session['session']) ?></td>
                                     <td><?= date('d M Y', strtotime($row['eval_date'])) ?></td>
                                     <td><?= htmlspecialchars($class_section['class_section']) ?></td>
-                                    <td><?= htmlspecialchars($subject['subject']) ?></td>
-                                    
+                                    <td><?= htmlspecialchars($teacher_name['teacher_name']) ?></td>
+                                    <td><?= htmlspecialchars($topic['topic']) ?></td>
+                                    <td><?= htmlspecialchars($video_link['video_link']) ?></td>
+                                    <td><?= htmlspecialchars($evaluator_name['evaluator_name']) ?></td>
+                                    <td><?= htmlspecialchars($comments1['comments1']) ?></td>
+                                    <td><?= htmlspecialchars($comments2['comments2']) ?></td>
                                     </tr>
-                                   
                                 </tbody>
                             </table>
                         </div>

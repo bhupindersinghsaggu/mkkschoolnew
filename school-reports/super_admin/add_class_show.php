@@ -253,7 +253,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                                 <div class="mb-3">
                                     <label>Name of The Judge</label>
-                                    <input type="text" name=" evaluator_name" class="form-control" required>
+                                    <input type="text" name="evaluator_name" class="form-control" required>
                                 </div>
                                 <!-- <div class="mb-3">
                                     <label>Judge Name </label>
