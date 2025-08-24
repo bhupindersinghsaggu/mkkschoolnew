@@ -196,7 +196,7 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Are you sure you want to delete this teacher? This action cannot be undone.</p>
+                        <p>Are you sure you want to delete this teacher? </p>
                         <p class="fw-bold">All associated data will be permanently removed.</p>
                     </div>
                     <div class="modal-footer">
