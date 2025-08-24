@@ -21,6 +21,40 @@ require_once '../includes/function.php';
                 <input type="text" class="form-control date-range bookingrange" placeholder="Search Product">
             </div>
         </div>
+        <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="d-flex align-items-center">
+                <div class="greeting-icon me-3">
+                    <?php
+                    $current_hour = date('H');
+                    if ($current_hour >= 5 && $current_hour < 12) {
+                        echo '<i class="fas fa-sun fa-2x text-warning"></i>';
+                    } elseif ($current_hour >= 12 && $current_hour < 17) {
+                        echo '<i class="fas fa-cloud-sun fa-2x text-info"></i>';
+                    } else {
+                        echo '<i class="fas fa-moon fa-2x text-primary"></i>';
+                    }
+                    ?>
+                </div>
+                <div>
+                    <h2><?php echo getPersonalizedGreeting($_SESSION['username']); ?></h2>
+                    <p class="text-muted mb-0">
+                        <i class="fas fa-calendar-alt"></i> 
+                        <?php echo date('l, F j, Y'); ?> | 
+                        <i class="fas fa-clock"></i> 
+                        <?php echo date('g:i A'); ?>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-end">
+            <div class="bg-light p-3 rounded">
+                <small class="text-muted">
+                    Academic Year: <?php echo date('Y'); ?>-<?php echo date('Y') + 1; ?>
+                </small>
+            </div>
+        </div>
+    </div>
         <!-- <div class="alert bg-orange-transparent alert-dismissible fade show mb-4">
             <div>
                 <span><i class="ti ti-info-circle fs-14 text-orange me-2"></i>Your Product </span> <span class="text-orange fw-semibold"> Apple Iphone 15 is running Low, </span> already below 5 Pcs., <a href="javascript:void(0);" class="link-orange text-decoration-underline fw-semibold" data-bs-toggle="modal" data-bs-target="#add-stock">Add Stock</a>
