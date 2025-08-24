@@ -9,7 +9,7 @@ require_once '../includes/function.php';
 <div class="page-wrapper">
     <div class="content">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2">
-            <div class="mb-3 d-flex">
+            <div class="mb-3 d-flex align-items-center">
                 <h1 class="mb-1">Welcome, Admin</h1>
                 <h3><?php echo getGreetingWithEmoji(); ?>!</h3>
                 <!-- <p class="fw-medium">You have <span class="text-primary fw-bold">200+</span> Orders, Today</p> -->
