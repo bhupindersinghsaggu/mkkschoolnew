@@ -85,16 +85,16 @@ require_once '../includes/function.php';
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
                             <div>
-                                <h4 class="mb-1">$8,980,097</h4>
-                                <p>Total Expenses</p>
+                                <h4 class="mb-1">$classhow_count</h4>
+                                <p>Total Class Show</p>
                             </div>
                             <span class="revenue-icon bg-orange-transparent text-orange">
                                 <i class="ti ti-lifebuoy fs-16"></i>
                             </span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
-                            <p class="mb-0"><span class="fs-13 fw-bold text-success">+41%</span> vs Last Month</p>
-                            <a href="expense-list.html" class="text-decoration-underline fs-13 fw-medium">View All</a>
+                            <a href="./add_class_show.php" class="btn btn-primary btn-sm">Add New</a>
+                            <a href="./list_class_show.php" class="text-decoration-underline fs-13 fw-medium">View All</a>
                         </div>
                     </div>
                 </div>
