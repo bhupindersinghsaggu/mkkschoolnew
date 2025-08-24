@@ -268,7 +268,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                                 <div class="mb-3">
                                     <label>Prayer (03)</label>
-                                    <input type="number" name="prayer" class="form-control" required>
+                                    <input type="number" name="prayer" class="form-control" required min="0" max="3">
                                 </div>
                             </div>
                         </div>
@@ -278,43 +278,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label>News (English Only) (02)</label>
-                                    <input type="number" name="news" class="form-control" required>
+                                    <input type="number" name="news" class="form-control" required min="0" max="2">
                                 </div>
                                 <div class="mb-3">
                                     <label>Participation (03)</label>
-                                    <input type="number" name="participation" class="form-control" required>
+                                    <input type="number" name="participation" class="form-control" required min="0" max="3">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Speeches [English (50), Hindi (01)]</label>
-                                    <input type="number" name="speeches" class="form-control" required>
+                                    <label>Speeches [English (5), Hindi (01)]</label>
+                                    <input type="number" name="speeches" class="form-control" required min="0" max="5">
                                 </div>
                                 <div class="mb-3">
                                     <label>Poem Recitation [English (02), Hindi (01)]</label>
-                                    <input type="number" name="poem_recitation" class="form-control" required>
+                                    <input type="number" name="poem_recitation" class="form-control" required min="0" max="40">
                                 </div>
                                 <div class="mb-3">
                                     <label>Group Dance (04)</label>
-                                    <input type="number" name="dance" class="form-control" required>
+                                    <input type="number" name="dance" class="form-control" required min="0" max="4">
                                 </div>
                                 <div class="mb-3">
                                     <label>Group Song (04)</label>
-                                    <input type="number" name="song" class="form-control" required>
+                                    <input type="number" name="song" class="form-control" required min="0" max="4">
                                 </div>
                                 <div class="mb-3">
                                     <label>Stage Management (03)</label>
-                                    <input type="number" name="stage_management" class="form-control" required>
+                                    <input type="number" name="stage_management" class="form-control" required min="0" max="3">
                                 </div>
                                 <div class="mb-3">
                                     <label>Innovation (02)</label>
-                                    <input type="number" name="innovation" class="form-control" required>
+                                    <input type="number" name="innovation" class="form-control" required min="0" max="2">
                                 </div>
                                 <div class="mb-3">
                                     <label>Theme Based Skit Presentation (04)</label>
-                                    <input type="number" name="skit" class="form-control" required>
+                                    <input type="number" name="skit" class="form-control" required min="0" max="4">
                                 </div>
                                 <div class="mb-3">
                                     <label>Theme Based Power Point Presentation (04)</label>
-                                    <input type="number" name="ppt" class="form-control" required>
+                                    <input type="number" name="ppt" class="form-control" required min="0" max="3">
                                 </div>
                             </div>
                         </div>
@@ -324,16 +324,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label>Anchoring (03)</label>
-                                    <input type="number" name="anchoring" class="form-control" required>
+                                    <input type="number" name="anchoring" class="form-control" required min="0" max="3">
                                 </div>
                                 <div class="mb-3">
                                     <label>Total (Auto-calculated)</label>
-                                    <input type="number" name="total" id="totalField" class="form-control" readonly required>
+                                    <input type="number" name="total" id="totalField" class="form-control" readonly >
                                     <small class="text-muted">This field is automatically calculated</small>
                                 </div>
                                 <div class="mb-3">
                                     <label>Speaking Skills (Students)</label>
-                                    <input type="text" name="speaking_skills" class="form-control" required>
+                                    <input type="text" name="speaking_skills" class="form-control" required >
                                 </div>
                                 <div class="mb-3">
                                     <label>Dancing Skills (Students)</label>
@@ -361,11 +361,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 1</label>
-                                    <input type="number" name="marks-judge1" class="form-control"  min="0" max="40">
+                                    <input type="number" name="marks_judge1" class="form-control"  min="0" max="40">
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 2</label>
-                                    <input type="number" name="marks-judge2" class="form-control"  min="0" max="40">
+                                    <input type="number" name="marks_judge2" class="form-control"  min="0" max="40">
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back</a>
