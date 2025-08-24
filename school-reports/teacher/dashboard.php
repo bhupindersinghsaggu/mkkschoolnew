@@ -43,11 +43,11 @@ require_once '../teacher/side-bar.php';
             <div class="row">
                 <div class="col-md-3">
                     <!-- Profile Card -->
-                    <div class="card">
-                        <div class="card-body text-center">
+                    <div class="">
+                        <div class=" text-center">
                             <?php if (!empty($teacher['profile_pic'])): ?>
                                 <img src="../uploads/profile_pics/<?php echo htmlspecialchars($teacher['profile_pic']); ?>"
-                                    class="img-fluid  mb-3" style="width: 100% ;height: 100%; object-fit: cover;"
+                                    class="img-fluid  mb-3" style="width: 150px ;height: 150px; object-fit: cover;"
                                     alt="Profile Picture">
                             <?php else: ?>
                                 <div class="bg-light  d-flex align-items-center justify-content-center mb-3"
