@@ -11,7 +11,7 @@ $query = "SELECT * FROM class_show ORDER BY created_at DESC LIMIT 2";
 $result = mysqli_query($conn, $query);
 // Check if query was successful and has data
  if ($result && mysqli_num_rows($result) > 0):
- while ($latest_class = mysqli_fetch_assoc($result)):
+$latest_class = mysqli_fetch_assoc($result);
                                             
 // Calculate average marks
 $marks1 = (int)$latest_class['marks_judge1'];
