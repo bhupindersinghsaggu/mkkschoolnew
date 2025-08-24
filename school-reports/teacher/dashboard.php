@@ -83,8 +83,8 @@ require_once '../teacher/side-bar.php';
                                     <td><?= htmlspecialchars($teacher['email'] ?? 'N/A') ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Username</th>
-                                    <td><?= htmlspecialchars($teacher['username'] ?? 'N/A') ?></td>
+                                    <th>Phone Number</th>
+                                    <td><?= htmlspecialchars($phone_no['phone_no'] ?? 'N/A') ?></td>
                                 </tr>
                             </tbody>
                         </table>
