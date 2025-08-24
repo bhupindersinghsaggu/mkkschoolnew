@@ -31,15 +31,15 @@ require_once '../includes/header.php';
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
                             <div>
                                 <h4 class="mb-1">$8,458,798</h4>
-                                <p>Profit</p>
+                                <p>Total Teacher</p>
                             </div>
                             <span class="revenue-icon bg-cyan-transparent text-cyan">
                                 <i class="fa-solid fa-layer-group fs-16"></i>
                             </span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
-                            <p class="mb-0"><span class="fs-13 fw-bold text-success">+35%</span> vs Last Month</p>
-                            <a href="profit-and-loss.html" class="text-decoration-underline fs-13 fw-medium">View All</a>
+                            <!-- <p class="mb-0"><span class="fs-13 fw-bold text-success">+35%</span> vs Last Month</p> -->
+                            <a href="./list_teacher.php" class="text-decoration-underline fs-13 fw-medium">View All</a>
                         </div>
                     </div>
                 </div>
