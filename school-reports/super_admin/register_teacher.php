@@ -76,14 +76,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Insert teacher details
             $teacher_sql = "INSERT INTO teacher_details (user_id, teacher_name, teacher_id, phone_no, subject, teacher_type, profile_pic)
-                           VALUES ($user_id, '$teacher_name', '$teacher_id', phone_no,'$subject', '$teacher_type', '$profile_pic')";
+                           VALUES ($user_id, '$teacher_name', '$teacher_id', phone_no, '$subject', '$teacher_type', '$profile_pic')";
             mysqli_query($conn, $teacher_sql);
 
             mysqli_commit($conn);
-            session_start();
-            $_SESSION['user_id'] = $user_id;
-            $_SESSION['username'] = $username;
-            $_SESSION['role'] = 'teacher';
+            // session_start();
+            // $_SESSION['user_id'] = $user_id;
+            // $_SESSION['username'] = $username;
+            // $_SESSION['role'] = 'teacher';
             header("Location: register_success.php");
             exit();
         } catch (Exception $e) {
