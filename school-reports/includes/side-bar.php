@@ -26,9 +26,8 @@
                  <li class="submenu-open">
                      <h6 class="submenu-hdr">Teacher</h6>
                      <ul>
-                         <li><a href="../super_admin/register_teacher.php"><i class="fa-solid fa-circle-user fs-16 me-2"></i><span>  Add Teacher </span></a></li>
-                         <li><a href="../super_admin/list_teacher.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>list Teacher </span></a></li>
-                         <li><a href="../super_admin/list_notebook.php"><i data-feather="box"></i><span>NoteBook Corrections</span></a></li>
+                         <li><a href="../super_admin/list_teacher.php"><i class="fa-solid fa-circle-user fs-16 me-2"></i><span>Manage Teacher </span></a></li>
+                         <li><a href="../super_admin/list_notebook.php"><i data-feather="box"></i><span>Note Book Corrections</span></a></li>
                          <li><a href="../super_admin/list_class_show.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>Class Show </span></a></li>
                      </ul>
                  </li>
