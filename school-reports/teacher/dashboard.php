@@ -196,16 +196,13 @@ require_once '../teacher/side-bar.php';
                         <?php
                         // Get documents for this teacher
                         $teacher_id = $teacher['teacher_id'];
-                        $documents_query = "SELECT r.id, r.eval_date, r.document, r.class_section, r.subject 
-                              FROM records r
-                              WHERE r.teacher_id = ? AND r.document IS NOT NULL
-                              ORDER BY r.eval_date DESC";
-                        $stmt = mysqli_prepare($conn, $documents_query);
+                        $class_show_query = "SELECT * FROM class_show ORDER BY created_at DESC";
+                        $stmt = mysqli_prepare($conn, $class_show_query);
                         mysqli_stmt_bind_param($stmt, "s", $teacher_id);
                         mysqli_stmt_execute($stmt);
-                        $documents = mysqli_stmt_get_result($stmt);
+                        $class_show = mysqli_stmt_get_result($stmt);
 
-                        if (mysqli_num_rows($documents) > 0): ?>
+                        if (mysqli_num_rows($class_show) > 0): ?>
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead>
