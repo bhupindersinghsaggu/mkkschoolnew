@@ -112,7 +112,7 @@ $result = $query->get_result();
     <div class="page-wrapper">
         <div class="content">
             <div class="header-button d-flex justify-content-end align-items-center mb-3">
-                <a href="add_notebook.php" class="btn btn-success">Back</a>
+                <a href="add_notebook.php" class="btn btn-success">Add New</a>
             </div>
             <div class="mb-3">
                 <h3 class="">Notebook Review Records</h3>
