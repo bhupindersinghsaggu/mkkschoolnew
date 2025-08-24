@@ -41,7 +41,7 @@ require_once '../includes/function.php';
                             </span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
-                            <!-- <p class="mb-0"><span class="fs-13 fw-bold text-success">+35%</span> vs Last Month</p> -->
+                            <button type="./add_teacher.php" class="btn btn-success">Add New</button>
                             <a href="./list_teacher.php" class="text-decoration-underline fs-13 fw-medium">View All</a>
                         </div>
                     </div>
