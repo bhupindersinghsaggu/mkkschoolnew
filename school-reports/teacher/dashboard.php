@@ -84,7 +84,7 @@ require_once '../teacher/side-bar.php';
                                 </tr>
                                 <tr>
                                     <th>Phone Number</th>
-                                    <td><?= htmlspecialchars($phone_no['phone_no'] ?? 'N/A') ?></td>
+                                    <td><?= htmlspecialchars($teacher['phone_no'] ?? 'N/A') ?></td>
                                 </tr>
                             </tbody>
                         </table>
