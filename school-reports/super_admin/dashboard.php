@@ -9,11 +9,13 @@ require_once '../includes/function.php';
 <div class="page-wrapper">
     <div class="content">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2">
-            <div class="card-header">
-                <div class="mb-3 d-flex align-items-center">
-                    <h1 class="mb-1">Welcome, Admin</h1>
-                    <h3 class="px-3"><?php echo getGreetingWithEmoji(); ?>!</h3>
-                    <!-- <p class="fw-medium">You have <span class="text-primary fw-bold">200+</span> Orders, Today</p> -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="mb-3 d-flex align-items-center">
+                        <h1 class="mb-1">Welcome, Admin</h1>
+                        <h3 class="px-3"><?php echo getGreetingWithEmoji(); ?>!</h3>
+                        <!-- <p class="fw-medium">You have <span class="text-primary fw-bold">200+</span> Orders, Today</p> -->
+                    </div>
                 </div>
             </div>
             <div class="input-icon-start position-relative mb-3">
@@ -1437,39 +1439,39 @@ require_once '../includes/function.php';
 <!-- /Main Wrapper -->
 
 <script>
-    // Simple animation on scroll
-    document.addEventListener('DOMContentLoaded', function() {
-        const animatedElements = document.querySelectorAll('.animate-fadeIn');
+// Simple animation on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const animatedElements = document.querySelectorAll('.animate-fadeIn');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.visibility = 'visible';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.visibility = 'visible';
+                observer.unobserve(entry.target);
+            }
         });
-
-        animatedElements.forEach(el => {
-            el.style.visibility = 'hidden';
-            observer.observe(el);
-        });
+    }, {
+        threshold: 0.1
     });
 
-    // date on dashboard
-    // Add this script to display the current date
-    document.addEventListener('DOMContentLoaded', function() {
-        const now = new Date();
-        const options = {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        };
-        document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
+    animatedElements.forEach(el => {
+        el.style.visibility = 'hidden';
+        observer.observe(el);
     });
+});
+
+// date on dashboard
+// Add this script to display the current date
+document.addEventListener('DOMContentLoaded', function() {
+    const now = new Date();
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+    document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
+});
 </script>
 
 <?php require_once '../includes/footer.php'; ?>
