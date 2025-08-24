@@ -133,6 +133,7 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                     <th>Photo</th>
                                     <th>Teacher Name</th>
                                     <th>Teacher ID</th>
+                                    <th>Phone No.</th>
                                     <th>Subject</th>
                                     <th>Type</th>
                                     <!-- <th>Email</th> -->
@@ -157,6 +158,7 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                             </td>
                                             <td><?= htmlspecialchars($teacher['teacher_name']) ?></td>
                                             <td><?= htmlspecialchars($teacher['teacher_id']) ?></td>
+                                            <td><?= htmlspecialchars($phone_no['phone_no']) ?></td>
                                             <td><?= htmlspecialchars($teacher['subject']) ?></td>
                                             <td><?= htmlspecialchars($teacher['teacher_type']) ?></td>
                                             <!-- <td><?= htmlspecialchars($teacher['email']) ?></td> -->
