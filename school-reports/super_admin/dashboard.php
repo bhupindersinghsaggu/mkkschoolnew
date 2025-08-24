@@ -39,11 +39,13 @@ require_once '../includes/function.php';
             <div class="col-xl-3 col-sm-6 col-12 d-flex">
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between  border-bottom">
-                            <p>Total Teacher</p>
-                            <span class="revenue-icon bg-cyan-transparent text-cyan">
-                                <?php echo $total_teachers; ?>
-                            </span>
+                        <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
+                            <div class="d-flex align-items-center">
+                                <p>Total Teacher</p>
+                                <span class="revenue-icon bg-cyan-transparent text-cyan">
+                                    <?php echo $total_teachers; ?>
+                                </span>
+                            </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <a href="./add_teacher.php" class="btn btn-success btn-sm">Add New</a>
