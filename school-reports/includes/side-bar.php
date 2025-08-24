@@ -27,7 +27,7 @@
                      <h6 class="submenu-hdr">Teacher</h6>
                      <ul>
                          <li><a href="../super_admin/list_teacher.php"><i class="fa-solid fa-circle-user fs-16 me-2 theme-color"></i>Manage Teacher </a></li>
-                         <li><a href="../super_admin/list_notebook.php"><i class="fa-solid fa-book-open fs-16 me-2 theme-color"></i>Note Book Check</a></li>
+                         <li><a href="../super_admin/list_notebook.php"><i class="fa-solid fa-book-open fs-16 me-2 theme-color"></i>Notebook Checking</a></li>
                          <li><a href="../super_admin/list_class_show.php"><i class="fa-solid fa-clapperboard fs-16 me-2 theme-color"></i>Class Show </a></li>
                      </ul>
                  </li>
