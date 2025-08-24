@@ -46,7 +46,7 @@ if (isset($_GET['delete'])) {
 }
 
 // Fetch all teachers with their details
-$query = "SELECT td.id, td.teacher_name, td.teacher_id, td.subject, td.phone_no, td.teacher_type, 
+$query = "SELECT td.id, td.teacher_name, td.teacher_id, td.subject,  td.teacher_type, 
                  td.profile_pic, u.email, u.username, u.created_at
           FROM teacher_details td
           JOIN users u ON td.user_id = u.id
