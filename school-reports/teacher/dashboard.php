@@ -62,7 +62,7 @@ require_once '../teacher/side-bar.php';
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-6">
                     <!-- Teacher Details -->
                     <div class="card">
                         <div class="card-header bg-success  text-white">
