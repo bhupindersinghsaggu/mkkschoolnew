@@ -75,24 +75,6 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/custom.css">
-    <style>
-        .profile-img {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 2px solid #dee2e6;
-        }
-
-        .action-btns .btn {
-            padding: 0.25rem 0.5rem;
-            font-size: 0.875rem;
-        }
-
-        .table-responsive {
-            overflow-x: auto;
-        }
-    </style>
 </head>
 
 <body>
