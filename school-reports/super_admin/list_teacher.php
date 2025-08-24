@@ -1,10 +1,8 @@
 <?php
-
+// PHP CODE WITH THE FIXED QUERY
 ob_start(); // Start output buffering
 require_once '../config/database.php';
 require_once '../includes/header.php';
-
-
 
 // Handle teacher deletion
 if (isset($_GET['delete'])) {
@@ -45,7 +43,7 @@ if (isset($_GET['delete'])) {
     exit();
 }
 
-// Fetch all teachers with their details
+// FIXED QUERY: Added td.phone_no to the SELECT clause
 $query = "SELECT td.id, td.teacher_name, td.teacher_id, td.phone_no, td.subject, td.teacher_type, 
                  td.profile_pic, u.email, u.username, u.created_at
           FROM teacher_details td
@@ -53,7 +51,10 @@ $query = "SELECT td.id, td.teacher_name, td.teacher_id, td.phone_no, td.subject,
           ORDER BY td.teacher_name ASC";
 $result = mysqli_query($conn, $query);
 $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,6 +76,31 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/custom.css">
+    <style>
+        .profile-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #dee2e6;
+        }
+
+        .action-btns .btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        /* Fix for phone number display */
+        .phone-number {
+            font-family: monospace;
+            direction: ltr;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -83,9 +109,10 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="mb-0 mt-4">Teacher Management</h2>
                 <a href="register_teacher.php" class="btn btn-success mt-4">
-                    <i class="bi bi-plus-lg"></i> Add
+                    <i class="fas fa-plus me-1"></i> Add Teacher
                 </a>
             </div>
+
             <!-- Display success/error messages -->
             <?php if (isset($_SESSION['success'])): ?>
                 <div class="alert alert-success alert-dismissible fade show">
@@ -118,9 +145,6 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                     <th>Phone No.</th>
                                     <th>Subject</th>
                                     <th>Type</th>
-                                    <!-- <th>Email</th> -->
-                                    <!-- <th>Username</th>
-                                        <th>Registered</th> -->
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -134,24 +158,29 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                                         alt="<?= htmlspecialchars($teacher['teacher_name']) ?>" class="profile-img">
                                                 <?php else: ?>
                                                     <div class="profile-img bg-secondary text-white d-flex align-items-center justify-content-center">
-                                                        <i class="bi bi-person-fill"></i>
+                                                        <i class="fas fa-user"></i>
                                                     </div>
                                                 <?php endif; ?>
                                             </td>
                                             <td><?= htmlspecialchars($teacher['teacher_name']) ?></td>
                                             <td><?= htmlspecialchars($teacher['teacher_id']) ?></td>
-                                            <td><?= htmlspecialchars($phone_no['phone_no']) ?></td>
+                                            <td>
+                                                <?php if (!empty($teacher['phone_no'])): ?>
+                                                    <span class="phone-number"><?= htmlspecialchars($teacher['phone_no']) ?></span>
+                                                <?php else: ?>
+                                                    <span class="text-muted">Not provided</span>
+                                                <?php endif; ?>
+                                            </td>
                                             <td><?= htmlspecialchars($teacher['subject']) ?></td>
-                                            <td><?= htmlspecialchars($teacher['teacher_type']) ?></td>
-                                            <!-- <td><?= htmlspecialchars($teacher['email']) ?></td> -->
-                                            <!-- <td><?= htmlspecialchars($teacher['username']) ?></td>
-                                                <td><?= date('M j, Y', strtotime($teacher['created_at'])) ?></td> -->
+                                            <td>
+                                                <span class="badge bg-info"><?= htmlspecialchars($teacher['teacher_type']) ?></span>
+                                            </td>
                                             <td class="action-btns">
                                                 <a href="edit_teacher.php?id=<?= $teacher['id'] ?>"
                                                     class="btn btn-success btn-sm" title="Edit">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                <button class="btn btn-danger btn-sm"
+                                                <button class="btn btn-danger btn-sm delete-btn"
                                                     data-id="<?= $teacher['id'] ?>"
                                                     title="Delete">
                                                     <i class="fas fa-trash"></i>
@@ -161,7 +190,15 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                     <?php endforeach; ?>
                                 <?php else: ?>
                                     <tr>
-                                        <td colspan="9" class="text-center py-4">No teachers found. Add your first teacher.</td>
+                                        <td colspan="7" class="text-center py-4">
+                                            <div class="py-3">
+                                                <i class="fas fa-users fa-2x text-muted mb-3"></i>
+                                                <p class="mb-0">No teachers found.</p>
+                                                <a href="register_teacher.php" class="btn btn-success mt-2">
+                                                    <i class="fas fa-plus me-1"></i> Add Your First Teacher
+                                                </a>
+                                            </div>
+                                        </td>
                                     </tr>
                                 <?php endif; ?>
                             </tbody>
@@ -180,12 +217,14 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Are you sure you want to delete this teacher? </p>
-                        <p class="fw-bold">All associated data will be permanently removed.</p>
+                        <p>Are you sure you want to delete this teacher?</p>
+                        <p class="fw-bold text-danger">All associated data will be permanently removed.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <a href="#" id="confirmDelete" class="btn btn-danger">Delete Teacher</a>
+                        <a href="#" id="confirmDelete" class="btn btn-danger">
+                            <i class="fas fa-trash me-1"></i> Delete Teacher
+                        </a>
                     </div>
                 </div>
             </div>
