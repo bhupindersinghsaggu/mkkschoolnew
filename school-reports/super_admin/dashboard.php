@@ -37,7 +37,7 @@ require_once '../includes/function.php';
                     ?>
                 </div>
                 <div>
-                    <h2><?php echo getPersonalizedGreeting($_SESSION['username']); ?></h2>
+                    <!-- <h2><?php echo getPersonalizedGreeting($_SESSION['username']); ?></h2> -->
                     <p class="text-muted mb-0">
                         <i class="fas fa-calendar-alt"></i> 
                         <?php echo date('l, F j, Y'); ?> | 
