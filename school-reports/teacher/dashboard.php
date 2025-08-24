@@ -229,7 +229,7 @@ require_once '../teacher/side-bar.php';
                                     <td><?= htmlspecialchars($subject['subject']) ?></td>
                                     
                                     </tr>
-                                    <?php endwhile; ?>
+                                   
                                 </tbody>
                             </table>
                         </div>
