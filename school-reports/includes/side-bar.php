@@ -17,9 +17,10 @@
          <div id="sidebar-menu" class="sidebar-menu">
              <ul>
                  <li class="submenu-open">
-                     <h6 class="submenu-hdr">Teachers Forms</h6>
+                     <!-- <h6 class="submenu-hdr">Teachers Forms</h6> -->
                      <ul>
-                         <li><a href="../super_admin/add_notebook.php"><i data-feather="box"></i><span>NoteBook Corrections</span></a></li>
+                         <li><a href="../super_admin/dashboard.php"><i data-feather="dashboard"></i><span>Dashboard</span></a></li>
+
                      </ul>
                  </li>
                  <li class="submenu-open">
@@ -27,6 +28,7 @@
                      <ul>
                          <li><a href="../super_admin/register_teacher.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>Add Teacher </span></a></li>
                          <li><a href="../super_admin/list_teacher.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>list Teacher </span></a></li>
+                         <li><a href="../super_admin/add_notebook.php"><i data-feather="box"></i><span>NoteBook Corrections</span></a></li>
                          <li><a href="../super_admin/add_class_show.php"><i class="ti ti-stack-3 fs-16 me-2"></i><span>Add Class Show </span></a></li>
                      </ul>
                  </li>
