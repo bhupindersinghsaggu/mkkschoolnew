@@ -40,7 +40,7 @@ require_once '../includes/function.php';
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
-                            <h5 class="card-title mb-0">Total Teacher</h5>
+                            <h5 class="card-title mb-0"><i class="fa-solid fa-chalkboard-user"></i> Total Teacher</h5>
                             <span class="revenue-icon bg-cyan-transparent text-cyan">
                                 <?php echo $total_teachers; ?>
                             </span>
