@@ -39,7 +39,7 @@ require_once '../teacher/side-bar.php';
 
 <div class="page-wrapper">
     <div class="content mb-3">
-        <div class="container py-4">
+        <div class="">
             <div class="row">
                 <div class="col-md-3">
                     <!-- Profile Card -->
