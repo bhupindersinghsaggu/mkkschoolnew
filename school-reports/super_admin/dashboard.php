@@ -55,8 +55,8 @@ require_once '../includes/function.php';
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
                             <div>
-                                <h4 class="mb-1">$48,988,78</h4>
-                                <p>Invoice Due</p>
+                                <h4 class="mb-1"><?php echo $notebook_count; ?> </h4>
+                                <p>Total Notebook Check </p>
                             </div>
                             <span class="revenue-icon bg-teal-transparent text-teal">
                                 <i class="ti ti-chart-pie fs-16"></i>
