@@ -1,6 +1,8 @@
 <?php
 require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
+require_once '../config/database.php';
+
 ?>
 <?php
 // Add this at the top of your existing dashboard.php
