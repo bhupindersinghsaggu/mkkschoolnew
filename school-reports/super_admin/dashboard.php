@@ -74,22 +74,18 @@ require_once '../includes/function.php';
             <!-- /Invoice -->
 
             <!-- Expenses -->
-            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+             <div class="col-xl-3 col-sm-6 col-12 d-flex">
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
-                            <div>
-                                <h4 class="mb-1"><?php echo $class_show_count; ?></h4>
-                                <p>Total Class Show</p>
-                            </div>
+                            <h5 class="card-title mb-0">Total Class Show </h5>
                             <span class="revenue-icon bg-orange-transparent text-orange">
-                                <i class="ti ti-lifebuoy fs-16"></i>
+                                <?php echo $class_show_count; ?>
                             </span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <a href="./add_class_show.php" class="btn btn-primary btn-sm">Add New</a>
-                            <a href="./list_class_show.php" class="text-decoration-underline fs-13 fw-medium">View
-                                All</a>
+                            <a href="./list_class_show.php" class="text-decoration-underline fs-13 fw-medium">View All</a>
                         </div>
                     </div>
                 </div>
