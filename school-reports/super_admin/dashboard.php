@@ -12,7 +12,10 @@ require_once '../includes/function.php';
             <div class="card  ">
                 <div class="card-header d-flex align-items-center">
                     <div class="d-flex align-items-center">
-                        <h1 class="mb-1">Welcome, Admin</h1>
+                        <div class="d-inline-flex align-items-center">
+                            <span class="title-icon bg-soft-info fs-16 me-2"><i class="ti ti-info-circle"></i></span>
+                            <h5 class="card-title mb-0">Welcome Admin</h5>
+                        </div>
                         <h3 class="px-3"><?php echo getGreetingWithEmoji(); ?>!</h3>
                         <!-- <p class="fw-medium">You have <span class="text-primary fw-bold">200+</span> Orders, Today</p> -->
                     </div>
