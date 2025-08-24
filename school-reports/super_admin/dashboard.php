@@ -4,24 +4,113 @@ require_once '../includes/header.php';
 ?>
 <div class="page-wrapper">
     <div class="content">
-        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2">
-            <div class="mb-3">
-                <h1 class="mb-1">Welcome, Admin</h1>
-                <p class="fw-medium">You have <span class="text-primary fw-bold">200+</span> Orders, Today</p>
+        <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card dash-widget w-100">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="dash-widgetimg">
+                            <span><img src="assets/img/icons/dash1.svg" alt="img"></span>
+                        </div>
+                        <div class="dash-widgetcontent">
+                            <h5 class="mb-1">$<span class="counters" data-count="307144.00">307144</span></h5>
+                            <p class="mb-0">Total Purchase Due</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="input-icon-start position-relative mb-3">
-                <span class="input-icon-addon fs-16 text-gray-9">
-                    <i class="ti ti-calendar"></i>
-                </span>
-                <input type="text" class="form-control date-range bookingrange" placeholder="Search Product">
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card dash-widget dash1 w-100">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="dash-widgetimg">
+                            <span><img src="assets/img/icons/dash2.svg" alt="img"></span>
+                        </div>
+                        <div class="dash-widgetcontent">
+                            <h5 class="mb-1">$<span class="counters" data-count="4385.00">4385</span></h5>
+                            <p class="mb-0">Total Sales Due</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="alert bg-orange-transparent alert-dismissible fade show mb-4">
-            <div>
-                <span><i class="ti ti-info-circle fs-14 text-orange me-2"></i>Your Product </span> <span class="text-orange fw-semibold"> Apple Iphone 15 is running Low, </span> already below 5 Pcs., <a href="javascript:void(0);" class="link-orange text-decoration-underline fw-semibold" data-bs-toggle="modal" data-bs-target="#add-stock">Add Stock</a>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card dash-widget dash2 w-100">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="dash-widgetimg">
+                            <span><img src="assets/img/icons/dash3.svg" alt="img"></span>
+                        </div>
+                        <div class="dash-widgetcontent">
+                            <h5 class="mb-1">$<span class="counters" data-count="385656.50">385656.5</span></h5>
+                            <p class="mb-0">Total Sale Amount</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button type="button" class="btn-close text-gray-9 fs-14" data-bs-dismiss="alert" aria-label="Close"><i class="ti ti-x"></i></button>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card dash-widget dash3 w-100">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="dash-widgetimg">
+                            <span><img src="assets/img/icons/dash4.svg" alt="img"></span>
+                        </div>
+                        <div class="dash-widgetcontent">
+                            <h5 class="mb-1">$<span class="counters" data-count="40000.00">40000</span></h5>
+                            <p class="mb-0">Total Expense Amount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="dash-count bg-primary">
+                    <div class="dash-counts">
+                        <h4 class="mb-1">100</h4>
+                        <p class="text-white mb-0">Customers</p>
+                    </div>
+                    <div class="dash-imgs">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="dash-count das1 bg-cyan-900">
+                    <div class="dash-counts">
+                        <h4 class="mb-1">110</h4>
+                        <p class="text-white mb-0">Suppliers</p>
+                    </div>
+                    <div class="dash-imgs">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-check">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <polyline points="17 11 19 13 23 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="dash-count das2 bg-dark">
+                    <div class="dash-counts">
+                        <h4 class="mb-1">150</h4>
+                        <p class="text-white mb-0">Purchase Invoice</p>
+                    </div>
+                    <div class="dash-imgs">
+                        <img src="assets/img/icons/file-text-icon-01.svg" class="img-fluid" alt="icon">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="dash-count das3 bg-success">
+                    <div class="dash-counts">
+                        <h4 class="mb-1">170</h4>
+                        <p class="text-white mb-0">Sales Invoice</p>
+                    </div>
+                    <div class="dash-imgs">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                            <polyline points="13 2 13 9 20 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="row">
