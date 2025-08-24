@@ -11,7 +11,7 @@ $query = "SELECT * FROM class_show ORDER BY created_at DESC LIMIT 2";
 $result = mysqli_query($conn, $query);
 // Check if query was successful and has data
  if ($result && mysqli_num_rows($result) > 0):
- while ($latest_class = mysqli_fetch_assoc($result)):
+$latest_class = mysqli_fetch_assoc($result);
                                             
 // Calculate average marks
 $marks1 = (int)$latest_class['marks_judge1'];
@@ -274,18 +274,18 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script>
-        // You can add any dynamic functionality here if needed
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Class dashboard component loaded');
-            
-            // Add click event to all class links to track engagement
-            const classLinks = document.querySelectorAll('.class-link');
-            classLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    console.log('Class video link clicked: ' + this.href);
-                });
-            });
+// You can add any dynamic functionality here if needed
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Class dashboard component loaded');
+
+    // Add click event to all class links to track engagement
+    const classLinks = document.querySelectorAll('.class-link');
+    classLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            console.log('Class video link clicked: ' + this.href);
         });
-    </script>
+    });
+});
+</script>
 
 <?php require_once '../includes/footer.php'; ?>
