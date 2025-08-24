@@ -48,15 +48,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     // $message = "Photo is required.";
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Add Notebook Review</title>
+    <title>Add Teacher</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png">
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">

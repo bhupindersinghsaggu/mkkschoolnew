@@ -144,6 +144,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="page-wrapper">
         <div class="content mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="mb-0 mt-4">Teacher Management</h2>
+                <a href="./list_teacher.php" class="btn btn-success mt-4">
+                    <i class="bi bi-plus-lg"></i> List Teacehr
+                </a>
+            </div>
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header bg-success text-white">
