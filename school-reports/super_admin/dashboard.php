@@ -40,7 +40,7 @@ require_once '../includes/function.php';
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
-                           <h5 class="card-title mb-0">Total Teacher</h5>
+                            <h5 class="card-title mb-0">Total Teacher</h5>
                             <span class="revenue-icon bg-cyan-transparent text-cyan">
                                 <?php echo $total_teachers; ?>
                             </span>
@@ -59,12 +59,9 @@ require_once '../includes/function.php';
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
-                            <div>
-                                <h4 class="mb-1"><?php echo $notebook_count; ?> </h4>
-                                <p>Total Notebook Check </p>
-                            </div>
+                            <h5 class="card-title mb-0">Total Notebook Check </h5>
                             <span class="revenue-icon bg-teal-transparent text-teal">
-                               <?php echo $notebook_count; ?>
+                                <?php echo $notebook_count; ?>
                             </span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
