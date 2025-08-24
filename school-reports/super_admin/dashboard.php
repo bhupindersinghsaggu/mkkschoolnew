@@ -63,8 +63,8 @@ require_once '../includes/function.php';
                             </span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
-                            <p class="mb-0"><span class="fs-13 fw-bold text-success">+35%</span> vs Last Month</p>
-                            <a href="invoice-report.html" class="text-decoration-underline fs-13 fw-medium">View All</a>
+                            <button type="./add_notebook.php" class="btn btn-success btn-sm">Add New</button>
+                            <a href="./list_notebook.php" class="text-decoration-underline fs-13 fw-medium">View All</a>
                         </div>
                     </div>
                 </div>
@@ -1434,39 +1434,39 @@ require_once '../includes/function.php';
 <!-- /Main Wrapper -->
 
 <script>
-// Simple animation on scroll
-document.addEventListener('DOMContentLoaded', function() {
-    const animatedElements = document.querySelectorAll('.animate-fadeIn');
+    // Simple animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const animatedElements = document.querySelectorAll('.animate-fadeIn');
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.visibility = 'visible';
-                observer.unobserve(entry.target);
-            }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.visibility = 'visible';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
         });
-    }, {
-        threshold: 0.1
+
+        animatedElements.forEach(el => {
+            el.style.visibility = 'hidden';
+            observer.observe(el);
+        });
     });
 
-    animatedElements.forEach(el => {
-        el.style.visibility = 'hidden';
-        observer.observe(el);
+    // date on dashboard
+    // Add this script to display the current date
+    document.addEventListener('DOMContentLoaded', function() {
+        const now = new Date();
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
     });
-});
-
-// date on dashboard
-// Add this script to display the current date
-document.addEventListener('DOMContentLoaded', function() {
-    const now = new Date();
-    const options = {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    };
-    document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
-});
 </script>
 
 <?php require_once '../includes/footer.php'; ?>
