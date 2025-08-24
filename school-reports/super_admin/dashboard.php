@@ -93,7 +93,7 @@ require_once '../includes/function.php';
             <!-- /Expenses -->
 
             <!-- Returns -->
-            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <!-- <div class="col-xl-3 col-sm-6 col-12 d-flex">
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
@@ -111,7 +111,7 @@ require_once '../includes/function.php';
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="row">
             <div class="col-xxl-8 col-xl-7 col-sm-12 col-12 d-flex">
