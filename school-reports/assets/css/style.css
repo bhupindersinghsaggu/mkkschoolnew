@@ -92,7 +92,7 @@ h5,
 h6,
 .h6 {
   color: #212B36;
-  font-family: "Nunito", sans-serif;
+  font-family: "Lexend", sans-serif;;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -55454,4 +55454,8 @@ span.flatpickr-weekday {
     font-weight: 500;
    
     color: #165c9d;
+}
+
+.theme-color{
+  color: #3EB780 !important;
 }

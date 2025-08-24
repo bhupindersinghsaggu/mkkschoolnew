@@ -16,7 +16,7 @@ require_once '../includes/function.php';
                             <span class="title-icon bg-soft-info fs-16 me-2"><i class="ti ti-info-circle"></i></span>
                             <h4 class="card-title mb-0">Welcome Admin</h4>
                         </div>
-                        <h3 class="px-3"><?php echo getGreetingWithEmoji(); ?>!</h3>
+                        <h4 class="card-title px-3 theme-color"><?php echo getGreetingWithEmoji(); ?>!</h3>
                         <!-- <p class="fw-medium">You have <span class="text-primary fw-bold">200+</span> Orders, Today</p> -->
                     </div>
                 </div>
