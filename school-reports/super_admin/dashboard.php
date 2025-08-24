@@ -1,9 +1,14 @@
 <?php
 require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
-require_once '../includes/function.php';
 ?>
-
+<?php
+// Add this at the top of your existing dashboard.php
+$count_query = "SELECT COUNT(*) as total_teachers FROM users";
+$count_result = mysqli_query($conn, $count_query);
+$count_data = mysqli_fetch_assoc($count_result);
+$total_teachers = $count_data['total_teachers'];
+?>
 <div class="page-wrapper">
     <div class="content">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2">
