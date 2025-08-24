@@ -144,7 +144,7 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                     <th>Teacher ID</th>
                                     <th>Phone No.</th>
                                     <th>Subject</th>
-                                    <th>Type</th>
+                                    <!-- <th>Type</th> -->
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -172,9 +172,9 @@ $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                                 <?php endif; ?>
                                             </td>
                                             <td><?= htmlspecialchars($teacher['subject']) ?></td>
-                                            <td>
+                                            <!-- <td>
                                                 <span class="badge bg-info"><?= htmlspecialchars($teacher['teacher_type']) ?></span>
-                                            </td>
+                                            </td> -->
                                             <td class="action-btns">
                                                 <a href="edit_teacher.php?id=<?= $teacher['id'] ?>"
                                                     class="btn btn-success btn-sm" title="Edit">
