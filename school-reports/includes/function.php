@@ -85,45 +85,17 @@ function getPersonalizedGreeting($name = '') {
  * Returns greeting with emoji
  * @return string Greeting with appropriate emoji
  */
-<?php
-/**
- * Advanced time-based greeting with multiple options
- * @param string $type Type of greeting ('simple', 'personal', 'emoji', 'full')
- * @param string $name Name for personalized greeting
- * @return string Appropriate greeting
- */
-function getGreeting($type = 'simple', $name = '') {
+function getGreetingWithEmoji() {
     $current_hour = date('H');
-    $greeting = '';
     
-    // Determine base greeting
     if ($current_hour >= 5 && $current_hour < 12) {
-        $greeting = "Good Morning";
+        return "Good Morning ☀️";
     } elseif ($current_hour >= 12 && $current_hour < 17) {
-        $greeting = "Good Afternoon";
+        return "Good Afternoon 🌤️";
     } elseif ($current_hour >= 17 && $current_hour < 21) {
-        $greeting = "Good Evening";
+        return "Good Evening 🌙";
     } else {
-        $greeting = "Good Night";
-    }
-    
-    // Return based on type
-    switch ($type) {
-        case 'personal':
-            return $name ? "$greeting, $name!" : "$greeting!";
-            
-        case 'emoji':
-            $emoji = ($current_hour >= 5 && $current_hour < 12) ? '☀️' : 
-                    (($current_hour >= 12 && $current_hour < 17) ? '🌤️' : '🌙');
-            return "$greeting $emoji";
-            
-        case 'full':
-            $time = date('g:i A');
-            return "$greeting! It's $time";
-            
-        case 'simple':
-        default:
-            return $greeting;
+        return "Good Night 🌙";
     }
 }
 ?>
