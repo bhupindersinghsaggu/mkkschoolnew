@@ -113,172 +113,22 @@ require_once '../includes/function.php';
                 </div>
             </div> -->
         </div>
-        <div class="row">
-            <div class="col-xxl-8 col-xl-7 col-sm-12 col-12 d-flex">
-                <div class="card flex-fill">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <div class="d-inline-flex align-items-center">
-                            <span class="title-icon bg-soft-primary fs-16 me-2"><i
-                                    class="ti ti-shopping-cart"></i></span>
-                            <h5 class="card-title mb-0">Sales & Purchase</h5>
-                        </div>
-                        <ul class="nav btn-group custom-btn-group">
-                            <a class="btn btn-outline-light" href="javascript:void(0);">1D</a>
-                            <a class="btn btn-outline-light" href="javascript:void(0);">1W</a>
-                            <a class="btn btn-outline-light" href="javascript:void(0);">1M</a>
-                            <a class="btn btn-outline-light" href="javascript:void(0);">3M</a>
-                            <a class="btn btn-outline-light" href="javascript:void(0);">6M</a>
-                            <a class="btn btn-outline-light active" href="javascript:void(0);">1Y</a>
-                        </ul>
-                    </div>
-                    <div class="card-body pb-0">
-                        <div>
-                            <div class="d-flex align-items-center gap-2">
-                                <div class="border p-2 br-8">
-                                    <p class="d-inline-flex align-items-center mb-1"><i
-                                            class="ti ti-circle-filled fs-8 text-primary-300 me-1"></i>Total Purchase
-                                    </p>
-                                    <h4>3K</h4>
-                                </div>
-                                <div class="border p-2 br-8">
-                                    <p class="d-inline-flex align-items-center mb-1"><i
-                                            class="ti ti-circle-filled fs-8 text-primary me-1"></i>Total Sales</p>
-                                    <h4>1K</h4>
-                                </div>
-                            </div>
-                            <div id="sales-daychart"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Sales & Purchase -->
-
-            <!-- Top Selling Products -->
-            <div class="col-xxl-4 col-xl-5 d-flex">
-                <div class="card flex-fill">
-                    <div class="card-header">
-                        <div class="d-inline-flex align-items-center">
-                            <span class="title-icon bg-soft-info fs-16 me-2"><i class="ti ti-info-circle"></i></span>
-                            <h5 class="card-title mb-0">Overall Information</h5>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <div class="info-item border bg-light p-3 text-center">
-                                    <div class="mb-2 text-info fs-24">
-                                        <i class="ti ti-user-check"></i>
-                                    </div>
-                                    <p class="mb-1">Suppliers</p>
-                                    <h5>6987</h5>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="info-item border bg-light p-3 text-center">
-                                    <div class="mb-2 text-orange fs-24">
-                                        <i class="ti ti-users"></i>
-                                    </div>
-                                    <p class="mb-1">Customer</p>
-                                    <h5>4896</h5>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="info-item border bg-light p-3 text-center">
-                                    <div class="mb-2 text-teal fs-24">
-                                        <i class="ti ti-shopping-cart"></i>
-                                    </div>
-                                    <p class="mb-1">Orders</p>
-                                    <h5>487</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer pb-sm-0">
-                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-                            <h5>Customers Overview</h5>
-                            <div class="dropdown dropdown-wraper">
-                                <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="ti ti-calendar me-1"></i>Today
-                                </a>
-                                <ul class="dropdown-menu p-3">
-                                    <li>
-                                        <a href="javascript:void(0);" class="dropdown-item">Today</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="dropdown-item">Weekly</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="dropdown-item">Monthly</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row align-items-center">
-                            <div class="col-sm-5">
-                                <div id="customer-chart"></div>
-                            </div>
-                            <div class="col-sm-7">
-                                <div class="row gx-0">
-                                    <div class="col-sm-6">
-                                        <div class="text-center border-end">
-                                            <h2 class="mb-1">5.5K</h2>
-                                            <p class="text-orange mb-2">First Time</p>
-                                            <span
-                                                class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                    class="ti ti-arrow-up-left me-1"></i>25%</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="text-center">
-                                            <h2 class="mb-1">3.5K</h2>
-                                            <p class="text-teal mb-2">Return</p>
-                                            <span
-                                                class="badge badge-success badge-xs d-inline-flex align-items-center"><i
-                                                    class="ti ti-arrow-up-left me-1"></i>21%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="row">
-
             <!-- Top Selling Products -->
             <div class="col-xxl-4 col-md-6 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-inline-flex align-items-center">
                             <span class="title-icon bg-soft-pink fs-16 me-2"><i class="ti ti-box"></i></span>
-                            <h5 class="card-title mb-0">Top Selling Products</h5>
-                        </div>
-                        <div class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-sm btn-white"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="ti ti-calendar me-1"></i>Today
-                            </a>
-                            <ul class="dropdown-menu p-3">
-                                <li>
-                                    <a href="javascript:void(0);" class="dropdown-item">Today</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="dropdown-item">Weekly</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="dropdown-item">Monthly</a>
-                                </li>
-                            </ul>
+                            <h5 class="card-title mb-0">Latest Noteboom Checked</h5>
                         </div>
                     </div>
                     <div class="card-body sell-product">
                         <div class="d-flex align-items-center justify-content-between border-bottom">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-01.jpg" alt="img">
+                                    <img src="../assets/img/products/product-01.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Charger Cable - Lighting</a>
@@ -295,7 +145,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between border-bottom">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-16.jpg" alt="img">
+                                    <img src="../assets//img/products/product-16.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Yves Saint Eau De Parfum</a>
@@ -312,7 +162,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between border-bottom">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-03.jpg" alt="img">
+                                    <img src="../assets//img/products/product-03.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Apple Airpods 2</a></h6>
@@ -328,7 +178,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between border-bottom">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-04.jpg" alt="img">
+                                    <img src="../assets//img/products/product-04.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Vacuum Cleaner</a></h6>
@@ -344,7 +194,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-05.jpg" alt="img">
+                                    <img src="../assets//img/products/product-05.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Samsung Galaxy S21 Fe 5g</a>
@@ -378,7 +228,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-06.jpg" alt="img">
+                                    <img src="../assets//img/products/product-06.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Dell XPS 13</a></h6>
@@ -393,7 +243,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-07.jpg" alt="img">
+                                    <img src="../assets//img/products/product-07.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Vacuum Cleaner Robot</a></h6>
@@ -408,7 +258,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-08.jpg" alt="img">
+                                    <img src="../assets//img/products/product-08.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">KitchenAid Stand Mixer</a>
@@ -424,7 +274,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-09.jpg" alt="img">
+                                    <img src="../assets//img/products/product-09.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Levi's Trucker Jacket</a>
@@ -440,7 +290,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-0">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-10.jpg" alt="img">
+                                    <img src="../assets//img/products/product-10.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Lay's Classic</a></h6>
@@ -487,7 +337,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-11.jpg" alt="img">
+                                    <img src="../assets//img/products/product-11.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Apple Watch Series 9</a></h6>
@@ -506,7 +356,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-12.jpg" alt="img">
+                                    <img src="../assets//img/products/product-12.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Gold Bracelet</a></h6>
@@ -525,7 +375,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-13.jpg" alt="img">
+                                    <img src="../assets//img/products/product-13.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Parachute Down Duvet</a></h6>
@@ -544,7 +394,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-14.jpg" alt="img">
+                                    <img src="../assets//img/products/product-14.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">YETI Rambler Tumbler</a></h6>
@@ -563,7 +413,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-0">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg">
-                                    <img src="assets/img/products/product-15.jpg" alt="img">
+                                    <img src="../assets//img/products/product-15.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fw-bold mb-1"><a href="javascript:void(0);">Osmo Genius Starter Kit</a>
@@ -678,7 +528,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer16.jpg"
+                                                            <img src="../assets//img/customer/customer16.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -699,7 +549,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer17.jpg"
+                                                            <img src="../assets//img/customer/customer17.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -720,7 +570,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer18.jpg"
+                                                            <img src="../assets//img/customer/customer18.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -740,7 +590,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer15.jpg"
+                                                            <img src="../assets//img/customer/customer15.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -761,7 +611,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer13.jpg"
+                                                            <img src="../assets//img/customer/customer13.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -892,7 +742,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer16.jpg"
+                                                            <img src="../assets//img/customer/customer16.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -912,7 +762,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer17.jpg"
+                                                            <img src="../assets//img/customer/customer17.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -933,7 +783,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer18.jpg"
+                                                            <img src="../assets//img/customer/customer18.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -954,7 +804,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer15.jpg"
+                                                            <img src="../assets//img/customer/customer15.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -975,7 +825,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer13.jpg"
+                                                            <img src="../assets//img/customer/customer13.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -1091,7 +941,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer16.jpg"
+                                                            <img src="../assets//img/customer/customer16.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -1111,7 +961,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer17.jpg"
+                                                            <img src="../assets//img/customer/customer17.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -1132,7 +982,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer18.jpg"
+                                                            <img src="../assets//img/customer/customer18.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -1152,7 +1002,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer15.jpg"
+                                                            <img src="../assets//img/customer/customer15.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -1172,7 +1022,7 @@ require_once '../includes/function.php';
                                                 <td>
                                                     <div class="d-flex align-items-center file-name-icon">
                                                         <a href="javascript:void(0);" class="avatar avatar-md">
-                                                            <img src="assets/img/customer/customer13.jpg"
+                                                            <img src="../assets//img/customer/customer13.jpg"
                                                                 class="img-fluid" alt="img">
                                                         </a>
                                                         <div class="ms-2">
@@ -1217,7 +1067,7 @@ require_once '../includes/function.php';
                             class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg flex-shrink-0">
-                                    <img src="assets/img/customer/customer11.jpg" alt="img">
+                                    <img src="../assets//img/customer/customer11.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fs-14 fw-bold mb-1"><a href="javascript:void(0);">Carlos Curran</a></h6>
@@ -1236,7 +1086,7 @@ require_once '../includes/function.php';
                             class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2">
                             <div class="d-flex align-items-center">
                                 <a href="javascript:void(0);" class="avatar avatar-lg flex-shrink-0">
-                                    <img src="assets/img/customer/customer12.jpg" alt="img">
+                                    <img src="../assets//img/customer/customer12.jpg" alt="img">
                                 </a>
                                 <div class="ms-2">
                                     <h6 class="fs-14 fw-bold mb-1"><a href="javascript:void(0);">Stan Gaunter</a></h6>
