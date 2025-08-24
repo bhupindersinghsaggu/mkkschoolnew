@@ -19,7 +19,7 @@
                  <li class="submenu-open">
                      <!-- <h6 class="submenu-hdr">Teachers Forms</h6> -->
                      <ul>
-                         <li><a href="../super_admin/dashboard.php"><i class="fa-solid fa-gauge"></i><span> Dashboard</span></a></li>
+                         <li><a href="../super_admin/dashboard.php"><i class="fa-solid fa-gauge fs-16 me-2"></i><span> Dashboard</span></a></li>
 
                      </ul>
                  </li>
