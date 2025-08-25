@@ -117,15 +117,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="form-login authentication-check">
                                     <div class="row">
                                         <div class="col-12 d-flex align-items-center justify-content-between">
-                                            <!-- <div class="custom-control custom-checkbox">
+                                            <div class="custom-control custom-checkbox">
                                                 <label class="checkboxs ps-4 mb-0 pb-0 line-height-1 fs-16 text-gray-6">
                                                     <input type="checkbox" class="form-control">
-                                                    <span class="checkmarks"></span>Remember me
+                                                    <!-- <span class="checkmarks"></span>Remember me -->
                                                 </label>
                                             </div>
                                             <div class="text-end">
                                                 <a class="text-orange fs-16 fw-medium" href="forgot-password.html">Forgot Password?</a>
-                                            </div> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
