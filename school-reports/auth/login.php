@@ -134,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                             </form>
                             <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
-                                <p>All Rights Reserved Copyright By Dr. M.K.K. Arya Model School. Developed By Bhupinder Singh(IT Department)</p>
+                                <p>All Rights Reserved Copyright By Dr. M.K.K. Arya Model School. Developed (IT Department)</p>
                             </div>
                         </div>
                     </div>
