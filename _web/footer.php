@@ -211,152 +211,135 @@
 
        <a href="/booklist.php" class="icon mrg"
            style="background-color: var(--thm-base);"><i class="fa-solid fa-book mrg"></i> Book List </a>
-
-
        <!-- search-popup -->
+       <style>
+           /* Footer Styles */
+           .mobile-footer {
+               display: none;
+               position: fixed;
+               bottom: 0;
+               left: 0;
+               width: 100%;
+               background: linear-gradient(to right, #f8f9fa, #e9ecef);
+               padding: 15px 0;
+               box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+               z-index: 1000;
+           }
 
-           <style>
-               
+           .footer-icons {
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+           }
 
-               h1 {
-                   text-align: center;
-                   margin-bottom: 30px;
-                   font-weight: 600;
-                   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-               }
+           .footer-item {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               text-decoration: none;
+               color: #495057;
+               transition: all 0.3s ease;
+           }
 
-               p {
-                   line-height: 1.6;
-                   margin-bottom: 20px;
-               }
+           .footer-item:hover {
+               transform: translateY(-5px);
+               color: #007bff;
+           }
 
-               /* Footer Styles */
+           .footer-icon {
+               font-size: 22px;
+               margin-bottom: 5px;
+               background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               transition: all 0.3s ease;
+           }
+
+           .footer-item:hover .footer-icon {
+               transform: scale(1.2);
+           }
+
+           .footer-label {
+               font-size: 12px;
+               font-weight: 500;
+           }
+
+           /* Show footer only on mobile */
+           @media (max-width: 768px) {
                .mobile-footer {
-                   display: none;
-                   position: fixed;
-                   bottom: 0;
-                   left: 0;
-                   width: 100%;
-                   background: linear-gradient(to right, #f8f9fa, #e9ecef);
-                   padding: 15px 0;
-                   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
-                   z-index: 1000;
+                   display: block;
                }
+           }
 
-               .footer-icons {
-                   display: flex;
-                   justify-content: space-around;
-                   align-items: center;
-               }
+           /* Demo content */
+           .content {
+               margin-bottom: 80px;
+           }
 
-               .footer-item {
-                   display: flex;
-                   flex-direction: column;
-                   align-items: center;
-                   text-decoration: none;
-                   color: #495057;
-                   transition: all 0.3s ease;
-               }
+           .notification {
+               background: rgba(255, 255, 255, 0.15);
+               padding: 15px;
+               border-radius: 12px;
+               margin: 15px 0;
+           }
 
-               .footer-item:hover {
-                   transform: translateY(-5px);
-                   color: #007bff;
-               }
+           /* Instructions */
+           .instructions {
+               background: rgba(255, 255, 255, 0.2);
+               padding: 20px;
+               border-radius: 15px;
+               margin-top: 30px;
+           }
 
-               .footer-icon {
-                   font-size: 22px;
-                   margin-bottom: 5px;
-                   background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-                   -webkit-background-clip: text;
-                   -webkit-text-fill-color: transparent;
-                   transition: all 0.3s ease;
-               }
+           .instructions h2 {
+               margin-bottom: 10px;
+               font-size: 1.4rem;
+           }
 
-               .footer-item:hover .footer-icon {
-                   transform: scale(1.2);
-               }
+           .instructions ul {
+               padding-left: 20px;
+           }
 
-               .footer-label {
-                   font-size: 12px;
-                   font-weight: 500;
-               }
+           .instructions li {
+               margin-bottom: 8px;
+           }
+       </style>
+       <footer class="mobile-footer">
+           <div class="footer-icons">
+               <a href="#" class="footer-item">
+                   <i class="fa fa-th-large footer-icon"></i>
+                   <span class="footer-label">Dashboard</span>
+               </a>
+               <a href="#" class="footer-item">
+                 <i class="fa-solid fa-right-to-bracket"></i>
+                   <span class="footer-label">Staff Login</span>
+               </a>
+               <a href="#" class="footer-item">
+                   <i class="fa fa-network-wired footer-icon"></i>
+                   <span class="footer-label">ERP Login</span>
+               </a>
+               <a href="#" class="footer-item">
+                   <i class="fa fa-credit-card footer-icon"></i>
+                   <span class="footer-label">Pay Online</span>
+               </a>
+           </div>
+       </footer>
 
-               /* Show footer only on mobile */
-               @media (max-width: 768px) {
-                   .mobile-footer {
-                       display: block;
-                   }
-               }
-
-               /* Demo content */
-               .content {
-                   margin-bottom: 80px;
-               }
-
-               .notification {
-                   background: rgba(255, 255, 255, 0.15);
-                   padding: 15px;
-                   border-radius: 12px;
-                   margin: 15px 0;
-               }
-
-               /* Instructions */
-               .instructions {
-                   background: rgba(255, 255, 255, 0.2);
-                   padding: 20px;
-                   border-radius: 15px;
-                   margin-top: 30px;
-               }
-
-               .instructions h2 {
-                   margin-bottom: 10px;
-                   font-size: 1.4rem;
-               }
-
-               .instructions ul {
-                   padding-left: 20px;
-               }
-
-               .instructions li {
-                   margin-bottom: 8px;
-               }
-           </style>
-           <footer class="mobile-footer">
-               <div class="footer-icons">
-                   <a href="#" class="footer-item">
-                       <i class="fa fa-th-large footer-icon"></i>
-                       <span class="footer-label">Dashboard</span>
-                   </a>
-                   <a href="#" class="footer-item">
-                       <i class="fa fa-users footer-icon"></i>
-                       <span class="footer-label">Staff Login</span>
-                   </a>
-                   <a href="#" class="footer-item">
-                       <i class="fa fa-network-wired footer-icon"></i>
-                       <span class="footer-label">ERP Login</span>
-                   </a>
-                   <a href="#" class="footer-item">
-                       <i class="fa fa-credit-card footer-icon"></i>
-                       <span class="footer-label">Pay Online</span>
-                   </a>
-               </div>
-           </footer>
-
-           <script>
-               // Simple animation for icons when page loads
-               document.addEventListener('DOMContentLoaded', function() {
-                   const icons = document.querySelectorAll('.footer-icon');
-                   icons.forEach((icon, index) => {
+       <script>
+           // Simple animation for icons when page loads
+           document.addEventListener('DOMContentLoaded', function() {
+               const icons = document.querySelectorAll('.footer-icon');
+               icons.forEach((icon, index) => {
+                   setTimeout(() => {
+                       icon.style.opacity = '1';
+                       icon.style.transform = 'scale(1.1)';
                        setTimeout(() => {
-                           icon.style.opacity = '1';
-                           icon.style.transform = 'scale(1.1)';
-                           setTimeout(() => {
-                               icon.style.transform = 'scale(1)';
-                           }, 200);
-                       }, index * 100);
-                   });
+                           icon.style.transform = 'scale(1)';
+                       }, 200);
+                   }, index * 100);
                });
-           </script>
+           });
+       </script>
    </div>
    </body>
 
