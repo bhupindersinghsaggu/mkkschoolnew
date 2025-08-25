@@ -120,6 +120,98 @@ require_once '../includes/function.php';
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-inline-flex align-items-center">
+                            <span class="title-icon bg-soft-pink fs-16 me-2"><i class="ti ti-box"></i></span>
+                            <h5 class="card-title mb-0">Recent Notebook Check</h5>
+                        </div>
+                        <a href="./list_notebook.php" class="fs-13 fw-medium text-decoration-underline">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <?php
+                        $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 2";
+                        $notebook_result = mysqli_query($conn, $notebook_query);
+                        $recent_notebooks = [];
+                        if ($notebook_result && mysqli_num_rows($notebook_result) > 0) {
+                            while ($row = mysqli_fetch_assoc($notebook_result)) {
+                                $recent_notebooks[] = $row;
+                            }
+                        }
+                        ?>
+                        <?php if (!empty($recent_notebooks)):
+                            foreach ($recent_notebooks as $latest_notebook):
+                                // Get the document path
+                                $docPath = '';
+                                $hasDocument = false;
+
+                                if (!empty($latest_notebook['document'])) {
+                                    $docPath = '../uploads/teacher_documents/' . htmlspecialchars(basename($latest_notebook['document']));
+                                    $allowedPath = realpath('../uploads/teacher_documents/');
+                                    $currentPath = realpath($docPath);
+
+                                    if ($currentPath && strpos($currentPath, $allowedPath) === 0 && file_exists($currentPath)) {
+                                        $hasDocument = true;
+                                    }
+                                }
+                        ?>
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="ms-2">
+                                            <h6 class="fw-bold mb-2">
+                                                <?php echo htmlspecialchars($latest_notebook['teacher_name']); ?>
+                                            </h6>
+                                            <div class="fs-13 mb-2">Class/Section:
+                                                <?php echo htmlspecialchars($latest_notebook['class_section']); ?>
+                                            </div>
+                                            <div class="fs-13 mb-2">Rating:
+                                                <span class="revenue-icon bg-cyan-transparent text-cyan value">
+                                                    <?php echo htmlspecialchars($latest_notebook['overall_rating']); ?>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <p class="fs-13 mb-2">
+                                            <i class="ti ti-calendar theme-color"></i>
+                                            <?php echo htmlspecialchars($latest_notebook['eval_date']); ?>
+                                        </p>
+                                        <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
+                                            <h6 class="text-white fw-medium">
+                                                <?php echo htmlspecialchars($latest_notebook['subject']); ?>
+                                            </h6>
+                                        </span>
+                                        <br>
+                                        <?php if ($hasDocument):
+                                            $fileExt = strtolower(pathinfo($currentPath, PATHINFO_EXTENSION));
+                                            $iconClass = [
+                                                'pdf' => 'fa-file-pdf',
+                                                'jpg' => 'fa-file-image',
+                                                'jpeg' => 'fa-file-image',
+                                                'png' => 'fa-file-image',
+                                                'doc' => 'fa-file-word',
+                                                'docx' => 'fa-file-word',
+                                            ][$fileExt] ?? 'fa-file';
+                                        ?>
+                                            <span class="info-value mb-2">
+                                                <a href="<?php echo $docPath; ?>" target="_blank" class="class-link">
+                                                    <i class="fas <?php echo $iconClass; ?>"></i> View Report
+                                                </a>
+                                            </span>
+                                        <?php else: ?>
+                                            <span class="badge bg-secondary">No report</span>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <hr>
+                            <?php endforeach;
+                        else: ?>
+                            <p class="text-muted">No notebook checks found.</p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-md-6 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
+                        <div class="d-inline-flex align-items-center">
                             <span class="title-icon bg-soft-danger fs-16 me-2"><i
                                     class="fa-solid fa-circle-user"></i></span>
                             <h5 class="card-title mb-0">Latest Teacher Added</h5>
@@ -222,112 +314,13 @@ require_once '../includes/function.php';
                     </div>
                 </div>
             </div>
-            <div class="col-xxl-4 col-md-6 d-flex">
-                <div class="card flex-fill">
-                    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
-                        <div class="d-inline-flex align-items-center">
-                            <span class="title-icon bg-soft-pink fs-16 me-2"><i class="ti ti-box"></i></span>
-                            <h5 class="card-title mb-0">Recent Notebook Check</h5>
-                        </div>
-                        <a href="./list_notebook.php" class="fs-13 fw-medium text-decoration-underline">View All</a>
-                    </div>
-                    <div class="card-body">
-                        <?php
-                        $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 2";
-                        $notebook_result = mysqli_query($conn, $notebook_query);
-                        $recent_notebooks = [];
-                        if ($notebook_result && mysqli_num_rows($notebook_result) > 0) {
-                            while ($row = mysqli_fetch_assoc($notebook_result)) {
-                                $recent_notebooks[] = $row;
-                            }
-                        }
-                        ?>
-                        <?php if (!empty($recent_notebooks)):
-                            foreach ($recent_notebooks as $latest_notebook):
-                                // Get the document path
-                                $docPath = '';
-                                $hasDocument = false;
-
-                                if (!empty($latest_notebook['document'])) {
-                                    $docPath = '../uploads/teacher_documents/' . htmlspecialchars(basename($latest_notebook['document']));
-                                    $allowedPath = realpath('../uploads/teacher_documents/');
-                                    $currentPath = realpath($docPath);
-
-                                    if ($currentPath && strpos($currentPath, $allowedPath) === 0 && file_exists($currentPath)) {
-                                        $hasDocument = true;
-                                    }
-                                }
-                        ?>
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <div class="ms-2">
-                                            <h6 class="fw-bold mb-2">
-                                                <?php echo htmlspecialchars($latest_notebook['teacher_name']); ?>
-                                            </h6>
-                                            <div class="fs-13 mb-2">Class/Section:
-                                                <?php echo htmlspecialchars($latest_notebook['class_section']); ?>
-                                            </div>
-                                            <div class="fs-13 mb-2">Rating:
-                                                <span class="revenue-icon bg-cyan-transparent text-cyan value">
-                                                    <?php echo htmlspecialchars($latest_notebook['overall_rating']); ?>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-end">
-                                        <p class="fs-13 mb-2">
-                                            <i class="ti ti-calendar theme-color"></i>
-                                            <?php echo htmlspecialchars($latest_notebook['eval_date']); ?>
-                                        </p>
-                                        <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
-                                            <h6 class="text-white fw-medium">
-                                                <?php echo htmlspecialchars($latest_notebook['subject']); ?>
-                                            </h6>
-                                        </span>
-                                        <br>
-                                        <?php if ($hasDocument):
-                                            $fileExt = strtolower(pathinfo($currentPath, PATHINFO_EXTENSION));
-                                            $iconClass = [
-                                                'pdf' => 'fa-file-pdf',
-                                                'jpg' => 'fa-file-image',
-                                                'jpeg' => 'fa-file-image',
-                                                'png' => 'fa-file-image',
-                                                'doc' => 'fa-file-word',
-                                                'docx' => 'fa-file-word',
-                                            ][$fileExt] ?? 'fa-file';
-                                        ?>
-                                            <span class="info-value mb-2">
-                                                <a href="<?php echo $docPath; ?>" target="_blank" class="class-link">
-                                                    <i class="fas <?php echo $iconClass; ?>"></i> View Report
-                                                </a>
-                                            </span>
-                                        <?php else: ?>
-                                            <span class="badge bg-secondary">No report</span>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                                <hr>
-                            <?php endforeach;
-                        else: ?>
-                            <p class="text-muted">No notebook checks found.</p>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
         </div>
-
     </div>
     <div class="copyright-footer d-flex align-items-center justify-content-between border-top bg-white gap-3 flex-wrap">
         <p class="fs-13 text-gray-9 mb-0">Designed & Developed By <span class="theme-color">Bhupinder Singh (IT
                 Department)</p>
     </div>
 </div>
-</div>
-
-
-
-<!-- /Main Wrapper -->
-
 <script>
     // Simple animation on scroll
     document.addEventListener('DOMContentLoaded', function() {
