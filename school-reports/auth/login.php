@@ -580,9 +580,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                             </form>
                             <div class="container">
-                                <h1>Enhanced Copyright Statement</h1>
-                                <p>This is a demonstration of a visually enhanced copyright statement for your login page.</p>
-
                                 <div class="copyright-container">
                                     <div class="copyright-content">
                                         <div class="school-logo">
@@ -594,9 +591,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             <span>All Rights Reserved Copyright By</span>
                                             <span class="school-name">Dr. M.K.K. Arya Model School</span>
                                         </div>
-
                                         <div class="divider"></div>
-
                                         <div class="developed-by">
                                             <span>Developed By</span>
                                             <i class="fas fa-laptop-code it-icon"></i>
@@ -607,33 +602,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             <p>© 2023 Dr. M.K.K. Arya Model School. All rights reserved.</p>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div style="margin-top: 30px; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
-                                    <h3>Implementation Code</h3>
-                                    <p style="font-family: monospace; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 5px;">
-                                        &lt;div class="copyright-container"&gt;<br>
-                                        &nbsp;&nbsp;&lt;div class="copyright-content"&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="school-logo"&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="fas fa-school"&gt;&lt;/i&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="copyright-text"&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="far fa-copyright copyright-icon"&gt;&lt;/i&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;All Rights Reserved Copyright By&lt;/span&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="school-name"&gt;Dr. M.K.K. Arya Model School&lt;/span&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="divider"&gt;&lt;/div&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="developed-by"&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Developed By&lt;/span&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="fas fa-laptop-code it-icon"&gt;&lt;/i&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Bhupinder Singh (IT Department)&lt;/span&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="copyright-notice"&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;© 2023 Dr. M.K.K. Arya Model School. All rights reserved.&lt;/p&gt;<br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-                                        &nbsp;&nbsp;&lt;/div&gt;<br>
-                                        &lt;/div&gt;
-                                    </p>
                                 </div>
                             </div>
 
