@@ -110,9 +110,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .copyright-container {
            
             color: #495057;
-           
-           
-          
             margin-top: 40px;
             position: relative;
             overflow: hidden;
