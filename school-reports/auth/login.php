@@ -114,12 +114,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        .login-container {
+        /* .login-container {
             width: 100%;
             max-width: 430px;
             margin: 0 auto;
             animation: fadeIn 0.8s ease-in-out;
-        }
+        } */
 
         @keyframes fadeIn {
             from {
