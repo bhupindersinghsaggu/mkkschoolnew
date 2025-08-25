@@ -283,8 +283,9 @@ require_once '../includes/function.php';
 
                                 </div>
                             </div>
-
-                            fsdbfdskl
+                            <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>" class="btn btn-secondary me-2 logout-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         <?php endif; ?>
                     </div>
                 </div>
