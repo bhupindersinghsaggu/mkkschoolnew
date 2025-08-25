@@ -136,8 +136,8 @@ require_once '../includes/function.php';
                                             <h6 class="fw-bold mb-2">
                                                 <?php echo htmlspecialchars($latest_notebook['teacher_name']); ?>
                                             </h6>
-                                            <div class="fs-13 mb-2">Class/Section
-                                                <?php echo htmlspecialchars($latest_notebook['class_section']); ?>
+                                            <div class="fs-13 mb-2">Class/Section:
+                                          <strong><?php echo htmlspecialchars($latest_notebook['class_section']); ?></strong>
                                             </div>
                                             <div class="fs-13 mb-2">Notebook Checked
                                                 <span class="revenue-icon bg-cyan-transparent text-cyan value">
