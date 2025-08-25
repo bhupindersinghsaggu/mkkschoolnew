@@ -307,19 +307,19 @@
        <footer class="mobile-footer">
            <div class="footer-icons">
                <a href="#" class="footer-item">
-                   <i class="fa fa-th-large footer-icon"></i>
+                   <i class="fa-solid fa-phone"></i>
                    <span class="footer-label">Dashboard</span>
                </a>
                <a href="#" class="footer-item">
-                 <i class="fa-solid fa-right-to-bracket"></i>
+                   <i class="fa-solid fa-right-to-bracket"></i>
                    <span class="footer-label">Staff Login</span>
                </a>
                <a href="#" class="footer-item">
-                   <i class="fa fa-network-wired footer-icon"></i>
+                   <i class="fa-solid fa-paper-plane"></i>
                    <span class="footer-label">ERP Login</span>
                </a>
                <a href="#" class="footer-item">
-                   <i class="fa fa-credit-card footer-icon"></i>
+                   <i class="fa-solid fa-credit-card"></i>
                    <span class="footer-label">Pay Online</span>
                </a>
            </div>
