@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         .copyright-text span {
-            margin: 0 2px;
+            margin: 0 4px;
         }
 
         .school-name {
