@@ -262,14 +262,14 @@ require_once '../includes/function.php';
                                     </p>
                                     <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
                                         <h6 class="text-white fw-medium">
-                                            <?php echo htmlspecialchars($latest_notebook['topic']); ?>
+                                            <?php echo htmlspecialchars($latest_notebook['subject']); ?>
                                         </h6>
                                     </span>
                                     <br>
                                     <span class="info-value mb-2">
-                                        <a href="<?php echo htmlspecialchars($latest_notebook['video_link']); ?>"
+                                        <a href="<?php echo htmlspecialchars($latest_notebook['$docPath']); ?>"
                                             target="_blank" class="class-link">
-                                            <i class="fas fa-external-link-alt"></i> Watch Show
+                                            <i class="fas fa-external-link-alt"></i> View Report
                                         </a>
                                     </span>
                                 </div>
