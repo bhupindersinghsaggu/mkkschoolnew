@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             <div class="custom-control custom-checkbox">
                                                 <label class="checkboxs ps-4 mb-0 pb-0 line-height-1 fs-16 text-gray-6">
                                                     <input type="checkbox" class="form-control">
-                                                    <!-- <span class="checkmarks"></span>Remember me -->
+                                                    <span class="checkmarks"></span>Remember me
                                                 </label>
                                             </div>
                                             <div class="text-end">
