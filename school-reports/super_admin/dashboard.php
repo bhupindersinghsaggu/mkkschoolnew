@@ -92,28 +92,6 @@ require_once '../includes/function.php';
                     </div>
                 </div>
             </div>
-            <!-- /Expenses -->
-
-            <!-- Returns -->
-            <!-- <div class="col-xl-3 col-sm-6 col-12 d-flex">
-                <div class="card revenue-widget flex-fill">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
-                            <div>
-                                <h4 class="mb-2">$78,458,798</h4>
-                                <p>Total Payment Returns</p>
-                            </div>
-                            <span class="revenue-icon bg-indigo-transparent text-indigo">
-                                <i class="ti ti-hash fs-16"></i>
-                            </span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="mb-0"><span class="fs-13 fw-bold text-danger">-20%</span> vs Last Month</p>
-                            <a href="sales-report.html" class="text-decoration-underline fs-13 fw-medium">View All</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
         <div class="row">
             <div class="col-xxl-4 col-md-6 d-flex">
@@ -151,19 +129,19 @@ require_once '../includes/function.php';
                                         $hasDocument = true;
                                     }
                                 }
-                        ?>
+                              ?>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="d-flex align-items-center">
                                         <div class="ms-2">
                                             <h6 class="fw-bold mb-2">
                                                 <?php echo htmlspecialchars($latest_notebook['teacher_name']); ?>
                                             </h6>
-                                            <div class="fs-13 mb-2">Class/Section:
+                                            <div class="fs-13 mb-2">Class/Section
                                                 <?php echo htmlspecialchars($latest_notebook['class_section']); ?>
                                             </div>
-                                            <div class="fs-13 mb-2">Rating:
+                                            <div class="fs-13 mb-2">Notebook Checked
                                                 <span class="revenue-icon bg-cyan-transparent text-cyan value">
-                                                    <?php echo htmlspecialchars($latest_notebook['overall_rating']); ?>
+                                                    <?php echo htmlspecialchars($latest_notebook['notebooks_checked']); ?>
                                                 </span>
                                             </div>
                                         </div>
