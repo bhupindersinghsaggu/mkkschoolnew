@@ -155,9 +155,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             justify-content: center;
         }
 
-        .copyright-text span {
+        /* .copyright-text span {
             margin: 0 5px;
-        }
+        } */
 
         .school-name {
             color: #6938EF;
@@ -572,9 +572,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="copyright-container">
                                 <div class="copyright-text" style="opacity: 1; transform: translateY(0px);">
                                     <i class="far fa-copyright copyright-icon"></i>
-                                    <span>Copyright By</span>
-                                    <span class="school-name">Dr. M.K.K. Arya Model School</span>
-                                    <span>Developed By</span>
+                                    <span> Copyright By </span>
+                                    <span class="school-name"> Dr. M.K.K. Arya Model School</span>
+                                    <span> Developed By </span>
                                     <i class="fas fa-laptop-code it-icon"></i>
                                     <span> (IT Department)</span>
                                 </div>
