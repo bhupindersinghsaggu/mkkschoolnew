@@ -26,7 +26,7 @@ $average_marks = ($marks1 + $marks2) / 2;
                     <div class="d-flex align-items-center">
                         <div class="d-inline-flex align-items-center">
                             <span class="title-icon bg-soft-info fs-16 me-2"><i class="ti ti-info-circle"></i></span>
-                            <h4 class="card-title mb-0">Welcome Admin</h4>
+                            <h4 class="card-title mb-0">Welcome </h4>
                         </div>
                         <h4 class="card-title px-2 theme-color"><?php echo getGreetingWithEmoji(); ?>!</h3>
                             <!-- <p class="fw-medium">You have <span class="text-primary fw-bold">200+</span> Orders, Today</p> -->
