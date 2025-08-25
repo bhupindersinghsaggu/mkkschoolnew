@@ -129,7 +129,7 @@ require_once '../includes/function.php';
                                         $hasDocument = true;
                                     }
                                 }
-                              ?>
+                        ?>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="d-flex align-items-center">
                                         <div class="ms-2">
@@ -137,7 +137,7 @@ require_once '../includes/function.php';
                                                 <?php echo htmlspecialchars($latest_notebook['teacher_name']); ?>
                                             </h6>
                                             <div class="fs-13 mb-2">Class/Section:
-                                          <strong><?php echo htmlspecialchars($latest_notebook['class_section']); ?></strong>
+                                                <strong><?php echo htmlspecialchars($latest_notebook['class_section']); ?></strong>
                                             </div>
                                             <div class="fs-13 mb-2">Notebook Checked
                                                 <span class="revenue-icon bg-cyan-transparent text-cyan value">
@@ -280,14 +280,8 @@ require_once '../includes/function.php';
                                         </h6>
                                     </span>
                                     <br>
-                                    
+
                                 </div>
-                                <span class="info-value mb-2">
-                                        <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>"
-                                            target="_blank" class="class-link">
-                                            <i class="fas fa-external-link-alt"></i> Watch Show
-                                        </a>
-                                    </span>
                             </div>
                         <?php endif; ?>
                     </div>
