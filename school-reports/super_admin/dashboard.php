@@ -205,7 +205,7 @@ $average_marks = ($marks1 + $marks2) / 2;
                             </div>
                             <div class="text-end">
                                 <p class="fs-13 mb-2">
-                                   <i class="ti ti-calendar"></i>  <?php echo htmlspecialchars($latest_class['eval_date']); ?>
+                                   <i class="ti ti-calendar theme-color"></i>  <?php echo htmlspecialchars($latest_class['eval_date']); ?>
                                 </p>
                                 <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
                                     <h6 class="text-white fw-medium">
