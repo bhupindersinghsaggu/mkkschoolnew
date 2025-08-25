@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <button type="submit" class="btn btn-primary w-100">Sign In</button>
                                 </div>
                             </form>
-                            <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
+                            <div class="my-4 d-flex justify-content-center align-items-center copyright-text d-none-md">
                                 <p>Copyright © MKK School. Developed By Bhupinder Singh (IT Department)</p>
                             </div>
                         </div>
