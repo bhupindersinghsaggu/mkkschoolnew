@@ -581,10 +581,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </form>
                             <div class="copyright-container">
                                 <div class="copyright-content">
-                                    <div class="school-logo">
-                                        <i class="fas fa-school"></i>
-                                    </div>
-
                                     <div class="copyright-text" style="opacity: 1; transform: translateY(0px);">
                                         <i class="far fa-copyright copyright-icon"></i>
                                         <span>All Rights Reserved Copyright By</span>
@@ -594,11 +590,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <div class="developed-by" style="opacity: 1; transform: translateY(0px);">
                                         <span>Developed By</span>
                                         <i class="fas fa-laptop-code it-icon"></i>
-                                        <span>Bhupinder Singh (IT Department)</span>
-                                    </div>
-
-                                    <div class="copyright-notice">
-                                        <p>© 2023 Dr. M.K.K. Arya Model School. All rights reserved.</p>
+                                        <span> (IT Department)</span>
                                     </div>
                                 </div>
                             </div>
