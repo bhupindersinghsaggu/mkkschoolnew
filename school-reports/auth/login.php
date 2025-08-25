@@ -576,7 +576,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                 </div>
                                 <div class="form-login">
-                                    <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                                    <button type="submit" class="btn btn-success w-100">Sign In</button>
                                 </div>
                             </form>
                             <div class="copyright-container">
