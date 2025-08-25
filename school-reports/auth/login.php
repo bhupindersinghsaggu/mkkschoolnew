@@ -47,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <head>
     <title>Login</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- For IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -102,19 +102,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label class="form-label">Username <span class="text-danger"> *</span></label>
                                     <div class="input-group">
                                         <input type="text" name="username" value="" class="form-control border-end-0">
-                                        <!-- <span class="input-group-text border-start-0">
+                                        <span class="input-group-text border-start-0">
                                             <i class="ti ti-mail"></i>
-                                        </span> -->
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Password <span class="text-danger"> *</span></label>
                                     <div class="pass-group">
                                         <input type="password" name="password" class="pass-input form-control">
-                                        <!-- <span class="ti toggle-password ti-eye-off text-gray-9"></span> -->
+                                        <span class="ti toggle-password ti-eye-off text-gray-9"></span>
                                     </div>
                                 </div>
-                                <!-- <div class="form-login authentication-check">
+                                <div class="form-login authentication-check">
                                     <div class="row">
                                         <div class="col-12 d-flex align-items-center justify-content-between">
                                             <div class="custom-control custom-checkbox">
@@ -128,13 +128,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                                 <div class="form-login">
                                     <button type="submit" class="btn btn-primary w-100">Sign In</button>
                                 </div>
                             </form>
-                            <div class="my-4 d-flex justify-content-center align-items-center copyright-text d-none-md">
-                                <p>Developed By Bhupinder Singh (IT Department)</p>
+                            <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
+                                <p>Copyright © MKK School. Developed By Bhupinder Singh (IT Department)</p>
                             </div>
                         </div>
                     </div>
