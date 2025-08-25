@@ -88,6 +88,171 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             --danger-color: #f72585;
         }
 
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .copyright-container {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            color: #495057;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .copyright-container:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 6s infinite linear;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        .copyright-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .copyright-text {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .copyright-text span {
+            margin: 0 5px;
+        }
+
+        .school-name {
+            color: #4361ee;
+            font-weight: 700;
+        }
+
+        .developed-by {
+            font-style: italic;
+            color: #6c757d;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .copyright-icon {
+            margin-right: 10px;
+            color: #4361ee;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .it-icon {
+            color: #4361ee;
+            margin: 0 8px;
+            animation: rotate 8s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .divider {
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #dee2e6, transparent);
+            margin: 15px 0;
+        }
+
+        .copyright-notice {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+
+        .school-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+
+            .copyright-text,
+            .developed-by {
+                flex-direction: column;
+            }
+
+            .copyright-text span,
+            .developed-by span {
+                margin: 3px 0;
+            }
+        }
+
         /* body {
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
             background-size: 400% 400%;
@@ -132,7 +297,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 transform: translateY(0);
             }
         }
-/* 
+
+        /* 
         .login-wrapper {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
@@ -413,9 +579,77 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <button type="submit" class="btn btn-primary w-100">Sign In</button>
                                 </div>
                             </form>
-                            <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
-                                <p>All Rights Reserved Copyright By Dr. M.K.K. Arya Model School. Developed (IT Department)</p>
+                            <div class="container">
+                                <h1>Enhanced Copyright Statement</h1>
+                                <p>This is a demonstration of a visually enhanced copyright statement for your login page.</p>
+
+                                <div class="copyright-container">
+                                    <div class="copyright-content">
+                                        <div class="school-logo">
+                                            <i class="fas fa-school"></i>
+                                        </div>
+
+                                        <div class="copyright-text">
+                                            <i class="far fa-copyright copyright-icon"></i>
+                                            <span>All Rights Reserved Copyright By</span>
+                                            <span class="school-name">Dr. M.K.K. Arya Model School</span>
+                                        </div>
+
+                                        <div class="divider"></div>
+
+                                        <div class="developed-by">
+                                            <span>Developed By</span>
+                                            <i class="fas fa-laptop-code it-icon"></i>
+                                            <span>Bhupinder Singh (IT Department)</span>
+                                        </div>
+
+                                        <div class="copyright-notice">
+                                            <p>© 2023 Dr. M.K.K. Arya Model School. All rights reserved.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 30px; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                                    <h3>Implementation Code</h3>
+                                    <p style="font-family: monospace; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 5px;">
+                                        &lt;div class="copyright-container"&gt;<br>
+                                        &nbsp;&nbsp;&lt;div class="copyright-content"&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="school-logo"&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="fas fa-school"&gt;&lt;/i&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="copyright-text"&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="far fa-copyright copyright-icon"&gt;&lt;/i&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;All Rights Reserved Copyright By&lt;/span&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="school-name"&gt;Dr. M.K.K. Arya Model School&lt;/span&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="divider"&gt;&lt;/div&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="developed-by"&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Developed By&lt;/span&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="fas fa-laptop-code it-icon"&gt;&lt;/i&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Bhupinder Singh (IT Department)&lt;/span&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="copyright-notice"&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;© 2023 Dr. M.K.K. Arya Model School. All rights reserved.&lt;/p&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                                        &lt;/div&gt;
+                                    </p>
+                                </div>
                             </div>
+
+                            <script>
+                                // Simple animation control
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    const copyrightElements = document.querySelectorAll('.copyright-text, .developed-by');
+
+                                    copyrightElements.forEach((element, index) => {
+                                        setTimeout(() => {
+                                            element.style.opacity = '1';
+                                            element.style.transform = 'translateY(0)';
+                                        }, index * 300);
+                                    });
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
