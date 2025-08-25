@@ -39,3 +39,10 @@
     overflow-x: auto;
 }
 
+
+.card .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #212B36;
+}
