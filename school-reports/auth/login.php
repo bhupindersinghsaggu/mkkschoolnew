@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="login-content authent-content">
                         <div class="login-userset">
                             <div class="login-logo logo-normal">
-                                <img src="../assets/img/logo-small.png" alt="img">
+                                <img src="../assets/img/logo-small.png" alt="img" style="max-width: 100px;">
                             </div>
                             <!-- <h3>Dr. M.K.K. Arya Model School</h3> -->
                             <a href="login.php" class="login-logo logo-white">
