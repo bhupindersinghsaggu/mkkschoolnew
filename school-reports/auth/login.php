@@ -583,7 +583,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="copyright-content">
                                     <div class="copyright-text" style="opacity: 1; transform: translateY(0px);">
                                         <i class="far fa-copyright copyright-icon"></i>
-                                        <span>All Rights Reserved Copyright By</span>
+                                        <span>Copyright By</span>
                                         <span class="school-name">Dr. M.K.K. Arya Model School</span>
                                           <span>Developed By</span>
                                         <i class="fas fa-laptop-code it-icon"></i>
@@ -592,20 +592,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <div class="divider"></div>
                                 </div>
                             </div>
-
-                            <script>
-                                // Simple animation control
-                                document.addEventListener('DOMContentLoaded', function() {
-                                    const copyrightElements = document.querySelectorAll('.copyright-text, .developed-by');
-
-                                    copyrightElements.forEach((element, index) => {
-                                        setTimeout(() => {
-                                            element.style.opacity = '1';
-                                            element.style.transform = 'translateY(0)';
-                                        }, index * 300);
-                                    });
-                                });
-                            </script>
                         </div>
                     </div>
                 </div>
