@@ -579,28 +579,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <button type="submit" class="btn btn-primary w-100">Sign In</button>
                                 </div>
                             </form>
-                            <div class="container">
-                                <div class="copyright-container">
-                                    <div class="copyright-content">
-                                        <div class="school-logo">
-                                            <i class="fas fa-school"></i>
-                                        </div>
+                            <div class="copyright-container">
+                                <div class="copyright-content">
+                                    <div class="school-logo">
+                                        <i class="fas fa-school"></i>
+                                    </div>
 
-                                        <div class="copyright-text">
-                                            <i class="far fa-copyright copyright-icon"></i>
-                                            <span>All Rights Reserved Copyright By</span>
-                                            <span class="school-name">Dr. M.K.K. Arya Model School</span>
-                                        </div>
-                                        <div class="divider"></div>
-                                        <div class="developed-by">
-                                            <span>Developed By</span>
-                                            <i class="fas fa-laptop-code it-icon"></i>
-                                            <span>Bhupinder Singh (IT Department)</span>
-                                        </div>
+                                    <div class="copyright-text" style="opacity: 1; transform: translateY(0px);">
+                                        <i class="far fa-copyright copyright-icon"></i>
+                                        <span>All Rights Reserved Copyright By</span>
+                                        <span class="school-name">Dr. M.K.K. Arya Model School</span>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="developed-by" style="opacity: 1; transform: translateY(0px);">
+                                        <span>Developed By</span>
+                                        <i class="fas fa-laptop-code it-icon"></i>
+                                        <span>Bhupinder Singh (IT Department)</span>
+                                    </div>
 
-                                        <div class="copyright-notice">
-                                            <p>© 2023 Dr. M.K.K. Arya Model School. All rights reserved.</p>
-                                        </div>
+                                    <div class="copyright-notice">
+                                        <p>© 2023 Dr. M.K.K. Arya Model School. All rights reserved.</p>
                                     </div>
                                 </div>
                             </div>
