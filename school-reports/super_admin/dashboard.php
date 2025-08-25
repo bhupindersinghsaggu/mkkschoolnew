@@ -28,17 +28,17 @@ $average_marks = ($marks1 + $marks2) / 2;
                             <span class="title-icon bg-soft-info fs-16 me-2"><i class="ti ti-info-circle"></i></span>
                             <h4 class="card-title mb-0">Welcome </h4>
                         </div>
-                        <h4 class="card-title px-2 theme-color"><?php echo getGreetingWithEmoji(); ?>!</h3>
+                        <h4 class="card-title px-2 theme-color"><?php echo getGreetingWithEmoji(); ?></h3>
                             <!-- <p class="fw-medium">You have <span class="text-primary fw-bold">200+</span> Orders, Today</p> -->
                     </div>
                 </div>
             </div>
-            <div class="input-icon-start position-relative mb-3">
+            <!-- <div class="input-icon-start position-relative mb-3">
                 <span class="input-icon-addon fs-16 text-gray-9">
                     <i class="ti ti-calendar"></i>
                 </span>
                 <input type="text" class="form-control date-range bookingrange" placeholder="Search Product">
-            </div>
+            </div> -->
         </div>
         <!-- <div class="alert bg-orange-transparent alert-dismissible fade show mb-4">
             <div>
@@ -205,7 +205,7 @@ $average_marks = ($marks1 + $marks2) / 2;
                             </div>
                             <div class="text-end">
                                 <p class="fs-13 mb-2">
-                                    <?php echo htmlspecialchars($latest_class['eval_date']); ?>
+                                <i class="ti ti-calendar"></i>($latest_class['eval_date']); ?>
                                 </p>
                                 <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
                                     <h6 class="text-white fw-medium">
