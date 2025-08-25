@@ -369,9 +369,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="login-wrapper bg-img">
                     <div class="login-content authent-content">
                         <div class="login-userset">
-                            <div class="login-logo logo-normal">
+                            <!-- <div class="login-logo logo-normal">
                                 <img src="../assets/img/logo-small.png" alt="img" style="max-width: 100px;">
-                            </div>
+                            </div> -->
                             <!-- <h3>Dr. M.K.K. Arya Model School</h3> -->
                             <a href="login.php" class="login-logo logo-white">
                                 <img src="../assets/img/logo-white.svg" alt="Img">
