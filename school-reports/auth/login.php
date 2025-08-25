@@ -102,16 +102,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label class="form-label">Username <span class="text-danger"> *</span></label>
                                     <div class="input-group">
                                         <input type="text" name="username" value="" class="form-control border-end-0">
-                                        <span class="input-group-text border-start-0">
+                                        <!-- <span class="input-group-text border-start-0">
                                             <i class="ti ti-mail"></i>
-                                        </span>
+                                        </span> -->
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Password <span class="text-danger"> *</span></label>
                                     <div class="pass-group">
                                         <input type="password" name="password" class="pass-input form-control">
-                                        <span class="ti toggle-password ti-eye-off text-gray-9"></span>
+                                        <!-- <span class="ti toggle-password ti-eye-off text-gray-9"></span> -->
                                     </div>
                                 </div>
                                 <!-- <div class="form-login authentication-check">
