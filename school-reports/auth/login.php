@@ -580,16 +580,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                             </form>
                             <div class="copyright-container">
-                                <div class="copyright-content">
-                                    <div class="copyright-text" style="opacity: 1; transform: translateY(0px);">
-                                        <i class="far fa-copyright copyright-icon"></i>
-                                        <span>Copyright By</span>
-                                        <span class="school-name">Dr. M.K.K. Arya Model School</span>
-                                          <span>Developed By</span>
-                                        <i class="fas fa-laptop-code it-icon"></i>
-                                        <span> (IT Department)</span>
-                                    </div>
-                                    <div class="divider"></div>
+                                <div class="copyright-text" style="opacity: 1; transform: translateY(0px);">
+                                    <i class="far fa-copyright copyright-icon"></i>
+                                    <span>Copyright By</span>
+                                    <span class="school-name">Dr. M.K.K. Arya Model School</span>
+                                    <span>Developed By</span>
+                                    <i class="fas fa-laptop-code it-icon"></i>
+                                    <span> (IT Department)</span>
                                 </div>
                             </div>
                         </div>
