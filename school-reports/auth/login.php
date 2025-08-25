@@ -403,9 +403,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                     <span class="checkmarks"></span>Remember me
                                                 </label>
                                             </div>
-                                            <div class="text-end">
+                                            <!-- <div class="text-end">
                                                 <a class="text-orange fs-16 fw-medium" href="forgot-password.html">Forgot Password?</a>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
