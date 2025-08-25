@@ -339,11 +339,11 @@
     </style>
     <footer class="mobile-footer">
         <div class="footer-icons">
-            <a href="#" class="footer-item">
+            <a href="/booklist.php" class="footer-item">
                 <div class="footer-icon">
                     <i class="fas fa-th-large"></i>
                 </div>
-                <span class="footer-label">Dashboard</span>
+                <span class="footer-label">Book List</span>
             </a>
             <a href="#" class="footer-item">
                 <div class="footer-icon">
@@ -351,13 +351,13 @@
                 </div>
                 <span class="footer-label">Staff Login</span>
             </a>
-            <a href="#" class="footer-item">
+            <a href="https://curtina.in/MKK" class="footer-item">
                 <div class="footer-icon">
                     <i class="fas fa-network-wired"></i>
                 </div>
                 <span class="footer-label">ERP Login</span>
             </a>
-            <a href="#" class="footer-item">
+            <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="footer-item">
                 <div class="footer-icon">
                     <i class="fas fa-credit-card"></i>
                 </div>
