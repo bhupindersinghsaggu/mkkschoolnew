@@ -211,6 +211,7 @@
 
        <a href="/booklist.php" class="icon mrg"
            style="background-color: var(--thm-base);"><i class="fa-solid fa-book mrg"></i> Book List </a>
+   </div>
        <!-- search-popup -->
        <style>
            /* Footer Styles */
