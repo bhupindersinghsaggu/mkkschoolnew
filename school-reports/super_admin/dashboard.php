@@ -283,8 +283,8 @@ require_once '../includes/function.php';
 
                                 </div>
                             </div>
-                            <div class="d-flex justify-item-center">
-                                <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>" class="btn btn-secondary me-2 logout-link">
+                            <div class="d-flex justify-content-center">
+                                <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>" class="btn btn-secondary me-2 logout-link" style="width:100%; display:block;">
                                     <i class="fas fa-external-link-alt"></i> Watch Show
                                 </a>
                             </div>
