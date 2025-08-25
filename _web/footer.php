@@ -195,14 +195,274 @@
                    id="btnGoToTop" src="assets/images/ss.png" alt=""></a>
        </div>
    </div>
-   <div class="fixed-icon-section">
+   <!-- <div class="fixed-icon-section">
        <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg"
            style="background-color: var(--thm-base);"><i class="fa-regular fa-credit-card mrg"></i> Pay Online </a>
        <a href="https://curtina.in/MKK" class="icon mrg" style="background-color: #1a3250;"><i
                class="fa-solid fa-user mrg"></i> ERP Login </a>
        <a href="/booklist.php" class="icon mrg"
            style="background-color: var(--thm-base);"><i class="fa-solid fa-book mrg"></i> Book List </a>
-   </div>
+   </div> -->
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Footer with Font Awesome 6.5.2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer Styles */
+        .mobile-footer {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            padding: 15px 0;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        
+        .footer-icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .footer-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #495057;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+        
+        .footer-item:hover {
+            transform: translateY(-5px);
+            color: #007bff;
+        }
+        
+        .footer-icon {
+            font-size: 22px;
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .footer-item:hover .footer-icon {
+            transform: scale(1.2) rotate(5deg);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer-label {
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+        
+        /* Show footer only on mobile */
+        @media (max-width: 768px) {
+            .mobile-footer {
+                display: block;
+            }
+            
+            .desktop-message {
+                display: none;
+            }
+        }
+        
+        /* Demo content */
+        .content {
+            margin-bottom: 80px;
+        }
+        
+        .notification {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+        
+        /* Instructions */
+        .instructions {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .instructions h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .instructions ul {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        
+        /* Desktop message */
+        .desktop-message {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Version badge */
+        .version-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: white;
+            color: #6a11cb;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="version-badge">Font Awesome 6.5.2</div>
+    <h1>Mobile Dashboard</h1>
+    
+    <div class="container">
+        <div class="content">
+            <p>Welcome to your dashboard. This is a demo page showing how the footer with fancy icons will appear only on mobile devices.</p>
+            
+            <div class="notification">
+                <i class="fas fa-info-circle"></i> Resize your browser to a mobile viewport (less than 768px wide) to see the footer appear at the bottom.
+            </div>
+            
+            <p>You can navigate to different sections using the footer icons that will appear at the bottom on mobile devices.</p>
+        </div>
+    </div>
+    
+    <div class="container instructions">
+        <h2>About the Mobile Footer</h2>
+        <p>This responsive footer includes:</p>
+        <ul>
+            <li>Four navigation options: Dashboard, Staff Login, ERP Login, and Pay Online</li>
+            <li>Beautiful Font Awesome 6.5.2 icons with gradient colors</li>
+            <li>Smooth hover animations with rotation effects</li>
+            <li>Light background with subtle gradient</li>
+            <li>Visibility only on mobile devices</li>
+            <li>Circular icon backgrounds with shadow effects</li>
+        </ul>
+    </div>
+    
+    <div class="desktop-message">
+        <i class="fas fa-desktop fa-3x"></i>
+        <p>This footer is designed for mobile view only. Please resize your browser to see it.</p>
+    </div>
+    
+    <footer class="mobile-footer">
+        <div class="footer-icons">
+            <a href="#" class="footer-item">
+                <div class="footer-icon">
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <span class="footer-label">Dashboard</span>
+            </a>
+            <a href="#" class="footer-item">
+                <div class="footer-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <span class="footer-label">Staff Login</span>
+            </a>
+            <a href="#" class="footer-item">
+                <div class="footer-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <span class="footer-label">ERP Login</span>
+            </a>
+            <a href="#" class="footer-item">
+                <div class="footer-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <span class="footer-label">Pay Online</span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for icons when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const icons = document.querySelectorAll('.footer-icon');
+            icons.forEach((icon, index) => {
+                setTimeout(() => {
+                    icon.style.opacity = '1';
+                    icon.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        icon.style.transform = 'scale(1)';
+                    }, 200);
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
    </body>
 
    </html>
