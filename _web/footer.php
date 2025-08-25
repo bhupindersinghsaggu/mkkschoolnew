@@ -305,16 +305,16 @@
            }
        </style>
        <footer class="mobile-footer">
-           <div class="footer-icons">
-               <a href="#" class="footer-item">
+           <div class="footer-icons-home">
+               <a href="tel:01804004556" class="footer-item">
                    <i class="fa-solid fa-phone"></i>
-                   <span class="footer-label">Dashboard</span>
+                   <span class="footer-label">Call</span>
                </a>
-               <a href="#" class="footer-item">
+               <a href="https://mkkschool.com/school-reports/auth/login.php" class="footer-item">
                    <i class="fa-solid fa-right-to-bracket"></i>
                    <span class="footer-label">Staff Login</span>
                </a>
-               <a href="#" class="footer-item">
+               <a href="https://curtina.in/mkk" class="footer-item">
                    <i class="fa-solid fa-paper-plane"></i>
                    <span class="footer-label">ERP Login</span>
                </a>
