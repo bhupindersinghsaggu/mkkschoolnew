@@ -233,22 +233,25 @@ require_once '../includes/function.php';
                     </div>
                     <div class="card-body">
                         <?php
-                        $query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 2";
-                        $result = mysqli_query($conn, $query);
-                        // Check if query was successful and has data
-                        if ($result && mysqli_num_rows($result) > 0):
-                            $latest_notebook = mysqli_fetch_assoc($result);
-
+                  
+                            $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 2";
+                            $notebook_result = mysqli_query($conn, $notebook_query);
+                            $recent_notebooks = [];
+                            if ($notebook_result && mysqli_num_rows($notebook_result) > 0) {
+                                while ($row = mysqli_fetch_assoc($notebook_result)) {
+                                    $recent_notebooks[] = $row;
+                                }
+                            }
                            
                         ?>
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <div class="d-flex align-items-center">
                                     <div class="ms-2">
                                         <h6 class="fw-bold mb-2">
-                                            <?php echo htmlspecialchars($latest_notebook['teacher_name']); ?>
+                                            <?php echo htmlspecialchars($notebook_query['teacher_name']); ?>
                                         </h6>
                                         <div class="fs-13 mb-2">Class/Section:
-                                            <?php echo htmlspecialchars($latest_notebook['class_section']); ?>
+                                            <?php echo htmlspecialchars($notebook_query['class_section']); ?>
                                         </div>
                                         <div class="fs-13 mb-2">Average No:
                                             <span
@@ -258,16 +261,16 @@ require_once '../includes/function.php';
                                 </div>
                                 <div class="text-end">
                                     <p class="fs-13 mb-2">
-                                        <i class="ti ti-calendar theme-color"></i> <?php echo htmlspecialchars($latest_notebook['eval_date']); ?>
+                                        <i class="ti ti-calendar theme-color"></i> <?php echo htmlspecialchars($notebook_query['eval_date']); ?>
                                     </p>
                                     <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
                                         <h6 class="text-white fw-medium">
-                                            <?php echo htmlspecialchars($latest_notebook['subject']); ?>
+                                            <?php echo htmlspecialchars($notebook_query['subject']); ?>
                                         </h6>
                                     </span>
                                     <br>
                                     <span class="info-value mb-2">
-                                        <a href="<?php echo htmlspecialchars($latest_notebook['$docPath']); ?>"
+                                        <a href="<?php echo htmlspecialchars($notebook_query['$docPath']); ?>"
                                             target="_blank" class="class-link">
                                             <i class="fas fa-external-link-alt"></i> View Report
                                         </a>
