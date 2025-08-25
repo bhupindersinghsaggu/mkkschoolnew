@@ -48,7 +48,7 @@ $average_marks = ($marks1 + $marks2) / 2;
         </div> -->
         <div class="row">
             <!-- Profit -->
-            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="col-xl-4 col-sm-6 col-12 d-flex">
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
@@ -67,7 +67,7 @@ $average_marks = ($marks1 + $marks2) / 2;
             <!-- /Profit -->
 
             <!-- Invoice -->
-            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="col-xl-4 col-sm-6 col-12 d-flex">
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
@@ -86,7 +86,7 @@ $average_marks = ($marks1 + $marks2) / 2;
             <!-- /Invoice -->
 
             <!-- Expenses -->
-            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="col-xl-4 col-sm-6 col-12 d-flex">
                 <div class="card revenue-widget flex-fill">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
