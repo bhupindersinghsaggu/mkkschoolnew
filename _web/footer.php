@@ -345,7 +345,7 @@
                 </div>
                 <span class="footer-label">Book List</span>
             </a>
-            <a href="#" class="footer-item">
+            <a href="https://mkkschool.com/school-reports/auth/login.php" class="footer-item">
                 <div class="footer-icon">
                     <i class="fas fa-users"></i>
                 </div>
