@@ -203,54 +203,9 @@
        <a href="/booklist.php" class="icon mrg"
            style="background-color: var(--thm-base);"><i class="fa-solid fa-book mrg"></i> Book List </a>
    </div> -->
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Footer with Font Awesome 6.5.2</title>
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            margin-top: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
         /* Footer Styles */
         .mobile-footer {
             display: none;
@@ -382,41 +337,6 @@
             font-weight: bold;
         }
     </style>
-</head>
-<body>
-    <div class="version-badge">Font Awesome 6.5.2</div>
-    <h1>Mobile Dashboard</h1>
-    
-    <div class="container">
-        <div class="content">
-            <p>Welcome to your dashboard. This is a demo page showing how the footer with fancy icons will appear only on mobile devices.</p>
-            
-            <div class="notification">
-                <i class="fas fa-info-circle"></i> Resize your browser to a mobile viewport (less than 768px wide) to see the footer appear at the bottom.
-            </div>
-            
-            <p>You can navigate to different sections using the footer icons that will appear at the bottom on mobile devices.</p>
-        </div>
-    </div>
-    
-    <div class="container instructions">
-        <h2>About the Mobile Footer</h2>
-        <p>This responsive footer includes:</p>
-        <ul>
-            <li>Four navigation options: Dashboard, Staff Login, ERP Login, and Pay Online</li>
-            <li>Beautiful Font Awesome 6.5.2 icons with gradient colors</li>
-            <li>Smooth hover animations with rotation effects</li>
-            <li>Light background with subtle gradient</li>
-            <li>Visibility only on mobile devices</li>
-            <li>Circular icon backgrounds with shadow effects</li>
-        </ul>
-    </div>
-    
-    <div class="desktop-message">
-        <i class="fas fa-desktop fa-3x"></i>
-        <p>This footer is designed for mobile view only. Please resize your browser to see it.</p>
-    </div>
-    
     <footer class="mobile-footer">
         <div class="footer-icons">
             <a href="#" class="footer-item">
