@@ -178,7 +178,7 @@ $average_marks = ($marks1 + $marks2) / 2;
             <!-- /Low Stock Products -->
 
             <!-- Recent Sales -->
-            <div class="col-xxl-4 col-md-12 d-flex">
+              <div class="col-xxl-4 col-md-6 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-inline-flex align-items-center">
