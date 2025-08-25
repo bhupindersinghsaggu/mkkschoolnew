@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <style>
         /* Custom enhanced styles */
         /* :root {
-            --primary-color: #4361ee;
+            --primary-color: #6938EF;
             --secondary-color: #3f37c9;
             --accent-color: #4895ef;
             --light-color: #f8f9fa;
@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         .school-name {
-            color: #4361ee;
+            color: #6938EF;
             font-weight: 700;
         }
 
@@ -178,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         .copyright-icon {
             margin-right: 10px;
-            color: #4361ee;
+            color: #6938EF;
             animation: pulse 2s infinite;
         }
 
@@ -197,7 +197,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         .it-icon {
-            color: #4361ee;
+            color: #6938EF;
             margin: 0 8px;
             /* animation: rotate 8s infinite linear; */
         }
@@ -433,7 +433,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         .alert-danger {
-            background: rgba(247, 37, 133, 0.15);
+            background: #3EB780;
             color: var(--danger-color);
             border: none;
             border-radius: 10px;
