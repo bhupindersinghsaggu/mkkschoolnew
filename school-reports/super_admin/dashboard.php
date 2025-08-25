@@ -174,16 +174,6 @@ require_once '../includes/function.php';
                     </div>
                     <div class="card-body">
                         <?php
-                        $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 2";
-                        $notebook_result = mysqli_query($conn, $notebook_query);
-                        $recent_notebooks = [];
-                        if ($notebook_result && mysqli_num_rows($notebook_result) > 0) {
-                            while ($row = mysqli_fetch_assoc($notebook_result)) {
-                                $recent_notebooks[] = $row;
-                            }
-                        }
-                        ?>
-                        <?php
                         $query = "SELECT * FROM class_show ORDER BY created_at DESC LIMIT 2";
                         $result = mysqli_query($conn, $query);
                         // Check if query was successful and has data
@@ -242,6 +232,16 @@ require_once '../includes/function.php';
                         <a href="./list_notebook.php" class="fs-13 fw-medium text-decoration-underline">View All</a>
                     </div>
                     <div class="card-body">
+                        <?php
+                        $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 2";
+                        $notebook_result = mysqli_query($conn, $notebook_query);
+                        $recent_notebooks = [];
+                        if ($notebook_result && mysqli_num_rows($notebook_result) > 0) {
+                            while ($row = mysqli_fetch_assoc($notebook_result)) {
+                                $recent_notebooks[] = $row;
+                            }
+                        }
+                        ?>
                         <?php if (!empty($recent_notebooks)):
                             foreach ($recent_notebooks as $latest_notebook):
                                 // Get the document path
