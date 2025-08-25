@@ -168,18 +168,18 @@ require_once '../includes/function.php';
                                                 'docx' => 'fa-file-word',
                                             ][$fileExt] ?? 'fa-file';
                                         ?>
-                                            <span class="info-value mb-2">
+                                            <!-- <span class="info-value mb-2">
                                                 <a href="<?php echo $docPath; ?>" target="_blank" class="class-link">
                                                     <i class="fas <?php echo $iconClass; ?>"></i> View Report
                                                 </a>
-                                            </span>
+                                            </span> -->
                                         <?php else: ?>
                                             <span class="badge bg-secondary">No report</span>
                                         <?php endif; ?>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                <a href="<?php echo $docPath; ?>" class="btn btn-secondary me-2 logout-link" style="width:100%; display:block;">
+                                <a href="<?php echo $docPath; ?>"  target="_blank" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
                                     <i class="fas fa-external-link-alt"></i>View Report
                                 </a>
                             </div>
@@ -288,7 +288,7 @@ require_once '../includes/function.php';
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
-                                <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>" class="btn btn-secondary me-2 logout-link" style="width:100%; display:block;">
+                                <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
                                     <i class="fas fa-external-link-alt"></i> Watch Show
                                 </a>
                             </div>
