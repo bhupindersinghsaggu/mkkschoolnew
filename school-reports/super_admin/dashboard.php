@@ -280,13 +280,14 @@ require_once '../includes/function.php';
                                         </h6>
                                     </span>
                                     <br>
-                                    <span class="info-value mb-2">
+                                    
+                                </div>
+                                <span class="info-value mb-2">
                                         <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>"
                                             target="_blank" class="class-link">
                                             <i class="fas fa-external-link-alt"></i> Watch Show
                                         </a>
                                     </span>
-                                </div>
                             </div>
                         <?php endif; ?>
                     </div>
