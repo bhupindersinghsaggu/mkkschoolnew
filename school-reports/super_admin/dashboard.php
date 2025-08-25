@@ -222,10 +222,67 @@ require_once '../includes/function.php';
                     </div>
                 </div>
             </div>
+            <div class="col-xxl-4 col-md-6 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
+                        <div class="d-inline-flex align-items-center">
+                            <span class="title-icon bg-soft-pink fs-16 me-2"><i class="ti ti-box"></i></span>
+                            <h5 class="card-title mb-0">Recent Class Show</h5>
+                        </div>
+                        <a href="./list_class_show.php" class="fs-13 fw-medium text-decoration-underline">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <?php
+                        $query = "SELECT * FROM class_show ORDER BY created_at DESC LIMIT 2";
+                        $result = mysqli_query($conn, $query);
+                        // Check if query was successful and has data
+                        if ($result && mysqli_num_rows($result) > 0):
+                            $latest_class = mysqli_fetch_assoc($result);
 
+                            // Calculate average marks
+                            $marks1 = (int)$latest_class['marks_judge1'];
+                            $marks2 = (int)$latest_class['marks_judge2'];
+                            $average_marks = ($marks1 + $marks2) / 2;
+                        ?>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="ms-2">
+                                        <h6 class="fw-bold mb-2">
+                                            <?php echo htmlspecialchars($latest_class['teacher_name']); ?>
+                                        </h6>
+                                        <div class="fs-13 mb-2">Class/Section:
+                                            <?php echo htmlspecialchars($latest_class['class_section']); ?>
+                                        </div>
+                                        <div class="fs-13 mb-2">Average No:
+                                            <span
+                                                class="revenue-icon bg-cyan-transparent text-cyan value"><?php echo number_format($average_marks, 2); ?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <p class="fs-13 mb-2">
+                                        <i class="ti ti-calendar theme-color"></i> <?php echo htmlspecialchars($latest_class['eval_date']); ?>
+                                    </p>
+                                    <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
+                                        <h6 class="text-white fw-medium">
+                                            <?php echo htmlspecialchars($latest_class['topic']); ?>
+                                        </h6>
+                                    </span>
+                                    <br>
+                                    <span class="info-value mb-2">
+                                        <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>"
+                                            target="_blank" class="class-link">
+                                            <i class="fas fa-external-link-alt"></i> Watch Show
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div
-            class="copyright-footer d-flex align-items-center justify-content-between border-top bg-white gap-3 flex-wrap">
+        <div class="copyright-footer d-flex align-items-center justify-content-between border-top bg-white gap-3 flex-wrap">
             <p class="fs-13 text-gray-9 mb-0">Designed & Developed By <span class="theme-color">Bhupinder Singh (IT
                     Department)</p>
         </div>
