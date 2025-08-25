@@ -203,144 +203,28 @@
        <!-- <a href="#home" class="icon"><i class="fas fa-home"></i></a> -->
        <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="icon mrg"
            style="background-color: var(--thm-base);"><i class="fa-regular fa-credit-card mrg"></i> Pay Online </a>
-
+           
        <!-- <a href="https://wa.me/7988968776?text=I%20want%20to%20know%20more%20about%20mkk%20school"
            class="icon whatapp-icon"> <i class="fa-brands fa-whatsapp"></i></a> -->
        <a href="https://curtina.in/MKK" class="icon mrg" style="background-color: #1a3250;"><i
                class="fa-solid fa-user mrg"></i> ERP Login </a>
-
-       <a href="/booklist.php" class="icon mrg"
-           style="background-color: var(--thm-base);"><i class="fa-solid fa-book mrg"></i> Book List </a>
-   </div>
-       <!-- search-popup -->
-       <style>
-           /* Footer Styles */
-           .mobile-footer {
-               display: none;
-               position: fixed;
-               bottom: 0;
-               left: 0;
-               width: 100%;
-               background: linear-gradient(to right, #f8f9fa, #e9ecef);
-               padding: 15px 0;
-               box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
-               z-index: 1000;
-           }
-
-           .footer-icons {
-               display: flex;
-               justify-content: space-around;
-               align-items: center;
-           }
-
-           .footer-item {
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               text-decoration: none;
-               color: #495057;
-               transition: all 0.3s ease;
-           }
-
-           .footer-item:hover {
-               transform: translateY(-5px);
-               color: #007bff;
-           }
-
-           .footer-icon {
-               font-size: 22px;
-               margin-bottom: 5px;
-               background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-               -webkit-background-clip: text;
-               -webkit-text-fill-color: transparent;
-               transition: all 0.3s ease;
-           }
-
-           .footer-item:hover .footer-icon {
-               transform: scale(1.2);
-           }
-
-           .footer-label {
-               font-size: 12px;
-               font-weight: 500;
-           }
-
-           /* Show footer only on mobile */
-           @media (max-width: 768px) {
-               .mobile-footer {
-                   display: block;
-               }
-           }
-
-           /* Demo content */
-           .content {
-               margin-bottom: 80px;
-           }
-
-           .notification {
-               background: rgba(255, 255, 255, 0.15);
-               padding: 15px;
-               border-radius: 12px;
-               margin: 15px 0;
-           }
-
-           /* Instructions */
-           .instructions {
-               background: rgba(255, 255, 255, 0.2);
-               padding: 20px;
-               border-radius: 15px;
-               margin-top: 30px;
-           }
-
-           .instructions h2 {
-               margin-bottom: 10px;
-               font-size: 1.4rem;
-           }
-
-           .instructions ul {
-               padding-left: 20px;
-           }
-
-           .instructions li {
-               margin-bottom: 8px;
-           }
-       </style>
-       <footer class="mobile-footer">
-           <div class="footer-icons-home">
-               <a href="tel:01804004556" class="footer-item">
-                   <i class="fa-solid fa-phone"></i>
-                   <span class="footer-label">Call</span>
-               </a>
-               <a href="https://mkkschool.com/school-reports/auth/login.php" class="footer-item">
-                   <i class="fa-solid fa-right-to-bracket"></i>
-                   <span class="footer-label">Staff Login</span>
-               </a>
-               <a href="https://curtina.in/mkk" class="footer-item">
-                   <i class="fa-solid fa-paper-plane"></i>
-                   <span class="footer-label">ERP Login</span>
-               </a>
-               <a href="#" class="footer-item">
-                   <i class="fa-solid fa-credit-card"></i>
-                   <span class="footer-label">Pay Online</span>
-               </a>
+      
+               <a href="/booklist.php" class="icon mrg"
+               style="background-color: var(--thm-base);"><i class="fa-solid fa-book mrg"></i> Book List </a>
+       <!-- <a class="" href="https://curtina.in/mkk" target=_blank>
+           <div class="erp">
+               ERP Login
            </div>
-       </footer>
+       </a> -->
 
-       <script>
-           // Simple animation for icons when page loads
-           document.addEventListener('DOMContentLoaded', function() {
-               const icons = document.querySelectorAll('.footer-icon');
-               icons.forEach((icon, index) => {
-                   setTimeout(() => {
-                       icon.style.opacity = '1';
-                       icon.style.transform = 'scale(1.1)';
-                       setTimeout(() => {
-                           icon.style.transform = 'scale(1)';
-                       }, 200);
-                   }, index * 100);
-               });
-           });
-       </script>
+       <!-- <a class=".d-sm-none .d-md-block"
+       href="https://api.whatsapp.com/send?phone=+917988968776&amp;text=Hi, I have a query." target="_blank">
+       <div class="login2">
+           <i class="fa fa-whatsapp" aria-hidden="true"></i>
+       </div>
+   </a> -->
+
+       <!-- search-popup -->
    </div>
    </body>
 
