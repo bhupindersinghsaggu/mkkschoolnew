@@ -132,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 transform: translateY(0);
             }
         }
-
+/* 
         .login-wrapper {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transform: rotate(45deg);
             animation: shine 6s infinite linear;
-        }
+        } */
 
         @keyframes shine {
             0% {
