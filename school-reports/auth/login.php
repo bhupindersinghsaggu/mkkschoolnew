@@ -108,11 +108,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         .copyright-container {
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+           
             color: #495057;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+           
+           
+          
             margin-top: 40px;
             position: relative;
             overflow: hidden;
