@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
         /* Custom enhanced styles */
-        :root {
+        /* :root {
             --primary-color: #4361ee;
             --secondary-color: #3f37c9;
             --accent-color: #4895ef;
@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             --dark-color: #212529;
             --success-color: #4cc9f0;
             --danger-color: #f72585;
-        }
+        } */
 
         .container {
             max-width: 800px;
@@ -199,7 +199,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .it-icon {
             color: #4361ee;
             margin: 0 8px;
-            animation: rotate 8s infinite linear;
+            /* animation: rotate 8s infinite linear; */
         }
 
         @keyframes rotate {
