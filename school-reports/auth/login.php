@@ -585,13 +585,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <i class="far fa-copyright copyright-icon"></i>
                                         <span>All Rights Reserved Copyright By</span>
                                         <span class="school-name">Dr. M.K.K. Arya Model School</span>
-                                    </div>
-                                    <div class="divider"></div>
-                                    <div class="developed-by" style="opacity: 1; transform: translateY(0px);">
-                                        <span>Developed By</span>
+                                          <span>Developed By</span>
                                         <i class="fas fa-laptop-code it-icon"></i>
                                         <span> (IT Department)</span>
                                     </div>
+                                    <div class="divider"></div>
                                 </div>
                             </div>
 
