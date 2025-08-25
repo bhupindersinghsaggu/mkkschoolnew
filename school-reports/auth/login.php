@@ -155,9 +155,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             justify-content: center;
         }
 
-        /* .copyright-text span {
-            margin: 0 5px;
-        } */
+        .copyright-text span {
+            margin: 0 2px;
+        }
 
         .school-name {
             color: #6938EF;
