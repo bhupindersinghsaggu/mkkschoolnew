@@ -253,17 +253,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        /* body {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        } */
+        body {
+         
+          font-family: "Lexend", sans-serif;
+        }
 
         @keyframes gradient {
             0% {
@@ -434,7 +427,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         .alert-danger {
             background: #3EB780;
-            color: var(--danger-color);
+            color: #fff;
             border: none;
             border-radius: 10px;
             padding: 12px 15px;
