@@ -179,10 +179,10 @@ require_once '../includes/function.php';
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                <a href="<?php echo $docPath; ?>"  target="_blank" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
-                                    <i class="fas fa-external-link-alt"></i>View Report
-                                </a>
-                            </div>
+                                    <a href="<?php echo $docPath; ?>" target="_blank" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
+                                        <i class="fas fa-external-link-alt"></i> View Report
+                                    </a>
+                                </div>
                             <?php endforeach;
                         else: ?>
                             <p class="text-muted">No notebook checks found.</p>
@@ -250,7 +250,7 @@ require_once '../includes/function.php';
                         <?php
                         $query = "SELECT * FROM class_show ORDER BY created_at DESC LIMIT 2";
                         $result = mysqli_query($conn, $query);
-                        // Check if query was successful and has data
+                        // Check if query was successful and has data 
                         if ($result && mysqli_num_rows($result) > 0):
                             $latest_class = mysqli_fetch_assoc($result);
 
