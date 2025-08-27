@@ -213,7 +213,7 @@
    <style>
        .footer-icon1 {
            position: fixed;
-           bottom: 20px;
+           bottom: 40px;
            /* distance from bottom */
            right: 20px;
            /* distance from right */
