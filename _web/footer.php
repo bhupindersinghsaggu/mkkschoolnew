@@ -184,7 +184,7 @@
        </div>
 
    </footer>
-   <div class="footer-icon">
+   <div class="footer-icon1">
        <a class="" href="https://mkkschool.com/school-reports/auth/login.php" target="_blank">
            <div class="erp-login2">
                Staff Login
@@ -211,6 +211,46 @@
 
    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
    <style>
+       .footer-icon1 {
+           position: fixed;
+           bottom: 20px;
+           /* distance from bottom */
+           right: 20px;
+           /* distance from right */
+           display: flex;
+           flex-direction: column;
+           gap: 10px;
+           /* spacing between items */
+           z-index: 9999;
+           /* keeps it on top */
+           text-align: center;
+       }
+
+       .footer-icon1 a div {
+           background: #dc3545;
+           /* red background */
+           color: #fff;
+           /* white text */
+           padding: 8px 12px;
+           border-radius: 6px;
+           font-size: 14px;
+           font-weight: 500;
+           transition: 0.3s;
+       }
+
+       .footer-icon1 a div:hover {
+           background: #b52a34;
+       }
+
+       .footer-icon1 img {
+           width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           cursor: pointer;
+       }
+
+
+
        /* Footer Styles */
        .mobile-footer {
            display: none;
