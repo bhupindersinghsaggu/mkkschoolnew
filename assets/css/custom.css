@@ -747,7 +747,7 @@ a::before .header-top-left .info-box p {
 .pay-online {
   position: fixed;
   bottom: 15px;
-  right: 20px;
+  left: 20px;
   z-index: 99;
   border: none;
   outline: none;
