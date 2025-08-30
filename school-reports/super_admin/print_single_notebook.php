@@ -149,7 +149,7 @@ if (!$row) {
     <div class="container">
         <div class="no-print mt-4 mb-3 text-end">
             <button class="btn btn-primary btn-sm" onclick="window.print()">🖨 Print</button>
-            <a href="list.php" class="btn btn-secondary btn-sm">← Back</a>
+            <a href="./list_notebook.php" class="btn btn-secondary btn-sm">← Back</a>
         </div>
 
         <div class="school-header">
