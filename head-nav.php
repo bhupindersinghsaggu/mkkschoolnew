@@ -26,6 +26,30 @@
         <!-- Header Menu -->
 
         <div class="logout d-flex ">
+            <div id="modesetting" class="accordion-collapse collapse show">
+                <div class="accordion-body px-0 py3 border-top">
+                    <div class="d-flex align-items-center">
+                        <div class="theme-mode flex-fill text-center w-100 me-3">
+                            <input type="radio" name="theme" id="lightTheme" value="light" checked="">
+                            <label for="lightTheme" class="rounded fw-medium w-100">
+                                <span class="d-inline-flex rounded me-2"><i class="ti ti-sun-filled"></i></span>Light
+                            </label>
+                        </div>
+                        <div class="theme-mode flex-fill text-center w-100 me-3">
+                            <input type="radio" name="theme" id="darkTheme" value="dark">
+                            <label for="darkTheme" class="rounded fw-medium w-100">
+                                <span class="d-inline-flex rounded me-2"><i class="ti ti-moon-filled"></i></span>Dark
+                            </label>
+                        </div>
+                        <div class="theme-mode flex-fill w-100 text-center">
+                            <input type="radio" name="theme" id="systemTheme" value="system">
+                            <label for="systemTheme" class="rounded fw-medium w-100">
+                                <span class="d-inline-flex rounded me-2"><i class="ti ti-device-laptop"></i></span>System
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <button type="submit" class="btn btn-secondary me-2" name="submit">Logout</button>
         </div>
         <!-- <ul class="nav user-menu"> -->

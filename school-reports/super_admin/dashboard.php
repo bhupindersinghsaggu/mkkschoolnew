@@ -48,7 +48,7 @@ require_once '../includes/function.php';
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <a href="./add_teacher.php" class="btn btn-success btn-sm">Add New</a>
-                            <a href="./list_teacher.php" class="text-decoration-underline fs-13 fw-medium">View All</a>
+                            <!-- <a href="./list_teacher.php" class="text-decoration-underline fs-13 fw-medium">View All</a> -->
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ require_once '../includes/function.php';
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <a href="./add_notebook.php" class="btn btn-primary btn-sm">Add New</a>
-                            <a href="./list_notebook.php" class="text-decoration-underline fs-13 fw-medium">View All</a>
+                            <!-- <a href="./list_notebook.php" class="text-decoration-underline fs-13 fw-medium">View All</a> -->
                         </div>
                     </div>
                 </div>
@@ -86,8 +86,8 @@ require_once '../includes/function.php';
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <a href="./add_class_show.php" class="btn btn-primary btn-sm">Add New</a>
-                            <a href="./list_class_show.php" class="text-decoration-underline fs-13 fw-medium">View
-                                All</a>
+                            <!-- <a href="./list_class_show.php" class="text-decoration-underline fs-13 fw-medium">View
+                                All</a> -->
                         </div>
                     </div>
                 </div>
@@ -179,10 +179,10 @@ require_once '../includes/function.php';
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                <a href="<?php echo $docPath; ?>"  target="_blank" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
-                                    <i class="fas fa-external-link-alt"></i>View Report
-                                </a>
-                            </div>
+                                    <a href="<?php echo $docPath; ?>" target="_blank" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
+                                        <i class="fas fa-external-link-alt"></i> View Report
+                                    </a>
+                                </div>
                             <?php endforeach;
                         else: ?>
                             <p class="text-muted">No notebook checks found.</p>
@@ -250,7 +250,7 @@ require_once '../includes/function.php';
                         <?php
                         $query = "SELECT * FROM class_show ORDER BY created_at DESC LIMIT 2";
                         $result = mysqli_query($conn, $query);
-                        // Check if query was successful and has data
+                        // Check if query was successful and has data 
                         if ($result && mysqli_num_rows($result) > 0):
                             $latest_class = mysqli_fetch_assoc($result);
 

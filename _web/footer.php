@@ -184,7 +184,12 @@
        </div>
 
    </footer>
-   <div class="footer-icon">
+   <div class="footer-icon1">
+       <a class="" href="https://mkkschool.com/school-reports/auth/login.php" target="_blank">
+           <div class="erp-login2">
+               Staff Login
+           </div>
+       </a>
        <a class="" href="https://curtina.in/mkk" target="_blank">
            <div class="erp-login">
                ERP Login
@@ -203,186 +208,227 @@
        <a href="/booklist.php" class="icon mrg"
            style="background-color: var(--thm-base);"><i class="fa-solid fa-book mrg"></i> Book List </a>
    </div> -->
-  
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
-    <style>
-        /* Footer Styles */
-        .mobile-footer {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
-            padding: 15px 0;
-            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
-        
-        .footer-icons {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        
-        .footer-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: #495057;
-            transition: all 0.3s ease;
-            flex: 1;
-        }
-        
-        .footer-item:hover {
-            transform: translateY(-5px);
-            color: #007bff;
-        }
-        
-        .footer-icon {
-            font-size: 22px;
-            margin-bottom: 5px;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 0.3s ease;
-            padding: 10px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .footer-item:hover .footer-icon {
-            transform: scale(1.2) rotate(5deg);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .footer-label {
-            font-size: 12px;
-            font-weight: 500;
-            margin-top: 5px;
-        }
-        
-        /* Show footer only on mobile */
-        @media (max-width: 768px) {
-            .mobile-footer {
-                display: block;
-            }
-            
-            .desktop-message {
-                display: none;
-            }
-        }
-        
-        /* Demo content */
-        .content {
-            margin-bottom: 80px;
-        }
-        
-        .notification {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 15px;
-            border-radius: 12px;
-            margin: 15px 0;
-        }
-        
-        /* Instructions */
-        .instructions {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: 30px;
-        }
-        
-        .instructions h2 {
-            margin-bottom: 10px;
-            font-size: 1.4rem;
-        }
-        
-        .instructions ul {
-            padding-left: 20px;
-        }
-        
-        .instructions li {
-            margin-bottom: 8px;
-        }
-        
-        /* Desktop message */
-        .desktop-message {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            margin-top: 30px;
-        }
-        
-        /* Version badge */
-        .version-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: white;
-            color: #6a11cb;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-    </style>
-    <footer class="mobile-footer">
-        <div class="footer-icons">
-            <a href="/booklist.php" class="footer-item">
-                <div class="footer-icon">
-                    <i class="fas fa-th-large"></i>
-                </div>
-                <span class="footer-label">Book List</span>
-            </a>
-            <a href="https://mkkschool.com/school-reports/auth/login.php" class="footer-item">
-                <div class="footer-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <span class="footer-label">Staff Login</span>
-            </a>
-            <a href="https://curtina.in/MKK" class="footer-item">
-                <div class="footer-icon">
-                    <i class="fas fa-network-wired"></i>
-                </div>
-                <span class="footer-label">ERP Login</span>
-            </a>
-            <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="footer-item">
-                <div class="footer-icon">
-                    <i class="fas fa-credit-card"></i>
-                </div>
-                <span class="footer-label">Pay Online</span>
-            </a>
-        </div>
-    </footer>
 
-    <script>
-        // Simple animation for icons when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            const icons = document.querySelectorAll('.footer-icon');
-            icons.forEach((icon, index) => {
-                setTimeout(() => {
-                    icon.style.opacity = '1';
-                    icon.style.transform = 'scale(1.1)';
-                    setTimeout(() => {
-                        icon.style.transform = 'scale(1)';
-                    }, 200);
-                }, index * 100);
-            });
-        });
-    </script>
-</body>
-</html>
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+   <style>
+       .footer-icon1 {
+           position: fixed;
+           bottom: 40px;
+           /* distance from bottom */
+           right: 20px;
+           /* distance from right */
+           display: flex;
+           flex-direction: column;
+           gap: 10px;
+           /* spacing between items */
+           z-index: 9999;
+           /* keeps it on top */
+           text-align: center;
+       }
+
+       .footer-icon1 a div {
+           background: #dc3545;
+           /* red background */
+           color: #fff;
+           /* white text */
+           padding: 8px 12px;
+           border-radius: 6px;
+           font-size: 14px;
+           font-weight: 500;
+           transition: 0.3s;
+       }
+
+       .footer-icon1 a div:hover {
+           background: #b52a34;
+       }
+
+       .footer-icon1 img {
+           width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           cursor: pointer;
+       }
+
+
+
+       /* Footer Styles */
+       .mobile-footer {
+           display: none;
+           position: fixed;
+           bottom: 0;
+           left: 0;
+           width: 100%;
+           background: linear-gradient(to right, #f8f9fa, #e9ecef);
+           padding: 15px 0;
+           box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+           z-index: 1000;
+           border-top-left-radius: 20px;
+           border-top-right-radius: 20px;
+       }
+
+       .footer-icons {
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+       }
+
+       .footer-item {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           text-decoration: none;
+           color: #495057;
+           transition: all 0.3s ease;
+           flex: 1;
+       }
+
+       .footer-item:hover {
+           transform: translateY(-5px);
+           color: #007bff;
+       }
+
+       .footer-icon {
+           font-size: 22px;
+           margin-bottom: 5px;
+           background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+           transition: all 0.3s ease;
+           padding: 10px;
+           border-radius: 50%;
+           background-color: rgba(255, 255, 255, 0.9);
+           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+           width: 50px;
+           height: 50px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+       }
+
+       .footer-item:hover .footer-icon {
+           transform: scale(1.2) rotate(5deg);
+           box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+       }
+
+       .footer-label {
+           font-size: 12px;
+           font-weight: 500;
+           margin-top: 5px;
+       }
+
+       /* Show footer only on mobile */
+       @media (max-width: 768px) {
+           .mobile-footer {
+               display: block;
+           }
+
+           .desktop-message {
+               display: none;
+           }
+       }
+
+       /* Demo content */
+       .content {
+           margin-bottom: 80px;
+       }
+
+       .notification {
+           background: rgba(255, 255, 255, 0.15);
+           padding: 15px;
+           border-radius: 12px;
+           margin: 15px 0;
+       }
+
+       /* Instructions */
+       .instructions {
+           background: rgba(255, 255, 255, 0.2);
+           padding: 20px;
+           border-radius: 15px;
+           margin-top: 30px;
+       }
+
+       .instructions h2 {
+           margin-bottom: 10px;
+           font-size: 1.4rem;
+       }
+
+       .instructions ul {
+           padding-left: 20px;
+       }
+
+       .instructions li {
+           margin-bottom: 8px;
+       }
+
+       /* Desktop message */
+       .desktop-message {
+           text-align: center;
+           padding: 20px;
+           background: rgba(255, 255, 255, 0.2);
+           border-radius: 15px;
+           margin-top: 30px;
+       }
+
+       /* Version badge */
+       .version-badge {
+           position: absolute;
+           top: 15px;
+           right: 15px;
+           background: white;
+           color: #6a11cb;
+           padding: 5px 10px;
+           border-radius: 20px;
+           font-size: 12px;
+           font-weight: bold;
+       }
+   </style>
+   <footer class="mobile-footer">
+       <div class="footer-icons">
+           <a href="/booklist.php" class="footer-item">
+               <div class="footer-icon">
+                   <i class="fas fa-th-large"></i>
+               </div>
+               <span class="footer-label">Book List</span>
+           </a>
+           <a href="https://mkkschool.com/school-reports/auth/login.php" class="footer-item">
+               <div class="footer-icon">
+                   <i class="fas fa-users"></i>
+               </div>
+               <span class="footer-label">Staff Login</span>
+           </a>
+           <a href="https://curtina.in/MKK" class="footer-item">
+               <div class="footer-icon">
+                   <i class="fas fa-network-wired"></i>
+               </div>
+               <span class="footer-label">ERP Login</span>
+           </a>
+           <a href="https://curtina.in/mkk/forms/frmstdPayOnline.aspx" class="footer-item">
+               <div class="footer-icon">
+                   <i class="fas fa-credit-card"></i>
+               </div>
+               <span class="footer-label">Pay Online</span>
+           </a>
+       </div>
+   </footer>
+
+   <script>
+       // Simple animation for icons when page loads
+       document.addEventListener('DOMContentLoaded', function() {
+           const icons = document.querySelectorAll('.footer-icon');
+           icons.forEach((icon, index) => {
+               setTimeout(() => {
+                   icon.style.opacity = '1';
+                   icon.style.transform = 'scale(1.1)';
+                   setTimeout(() => {
+                       icon.style.transform = 'scale(1)';
+                   }, 200);
+               }, index * 100);
+           });
+       });
+   </script>
+   </body>
+
+   </html>
    </body>
 
    </html>
