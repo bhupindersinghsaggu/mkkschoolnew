@@ -190,7 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Topic</label>
-                                    <input type="text" name="topic" class="form-control" required>
+                                    <textarea name="topic" class="form-control" required> </textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label>Class Show Video Link </label>
@@ -328,12 +328,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Total (Auto-calculated)</label>
-                                    <input type="number" name="total" id="totalField" class="form-control" readonly >
+                                    <input type="number" name="total" id="totalField" class="form-control" readonly>
                                     <small class="text-muted">This field is automatically calculated</small>
                                 </div>
                                 <div class="mb-3">
                                     <label>Speaking Skills (Students)</label>
-                                    <input type="text" name="speaking_skills" class="form-control" required >
+                                    <input type="text" name="speaking_skills" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Dancing Skills (Students)</label>
@@ -351,21 +351,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label>Comments by Judges</label>
                                     <div class="mb-2">
                                         <label class="form-label small text-muted"></label>
-                                        <textarea name="comments1" class="form-control" placeholder="Enter comments by Judge 1..." ></textarea>
+                                        <textarea name="comments1" class="form-control" placeholder="Enter comments by Judge 1..."></textarea>
                                     </div>
 
                                     <div class="mb-2">
                                         <label class="form-label small text-muted"></label>
-                                        <textarea name="comments2" class="form-control" placeholder="Enter comments by Judge 2..." ></textarea>
+                                        <textarea name="comments2" class="form-control" placeholder="Enter comments by Judge 2..."></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 1</label>
-                                    <input type="number" name="marks_judge1" class="form-control"  min="0" max="40">
+                                    <input type="number" name="marks_judge1" class="form-control" min="0" max="40">
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 2</label>
-                                    <input type="number" name="marks_judge2" class="form-control"  min="0" max="40">
+                                    <input type="number" name="marks_judge2" class="form-control" min="0" max="40">
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back</a>
