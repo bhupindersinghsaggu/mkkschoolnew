@@ -179,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label>Session</label>
-                                    <select name="session" class="form-control" required>
+                                    <select name="session" class="form-control" required >
                                         <option value="2025-26">2025-26</option>
                                         <option value="2026-27">2026-27</option>
                                     </select>
@@ -277,44 +277,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="card dash-widget">
                             <div class="card-body">
                                 <div class="mb-3">
-                                    <label>News (English Only) (02)</label>
-                                    <input type="number" name="news" class="form-control" required min="0" max="2">
+                                    <label>News (English Only) (2)</label>
+                                    <input type="number" name="news" class="form-control"  min="0" max="2">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Participation (03)</label>
-                                    <input type="number" name="participation" class="form-control" required min="0" max="3">
+                                    <label>Participation (3)</label>
+                                    <input type="number" name="participation" class="form-control"  min="0" max="3">
                                 </div>
                                 <div class="mb-3">
                                     <label>Speeches [English (5), Hindi (01)]</label>
-                                    <input type="number" name="speeches" class="form-control" required min="0" max="5">
+                                    <input type="number" name="speeches" class="form-control"  min="0" max="5">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Poem Recitation [English (02), Hindi (01)]</label>
-                                    <input type="number" name="poem_recitation" class="form-control" required min="0" max="40">
+                                    <label>Poem Recitation [English (2), Hindi (01)]</label>
+                                    <input type="number" name="poem_recitation" class="form-control"  min="0" max="40">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Group Dance (04)</label>
-                                    <input type="number" name="dance" class="form-control" required min="0" max="4">
+                                    <label>Group Dance (4)</label>
+                                    <input type="number" name="dance" class="form-control"  min="0" max="4">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Group Song (04)</label>
-                                    <input type="number" name="song" class="form-control" required min="0" max="4">
+                                    <label>Group Song (4)</label>
+                                    <input type="number" name="song" class="form-control"  min="0" max="4">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Stage Management (03)</label>
-                                    <input type="number" name="stage_management" class="form-control" required min="0" max="3">
+                                    <label>Stage Management (3)</label>
+                                    <input type="number" name="stage_management" class="form-control"  min="0" max="3">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Innovation (02)</label>
-                                    <input type="number" name="innovation" class="form-control" required min="0" max="2">
+                                    <label>Innovation (2)</label>
+                                    <input type="number" name="innovation" class="form-control"  min="0" max="2">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Theme Based Skit Presentation (04)</label>
-                                    <input type="number" name="skit" class="form-control" required min="0" max="4">
+                                    <label>Theme Based Skit Presentation (4)</label>
+                                    <input type="number" name="skit" class="form-control"  min="0" max="4">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Theme Based Power Point Presentation (04)</label>
-                                    <input type="number" name="ppt" class="form-control" required min="0" max="3">
+                                    <label>Theme Based Power Point Presentation (4)</label>
+                                    <input type="number" name="ppt" class="form-control"  min="0" max="3">
                                 </div>
                             </div>
                         </div>
@@ -323,8 +323,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="card dash-widget">
                             <div class="card-body">
                                 <div class="mb-3">
-                                    <label>Anchoring (03)</label>
-                                    <input type="number" name="anchoring" class="form-control" required min="0" max="3">
+                                    <label>Anchoring (3)</label>
+                                    <input type="number" name="anchoring" class="form-control"  min="0" max="3">
                                 </div>
                                 <div class="mb-3">
                                     <label>Total (Auto-calculated)</label>
@@ -333,19 +333,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Speaking Skills (Students)</label>
-                                    <input type="text" name="speaking_skills" class="form-control" required>
+                                    <input type="text" name="speaking_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Dancing Skills (Students)</label>
-                                    <input type="text" name="dancing_skills" class="form-control" required>
+                                    <input type="text" name="dancing_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Singing Skills (Students)</label>
-                                    <input type="text" name="singing_skills" class="form-control" required>
+                                    <input type="text" name="singing_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Dramatic Skills (Students)</label>
-                                    <input type="text" name="dramatic_skills" class="form-control" required>
+                                    <input type="text" name="dramatic_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Comments by Judges</label>
