@@ -82,6 +82,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         WHERE id = ?";
 
     $stmt = mysqli_prepare($conn, $sql);
+
+    if ($stmt) {
+    // Debug: Count the parameters
+    $expected_params = 30;
+    $actual_params = count([$session, $eval_date, $topic, $video_link, $teacher_name, $teacher_id, 
+        $evaluator_name, $class_section, $prayer, $news, $participation, $speeches, 
+        $poem_recitation, $dance, $song, $stage_management, $innovation, $skit, $ppt, 
+        $anchoring, $total, $speaking_skills, $dancing_skills, $singing_skills, 
+        $dramatic_skills, $comments1, $comments2, $marks_judge1, $marks_judge2, $id]);
+    
+    if ($expected_params !== $actual_params) {
+        $message = "❌ Parameter count mismatch: Expected $expected_params, got $actual_params";
+    } else {
+        // Your bind_param call here
+    }
+}
 if ($stmt) {
     // Correct format string: 8 strings + 13 decimals + 6 strings + 2 decimals + 1 integer = 30 characters
     mysqli_stmt_bind_param(
