@@ -190,9 +190,9 @@ error_log("Calculated average: " . $average_marks);
             <div class="header-button d-flex justify-content-between align-items-center mb-3 no-print">
                 <h3>Class Show Record Details</h3>
                 <div>
-                    <button onclick="printReport()" class="btn btn-primary">
-                        <i class="fas fa-print"></i> Print
-                    </button>
+                    <a href="print_single_class_show.php?id=<?= $row['id'] ?>" target="_blank" class="btn btn-sm btn-primary">
+    <i class="fas fa-print"></i> Print
+</a>
                     <a href="list_class_show.php" class="btn btn-secondary">Back</a>
                     <a href="edit_class_show.php?id=<?= $row['id'] ?>" class="btn btn-success">Edit</a>
                 </div>
