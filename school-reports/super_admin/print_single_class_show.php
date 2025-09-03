@@ -129,7 +129,7 @@ $average_marks = ($marks1 + $marks2) / 2;
 
         <!-- Header -->
         <div class="school-header">
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center align-items-center">
                 <div>
                     <img src="../assets/img/printlogo.png" alt="School Logo">
                 </div>
