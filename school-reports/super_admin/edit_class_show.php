@@ -82,43 +82,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         WHERE id = ?";
 
     $stmt = mysqli_prepare($conn, $sql);
-
-    if ($stmt) {
-        // Correct format string: 8 strings + 15 decimals + 6 strings + 1 integer = 30 parameters
-        mysqli_stmt_bind_param(
-            $stmt,
-            "ssssssssddddddddddddddsssssddi", // Fixed format string
-            $session,           // s (1)
-            $eval_date,         // s (2)
-            $topic,             // s (3)
-            $video_link,        // s (4)
-            $teacher_name,      // s (5)
-            $teacher_id,        // s (6)
-            $evaluator_name,    // s (7)
-            $class_section,     // s (8)
-            $prayer,            // d (9)
-            $news,              // d (10)
-            $participation,     // d (11)
-            $speeches,          // d (12)
-            $poem_recitation,   // d (13)
-            $dance,             // d (14)
-            $song,              // d (15)
-            $stage_management,  // d (16)
-            $innovation,        // d (17)
-            $skit,              // d (18)
-            $ppt,               // d (19)
-            $anchoring,         // d (20)
-            $total,             // d (21)
-            $speaking_skills,   // s (22)
-            $dancing_skills,    // s (23)
-            $singing_skills,    // s (24)
-            $dramatic_skills,   // s (25)
-            $comments1,         // s (26)
-            $comments2,         // s (27)
-            $marks_judge1,      // d (28)
-            $marks_judge2,      // d (29)
-            $id                 // i (30)
-        );
+if ($stmt) {
+    // Correct format string: 8 strings + 15 decimals + 6 strings + 2 decimals + 1 integer = 32 characters
+    mysqli_stmt_bind_param(
+        $stmt,
+        "ssssssssdddddddddddddddssssssddi", // 32 characters: 8s + 15d + 6s + 2d + 1i
+        $session,           // s (1)
+        $eval_date,         // s (2)
+        $topic,             // s (3)
+        $video_link,        // s (4)
+        $teacher_name,      // s (5)
+        $teacher_id,        // s (6)
+        $evaluator_name,    // s (7)
+        $class_section,     // s (8)
+        $prayer,            // d (9)
+        $news,              // d (10)
+        $participation,     // d (11)
+        $speeches,          // d (12)
+        $poem_recitation,   // d (13)
+        $dance,             // d (14)
+        $song,              // d (15)
+        $stage_management,  // d (16)
+        $innovation,        // d (17)
+        $skit,              // d (18)
+        $ppt,               // d (19)
+        $anchoring,         // d (20)
+        $total,             // d (21) - 15th decimal
+        $speaking_skills,   // s (22)
+        $dancing_skills,    // s (23)
+        $singing_skills,    // s (24)
+        $dramatic_skills,   // s (25)
+        $comments1,         // s (26)
+        $comments2,         // s (27) - 6th string
+        $marks_judge1,      // d (28)
+        $marks_judge2,      // d (29) - 17th decimal
+        $id                 // i (30)
+    );
 
         if (mysqli_stmt_execute($stmt)) {
             $submitted = true;
