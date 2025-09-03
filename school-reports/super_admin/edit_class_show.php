@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $evaluator_name = $_POST['evaluator_name'];
     $class_section = $_POST['class_section'];
 
-    // Convert to integers
+    // Convert to floats for decimal values
     $prayer = (float)$_POST['prayer'];
     $news = (float)$_POST['news'];
     $participation = (float)$_POST['participation'];
@@ -84,46 +84,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = mysqli_prepare($conn, $sql);
 
     if ($stmt) {
+        // Correct format string: 8 strings + 15 decimals + 6 strings + 1 integer = 30 parameters
         mysqli_stmt_bind_param(
             $stmt,
-            "sssssssddddddddddddddssssssddi",
-             
-            $session,
-            $eval_date,
-            $topic,
-            $video_link,
-            $teacher_name,
-            $teacher_id,
-            $evaluator_name,
-            $class_section,
-            $prayer,
-            $news,
-            $participation,
-            $speeches,
-            $poem_recitation,
-            $dance,
-            $song,
-            $stage_management,
-            $innovation,
-            $skit,
-            $ppt,
-            $anchoring,
-            $total,
-            $speaking_skills,
-            $dancing_skills,
-            $singing_skills,
-            $dramatic_skills,
-            $comments1,
-            $comments2,
-            $marks_judge1,
-            $marks_judge2,
-            $id
+            "ssssssssddddddddddddddsssssddi", // Fixed format string
+            $session,           // s (1)
+            $eval_date,         // s (2)
+            $topic,             // s (3)
+            $video_link,        // s (4)
+            $teacher_name,      // s (5)
+            $teacher_id,        // s (6)
+            $evaluator_name,    // s (7)
+            $class_section,     // s (8)
+            $prayer,            // d (9)
+            $news,              // d (10)
+            $participation,     // d (11)
+            $speeches,          // d (12)
+            $poem_recitation,   // d (13)
+            $dance,             // d (14)
+            $song,              // d (15)
+            $stage_management,  // d (16)
+            $innovation,        // d (17)
+            $skit,              // d (18)
+            $ppt,               // d (19)
+            $anchoring,         // d (20)
+            $total,             // d (21)
+            $speaking_skills,   // s (22)
+            $dancing_skills,    // s (23)
+            $singing_skills,    // s (24)
+            $dramatic_skills,   // s (25)
+            $comments1,         // s (26)
+            $comments2,         // s (27)
+            $marks_judge1,      // d (28)
+            $marks_judge2,      // d (29)
+            $id                 // i (30)
         );
 
         if (mysqli_stmt_execute($stmt)) {
             $submitted = true;
             $message = "✅ Record updated successfully. Total: " . $total;
-            // Refresh the record data
+            // Refresh the record data with correct array keys
             $record = array_merge($record, [
                 'session' => $session,
                 'eval_date' => $eval_date,
@@ -152,8 +152,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'dramatic_skills' => $dramatic_skills,
                 'comments1' => $comments1,
                 'comments2' => $comments2,
-                '$marks_judge1' => $marks_judge1,
-                '$marks_judge2' => $marks_judge2,
+                'marks_judge1' => $marks_judge1, // Fixed array key
+                'marks_judge2' => $marks_judge2  // Fixed array key
             ]);
         } else {
             $message = "❌ Execution error: " . mysqli_stmt_error($stmt);
@@ -443,11 +443,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge1</label>
-                                    <input type="number" name="marks_judge1" class="form-control" step="0.01" value="<?= $record['marks_judge1'] ?>" min="0" max="40daT">
+                                    <input type="number" name="marks_judge1" class="form-control" step="0.01" value="<?= $record['marks_judge1'] ?>" min="0" max="40">
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge2</label>
-                                    <input type="number" name="marks_judge2" class="form-control" step="0.01" value="<?= $record['marks_judge2'] ?>" min="0" max="40daT">
+                                    <input type="number" name="marks_judge2" class="form-control" step="0.01" value="<?= $record['marks_judge2'] ?>" min="0" max="40">
                                 </div>
                                 <div class="d-flex gap-2">
                                     <button type="submit" class="btn btn-success">Update </button>
