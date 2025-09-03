@@ -44,18 +44,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $class_section = $_POST['class_section'];
 
     // Convert to integers
-    $prayer = (int)$_POST['prayer'];
-    $news = (int)$_POST['news'];
-    $participation = (int)$_POST['participation'];
-    $speeches = (int)$_POST['speeches'];
-    $poem_recitation = (int)$_POST['poem_recitation'];
-    $dance = (int)$_POST['dance'];
-    $song = (int)$_POST['song'];
-    $stage_management = (int)$_POST['stage_management'];
-    $innovation = (int)$_POST['innovation'];
-    $skit = (int)$_POST['skit'];
-    $ppt = (int)$_POST['ppt'];
-    $anchoring = (int)$_POST['anchoring'];
+    $prayer = (float)$_POST['prayer'];
+    $news = (float)$_POST['news'];
+    $participation = (float)$_POST['participation'];
+    $speeches = (float)$_POST['speeches'];
+    $poem_recitation = (float)$_POST['poem_recitation'];
+    $dance = (float)$_POST['dance'];
+    $song = (float)$_POST['song'];
+    $stage_management = (float)$_POST['stage_management'];
+    $innovation = (float)$_POST['innovation'];
+    $skit = (float)$_POST['skit'];
+    $ppt = (float)$_POST['ppt'];
+    $anchoring = (float)$_POST['anchoring'];
 
     // Calculate total sum
     $total = $prayer + $news + $participation + $speeches + $poem_recitation +
@@ -68,8 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dramatic_skills = $_POST['dramatic_skills'];
     $comments1 = $_POST['comments1'];
     $comments2 = $_POST['comments2'];
-    $marks_judge1 = (int)$_POST['marks_judge1'];
-    $marks_judge2 = (int)$_POST['marks_judge2'];
+    $marks_judge1 = (float)$_POST['marks_judge1'];
+    $marks_judge2 = (float)$_POST['marks_judge2'];
 
     // Update query
     $sql = "UPDATE class_show SET 
@@ -86,7 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt) {
         mysqli_stmt_bind_param(
             $stmt,
-            "sssssssssssssssssssssssssssiii",
+            "sssssssddddddddddddddssssssddi",
+             
             $session,
             $eval_date,
             $topic,
@@ -367,51 +368,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Prayer</label>
-                                    <input type="number" name="prayer" class="form-control" value="<?= $record['prayer'] ?>" min="0" max="10" required>
+                                    <input type="number" name="prayer" class="form-control" step="0.01" value="<?= $record['prayer'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>News</label>
-                                    <input type="number" name="news" class="form-control" value="<?= $record['news'] ?>" min="0" max="10" required>
+                                    <input type="number" name="news" class="form-control" step="0.01" value="<?= $record['news'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Participation</label>
-                                    <input type="number" name="participation" class="form-control" value="<?= $record['participation'] ?>" min="0" max="10" required>
+                                    <input type="number" name="participation" class="form-control" step="0.01" value="<?= $record['participation'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Speeches</label>
-                                    <input type="number" name="speeches" class="form-control" value="<?= $record['speeches'] ?>" min="0" max="10" required>
+                                    <input type="number" name="speeches" class="form-control" step="0.01" value="<?= $record['speeches'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Poem recitation</label>
-                                    <input type="number" name="poem_recitation" class="form-control" value="<?= $record['poem_recitation'] ?>" min="0" max="10" required>
+                                    <input type="number" name="poem_recitation" class="form-control" step="0.01" value="<?= $record['poem_recitation'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Dance</label>
-                                    <input type="number" name="dance" class="form-control" value="<?= $record['dance'] ?>" min="0" max="10" required>
+                                    <input type="number" name="dance" class="form-control" step="0.01" value="<?= $record['dance'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Song</label>
-                                    <input type="number" name="song" class="form-control" value="<?= $record['song'] ?>" min="0" max="10" required>
+                                    <input type="number" name="song" class="form-control" step="0.01" value="<?= $record['song'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Stage Management</label>
-                                    <input type="number" name="stage_management" class="form-control" value="<?= $record['stage_management'] ?>" min="0" max="10" required>
+                                    <input type="number" name="stage_management" class="form-control" step="0.01" value="<?= $record['stage_management'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Innovation</label>
-                                    <input type="number" name="innovation" class="form-control" value="<?= $record['innovation'] ?>" min="0" max="10" required>
+                                    <input type="number" name="innovation" class="form-control" step="0.01" value="<?= $record['innovation'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Skit</label>
-                                    <input type="number" name="skit" class="form-control" value="<?= $record['skit'] ?>" min="0" max="10" required>
+                                    <input type="number" name="skit" class="form-control" step="0.01" value="<?= $record['skit'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>PPT</label>
-                                    <input type="number" name="ppt" class="form-control" value="<?= $record['ppt'] ?>" min="0" max="10" required>
+                                    <input type="number" name="ppt" class="form-control" step="0.01" value="<?= $record['ppt'] ?>" min="0" max="10" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Anchoring</label>
-                                    <input type="number" name="anchoring" class="form-control" value="<?= $record['anchoring'] ?>" min="0" max="10" required>
+                                    <input type="number" name="anchoring" class="form-control" step="0.01" value="<?= $record['anchoring'] ?>" min="0" max="10" required>
                                 </div>
                             </div>
                         </div>
@@ -450,11 +451,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge1</label>
-                                    <input type="number" name="marks_judge1" class="form-control" value="<?= $record['marks_judge1'] ?>" min="0" max="40daT">
+                                    <input type="number" name="marks_judge1" class="form-control" step="0.01" value="<?= $record['marks_judge1'] ?>" min="0" max="40daT">
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge2</label>
-                                    <input type="number" name="marks_judge2" class="form-control" value="<?= $record['marks_judge2'] ?>" min="0" max="40daT">
+                                    <input type="number" name="marks_judge2" class="form-control" step="0.01" value="<?= $record['marks_judge2'] ?>" min="0" max="40daT">
                                 </div>
                                 <div class="d-flex gap-2">
                                     <button type="submit" class="btn btn-success">Update </button>
