@@ -22,18 +22,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $class_section = $_POST['class_section'];
 
     // Convert to integers
-    $prayer = (float)$_POST['prayer']; // This is included in bind variables
-    $news = (float)$_POST['news'];
-    $participation = (float)$_POST['participation'];
-    $speeches = (float)$_POST['speeches'];
-    $poem_recitation = (float)$_POST['poem_recitation'];
-    $dance = (float)$_POST['dance'];
-    $song = (float)$_POST['song'];
-    $stage_management = (float)$_POST['stage_management'];
-    $innovation = (float)$_POST['innovation'];
-    $skit = (float)$_POST['skit'];
-    $ppt = (float)$_POST['ppt'];
-    $anchoring = (float)$_POST['anchoring'];
+    $prayer = (int)$_POST['prayer']; // This is included in bind variables
+    $news = (int)$_POST['news'];
+    $participation = (int)$_POST['participation'];
+    $speeches = (int)$_POST['speeches'];
+    $poem_recitation = (int)$_POST['poem_recitation'];
+    $dance = (int)$_POST['dance'];
+    $song = (int)$_POST['song'];
+    $stage_management = (int)$_POST['stage_management'];
+    $innovation = (int)$_POST['innovation'];
+    $skit = (int)$_POST['skit'];
+    $ppt = (int)$_POST['ppt'];
+    $anchoring = (int)$_POST['anchoring'];
 
     // Calculate total sum (including prayer if needed)
     $total = $prayer + $news + $participation + $speeches + $poem_recitation +
@@ -46,8 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dramatic_skills = $_POST['dramatic_skills'];
     $comments1 = $_POST['comments1'];
     $comments2 = $_POST['comments2'];
-    $marks_judge1 = (float)$_POST['marks_judge1'];
-    $marks_judge2 = (float)$_POST['marks_judge2'];
+    $marks_judge1 = (int)$_POST['marks_judge1'];
+    $marks_judge2 = (int)$_POST['marks_judge2'];
 
     $sql = "INSERT INTO class_show (
         session, eval_date, topic, video_link, teacher_name, teacher_id, evaluator_name, class_section,
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 7 strings (session to class_section) + 18 integers + 1 string (comments)
         mysqli_stmt_bind_param(
             $stmt,
-            "ssssssssddddddddddddddsssssdd", // 25 characters: 8s + 18i
+            "ssssssssiiiiiiiiiiiiissssssii", // 25 characters: 8s + 18i
             $session,           // s (1)
             $eval_date,         // s (2)
             $topic,             // s (3)
@@ -179,29 +179,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label>Session</label>
-                                    <select name="session" class="form-control" step="0.01" required >
+                                    <select name="session" class="form-control" required >
                                         <option value="2025-26">2025-26</option>
                                         <option value="2026-27">2026-27</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label>Date of class show</label>
-                                    <input type="date" name="eval_date" class="form-control" step="0.01" required>
+                                    <input type="date" name="eval_date" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Topic</label>
-                                    <textarea name="topic" class="form-control" step="0.01" required> </textarea>
+                                    <textarea name="topic" class="form-control" required> </textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label>Class Show Video Link </label>
-                                    <input type="text" name="video_link" class="form-control" step="0.01">
+                                    <input type="text" name="video_link" class="form-control">
                                 </div>
                                 <div class="mb-3">
                                     <label>Search Teacher</label>
                                     <input type="text" id="teacherSearch" class="form-control mb-2" placeholder="Type to filter..." onkeyup="filterTeachers()">
 
                                     <label>Select Teacher</label>
-                                    <select name="teacher_id" id="teacherSelect" class="form-control" step="0.01" onchange="fillTeacherDetails()" required>
+                                    <select name="teacher_id" id="teacherSelect" class="form-control" onchange="fillTeacherDetails()" required>
                                         <option value="">-- Select Teacher --</option>
                                         <?php
                                         $query = "SELECT td.teacher_id, td.teacher_name, td.subject, td.teacher_type 
@@ -228,36 +228,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                                 <div class="mb-3">
                                     <label>Name of the Teacher</label>
-                                    <input type="text" name="teacher_name" id="teacherName" class="form-control" step="0.01" readonly required>
+                                    <input type="text" name="teacher_name" id="teacherName" class="form-control" readonly required>
                                 </div>
 
                                 <!-- <div class="mb-3">
                                     <label>Teacher ID</label>
-                                    <input type="text" name="teacher_id" id="teacherId" class="form-control" step="0.01" readonly required>
+                                    <input type="text" name="teacher_id" id="teacherId" class="form-control" readonly required>
                                 </div> -->
 
                                 <!-- <div class="mb-3">
                                     <label>Subject</label>
-                                    <input type="text" name="subject" id="subject" class="form-control" step="0.01" readonly required>
+                                    <input type="text" name="subject" id="subject" class="form-control" readonly required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label>Teacher Type</label>
-                                    <input type="text" name="teacher_type" id="teacherType" class="form-control" step="0.01" readonly required>
+                                    <input type="text" name="teacher_type" id="teacherType" class="form-control" readonly required>
                                 </div> -->
 
                                 <div class="mb-3">
                                     <label>Class/Section</label>
-                                    <input type="text" name="class_section" class="form-control" step="0.01" required>
+                                    <input type="text" name="class_section" class="form-control" required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label>Name of The Judge</label>
-                                    <input type="text" name="evaluator_name" class="form-control" step="0.01" required>
+                                    <input type="text" name="evaluator_name" class="form-control" required>
                                 </div>
                                 <!-- <div class="mb-3">
                                     <label>Judge Name </label>
-                                    <select name="evaluator_name" class="form-control" step="0.01" required>
+                                    <select name="evaluator_name" class="form-control" required>
                                         <option value="">--Select--</option>
                                         <option value="Meera Marwaha">Meera Marwaha</option>
                                         <option value="Manju Setia">Manju Setia</option>
@@ -268,7 +268,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                                 <div class="mb-3">
                                     <label>Prayer (03)</label>
-                                    <input type="number" name="prayer" class="form-control" step="0.01" required min="0" max="3">
+                                    <input type="number" name="prayer" class="form-control" required min="0" max="3">
                                 </div>
                             </div>
                         </div>
@@ -278,43 +278,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label>News (English Only) (2)</label>
-                                    <input type="number" name="news" class="form-control" step="0.01"  step="0.01" min="0" max="2">
+                                    <input type="number" name="news" class="form-control"  step="0.01" min="0" max="2">
                                 </div>
                                 <div class="mb-3">
                                     <label>Participation (3)</label>
-                                    <input type="number" name="participation" class="form-control" step="0.01"  min="0" max="3">
+                                    <input type="number" name="participation" class="form-control"  min="0" max="3">
                                 </div>
                                 <div class="mb-3">
                                     <label>Speeches [English (5), Hindi (01)]</label>
-                                    <input type="number" name="speeches" class="form-control" step="0.01"  min="0" max="5">
+                                    <input type="number" name="speeches" class="form-control"  min="0" max="5">
                                 </div>
                                 <div class="mb-3">
                                     <label>Poem Recitation [English (2), Hindi (01)]</label>
-                                    <input type="number" name="poem_recitation" class="form-control" step="0.01"  min="0" max="40">
+                                    <input type="number" name="poem_recitation" class="form-control"  min="0" max="40">
                                 </div>
                                 <div class="mb-3">
                                     <label>Group Dance (4)</label>
-                                    <input type="number" name="dance" class="form-control" step="0.01"  min="0" max="4">
+                                    <input type="number" name="dance" class="form-control"  min="0" max="4">
                                 </div>
                                 <div class="mb-3">
                                     <label>Group Song (4)</label>
-                                    <input type="number" name="song" class="form-control" step="0.01"  min="0" max="4">
+                                    <input type="number" name="song" class="form-control"  min="0" max="4">
                                 </div>
                                 <div class="mb-3">
                                     <label>Stage Management (3)</label>
-                                    <input type="number" name="stage_management" class="form-control" step="0.01"  min="0" max="3">
+                                    <input type="number" name="stage_management" class="form-control"  min="0" max="3">
                                 </div>
                                 <div class="mb-3">
                                     <label>Innovation (2)</label>
-                                    <input type="number" name="innovation" class="form-control" step="0.01"  min="0" max="2">
+                                    <input type="number" name="innovation" class="form-control"  min="0" max="2">
                                 </div>
                                 <div class="mb-3">
                                     <label>Theme Based Skit Presentation (4)</label>
-                                    <input type="number" name="skit" class="form-control" step="0.01"  min="0" max="4">
+                                    <input type="number" name="skit" class="form-control"  min="0" max="4">
                                 </div>
                                 <div class="mb-3">
                                     <label>Theme Based Power Point Presentation (4)</label>
-                                    <input type="number" name="ppt" class="form-control" step="0.01"  min="0" max="3">
+                                    <input type="number" name="ppt" class="form-control"  min="0" max="3">
                                 </div>
                             </div>
                         </div>
@@ -324,48 +324,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label>Anchoring (3)</label>
-                                    <input type="number" name="anchoring" class="form-control" step="0.01"  min="0" max="3">
+                                    <input type="number" name="anchoring" class="form-control"  min="0" max="3">
                                 </div>
                                 <div class="mb-3">
                                     <label>Total (Auto-calculated)</label>
-                                    <input type="number" name="total" id="totalField" class="form-control" step="0.01" readonly>
+                                    <input type="number" name="total" id="totalField" class="form-control" readonly>
                                     <small class="text-muted">This field is automatically calculated</small>
                                 </div>
                                 <div class="mb-3">
                                     <label>Speaking Skills (Students)</label>
-                                    <input type="text" name="speaking_skills" class="form-control" step="0.01" >
+                                    <input type="text" name="speaking_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Dancing Skills (Students)</label>
-                                    <input type="text" name="dancing_skills" class="form-control" step="0.01" >
+                                    <input type="text" name="dancing_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Singing Skills (Students)</label>
-                                    <input type="text" name="singing_skills" class="form-control" step="0.01" >
+                                    <input type="text" name="singing_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Dramatic Skills (Students)</label>
-                                    <input type="text" name="dramatic_skills" class="form-control" step="0.01" >
+                                    <input type="text" name="dramatic_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Comments by Judges</label>
                                     <div class="mb-2">
                                         <label class="form-label small text-muted"></label>
-                                        <textarea name="comments1" class="form-control" step="0.01" placeholder="Enter comments by Judge 1..."></textarea>
+                                        <textarea name="comments1" class="form-control" placeholder="Enter comments by Judge 1..."></textarea>
                                     </div>
 
                                     <div class="mb-2">
                                         <label class="form-label small text-muted"></label>
-                                        <textarea name="comments2" class="form-control" step="0.01" placeholder="Enter comments by Judge 2..."></textarea>
+                                        <textarea name="comments2" class="form-control" placeholder="Enter comments by Judge 2..."></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 1</label>
-                                    <input type="number" name="marks_judge1" class="form-control" step="0.01" min="0" max="40">
+                                    <input type="number" name="marks_judge1" class="form-control" min="0" max="40">
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 2</label>
-                                    <input type="number" name="marks_judge2" class="form-control" step="0.01" min="0" max="40">
+                                    <input type="number" name="marks_judge2" class="form-control" min="0" max="40">
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back</a>
