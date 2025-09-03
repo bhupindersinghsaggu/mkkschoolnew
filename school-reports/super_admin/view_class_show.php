@@ -36,8 +36,8 @@ $teacher_photo = !empty($row['teacher_photo']) ? '../uploads/profile_pics/' . $r
 // Make sure the path is correct - adjust if your photos are in a different directory
 
 // Calculate average marks
-$marks1 = (int)$row['marks_judge1'];
-$marks2 = (int)$row['marks_judge2'];
+$marks1 = (float)$row['marks_judge1'];
+$marks2 = (float)$row['marks_judge2'];
 $average_marks = ($marks1 + $marks2) / 2;
 
 // Debug: Check what values you're getting
