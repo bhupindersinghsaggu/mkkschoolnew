@@ -106,7 +106,7 @@ $average_marks = ($marks1 + $marks2) / 2;
 
     <!-- Basic Information -->
     <div class="section-title">Basic Information</div>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-sm">
         <tr>
             <td rowspan="4" style="text-align:center; vertical-align:middle; width:150px;">
                 <img src="<?= $teacher_photo ?>" class="teacher-photo" alt="Teacher Photo">
@@ -136,7 +136,7 @@ $average_marks = ($marks1 + $marks2) / 2;
 
     <!-- Skills Assessment -->
     <div class="section-title">Skills Assessment (Students)</div>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-sm">
         <tr><th>Speaking Skills</th><td><?= $row['speaking_skills'] ?></td></tr>
         <tr><th>Dancing Skills</th><td><?= $row['dancing_skills'] ?></td></tr>
         <tr><th>Singing Skills</th><td><?= $row['singing_skills'] ?></td></tr>
@@ -145,7 +145,7 @@ $average_marks = ($marks1 + $marks2) / 2;
 
     <!-- Scores & Evaluation -->
     <div class="section-title">Scores & Evaluation</div>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-sm">
         <tr><th>Prayer</th><td><?= $row['prayer'] ?></td></tr>
         <tr><th>News</th><td><?= $row['news'] ?></td></tr>
         <tr><th>Participation</th><td><?= $row['participation'] ?></td></tr>
@@ -162,7 +162,7 @@ $average_marks = ($marks1 + $marks2) / 2;
 
     <!-- Marks -->
     <div class="section-title">Final Marks</div>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-sm">
         <tr><th>Marks by Judge 1</th><td><?= $row['marks_judge1'] ?></td></tr>
         <tr><th>Marks by Judge 2</th><td><?= $row['marks_judge2'] ?></td></tr>
         <tr class="table-success">
@@ -173,7 +173,7 @@ $average_marks = ($marks1 + $marks2) / 2;
 
     <!-- Comments -->
     <div class="section-title">Comments</div>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-sm">
         <tr><th>Comment 1</th><td><?= nl2br(htmlspecialchars($row['comments1'])) ?></td></tr>
         <tr><th>Comment 2</th><td><?= nl2br(htmlspecialchars($row['comments2'])) ?></td></tr>
         <tr><th>Record Created</th><td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td></tr>
