@@ -179,29 +179,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label>Session</label>
-                                    <select name="session" class="form-control" step="0.01" required >
+                                    <select name="session" class="form-control"  required >
                                         <option value="2025-26">2025-26</option>
                                         <option value="2026-27">2026-27</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label>Date of class show</label>
-                                    <input type="date" name="eval_date" class="form-control" step="0.01" required>
+                                    <input type="date" name="eval_date" class="form-control"  required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Topic</label>
-                                    <textarea name="topic" class="form-control" step="0.01" required> </textarea>
+                                    <textarea name="topic" class="form-control"  required> </textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label>Class Show Video Link </label>
-                                    <input type="text" name="video_link" class="form-control" step="0.01">
+                                    <input type="text" name="video_link" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Search Teacher</label>
                                     <input type="text" id="teacherSearch" class="form-control mb-2" placeholder="Type to filter..." onkeyup="filterTeachers()">
 
                                     <label>Select Teacher</label>
-                                    <select name="teacher_id" id="teacherSelect" class="form-control" step="0.01" onchange="fillTeacherDetails()" required>
+                                    <select name="teacher_id" id="teacherSelect" class="form-control"  onchange="fillTeacherDetails()" required>
                                         <option value="">-- Select Teacher --</option>
                                         <?php
                                         $query = "SELECT td.teacher_id, td.teacher_name, td.subject, td.teacher_type 
@@ -228,7 +228,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                                 <div class="mb-3">
                                     <label>Name of the Teacher</label>
-                                    <input type="text" name="teacher_name" id="teacherName" class="form-control" step="0.01" readonly required>
+                                    <input type="text" name="teacher_name" id="teacherName" class="form-control"  readonly required>
                                 </div>
 
                                 <!-- <div class="mb-3">
@@ -248,12 +248,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                                 <div class="mb-3">
                                     <label>Class/Section</label>
-                                    <input type="text" name="class_section" class="form-control" step="0.01" required>
+                                    <input type="text" name="class_section" class="form-control"  required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label>Name of The Judge</label>
-                                    <input type="text" name="evaluator_name" class="form-control" step="0.01" required>
+                                    <input type="text" name="evaluator_name" class="form-control"  required>
                                 </div>
                                 <!-- <div class="mb-3">
                                     <label>Judge Name </label>
