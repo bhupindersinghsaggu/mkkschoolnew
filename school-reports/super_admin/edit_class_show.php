@@ -83,10 +83,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $stmt = mysqli_prepare($conn, $sql);
 if ($stmt) {
-    // Correct format string: 8 strings + 15 decimals + 6 strings + 2 decimals + 1 integer = 32 characters
+    // Correct format string: 8 strings + 13 decimals + 6 strings + 2 decimals + 1 integer = 30 characters
     mysqli_stmt_bind_param(
         $stmt,
-        "ssssssssdddddddddddddddssssssddi", // 32 characters: 8s + 15d + 6s + 2d + 1i
+        "ssssssssdddddddddddddssssssddi", // 30 characters: 8s + 13d + 6s + 2d + 1i
         $session,           // s (1)
         $eval_date,         // s (2)
         $topic,             // s (3)
@@ -107,7 +107,7 @@ if ($stmt) {
         $skit,              // d (18)
         $ppt,               // d (19)
         $anchoring,         // d (20)
-        $total,             // d (21) - 15th decimal
+        $total,             // d (21) - 13th decimal
         $speaking_skills,   // s (22)
         $dancing_skills,    // s (23)
         $singing_skills,    // s (24)
@@ -115,10 +115,9 @@ if ($stmt) {
         $comments1,         // s (26)
         $comments2,         // s (27) - 6th string
         $marks_judge1,      // d (28)
-        $marks_judge2,      // d (29) - 17th decimal
+        $marks_judge2,      // d (29) - 15th decimal
         $id                 // i (30)
     );
-
         if (mysqli_stmt_execute($stmt)) {
             $submitted = true;
             $message = "✅ Record updated successfully. Total: " . $total;
