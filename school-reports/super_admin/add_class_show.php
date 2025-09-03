@@ -286,7 +286,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Speeches [English (5), Hindi (01)]</label>
-                                    <input type="number" name="speeches" class="form-control" step="0.01"  min="0" max="5">
+                                    <input type="number" name="speeches" class="form-control" step="0.01"  min="0" max="15">
                                 </div>
                                 <div class="mb-3">
                                     <label>Poem Recitation [English (2), Hindi (01)]</label>

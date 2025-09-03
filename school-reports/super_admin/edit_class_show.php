@@ -372,7 +372,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Speeches</label>
-                                    <input type="number" name="speeches" class="form-control" step="0.01" value="<?= $record['speeches'] ?>" min="0" max="10" required>
+                                    <input type="number" name="speeches" class="form-control" step="0.01" value="<?= $record['speeches'] ?>" min="0" max="15" required>
                                 </div>
                                 <div class="mb-3">
                                     <label>Poem recitation</label>
