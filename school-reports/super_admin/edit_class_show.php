@@ -217,42 +217,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        function calculateTotal() {
-            const fields = [
-                'prayer', 'news', 'participation', 'speeches', 'poem_recitation',
-                'dance', 'song', 'stage_management', 'innovation',
-                'skit', 'ppt', 'anchoring'
-            ];
-
-            let total = 0;
-
-            fields.forEach(field => {
-                const value = parseInt(document.querySelector(`[name="${field}"]`).value) || 0;
-                total += value;
-            });
-
-            document.getElementById('totalField').value = total;
-        }
-
-        // Add event listeners when page loads
+        // Auto-calculate total when any score field changes
         document.addEventListener('DOMContentLoaded', function() {
-            const numericFields = [
-                'prayer', 'news', 'participation', 'speeches', 'poem_recitation',
-                'dance', 'song', 'stage_management', 'innovation',
-                'skit', 'ppt', 'anchoring'
-            ];
-
-            numericFields.forEach(field => {
-                const input = document.querySelector(`[name="${field}"]`);
-                if (input) {
-                    input.addEventListener('input', calculateTotal);
-                }
+            const form = document.getElementById('editClassShowForm');
+            const scoreInputs = form.querySelectorAll('input[type="number"][name]:not([name="total"]):not([name="marks_judge1"]):not([name="marks_judge2"])');
+            const totalField = document.getElementById('totalField');
+            
+            function calculateTotal() {
+                let total = 0;
+                scoreInputs.forEach(input => {
+                    if (input.value && !isNaN(parseFloat(input.value))) {
+                        total += parseFloat(input.value);
+                    }
+                });
+                totalField.value = total.toFixed(2);
+            }
+            
+            scoreInputs.forEach(input => {
+                input.addEventListener('input', calculateTotal);
             });
-
-            // Calculate initial total
+            
+            // Initial calculation
             calculateTotal();
+            
+            // Initialize teacher details on page load
+            fillTeacherDetails();
         });
     </script>
+
 </head>
 
 <body>
