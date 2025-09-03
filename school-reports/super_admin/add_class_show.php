@@ -63,7 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 7 strings (session to class_section) + 18 integers + 1 string (comments)
         mysqli_stmt_bind_param(
             $stmt,
-            "ssssssssddddddddddddddsssssdd", // 25 characters: 8s + 18i
+            // "ssssssssddddddddddddddsssssdd", 
+            "ssssssssddddddddddddddsssssdd", 
             $session,           // s (1)
             $eval_date,         // s (2)
             $topic,             // s (3)
