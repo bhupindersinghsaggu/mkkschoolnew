@@ -278,7 +278,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label>News (English Only) (2)</label>
-                                    <input type="number" name="news" class="form-control"  min="0" max="2">
+                                    <input type="number" name="news" class="form-control"  step="0.01" min="0" max="2">
                                 </div>
                                 <div class="mb-3">
                                     <label>Participation (3)</label>
