@@ -414,9 +414,9 @@ error_log("Calculated average: " . $average_marks);
         <!-- Print Footer -->
         <div class="no-print mt-4 mb-3">
             <div class="text-center">
-                <a href=" print_single_class_show.php?id=<?= $row['id'] ?>" target="_blank" class="btn btn-primary btn-lg">
+                <a href="print_single_class_show.php?id=<?= $row['id'] ?>" target="_blank" class="btn btn-primary">
                     <i class="fas fa-print"></i> Print This Report
-    </a>
+                </a>
             </div>
         </div>
     </div>
