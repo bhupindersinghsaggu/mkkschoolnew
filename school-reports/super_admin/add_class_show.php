@@ -347,15 +347,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <input type="text" name="dramatic_skills" class="form-control" step="0.01">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Comments by Judges</label>
+                                    <label>Comments by Judge 1</label>
                                     <div class="mb-2">
                                         <label class="form-label small text-muted"></label>
-                                        <textarea name="comments1" class="form-control" step="0.01" placeholder="Enter comments by Judge 1..."></textarea>
+                                        <textarea name="comments1" class="form-control" step="0.01"></textarea>
                                     </div>
 
+                                    <label>Comments by Judge 2</label>
                                     <div class="mb-2">
                                         <label class="form-label small text-muted"></label>
-                                        <textarea name="comments2" class="form-control" step="0.01" placeholder="Enter comments by Judge 2..."></textarea>
+                                        <textarea name="comments2" class="form-control" step="0.01"></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3">
