@@ -249,8 +249,8 @@ $average_marks = ($marks1 + $marks2) / 2;
             <!-- Marks -->
             <div>
                 <div class="section-title">Final Marks</div>
-                <table class="table table-bordered table-sm" style="width: 100%;">
-                    <tr>
+                <table class="table table-bordered table-sm" >
+                    <tr width: 100%;>
                         <th>Marks by Judge 1</th>
                         <td><?= $row['marks_judge1'] ?></td>
                     </tr>
