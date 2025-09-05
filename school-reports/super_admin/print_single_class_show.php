@@ -136,12 +136,11 @@ $average_marks = ($marks1 + $marks2) / 2;
                 <div>
                     <h2>Dr. M.K.K. Arya Model School</h2>
                     <p>Model Town, Panipat</p>
+                    <div class="report-title">Class Show Evaluation Report</div>
                 </div>
             </div>
         </div>
         <!-- Report Title -->
-        <div class="report-title">Class Show Evaluation Report</div>
-
         <!-- Basic Information -->
         <div class="section-title">Basic Information</div>
         <table class="table table-bordered table-sm">
