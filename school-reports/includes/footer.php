@@ -108,6 +108,26 @@
 				});
 		});
 	}
+	let deferredPrompt;
+	const installButton = document.getElementById('installButton');
+
+	window.addEventListener('beforeinstallprompt', (e) => {
+		e.preventDefault();
+		deferredPrompt = e;
+		installButton.style.display = 'block';
+	});
+
+	installButton.addEventListener('click', async () => {
+		if (deferredPrompt) {
+			deferredPrompt.prompt();
+			const {
+				outcome
+			} = await deferredPrompt.userChoice;
+			if (outcome === 'accepted') {
+				deferredPrompt = null;
+			}
+		}
+	});
 </script>
 
 </body>
