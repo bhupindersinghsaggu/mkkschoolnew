@@ -237,6 +237,7 @@ require_once '../includes/function.php';
                     </div>
                 </div>
             </div>
+            <!-- Recent Class Show (replace existing block) -->
             <div class="col-xxl-4 col-md-6 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
@@ -246,52 +247,64 @@ require_once '../includes/function.php';
                         </div>
                         <a href="./list_class_show.php" class="fs-13 fw-medium text-decoration-underline">View All</a>
                     </div>
+
                     <div class="card-body">
                         <?php
-                        $query = "SELECT * FROM class_show ORDER BY created_at DESC LIMIT 2";
-                        $result = mysqli_query($conn, $query);
-                        // Check if query was successful and has data 
-                        if ($result && mysqli_num_rows($result) > 0):
-                            $latest_class = mysqli_fetch_assoc($result);
+                        // Fetch the latest class_show record
+                        $latest_sql = "SELECT * FROM class_show ORDER BY created_at DESC LIMIT 1";
+                        $latest_res = mysqli_query($conn, $latest_sql);
 
-                            // Calculate average marks
-                            $marks1 = (int)$latest_class['marks_judge1'];
-                            $marks2 = (int)$latest_class['marks_judge2'];
+                        if ($latest_res && mysqli_num_rows($latest_res) > 0):
+                            $latest = mysqli_fetch_assoc($latest_res);
+
+                            // Calculate average marks (guard against non-numeric)
+                            $marks1 = is_numeric($latest['marks_judge1']) ? (float)$latest['marks_judge1'] : 0;
+                            $marks2 = is_numeric($latest['marks_judge2']) ? (float)$latest['marks_judge2'] : 0;
                             $average_marks = ($marks1 + $marks2) / 2;
+
+                            // Prepare safe values
+                            $teacher_name = htmlspecialchars($latest['teacher_name']);
+                            $class_section = htmlspecialchars($latest['class_section']);
+                            $topic = htmlspecialchars($latest['topic']);
+                            $eval_date = !empty($latest['eval_date']) ? htmlspecialchars($latest['eval_date']) : '';
+                            $viewUrl = './view_class_show.php?id=' . urlencode($latest['id']);
+                            $printUrl = './print_single_class_show.php?id=' . urlencode($latest['id']);
                         ?>
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <div class="d-flex align-items-center">
                                     <div class="ms-2">
-                                        <h6 class="fw-bold mb-2">
-                                            <?php echo htmlspecialchars($latest_class['teacher_name']); ?>
-                                        </h6>
-                                        <div class="fs-13 mb-2">Class/Section:
-                                          <strong>  <?php echo htmlspecialchars($latest_class['class_section']); ?></strong>
-                                        </div>
-                                        <div class="fs-13 mb-2 ">Average No:</strong>
-                                           <strong> <span
-                                                class="revenue-icon bg-cyan-transparent text-cyan value"><?php echo number_format($average_marks, 2); ?></span></strong>
-                                        </div>
-                                        <p class="fs-13 mb-2">
-                                            Date:
-                                            <i class="ti ti-calendar theme-color"></i> <strong><?php echo htmlspecialchars($latest_class['eval_date']); ?></strong>
-                                        </p>
+                                        <h6 class="fw-bold mb-2"><?= $teacher_name ?></h6>
+                                        <div class="fs-13 mb-2">Class/Section: <strong><?= $class_section ?></strong></div>
+                                        <div class="fs-13 mb-2">Topic: <strong><?= $topic ?></strong></div>
                                         <div class="fs-13 mb-2">
-                                           Topic:
-                                             <strong><?php echo htmlspecialchars($latest_class['topic']); ?></strong>
+                                            Average Marks:
+                                            <strong>
+                                                <span class="revenue-icon bg-cyan-transparent text-cyan value">
+                                                    <?= number_format($average_marks, 2) ?>
+                                                </span>
+                                            </strong>
                                         </div>
+                                        <p class="fs-13 mb-0">Date: <i class="ti ti-calendar theme-color"></i> <strong><?= $eval_date ?></strong></p>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="d-flex justify-content-center">
-                                <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
-                                    <i class="fas fa-external-link-alt"></i> Watch Show
+
+                            <div class="d-flex gap-2">
+                                <a href="<?= $viewUrl ?>" class="btn btn-outline-primary w-50" title="View Record">
+                                    <i class="fas fa-eye"></i> View
                                 </a>
-                            </div> -->
+                                <a href="<?= $printUrl ?>" target="_blank" class="btn btn-success w-50" title="Open Print View">
+                                    <i class="fas fa-print"></i> Print
+                                </a>
+                            </div>
+
+                        <?php else: ?>
+                            <p class="text-muted">No class show records found.</p>
                         <?php endif; ?>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="copyright-footer d-flex align-items-center justify-content-between border-top bg-white gap-3 flex-wrap">
