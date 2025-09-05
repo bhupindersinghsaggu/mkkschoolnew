@@ -474,7 +474,8 @@ if ($stmt) {
 
 <?php
 // Close statement if it exists
-if (isset($stmt)) {
+if (isset($stmt) && $stmt instanceof mysqli_stmt) {
     mysqli_stmt_close($stmt);
 }
+
 ?>
