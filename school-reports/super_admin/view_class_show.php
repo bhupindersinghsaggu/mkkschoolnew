@@ -400,7 +400,7 @@ error_log("Calculated average: " . $average_marks);
                                     <input type="number" class="form-control fw-bold text-success"
                                         value="<?= number_format($average_marks, 2) ?>"
                                         readonly>
-                                    <span class="input-group-text">/ 40</span>
+                                    <span class="input-group-text">/ 50</span>
                                 </div>
                                 <small class="text-muted">
                                     Calculated from: (Judge 1: <?= $row['marks_judge1'] ?> + Judge 2: <?= $row['marks_judge2'] ?>) ÷ 2
