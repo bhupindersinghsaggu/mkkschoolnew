@@ -265,10 +265,8 @@ $average_marks = ($marks1 + $marks2) / 2;
         <div class="section-title">Comments & Suggestions</div>
         <table class="table table-bordered table-sm">
             <tr>
-                
-                <td>Judge 1 <br><?= nl2br(htmlspecialchars($row['comments1'])) ?></td>
-                
-                <td>Judge 2 <br><?= nl2br(htmlspecialchars($row['comments2'])) ?></td>
+                <td><strong> Judge 1 </strong> <br><?= nl2br(htmlspecialchars($row['comments1'])) ?></td>
+                <td><strong>Judge 2 </strong><br><?= nl2br(htmlspecialchars($row['comments2'])) ?></td>
             </tr>
             <tr>
 
