@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK K School - PWA Installation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a3a8f 0%, #3b70e8 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        header {
+            background: #2c5cc7;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #2c5cc7;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        
+        .instructions {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .code-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+        }
+        
+        h2 {
+            color: #2c5cc7;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2c5cc7;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 10px;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: #2c5cc7;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-content h3 {
+            margin-bottom: 5px;
+            color: #2c5cc7;
+        }
+        
+        pre {
+            background: #2c5cc7;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+        
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #2c5cc7;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #1e4bb6;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background: #4CAF50;
+        }
+        
+        .btn-secondary:hover {
+            background: #3e8e41;
+        }
+        
+        .info-box {
+            background: #e8f4ff;
+            border-left: 4px solid #2c5cc7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-school"></i>
+            </div>
+            <h1>MK K School PWA Installation</h1>
+            <p>Make your website installable on desktop and mobile devices</p>
+        </header>
+        
+        <div class="content">
+            <div class="instructions">
+                <h2><i class="fas fa-info-circle"></i> Instructions</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create manifest.json</h3>
+                        <p>Create a file named manifest.json in your website's root directory with the provided code.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Link the manifest</h3>
+                        <p>Add the following code to the &lt;head&gt; section of your HTML pages:</p>
+                        <code>&lt;link rel="manifest" href="/manifest.json"&gt;</code>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Add icons</h3>
+                        <p>Make sure to add the icon files in the specified sizes to your server in the paths mentioned in the manifest.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Test your PWA</h3>
+                        <p>Use your browser's developer tools to test if your Progressive Web App is configured correctly.</p>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <p><strong>Note:</strong> For security reasons, your website must be served over HTTPS to use PWA features like service workers.</p>
+                </div>
+            </div>
+            
+            <div class="code-section">
+                <h2><i class="fas fa-code"></i> Manifest.json Code</h2>
+                <p>Copy this code to your manifest.json file:</p>
+                
+                <pre><code>{
+  "name": "MK K School Dashboard",
+  "short_name": "MK K School",
+  "description": "MK K School Management System - Admin Dashboard",
+  "start_url": "/school-reports/auth/login.php",
+  "display": "standalone",
+  "background_color": "#2c5cc7",
+  "theme_color": "#2c5cc7",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/school-reports/assets/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/school-reports/assets/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/school-reports/assets/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/school-reports/assets/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/school-reports/assets/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/school-reports/assets/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/school-reports/assets/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/school-reports/assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "productivity"]
+}</code></pre>
+                
+                <div class="buttons">
+                    <button class="btn" onclick="copyCode()">
+                        <i class="fas fa-copy"></i> Copy Code
+                    </button>
+                    <a href="https://mkkschool.com/school-reports/auth/login.php" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i> Go to Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>MK K School &copy; 2023. Providing quality education management tools.</p>
+    </footer>
+
+    <script>
+        function copyCode() {
+            const code = document.querySelector('pre').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Manifest.json code copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+        
+        // Simple animation for step elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const steps = document.querySelectorAll('.step');
+            
+            steps.forEach((step, index) => {
+                step.style.opacity = '0';
+                step.style.transition = 'opacity 0.5s ease';
+                
+                setTimeout(() => {
+                    step.style.opacity = '1';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>
