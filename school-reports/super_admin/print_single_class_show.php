@@ -283,18 +283,15 @@ $average_marks = ($marks1 + $marks2) / 2;
                 <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td>
             </tr>
         </table>
-        <table class="table table-bordered table-sm">
-            <tr>
-                <th>Record Created</th>
-                <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td>
-            </tr>
-        </table>
-        <!-- Signature -->
-        <div class="row signature-box d-flex justify-content-between">
-            <div class="col-md-6">Teacher Signature</div>
-            <div class="col-md-6">Evaluator Signature</div>
+        <div class="d-flex justify-content-start gap-3">
+            <div>Record Created</div>
+            <div><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></div>
+            <!-- Signature -->
+            <div class="row signature-box d-flex justify-content-between">
+                <div class="col-md-6">Teacher Signature</div>
+                <div class="col-md-6">Evaluator Signature</div>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>
