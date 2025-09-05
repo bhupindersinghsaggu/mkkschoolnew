@@ -94,7 +94,7 @@ require_once '../includes/function.php';
             </div>
         </div>
         <div class="row">
-            <div class="col-xxl-4 col-md-6 d-flex">
+            <div class="col-xxl-6 col-md-6 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-inline-flex align-items-center">
@@ -191,7 +191,7 @@ require_once '../includes/function.php';
                 </div>
             </div>
             
-            <div class="col-xxl-4 col-md-6 d-flex">
+            <div class="col-xxl-6 col-md-6 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-inline-flex align-items-center">
@@ -291,7 +291,7 @@ require_once '../includes/function.php';
                     </div>
                 </div>
             </div>
-            <div class="col-xxl-4 col-md-6 d-flex">
+            <!-- <div class="col-xxl-4 col-md-6 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-inline-flex align-items-center">
@@ -337,7 +337,7 @@ require_once '../includes/function.php';
                         <?php endif; ?>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="copyright-footer d-flex align-items-center justify-content-between border-top bg-white gap-3 flex-wrap">
