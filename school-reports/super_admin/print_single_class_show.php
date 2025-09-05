@@ -280,7 +280,7 @@ $average_marks = ($marks1 + $marks2) / 2;
         </table>
 
         <!-- Signature -->
-        <div class="row signature-box">
+        <div class="row signature-box d-flex justify-content-between">
             <div class="col-md-6">Teacher Signature</div>
             <div class="col-md-6">Evaluator Signature</div>
         </div>
