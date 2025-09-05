@@ -273,11 +273,11 @@ require_once '../includes/function.php';
                                                 class="revenue-icon bg-cyan-transparent text-cyan value"><?php echo number_format($average_marks, 2); ?></span></strong>
                                         </div>
                                         <p class="fs-13 mb-2">
-                                            Date
+                                            Date:
                                             <i class="ti ti-calendar theme-color"></i> <strong><?php echo htmlspecialchars($latest_class['eval_date']); ?></strong>
                                         </p>
                                         <div class="fs-13 mb-2">
-                                           Topic
+                                           Topic:
                                              <strong><?php echo htmlspecialchars($latest_class['topic']); ?></strong>
                                         </div>
                                     </div>
