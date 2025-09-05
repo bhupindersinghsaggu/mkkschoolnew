@@ -274,10 +274,9 @@ $average_marks = ($marks1 + $marks2) / 2;
         <table class="table table-bordered table-sm">
             <tr>
                 <td><strong> Judge 1 </strong> <br><?= nl2br(htmlspecialchars($row['comments1'])) ?></td>
-                <td><strong>Judge 2 </strong><br><?= nl2br(htmlspecialchars($row['comments2'])) ?></td>
             </tr>
             <tr>
-
+                <td><strong>Judge 2 </strong><br><?= nl2br(htmlspecialchars($row['comments2'])) ?></td>
             </tr>
             <tr>
                 <th>Record Created</th>
