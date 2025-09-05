@@ -102,6 +102,10 @@ $average_marks = ($marks1 + $marks2) / 2;
             font-weight: 500;
         }
 
+        table {
+            width: 100%;
+        }
+
         @media print {
             .no-print {
                 display: none !important;
@@ -249,8 +253,8 @@ $average_marks = ($marks1 + $marks2) / 2;
             <!-- Marks -->
             <div>
                 <div class="section-title">Final Marks</div>
-                <table class="table table-bordered table-sm" >
-                    <tr width: 100%;>
+                <table class="table table-bordered table-sm">
+                    <tr>
                         <th>Marks by Judge 1</th>
                         <td><?= $row['marks_judge1'] ?></td>
                     </tr>
