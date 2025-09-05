@@ -1,8 +1,8 @@
 {
-  "name": "MKK School Dashboard",
-  "short_name": "MKK School",
-  "description": "MKK School Management System - Admin Dashboard",
-  "start_url": "/school-reports/auth/login.php",
+  "name": "MK K School Dashboard",
+  "short_name": "MK K School",
+  "description": "MK K School Management System - Admin Dashboard",
+  "start_url": "/school-reports/super_admin/dashboard.php",
   "display": "standalone",
   "background_color": "#2c5cc7",
   "theme_color": "#2c5cc7",
