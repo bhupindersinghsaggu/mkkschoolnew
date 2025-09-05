@@ -311,10 +311,10 @@ require_once '../includes/function.php';
                                         <div class="fs-13 mb-1">
                                             <strong>Topic:</strong> <?= $topic ?>
                                         </div>
-
+<!-- 
                                         <div class="fs-13 mb-2 text-muted">
                                             <?= $comments_preview ?: '<em>No comments</em>' ?>
-                                        </div>
+                                        </div> -->
 
                                         <div class="d-flex gap-2">
                                             <a href="<?= $viewUrl ?>" class="btn btn-outline-primary btn-sm">
