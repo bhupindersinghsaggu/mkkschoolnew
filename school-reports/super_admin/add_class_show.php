@@ -361,11 +361,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 1</label>
-                                    <input type="number" name="marks_judge1" class="form-control" step="0.01" min="0" max="40">
+                                    <input type="number" name="marks_judge1" class="form-control" step="0.01" min="0" max="50">
                                 </div>
                                 <div class="mb-3">
                                     <label>Total Marks By Judge 2</label>
-                                    <input type="number" name="marks_judge2" class="form-control" step="0.01" min="0" max="40">
+                                    <input type="number" name="marks_judge2" class="form-control" step="0.01" min="0" max="50">
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                                 <a href="./dashboard.php" class="btn btn-secondary">Back</a>

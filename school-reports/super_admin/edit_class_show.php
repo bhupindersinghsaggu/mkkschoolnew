@@ -443,11 +443,11 @@ if ($stmt) {
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge1</label>
-                                    <input type="number" name="marks_judge1" class="form-control" step="0.01" value="<?= $record['marks_judge1'] ?>" min="0" max="40">
+                                    <input type="number" name="marks_judge1" class="form-control" step="0.01" value="<?= $record['marks_judge1'] ?>" min="0" max="50">
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge2</label>
-                                    <input type="number" name="marks_judge2" class="form-control" step="0.01" value="<?= $record['marks_judge2'] ?>" min="0" max="40">
+                                    <input type="number" name="marks_judge2" class="form-control" step="0.01" value="<?= $record['marks_judge2'] ?>" min="0" max="50">
                                 </div>
                                 <div class="d-flex gap-2">
                                     <button type="submit" class="btn btn-success">Update </button>
