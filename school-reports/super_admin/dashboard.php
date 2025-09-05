@@ -273,6 +273,7 @@ require_once '../includes/function.php';
                                                 class="revenue-icon bg-cyan-transparent text-cyan value"><?php echo number_format($average_marks, 2); ?></span>
                                         </div>
                                         <div class="fs-13 mb-2">
+                                            <strong>Topic</strong>
                                             <?php echo htmlspecialchars($latest_class['topic']); ?>
                                         </div>
                                     </div>
@@ -285,11 +286,11 @@ require_once '../includes/function.php';
                                     <br>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-center">
+                            <!-- <div class="d-flex justify-content-center">
                                 <a href="<?php echo htmlspecialchars($latest_class['video_link']); ?>" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
                                     <i class="fas fa-external-link-alt"></i> Watch Show
                                 </a>
-                            </div>
+                            </div> -->
                         <?php endif; ?>
                     </div>
                 </div>
