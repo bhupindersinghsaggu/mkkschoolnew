@@ -225,42 +225,45 @@ $average_marks = ($marks1 + $marks2) / 2;
         </table>
         <!-- Skills Assessment -->
         <div class="d-flex justify-content-center">
-            <div class="section-title">Skills Assessment (Students)</div>
-            <table class="table table-bordered table-sm">
-                <tr>
-                    <th>Speaking Skills</th>
-                    <td><?= $row['speaking_skills'] ?></td>
-                </tr>
-                <tr>
-                    <th>Dancing Skills</th>
-                    <td><?= $row['dancing_skills'] ?></td>
-                </tr>
-                <tr>
-                    <th>Singing Skills</th>
-                    <td><?= $row['singing_skills'] ?></td>
-                </tr>
-                <tr>
-                    <th>Dramatic Skills</th>
-                    <td><?= $row['dramatic_skills'] ?></td>
-                </tr>
-            </table>
-
+            <div>
+                <div class="section-title">Skills Assessment (Students)</div>
+                <table class="table table-bordered table-sm">
+                    <tr>
+                        <th>Speaking Skills</th>
+                        <td><?= $row['speaking_skills'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>Dancing Skills</th>
+                        <td><?= $row['dancing_skills'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>Singing Skills</th>
+                        <td><?= $row['singing_skills'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>Dramatic Skills</th>
+                        <td><?= $row['dramatic_skills'] ?></td>
+                    </tr>
+                </table>
+            </div>
             <!-- Marks -->
-            <div class="section-title">Final Marks</div>
-            <table class="table table-bordered table-sm">
-                <tr>
-                    <th>Marks by Judge 1</th>
-                    <td><?= $row['marks_judge1'] ?></td>
-                </tr>
-                <tr>
-                    <th>Marks by Judge 2</th>
-                    <td><?= $row['marks_judge2'] ?></td>
-                </tr>
-                <tr class="table-success">
-                    <th>Average Marks</th>
-                    <td><strong><?= number_format($average_marks, 2) ?> / 40</strong></td>
-                </tr>
-            </table>
+            <div>
+                <div class="section-title">Final Marks</div>
+                <table class="table table-bordered table-sm">
+                    <tr>
+                        <th>Marks by Judge 1</th>
+                        <td><?= $row['marks_judge1'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>Marks by Judge 2</th>
+                        <td><?= $row['marks_judge2'] ?></td>
+                    </tr>
+                    <tr class="table-success">
+                        <th>Average Marks</th>
+                        <td><strong><?= number_format($average_marks, 2) ?> / 40</strong></td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <!-- Comments -->
         <div class="section-title">Comments & Suggestions</div>
