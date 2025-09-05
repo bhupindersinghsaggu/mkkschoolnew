@@ -435,11 +435,11 @@ if ($stmt) {
                                 </div>
                                 <div class="mb-3">
                                     <label>Comments/Remarks By Judge1</label>
-                                    <textarea name="comments1" class="form-control" rows="4" required><?= htmlspecialchars($record['comments1']) ?></textarea>
+                                    <textarea name="comments1" class="form-control" rows="4"><?= htmlspecialchars($record['comments1']) ?></textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label>Comments/Remarks By Judge2</label>
-                                    <textarea name="comments2" class="form-control" rows="4" required><?= htmlspecialchars($record['comments2']) ?></textarea>
+                                    <textarea name="comments2" class="form-control" rows="4"><?= htmlspecialchars($record['comments2']) ?></textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label>Marks By Judge1</label>
