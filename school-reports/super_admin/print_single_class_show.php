@@ -47,7 +47,7 @@ $average_marks = ($marks1 + $marks2) / 2;
 
         .school-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
 
         .school-header img {
