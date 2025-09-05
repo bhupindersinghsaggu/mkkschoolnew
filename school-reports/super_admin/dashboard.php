@@ -265,14 +265,15 @@ require_once '../includes/function.php';
                                         <h6 class="fw-bold mb-2">
                                             <?php echo htmlspecialchars($latest_class['teacher_name']); ?>
                                         </h6>
-                                        <div class="fs-13 mb-2">Class/Section:
+                                        <div class="fs-13 mb-2"><strong>Class/Section:</strong>
                                             <?php echo htmlspecialchars($latest_class['class_section']); ?>
                                         </div>
-                                        <div class="fs-13 mb-2">Average No:
+                                        <div class="fs-13 mb-2"><strong>Average No:</strong>
                                             <span
                                                 class="revenue-icon bg-cyan-transparent text-cyan value"><?php echo number_format($average_marks, 2); ?></span>
                                         </div>
                                         <p class="fs-13 mb-2">
+                                            <strong>Date</strong>
                                             <i class="ti ti-calendar theme-color"></i> <?php echo htmlspecialchars($latest_class['eval_date']); ?>
                                         </p>
                                         <div class="fs-13 mb-2">
