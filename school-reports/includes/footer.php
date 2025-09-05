@@ -94,15 +94,20 @@
 	integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
 	data-cf-beacon='{"rayId":"95e6786a8eafa804","version":"2025.6.2","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"3ca157e612a14eccbb30cf6db6691c29","b":1}'
 	crossorigin="anonymous"></script>
+
+
+<script>
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('/sw.js')
+				.then(function(registration) {
+					console.log('SW registered: ', registration);
+				})
+				.catch(function(registrationError) {
+					console.log('SW registration failed: ', registrationError);
+				});
+		});
+	}
+</script>
+
 </body>
-
-
-
-
-
-
-
-
-
-
-
