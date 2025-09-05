@@ -272,17 +272,18 @@ require_once '../includes/function.php';
                                             <span
                                                 class="revenue-icon bg-cyan-transparent text-cyan value"><?php echo number_format($average_marks, 2); ?></span>
                                         </div>
+                                        <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
+                                            <h6 class="text-white fw-medium text-wrap text-right ">
+                                                <?php echo htmlspecialchars($latest_class['topic']); ?>
+                                            </h6>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="text-end">
                                     <p class="fs-13 mb-2">
                                         <i class="ti ti-calendar theme-color"></i> <?php echo htmlspecialchars($latest_class['eval_date']); ?>
                                     </p>
-                                    <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
-                                        <h6 class="text-white fw-medium text-wrap text-right ">
-                                            <?php echo htmlspecialchars($latest_class['topic']); ?>
-                                        </h6>
-                                    </span>
+
                                     <br>
                                 </div>
                             </div>
