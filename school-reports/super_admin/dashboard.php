@@ -273,9 +273,7 @@ require_once '../includes/function.php';
                                                 class="revenue-icon bg-cyan-transparent text-cyan value"><?php echo number_format($average_marks, 2); ?></span>
                                         </div>
                                         <div class="fs-13 mb-2">
-                                            <h6 class="text-white fw-medium text-wrap text-left ">
-                                                <?php echo htmlspecialchars($latest_class['topic']); ?>
-                                            </h6>
+                                            <?php echo htmlspecialchars($latest_class['topic']); ?>
                                         </div>
                                     </div>
                                 </div>
