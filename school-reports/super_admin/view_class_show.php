@@ -371,15 +371,15 @@ error_log("Calculated average: " . $average_marks);
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title">Comments </h5>
+                            <h5 class="card-title">Comments & Suggestions </h5>
                         </div>
                         <div class="card-body">
                             <div class="mb-3">
-                                <label class="form-label"><strong>Comments & Suggestions</strong></label>
+                                <label class="form-label"><strong>Judge 1 </strong></label>
                                 <p class="form-control-plaintext"><?= nl2br(htmlspecialchars($row['comments1'])) ?></p>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label"><strong>Comments & Suggestions</strong></label>
+                                <label class="form-label"><strong>Judge 2</strong></label>
                                 <p class="form-control-plaintext"><?= nl2br(htmlspecialchars($row['comments2'])) ?></p>
                             </div>
                             <div class="mb-3">
