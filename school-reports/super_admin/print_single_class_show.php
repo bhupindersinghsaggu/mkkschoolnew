@@ -172,27 +172,6 @@ $average_marks = ($marks1 + $marks2) / 2;
             </tr>
         </table>
 
-        <!-- Skills Assessment -->
-        <div class="section-title">Skills Assessment (Students)</div>
-        <table class="table table-bordered table-sm">
-            <tr>
-                <th>Speaking Skills</th>
-                <td><?= $row['speaking_skills'] ?></td>
-            </tr>
-            <tr>
-                <th>Dancing Skills</th>
-                <td><?= $row['dancing_skills'] ?></td>
-            </tr>
-            <tr>
-                <th>Singing Skills</th>
-                <td><?= $row['singing_skills'] ?></td>
-            </tr>
-            <tr>
-                <th>Dramatic Skills</th>
-                <td><?= $row['dramatic_skills'] ?></td>
-            </tr>
-        </table>
-
         <!-- Scores & Evaluation -->
         <div class="section-title">Scores & Evaluation</div>
         <table class="table table-bordered table-sm">
@@ -243,6 +222,26 @@ $average_marks = ($marks1 + $marks2) / 2;
             <tr>
                 <th>Anchoring</th>
                 <td><?= $row['anchoring'] ?></td>
+            </tr>
+        </table>
+        <!-- Skills Assessment -->
+        <div class="section-title">Skills Assessment (Students)</div>
+        <table class="table table-bordered table-sm">
+            <tr>
+                <th>Speaking Skills</th>
+                <td><?= $row['speaking_skills'] ?></td>
+            </tr>
+            <tr>
+                <th>Dancing Skills</th>
+                <td><?= $row['dancing_skills'] ?></td>
+            </tr>
+            <tr>
+                <th>Singing Skills</th>
+                <td><?= $row['singing_skills'] ?></td>
+            </tr>
+            <tr>
+                <th>Dramatic Skills</th>
+                <td><?= $row['dramatic_skills'] ?></td>
             </tr>
         </table>
 
