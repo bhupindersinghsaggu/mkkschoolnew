@@ -268,12 +268,11 @@ require_once '../includes/function.php';
                                 $class_section = htmlspecialchars($latest['class_section'] ?? '');
                                 $topic = htmlspecialchars($latest['topic'] ?? '');
                                 $eval_date = !empty($latest['eval_date']) ? htmlspecialchars($latest['eval_date']) : '';
-                                $comments_preview = htmlspecialchars($latest['comments1'] ?? $latest['comments2'] ?? '');
+                                // $comments_preview = htmlspecialchars($latest['comments1'] ?? $latest['comments2'] ?? '');
                                 // trim to 120 chars
                                 if (strlen($comments_preview) > 120) {
                                     $comments_preview = substr($comments_preview, 0, 120) . '...';
                                 }
-
                                 // Average marks (safe numeric)
                                 $marks1 = is_numeric($latest['marks_judge1']) ? (float)$latest['marks_judge1'] : 0;
                                 $marks2 = is_numeric($latest['marks_judge2']) ? (float)$latest['marks_judge2'] : 0;
@@ -331,7 +330,6 @@ require_once '../includes/function.php';
                                         </div>
                                     </div>
                                 </div>
-
                                 <?php if (!empty($latest_res) && mysqli_num_rows($latest_res) > 0) : ?>
                                     <hr style="margin: 8px 0;">
                                 <?php endif; ?>
