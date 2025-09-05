@@ -167,7 +167,7 @@ $average_marks = ($marks1 + $marks2) / 2;
                 <td><?= htmlspecialchars($row['topic']) ?></td>
             </tr>
             <tr>
-                <th>Evaluator</th>
+                <th>Judges</th>
                 <td colspan="3"><?= htmlspecialchars($row['evaluator_name']) ?></td>
             </tr>
         </table>

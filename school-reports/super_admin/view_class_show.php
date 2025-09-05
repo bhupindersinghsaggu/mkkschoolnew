@@ -252,7 +252,7 @@ error_log("Calculated average: " . $average_marks);
                                         </a></td>
                                 </tr>
                                 <tr>
-                                    <th>Judge</th>
+                                    <th>Judges</th>
                                     <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
                                 </tr>
                             </table>
