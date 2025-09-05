@@ -224,7 +224,7 @@ $average_marks = ($marks1 + $marks2) / 2;
             </tr>
         </table>
         <!-- Skills Assessment -->
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-start gap-3">
             <div>
                 <div class="section-title">Skills Assessment (Students)</div>
                 <table class="table table-bordered table-sm">
