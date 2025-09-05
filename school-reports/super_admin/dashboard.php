@@ -268,7 +268,7 @@ require_once '../includes/function.php';
                                         <div class="fs-13 mb-2">Class/Section:
                                           <strong>  <?php echo htmlspecialchars($latest_class['class_section']); ?></strong>
                                         </div>
-                                        <div class="fs-13 mb-2 badge bg-purple badge-xs">Average No:</strong>
+                                        <div class="fs-13 mb-2 ">Average No:</strong>
                                            <strong> <span
                                                 class="revenue-icon bg-cyan-transparent text-cyan value"><?php echo number_format($average_marks, 2); ?></span></strong>
                                         </div>
