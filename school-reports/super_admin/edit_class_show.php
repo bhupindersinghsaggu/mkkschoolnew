@@ -378,18 +378,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
 
                                 <!-- Score inputs (kept as before) -->
-                                <div class="mb-3"><label>Prayer</label><input type="number" name="prayer" class="form-control" step="0.01" value="<?= $record['prayer'] ?>" min="0" max="10" required></div>
-                                <div class="mb-3"><label>News</label><input type="number" name="news" class="form-control" step="0.01" value="<?= $record['news'] ?>" min="0" max="10" required></div>
-                                <div class="mb-3"><label>Participation</label><input type="number" name="participation" class="form-control" step="0.01" value="<?= $record['participation'] ?>" min="0" max="10" required></div>
-                                <div class="mb-3"><label>Speeches</label><input type="number" name="speeches" class="form-control" step="0.01" value="<?= $record['speeches'] ?>" min="0" max="15" required></div>
-                                <div class="mb-3"><label>Poem recitation</label><input type="number" name="poem_recitation" class="form-control" step="0.01" value="<?= $record['poem_recitation'] ?>" min="0" max="10" required></div>
-                                <div class="mb-3"><label>Dance</label><input type="number" name="dance" class="form-control" step="0.01" value="<?= $record['dance'] ?>" min="0" max="10" required></div>
-                                <div class="mb-3"><label>Song</label><input type="number" name="song" class="form-control" step="0.01" value="<?= $record['song'] ?>" min="0" max="10" required></div>
-                                <div class="mb-3"><label>Stage Management</label><input type="number" name="stage_management" class="form-control" step="0.01" value="<?= $record['stage_management'] ?>" min="0" max="10" required></div>
-                                <div class="mb-3"><label>Innovation</label><input type="number" name="innovation" class="form-control" step="0.01" value="<?= $record['innovation'] ?>" min="0" max="10" required></div>
-                                <div class="mb-3"><label>Skit</label><input type="number" name="skit" class="form-control" step="0.01" value="<?= $record['skit'] ?>" min="0" max="10" required></div>
-                                <div class="mb-3"><label>PPT</label><input type="number" name="ppt" class="form-control" step="0.01" value="<?= $record['ppt'] ?>" min="0" max="10" required></div>
-                                <div class="mb-3"><label>Anchoring</label><input type="number" name="anchoring" class="form-control" step="0.01" value="<?= $record['anchoring'] ?>" min="0" max="10" required></div>
+                                <div class="mb-3"><label>Prayer</label><input type="number" name="prayer" class="form-control" step="0.01" value="<?= $record['prayer'] ?>" min="0" max="10" ></div>
+                                <div class="mb-3"><label>News</label><input type="number" name="news" class="form-control" step="0.01" value="<?= $record['news'] ?>" min="0" max="10" ></div>
+                                <div class="mb-3"><label>Participation</label><input type="number" name="participation" class="form-control" step="0.01" value="<?= $record['participation'] ?>" min="0" max="10" ></div>
+                                <div class="mb-3"><label>Speeches</label><input type="number" name="speeches" class="form-control" step="0.01" value="<?= $record['speeches'] ?>" min="0" max="15" ></div>
+                                <div class="mb-3"><label>Poem recitation</label><input type="number" name="poem_recitation" class="form-control" step="0.01" value="<?= $record['poem_recitation'] ?>" min="0" max="10" ></div>
+                                <div class="mb-3"><label>Dance</label><input type="number" name="dance" class="form-control" step="0.01" value="<?= $record['dance'] ?>" min="0" max="10" ></div>
+                                <div class="mb-3"><label>Song</label><input type="number" name="song" class="form-control" step="0.01" value="<?= $record['song'] ?>" min="0" max="10" ></div>
+                                <div class="mb-3"><label>Stage Management</label><input type="number" name="stage_management" class="form-control" step="0.01" value="<?= $record['stage_management'] ?>" min="0" max="10" ></div>
+                                <div class="mb-3"><label>Innovation</label><input type="number" name="innovation" class="form-control" step="0.01" value="<?= $record['innovation'] ?>" min="0" max="10" ></div>
+                                <div class="mb-3"><label>Skit</label><input type="number" name="skit" class="form-control" step="0.01" value="<?= $record['skit'] ?>" min="0" max="10" ></div>
+                                <div class="mb-3"><label>PPT</label><input type="number" name="ppt" class="form-control" step="0.01" value="<?= $record['ppt'] ?>" min="0" max="10" ></div>
+                                <div class="mb-3"><label>Anchoring</label><input type="number" name="anchoring" class="form-control" step="0.01" value="<?= $record['anchoring'] ?>" min="0" max="10" ></div>
 
                             </div>
                         </div>
