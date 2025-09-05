@@ -356,7 +356,7 @@ if ($stmt) {
                                 </div>
                                 <div class="mb-3">
                                     <label>Video Link</label>
-                                    <input type="text" name="video_link" class="form-control" value="<?= htmlspecialchars($record['video_link']) ?>" required>
+                                    <input type="text" name="video_link" class="form-control" value="<?= htmlspecialchars($record['video_link']) ?>">
                                 </div>
                                 <div class="mb-3">
                                     <label>Prayer</label>
@@ -419,19 +419,19 @@ if ($stmt) {
                                 </div>
                                 <div class="mb-3">
                                     <label>Speaking Skills</label>
-                                    <input type="text" name="speaking_skills" class="form-control" value="<?= $record['speaking_skills'] ?>" required>
+                                    <input type="text" name="speaking_skills" class="form-control" value="<?= $record['speaking_skills'] ?>">
                                 </div>
                                 <div class="mb-3">
                                     <label>Dancing Skills</label>
-                                    <input type="text" name="dancing_skills" class="form-control" value="<?= $record['dancing_skills'] ?>" required>
+                                    <input type="text" name="dancing_skills" class="form-control" value="<?= $record['dancing_skills'] ?>">
                                 </div>
                                 <div class="mb-3">
                                     <label>Singing Skills</label>
-                                    <input type="text" name="singing_skills" class="form-control" value="<?= $record['singing_skills'] ?>" required>
+                                    <input type="text" name="singing_skills" class="form-control" value="<?= $record['singing_skills'] ?>">
                                 </div>
                                 <div class="mb-3">
                                     <label>Dramatic Skills</label>
-                                    <input type="text" name="dramatic_skills" class="form-control" value="<?= $record['dramatic_skills'] ?>" required>
+                                    <input type="text" name="dramatic_skills" class="form-control" value="<?= $record['dramatic_skills'] ?>">
                                 </div>
                                 <div class="mb-3">
                                     <label>Comments/Remarks By Judge1</label>

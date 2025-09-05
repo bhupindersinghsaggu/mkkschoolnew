@@ -332,31 +332,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Speaking Skills (Students)</label>
-                                    <input type="text" name="speaking_skills" class="form-control" step="0.01">
+                                    <input type="text" name="speaking_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Dancing Skills (Students)</label>
-                                    <input type="text" name="dancing_skills" class="form-control" step="0.01">
+                                    <input type="text" name="dancing_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Singing Skills (Students)</label>
-                                    <input type="text" name="singing_skills" class="form-control" step="0.01">
+                                    <input type="text" name="singing_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Dramatic Skills (Students)</label>
-                                    <input type="text" name="dramatic_skills" class="form-control" step="0.01">
+                                    <input type="text" name="dramatic_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
                                     <label>Comments by Judge 1</label>
                                     <div class="mb-2">
                                         <label class="form-label small text-muted"></label>
-                                        <textarea name="comments1" class="form-control" step="0.01"></textarea>
+                                        <textarea name="comments1" class="form-control" ></textarea>
                                     </div>
 
                                     <label>Comments by Judge 2</label>
                                     <div class="mb-2">
                                         <label class="form-label small text-muted"></label>
-                                        <textarea name="comments2" class="form-control" step="0.01"></textarea>
+                                        <textarea name="comments2" class="form-control" ></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3">
