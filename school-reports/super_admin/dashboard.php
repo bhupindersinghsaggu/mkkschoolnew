@@ -270,9 +270,9 @@ require_once '../includes/function.php';
                                 $eval_date = !empty($latest['eval_date']) ? htmlspecialchars($latest['eval_date']) : '';
                                 // $comments_preview = htmlspecialchars($latest['comments1'] ?? $latest['comments2'] ?? '');
                                 // trim to 120 chars
-                                if (strlen($comments_preview) > 120) {
-                                    $comments_preview = substr($comments_preview, 0, 120) . '...';
-                                }
+                                // if (strlen($comments_preview) > 120) {
+                                //     $comments_preview = substr($comments_preview, 0, 120) . '...';
+                                // }
                                 // Average marks (safe numeric)
                                 $marks1 = is_numeric($latest['marks_judge1']) ? (float)$latest['marks_judge1'] : 0;
                                 $marks2 = is_numeric($latest['marks_judge2']) ? (float)$latest['marks_judge2'] : 0;
