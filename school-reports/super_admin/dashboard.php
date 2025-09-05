@@ -279,7 +279,7 @@ require_once '../includes/function.php';
                                         <i class="ti ti-calendar theme-color"></i> <?php echo htmlspecialchars($latest_class['eval_date']); ?>
                                     </p>
                                     <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
-                                        <h6 class="text-white fw-medium text-wrap">
+                                        <h6 class="text-white fw-medium text-wrap text-right ">
                                             <?php echo htmlspecialchars($latest_class['topic']); ?>
                                         </h6>
                                     </span>
