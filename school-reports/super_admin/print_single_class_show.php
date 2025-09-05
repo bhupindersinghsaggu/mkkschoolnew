@@ -271,26 +271,15 @@ $average_marks = ($marks1 + $marks2) / 2;
         </div>
         <!-- Comments -->
         <div class="section-title">Comments & Suggestions</div>
-        <table class="table table-bordered table-sm">
-            <tr>
-                <td><strong> Judge 1 </strong> <br><?= nl2br(htmlspecialchars($row['comments1'])) ?></td>
-            </tr>
-            <tr>
-                <td><strong>Judge 2 </strong><br><?= nl2br(htmlspecialchars($row['comments2'])) ?></td>
-            </tr>
-            <tr>
-                <th>Record Created</th>
-                <td><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></td>
-            </tr>
-        </table>
+
         <div class="d-flex justify-content-start gap-3">
             <div>Record Created</div>
             <div><?= date('d M Y h:i A', strtotime($row['created_at'])) ?></div>
             <!-- Signature -->
-            <div class="row signature-box d-flex justify-content-between">
-                <div class="col-md-6">Teacher Signature</div>
-                <div class="col-md-6">Evaluator Signature</div>
-            </div>
+        </div>
+        <div class="row signature-box d-flex justify-content-between">
+            <div class="col-md-6">Teacher Signature</div>
+            <div class="col-md-6">Evaluator Signature</div>
         </div>
 </body>
 
