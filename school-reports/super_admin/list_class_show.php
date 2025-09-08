@@ -103,9 +103,9 @@ $result = mysqli_query($conn, $query);
                                                         value="<?= number_format($average_marks, 2) ?>"
                                                         readonly> </td>
                                             <td class="action-buttons">
-                                                <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-secondary btn-sm" title="View Details">
+                                                <!-- <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-secondary btn-sm" title="View Details">
                                                     <i class="fas fa-eye"></i>
-                                                </a>
+                                                </a> -->
                                                 <a href="edit_class_show.php?id=<?= $row['id'] ?>" class="btn btn-success btn-sm" title="Edit">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
