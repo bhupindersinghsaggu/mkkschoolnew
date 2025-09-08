@@ -354,11 +354,11 @@ error_log("Calculated average: " . $average_marks);
                             <div class="card-body">
                                 <table class="table table-bordered">
                                     <tr>
-                                        <th>Marks By Judge 1</th>
+                                        <th>Marks By Judge 1 (Meera Marwaha)</th>
                                         <td><?= $row['marks_judge1'] ?></td>
                                     </tr>
                                     <tr>
-                                        <th>Marks By Judge 2</th>
+                                        <th>Marks By Judge 2 (Anjali Dewan)</th>
                                         <td><?= $row['marks_judge2'] ?></td>
                                     </tr>
                                 </table>
@@ -375,11 +375,11 @@ error_log("Calculated average: " . $average_marks);
                         </div>
                         <div class="card-body">
                             <div class="mb-3">
-                                <label class="form-label"><strong>Judge 1 </strong></label>
+                                <label class="form-label"><strong>Judge 1 (Meera Marwaha) </strong></label>
                                 <p class="form-control-plaintext"><?= nl2br(htmlspecialchars($row['comments1'])) ?></p>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label"><strong>Judge 2</strong></label>
+                                <label class="form-label"><strong>Judge 2 (Anjali Dewan)</strong></label>
                                 <p class="form-control-plaintext"><?= nl2br(htmlspecialchars($row['comments2'])) ?></p>
                             </div>
                             <div class="mb-3">

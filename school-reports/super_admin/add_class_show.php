@@ -347,24 +347,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <input type="text" name="dramatic_skills" class="form-control" >
                                 </div>
                                 <div class="mb-3">
-                                    <label>Comments by Judge 1</label>
+                                    <label>Comments by Judge 1 (Meera Marwaha)</label>
                                     <div class="mb-2">
                                         <label class="form-label small text-muted"></label>
                                         <textarea name="comments1" class="form-control" ></textarea>
                                     </div>
 
-                                    <label>Comments by Judge 2</label>
+                                    <label>Comments by Judge 2 (Anjali Dewan)</label>
                                     <div class="mb-2">
                                         <label class="form-label small text-muted"></label>
                                         <textarea name="comments2" class="form-control" ></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Total Marks By Judge 1</label>
+                                    <label>Total Marks By Judge 1 (Meera Marwaha)</label>
                                     <input type="number" name="marks_judge1" class="form-control" step="0.01" min="0" max="50">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Total Marks By Judge 2</label>
+                                    <label>Total Marks By Judge 2 (Anjali Dewan)</label>
                                     <input type="number" name="marks_judge2" class="form-control" step="0.01" min="0" max="50">
                                 </div>
                                 <button type="submit" class="btn btn-success">Submit</button>
