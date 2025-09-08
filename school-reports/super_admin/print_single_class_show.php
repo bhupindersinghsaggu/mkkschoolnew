@@ -264,7 +264,7 @@ $average_marks = ($marks1 + $marks2) / 2;
                     </tr>
                     <tr class="table-success">
                         <th>Average Marks</th>
-                        <td><strong><?= number_format($average_marks, 2) ?> / 40</strong></td>
+                        <td><strong><?= number_format($average_marks, 2) ?> / 50</strong></td>
                     </tr>
                 </table>
             </div>
