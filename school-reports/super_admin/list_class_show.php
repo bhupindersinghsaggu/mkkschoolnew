@@ -65,7 +65,7 @@ $result = mysqli_query($conn, $query);
                                         <th>Date</th>
                                         <th>Teacher</th>
                                         <th>Class</th>
-                                        <th>Topic</th>
+                                        <th>Topic & View Report</th>
                                         <th>Video Link</th>
                                         <th>Judge</th>
                                         <th>Total Score (Out of 40)</th>
@@ -92,7 +92,7 @@ $result = mysqli_query($conn, $query);
                                                 <small class="text-muted">ID: <?= htmlspecialchars($row['teacher_id']) ?></small>
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
-                                            <td> <a href="view_class_show.php?id=<?= $row['id'] ?>">  <?= htmlspecialchars($row['topic']) ?>- View Report</a></td>
+                                            <td> <a href="view_class_show.php?id=<?= $row['id'] ?>">  <?= htmlspecialchars($row['topic']) ?><span class="badge bg-primary">View Report</span></a></td>
                                             <td>
                                                 <a href="<?= htmlspecialchars($row['video_link']) ?>" target="_blank" title="Watch Video">
                                                     <i class="fas fa-external-link-alt"></i> View <!-- External link icon -->
