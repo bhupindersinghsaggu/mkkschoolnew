@@ -313,7 +313,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Theme Based Power Point Presentation (4)</label>
-                                    <input type="number" name="ppt" class="form-control" step="0.01" min="0" max="3">
+                                    <input type="number" name="ppt" class="form-control" step="0.01" min="0" max="4">
                                 </div>
                             </div>
                         </div>
