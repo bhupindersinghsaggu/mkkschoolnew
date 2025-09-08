@@ -93,7 +93,7 @@ $result = mysqli_query($conn, $query);
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
                                             <td><?= htmlspecialchars($row['topic']) ?>
-                                        <p class="text-muted">View Report</p>
+                                     
                                         </td>
                                           
                                                 <a href="<?= htmlspecialchars($row['video_link']) ?>" target="_blank" title="Watch Video">
