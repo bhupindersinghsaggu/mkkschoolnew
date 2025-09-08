@@ -92,8 +92,8 @@ $result = mysqli_query($conn, $query);
                                                 <small class="text-muted">ID: <?= htmlspecialchars($row['teacher_id']) ?></small>
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
-                                            <a href="view_class_show.php?id=<?= $row['id'] ?>   <td class=" text-wrap"><?= htmlspecialchars($row['topic']) ?></td></a>
-                                            <p class="text-muted">View Report</p>
+                                              <td class=" text-wrap">  <a href="view_class_show.php?id=<?= $row['id'] ?><?= htmlspecialchars($row['topic']) ?></td>
+                                            <p class="text-muted">View Report</p></a>
                                             <td>
                                                 <a href="<?= htmlspecialchars($row['video_link']) ?>" target="_blank" title="Watch Video">
                                                     <i class="fas fa-external-link-alt"></i> View <!-- External link icon -->
