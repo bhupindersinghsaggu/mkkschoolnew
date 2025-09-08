@@ -73,12 +73,12 @@ $result = mysqli_query($conn, $query);
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php while ($row = mysqli_fetch_assoc($result)): 
+                                    <?php while ($row = mysqli_fetch_assoc($result)):
                                         // Calculate average marks for each row
                                         $marks1 = (int)$row['marks_judge1'];
                                         $marks2 = (int)$row['marks_judge2'];
                                         $average_marks = ($marks1 + $marks2) / 2;
-                                        
+
                                         // Debug: Check what values you're getting
                                         error_log("Judge 1 marks: " . $row['marks_judge1']);
                                         error_log("Judge 2 marks: " . $row['marks_judge2']);
@@ -92,13 +92,14 @@ $result = mysqli_query($conn, $query);
                                                 <small class="text-muted">ID: <?= htmlspecialchars($row['teacher_id']) ?></small>
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
-                                            <td class="text-wrap"><?= htmlspecialchars($row['topic']) ?></td>
+                                            <a href="view_class_show.php?id=<?= $row['id'] ?>   <td class=" text-wrap"><?= htmlspecialchars($row['topic']) ?></td></a>
+                                            <p class="text-muted">View Report</p>
                                             <td>
                                                 <a href="<?= htmlspecialchars($row['video_link']) ?>" target="_blank" title="Watch Video">
                                                     <i class="fas fa-external-link-alt"></i> View <!-- External link icon -->
                                                 </a>
                                             </td>
-                                           <td class="text-wrap"><?= htmlspecialchars($row['evaluator_name']) ?></td>
+                                            <td class="text-wrap"><?= htmlspecialchars($row['evaluator_name']) ?></td>
                                             <td><strong> <input type="number" class="form-control fw-bold text-success"
                                                         value="<?= number_format($average_marks, 2) ?>"
                                                         readonly> </td>
