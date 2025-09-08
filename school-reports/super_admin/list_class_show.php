@@ -98,7 +98,7 @@ $result = mysqli_query($conn, $query);
                                                     <i class="fas fa-external-link-alt"></i> View <!-- External link icon -->
                                                 </a>
                                             </td>
-                                            <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
+                                           <td class="text-wrap"><?= htmlspecialchars($row['evaluator_name']) ?></td>
                                             <td><strong> <input type="number" class="form-control fw-bold text-success"
                                                         value="<?= number_format($average_marks, 2) ?>"
                                                         readonly> </td>
