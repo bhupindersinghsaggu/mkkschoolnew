@@ -149,7 +149,7 @@ $average_marks = ($marks1 + $marks2) / 2;
         <div class="section-title">Basic Information</div>
         <table class="table table-bordered table-sm">
             <tr>
-                <td rowspan="4" style="text-align:center; vertical-align:middle; width:150px;">
+                <td rowspan="5" style="text-align:center; vertical-align:middle; width:150px;">
                     <img src="<?= $teacher_photo ?>" class="teacher-photo" alt="Teacher Photo">
                 </td>
                 <th>Teacher Name</th>
