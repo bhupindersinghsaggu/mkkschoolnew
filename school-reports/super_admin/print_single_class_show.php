@@ -175,7 +175,7 @@ $average_marks = ($marks1 + $marks2) / 2;
             </tr>
             <tr>
                 <th>Class Show Link</th>
-                <td colspan="3"><?= htmlspecialchars($row['video_linke']) ?></td>
+                <td><?= htmlspecialchars($row['video_link']) ?></td>
             </tr>
         </table>
 
