@@ -173,6 +173,10 @@ $average_marks = ($marks1 + $marks2) / 2;
                 <th>Judges</th>
                 <td colspan="3"><?= htmlspecialchars($row['evaluator_name']) ?></td>
             </tr>
+            <tr>
+                <th>Class Show Link</th>
+                <td colspan="3"><?= htmlspecialchars($row['video_linke']) ?></td>
+            </tr>
         </table>
 
         <!-- Scores & Evaluation -->

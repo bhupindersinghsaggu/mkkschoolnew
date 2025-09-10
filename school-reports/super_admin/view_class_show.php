@@ -201,8 +201,8 @@ error_log("Calculated average: " . $average_marks);
             <!-- Print Header (only shows when printing) -->
             <div class="print-header">
                 <h2>Class Show Evaluation Report</h2>
-                <p>Generated on: <?= date('d M Y h:i A') ?></p>
-                <p>Report ID: CS<?= str_pad($row['id'], 4, '0', STR_PAD_LEFT) ?></p>
+                <!-- <p>Generated on: <?= date('d M Y h:i A') ?></p>
+                <p>Report ID: CS<?= str_pad($row['id'], 4, '0', STR_PAD_LEFT) ?></p> -->
             </div>
 
             <div class="row">
