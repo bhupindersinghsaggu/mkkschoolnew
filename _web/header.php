@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Dr. M.K.K. ARYA MODEL SCHOOL-Best C.B.S.E School in Panipat</title>
-
+    <!-- Google tag (gtag.js) -->
+  
 </head>
 
 <body>
@@ -101,7 +102,7 @@
 
                                                     <li><a href="/assets/images/fee-structure/fee-structure-2024-25.pdf"> Fee Structure</a></li>
 
-                                                   
+
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Facilities</a>
