@@ -157,26 +157,46 @@ require_once '../includes/function.php';
                                             </h6>
                                         </span>
                                         <br>
+
                                         <?php if ($hasDocument):
                                             $fileExt = strtolower(pathinfo($currentPath, PATHINFO_EXTENSION));
-                                            $iconClass = [
-                                                'pdf' => 'fa-file-pdf',
-                                                'jpg' => 'fa-file-image',
-                                                'jpeg' => 'fa-file-image',
-                                                'png' => 'fa-file-image',
-                                                'doc' => 'fa-file-word',
-                                                'docx' => 'fa-file-word',
-                                            ][$fileExt] ?? 'fa-file';
                                         ?>
-                                            <!-- <span class="info-value mb-2">
-                                                <a href="<?php echo $docPath; ?>" target="_blank" class="class-link">
-                                                    <i class="fas <?php echo $iconClass; ?>"></i> View Report
+
+                                            <?php if (in_array($fileExt, ['jpg', 'jpeg', 'png', 'gif'])): ?>
+                                                <!-- Image Preview -->
+                                                <div class="mt-2 mb-2">
+                                                    <a href="<?php echo $docPath; ?>" target="_blank">
+                                                        <img src="<?php echo $docPath; ?>"
+                                                            alt="Notebook Report"
+                                                            class="img-fluid rounded border"
+                                                            style="max-width: 200px; max-height: 150px; object-fit: cover;">
+                                                    </a>
+                                                </div>
+
+                                            <?php elseif ($fileExt === 'pdf'): ?>
+                                                <!-- PDF Preview -->
+                                                <div class="mt-2 mb-2">
+                                                    <iframe src="<?php echo $docPath; ?>"
+                                                        style="width:100%; height:250px; border:1px solid #ddd; border-radius:6px;"
+                                                        frameborder="0"></iframe>
+                                                </div>
+                                            <?php endif; ?>
+
+                                            <!-- Action Buttons -->
+                                            <div class="d-flex justify-content-end gap-2">
+                                                <a href="<?php echo $docPath; ?>" target="_blank" class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-eye"></i> View
                                                 </a>
-                                            </span> -->
+                                                <a href="<?php echo $docPath; ?>" download class="btn btn-sm btn-outline-success">
+                                                    <i class="fas fa-download"></i> Download
+                                                </a>
+                                            </div>
+
                                         <?php else: ?>
                                             <span class="badge bg-secondary">No report</span>
                                         <?php endif; ?>
                                     </div>
+
                                 </div>
                                 <!-- <div class="d-flex justify-content-center">
                                     <a href="<?php echo $docPath; ?>" target="_blank" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
@@ -190,7 +210,7 @@ require_once '../includes/function.php';
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-xxl-4 col-md-4 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
