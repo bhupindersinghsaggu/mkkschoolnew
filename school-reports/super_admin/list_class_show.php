@@ -66,9 +66,9 @@ $result = mysqli_query($conn, $query);
                                         <th>Teacher</th>
                                         <th>Class</th>
                                         <th>Topic & View Report</th>
+                                         <th>Total Score (Out of 50)</th>
                                         <th>Video Link</th>
                                         <th>Judge</th>
-                                        <th>Total Score (Out of 40)</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -93,15 +93,16 @@ $result = mysqli_query($conn, $query);
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
                                             <td> <a href="view_class_show.php?id=<?= $row['id'] ?>">  <?= htmlspecialchars($row['topic']) ?> <span class="badge bg-primary">View Report</span></a></td>
+                                             <td><strong> <input type="number" class="form-control fw-bold text-success"
+                                                        value="<?= number_format($average_marks, 2) ?>"
+                                                        readonly> </td>
                                             <td>
                                                 <a href="<?= htmlspecialchars($row['video_link']) ?>" target="_blank" title="Watch Video">
                                                     <i class="fas fa-external-link-alt"></i> View <!-- External link icon -->
                                                 </a>
                                             </td>
                                             <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
-                                            <td><strong> <input type="number" class="form-control fw-bold text-success"
-                                                        value="<?= number_format($average_marks, 2) ?>"
-                                                        readonly> </td>
+                                           
                                             <td class="action-buttons">
                                                 <!-- <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-secondary btn-sm" title="View Details">
                                                     <i class="fas fa-eye"></i>
