@@ -178,7 +178,7 @@ require_once '../includes/function.php';
                                         <?php endif; ?>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center">
+                                <!-- <div class="d-flex justify-content-center">
                                     <a href="<?php echo $docPath; ?>" target="_blank" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
                                         <i class="fas fa-external-link-alt"></i> View Report
                                     </a>
@@ -186,7 +186,7 @@ require_once '../includes/function.php';
                             <?php endforeach;
                         else: ?>
                             <p class="text-muted">No notebook checks found.</p>
-                        <?php endif; ?>
+                        <?php endif; ?> -->
                     </div>
                 </div>
             </div>
