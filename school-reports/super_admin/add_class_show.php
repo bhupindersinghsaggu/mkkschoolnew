@@ -293,11 +293,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div class="mb-3">
                                     <label>Group Dance (4)</label>
-                                    <input type="number" name="dance" class="form-control" step="0.01" min="0" max="4">
+                                    <input type="number" name="dance" class="form-control" step="0.01" min="0" max="5">
                                 </div>
                                 <div class="mb-3">
                                     <label>Group Song (4)</label>
-                                    <input type="number" name="song" class="form-control" step="0.01" min="0" max="4">
+                                    <input type="number" name="song" class="form-control" step="0.01" min="0" max="5">
                                 </div>
                                 <div class="mb-3">
                                     <label>Stage Management (3)</label>
