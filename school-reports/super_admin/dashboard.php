@@ -145,15 +145,10 @@ require_once '../includes/function.php';
                                                 </span>
                                             </div>
 
-
-
-
-
                                             <td>
                                                 <?php
-                                                if (!empty($row['document'])):
-                                                    // Build safe path
-                                                    $docName = basename($row['document']);
+                                                if (!empty($latest_notebook['document'])):
+                                                    $docName = basename($latest_notebook['document']);
                                                     $docPath = realpath(__DIR__ . '/../uploads/teacher_documents/' . $docName);
                                                     $allowedDir = realpath(__DIR__ . '/../uploads/teacher_documents/');
                                                     $fileExists = ($docPath && $allowedDir && strpos($docPath, $allowedDir) === 0 && file_exists($docPath));
@@ -171,6 +166,7 @@ require_once '../includes/function.php';
                                                 <?php else: ?>
                                                     <span class="badge bg-secondary">No document</span>
                                                 <?php endif; ?>
+
                                             </td>
 
                                         </div>
