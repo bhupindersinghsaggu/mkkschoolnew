@@ -10,10 +10,11 @@ $total_teachers = $count_data['total_teachers'];
 
 
 // notebook check count from database 
-$count_query = "SELECT COUNT(*) as notebook_count FROM records";
+// $count_query = "SELECT COUNT(*) as notebook_count FROM records";SELECT * FROM `records` WHERE notebooks_checked
+$count_query = "SELECT * FROM `records` WHERE notebooks_checked";
 $count_result = mysqli_query($conn, $count_query);
 $count_data = mysqli_fetch_assoc($count_result);
-$notebook_count = $count_data['notebook_count'];
+$notebook_count = $count_data['records'];
 
 
 // class show count from database 
