@@ -146,67 +146,12 @@ require_once '../includes/function.php';
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-end">
-                                        <p class="fs-13 mb-2">
-                                            <i class="ti ti-calendar theme-color"></i>
-                                            <?php echo htmlspecialchars($latest_notebook['eval_date']); ?>
-                                        </p>
-                                        <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
-                                            <h6 class="text-white fw-medium">
-                                                <?php echo htmlspecialchars($latest_notebook['subject']); ?>
-                                            </h6>
-                                        </span>
-                                        <br>
-
-                                        <?php if ($hasDocument):
-                                            $fileExt = strtolower(pathinfo($currentPath, PATHINFO_EXTENSION));
-                                        ?>
-
-                                            <?php if (in_array($fileExt, ['jpg', 'jpeg', 'png', 'gif'])): ?>
-                                                <!-- Image Preview -->
-                                                <div class="mt-2 mb-2">
-                                                    <a href="<?php echo $docPath; ?>" target="_blank">
-                                                        <img src="<?php echo $docPath; ?>"
-                                                            alt="Notebook Report"
-                                                            class="img-fluid rounded border"
-                                                            style="max-width: 200px; max-height: 150px; object-fit: cover;">
-                                                    </a>
-                                                </div>
-
-                                            <?php elseif ($fileExt === 'pdf'): ?>
-                                                <!-- PDF Preview -->
-                                                <div class="mt-2 mb-2">
-                                                    <iframe src="<?php echo $docPath; ?>"
-                                                        style="width:100%; height:250px; border:1px solid #ddd; border-radius:6px;"
-                                                        frameborder="0"></iframe>
-                                                </div>
-                                            <?php endif; ?>
-
-                                            <!-- Action Buttons -->
-                                            <div class="d-flex justify-content-end gap-2">
-                                                <a href="<?php echo $docPath; ?>" target="_blank" class="btn btn-sm btn-outline-primary">
-                                                    <i class="fas fa-eye"></i> View
-                                                </a>
-                                                <a href="<?php echo $docPath; ?>" download class="btn btn-sm btn-outline-success">
-                                                    <i class="fas fa-download"></i> Download
-                                                </a>
-                                            </div>
-
-                                        <?php else: ?>
-                                            <span class="badge bg-secondary">No report</span>
-                                        <?php endif; ?>
-                                    </div>
 
                                 </div>
-                                <!-- <div class="d-flex justify-content-center">
-                                    <a href="<?php echo $docPath; ?>" target="_blank" class="btn btn-success me-2 logout-link" style="width:100%; display:block;">
-                                        <i class="fas fa-external-link-alt"></i> View Report
-                                    </a>
-                                </div>
+
                             <?php endforeach;
                         else: ?>
-                            <p class="text-muted">No notebook checks found.</p>
-                        <?php endif; ?> -->
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
