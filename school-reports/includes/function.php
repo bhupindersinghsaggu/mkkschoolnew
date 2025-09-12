@@ -11,9 +11,9 @@ $total_teachers = $count_data['total_teachers'];
 
 // notebook check count from database 
 // $count_query = "SELECT COUNT(*) as notebook_count FROM records";
-$count_query = "SELECT COUNT(*) as notebook_count FROM records";
+// $count_query = "SELECT COUNT(*) as notebook_count FROM records";
 // 👉 If you only want session 2025-26, use this instead:
-// $count_query = "SELECT COUNT(*) as notebook_count FROM records WHERE session = '2025-26'";
+$count_query = "SELECT COUNT(*) as notebook_count FROM records WHERE session = '2025-26'";
 // 👉 If you want only latest 10 entries, use this instead:
 // $count_query = "SELECT COUNT(*) as notebook_count FROM (SELECT id FROM records ORDER BY id DESC LIMIT 10) as last10";
 
