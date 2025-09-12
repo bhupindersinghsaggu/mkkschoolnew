@@ -94,9 +94,12 @@ $result = mysqli_query($conn, $query);
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
                                             <td class="text-wrap lh-base">
                                                 <div class="d-flex- justify-content-start">
-                                                    <a href="view_class_show.php?id=<?= $row['id'] ?>"> <?= htmlspecialchars($row['topic']) ?>
-
+                                                    <div>
+                                                        <a href="view_class_show.php?id=<?= $row['id'] ?>"> <?= htmlspecialchars($row['topic']) ?>
+                                                    </div>
+                                                    <div>
                                                         <span class="badge bg-primary">View Report</span></a>
+                                                    </div>
                                                 </div>
                                             </td>
                                             <td><strong> <input type="number" class="form-control fw-bold text-success"
