@@ -146,6 +146,14 @@ require_once '../includes/function.php';
                                             </div>
 
                                             <td>
+                                                <!-- Print / View Report button -->
+                                                <a href="print_single_notebook.php?id=<?= (int)$latest_notebook['id'] ?>"
+                                                    target="_blank"
+                                                    class="btn btn-sm btn-primary">
+                                                    <i class="fas fa-print"></i> View Report
+                                                </a>
+
+                                                <!-- Optional: show download if a document file exists -->
                                                 <?php
                                                 if (!empty($latest_notebook['document'])):
                                                     $docName = basename($latest_notebook['document']);
@@ -166,8 +174,8 @@ require_once '../includes/function.php';
                                                 <?php else: ?>
                                                     <span class="badge bg-secondary">No document</span>
                                                 <?php endif; ?>
-
                                             </td>
+
 
                                         </div>
                                     </div>
