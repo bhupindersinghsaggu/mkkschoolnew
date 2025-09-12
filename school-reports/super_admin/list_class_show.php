@@ -93,7 +93,7 @@ $result = mysqli_query($conn, $query);
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
                                             <td class="text-wrap lh-base">
-                                                <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center gap-3">
                                                     <div>
                                                         <a href="view_class_show.php?id=<?= $row['id'] ?>"> <?= htmlspecialchars($row['topic']) ?>
                                                     </div>
