@@ -13,10 +13,14 @@ if (!$id) {
 $query = "SELECT r.*, td.profile_pic 
           FROM records r 
           LEFT JOIN teacher_details td ON r.teacher_id = td.teacher_id 
-          WHERE r.id = $id 
+          WHERE r.id = ? 
           LIMIT 1";
-$result = mysqli_query($conn, $query);
+$stmt = mysqli_prepare($conn, $query);
+mysqli_stmt_bind_param($stmt, "i", $id);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 $row = mysqli_fetch_assoc($result);
+mysqli_stmt_close($stmt);
 
 if (!$row) {
     die("Record not found");
@@ -29,58 +33,69 @@ if (!$row) {
 <head>
     <meta charset="UTF-8">
     <title>Print View - Notebook Record</title>
-    <!-- Load Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <!-- Load Font Awesome for icons -->
     <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/custom.css">
+
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            font-size: 14px;
+        /* A4 page settings */
+        @page {
+            size: A4 portrait;
+            margin: 15mm 12mm;
         }
 
-        @media print {
-            body {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                font-size: 13px;
-            }
+        html, body {
+            height: 100%;
+        }
 
-            .no-print {
-                display: none !important;
-            }
+        body {
+            font-family: "Arial", sans-serif;
+            font-size: 13px;
+            color: #222;
+            background: #fff;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            margin: 0;
+        }
 
-            @page {
-                margin: 15mm;
-            }
+        /* Container sized to A4 printable width (210mm minus horizontal margins) */
+        .print-container {
+            width: calc(210mm - 24mm); /* 210 - (left+right margins) */
+            max-width: 100%;
+            margin: 12mm auto;
+            padding: 10px 12px;
+            box-sizing: border-box;
+            color: #111;
+        }
 
-            .record-card {
-                page-break-inside: avoid;
-            }
+        .no-print {
+            display: block;
+        }
 
-            .table {
-                width: 100%;
-                margin-bottom: 1rem;
-                color: #212529;
-                border-collapse: collapse;
-            }
+        .school-header {
+            text-align: center;
+            margin-bottom: 12px;
+        }
 
-            .table-bordered {
-                border: 1px solid #dee2e6;
-            }
+        .school-header img {
+            width: 60px;
+            height: auto;
+            display: inline-block;
+        }
 
-            .table-bordered th,
-            .table-bordered td {
-                border: 1px solid #dee2e6;
-                padding: 0.75rem;
-                vertical-align: top;
-            }
+        .school-header h2 {
+            margin: 6px 0 2px;
+            font-size: 18px;
+            font-weight: 600;
+        }
 
-            .table-bordered thead th,
-            .table-bordered thead td {
-                border-bottom-width: 2px;
-            }
+        .school-header p {
+            margin: 0;
+            font-size: 12px;
+            color: #555;
         }
 
         .teacher-photo {
@@ -89,93 +104,108 @@ if (!$row) {
             object-fit: cover;
             border: 1px solid #ccc;
             border-radius: 4px;
-            margin-bottom: 15px;
-            padding: 5px;
-        }
-
-        .school-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .school-header h2 {
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .school-header p {
-            margin-bottom: 0;
+            display: block;
+            margin: 0 auto;
+            padding: 4px;
+            background: #fff;
         }
 
         .record-card {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            background: #fff;
         }
 
         .report-heading {
             text-align: center;
             background: #000;
             color: #fff;
-            padding: 6px;
-            border-radius: 5px;
-            margin-bottom: 20px;
+            padding: 6px 8px;
+            border-radius: 4px;
+            margin: 8px 0 14px;
+            font-size: 14px;
         }
 
-        .signature-box .col-md-6 {
-            padding-top: 30px;
+        .table th,
+        .table td {
+            padding: 8px 10px;
+            vertical-align: top;
+            border: 1px solid #e6e6e6;
+            font-size: 13px;
+        }
+
+        .table thead th {
+            background-color: #f4f4f4;
+            font-weight: 600;
+        }
+
+        .signature-box .col-6 {
+            padding-top: 28px;
             border-top: 1px solid #333;
             text-align: center;
-            margin-top: 40px;
         }
 
-        .container {
-            max-width: 100%;
-            padding: 15px;
+        /* Print-specific rules */
+        @media print {
+            .no-print { display: none !important; }
+            .print-container { margin: 0; padding: 0; box-shadow: none; }
+            body { background: white; }
+            a[href]:after { content: ""; } /* remove url after links */
         }
 
-        .table {
-            margin-bottom: 20px;
+        /* Make things a bit tighter on small screens when previewing */
+        @media (max-width: 900px) {
+            .print-container {
+                width: auto;
+                margin: 10px;
+            }
+            .teacher-photo { width: 100px; height: 100px; }
+            .school-header h2 { font-size: 16px; }
         }
 
-        .table th {
-            background-color: #f8f9fa;
-        }
     </style>
 </head>
 
-<body onload="window.print()">
-    <div class="container">
-        <div class="no-print mt-4 mb-3 text-end">
-            <button class="btn btn-primary btn-sm" onclick="window.print()">🖨 Print</button>
-            <a href="./list_notebook.php" class="btn btn-secondary btn-sm">← Back</a>
+<body>
+    <div class="print-container">
+        <div class="no-print mb-3 d-flex justify-content-between align-items-center">
+            <div>
+                <button class="btn btn-primary btn-sm" onclick="window.print()">
+                    <i class="fas fa-print"></i> Print (A4)
+                </button>
+                <a href="./list_notebook.php" class="btn btn-secondary btn-sm">← Back</a>
+            </div>
+            <div class="text-muted small">
+                Generated: <?= date('d M Y, h:i A') ?>
+            </div>
         </div>
 
         <div class="school-header">
-            <img src="../assets/img/printlogo.png" alt="School Logo" width="60">
+            <img src="../assets/img/printlogo.png" alt="School Logo">
             <h2>Dr. M.K.K. Arya Model School</h2>
             <p>Model Town, Panipat</p>
         </div>
 
-        <table class="table table-bordered">
+        <table class="table table-bordered mb-3">
             <tbody>
                 <tr>
-                    <td rowspan="5" style="text-align: center; vertical-align: middle; width: 130px;">
+                    <td rowspan="5" style="width: 132px; text-align:center; vertical-align:middle;">
                         <?php
                         $photo_path = '../uploads/profile_pics/' . ($row['profile_pic'] ?? '');
                         if (!empty($row['profile_pic']) && file_exists($photo_path)) {
                             echo "<img src='$photo_path' class='teacher-photo' alt='Teacher Photo'>";
                         } else {
-                            echo "<div class='teacher-photo d-flex align-items-center justify-content-center bg-light'>
-                                    <i class='fas fa-user fa-3x text-muted'></i>
+                            echo "<div style='width:120px;height:120px;border:1px solid #eee;border-radius:4px;display:flex;align-items:center;justify-content:center;background:#f8f8f8;'>
+                                    <i class='fas fa-user fa-2x text-muted'></i>
                                   </div>";
                         }
                         ?>
                     </td>
-                    <th>Session</th>
+                    <th style="width:120px">Session</th>
                     <td><?= htmlspecialchars($row['session']) ?></td>
-                    <th>Date of Evaluation</th>
+                    <th style="width:150px">Date of Evaluation</th>
                     <td><?= htmlspecialchars($row['eval_date']) ?></td>
                 </tr>
                 <tr>
@@ -202,7 +232,7 @@ if (!$row) {
             <table class="table table-bordered">
                 <tbody>
                     <tr>
-                        <th>Number of Notebooks Checked</th>
+                        <th style="width:40%;">Number of Notebooks Checked</th>
                         <td><?= htmlspecialchars($row['notebooks_checked']) ?></td>
                     </tr>
                     <tr>
@@ -237,13 +267,14 @@ if (!$row) {
             </table>
         </div>
 
-        <div class="row signature-box">
-            <div class="col-md-6">Teacher Signature</div>
-            <div class="col-md-6">Evaluator Signature</div>
+        <div class="row signature-box" style="margin-top:18px;">
+            <div class="col-6">Teacher Signature</div>
+            <div class="col-6 text-end">Evaluator Signature</div>
         </div>
+
+        <div class="no-print" style="height: 20px;"></div>
     </div>
 
-    <!-- Load Bootstrap JS (optional, only needed if using interactive elements) -->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
