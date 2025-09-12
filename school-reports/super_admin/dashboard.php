@@ -109,109 +109,79 @@ require_once '../includes/function.php';
                         $notebook_result = mysqli_query($conn, $notebook_query);
                         $recent_notebooks = [];
                         if ($notebook_result && mysqli_num_rows($notebook_result) > 0) {
-                            while ($row = mysqli_fetch_assoc($notebook_result)) {
-                                $recent_notebooks[] = $row;
+                            while ($r = mysqli_fetch_assoc($notebook_result)) {
+                                $recent_notebooks[] = $r;
                             }
                         }
                         ?>
-                        <?php if (!empty($recent_notebooks)):
-                            foreach ($recent_notebooks as $latest_notebook):
-                                // Get the document path
-                                $docPath = '';
-                                $hasDocument = false;
 
+                        <?php if (!empty($recent_notebooks)): ?>
+                            <?php foreach ($recent_notebooks as $latest_notebook):
+                                // prepare safe values
+                                $id = (int)$latest_notebook['id'];
+                                $teacherName = htmlspecialchars($latest_notebook['teacher_name'] ?? 'Unknown');
+                                $classSection = htmlspecialchars($latest_notebook['class_section'] ?? '');
+                                $notebooksChecked = htmlspecialchars($latest_notebook['notebooks_checked'] ?? '0');
+                                $evalDate = !empty($latest_notebook['eval_date']) ? htmlspecialchars($latest_notebook['eval_date']) : '';
+
+                                // document / download handling
+                                $hasFile = false;
+                                $webPath = '';
                                 if (!empty($latest_notebook['document'])) {
-                                    $docPath = '../uploads/teacher_documents/' . htmlspecialchars(basename($latest_notebook['document']));
-                                    $allowedPath = realpath('../uploads/teacher_documents/');
-                                    $currentPath = realpath($docPath);
-
-                                    if ($currentPath && strpos($currentPath, $allowedPath) === 0 && file_exists($currentPath)) {
-                                        $hasDocument = true;
+                                    $docName = basename($latest_notebook['document']);
+                                    $uploadsDir = realpath(__DIR__ . '/../uploads/teacher_documents/');
+                                    $candidate = __DIR__ . '/../uploads/teacher_documents/' . $docName;
+                                    $real = realpath($candidate);
+                                    if ($real && $uploadsDir && strpos($real, $uploadsDir) === 0 && file_exists($real)) {
+                                        $hasFile = true;
+                                        $webPath = '../uploads/teacher_documents/' . rawurlencode($docName);
                                     }
                                 }
-                        ?>
+
+                                // URL to open the report page (opens in browser)
+                                // adjust path if your dashboard is in different folder
+                                $reportUrl = './print_single_notebook.php?id=' . $id;
+                            ?>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="d-flex align-items-center">
                                         <div class="ms-2">
-                                            <h6 class="fw-bold mb-2">
-                                                <?php echo htmlspecialchars($latest_notebook['teacher_name']); ?>
-                                            </h6>
-                                            <div class="fs-13 mb-2">Class/Section:
-                                                <strong><?php echo htmlspecialchars($latest_notebook['class_section']); ?></strong>
+                                            <h6 class="fw-bold mb-1"><?= $teacherName ?></h6>
+                                            <div class="fs-13 mb-1">
+                                                <strong>Class/Section:</strong> <?= $classSection ?>
                                             </div>
-                                            <div class="fs-13 mb-2">Notebook Checked
-                                                <span class="revenue-icon bg-cyan-transparent text-cyan value">
-                                                    <?php echo htmlspecialchars($latest_notebook['notebooks_checked']); ?>
-                                                </span>
+                                            <div class="fs-13 mb-1">
+                                                Notebooks Checked:
+                                                <span class="revenue-icon bg-cyan-transparent text-cyan value"><?= $notebooksChecked ?></span>
                                             </div>
-                                            <td>
-                                                <!-- Always show open in browser -->
-                                                <a href="print_single_notebook.php?id=<?= (int)$latest_notebook['id'] ?>"
-                                                    target="_blank"
-                                                    class="btn btn-sm btn-primary">
-                                                    <i class="fas fa-external-link-alt"></i> Open Report
-                                                </a>
-
-                                                <!-- Optional: show download if a document file exists -->
-                                                <?php
-                                                if (!empty($latest_notebook['document'])):
-                                                    $docName = basename($latest_notebook['document']);
-                                                    $docPath = realpath(__DIR__ . '/../uploads/teacher_documents/' . $docName);
-                                                    $allowedDir = realpath(__DIR__ . '/../uploads/teacher_documents/');
-                                                    $fileExists = ($docPath && $allowedDir && strpos($docPath, $allowedDir) === 0 && file_exists($docPath));
-                                                    $webPath = $fileExists ? '../uploads/teacher_documents/' . $docName : '';
-
-                                                    if ($fileExists): ?>
-                                                        <a href="<?= htmlspecialchars($webPath) ?>"
-                                                            class="btn btn-sm btn-success"
-                                                            target="_blank">
-                                                            <i class="fa fa-download"></i> Download
-                                                        </a>
-                                                    <?php else: ?>
-                                                        <span class="badge bg-danger">File not found</span>
-                                                    <?php endif; ?>
-                                                <?php else: ?>
-                                                    <span class="badge bg-secondary">No document</span>
-                                                <?php endif; ?>
-                                            </td>
-                                            <td>
-                                                <!-- Always show open in browser -->
-                                                <a href="print_single_notebook.php?id=<?= (int)$latest_notebook['id'] ?>"
-                                                    target="_blank"
-                                                    class="btn btn-sm btn-primary">
-                                                    <i class="fas fa-external-link-alt"></i> Open Report
-                                                </a>
-
-                                                <!-- Optional: show download if a document file exists -->
-                                                <?php
-                                                if (!empty($latest_notebook['document'])):
-                                                    $docName = basename($latest_notebook['document']);
-                                                    $docPath = realpath(__DIR__ . '/../uploads/teacher_documents/' . $docName);
-                                                    $allowedDir = realpath(__DIR__ . '/../uploads/teacher_documents/');
-                                                    $fileExists = ($docPath && $allowedDir && strpos($docPath, $allowedDir) === 0 && file_exists($docPath));
-                                                    $webPath = $fileExists ? '../uploads/teacher_documents/' . $docName : '';
-
-                                                    if ($fileExists): ?>
-                                                        <a href="<?= htmlspecialchars($webPath) ?>"
-                                                            class="btn btn-sm btn-success"
-                                                            target="_blank">
-                                                            <i class="fa fa-download"></i> Download
-                                                        </a>
-                                                    <?php else: ?>
-                                                        <span class="badge bg-danger">File not found</span>
-                                                    <?php endif; ?>
-                                                <?php else: ?>
-                                                    <span class="badge bg-secondary">No document</span>
-                                                <?php endif; ?>
-                                            </td>
-
+                                            <div class="fs-13 text-muted">
+                                                <i class="ti ti-calendar theme-color"></i> <?= $evalDate ?>
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <div class="text-end d-flex align-items-center gap-2">
+                                        <!-- Open in browser (always available - opens the report view page) -->
+                                        <a href="<?= htmlspecialchars($reportUrl) ?>" target="_blank" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-external-link-alt"></i> Open Report
+                                        </a>
+
+                                        <!-- Download button (only if a document file exists on disk) -->
+                                        <?php if ($hasFile): ?>
+                                            <a href="<?= htmlspecialchars($webPath) ?>" target="_blank" class="btn btn-sm btn-success">
+                                                <i class="fa fa-download"></i> Download
+                                            </a>
+                                        <?php else: ?>
+                                            <span class="badge bg-secondary">No document</span>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
-                            <?php endforeach;
-                        else: ?>
+                                <hr style="margin: 8px 0;">
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p class="text-muted">No recent notebook checks found.</p>
                         <?php endif; ?>
                     </div>
+
                 </div>
             </div>
             <div class="col-xxl-4 col-md-4 d-flex">
