@@ -92,11 +92,11 @@ $result = mysqli_query($conn, $query);
                                             <td><?= htmlspecialchars($row['teacher_name']) ?><br>
                                                 <small class="text-muted">ID: <?= htmlspecialchars($row['teacher_id']) ?></small>
                                             </td>
-                                            <th width="40%"><img src="<?= $teacher_photo ?>"
+                                            <td width="40%"><img src="<?= $teacher_photo ?>"
                                                     alt="<?= htmlspecialchars($row['teacher_name']) ?>"
                                                     class="teacher-photo"
                                                     onerror="this.onerror=null; this.src='../assets/img/default-teacher.png'">
-                                            </th>
+                                            </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
                                             <td> <a href="view_class_show.php?id=<?= $row['id'] ?>"> <?= htmlspecialchars($row['topic']) ?> <span class="badge bg-primary">View Report</span></a></td>
                                             <td>
