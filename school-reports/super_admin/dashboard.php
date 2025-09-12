@@ -132,7 +132,8 @@ require_once '../includes/function.php';
 
                                 // Teacher photo path
                                 $photoPath = '../uploads/profile_pics/' . ($latest_notebook['profile_pic'] ?? '');
-                                if (empty($latest_notebook['profile_pic']) || !file_exists($photoPath)) {
+                                $photoExists = (!empty($latest_notebook['profile_pic']) && file_exists($photoPath));
+                                if (!$photoExists) {
                                     $photoPath = '../assets/img/default-teacher.png';
                                 }
 
@@ -155,9 +156,17 @@ require_once '../includes/function.php';
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <!-- Teacher Photo -->
                                     <div style="width:64px; height:64px; flex:0 0 64px;">
-                                        <img src="<?= $photoPath ?>"
-                                            alt="<?= $teacherName ?>"
-                                            style="width:64px; height:64px; object-fit:cover; border-radius:6px; border:1px solid #ddd;">
+                                        <?php if ($photoExists): ?>
+                                            <a href="<?= $photoPath ?>" target="_blank">
+                                                <img src="<?= $photoPath ?>"
+                                                    alt="<?= $teacherName ?>"
+                                                    style="width:64px; height:64px; object-fit:cover; border-radius:6px; border:1px solid #ddd;">
+                                            </a>
+                                        <?php else: ?>
+                                            <img src="<?= $photoPath ?>"
+                                                alt="<?= $teacherName ?>"
+                                                style="width:64px; height:64px; object-fit:cover; border-radius:6px; border:1px solid #ddd;">
+                                        <?php endif; ?>
                                     </div>
 
                                     <!-- Teacher Info -->
@@ -189,6 +198,7 @@ require_once '../includes/function.php';
                             <p class="text-muted">No recent notebook checks found.</p>
                         <?php endif; ?>
                     </div>
+
 
                 </div>
             </div>
