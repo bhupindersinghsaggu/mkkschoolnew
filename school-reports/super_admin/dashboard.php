@@ -172,23 +172,17 @@ require_once '../includes/function.php';
                                                         <span class="badge bg-danger">File not found</span>
                                                     <?php endif; ?>
                                                 <?php else: ?>
-                                                    <span class="badge bg-secondary">No document</span>
                                                 <?php endif; ?>
                                             </td>
-
-
                                         </div>
                                     </div>
-
                                 </div>
-
                             <?php endforeach;
                         else: ?>
                         <?php endif; ?>
                     </div>
                 </div>
             </div>
-
             <div class="col-xxl-4 col-md-4 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
