@@ -63,6 +63,7 @@ $result = mysqli_query($conn, $query);
                                         <th>ID</th>
                                         <th>Session</th>
                                         <th>Date</th>
+                                        <th>Photo</th>
                                         <th>Teacher</th>
                                         <th>Class</th>
                                         <th>Topic & View Report</th>
@@ -73,12 +74,12 @@ $result = mysqli_query($conn, $query);
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php while ($row = mysqli_fetch_assoc($result)): 
+                                    <?php while ($row = mysqli_fetch_assoc($result)):
                                         // Calculate average marks for each row
                                         $marks1 = (int)$row['marks_judge1'];
                                         $marks2 = (int)$row['marks_judge2'];
                                         $average_marks = ($marks1 + $marks2) / 2;
-                                        
+
                                         // Debug: Check what values you're getting
                                         error_log("Judge 1 marks: " . $row['marks_judge1']);
                                         error_log("Judge 2 marks: " . $row['marks_judge2']);
@@ -91,8 +92,13 @@ $result = mysqli_query($conn, $query);
                                             <td><?= htmlspecialchars($row['teacher_name']) ?><br>
                                                 <small class="text-muted">ID: <?= htmlspecialchars($row['teacher_id']) ?></small>
                                             </td>
+                                            <th width="40%"><img src="<?= $teacher_photo ?>"
+                                                    alt="<?= htmlspecialchars($row['teacher_name']) ?>"
+                                                    class="teacher-photo"
+                                                    onerror="this.onerror=null; this.src='../assets/img/default-teacher.png'">
+                                            </th>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
-                                            <td> <a href="view_class_show.php?id=<?= $row['id'] ?>">  <?= htmlspecialchars($row['topic']) ?> <span class="badge bg-primary">View Report</span></a></td>
+                                            <td> <a href="view_class_show.php?id=<?= $row['id'] ?>"> <?= htmlspecialchars($row['topic']) ?> <span class="badge bg-primary">View Report</span></a></td>
                                             <td>
                                                 <a href="<?= htmlspecialchars($row['video_link']) ?>" target="_blank" title="Watch Video">
                                                     <i class="fas fa-external-link-alt"></i> View <!-- External link icon -->
