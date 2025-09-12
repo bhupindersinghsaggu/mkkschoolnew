@@ -267,7 +267,7 @@ require_once '../includes/function.php';
                                         </div> -->
 
                                         <div class="d-flex gap-2">
-                                            <a href="<?= $viewUrl ?>" class="btn btn-outline-primary btn-sm">
+                                            <a href="<?= $viewUrl ?>" class="btn btn-outline- btn-sm bg-purple" style="">
                                                 <i class="fas fa-eye"></i> View
                                             </a>
                                             <a href="<?= $printUrl ?>" target="_blank" class="btn btn-success btn-sm">
