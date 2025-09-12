@@ -105,7 +105,7 @@ require_once '../includes/function.php';
                     </div>
                     <div class="card-body">
                         <?php
-                        $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 2";
+                        $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 3";
                         $notebook_result = mysqli_query($conn, $notebook_query);
                         $recent_notebooks = [];
                         if ($notebook_result && mysqli_num_rows($notebook_result) > 0) {
@@ -207,7 +207,7 @@ require_once '../includes/function.php';
                            FROM class_show cs
                            LEFT JOIN teacher_details td ON cs.teacher_id = td.teacher_id
                            ORDER BY cs.created_at DESC
-                           LIMIT 2";
+                           LIMIT 3";
                         $latest_res = mysqli_query($conn, $latest_sql);
 
                         if ($latest_res && mysqli_num_rows($latest_res) > 0):
