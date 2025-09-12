@@ -105,7 +105,7 @@ require_once '../includes/function.php';
                     </div>
                     <div class="card-body">
                         <?php
-                        $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 1";
+                        $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 2";
                         $notebook_result = mysqli_query($conn, $notebook_query);
                         $recent_notebooks = [];
                         if ($notebook_result && mysqli_num_rows($notebook_result) > 0) {
