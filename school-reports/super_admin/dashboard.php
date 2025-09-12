@@ -170,8 +170,6 @@ require_once '../includes/function.php';
                                             <a href="<?= htmlspecialchars($webPath) ?>" target="_blank" class="btn btn-sm btn-success">
                                                 <i class="fa fa-download"></i> Download
                                             </a>
-                                        <?php else: ?>
-                                            <span class="badge bg-secondary">No document</span>
                                         <?php endif; ?>
                                     </div>
                                 </div>
@@ -181,7 +179,6 @@ require_once '../includes/function.php';
                             <p class="text-muted">No recent notebook checks found.</p>
                         <?php endif; ?>
                     </div>
-
                 </div>
             </div>
             <div class="col-xxl-4 col-md-4 d-flex">
