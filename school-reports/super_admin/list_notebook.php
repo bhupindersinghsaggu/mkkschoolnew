@@ -180,8 +180,8 @@ $result = $query->get_result();
                             <!-- <th>Reviewed</th> -->
                             <th>Rating</th>
                             <th>Actions</th>
-                            <th>Upload Report</th>
-                            <th>View Report</th>
+                            <!-- <th>Upload Report</th>
+                            <th>View Report</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -223,10 +223,10 @@ $result = $query->get_result();
                                         <i class="fa-solid fa-trash-can"></i>
                                     </a>
                                     <a href="print_single_notebook.php?id=<?= $row['id'] ?>" target="_blank" class="action-buttons" title="Print">
-                                        <i class="fa-solid fa-print"></i>
+                                         <span class="badge bg-secondary">View Report</span>
                                     </a>
                                 </td>
-                                <td>
+                                <!-- <td>
                                     <form action="upload_document_notebook.php" method="POST" enctype="multipart/form-data" class="d-flex gap-2 align-items-center">
                                         <input type="hidden" name="record_id" value="<?= htmlspecialchars($row['id']) ?>">
                                         <input type="hidden" name="teacher_id" value="<?= htmlspecialchars($row['teacher_id']) ?>">
@@ -239,9 +239,8 @@ $result = $query->get_result();
                                             <i class="fa fa-upload"></i>
                                         </button>
                                     </form>
-                                </td>
-
-                                <td>
+                                </td> -->
+                                <!-- <td>
                                     <?php
                                     if (!empty($row['document'])):
                                         // Sanitize and secure the document path
@@ -278,9 +277,7 @@ $result = $query->get_result();
                                     <?php else: ?>
                                         <span class="badge bg-secondary">No document</span>
                                     <?php endif; ?>
-                                </td>
-
-
+                                </td> -->
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
