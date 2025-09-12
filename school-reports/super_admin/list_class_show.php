@@ -66,19 +66,19 @@ $result = mysqli_query($conn, $query);
                                         <th>Teacher</th>
                                         <th>Class</th>
                                         <th>Topic & View Report</th>
-                                         <th>Total Score (Out of 50)</th>
+                                        <th>Total Score (Out of 50)</th>
                                         <th>Video Link</th>
                                         <th>Judge</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php while ($row = mysqli_fetch_assoc($result)): 
+                                    <?php while ($row = mysqli_fetch_assoc($result)):
                                         // Calculate average marks for each row
                                         $marks1 = (int)$row['marks_judge1'];
                                         $marks2 = (int)$row['marks_judge2'];
                                         $average_marks = ($marks1 + $marks2) / 2;
-                                        
+
                                         // Debug: Check what values you're getting
                                         error_log("Judge 1 marks: " . $row['marks_judge1']);
                                         error_log("Judge 2 marks: " . $row['marks_judge2']);
@@ -92,8 +92,14 @@ $result = mysqli_query($conn, $query);
                                                 <small class="text-muted">ID: <?= htmlspecialchars($row['teacher_id']) ?></small>
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
-                                            <td class="text-wrap lh-base"> <a href="view_class_show.php?id=<?= $row['id'] ?>">  <?= htmlspecialchars($row['topic']) ?> <span class="badge bg-primary">View Report</span></a></td>
-                                             <td><strong> <input type="number" class="form-control fw-bold text-success"
+                                            <td class="text-wrap lh-base">
+                                                <div class="d-flex- justify-content-start">
+                                                    <a href="view_class_show.php?id=<?= $row['id'] ?>"> <?= htmlspecialchars($row['topic']) ?>
+
+                                                        <span class="badge bg-primary">View Report</span></a>
+                                                </div>
+                                            </td>
+                                            <td><strong> <input type="number" class="form-control fw-bold text-success"
                                                         value="<?= number_format($average_marks, 2) ?>"
                                                         readonly> </td>
                                             <td>
@@ -102,7 +108,7 @@ $result = mysqli_query($conn, $query);
                                                 </a>
                                             </td>
                                             <td><?= htmlspecialchars($row['evaluator_name']) ?></td>
-                                           
+
                                             <td class="action-buttons">
                                                 <!-- <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-secondary btn-sm" title="View Details">
                                                     <i class="fas fa-eye"></i>
