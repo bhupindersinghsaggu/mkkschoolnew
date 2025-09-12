@@ -94,114 +94,93 @@ require_once '../includes/function.php';
             </div>
         </div>
         <div class="row">
-            <!-- Recent Class Show (replace existing card) -->
             <div class="col-xxl-4 col-md-4 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-inline-flex align-items-center">
                             <span class="title-icon bg-soft-pink fs-16 me-2"><i class="ti ti-box"></i></span>
-                            <h5 class="card-title mb-0">Recent Class Show</h5>
+                            <h5 class="card-title mb-0">Recent Notebook Check</h5>
                         </div>
-                        <a href="./list_class_show.php" class="fs-13 fw-medium text-decoration-underline">View All</a>
+                        <a href="./list_notebook.php" class="fs-13 fw-medium text-decoration-underline">View All</a>
                     </div>
-
                     <div class="card-body">
                         <?php
-                        $latest_sql = "SELECT cs.*, td.profile_pic AS teacher_photo
-                           FROM class_show cs
-                           LEFT JOIN teacher_details td ON cs.teacher_id = td.teacher_id
-                           ORDER BY cs.created_at DESC
-                           LIMIT 3";
-                        $latest_res = mysqli_query($conn, $latest_sql);
-                        if ($latest_res && mysqli_num_rows($latest_res) > 0):
-                            while ($latest = mysqli_fetch_assoc($latest_res)):
-
-                                // safe values
-                                $id = (int) $latest['id'];
-                                $teacher_name = htmlspecialchars($latest['teacher_name'] ?? 'Unknown');
-                                $class_section = htmlspecialchars($latest['class_section'] ?? '');
-                                $topic = htmlspecialchars($latest['topic'] ?? '');
-                                $eval_date = !empty($latest['eval_date']) ? htmlspecialchars($latest['eval_date']) : '';
-
-                                // avg marks
-                                $marks1 = is_numeric($latest['marks_judge1']) ? (float)$latest['marks_judge1'] : 0;
-                                $marks2 = is_numeric($latest['marks_judge2']) ? (float)$latest['marks_judge2'] : 0;
-                                $average_marks = ($marks1 + $marks2) / 2;
-
-                                // teacher photo safe path
-                                $photoPath = '../assets/img/default-teacher.png';
-                                if (!empty($latest['teacher_photo'])) {
-                                    $candidate = '../uploads/profile_pics/' . basename($latest['teacher_photo']);
-                                    $allowed = realpath('../uploads/profile_pics/');
-                                    $real = realpath($candidate);
-                                    if ($real && $allowed && strpos($real, $allowed) === 0 && file_exists($real)) {
-                                        $photoPath = $candidate;
-                                    }
-                                }
-
-                                // Viewer URL (opens the nice page)
-                                $viewUrl = './view_class_show.php?id=' . urlencode($id);
-
-                                // If you have an uploaded attachment field in class_show (e.g. document), optionally open it directly:
-                                $docWebPath = '';
-                                if (!empty($latest['document'])) {
-                                    $docName = basename($latest['document']);
-                                    $candidateFile = __DIR__ . '/../uploads/classshow_documents/' . $docName; // adjust folder if needed
-                                    $allowedDir = realpath(__DIR__ . '/../uploads/classshow_documents/');
-                                    $realFile = realpath($candidateFile);
-                                    if ($realFile && $allowedDir && strpos($realFile, $allowedDir) === 0 && file_exists($realFile)) {
-                                        $docWebPath = '../uploads/classshow_documents/' . rawurlencode($docName);
-                                    }
-                                }
+                        $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 3";
+                        $notebook_result = mysqli_query($conn, $notebook_query);
+                        $recent_notebooks = [];
+                        if ($notebook_result && mysqli_num_rows($notebook_result) > 0) {
+                            while ($r = mysqli_fetch_assoc($notebook_result)) {
+                                $recent_notebooks[] = $r;
+                            }
+                        }
                         ?>
-                                <div class="d-flex align-items-start gap-3 mb-3">
-                                    <div style="width:64px; height:64px; flex:0 0 64px;">
-                                        <img src="<?= htmlspecialchars($photoPath) ?>" alt="<?= $teacher_name ?>"
-                                            style="width:64px;height:64px;object-fit:cover;border-radius:6px;border:1px solid #eee;">
-                                    </div>
 
-                                    <div class="flex-fill">
-                                        <h6 class="fw-bold mb-1"><?= $teacher_name ?></h6>
+                        <?php if (!empty($recent_notebooks)): ?>
+                            <?php foreach ($recent_notebooks as $latest_notebook):
+                                // prepare safe values
+                                $id = (int)$latest_notebook['id'];
+                                $teacherName = htmlspecialchars($latest_notebook['teacher_name'] ?? 'Unknown');
+                                $classSection = htmlspecialchars($latest_notebook['class_section'] ?? '');
+                                $notebooksChecked = htmlspecialchars($latest_notebook['notebooks_checked'] ?? '0');
+                                $evalDate = !empty($latest_notebook['eval_date']) ? htmlspecialchars($latest_notebook['eval_date']) : '';
 
-                                        <div class="fs-13 mb-1">
-                                            <strong>Class:</strong> <?= $class_section ?> &nbsp;·&nbsp;
-                                            <strong>Date:</strong> <?= $eval_date ?>
-                                        </div>
+                                // document / download handling
+                                $hasFile = false;
+                                $webPath = '';
+                                if (!empty($latest_notebook['document'])) {
+                                    $docName = basename($latest_notebook['document']);
+                                    $uploadsDir = realpath(__DIR__ . '/../uploads/teacher_documents/');
+                                    $candidate = __DIR__ . '/../uploads/teacher_documents/' . $docName;
+                                    $real = realpath($candidate);
+                                    if ($real && $uploadsDir && strpos($real, $uploadsDir) === 0 && file_exists($real)) {
+                                        $hasFile = true;
+                                        $webPath = '../uploads/teacher_documents/' . rawurlencode($docName);
+                                    }
+                                }
 
-                                        <div class="fs-13 mb-1">
-                                            <strong>Topic:</strong> <?= $topic ?>
-                                        </div>
-
-                                        <div class="d-flex gap-2 mt-2">
-                                            <!-- Always open the friendly view page -->
-                                            <a href="<?= htmlspecialchars($viewUrl) ?>" class="btn btn-sm btn-outline-primary" target="_blank">
-                                                <i class="fas fa-eye"></i> View
-                                            </a>
-
-                                            <?php if ($docWebPath): ?>
-                                                <!-- If there's an uploaded document (PDF/image), open it directly in browser -->
-                                                <a href="<?= htmlspecialchars($docWebPath) ?>" class="btn btn-sm btn-success" target="_blank">
-                                                    <i class="fas fa-external-link-alt"></i> Open Attachment
-                                                </a>
-                                            <?php endif; ?>
-
-                                            <div class="ms-auto text-end">
-                                                <small class="text-muted">Avg: <strong><?= number_format($average_marks, 2) ?></strong></small>
+                                // URL to open the report page (opens in browser)
+                                // adjust path if your dashboard is in different folder
+                                $reportUrl = './print_single_notebook.php?id=' . $id;
+                            ?>
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="ms-2">
+                                            <h6 class="fw-bold mb-1"><?= $teacherName ?></h6>
+                                            <div class="fs-13 mb-1">
+                                                <strong>Class/Section:</strong> <?= $classSection ?>
+                                            </div>
+                                            <div class="fs-13 mb-1">
+                                                Notebooks Checked:
+                                                <span class="revenue-icon bg-cyan-transparent text-cyan value"><?= $notebooksChecked ?></span>
+                                            </div>
+                                            <div class="fs-13 text-muted">
+                                                <i class="ti ti-calendar theme-color"></i> <?= $evalDate ?>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="text-end d-flex align-items-center gap-2">
+                                        <!-- Open in browser (always available - opens the report view page) -->
+                                        <a href="<?= htmlspecialchars($reportUrl) ?>" target="_blank" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-external-link-alt"></i> Open Report
+                                        </a>
+
+                                        <!-- Download button (only if a document file exists on disk) -->
+                                        <?php if ($hasFile): ?>
+                                            <a href="<?= htmlspecialchars($webPath) ?>" target="_blank" class="btn btn-sm btn-success">
+                                                <i class="fa fa-download"></i> Download
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
-                                <?php if ($latest_res && mysqli_num_rows($latest_res) > 0) : ?>
-                                    <hr style="margin:8px 0;">
-                                <?php endif; ?>
-                            <?php endwhile; ?>
+                                <hr style="margin: 8px 0;">
+                            <?php endforeach; ?>
                         <?php else: ?>
-                            <p class="text-muted">No class show records found.</p>
+                            <p class="text-muted">No recent notebook checks found.</p>
                         <?php endif; ?>
                     </div>
                 </div>
             </div>
-
             <div class="col-xxl-4 col-md-4 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
