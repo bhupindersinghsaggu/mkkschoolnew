@@ -144,6 +144,35 @@ require_once '../includes/function.php';
                                                     <?php echo htmlspecialchars($latest_notebook['notebooks_checked']); ?>
                                                 </span>
                                             </div>
+
+
+
+
+
+                                            <td>
+                                                <?php
+                                                if (!empty($row['document'])):
+                                                    // Build safe path
+                                                    $docName = basename($row['document']);
+                                                    $docPath = realpath(__DIR__ . '/../uploads/teacher_documents/' . $docName);
+                                                    $allowedDir = realpath(__DIR__ . '/../uploads/teacher_documents/');
+                                                    $fileExists = ($docPath && $allowedDir && strpos($docPath, $allowedDir) === 0 && file_exists($docPath));
+                                                    $webPath = $fileExists ? '../uploads/teacher_documents/' . $docName : '';
+
+                                                    if ($fileExists): ?>
+                                                        <a href="<?= htmlspecialchars($webPath) ?>"
+                                                            class="btn btn-sm btn-success"
+                                                            download>
+                                                            <i class="fa fa-download"></i> Download
+                                                        </a>
+                                                    <?php else: ?>
+                                                        <span class="badge bg-danger">File not found</span>
+                                                    <?php endif; ?>
+                                                <?php else: ?>
+                                                    <span class="badge bg-secondary">No document</span>
+                                                <?php endif; ?>
+                                            </td>
+
                                         </div>
                                     </div>
 
