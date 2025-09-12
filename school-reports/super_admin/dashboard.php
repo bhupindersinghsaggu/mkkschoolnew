@@ -174,7 +174,7 @@ require_once '../includes/function.php';
                                     <!-- Actions -->
                                     <div class="text-end d-flex align-items-center gap-2">
                                         <a href="<?= htmlspecialchars($reportUrl) ?>" target="_blank" class="btn btn-sm btn-purple">
-                                            <i class="fas fa-external-link-alt"></i> Open Report
+                                            <i class="fas fa-external-link-alt"></i> View
                                         </a>
                                         <?php if ($hasFile): ?>
                                             <a href="<?= htmlspecialchars($webPath) ?>" target="_blank" class="btn btn-sm btn-success">
