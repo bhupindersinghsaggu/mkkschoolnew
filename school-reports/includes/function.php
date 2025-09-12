@@ -10,10 +10,10 @@ $total_teachers = $count_data['total_teachers'];
 
 
 // notebook check count from database 
-$count_query = "SELECT SUM(notebooks_checked) as notebook_count FROM records";
+$count_query = "SELECT COUNT(overall_rating) as total_ratings FROM records";
 $count_result = mysqli_query($conn, $count_query);
 $count_data = mysqli_fetch_assoc($count_result);
-$notebook_count = $count_data['notebook_count'];
+$total_ratings = $count_data['total_ratings'];
 
 
 
