@@ -57,7 +57,7 @@ $result = mysqli_query($conn, $query);
                 <div class="card-body">
                     <?php if (mysqli_num_rows($result) > 0): ?>
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover">
+                            <table class="table table-bordered table-striped table-hover table-sm">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
