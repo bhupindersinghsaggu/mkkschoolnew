@@ -102,9 +102,9 @@ $result = mysqli_query($conn, $query);
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td><strong> <div class="form-control fw-bold text-success"
-                                                        value="<?= number_format($average_marks, 2) ?>"
-                                                        readonly> </div></td>
+                                            <td> <input type="number" class="form-control fw-bold text-success"
+                                                    value="<?= number_format($average_marks, 2) ?>"
+                                                    readonly> </td>
                                             <td>
                                                 <a href="<?= htmlspecialchars($row['video_link']) ?>" target="_blank" title="Watch Video">
                                                     <i class="fas fa-external-link-alt"></i> View <!-- External link icon -->
