@@ -144,13 +144,12 @@ require_once '../includes/function.php';
                                                     <?php echo htmlspecialchars($latest_notebook['notebooks_checked']); ?>
                                                 </span>
                                             </div>
-
                                             <td>
-                                                <!-- Print / View Report button -->
+                                                <!-- Always show open in browser -->
                                                 <a href="print_single_notebook.php?id=<?= (int)$latest_notebook['id'] ?>"
                                                     target="_blank"
                                                     class="btn btn-sm btn-primary">
-                                                    <i class="fas fa-print"></i> View Report
+                                                    <i class="fas fa-external-link-alt"></i> Open Report
                                                 </a>
 
                                                 <!-- Optional: show download if a document file exists -->
@@ -165,15 +164,47 @@ require_once '../includes/function.php';
                                                     if ($fileExists): ?>
                                                         <a href="<?= htmlspecialchars($webPath) ?>"
                                                             class="btn btn-sm btn-success"
-                                                            download>
+                                                            target="_blank">
                                                             <i class="fa fa-download"></i> Download
                                                         </a>
                                                     <?php else: ?>
                                                         <span class="badge bg-danger">File not found</span>
                                                     <?php endif; ?>
                                                 <?php else: ?>
+                                                    <span class="badge bg-secondary">No document</span>
                                                 <?php endif; ?>
                                             </td>
+                                            <td>
+                                                <!-- Always show open in browser -->
+                                                <a href="print_single_notebook.php?id=<?= (int)$latest_notebook['id'] ?>"
+                                                    target="_blank"
+                                                    class="btn btn-sm btn-primary">
+                                                    <i class="fas fa-external-link-alt"></i> Open Report
+                                                </a>
+
+                                                <!-- Optional: show download if a document file exists -->
+                                                <?php
+                                                if (!empty($latest_notebook['document'])):
+                                                    $docName = basename($latest_notebook['document']);
+                                                    $docPath = realpath(__DIR__ . '/../uploads/teacher_documents/' . $docName);
+                                                    $allowedDir = realpath(__DIR__ . '/../uploads/teacher_documents/');
+                                                    $fileExists = ($docPath && $allowedDir && strpos($docPath, $allowedDir) === 0 && file_exists($docPath));
+                                                    $webPath = $fileExists ? '../uploads/teacher_documents/' . $docName : '';
+
+                                                    if ($fileExists): ?>
+                                                        <a href="<?= htmlspecialchars($webPath) ?>"
+                                                            class="btn btn-sm btn-success"
+                                                            target="_blank">
+                                                            <i class="fa fa-download"></i> Download
+                                                        </a>
+                                                    <?php else: ?>
+                                                        <span class="badge bg-danger">File not found</span>
+                                                    <?php endif; ?>
+                                                <?php else: ?>
+                                                    <span class="badge bg-secondary">No document</span>
+                                                <?php endif; ?>
+                                            </td>
+
                                         </div>
                                     </div>
                                 </div>
