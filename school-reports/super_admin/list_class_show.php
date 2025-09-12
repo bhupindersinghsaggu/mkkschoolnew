@@ -98,7 +98,7 @@ $result = mysqli_query($conn, $query);
                                                         <a href="view_class_show.php?id=<?= $row['id'] ?>"> <?= htmlspecialchars($row['topic']) ?>
                                                     </div>
                                                     <div>
-                                                        <span class="badge bg-primary">View Report</span></a>
+                                                        <span class="badge bg-purple">View Report</span></a>
                                                     </div>
                                                 </div>
                                             </td>
