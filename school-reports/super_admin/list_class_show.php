@@ -92,7 +92,7 @@ $result = mysqli_query($conn, $query);
                                                 <small class="text-muted">ID: <?= htmlspecialchars($row['teacher_id']) ?></small>
                                             </td>
                                             <td><?= htmlspecialchars($row['class_section']) ?></td>
-                                            <td class="text-wrap"> <a href="view_class_show.php?id=<?= $row['id'] ?>">  <?= htmlspecialchars($row['topic']) ?> <span class="badge bg-primary">View Report</span></a></td>
+                                            <td class="text-wrap lh-base"> <a href="view_class_show.php?id=<?= $row['id'] ?>">  <?= htmlspecialchars($row['topic']) ?> <span class="badge bg-primary">View Report</span></a></td>
                                              <td><strong> <input type="number" class="form-control fw-bold text-success"
                                                         value="<?= number_format($average_marks, 2) ?>"
                                                         readonly> </td>
