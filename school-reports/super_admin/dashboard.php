@@ -161,7 +161,7 @@ require_once '../includes/function.php';
 
                                     <div class="text-end d-flex align-items-center gap-2">
                                         <!-- Open in browser (always available - opens the report view page) -->
-                                        <a href="<?= htmlspecialchars($reportUrl) ?>" target="_blank" class="btn btn-sm btn-primary">
+                                        <a href="<?= htmlspecialchars($reportUrl) ?>" target="_blank" class="btn btn-sm btn-purple">
                                             <i class="fas fa-external-link-alt"></i> Open Report
                                         </a>
 

@@ -267,10 +267,10 @@ if (!$row) {
             </table>
         </div>
 
-        <div class="row signature-box" style="margin-top:18px;">
+        <!-- <div class="row signature-box" style="margin-top:18px;">
             <div class="col-6">Teacher Signature</div>
             <div class="col-6 text-end">Evaluator Signature</div>
-        </div>
+        </div> -->
 
         <div class="no-print" style="height: 20px;"></div>
     </div>
