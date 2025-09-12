@@ -110,7 +110,7 @@ $result = mysqli_query($conn, $query);
                                                     <i class="fas fa-external-link-alt"></i> View <!-- External link icon -->
                                                 </a>
                                             </td>
-                                            <td class="text-wrap"><?= htmlspecialchars($row['evaluator_name']) ?></td>
+                                            <td class="text-wrap text-muted"><?= htmlspecialchars($row['evaluator_name']) ?></td>
 
                                             <td class="action-buttons">
                                                 <!-- <a href="view_class_show.php?id=<?= $row['id'] ?>" class="btn btn-secondary btn-sm" title="View Details">
