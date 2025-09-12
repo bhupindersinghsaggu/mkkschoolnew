@@ -114,22 +114,7 @@ require_once '../includes/function.php';
                             }
                         }
                         ?>
-                        <?php if (!empty($recent_notebooks)):
-                            foreach ($recent_notebooks as $latest_notebook):
-                                // Get the document path
-                                $docPath = '';
-                                $hasDocument = false;
-
-                                if (!empty($latest_notebook['document'])) {
-                                    $docPath = '../uploads/teacher_documents/' . htmlspecialchars(basename($latest_notebook['document']));
-                                    $allowedPath = realpath('../uploads/teacher_documents/');
-                                    $currentPath = realpath($docPath);
-
-                                    if ($currentPath && strpos($currentPath, $allowedPath) === 0 && file_exists($currentPath)) {
-                                        $hasDocument = true;
-                                    }
-                                }
-                        ?>
+                        
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="d-flex align-items-center">
                                         <div class="ms-2">
