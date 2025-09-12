@@ -105,7 +105,14 @@ require_once '../includes/function.php';
                     </div>
                     <div class="card-body">
                         <?php
-                        $notebook_query = "SELECT * FROM records ORDER BY created_at DESC LIMIT 3";
+                        // Fetch recent notebooks + teacher photo
+                        $notebook_query = "
+        SELECT r.*, td.profile_pic 
+        FROM records r
+        LEFT JOIN teacher_details td ON r.teacher_id = td.teacher_id
+        ORDER BY r.created_at DESC 
+        LIMIT 3
+    ";
                         $notebook_result = mysqli_query($conn, $notebook_query);
                         $recent_notebooks = [];
                         if ($notebook_result && mysqli_num_rows($notebook_result) > 0) {
@@ -117,12 +124,17 @@ require_once '../includes/function.php';
 
                         <?php if (!empty($recent_notebooks)): ?>
                             <?php foreach ($recent_notebooks as $latest_notebook):
-                                // prepare safe values
                                 $id = (int)$latest_notebook['id'];
                                 $teacherName = htmlspecialchars($latest_notebook['teacher_name'] ?? 'Unknown');
                                 $classSection = htmlspecialchars($latest_notebook['class_section'] ?? '');
                                 $notebooksChecked = htmlspecialchars($latest_notebook['notebooks_checked'] ?? '0');
                                 $evalDate = !empty($latest_notebook['eval_date']) ? htmlspecialchars($latest_notebook['eval_date']) : '';
+
+                                // Teacher photo path
+                                $photoPath = '../uploads/profile_pics/' . ($latest_notebook['profile_pic'] ?? '');
+                                if (empty($latest_notebook['profile_pic']) || !file_exists($photoPath)) {
+                                    $photoPath = '../assets/img/default-teacher.png';
+                                }
 
                                 // document / download handling
                                 $hasFile = false;
@@ -138,34 +150,32 @@ require_once '../includes/function.php';
                                     }
                                 }
 
-                                // URL to open the report page (opens in browser)
-                                // adjust path if your dashboard is in different folder
                                 $reportUrl = './print_single_notebook.php?id=' . $id;
                             ?>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <div class="ms-2">
-                                            <h6 class="fw-bold mb-1"><?= $teacherName ?></h6>
-                                            <div class="fs-13 mb-1">
-                                                <strong>Class/Section:</strong> <?= $classSection ?>
-                                            </div>
-                                            <div class="fs-13 mb-1">
-                                                Notebooks Checked:
-                                                <span class="revenue-icon bg-cyan-transparent text-cyan value"><?= $notebooksChecked ?></span>
-                                            </div>
-                                            <div class="fs-13 text-muted">
-                                                <i class="ti ti-calendar theme-color"></i> <?= $evalDate ?>
-                                            </div>
-                                        </div>
+                                    <!-- Teacher Photo -->
+                                    <div style="width:64px; height:64px; flex:0 0 64px;">
+                                        <img src="<?= $photoPath ?>"
+                                            alt="<?= $teacherName ?>"
+                                            style="width:64px; height:64px; object-fit:cover; border-radius:6px; border:1px solid #ddd;">
                                     </div>
 
+                                    <!-- Teacher Info -->
+                                    <div class="flex-fill ms-3">
+                                        <h6 class="fw-bold mb-1"><?= $teacherName ?></h6>
+                                        <div class="fs-13 mb-1"><strong>Class/Section:</strong> <?= $classSection ?></div>
+                                        <div class="fs-13 mb-1">
+                                            Notebooks Checked:
+                                            <span class="revenue-icon bg-cyan-transparent text-cyan value"><?= $notebooksChecked ?></span>
+                                        </div>
+                                        <div class="fs-13 text-muted"><i class="ti ti-calendar theme-color"></i> <?= $evalDate ?></div>
+                                    </div>
+
+                                    <!-- Actions -->
                                     <div class="text-end d-flex align-items-center gap-2">
-                                        <!-- Open in browser (always available - opens the report view page) -->
                                         <a href="<?= htmlspecialchars($reportUrl) ?>" target="_blank" class="btn btn-sm btn-purple">
                                             <i class="fas fa-external-link-alt"></i> Open Report
                                         </a>
-
-                                        <!-- Download button (only if a document file exists on disk) -->
                                         <?php if ($hasFile): ?>
                                             <a href="<?= htmlspecialchars($webPath) ?>" target="_blank" class="btn btn-sm btn-success">
                                                 <i class="fa fa-download"></i> Download
@@ -179,6 +189,7 @@ require_once '../includes/function.php';
                             <p class="text-muted">No recent notebook checks found.</p>
                         <?php endif; ?>
                     </div>
+
                 </div>
             </div>
             <div class="col-xxl-4 col-md-4 d-flex">
