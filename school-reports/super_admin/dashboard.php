@@ -62,7 +62,7 @@ require_once '../includes/function.php';
                         <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
                             <h5 class="card-title mb-0">Total Notebook Check </h5>
                             <span class="revenue-icon bg-teal-transparent text-teal">
-                                <?php echo $notebook_count; ?>
+                                <?php echo $id; ?>
                             </span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
