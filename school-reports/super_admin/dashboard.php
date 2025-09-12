@@ -157,7 +157,7 @@ require_once '../includes/function.php';
                                     <div style="width:64px; height:64px; flex:0 0 64px;">
                                         <img src="<?= $photoPath ?>"
                                             alt="<?= $teacherName ?>"
-                                            style="width:64px; height:64px; object-fit:cover; border-radius:6px; border:1px solid #ddd;">
+                                            style="width:100px; height:80px; object-fit:cover; border-radius:6px; border:1px solid #ddd;">
                                     </div>
 
                                     <!-- Teacher Info -->
