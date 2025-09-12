@@ -247,7 +247,7 @@ require_once '../includes/function.php';
                                 <div class="d-flex align-items-start gap-3 mb-3">
                                     <div style="width:64px; height:64px; flex:0 0 64px;">
                                         <img src="<?= $photoPath ?>" alt="<?= $teacher_name ?>"
-                                            style="width:64px;height:64px;object-fit:cover;border-radius:6px;border:1px solid #eee;">
+                                            style="width:100px; height:80px;object-fit:cover;border-radius:6px;border:1px solid #eee;">
                                     </div>
 
                                     <div class="flex-fill">
