@@ -147,9 +147,35 @@ require_once '../includes/function.php';
                                         </div>
                                     </div>
                                     <div class="text-end">
-                                        <a href="print_single_notebook.php?id=<?= $row['id'] ?>" target="_blank" class="action-buttons" title="Print">
-                                         <span class="badge bg-secondary">View Report</span>
-                                    </a>
+                                        <p class="fs-13 mb-2">
+                                            <i class="ti ti-calendar theme-color"></i>
+                                            <?php echo htmlspecialchars($latest_notebook['eval_date']); ?>
+                                        </p>
+                                        <span class="badge bg-purple badge-xs d-inline-flex align-items-center mb-2">
+                                            <h6 class="text-white fw-medium">
+                                                <?php echo htmlspecialchars($latest_notebook['subject']); ?>
+                                            </h6>
+                                        </span>
+                                        <br>
+                                        <?php if ($hasDocument):
+                                            $fileExt = strtolower(pathinfo($currentPath, PATHINFO_EXTENSION));
+                                            $iconClass = [
+                                                'pdf' => 'fa-file-pdf',
+                                                'jpg' => 'fa-file-image',
+                                                'jpeg' => 'fa-file-image',
+                                                'png' => 'fa-file-image',
+                                                'doc' => 'fa-file-word',
+                                                'docx' => 'fa-file-word',
+                                            ][$fileExt] ?? 'fa-file';
+                                        ?>
+                                            <!-- <span class="info-value mb-2">
+                                                <a href="<?php echo $docPath; ?>" target="_blank" class="class-link">
+                                                    <i class="fas <?php echo $iconClass; ?>"></i> View Report
+                                                </a>
+                                            </span> -->
+                                        <?php else: ?>
+                                            <span class="badge bg-secondary">No report</span>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <!-- <div class="d-flex justify-content-center">
