@@ -47,7 +47,7 @@ require_once '../includes/function.php';
                             </span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
-                            <a href="./add_teacher.php" class="btn btn-success btn-sm">Add New</a>
+                            <a href="./register_teacher.php" class="btn btn-success btn-sm">Add New</a>
                             <!-- <a href="./list_teacher.php" class="text-decoration-underline fs-13 fw-medium">View All</a> -->
                         </div>
                     </div>
