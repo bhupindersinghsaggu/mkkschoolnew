@@ -283,7 +283,7 @@ $result = $query->get_result();
                     </tbody>
                 </table>
             </div>
-            <div class="header-button mt-4 d-flex justify-content-between">
+            <div class="header-button mt-4 d-flex justify-content-between align-items-center">
                 <div>
                     <a href="add_notebook.php" class="btn btn-success">Back</a></h3>
                 </div>
