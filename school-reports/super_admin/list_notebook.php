@@ -48,7 +48,7 @@ $result = $query->get_result();
     <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css"> -->
 
     <!-- Simple DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"> -->
 
     <style>
         .teacher-thumb {
