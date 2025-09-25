@@ -203,7 +203,7 @@ $result = $query->get_result();
                                 <td><?= htmlspecialchars($row['subject']) ?></td>
                                 <td><?= htmlspecialchars($row['class_section']) ?></td>
                                 <td><?= htmlspecialchars($row['notebooks_checked']) ?></td>
-                                <!-- <td><?= htmlspecialchars($row['overall_rating']) ?></td> -->
+                                <td><?= htmlspecialchars($row['overall_rating']) ?></td>
                                 <td class="d-flex gap-2">
                                     <a href="edit_notebook.php?id=<?= urlencode($row['id']) ?>" class="action-buttons" title="Edit">
                                         <i class="fa-solid fa-pen-to-square"></i>
@@ -253,7 +253,13 @@ $result = $query->get_result();
             var table = $('#recordsTable').DataTable({
                 responsive: true,
                 dom: 'Bfrtip', // buttons, filter, table
-               
+                buttons: [
+                    { extend: 'copyHtml5', text: 'Copy' },
+                    { extend: 'csvHtml5', text: 'CSV' },
+                    { extend: 'excelHtml5', text: 'Excel' },
+                    { extend: 'pdfHtml5', text: 'PDF' },
+                    { extend: 'print', text: 'Print' }
+                ],
                 order: [[0, 'asc']], // order by first column (row #)
                 columnDefs: [
                     { orderable: false, targets: [1, 10] } // disable ordering on Photo and Actions columns
