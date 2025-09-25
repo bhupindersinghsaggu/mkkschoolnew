@@ -284,7 +284,7 @@ $result = $query->get_result();
                 </table>
             </div>
             <nav class="mt-4">
-                <ul class="pagination justify-content-center">
+                <ul class="pagination justify-content-start">
                     <?php for ($i = 1; $i <= $total_pages; $i++): ?>
                         <li class="page-item <?= $i == $page ? 'active' : '' ?>">
                             <a class="page-link" href="?page=<?= $i ?>&start_date=<?= $start_date ?>&end_date=<?= $end_date ?>"><?= $i ?></a>
