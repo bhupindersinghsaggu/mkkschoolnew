@@ -44,8 +44,8 @@ $result = $query->get_result();
     <link rel="shortcut icon" href="../assets/img/favicon.png">
 
     <!-- Basic styles -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css"> -->
 
     <!-- Simple DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
