@@ -57,7 +57,7 @@ $result = $query->get_result();
             object-fit: cover;
             border-radius: 4px;
         }
-        .action-buttons {
+        /* .action-buttons {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -67,7 +67,7 @@ $result = $query->get_result();
             border-radius: 4px;
             text-decoration: none;
         }
-        .action-buttons + .action-buttons { margin-left: 6px; }
+        .action-buttons + .action-buttons { margin-left: 6px; } */
     </style>
 </head>
 
