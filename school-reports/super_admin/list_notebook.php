@@ -170,7 +170,7 @@ $result = $query->get_result();
                             <th>Subject</th>
                             <th>Class</th>
                             <th>Books Checked</th>
-                            <th>Rating</th>
+                            <!-- <th>Rating</th> -->
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -203,7 +203,7 @@ $result = $query->get_result();
                                 <td><?= htmlspecialchars($row['subject']) ?></td>
                                 <td><?= htmlspecialchars($row['class_section']) ?></td>
                                 <td><?= htmlspecialchars($row['notebooks_checked']) ?></td>
-                                <td><?= htmlspecialchars($row['overall_rating']) ?></td>
+                                <!-- <td><?= htmlspecialchars($row['overall_rating']) ?></td> -->
                                 <td class="d-flex gap-2">
                                     <a href="edit_notebook.php?id=<?= urlencode($row['id']) ?>" class="action-buttons" title="Edit">
                                         <i class="fa-solid fa-pen-to-square"></i>
