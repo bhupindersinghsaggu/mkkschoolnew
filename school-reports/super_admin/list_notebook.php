@@ -247,7 +247,31 @@ $result = $query->get_result();
     <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
 
     <script>
-        
+        // Initialize DataTable
+        $(document).ready(function() {
+            // DataTable instance
+            var table = $('#recordsTable').DataTable({
+                responsive: true,
+                dom: 'Bfrtip', // buttons, filter, table
+               
+                order: [[0, 'asc']], // order by first column (row #)
+                columnDefs: [
+                    { orderable: false, targets: [1, 10] } // disable ordering on Photo and Actions columns
+                ],
+                pageLength: 10,
+                lengthMenu: [ [10, 25, 50, 100], [10, 25, 50, 100] ],
+                language: {
+                    search: "Quick filter:"
+                }
+            });
+
+            // Wire your custom search input to DataTables search
+            $('#searchInput').on('keyup', function() {
+                table.search(this.value).draw();
+            });
+
+            // If you want the DataTables built-in search visible as well, remove/comment the language.search override above.
+        });
 
         // Modal alert handling (keeps your previous behavior)
         document.addEventListener('DOMContentLoaded', function() {
