@@ -16,7 +16,7 @@
         color: #0d6efd !important;
     }
 </style>
-<div class="d-block d-lg-none fixed-bottom bg-white shadow-lg py-2 mt-4">
+<div class="d-block d-lg-none fixed-bottom bg-white shadow-lg py-2 mt-4 mb-4">
     <div class="container">
         <div class="row text-center">
             <!-- Home Icon -->
