@@ -170,7 +170,7 @@ $result = $query->get_result();
                             <th>Subject</th>
                             <th>Class</th>
                             <th>Books Checked</th>
-                            <!-- <th>Rating</th> -->
+                            <th>Rating</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
