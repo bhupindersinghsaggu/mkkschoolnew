@@ -284,7 +284,9 @@ $result = $query->get_result();
                 </table>
             </div>
             <div class="header-button mt-4 d-flex justify-content-between">
-                <a href="add_notebook.php" class="btn btn-success">Back</a></h3>
+                <div>
+                    <a href="add_notebook.php" class="btn btn-success">Back</a></h3>
+                </div>
                 <div>
                     <nav class="mt-4">
                         <ul class="pagination justify-content-center">
