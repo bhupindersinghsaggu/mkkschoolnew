@@ -288,7 +288,7 @@ $result = $query->get_result();
                     <a href="add_notebook.php" class="btn btn-success">Back</a></h3>
                 </div>
                 <div>
-                    <nav class=">
+                    <nav class="">
                         <ul class="pagination justify-content-center">
                             <?php for ($i = 1; $i <= $total_pages; $i++): ?>
                                 <li class="page-item <?= $i == $page ? 'active' : '' ?>">
