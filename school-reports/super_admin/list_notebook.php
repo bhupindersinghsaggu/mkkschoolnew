@@ -6,8 +6,10 @@ require_once '../includes/auth_check.php';
 require_once '../includes/header.php';
 require_once '../config/functions.php';
 
-// NOTE: We fetch all matching records so DataTables can paginate / search client-side.
-// If your dataset is very large, consider using server-side processing instead.
+// Pagination setup
+$limit = 10;
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$start = ($page - 1) * $limit;
 
 // Filter by date (using prepared statements)
 $where = "";
@@ -22,18 +24,35 @@ if ($start_date && $end_date) {
     $types = "ss";
 }
 
-// Fetch records with teacher photos and documents (no LIMIT for client-side DataTables)
-$sql = "
+// Count total records
+$count_query = $conn->prepare("SELECT COUNT(*) AS total FROM records r $where");
+if ($where) {
+    $count_query->bind_param($types, ...$params);
+}
+$count_query->execute();
+$total = $count_query->get_result()->fetch_assoc()['total'];
+$total_pages = ceil($total / $limit);
+
+// Fetch records with teacher photos and documents
+// Change your query to:
+$query = $conn->prepare("
     SELECT r.*, td.profile_pic, r.document 
     FROM records r
     LEFT JOIN teacher_details td ON r.teacher_id = td.teacher_id
     $where
-    ORDER BY r.id DESC
-";
-$query = $conn->prepare($sql);
+    ORDER BY r.id DESC 
+    LIMIT ?, ?
+");
+
 if ($where) {
+    $params[] = $start;
+    $params[] = $limit;
+    $types .= "ii";
     $query->bind_param($types, ...$params);
+} else {
+    $query->bind_param("ii", $start, $limit);
 }
+
 $query->execute();
 $result = $query->get_result();
 ?>
@@ -57,12 +76,6 @@ $result = $query->get_result();
     <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/custom.css">
-
-    <!-- DataTables CSS (CDN) -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
-
     <style>
         .teacher-thumb {
             width: 50px;
@@ -92,11 +105,6 @@ $result = $query->get_result();
         td .action-buttons+.action-buttons {
             margin-left: 8px;
         }
-
-        /* keep DataTables buttons visually consistent with your layout */
-        .dt-buttons .btn {
-            margin-right: 6px;
-        }
     </style>
 </head>
 
@@ -109,21 +117,20 @@ $result = $query->get_result();
             <div class="mb-3">
                 <h3 class="">Notebook Review Records</h3>
             </div>
-
             <!-- Date Filter -->
             <form method="GET" class="row g-2 mb-3">
                 <div class="col-md-4">
-                    <input type="date" name="start_date" class="form-control" value="<?= htmlspecialchars($start_date) ?>">
+                    <input type="date" name="start_date" class="form-control" value="<?= $start_date ?>">
                 </div>
                 <div class="col-md-4">
-                    <input type="date" name="end_date" class="form-control" value="<?= htmlspecialchars($end_date) ?>">
+                    <input type="date" name="end_date" class="form-control" value="<?= $end_date ?>">
                 </div>
                 <div class="col-md-4 justify-content-between align-items-center">
                     <button class="btn btn-primary">Filter</button>
                 </div>
             </form>
-
             <input class="form-control mb-3" id="searchInput" type="text" placeholder="Search by Name, Class, Subject">
+            <!-- File upload Alert Message start -->
 
             <!-- Alert Modal -->
             <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
@@ -156,9 +163,9 @@ $result = $query->get_result();
                 </div>
             </div>
 
-            <!-- Table -->
+            <!-- File upload Alert Message start -->
             <div class="table-responsive">
-                <table class="table table-bordered table-hover" id="recordsTable" style="width:100%;">
+                <table class="table table-bordered table-hover" id="recordsTable">
                     <thead class="table-dark">
                         <tr>
                             <th>#</th>
@@ -170,13 +177,16 @@ $result = $query->get_result();
                             <th>Subject</th>
                             <th>Class</th>
                             <th>Books Checked</th>
+                            <!-- <th>Reviewed</th> -->
                             <th>Rating</th>
                             <th>Actions</th>
+                            <!-- <th>Upload Report</th>
+                            <th>View Report</th> -->
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $count = 1;
+                        $count = $start + 1;
                         while ($row = mysqli_fetch_assoc($result)):
                         ?>
                             <tr>
@@ -196,90 +206,112 @@ $result = $query->get_result();
                                         </div>
                                     <?php endif; ?>
                                 </td>
-                                <td><?= htmlspecialchars($row['session']) ?></td>
-                                <td><?= htmlspecialchars($row['eval_date']) ?></td>
-                                <td><?= htmlspecialchars($row['teacher_name']) ?></td>
-                                <td><?= htmlspecialchars($row['teacher_id']) ?></td>
-                                <td><?= htmlspecialchars($row['subject']) ?></td>
-                                <td><?= htmlspecialchars($row['class_section']) ?></td>
-                                <td><?= htmlspecialchars($row['notebooks_checked']) ?></td>
-                                <td><?= htmlspecialchars($row['overall_rating']) ?></td>
+                                <td><?= $row['session'] ?></td>
+                                <td><?= $row['eval_date'] ?></td>
+                                <td><?= $row['teacher_name'] ?></td>
+                                <td><?= $row['teacher_id'] ?></td>
+                                <td><?= $row['subject'] ?></td>
+                                <td><?= $row['class_section'] ?></td>
+                                <td><?= $row['notebooks_checked'] ?></td>
+                                <!-- <td><?= $row['students_reviewed'] ?></td> -->
+                                <td><?= $row['overall_rating'] ?></td>
                                 <td class="d-flex gap-2">
-                                    <a href="edit_notebook.php?id=<?= urlencode($row['id']) ?>" class="action-buttons" title="Edit">
+                                    <a href="edit_notebook.php?id=<?= $row['id'] ?>" class="action-buttons" title="Edit">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
-                                    <a href="delete_notebook.php?id=<?= urlencode($row['id']) ?>" onclick="return confirm('Delete this record?')" class="action-buttons" title="Delete">
+                                    <a href="delete_notebook.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this record?')" class="action-buttons" title="Delete">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </a>
-                                    <a href="print_single_notebook.php?id=<?= urlencode($row['id']) ?>" target="_blank" class="action-buttons" title="Print">
+                                    <a href="print_single_notebook.php?id=<?= $row['id'] ?>" target="_blank" class="action-buttons" title="Print">
                                          <span class="badge bg-secondary">View Report</span>
                                     </a>
                                 </td>
+                                <!-- <td>
+                                    <form action="upload_document_notebook.php" method="POST" enctype="multipart/form-data" class="d-flex gap-2 align-items-center">
+                                        <input type="hidden" name="record_id" value="<?= htmlspecialchars($row['id']) ?>">
+                                        <input type="hidden" name="teacher_id" value="<?= htmlspecialchars($row['teacher_id']) ?>">
+                                        <div class="position-relative" style="width: 150px;">
+                                            <input type="file" name="document" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx"
+                                                class="form-control form-control-sm" required>
+                                            <div class="invalid-feedback">Please select a valid file</div>
+                                        </div>
+                                        <button type="submit" class="btn btn-sm btn-primary" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </button>
+                                    </form>
+                                </td> -->
+                                <!-- <td>
+                                    <?php
+                                    if (!empty($row['document'])):
+                                        // Sanitize and secure the document path
+                                        $docPath = '../uploads/teacher_documents/' . htmlspecialchars(basename($row['document']));
+
+                                        // Check if file exists and is within the allowed directory
+                                        $allowedPath = realpath('../uploads/teacher_documents/');
+                                        $currentPath = realpath($docPath);
+
+                                        if ($currentPath && strpos($currentPath, $allowedPath) === 0 && file_exists($currentPath)):
+                                            $fileExt = strtolower(pathinfo($currentPath, PATHINFO_EXTENSION));
+                                            $iconClass = [
+                                                'pdf' => 'fa-file-pdf',
+                                                'jpg' => 'fa-file-image',
+                                                'jpeg' => 'fa-file-image',
+                                                'png' => 'fa-file-image',
+                                                'doc' => 'fa-file-word',
+                                                'docx' => 'fa-file-word',
+                                            ][$fileExt] ?? 'fa-file';
+                                    ?>
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <a href="<?= htmlspecialchars($docPath) ?>" target="_blank" class="btn btn-info"
+                                                    title="View <?= htmlspecialchars($row['document']) ?>">
+                                                    <i class="fa <?= $iconClass ?>"></i> View
+                                                </a>
+                                                <a href="<?= htmlspecialchars($docPath) ?>" download
+                                                    class="btn btn-secondary" title="Download">
+                                                    <i class="fa fa-download"></i>
+                                                </a>
+                                            </div>
+                                        <?php else: ?>
+                                            <span class="badge bg-danger">File not found</span>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <span class="badge bg-secondary">No document</span>
+                                    <?php endif; ?>
+                                </td> -->
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
                 </table>
             </div>
-
             <div class="header-button mt-4">
-                <a href="add_notebook.php" class="btn btn-success">Back</a>
+                <a href="add_notebook.php" class="btn btn-success">Back</a></h3>
             </div>
-
+            <!-- Pagination -->
+            <nav class="mt-4">
+                <ul class="pagination justify-content-center">
+                    <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                        <li class="page-item <?= $i == $page ? 'active' : '' ?>">
+                            <a class="page-link" href="?page=<?= $i ?>&start_date=<?= $start_date ?>&end_date=<?= $end_date ?>"><?= $i ?></a>
+                        </li>
+                    <?php endfor; ?>
+                </ul>
+            </nav>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <!-- jQuery (required by DataTables) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap bundle -->
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-
-    <!-- DataTables & Extensions -->
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-
-    <!-- Buttons extension + dependencies -->
-    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
-
     <script>
-        // Initialize DataTable
-        $(document).ready(function() {
-            // DataTable instance
-            var table = $('#recordsTable').DataTable({
-                responsive: true,
-                dom: 'Bfrtip', // buttons, filter, table
-                buttons: [
-                    { extend: 'copyHtml5', text: 'Copy' },
-                    { extend: 'csvHtml5', text: 'CSV' },
-                    { extend: 'excelHtml5', text: 'Excel' },
-                    { extend: 'pdfHtml5', text: 'PDF' },
-                    { extend: 'print', text: 'Print' }
-                ],
-                order: [[0, 'asc']], // order by first column (row #)
-                columnDefs: [
-                    { orderable: false, targets: [1, 10] } // disable ordering on Photo and Actions columns
-                ],
-                pageLength: 10,
-                lengthMenu: [ [10, 25, 50, 100], [10, 25, 50, 100] ],
-                language: {
-                    search: "Quick filter:"
-                }
-            });
+        // Live search filter
+        document.getElementById("searchInput").addEventListener("keyup", function() {
+            let filter = this.value.toLowerCase();
+            let rows = document.querySelectorAll("#recordsTable tbody tr");
 
-            // Wire your custom search input to DataTables search
-            $('#searchInput').on('keyup', function() {
-                table.search(this.value).draw();
+            rows.forEach(row => {
+                let text = row.innerText.toLowerCase();
+                row.style.display = text.includes(filter) ? "" : "none";
             });
-
-            // If you want the DataTables built-in search visible as well, remove/comment the language.search override above.
         });
-
-        // Modal alert handling (keeps your previous behavior)
+    </script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
             const uploadStatus = urlParams.get('upload');
@@ -302,6 +334,7 @@ $result = $query->get_result();
             }
         });
     </script>
+
 
     <?php include '../includes/footer.php'; ?>
 </body>
