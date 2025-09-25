@@ -223,7 +223,7 @@ $result = $query->get_result();
                                         <i class="fa-solid fa-trash-can"></i>
                                     </a>
                                     <a href="print_single_notebook.php?id=<?= $row['id'] ?>" target="_blank" class="action-buttons" title="Print">
-                                         <span class="badge bg-secondary">View Report</span>
+                                        <span class="badge bg-secondary">View Report</span>
                                     </a>
                                 </td>
                                 <!-- <td>
@@ -283,19 +283,22 @@ $result = $query->get_result();
                     </tbody>
                 </table>
             </div>
-            <div class="header-button mt-4">
+            <div class="header-button mt-4 d-flex justify-content-between">
                 <a href="add_notebook.php" class="btn btn-success">Back</a></h3>
+                <div>
+                    <nav class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                                <li class="page-item <?= $i == $page ? 'active' : '' ?>">
+                                    <a class="page-link" href="?page=<?= $i ?>&start_date=<?= $start_date ?>&end_date=<?= $end_date ?>"><?= $i ?></a>
+                                </li>
+                            <?php endfor; ?>
+                        </ul>
+                    </nav>
+                </div>
             </div>
             <!-- Pagination -->
-            <nav class="mt-4">
-                <ul class="pagination justify-content-center">
-                    <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-                        <li class="page-item <?= $i == $page ? 'active' : '' ?>">
-                            <a class="page-link" href="?page=<?= $i ?>&start_date=<?= $start_date ?>&end_date=<?= $end_date ?>"><?= $i ?></a>
-                        </li>
-                    <?php endfor; ?>
-                </ul>
-            </nav>
+
         </div>
     </div>
 
