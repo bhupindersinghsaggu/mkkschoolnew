@@ -293,12 +293,12 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
                     <li class="dropdown topbar-item">
                         <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="/mkkschool-new/assets/images/users/avatar-1.jpg" alt="" class="thumb-lg rounded-circle">
+                            <img src="assets/images/users/avatar-1.jpg" alt="" class="thumb-lg rounded-circle">
                         </a>
                         <div class="dropdown-menu dropdown-menu-end py-0">
                             <div class="d-flex align-items-center dropdown-item py-2 bg-secondary-subtle">
                                 <div class="flex-shrink-0">
-                                    <img src="/mkkschool-new/assets/images/users/avatar-1.jpg" alt="" class="thumb-md rounded-circle">
+                                    <img src="assets/images/users/avatar-1.jpg" alt="" class="thumb-md rounded-circle">
                                 </div>
                                 <div class="flex-grow-1 ms-2 text-truncate align-self-center">
                                     <h6 class="my-0 fw-medium text-dark fs-13"><?php echo $auth->getRoleName($user_role); ?></h6>
@@ -313,7 +313,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
                             <a class="dropdown-item" href="pages-profile.html"><i
                                     class="las la-cog fs-18 me-1 align-text-bottom"></i>Account Settings</a>
                             <div class="dropdown-divider mb-0"></div> -->
-                            <a class="dropdown-item text-danger" href="/mkkschool-new/logout.php"><i
+                            <a class="dropdown-item text-danger" href="logout.php"><i
                                     class="las la-power-off fs-18 me-1 align-text-bottom"></i> Logout</a>
                         </div>
                     </li>
@@ -325,11 +325,11 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
         <div class="brand">
             <a href="dashboard.php" class="logo">
                 <span>
-                    <img src="/mkkschool-new/assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
+                    <img src="assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
                 </span>
                 <span class="">
-                    <img src="/mkkschool-new/assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-light">
-                    <img src="/mkkschool-new/assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark">
+                    <img src="assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-light">
+                    <img src="assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark">
                 </span>
             </a>
         </div>
