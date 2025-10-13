@@ -2,9 +2,9 @@
 // add_class_show.php
 // Add Class Show record - server + client (no AJAX)
 
-require_once __DIR__ . '/../../config.php';
-require_once __DIR__ . '/../../auth.php';
-require_once __DIR__ . '/../../database.php';
+require_once __DIR__ . '/../../../config.php';
+require_once __DIR__ . '/../../../auth.php';
+require_once __DIR__ . '/../../../database.php';
 
 $auth = new Auth();
 if (!$auth->isLoggedIn() || !$auth->hasPermission(ROLE_ADMIN)) {
@@ -139,8 +139,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 ?>
-<?php include __DIR__ . '/../../includes/css.php'; ?>
-<?php include __DIR__ . '/../../includes/header.php'; ?>
+<?php include __DIR__ . '/../../../includes/css.php'; ?>
+<?php include __DIR__ . '/../../../includes/header.php'; ?>
 
 <div class="page-wrapper">
     <div class="page-content">
