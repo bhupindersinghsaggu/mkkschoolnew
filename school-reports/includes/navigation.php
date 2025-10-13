@@ -54,15 +54,15 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'add_notebook.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/admin/teachers/add_notebook.php">Add Notebook Report</a>
+                                       href="admin/teachers/add_notebook.php">Add Notebook Report</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'edit_notebook.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/admin/teachers/edit_notebook.php">Edit Notebook Report</a>
+                                       href="admin/teachers/edit_notebook.php">Edit Notebook Report</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'list_notebook.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/admin/teachers/list_notebook.php">List Notebook Report</a>
+                                       href="admin/teachers/list_notebook.php">List Notebook Report</a>
                                 </li>
                             </ul>
                         </div>
@@ -80,11 +80,11 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'add_class_show.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/admin/teachers/add_class_show.php">Add Class Show</a>
+                                       href="admin/teachers/add_class_show.php">Add Class Show</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'list_class_show.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/admin/teachers/list_class_show.php">View Class Show</a>
+                                       href="admin/teachers/list_class_show.php">View Class Show</a>
                                 </li>
                             </ul>
                         </div>
@@ -102,11 +102,11 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'courses.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/courses.php">Add Course</a>
+                                       href="courses.php">Add Course</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'courses_report.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/courses_report.php">Course Wise Report</a>
+                                       href="courses_report.php">Course Wise Report</a>
                                 </li>
                             </ul>
                         </div>
@@ -124,11 +124,11 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'add_job.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/add_job.php">Add Job</a>
+                                       href="add_job.php">Add Job</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'manage_jobs.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/manage_jobs.php">Manage Jobs</a>
+                                       href="manage_jobs.php">Manage Jobs</a>
                                 </li>
                             </ul>
                         </div>
@@ -146,15 +146,15 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'add_expense.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/add_expense.php">Add Expense</a>
+                                       href="add_expense.php">Add Expense</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'manage_expenses.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/manage_expenses.php">Manage Expenses</a>
+                                       href="manage_expenses.php">Manage Expenses</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'expenses_report.php') ? 'active' : ''; ?>"
-                                       href="/mkkschool-new/expenses_report.php">Expense Reports</a>
+                                       href="expenses_report.php">Expense Reports</a>
                                 </li>
                             </ul>
                         </div>
@@ -164,13 +164,13 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                 <!-- Teacher Menu -->
                 <!-- <?php if ($user_role == ROLE_TEACHER): ?>
                     <li class="nav-item">
-                        <a href="/mkkschool-new/teacher/my_courses.php" class="nav-link <?php echo ($current_page == 'my_courses.php') ? 'active' : ''; ?>">
+                        <a href="teacher/my_courses.php" class="nav-link <?php echo ($current_page == 'my_courses.php') ? 'active' : ''; ?>">
                             <i class="iconoir-folder menu-icon"></i>
                             <span>My Courses</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/mkkschool-new/teacher/my_docs.php" class="nav-link <?php echo ($current_page == 'my_docs.php') ? 'active' : ''; ?>">
+                        <a href="teacher/my_docs.php" class="nav-link <?php echo ($current_page == 'my_docs.php') ? 'active' : ''; ?>">
                             <i class="iconoir-folder menu-icon"></i>
                             <span>My Docs</span>
                         </a>
