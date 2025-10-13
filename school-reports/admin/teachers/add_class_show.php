@@ -139,8 +139,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 ?>
-<?php include __DIR__ . '/../../includes/css.php'; ?>
-<?php include __DIR__ . '/../../includes/header.php'; ?>
+<?php include __DIR__ . '/../includes/css.php'; ?>
+<?php include __DIR__ . '/../includes/header.php'; ?>
 
 <div class="page-wrapper">
     <div class="page-content">
