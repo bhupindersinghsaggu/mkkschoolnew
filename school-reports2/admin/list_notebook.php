@@ -154,7 +154,7 @@ try {
     </div>
 </div>
 
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
 
 <!-- Load DataTables Buttons assets (CDNs). If your header already loads some of these, duplication is harmless. -->
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">

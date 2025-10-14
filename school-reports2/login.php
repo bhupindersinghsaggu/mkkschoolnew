@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
         
         <div class="login-footer">
-            <p>&copy; <?php echo date('Y'); ?> Computer Center. All rights reserved.</p>
+            <p>&copy; <?php echo date('Y'); ?> Dr. M.K.K. Arya Model School. All rights reserved.</p>
         </div>
     </div>
 </body>
