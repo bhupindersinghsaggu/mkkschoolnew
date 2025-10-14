@@ -38,12 +38,12 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
     <meta content="" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <link rel="stylesheet" href="assets/libs/jsvectormap/css/jsvectormap.min.css">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/data-table.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" href="../assets/libs/jsvectormap/css/jsvectormap.min.css">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/data-table.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link href="assets/css/style.css" rel="stylesheet" type="text/css" /> -->
     <!-- jQuery (required for DataTables)
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -333,7 +333,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
                 </span>
             </a>
         </div>
-        <?php include  '../includes/navigation.php'; ?>
+        <?php include __DIR__ . '/navigation.php'; ?>
     </div>
     <div class="startbar-overlay d-print-none"></div>
     <?php
