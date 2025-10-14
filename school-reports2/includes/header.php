@@ -43,7 +43,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
     <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/css/data-table.css" rel="stylesheet" type="text/css" /> -->
+    <link href="../assets/css/data-table.css" rel="stylesheet" type="text/css" /> 
     <!-- <link href="assets/css/style.css" rel="stylesheet" type="text/css" /> -->
     <!-- jQuery (required for DataTables)
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

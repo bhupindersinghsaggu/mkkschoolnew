@@ -12,9 +12,9 @@ if ($auth->isLoggedIn()) {
     if ($role == ROLE_TEACHER) {
         header("Location: admin/teachers/dashboard.php");
     } elseif ($role == ROLE_ADMIN) {
-        header("Location: dashboard.php");
+        header("Location: admin/dashboard.php");
     } elseif ($role == ROLE_SUPER_ADMIN) {
-        header("Location: dashboard.php");
+        header("Location: admin/dashboard.php");
     }
     exit;
 }
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($role == ROLE_TEACHER) {
             header("Location: admin/teachers/dashboard.php");
         } else {
-            header("Location: dashboard.php");
+            header("Location: admin/dashboard.php");
         }
         exit;
     } else {
