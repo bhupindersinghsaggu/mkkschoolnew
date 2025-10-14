@@ -1,8 +1,8 @@
 <?php
 // admin/class_show/list_class_show.php
-require_once __DIR__ . '/../../config.php';
-require_once __DIR__ . '/../../auth.php';
-require_once __DIR__ . '/../../database.php';
+require_once '../config.php';
+require_once '../auth.php';
+require_once '../database.php';
 
 $auth = new Auth();
 if (!$auth->isLoggedIn() || !$auth->hasPermission(ROLE_ADMIN)) {
@@ -96,8 +96,8 @@ $baseUrl = basename($_SERVER['PHP_SELF']) . (count($queryParams) ? ('?' . http_b
 $totalPages = $perPage > 0 ? (int)ceil($totalRows / $perPage) : 1;
 
 ?>
-<?php include __DIR__ . '/../../includes/css.php'; ?>
-<?php include __DIR__ . '/../../includes/header.php'; ?>
+<?php require_once '../includes/css.php'; ?>
+<?php require_once '../includes/header.php'; ?>
 <style>
     table.dataTable {
         width: 100%;
@@ -258,7 +258,7 @@ $totalPages = $perPage > 0 ? (int)ceil($totalRows / $perPage) : 1;
     </div>
 </div>
 
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php require_once '../includes/footer.php'; ?>
 <!-- Load DataTables Buttons assets (CDNs). If your header already loads some of these, duplication is harmless. -->
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
 

@@ -3,17 +3,13 @@
 session_start();
 
 // Database configuration local
-// define('DB_HOST', 'localhost');
-// define('DB_NAME', 'school-reports3');
-// define('DB_USER', 'root');
-// define('DB_PASS', '');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'school-reports3');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
 // Database configuration Web
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'u315669183_schoolnew');
-define('DB_USER', 'u315669183_schoolnew');
-define('DB_PASS', 'Sa5msa5m@123');
-
+// da
 
 //php my admin accsess 
 // https://auth-db1001.hstgr.io/

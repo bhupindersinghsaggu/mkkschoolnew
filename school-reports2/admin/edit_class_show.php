@@ -1,8 +1,8 @@
 <?php
 // admin/class_show/edit_class_show.php
-require_once __DIR__ . '/../../config.php';
-require_once __DIR__ . '/../../auth.php';
-require_once __DIR__ . '/../../database.php';
+ require_once '../config.php';
+ require_once '../auth.php';
+ require_once '../database.php';
 
 $auth = new Auth();
 if (!$auth->isLoggedIn() || !$auth->hasPermission(ROLE_ADMIN)) {
@@ -221,8 +221,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
     }
 }
 ?>
-<?php include __DIR__ . '/../../includes/css.php'; ?>
-<?php include __DIR__ . '/../../includes/header.php'; ?>
+<?php include  '../includes/css.php'; ?>
+<?php include  '../includes/header.php'; ?>
 <div class="page-wrapper">
     <div class="page-content">
         <div class="container-xxl">
@@ -430,7 +430,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
                 </div>
             </div>
 
-            <?php include __DIR__ . '/../../includes/footer.php'; ?>
+            <?php include '../includes/footer.php'; ?>
 
             <!-- Small client-side filtering & auto-total JS -->
             <script>

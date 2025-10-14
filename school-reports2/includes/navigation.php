@@ -54,15 +54,15 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'add_notebook.php') ? 'active' : ''; ?>"
-                                       href="admin/teachers/add_notebook.php">Add Notebook Report</a>
+                                       href="add_notebook.php">Add Notebook Report</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'edit_notebook.php') ? 'active' : ''; ?>"
-                                       href="admin/teachers/edit_notebook.php">Edit Notebook Report</a>
+                                       href="edit_notebook.php">Edit Notebook Report</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'list_notebook.php') ? 'active' : ''; ?>"
-                                       href="admin/teachers/list_notebook.php">List Notebook Report</a>
+                                       href="list_notebook.php">List Notebook Report</a>
                                 </li>
                             </ul>
                         </div>
@@ -80,11 +80,11 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'add_class_show.php') ? 'active' : ''; ?>"
-                                       href="admin/teachers/add_class_show.php">Add Class Show</a>
+                                       href="add_class_show.php">Add Class Show</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'list_class_show.php') ? 'active' : ''; ?>"
-                                       href="admin/teachers/list_class_show.php">View Class Show</a>
+                                       href="list_class_show.php">View Class Show</a>
                                 </li>
                             </ul>
                         </div>

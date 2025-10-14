@@ -1,8 +1,8 @@
 <?php
 // admin/teachers/list_notebook.php
-require_once __DIR__ . '/../../config.php';
-require_once __DIR__ . '/../../auth.php';
-require_once __DIR__ . '/../../database.php';
+require_once '../config.php';
+require_once '../auth.php';
+require_once '../database.php';
 
 $auth = new Auth();
 if (!$auth->isLoggedIn()) {
@@ -43,8 +43,8 @@ try {
     $error = "Failed to load records.";
 }
 ?>
-<?php include __DIR__ . '/../../includes/css.php'; ?>
-<?php include __DIR__ . '/../../includes/header.php'; ?>
+<?php include '../includes/css.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 <style>
     table.dataTable {

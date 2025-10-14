@@ -3,13 +3,13 @@
 // Edit an existing notebook correction record (no AJAX)
 // Place in admin/teachers/ same folder as add_notebook.php
 
-require_once __DIR__ . '/../../config.php';
-require_once __DIR__ . '/../../auth.php';
-require_once __DIR__ . '/../../database.php';
+require_once '../config.php';
+require_once '../auth.php';
+require_once '../database.php';
 
 $auth = new Auth();
 if (!$auth->isLoggedIn()) {
-    header('Location: /mkkschool-new/login.php');
+    header('Location: login.php');
     exit;
 }
 
@@ -190,8 +190,8 @@ function val($field, $record) {
 }
 
 ?>
-<?php include __DIR__ . '/../../includes/css.php'; ?>
-<?php include __DIR__ . '/../../includes/header.php'; ?>
+<?php include  '../includes/css.php'; ?>
+<?php include  '../includes/header.php'; ?>
 
 <div class="page-wrapper">
     <div class="page-content">
@@ -398,7 +398,7 @@ function val($field, $record) {
     </div>
 </div>
 
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
 
 <!-- Client-side scripts: filter + select -> fill hidden fields + prefill -->
 <script>

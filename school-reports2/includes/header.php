@@ -38,12 +38,12 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
     <meta content="" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <link rel="stylesheet" href="assets/libs/jsvectormap/css/jsvectormap.min.css">
+    <!-- <link rel="stylesheet" href="assets/libs/jsvectormap/css/jsvectormap.min.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/data-table.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/data-table.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link href="assets/css/style.css" rel="stylesheet" type="text/css" /> -->
     <!-- jQuery (required for DataTables) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -293,12 +293,12 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
                     <li class="dropdown topbar-item">
                         <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="assets/images/users/avatar-1.jpg" alt="" class="thumb-lg rounded-circle">
+                            <img src="../assets/images/users/avatar-1.jpg" alt="" class="thumb-lg rounded-circle">
                         </a>
                         <div class="dropdown-menu dropdown-menu-end py-0">
                             <div class="d-flex align-items-center dropdown-item py-2 bg-secondary-subtle">
                                 <div class="flex-shrink-0">
-                                    <img src="assets/images/users/avatar-1.jpg" alt="" class="thumb-md rounded-circle">
+                                    <img src="../assets/images/users/avatar-1.jpg" alt="" class="thumb-md rounded-circle">
                                 </div>
                                 <div class="flex-grow-1 ms-2 text-truncate align-self-center">
                                     <h6 class="my-0 fw-medium text-dark fs-13"><?php echo $auth->getRoleName($user_role); ?></h6>

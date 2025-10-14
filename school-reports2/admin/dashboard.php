@@ -1,7 +1,7 @@
 <?php
 // admin/teachers/list.php - list teachers with edit/delete links
-require_once __DIR__ . '/../../config.php';
-require_once __DIR__ . '/../../auth.php';
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../auth.php';
 
 $auth = new Auth();
 
@@ -96,8 +96,8 @@ $todayexpenses = $stmt->fetch(PDO::FETCH_ASSOC)['today_expenses'] ?? 0;
 $auth->logActivity($_SESSION['user_id'], "Accessed dashboard");
 ?>
 
-<?php include __DIR__ . '/../../includes/css.php'; ?>
-<?php include __DIR__ . '/../../includes/header.php'; ?>
+<?php include '../includes/css.php'; ?>
+<?php include '../includes/header.php'; ?>
 <div class="page-wrapper">
     <div class="page-content">
         <div class="container-xxl">
@@ -249,7 +249,7 @@ $auth->logActivity($_SESSION['user_id'], "Accessed dashboard");
         </footer>
     </div>
 </div>
-<?php include __DIR__ . '/../../includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
 </body>
 
 </html>

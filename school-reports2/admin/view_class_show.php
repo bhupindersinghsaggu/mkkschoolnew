@@ -1,9 +1,9 @@
 <?php
 // admin/class_show/print_single_class_show.php
 // A4-friendly, fancy class-show report with logo & teacher photo
-require_once __DIR__ . '/../../config.php';
-require_once __DIR__ . '/../../auth.php';
-require_once __DIR__ . '/../../database.php';
+require_once '../config.php';
+require_once '../auth.php';
+require_once '../database.php';
 
 $auth = new Auth();
 if (!$auth->isLoggedIn()) {
@@ -101,7 +101,7 @@ if ($total === null || $total === '') {
     <meta charset="utf-8">
     <title>Class Show Report #<?= e($record['id']) ?></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <?php include __DIR__ . '/../../includes/css.php'; ?>
+    <?php include '../includes/css.php'; ?>
     <style>
         /* A4 Page sizing for print */
         @page {
