@@ -325,11 +325,11 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
         <div class="brand">
             <a href="dashboard.php" class="logo">
                 <span>
-                    <img src="assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
+                    <img src="../assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
                 </span>
                 <span class="">
-                    <img src="assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-light">
-                    <img src="assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark">
+                    <img src="../assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-light">
+                    <img src="../assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark">
                 </span>
             </a>
         </div>
