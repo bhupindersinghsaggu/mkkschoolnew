@@ -235,7 +235,7 @@ $auth->logActivity($_SESSION['user_id'], "Accessed dashboard");
                                     <script>
                                         document.write(new Date().getFullYear())
                                     </script>
-                                    Bharat Computer & Coaching
+                                   Dr.  M.K.K. Arya Model  School
                                     <span class="text-muted d-none d-sm-inline-block float-end">
                                         Crafted with
                                         <i class="iconoir-heart text-danger"></i>

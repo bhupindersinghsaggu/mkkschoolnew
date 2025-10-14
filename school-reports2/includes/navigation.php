@@ -15,7 +15,7 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                 <!-- Dashboard -->
                 <li class="nav-item">
                     <a class="nav-link <?php echo ($current_page == 'dashboard.php') ? 'active' : ''; ?>"
-                       href="<?php echo ($user_role == ROLE_TEACHER) ? 'dashboard.php' : 'dashboard.php'; ?>">
+                       href="<?php echo ($user_role == ROLE_SUPER_ADMIN) ? 'dashboard.php' : 'dashboard.php'; ?>">
                         <i class="iconoir-compact-disc menu-icon"></i>
                         <span>Dashboard</span>
                     </a>
@@ -34,7 +34,7 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                                     <a class="nav-link <?php echo ($current_page == 'manage_users.php') ? 'active' : ''; ?>"
                                        href="manage_users.php">Add Users</a>
                                 </li>
-                                <li class="nav-item">
+                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'list_users.php') ? 'active' : ''; ?>"
                                        href="list_users.php">List Users</a>
                                 </li>
