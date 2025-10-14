@@ -333,7 +333,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
                 </span>
             </a>
         </div>
-        <?php include __DIR__ . '/navigation.php'; ?>
+        <?php include  '../includes/navigation.php'; ?>
     </div>
     <div class="startbar-overlay d-print-none"></div>
     <?php
