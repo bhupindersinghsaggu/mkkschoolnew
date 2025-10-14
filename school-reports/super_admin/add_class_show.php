@@ -1,0 +1,382 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require_once '../config/database.php';
+require_once '../includes/auth_check.php';
+require_once '../includes/header.php';
+require_once '../config/functions.php';
+
+$submitted = false;
+$message = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get form data
+    $session = $_POST['session'];
+    $eval_date = $_POST['eval_date'];
+    $topic = $_POST['topic'];
+    $video_link = $_POST['video_link'];
+    $teacher_name = $_POST['teacher_name'];
+    $teacher_id = $_POST['teacher_id'];
+    $evaluator_name = $_POST['evaluator_name'];
+    $class_section = $_POST['class_section']; // This should be a string
+
+    // Convert to floats for decimal values
+    $prayer = (float)$_POST['prayer'];
+    $news = (float)$_POST['news'];
+    $participation = (float)$_POST['participation'];
+    $speeches = (float)$_POST['speeches'];
+    $poem_recitation = (float)$_POST['poem_recitation'];
+    $dance = (float)$_POST['dance'];
+    $song = (float)$_POST['song'];
+    $stage_management = (float)$_POST['stage_management'];
+    $innovation = (float)$_POST['innovation'];
+    $skit = (float)$_POST['skit'];
+    $ppt = (float)$_POST['ppt'];
+    $anchoring = (float)$_POST['anchoring'];
+
+    // Calculate total sum
+    $total = $prayer + $news + $participation + $speeches + $poem_recitation +
+        $dance + $song + $stage_management + $innovation +
+        $skit + $ppt + $anchoring;
+
+    $speaking_skills = $_POST['speaking_skills'];
+    $dancing_skills = $_POST['dancing_skills'];
+    $singing_skills = $_POST['singing_skills'];
+    $dramatic_skills = $_POST['dramatic_skills'];
+    $comments1 = $_POST['comments1'];
+    $comments2 = $_POST['comments2'];
+    $marks_judge1 = (float)$_POST['marks_judge1'];
+    $marks_judge2 = (float)$_POST['marks_judge2'];
+
+    $sql = "INSERT INTO class_show (
+        session, eval_date, topic, video_link, teacher_name, teacher_id, evaluator_name, class_section,
+        prayer, news, participation, speeches, poem_recitation,
+        dance, song, stage_management, innovation, skit, ppt, anchoring, total,
+        speaking_skills, dancing_skills, singing_skills, dramatic_skills, comments1, comments2, marks_judge1, marks_judge2
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = mysqli_prepare($conn, $sql);
+
+    if ($stmt) {
+        // Correct format string: 8 strings + 15 decimals + 6 strings = 29 parameters
+        mysqli_stmt_bind_param(
+            $stmt,
+            "ssssssssddddddddddddddsssssdd",
+            $session,           // s (1)
+            $eval_date,         // s (2)
+            $topic,             // s (3)
+            $video_link,        // s (4)
+            $teacher_name,      // s (5)
+            $teacher_id,        // s (6)
+            $evaluator_name,    // s (7)
+            $class_section,     // s (8) - This was the problem!
+            $prayer,            // d (9)
+            $news,              // d (10)
+            $participation,     // d (11)
+            $speeches,          // d (12)
+            $poem_recitation,   // d (13)
+            $dance,             // d (14)
+            $song,              // d (15)
+            $stage_management,  // d (16)
+            $innovation,        // d (17)
+            $skit,              // d (18)
+            $ppt,               // d (19)
+            $anchoring,         // d (20)
+            $total,             // d (21)
+            $speaking_skills,   // s (22)
+            $dancing_skills,    // s (23)
+            $singing_skills,    // s (24)
+            $dramatic_skills,   // s (25)
+            $comments1,         // s (26)
+            $comments2,         // s (27)
+            $marks_judge1,      // d (28)
+            $marks_judge2       // d (29)
+        );
+
+        if (mysqli_stmt_execute($stmt)) {
+            $submitted = true;
+            $message = "✅ Record successfully submitted. Total: " . $total;
+        } else {
+            $message = "❌ Execution error: " . mysqli_stmt_error($stmt);
+        }
+        mysqli_stmt_close($stmt);
+    } else {
+        $message = "❌ Prepare failed: " . mysqli_error($conn);
+    }
+}
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Class Show</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../assets/plugins/tabler-icons/tabler-icons.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../assets/plugins/%40simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script>
+        function filterTeachers() {
+            const input = document.getElementById('teacherSearch');
+            const filter = input.value.toUpperCase();
+            const select = document.getElementById('teacherSelect');
+            const options = select.getElementsByTagName('option');
+
+            for (let i = 0; i < options.length; i++) {
+                const text = options[i].textContent || options[i].innerText;
+                if (text.toUpperCase().indexOf(filter) > -1) {
+                    options[i].style.display = "";
+                } else {
+                    options[i].style.display = "none";
+                }
+            }
+        }
+
+        function fillTeacherDetails() {
+            const select = document.getElementById('teacherSelect');
+            const selectedOption = select.options[select.selectedIndex];
+
+            if (selectedOption.value !== "") {
+                document.getElementById('teacherName').value = selectedOption.getAttribute('data-name');
+                document.getElementById('teacherId').value = selectedOption.value;
+                document.getElementById('subject').value = selectedOption.getAttribute('data-subject');
+                document.getElementById('teacherType').value = selectedOption.getAttribute('data-type');
+            } else {
+                document.getElementById('teacherName').value = "";
+                document.getElementById('teacherId').value = "";
+                document.getElementById('subject').value = "";
+                document.getElementById('teacherType').value = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="content mb-3">
+            <div class="header-button d-flex justify-content-between align-items-center mb-3">
+                <h3 class="">Add Class Show</h3>
+                <a href="list_class_show.php" class="btn btn-success">View</a></h3>
+            </div>
+
+            <?php if ($message): ?>
+                <div class="alert alert-info"><?= $message ?></div>
+            <?php endif; ?>
+
+            <form method="POST">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="card dash-widget">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label>Session</label>
+                                    <select name="session" class="form-control" required>
+                                        <option value="2025-26">2025-26</option>
+                                        <option value="2026-27">2026-27</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Date of class show</label>
+                                    <input type="date" name="eval_date" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Topic</label>
+                                    <textarea name="topic" class="form-control" required> </textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Class Show Video Link </label>
+                                    <input type="text" name="video_link" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Search Teacher</label>
+                                    <input type="text" id="teacherSearch" class="form-control mb-2" placeholder="Type to filter..." onkeyup="filterTeachers()">
+
+                                    <label>Select Teacher</label>
+                                    <select name="teacher_id" id="teacherSelect" class="form-control" onchange="fillTeacherDetails()" required>
+                                        <option value="">-- Select Teacher --</option>
+                                        <?php
+                                        $query = "SELECT td.teacher_id, td.teacher_name, td.subject, td.teacher_type 
+                                                  FROM teacher_details td
+                                                  JOIN users u ON td.user_id = u.id
+                                                  ORDER BY td.teacher_name ASC";
+                                        $result = mysqli_query($conn, $query);
+
+                                        if ($result && mysqli_num_rows($result) > 0) {
+                                            while ($teacher = mysqli_fetch_assoc($result)) {
+                                                echo "<option value='" . htmlspecialchars($teacher['teacher_id']) . "' 
+                                                      data-name='" . htmlspecialchars($teacher['teacher_name']) . "' 
+                                                      data-subject='" . htmlspecialchars($teacher['subject']) . "'
+                                                      data-type='" . htmlspecialchars($teacher['teacher_type']) . "'>
+                                                      " . htmlspecialchars($teacher['teacher_name']) . " (" . htmlspecialchars($teacher['teacher_id']) . ")
+                                                      </option>";
+                                            }
+                                        } else {
+                                            echo "<option value=''>No teachers found</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label>Name of the Teacher</label>
+                                    <input type="text" name="teacher_name" id="teacherName" class="form-control" readonly required>
+                                </div>
+
+                                <!-- <div class="mb-3">
+                                    <label>Teacher ID</label>
+                                    <input type="text" name="teacher_id" id="teacherId" class="form-control" step="0.01" readonly required>
+                                </div> -->
+
+                                <!-- <div class="mb-3">
+                                    <label>Subject</label>
+                                    <input type="text" name="subject" id="subject" class="form-control" step="0.01" readonly required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label>Teacher Type</label>
+                                    <input type="text" name="teacher_type" id="teacherType" class="form-control" step="0.01" readonly required>
+                                </div> -->
+
+                                <div class="mb-3">
+                                    <label>Class/Section</label>
+                                    <input type="text" name="class_section" class="form-control" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label>Name of The Judge</label>
+                                    <input type="text" name="evaluator_name" class="form-control" required>
+                                </div>
+                                <!-- <div class="mb-3">
+                                    <label>Judge Name </label>
+                                    <select name="evaluator_name" class="form-control" step="0.01" required>
+                                        <option value="">--Select--</option>
+                                        <option value="Meera Marwaha">Meera Marwaha</option>
+                                        <option value="Manju Setia">Manju Setia</option>
+                                        <option value="Madhup Prashar">Madhup Prashar</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div> -->
+
+                                <div class="mb-3">
+                                    <label>Prayer (03)</label>
+                                    <input type="number" name="prayer" class="form-control" step="0.01" required min="0" max="3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card dash-widget">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label>News (English Only) (2)</label>
+                                    <input type="number" name="news" class="form-control" step="0.01" step="0.01" min="0" max="2">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Participation (3)</label>
+                                    <input type="number" name="participation" class="form-control" step="0.01" min="0" max="3">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Speeches [English (5), Hindi (01)]</label>
+                                    <input type="number" name="speeches" class="form-control" step="0.01" min="0" max="15">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Poem Recitation [English (2), Hindi (01)]</label>
+                                    <input type="number" name="poem_recitation" class="form-control" step="0.01" min="0" max="40">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Group Dance (4)</label>
+                                    <input type="number" name="dance" class="form-control" step="0.01" min="0" max="5">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Group Song (4)</label>
+                                    <input type="number" name="song" class="form-control" step="0.01" min="0" max="5">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Stage Management (3)</label>
+                                    <input type="number" name="stage_management" class="form-control" step="0.01" min="0" max="3">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Innovation (2)</label>
+                                    <input type="number" name="innovation" class="form-control" step="0.01" min="0" max="2">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Theme Based Skit Presentation (4)</label>
+                                    <input type="number" name="skit" class="form-control" step="0.01" min="0" max="4">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Theme Based Power Point Presentation (4)</label>
+                                    <input type="number" name="ppt" class="form-control" step="0.01" min="0" max="4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card dash-widget">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label>Anchoring (3)</label>
+                                    <input type="number" name="anchoring" class="form-control" step="0.01" min="0" max="3">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Total (Auto-calculated)</label>
+                                    <input type="number" name="total" id="totalField" class="form-control" step="0.01" readonly>
+                                    <small class="text-muted">This field is automatically calculated</small>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Speaking Skills (Students)</label>
+                                    <input type="text" name="speaking_skills" class="form-control" >
+                                </div>
+                                <div class="mb-3">
+                                    <label>Dancing Skills (Students)</label>
+                                    <input type="text" name="dancing_skills" class="form-control" >
+                                </div>
+                                <div class="mb-3">
+                                    <label>Singing Skills (Students)</label>
+                                    <input type="text" name="singing_skills" class="form-control" >
+                                </div>
+                                <div class="mb-3">
+                                    <label>Dramatic Skills (Students)</label>
+                                    <input type="text" name="dramatic_skills" class="form-control" >
+                                </div>
+                                <div class="mb-3">
+                                    <label>Comments by Judge 1 (Meera Marwaha)</label>
+                                    <div class="mb-2">
+                                        <label class="form-label small text-muted"></label>
+                                        <textarea name="comments1" class="form-control" ></textarea>
+                                    </div>
+
+                                    <label>Comments by Judge 2 (Anjali Dewan)</label>
+                                    <div class="mb-2">
+                                        <label class="form-label small text-muted"></label>
+                                        <textarea name="comments2" class="form-control" ></textarea>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Total Marks By Judge 1 (Meera Marwaha)</label>
+                                    <input type="number" name="marks_judge1" class="form-control" step="0.01" min="0" max="50">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Total Marks By Judge 2 (Anjali Dewan)</label>
+                                    <input type="number" name="marks_judge2" class="form-control" step="0.01" min="0" max="50">
+                                </div>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                                <a href="./dashboard.php" class="btn btn-secondary">Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <?php include '../includes/footer.php'; ?>
+</body>
+
+</html>

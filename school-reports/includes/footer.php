@@ -1,34 +1,133 @@
-<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/libs/simplebar/simplebar.min.js"></script>
-<!-- <script src="assets/libs/apexcharts/apexcharts.min.js"></script> -->
-<script src="assets/data/stock-prices.js"></script>
-<!-- <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-<script src="assets/libs/jsvectormap/maps/world.js"></script> -->
-<script src="assets/js/pages/index.init.js"></script>
-<script src="assets/js/app.js"></script>
-<!-- <footer class="footer">
-    <p>&copy; <?php echo date('Y'); ?> Computer Center Management System. All rights reserved.</p>
-</footer> -->
+<div class="modal fade" id="add-stock">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="page-title">
+					<h4>Add Stock</h4>
+				</div>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form action="https://dreamspos.dreamstechnologies.com/html/template/index.html">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="mb-3">
+								<label class="form-label">Warehouse <span class="text-danger ms-1">*</span></label>
+								<select class="select">
+									<option>Select</option>
+									<option>Lobar Handy</option>
+									<option>Quaint Warehouse</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="mb-3">
+								<label class="form-label">Store <span class="text-danger ms-1">*</span></label>
+								<select class="select">
+									<option>Select</option>
+									<option>Selosy</option>
+									<option>Logerro</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="mb-3">
+								<label class="form-label">Responsible Person <span
+										class="text-danger ms-1">*</span></label>
+								<select class="select">
+									<option>Select</option>
+									<option>Steven</option>
+									<option>Gravely</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="search-form mb-0">
+								<label class="form-label">Product <span class="text-danger ms-1">*</span></label>
+								<input type="text" class="form-control" placeholder="Select Product">
+								<i data-feather="search" class="feather-search"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-md btn-dark me-2" data-bs-dismiss="modal">Cancel</button>
+					<button type="submit" class="btn btn-md btn-primary">Add Stock</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- /Add Stock -->
+<?php include('../includes/footer-icon.php') ?>
+<!-- jQuery -->
+<script src="../assets/js/jquery-3.7.1.min.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<!-- Feather Icon JS -->
+<script src="../assets/js/feather.min.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<!-- Slimscroll JS -->
+<script src="../assets/js/jquery.slimscroll.min.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<!-- Bootstrap Core JS -->
+<script src="../assets/js/bootstrap.bundle.min.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<!-- ApexChart JS -->
+<script src="../assets/plugins/apexchart/apexcharts.min.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<script src="../assets/plugins/apexchart/chart-data.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<!-- Chart JS -->
+<script src="../assets/plugins/chartjs/chart.min.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<script src="../assets/plugins/chartjs/chart-data.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<!-- Daterangepikcer JS -->
+<script src="../assets/js/moment.min.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<script src="../assets/plugins/daterangepicker/daterangepicker.js"
+	type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<!-- Select2 JS -->
+<script src="../assets/plugins/select2/js/select2.min.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<!-- Color Picker JS -->
+<script src="../assets/plugins/%40simonwep/pickr/pickr.es5.min.js"
+	type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<!-- Custom JS -->
+<script src="../assets/js/theme-colorpicker.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<script src="../assets/js/script.js" type="baf560cacd13bfb28c23b3e3-text/javascript"></script>
+<script src="../assets/js/rocket-loader.min.js" data-cf-settings="baf560cacd13bfb28c23b3e3-|49" defer></script>
+<script defer
+	src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+	integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+	data-cf-beacon='{"rayId":"95e6786a8eafa804","version":"2025.6.2","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"3ca157e612a14eccbb30cf6db6691c29","b":1}'
+	crossorigin="anonymous"></script>
 
-<?php if (!empty($modal_body)): ?>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Ensure Bootstrap's Modal is available
-            if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-                var msgModalEl = document.getElementById('messageModal');
-                var msgModal = new bootstrap.Modal(msgModalEl, {
-                    keyboard: true,
-                    backdrop: 'static'
-                });
-                msgModal.show();
-            } else {
-                // fallback: simple alert (if Bootstrap JS not loaded)
-                <?php if ($modal_type === 'error'): ?>
-                    alert("<?php echo addslashes(strip_tags($modal_body)); ?>");
-                <?php else: ?>
-                    alert("<?php echo addslashes(strip_tags($modal_body)); ?>");
-                <?php endif; ?>
-            }
-        });
-    </script>
-<?php endif; ?>
+
+<script>
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('/sw.js')
+				.then(function(registration) {
+					console.log('SW registered: ', registration);
+				})
+				.catch(function(registrationError) {
+					console.log('SW registration failed: ', registrationError);
+				});
+		});
+	}
+	let deferredPrompt;
+	const installButton = document.getElementById('installButton');
+
+	window.addEventListener('beforeinstallprompt', (e) => {
+		e.preventDefault();
+		deferredPrompt = e;
+		installButton.style.display = 'block';
+	});
+
+	installButton.addEventListener('click', async () => {
+		if (deferredPrompt) {
+			deferredPrompt.prompt();
+			const {
+				outcome
+			} = await deferredPrompt.userChoice;
+			if (outcome === 'accepted') {
+				deferredPrompt = null;
+			}
+		}
+	});
+</script>
+
+</body>

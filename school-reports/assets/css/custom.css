@@ -1,99 +1,48 @@
-   .pd-20 {
-       padding: 20px;
+.revenue-widget .revenue-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 30px;
+}
 
-   }
+.badge.badge-xs {
+    font-size: 10px;
+    padding: 3px 5px;
+    line-height: 18px;
+}
 
+.value {
+    padding: 2px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 10px;
+}
 
+.profile-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #dee2e6;
+}
 
-   /* Header styles */
-   .header {
- 
-   }
+.action-btns .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
 
-   .header h1 {
-       font-size: 1.5rem;
-       margin: 0;
-   }
-
-   .user-menu {
-       display: flex;
-       align-items: center;
-       gap: 1rem;
-   }
-
-   .user-info {
-       display: flex;
-       align-items: center;
-       gap: 0.5rem;
-   }
-
-   .user-avatar {
-       width: 40px;
-       height: 40px;
-       border-radius: 50%;
-       background-color: #3498db;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       color: white;
-       font-weight: bold;
-   }
-
-   /* Container styles */
-   .container {
-       display: flex;
-       min-height: calc(100vh - 80px);
-   }
-
-   .main-content {
-       flex: 1;
-       padding: 2rem;
-       background-color: #f5f7f9;
-   }
-
-   label {
-       color: var(--bs-label-color);
-       vertical-align: middle;
-       margin-bottom: 5px;
-
-   }
-
-   .theme-color {
-       color: #22c55e !important;
-   }
-
-   .theme-yellow {
-       color: #ff9f43 !important;
-   }
-
-   .thumb-xxl {
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-       -webkit-box-pack: center;
-       -ms-flex-pack: center;
-       justify-content: center;
-       -webkit-box-align: center;
-       -ms-flex-align: center;
-       align-items: center;
-       height: 150px;
-       width: 150px;
-       font-size: 32px;
-       font-weight: 700;
-   }
-
-   .f-16 {
-       font-size: 14px;
-   }
+.table-responsive {
+    overflow-x: auto;
+}
 
 
-
-   @media (max-width: 575.98px) {
-       .fee-details-course {
-           flex-direction: column;
-       }
-
-       .f-16 {
-           font-size: 12px;
-       }
-   }
+.card .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #212B36;
+}
