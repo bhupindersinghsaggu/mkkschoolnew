@@ -1,8 +1,6 @@
 <?php
 // manage_users.php - User management (for super admins)
-require_once '../config.php';
-require_once '../auth.php';
-require_once '../database.php';
+require_once 'auth.php';
 
 $auth = new Auth();
 
@@ -170,9 +168,7 @@ try {
 }
 ?>
 
-<?php include '../includes/css.php'; ?>
-<?php include '../includes/header.php'; ?>
-
+<?php include 'includes/header.php'; ?>
 <div class="page-wrapper">
     <div class="page-content">
         <div class="container-xxl">
@@ -332,4 +328,4 @@ try {
         </div>
     </div>
 </div>
-<?php include '../includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

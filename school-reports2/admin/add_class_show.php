@@ -364,7 +364,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 
-<?php include '../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
