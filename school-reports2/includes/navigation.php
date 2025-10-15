@@ -36,7 +36,7 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                                 </li>
                                  <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'list_users.php') ? 'active' : ''; ?>"
-                                       href="list_users.php">List Users</a>
+                                       href="../list_users.php">List Users</a>
                                 </li>
                             </ul>
                         </div>
