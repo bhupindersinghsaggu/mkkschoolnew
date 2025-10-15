@@ -169,6 +169,7 @@ try {
 ?>
 
 <?php include './includes/header.php'; ?>
+<?php include './includes/css.php'; ?>
 <div class="page-wrapper">
     <div class="page-content">
         <div class="container-xxl">
