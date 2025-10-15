@@ -1,6 +1,6 @@
 <?php
 // list_users.php - list all users with edit/delete links
-require_once 'auth.php';
+require_once '../auth.php';
 
 $auth = new Auth();
 
@@ -66,7 +66,7 @@ try {
     $error = "Failed to load users.";
 }
 ?>
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 <div class="page-wrapper">
     <div class="page-content">
         <div class="container-xxl">
@@ -139,4 +139,5 @@ try {
         </div>
     </div>
 </div>
-<?php include 'includes/footer.php'; ?>
+
+<?php require_once '../includes/footer.php'; ?>
