@@ -32,7 +32,7 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'manage_users.php') ? 'active' : ''; ?>"
-                                       href="manage_users.php">Add Users</a>
+                                       href="../manage_users.php">Add Users</a>
                                 </li>
                                  <li class="nav-item">
                                     <a class="nav-link <?php echo ($current_page == 'list_users.php') ? 'active' : ''; ?>"
