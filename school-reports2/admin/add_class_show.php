@@ -8,7 +8,7 @@ require_once '../database.php';
 
 $auth = new Auth();
 if (!$auth->isLoggedIn() || !$auth->hasPermission(ROLE_ADMIN)) {
-    header('Location: /mkkschool-new/login.php');
+    header('Location: /login.php');
     exit;
 }
 
