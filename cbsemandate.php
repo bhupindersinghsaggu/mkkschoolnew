@@ -141,7 +141,7 @@ include('_web/css.php');
                         <tr>
                             <th scope="row">6</th>
                             <td>COPIES OF VALID WATER, HEALTH AND SANITATION CERTIFICATES</td>
-                            <td><a href="assets/images/pdf/certificates-2024-25/safe-drinking-sanitation.pdf" target="_blank"><i
+                            <td><a href="assets/images/pdf/certificates-2025-26/safe-drinking-sanitation2025.pdf" target="_blank"><i
                                         class="fa fa-download" aria-hidden="true"></i> DOWNLOAD </a></td>
 
                         </tr>
@@ -169,7 +169,7 @@ include('_web/css.php');
                         <tr>
                             <th scope="row">2</th>
                             <td> ANNUAL ACADEMIC CALANDER</td>
-                            <td><a href="assets/images/pdf/certificates-2024-25/calender.pdf" target="_blank"><i class="fa fa-download"
+                            <td><a href="assets/images/pdf/certificates-2025-26/calender2025.pdf" target="_blank"><i class="fa fa-download"
                                         aria-hidden="true"></i> DOWNLOAD </td></a>
                         </tr>
                         <tr>
