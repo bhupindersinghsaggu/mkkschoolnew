@@ -118,7 +118,7 @@ include('_web/css.php');
                             <th scope="row">4</th>
                             <td>COPY OF VALID FIRE SAFETY CERTIFICATE ISSUED BY THE
                                 COMPETENT AUTHORITY</td>
-                            <td><a href="assets/images/pdf/certificates-2024-25/fire-safety.pdf" target="_blank"><i class="fa fa-download"
+                            <td><a href="assets/images/pdf/certificates-2025-26/fire-safety-certificate.pdf" target="_blank"><i class="fa fa-download"
                                         aria-hidden="true"></i> DOWNLOAD </a></td>
 
                         </tr>
