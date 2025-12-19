@@ -14,7 +14,7 @@
                            <div class="right">
                                <div class="button-box">
                                    <a class="btn-one" onclick="openNav()">
-                                       <span class="txt">Apply Online </span>
+                                       <span class="txt txt-white">Apply Online </span>
                                    </a>
                                </div>
                            </div>
