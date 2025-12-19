@@ -6,7 +6,7 @@
                        <div class="footer-top-style9__inner">
                            <div class="left">
                                <div class="inner-title">
-                                   <h3><span>Admission Open !..</span> for Academic Year 2025-26.</h3>
+                                   <h3><span>Admission Open !..</span> for Academic Year 2026-26.</h3>
 
                                </div>
 
