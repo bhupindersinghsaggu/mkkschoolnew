@@ -13,7 +13,7 @@
                            </div>
                            <div class="right">
                                <div class="button-box">
-                                   <a class="btn-one" href="mySidenav">
+                                   <a class="btn-one" onclick="openNav()">
                                        <span class="txt">Apply Online </span>
                                    </a>
                                </div>
