@@ -88,6 +88,13 @@
                                                <span class="icon-right-arrow-1"></span>Admission Online
                                            </a>
                                        </li>
+                                       <li>
+                                           <a href="  privacy_policy.php">
+                                               <span class="icon-right-arrow-1"></span>Privacy Policy
+                                           </a>
+                                       </li>
+
+
                                    </ul>
                                </div>
                                <!-- <div class="right">
