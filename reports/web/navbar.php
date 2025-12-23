@@ -73,7 +73,7 @@
                 </a>
             </li>
             <li class="menu-item">
-                <a href="chttps://docs.google.com/spreadsheets/d/15vAapKH4Zoxy50z_OWrdhnksD4-G9NF8s5zMEAW75gs/edit?gid=45065071#gid=45065071" class="menu-link" target="_blank">
+                <a href="https://docs.google.com/spreadsheets/d/15vAapKH4Zoxy50z_OWrdhnksD4-G9NF8s5zMEAW75gs/edit?gid=45065071#gid=45065071" class="menu-link" target="_blank">
                     <div class="text-truncate" data-i18n="Basic">New Admission Details Nur to XI </div>
                 </a>
             </li>
