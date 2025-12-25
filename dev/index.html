@@ -1,0 +1,946 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MKK School of Excellence | Admissions Open 2026–27</title>
+    <!-- SEO -->
+    <meta name="description"
+        content="MKK School of Excellence offers quality education, smart classrooms, experienced faculty & holistic development. Admissions Open 2026–27." />
+    <meta name="keywords" content="MKK School, School of Excellence, Panipat School, CBSE School, Admissions Open" />
+    <link rel="canonical" href="https://mkknew.netlify.app/" />
+    <!-- FAVICON -->
+    <link rel="icon" href="/src/assets/images/favicons/favicon.ico" />
+
+    <!-- TAILWIND (PRODUCTION BUILD ONLY) -->
+    <link rel="stylesheet" href="/src/output.css" />
+
+    <!-- SWIPER CSS -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+
+
+    <!-- FONT AWESOME (ASYNC) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        /* marquee animation */
+        @keyframes marquee-x {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+
+            /* move by half because we duplicate content */
+        }
+
+        .marquee-mask {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 1rem;
+            /* matches Tailwind gap-4 */
+            will-change: transform;
+            animation: marquee-x var(--marquee-speed, 136s) linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+            /* pause on hover */
+        }
+
+        /* Accessibility: respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-track {
+                animation: none;
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 18s linear infinite;
+        }
+
+        /* Hide default Swiper arrow icons */
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none;
+        }
+
+        /* Custom round gradient arrows */
+        .custom-arrow {
+            width: 50px;
+            height: 50px;
+            border-radius: 9999px;
+            background: linear-gradient(to right, #ec4899, #ef4444, #ec4899);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+
+            /* Glow effect */
+            box-shadow:
+                0 0 10px rgba(236, 72, 153, 0.6),
+                0 0 20px rgba(239, 68, 68, 0.4);
+
+            transition: all 0.3s ease;
+        }
+
+        /* Icon size */
+        .custom-arrow i {
+            font-size: 18px;
+        }
+
+        /* Hover animation */
+        .custom-arrow:hover {
+            transform: scale(1.15);
+            box-shadow:
+                0 0 15px rgba(236, 72, 153, 0.9),
+                0 0 30px rgba(239, 68, 68, 0.7);
+        }
+
+        /* Position adjustment */
+        /* .swiper-button-prev {
+            left: -12px;
+        }
+
+        .swiper-button-next {
+            right: -12px;
+        } */
+
+        /* 🔥 Hide arrows on mobile */
+        @media (max-width: 640px) {
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 overflow-x-hidden">
+    <header class="bg-gradient-to-r from-pink-600 via-red-500 to-pink-400 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between text-sm">
+            <div class="flex gap-4 flex-wrap">
+                <span><i class="fa-solid fa-school"></i> School Code: 40047</span>
+                <span><i class="fa-solid fa-school"></i> Affiliation No: 530027</span>
+                <div class="hidden md:block">
+                    <span><i class="fas fa-file-alt"></i> <a href="cbsemandate.php" class="hover:underline">Mandatory
+                            Disclosure</a></span>
+                    <span><i class="fa-solid fa-envelope"></i> <a href="https://mail.hostinger.com/v2/auth/login"
+                            class="hover:underline">Webmail</a> </span>
+                </div>
+            </div>
+            <div class="mt-3 md:block md:mt-0">
+                <div class="flex gap-4">
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Apply For Job</a>
+                    <a href="http://www.curtina.in/MKK?url=http://www.curtina.in/_Web/FrmfindTC.aspx"><i
+                            class="fa-solid fa-magnifying-glass"></i> Search TC </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="p-3 flex items-center max-w-7xl mx-auto ">
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+            <img src="./src/assets/images/logo.png" class="">
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="" class="font-semi-bold hover:text-primary">Home</a>
+            <a href="" class="font-semi-bold hover:text-primary">About</a>
+            <a href="" class="font-semi-bold hover:text-primary">Academic</a>
+            <a href="" class="font-semi-bold hover:text-primary">Facilities</a>
+            <a href="" class="font-semi-bold hover:text-primary">Student Corner</a>
+        </div>
+        <div class="hidden lg:flex flex-1 justify-end">
+            <button class="flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-400">
+                <span> ERP login <i class="fa-solid fa-right-to-bracket"></i>
+                </span>
+            </button>
+        </div>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-3">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img src="./src/assets/images/logo.png" class="max-w-20 max-h-20">
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark text-gray-600"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a href="#" class="font-semi-bold m-3 p-3 hover:bg-gray-500 block rounded-lg">Home</a>
+                <a href="#" class="font-semi-bold m-3 p-3 hover:bg-gray-500 block rounded-lg">About</a>
+                <a href="#" class="font-semi-bold m-3 p-3 hover:bg-gray-500 block rounded-lg">Academic</a>
+                <a href="#" class="font-semi-bold m-3 p-3 hover:bg-gray-500 block rounded-lg">Facilities</a>
+                <a href="#" class="font-semi-bold m-3 p-3 hover:bg-gray-500 block rounded-lg">Student Corner</a>
+            </div>
+            <div class="h-[1px] bg-gray-100"></div>
+            <button class=" mt-6 flex w-full md:flex gap-2 items-center  px-6 py-4 rounded-lg hover:bg-gray-50">
+                <span> <i class="fa-solid fa-atom"></i> Electron Developers </span>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero section -->
+    <section id="hero" class="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-400 px-6  md:px-6 py-12">
+        <div id="hero-container" class="max-w-7xl mx-auto ">
+            <div class="flex flex-col sm:flex-row gap-4">
+                <!-- Left Section -->
+                <div class="flex-1">
+                    <div id="version-text"
+                        class="flex items-center my-6 gap-2 border border-yellow-300 bg-yellow-50 rounded-lg px-3 py-1 w-fit shadow-lg hover:translate-y-1 transition group">
+                        <div class="w-2 h-2 bg-yellow-400 rounded-full border border-yellow-600"></div>
+                        <p class="text-yellow-600">
+                            Smart Classrooms <span class="text-yellow-800">| Safe Campus</span>
+                            <i
+                                class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-1 transition duration-300"></i>
+                        </p>
+                    </div>
+                    <h1 class="text-4xl font-semibold mt-4 sm:text-6xl text-white lg:leading-18">
+                        Shaping Young Minds for a <span class="text-yellow-300">Brighter Tomorrow</span>
+                    </h1>
+                    <p class="text-xl text-gray-100 mt-4 leading-relaxed sm:text-xl sm:mt-8">
+                        At MKK, we nurture curiosity, creativity, and confidence through quality
+                        education, experienced faculty, and a safe learning environment. Give your child the foundation
+                        they deserve.
+                    </p>
+                    <div id="botton-container" class="mt-12 flex flex-col sm:flex-row gap-4  ">
+                        <button
+                            class="px-8 py-3 font-semibold text-xl  hover:translate-y-1 transition group  bg-yellow-50  border border-emerald-400 rounded-lg shadow-sm hover:bg-opacity-90">
+                            Admission Open <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <button
+                            class="px-8 py-3 font-semibold text-xl rounded-lg text-white  border border-white shadow-sm hover:bg-opacity-90">
+                            Call Now <i class="fa-solid fa-phone"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Right Section -->
+                <div class="flex-1 flex justify-center items-center">
+                    <div class="w-full px-4 py-4">
+                        <img src="./src/assets/images/hero.webp" alt="Students at MKK School" width="600" height="450"
+                            class="rounded-lg" fetchpriority="high">
+                    </div>
+                </div>
+            </div>
+    </section>
+    </div>
+    <div class="overflow-hidden bg-sky-50 py-6">
+        <div class="flex w-max animate-marquee gap-16">
+            <span class="flex items-center gap-4 text-2xl md:text-5xl font-semibold">
+                <i class="fa-solid fa-graduation-cap text-red-600"></i> Admission Open: 2026-27
+                <i class="fa-solid fa-graduation-cap text-red-600"></i> Admission Open: 2026-27
+                <i class="fa-solid fa-graduation-cap text-red-600"></i> Admission Open: 2026-27
+                <i class="fa-solid fa-graduation-cap text-red-600"></i> Admission Open: 2026-27
+                <i class="fa-solid fa-graduation-cap text-red-600"></i> Admission Open: 2026-27
+                <i class="fa-solid fa-graduation-cap text-red-600"></i> Admission Open: 2026-27
+                <i class="fa-solid fa-graduation-cap text-red-600"></i> Admission Open: 2026-27
+            </span>
+        </div>
+    </div>
+    <!-- about-school -->
+    <section id="about-school"
+        class="flex flex-col gap-6 max-w-7xl mx-auto px-4 py-8 md:px-12 md:py-16 lg:px-32  lg:py-32">
+        <div class="max-w-7xl mx-auto ">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-semibold leading-tight">
+                        Dr. M.K.K. Arya Model School
+                    </h2>
+                    <!-- <p class="mt-6 text-xl font-medium">
+                        Learn. Explore. Achieve.
+                    </p> -->
+                    <p class="mt-6 text-gray-600 leading-relaxed max-w-xl">
+                        Dr. M.K.K. Arya Model School has emerged as one of the premier Educational Institutions in
+                        Panipat. The school is a Mascot for developing and inculcating the minds of the young students
+                        towards their future careers and with a positive outlook. Our motto “One Team One Goal” has
+                        renowned the institution as a guiding force in every student's life. Every year the school is
+                        delivering outstanding results with a professional growth for every student by virtue of giving
+                        a broader platform with an exposure to explore their forte.our mission is always to provide a
+                        value based education with professional training to our students through immaculately designed
+                        curriculum.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center gap-2 mt-8 bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 text-white px-6 py-3 rounded font-medium transition">
+                        More About Us →
+                    </a>
+                </div>
+                <div>
+                    <div class="">
+                        <img src="./src/assets/images/about-us.webp" loading="lazy" decoding="async" width="600"
+                            height="400" alt="About School">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  Facilities -->
+    <div id="Facilities" class="flex flex-col gap-6  max-w-7xl  mx-auto px-4 py-8 md:px-12 md:py-16 lg:px-32 lg:py-32">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center font-semibold leading-tight py-8">
+                <span class="inline-block text-pink-600 text-3xl md:text-5xl relative ">Our School Facilities</span>
+            </h2>
+            <p class="text-center text-xl py-2 lg:py-6">We believe a supportive learning environment is key to a
+                child’s growth.
+                Our campus offers modern, safe, and student-friendly facilities that promote academic and co-curricular
+                excellence.</p>
+            <div class="grid grid-cols-1  gap-4 lg:grid-cols-3 md:grid-cols-2 py-4" id="product-card">
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <img src="/src/assets/images/faclities/robo.webp" class="w-fit px-4 py-4 ">
+                    </div>
+                    <div class="py-4 px-4">
+                        <h3 class="text-2xl font-semibold ">
+                            Robotics Lab
+                        </h3>
+                        <p class="py-4">
+                            MKK School houses the most congenial & a very decent hostel facility only For boys and girls
+                            separately from classes 6th onwards...
+                        </p>
+                        <div class="flex py-3 items-center">
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 py-4">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 hover:translate-y-1 transition  bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 hover: text-white px-6 py-3 rounded font-medium transition">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <img src="/src/assets/images/faclities/games.webp" class="w-fit px-4 py-4 ">
+                    </div>
+                    <div class="py-4 px-4">
+                        <h3 class="text-2xl font-semibold ">
+                            Games & Sports
+                        </h3>
+                        <p class="py-4">
+                            We provide a variety of games and sports facilities to encourage physical activity and
+                            overall well-being among students...
+                        </p>
+                        <div class="flex py-3 items-center">
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 py-4">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 hover:translate-y-1 transition  bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 hover: text-white px-6 py-3 rounded font-medium transition">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <img src="/src/assets/images/faclities/inno.webp" class="w-fit px-4 py-4 ">
+                    </div>
+                    <div class="py-4 px-4">
+                        <h3 class="text-2xl font-semibold ">
+                            Innovation Lab
+                        </h3>
+                        <p class="py-4">
+                            The Innovation Labs are spaces on both campuses in which students are able to play, design,
+                            prototype, and make.....
+                        </p>
+                        <div class="flex py-3 items-center">
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 py-4">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 hover:translate-y-1 transition  bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 hover: text-white px-6 py-3 rounded font-medium transition">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <img src="/src/assets/images/faclities/chem.webp" class="w-fit px-4 py-4 ">
+                    </div>
+                    <div class="py-4 px-4">
+                        <h3 class="text-2xl font-semibold ">
+                            Chemistry Lab
+                        </h3>
+                        <p class="py-4">
+                            Science labs are essential facilities in schools, providing students with hands-on
+                            experience and practical application of scientific concepts....
+                        </p>
+                        <div class="flex py-3 items-center">
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 py-4">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 hover:translate-y-1 transition  bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 hover: text-white px-6 py-3 rounded font-medium transition">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <img src="/src/assets/images/faclities/phy.webp" class="w-fit px-4 py-4 ">
+                    </div>
+                    <div class="py-4 px-4">
+                        <h3 class="text-2xl font-semibold ">
+                            Physics Lab
+                        </h3>
+                        <p class="py-4">
+                            Science labs are essential facilities in schools, providing students with hands-on
+                            experience and practical application of scientific concepts....
+                        </p>
+                        <div class="flex py-3 items-center">
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 py-4">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 hover:translate-y-1 transition  bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 hover: text-white px-6 py-3 rounded font-medium transition">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <img src="/src/assets/images/faclities/computer.webp" class="w-fit px-4 py-4 ">
+                    </div>
+                    <div class="py-4 px-4">
+                        <h3 class="text-2xl font-semibold ">
+                            Computer Lab
+                        </h3>
+                        <p class="py-4">
+                            Computer labs in schools are crucial for providing students with access to technology and
+                            facilitating digital literacy....
+                        </p>
+                        <div class="flex py-3 items-center">
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 py-4">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 hover:translate-y-1 transition  bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 hover: text-white px-6 py-3 rounded font-medium transition">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <img src="/src/assets/images/faclities/dance.webp" class="w-fit px-4 py-4 ">
+                    </div>
+                    <div class="py-4 px-4">
+                        <h3 class="text-2xl font-semibold ">
+                            Dance & Music
+                        </h3>
+                        <p class="py-4">
+                            Our dance and music classes, led by passionate instructors, inspire confidence, discipline,
+                            and teamwork. They nurture individual talents and foster a sense of belonging within our
+                            school community.....
+                        </p>
+                        <div class="flex py-3 items-center">
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 py-4">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 hover:translate-y-1 transition  bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 hover: text-white px-6 py-3 rounded font-medium transition">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <img src="/src/assets/images/faclities/tour1.webp" class="w-fit px-4 py-4 ">
+                    </div>
+                    <div class="py-4 px-4">
+                        <h3 class="text-2xl font-semibold ">
+                            Tour Excursion
+                        </h3>
+                        <p class="py-4">
+                            Our thoughtfully designed tours and excursions provide students with enriching opportunities
+                            to broaden their horizons, explore new environments....
+                        </p>
+                        <div class="flex py-3 items-center">
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 py-4">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 hover:translate-y-1 transition  bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 hover: text-white px-6 py-3 rounded font-medium transition">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <img src="/src/assets/images/faclities/health.jpg" class="w-fit px-4 py-4 ">
+                    </div>
+                    <div class="py-4 px-4">
+                        <h3 class="text-2xl font-semibold ">
+                            Medical Dispensary
+                        </h3>
+                        <p class="py-4">
+                            We aim our children to be healthy, wealthy and wise. In order to achieve our goal i.e. to
+                            have healthy students....
+                        </p>
+                        <div class="flex py-3 items-center">
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                            <i class="fa-solid fa-star text-red-600"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 py-4">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 hover:translate-y-1 transition  bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 hover: text-white px-6 py-3 rounded font-medium transition">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  admission-open -->
+    <section id="admission-open" class="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-400 px-4 py-8 md:px-12 md:py-16 lg:px-32 lg:py-32">
+        <div class="max-w-7xl mx-auto ">
+            <h2 class="text-2xl  py-4 md:py-8 mb-3  md:text-5xl font-semibold leading-tight text-center">
+                <span class="text-gray-800 mb-3 mt-3 text-3xl lg:text-5xl"> Admission Open For<span
+                        class="text-gray-800"> 2026-27</span>
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2   overflow-hidden">
+                <!-- Left Image -->
+                <div class="hidden lg:block border-r-accent">
+                    <img src="./src/assets/images/admission.webp" alt="Counsellor" class=" object-cover rounded-xl " />
+                </div>
+                <!-- Right Form -->
+                <div class="text-white">
+                    <h3 class="text-white mb-6  text-2xl font-semibold  lg:text-4xl"> Talk To Our <span
+                            class="text-white"> Counsellor </span></h3>
+                    <form class="grid grid-cols-1 gap-6" id="whatsappForm">
+                        <input type="text" placeholder="Name" id="name"
+                            class="bg-transparent border border-white/50 px-4 py-3 rounded focus:outline-none focus:border-white" />
+                        <input type="tel" placeholder="Phone*" id="phone"
+                            class="bg-transparent border border-white/50 px-4 py-3 rounded focus:outline-none focus:border-white" />
+                        <select id="classes"
+                            class="bg-transparent border border-white/50 px-4 py-3 rounded focus:outline-none focus:border-white text-white">
+                            <option class="text-black">Select Class</option>
+                            <option class="text-black">Pre-Nur</option>
+                            <option class="text-black">Nursery</option>
+                            <option class="text-black">LKG</option>
+                            <option class="text-black">UKG</option>
+                            <option class="text-black">Class I</option>
+                            <option class="text-black">Class II</option>
+                            <option class="text-black">Class III</option>
+                            <option class="text-black">Class IV</option>
+                            <option class="text-black">Class V</option>
+                            <option class="text-black">Class VI</option>
+                            <option class="text-black">Class VII</option>
+                            <option class="text-black">Class VIII</option>
+                            <option class="text-black">Class IX</option>
+                            <option class="text-black">Class XI</option>
+                        </select>
+                        <select id="source"
+                            class="bg-transparent border border-white/50 px-4 py-3 rounded focus:outline-none focus:border-white text-white">
+                            <option class="text-black">Select Source of Information</option>
+                            <option class="text-black">Google</option>
+                            <option class="text-black">Social Media</option>
+                            <option class="text-black">Website</option>
+                            <option class="text-black">Hoarding</option>
+                            <option class="text-black">Word of Mouth</option>
+                        </select>
+                        <textarea rows="5" placeholder="Write your message*" id="message"
+                            class="bg-transparent border border-white/50 px-4 py-3 rounded focus:outline-none focus:border-gray-300"></textarea>
+                        <button type="submit"
+                            class="border border-white transition px-8 py-3 rounded font-semibold w-fit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  School Achievements -->
+    <section class="max-w-7xl mx-auto px-4 py-8 md:px-12 md:py-16 lg:px-32 lg:py-32">
+        <h2 class="text-center mb-10">
+            <span class="px-4 py-2 inline-block text-3xl lg:text-5xl font-semibold">
+                School Achievements
+            </span>
+        </h2>
+        <!-- Swiper -->
+        <div class="swiper achievementsSwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide -->
+                <div class="swiper-slide p-4">
+                    <div class="bg-white shadow rounded overflow-hidden">
+                        <img src="/src/assets/images/news/1.webp" class="swiper-lazy w-full" width="400" height="300"
+                            alt="dr.m.k.k school" />
+
+                        <div class="p-4 mt-3">
+                            Silver Medal at Haryana Open Kids Athletics Championship
+                        </div>
+
+                        <div class="flex justify-between items-center p-4 text-sm">
+                            <span>
+                                <i class="fas fa-calendar-alt text-red-500"></i> 15, Dec
+                            </span>
+                            <a href="https://www.facebook.com/share/p/1FozefPs9w/" target="_blank"
+                                class="border border-blue-400 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                                View More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide -->
+                <div class="swiper-slide p-4">
+                    <div class="bg-white shadow rounded overflow-hidden">
+                        <img src="/src/assets/images/news/2.webp" class="swiper-lazy w-full" width="400" height="300"
+                            alt="dr.m.k.k school" />
+
+                        <div class="p-4 mt-3">
+                            Achievement at Divisional Level Dance Competition!
+                        </div>
+
+                        <div class="flex justify-between items-center p-4 text-sm">
+                            <span>
+                                <i class="fas fa-calendar-alt text-red-500"></i> 4, Dec
+                            </span>
+                            <a href="https://www.facebook.com/share/p/1DCzvD1wKg/" target="_blank"
+                                class="border border-blue-400 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                                View More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide -->
+                <div class="swiper-slide p-4">
+                    <div class="bg-white shadow rounded overflow-hidden">
+                        <img src="/src/assets/images/news/3.webp" class="swiper-lazy w-full" width="400" height="300"
+                            alt="dr.m.k.k school" />
+
+                        <div class="p-4 mt-3">
+                            Students once again made us proud at PIET Quest 2025
+                        </div>
+
+                        <div class="flex justify-between items-center p-4 text-sm">
+                            <span>
+                                <i class="fas fa-calendar-alt text-red-500"></i> 12, Nov
+                            </span>
+                            <a href="https://www.facebook.com/story.php?story_fbid=1316459530493521&id=100063884590594&rdid=HKIk0O7UpbtdGGwt#"
+                                class="border border-blue-400 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                                View More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide -->
+                <div class="swiper-slide p-4">
+                    <div class="bg-white shadow rounded overflow-hidden">
+                        <img src="/src/assets/images/news/7.webp" class="swiper-lazy w-full" width="400" height="300"
+                            alt="dr.m.k.k school" />
+
+                        <div class="p-4 mt-3">
+                            Twelve talented girls from Dr. M.K.K. Arya Model School, Panipat won the Third Position in
+                            Group 3 at the District Level Group Singing Competition held at Bal Bhawan, Panipat
+                        </div>
+
+                        <div class="flex justify-between items-center p-4 text-sm">
+                            <span>
+                                <i class="fas fa-calendar-alt text-red-500"></i> 16, Oct
+                            </span>
+                            <a href="https://www.facebook.com/story.php?story_fbid=1291842539621887&id=100063884590594&rdid=I5Z0HVVutdFCFYXz#"
+                                class="border border-blue-400 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                                View More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination Dots -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- Arrows -->
+            <div class="swiper-button-prev custom-arrow">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="swiper-button-next custom-arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+    </section>
+    <!--  Student-Corner -->
+    <div id="student-corner" class="flex flex-col gap-6  max-w-7xl mx-auto px-4 py-8 md:px-12 md:py-16 lg:px-32 lg:py-32">
+        <div class="">
+            <h2 class="text-center font-semibold leading-tight py-8">
+                <span class="inline-block  text-3xl md:text-5xl relative ">Student Corner
+            </h2>
+            <div class="grid grid-cols-1  gap-8 lg:grid-cols-4 md:grid-cols-2 py-4" id="product-card">
+                <div id="product"
+                    class="rounded-lg border border-gray-200 bg-gradient-to-bl from-purple-700 via-indigo-600 to-blue-500 ">
+                    <div class="flex flex-col items-center py-12 px-12 lg:flex-col">
+                        <div class="">
+                            <div
+                                class="text-center w-[108px] h-[108px] rounded-full bg-[#F3F6FF] mx-auto flex items-center justify-center">
+                                <i class="fab fa-android icon-home text-5xl text-blue-600"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="py-4 px-4 text-center">
+                                <h3 class="text-xl font text-white ">
+                                    School APP
+                                </h3>
+                            </div>
+                            <div class="px-4 py-4 text-center">
+                                <a href="#"
+                                    class="inline-flex items-center gap-2  border border-blue-400 text-white hover:bg-blue-500 hover:text-white transition  px-6 py-3 rounded font-medium ">
+                                    Click Here
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="product"
+                    class="rounded-lg border border-gray-200 bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-400">
+                    <div class="flex flex-col items-center py-12 px-12 lg:flex-col">
+                        <div class="">
+                            <div
+                                class="text-center w-[108px] h-[108px] rounded-full bg-[#F3F6FF] mx-auto flex items-center justify-center">
+                                <i class="fas fa-file-alt icon-home text-5xl text-blue-600"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="py-4 px-2 text-center">
+                                <h3 class="text-xl font text-white ">
+                                    E-News Letter
+                                </h3>
+                            </div>
+                            <div class="px-4 py-4 text-center">
+                                <a href="e-news-letter.php"
+                                    class="inline-flex items-center gap-2 bg:white border border-white text-white hover:bg-emerald-400 hover:text-white transition  px-6 py-3 rounded font-medium ">
+                                    Click Here
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="product"
+                    class="rounded-lg border border-gray-200 bg-gradient-to-bl from-purple-700 via-indigo-600 to-blue-500 ">
+                    <div class="flex flex-col items-center py-12 px-12 lg:flex-col">
+                        <div class="">
+                            <div
+                                class="text-center w-[108px] h-[108px] rounded-full bg-[#F3F6FF] mx-auto flex items-center justify-center">
+                                <i class="fas fa-book icon-home text-5xl text-blue-600"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="py-4 px-4 text-center">
+                                <h3 class="text-xl font text-white ">
+                                    Book List
+                                </h3>
+                            </div>
+                            <div class="px-4 py-4 text-center">
+                                <a href="#"
+                                    class="inline-flex items-center gap-2  border border-white text-white hover:bg-blue-500 hover:text-white transition  px-6 py-3 rounded font-medium ">
+                                    Click Here
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="product"
+                    class="rounded-lg border border-gray-200 bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-400">
+                    <div class="flex flex-col items-center py-12 px-12 lg:flex-col">
+                        <div class="">
+                            <div
+                                class="text-center w-[108px] h-[108px] rounded-full bg-[#F3F6FF] mx-auto flex items-center justify-center">
+                                <i class="fas fa-stream icon-home text-5xl text-blue-600"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="py-4 px-4 text-center">
+                                <h3 class="text-xl font text-white ">
+                                    List of Holidays
+                                </h3>
+                            </div>
+                            <div class="px-4 py-4 text-center">
+                                <a href="list-of-holidays.php"
+                                    class="inline-flex items-center gap-2 bg:white border border-white text-white hover:bg-emerald-400 hover:text-white transition  px-6 py-3 rounded font-medium ">
+                                    Click Here
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="Video-Gallery"
+        class="flex flex-col gap-6   px-6 py-12 mx-auto bg-gradient-to-r from-blue-900 via-blue-700 to-blue-800 ">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center font-semibold leading-tight py-8">
+                <span class="inline-block text-white text-3xl md:text-5xl relative ">
+                    Video Gallery
+                </span>
+            </h2>
+            <div class="grid grid-cols-1  gap-4 lg:grid-cols-3 md:grid-cols-2 py-4" id="product-card">
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <iframe width="400" height="315" class="px-4 py-4 "
+                            src="https://www.youtube.com/embed/epdBMnc1sqw?si=6eRGrykwsnFwFrkQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <iframe width="400" height="315" class="px-4 py-4 "
+                            src="https://www.youtube.com/embed/00e8uRTVi5s?si=VvCtfi8bbRxGK45c"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div id="product" class="rounded-lg border border-gray-200">
+                    <div class="">
+                        <iframe width="400" height="315" class="px-4 py-4 "
+                            src="https://www.youtube.com/embed/EOUY0ePUwD4?si=qqTLWVqB7ntTaENt"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="px-4 py-4 text-center">
+                    <a href="list-of-holidays.php"
+                        class="inline-flex items-center gap-2  border border-blue-400 text-white hover:bg-blue-500 hover:text-white transition  px-6 py-3 rounded font-medium ">
+                        Click Here
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".achievementsSwiper", {
+                loop: true,
+                spaceBetween: 20,
+
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+
+                pagination: {
+                    el: ".achievementsSwiper .swiper-pagination",
+                    clickable: true,
+                },
+
+                navigation: {
+                    nextEl: ".achievementsSwiper .swiper-button-next",
+                    prevEl: ".achievementsSwiper .swiper-button-prev",
+                },
+
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                },
+            });
+        });
+    </script>
+
+    <script src="./src/scripts.js" defer></script>
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Replace with your WhatsApp number
+            const phoneNumber = "919034252500";
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+            const classes = document.getElementById("classes").value;
+            const source = document.getElementById("source").value;
+            const text = `Hello, my name is: ${name}
+          Phone: ${phone}
+		  Inquiry About: ${classes} 
+		  Message: ${message} 
+		  Source of Information: ${source}`;
+            const url = `https://wa.me/${phoneNumber}?text=${text}`;
+            window.open(url, 'index.php');
+        });
+    </script>
+</body>
+
+</html>
