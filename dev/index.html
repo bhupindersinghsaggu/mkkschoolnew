@@ -186,7 +186,7 @@
         <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-3">
             <div id="nav-bar" class="flex justify-between">
                 <a href="#" id="brand" class="flex gap-2 items-center">
-                    <img src="./assets/images/logo.png" class="max-w-20 max-h-20">
+                    <img src="./assets/images/logo.png">
                 </a>
                 <button class="p-2 md:hidden" onclick="handleMenu()">
                     <i class="fa-solid fa-xmark text-gray-600"></i>
@@ -201,7 +201,10 @@
             </div>
             <div class="h-[1px] bg-gray-100"></div>
             <button class=" mt-6 flex w-full md:flex gap-2 items-center  px-6 py-4 rounded-lg hover:bg-gray-50">
-                <span> <i class="fa-solid fa-atom"></i> Electron Developers </span>
+                <a href="#"
+                    class="inline-flex items-center gap-2 mt-8 bg-gradient-to-r from-indigo-600 via-blue-500 to-blue-400 hover:bg-pink-700 text-white px-6 py-3 rounded font-medium transition">
+                    ERP Login →
+                </a>
             </button>
         </div>
     </nav>
@@ -240,12 +243,37 @@
                     </div>
                 </div>
                 <!-- Right Section -->
+                <style>
+                    @keyframes spinSlow {
+                        from {
+                            transform: rotate(0deg);
+                        }
+
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+
+                    .spin-slow {
+                        animation: spinSlow 16s linear infinite;
+                    }
+                </style>
+
                 <div class="flex-1 flex justify-center items-center">
-                    <div class="w-full px-4 py-4 hidden lg:block">
-                        <img src="./assets/images/hero.webp" alt="Students at MKK School" width="600" height="450"
-                            class="rounded-lg" fetchpriority="high">
+                    <div class="relative px-4 py-4 hidden lg:flex items-center justify-center">
+
+                        <!-- Dotted Circle -->
+                        <div class="absolute w-[500px] h-[500px] rounded-full
+         border-4 border-dashed border-white/80 spin-slow">
+                        </div>
+
+                        <!-- Image -->
+                        <img src="./assets/images/hero.png" alt="Students at MKK School" class="relative z-10 
+                object-cover rounded-full shadow-lg">
                     </div>
                 </div>
+
+
             </div>
     </section>
     </div>
@@ -263,8 +291,7 @@
         </div>
     </div>
     <!-- about-school -->
-    <section id="about-school"
-        class="flex flex-col gap-6 max-w-7xl mx-auto px-4 py-8 md:px-12  lg:py-16 ">
+    <section id="about-school" class="flex flex-col gap-6 max-w-7xl mx-auto px-4 py-8 md:px-12  lg:py-16 ">
         <div class="max-w-7xl mx-auto ">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
@@ -305,7 +332,8 @@
             <h2 class="text-center font-semibold leading-tight py-8">
                 <span class="inline-block text-pink-600 text-3xl md:text-5xl relative ">Our School Facilities</span>
             </h2>
-            <p class="text-center lg:text-xl  max-w-4xl mx-auto">We believe a supportive learning environment is key to a
+            <p class="text-center lg:text-xl  max-w-4xl mx-auto">We believe a supportive learning environment is key to
+                a
                 child’s growth.
                 Our campus offers modern, safe, and student-friendly facilities that promote academic and co-curricular
                 excellence.</p>
@@ -567,7 +595,8 @@
         </div>
     </div>
     <!--  admission-open -->
-    <section id="admission-open" class="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-400 px-4 py-8 md:px-12  lg:py-16">
+    <section id="admission-open"
+        class="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-400 px-4 py-8 md:px-12  lg:py-16">
         <div class="max-w-7xl mx-auto ">
             <h2 class="text-2xl  py-4 md:py-8 mb-3  md:text-5xl font-semibold leading-tight text-center">
                 <span class="text-gray-800 mb-3 mt-3 text-3xl lg:text-5xl"> Admission Open For<span
@@ -576,7 +605,8 @@
             <div class="grid grid-cols-1 lg:grid-cols-2   overflow-hidden">
                 <!-- Left Image -->
                 <div class="hidden lg:block border-r-accent">
-                    <img src="./assets/images/admission.webp" alt="Counsellor" class=" object-cover rounded-xl " />
+                    <img src="./assets/images/admission.webp" alt="Counsellor"
+                        class="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl rounded-lg">
                 </div>
                 <!-- Right Form -->
                 <div class="text-white">
@@ -584,11 +614,11 @@
                             class="text-white"> Counsellor </span></h3>
                     <form class="grid grid-cols-1 gap-6" id="whatsappForm">
                         <input type="text" placeholder="Name" id="name"
-                            class="bg-transparent border border-white/50 px-4 py-3 rounded focus:outline-none focus:border-white" />
+                            class="bg-transparent border border-white/100 px-4 py-3 rounded focus:outline-none focus:border-white" />
                         <input type="tel" placeholder="Phone*" id="phone"
-                            class="bg-transparent border border-white/50 px-4 py-3 rounded focus:outline-none focus:border-white" />
+                            class="bg-transparent border border-white/100 px-4 py-3 rounded focus:outline-none focus:border-white" />
                         <select id="classes"
-                            class="bg-transparent border border-white/50 px-4 py-3 rounded focus:outline-none focus:border-white text-white">
+                            class="bg-transparent border border-white/100 px-4 py-3 rounded focus:outline-none focus:border-white text-white">
                             <option class="text-black">Select Class</option>
                             <option class="text-black">Pre-Nur</option>
                             <option class="text-black">Nursery</option>
@@ -606,7 +636,7 @@
                             <option class="text-black">Class XI</option>
                         </select>
                         <select id="source"
-                            class="bg-transparent border border-white/50 px-4 py-3 rounded focus:outline-none focus:border-white text-white">
+                            class="bg-transparent border border-white/100 px-4 py-3 rounded focus:outline-none focus:border-white text-white">
                             <option class="text-black">Select Source of Information</option>
                             <option class="text-black">Google</option>
                             <option class="text-black">Social Media</option>
@@ -615,7 +645,7 @@
                             <option class="text-black">Word of Mouth</option>
                         </select>
                         <textarea rows="5" placeholder="Write your message*" id="message"
-                            class="bg-transparent border border-white/50 px-4 py-3 rounded focus:outline-none focus:border-gray-300"></textarea>
+                            class="bg-transparent border border-white/100 px-4 py-3 rounded focus:outline-none focus:border-gray-300"></textarea>
                         <button type="submit"
                             class="border border-white transition px-8 py-3 rounded font-semibold w-fit">
                             Send Message
