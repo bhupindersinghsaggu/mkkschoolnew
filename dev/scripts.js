@@ -34,6 +34,12 @@ function setupIntersectionObserver(element, isLTR, speed) {
 
 }
 
+
+  function toggleSubmenu() {
+    document.getElementById('mobile-submenu').classList.toggle('hidden');
+  }
+
+
 const line1 = document.getElementById('line1');
 const line2 = document.getElementById('line2');
 const line3 = document.getElementById('line3');
